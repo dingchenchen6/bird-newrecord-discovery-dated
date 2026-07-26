@@ -62,6 +62,10 @@ The mechanism is transparent. Publication year and the size of the observational
 
 In the frozen main model, both drivers raise the hazard and the effect sizes are similar (Fig. 1a; Table 2). One standard deviation of accumulated warming relative to a species' historical range multiplies the annual hazard by 1.362 (95% CI 1.216–1.524; *P* = 8.3 × 10⁻⁸); one standard deviation of survey effort multiplies it by 1.404 (1.245–1.583; *P* = 2.9 × 10⁻⁸). Annual climate variability has no effect (0.995, 0.909–1.090; *P* = 0.92). The two main effects interact negatively (0.849, 0.761–0.948; *P* = 3.7 × 10⁻³): the marginal effect of warming is steepest where effort is low and flattens where coverage is already dense (Fig. 1b).
 
+Because standardised coefficients are hard to picture, we report both in natural units (Fig. 5c). One standard deviation of accumulated warming is **0.179 °C**: a province that has warmed by that much more than a species' own historical Chinese range carries a 36% higher annual hazard for that species. Across the observed range of the variable, −0.65 °C to +0.61 °C, the implied hazard spans roughly ninefold. One standard deviation of survey effort corresponds to a **7.75-fold** increase in annual provincial visits, from a median of 60 visits per year to about 465. The sign of the climate variable is also informative: a negative value means the province has warmed *less* than the species' range, and such cells carry a correspondingly lower hazard.
+
+The climate variable is genuinely species-specific, not a relabelled regional index (Fig. 5a, b). Decomposing its variance, 39% of the variation in accumulated warming and 55% of the variation in the raw gradient arise *within* province-years, that is, purely from differences among species. In Yunnan in 2020, for example, accumulated warming ranges from +0.309 °C for *Aethopyga christinae*, whose Chinese range has warmed less than Yunnan has, to −0.280 °C for *Coracias garrulus*, whose range has warmed more. A province-level warming index cannot make that distinction and therefore cannot say which species should appear where.
+
 Four independent importance criteria agree that warming and effort are of comparable weight, with warming slightly ahead on discrimination (Fig. 1c). Dropping accumulated warming costs 28.7 AIC units and 0.053 of marginal AUC; dropping survey effort costs 29.5 AIC units and 0.032 of marginal AUC. The interaction costs 6.5 AIC units. Annual variability costs −2.0 AIC units, that is, the model is marginally better without it; we retain it because it is one half of a pre-specified decomposition and its null result is itself informative.
 
 The discrimination ladder makes the point most directly (Fig. 1d). With the random structure held at the main model, fixed-effect-only AUC rises from 0.411 for the null model to 0.559 with effort alone, 0.580 with accumulated warming alone, and 0.610 with both. Climate alone discriminates better than effort alone; neither alone approaches the pair. This is a different conclusion from the one reached under publication-year dating, where effort dominated.
@@ -72,13 +76,41 @@ We evaluated six random-effect structures against four criteria rather than AIC 
 
 Two further structures were tested. A species-specific random slope on accumulated warming (ΔAIC 4.5 relative to the best) and a province-specific random slope on effort (ΔAIC 0.0, the AIC optimum) both fit marginally better, but both *reduce* conditional *R*² (0.403 and 0.395 respectively, against 0.411 for the simpler structure), and their fixed effects are indistinguishable from those of the main model (effort 1.397 and 1.372; warming 1.348 and 1.366). We therefore freeze the three-level intercept structure as the sole main model: it is the most parsimonious of the three statistically indistinguishable options, it has the highest explanatory power, and every one of its terms has a direct ecological or observational reading — intrinsic species detectability, regional survey context, and the province-year shocks through which surveys, festivals and reporting channels actually operate. No variance component collapses in any structure (minimum standard deviation 0.274).
 
+### What each level of the model means, and why it is there
+
+Each random term corresponds to a distinct process, and the fitted magnitudes are themselves results (Fig. 5d, Fig. 6; Table 5).
+
+*Species (SD 0.405).* Species differ in intrinsic detectability for reasons no covariate in the model captures: body size, song conspicuousness, habitat accessibility, population density and taxonomic attention. One standard deviation multiplies the hazard by 1.50, and the fitted species span a 3.7-fold range. Grouping the species intercepts by migratory strategy shows overlapping distributions with a modestly higher median for partial migrants than for residents or long-distance migrants (Fig. 6a), consistent with partial migrants combining range-edge mobility with the year-round observability that long-distance migrants lack.
+
+*Province (SD 0.326).* Provinces differ in their baseline setting for discovery — area, terrain complexity, habitat diversity, observer population and regional research tradition. One standard deviation multiplies the hazard by 1.39 (Fig. 6b).
+
+*Province by year (SD 0.804).* This is the single largest variance component in the model, and it is the reason the level was added. One standard deviation multiplies the hazard by 2.23 — more than either fixed effect — and the fitted levels span a thirteenfold range (Fig. 6c). Ecologically it represents the scale at which the observation process actually operates: a regional survey campaign, a provincial birding festival, a newly established protected area, or a new local reporting channel raises the documentation rate for one province in one year. Because such shocks are not shared nationally, a model with only species and province intercepts cannot absorb them, and they leak into whichever fixed effect trends with observational capacity. The magnitude of this component is the quantitative expression of the paper's central caution: the biodiversity record moves for reasons that have nothing to do with the birds.
+
+*Reporting completeness offset.* Not a free parameter but a known correction, so it consumes no degrees of freedom. Omitting it attenuates the effort coefficient from 1.372 to 1.245, because censoring is concentrated in the recent, high-effort years.
+
+### The return on survey effort is declining
+
+The proportional-hazards assumption holds for accumulated warming (interaction with time β = −0.022, *P* = 0.82) but not for effort (β = −0.211, *P* = 7.7 × 10⁻⁴). This is a substantive result rather than a diagnostic failure. Allowing the effort coefficient to vary through time, its hazard ratio falls from 2.18 (95% CI 1.63–2.90) in 2002 to 1.07 (0.88–1.30) in 2024, crossing into non-significance in the early 2020s (Fig. 6d). Two decades of intensifying observation have used up the readily detectable gaps, so an additional standard deviation of effort now yields far fewer first records than it did at the start of the period. That the climate term shows no such decline is the sharpest available evidence that the two coefficients are capturing different processes: a saturating observational process and a non-saturating climatic one.
+
 ### Robustness
 
 The conclusions do not depend on any freely chosen analytical decision (Fig. 3).
 
 *Species-distribution-model threshold.* Tightening the candidate pool from a 50 km to a 200 km buffer changes the risk set from 175,901 to 155,435 rows but leaves the coefficients essentially fixed (effort 1.404, 1.405, 1.411; warming 1.362, 1.376, 1.372; interaction 0.849, 0.851, 0.850).
 
-*Climate indicator and accumulation window.* Annual mean temperature carries the signal; warmest-month maximum temperature carries a weaker version of it (hazard ratio 1.30, ΔAIC 9.0 behind the best cell) but shows no interaction with effort; coldest-month minimum temperature and winter mean temperature show no signal at any window (hazard ratios 0.96–1.08, all *P* > 0.12). Among windows, twenty years is nominally best (ΔAIC 0.0) and fifteen years is statistically indistinguishable (ΔAIC 2.2). We retain fifteen years as pre-specified and report the full window profile; the qualitative result is identical from ten to twenty years.
+*Climate indicator.* Annual mean temperature carries the signal; warmest-month maximum temperature carries a weaker version of it (hazard ratio 1.30, ΔAIC 9.0 behind the best cell) but shows no interaction with effort; coldest-month minimum temperature and winter mean temperature show no signal at any window (hazard ratios 0.96–1.08, all *P* > 0.12). Annual mean temperature integrates the whole thermal regime, whereas seasonal extremes describe conditions that constrain overwintering or breeding but not the year-round climatic envelope within which a range boundary sits.
+
+*Accumulation window and climate baseline.* Both are analyst choices rather than data-determined ones, so we tested them jointly at windows of 5, 10, 15 and 20 years against the two baselines in common use for this kind of anomaly, 1980–2000 and 1970–2000 (Fig. 7).
+
+The 1970–2000 baseline cannot be computed from the WorldClim 2.1 downscaling used in the main analysis, which begins in 1980. We therefore rebuilt the entire climate chain from CRU TS 4.09 at its native 0.5°, which reaches back to 1901, and fitted *both* baselines on it. This separates two things that would otherwise be confounded: comparing WorldClim 1980–2000 with CRU 1980–2000 isolates the effect of changing data source and resolution, and comparing CRU 1980–2000 with CRU 1970–2000 isolates the effect of the baseline period itself.
+
+Three results follow, and each has an ecological reading rather than being merely a robustness statement.
+
+First, the warming coefficient rises with window length in every series, from about 1.16–1.21 at five years to 1.36–1.40 at twenty years (Fig. 7a). This is the signature expected of a process that integrates climate over years to decades: a five-year window measures weather rather than climate and dilutes the signal, whereas a boundary shifts only when conditions have been favourable long enough for colonisation and establishment. A finer grid spanning 3 to 23 years (Extended Data Table 2) places the optimum at 18–20 years with AIC rising again by 23 years, so the optimum is interior rather than an artefact of the tested range. We retain 15 years as pre-specified; it lies within 2.2–5.6 AIC units of the optimum in every series.
+
+Second, the effort coefficient is flat at 1.34–1.41 across all twelve combinations (Fig. 7b), and the interaction is negative throughout (0.87–1.00; Fig. 7c). If the climate and effort terms were competing for the same variance, changing the climate specification would move the effort estimate. It does not, which is direct evidence that the two are separately identified.
+
+Third, the choice between the two baselines is immaterial, and if anything the longer one strengthens the result: at *W* = 15 the hazard ratio is 1.361 under CRU 1970–2000 against 1.307 under CRU 1980–2000, and the main WorldClim 1980–2000 estimate of 1.362 sits between the two. Changing data source and resolution moves the estimate by a similar small amount (1.362 to 1.307), so neither choice is decisive. One caveat follows from the resolution difference and matters for interpretation: because the 0.5° CRU grid smooths the sub-grid topographic variation that the 10-arc-minute downscaling retains, one standard deviation of accumulated warming is 0.058 °C in the CRU series against 0.179 °C in the main one. Standardised hazard ratios remain comparable, but the natural-unit statements in this paper refer to the main, higher-resolution series.
 
 *Effort proxy and missing-data rule.* All twelve combinations of four proxies (visits, observers, birding days, records) and three treatments of the 24 implausible zero cells (coverage gap, bounded within-province interpolation, zero-filling) give effort hazard ratios between 1.25 and 1.52 and warming hazard ratios between 1.35 and 1.37. Because the three missing-data rules yield different sample sizes, AIC is not comparable across them and we compare coefficients only. The coverage-gap interpretation is strongly supported by the data: in 22 of the 24 cells flagged as structural zeros, the immediately adjacent years within the same province record between one and 27 visits, so these are gaps in database coverage rather than years in which birdwatching ceased.
 
@@ -229,6 +261,26 @@ All modelling data, analysis code, result tables, figures in four formats includ
 | PH: warming × time | −0.022 | 0.82 | assumption holds |
 | PH: effort × time | −0.211 | 7.7 × 10⁻⁴ | effort returns decline |
 
+**Table 5.** Ecological rationale for every component of the main model. Each row states why the
+component is in the model, what its estimate means, and one falsifiable prediction the
+specification implies. All predictions are tested in the paper. The full version, with the
+prediction column, is `tables/tbl_v2_ecological_rationale.csv` and `docs/ECOLOGICAL_RATIONALE.md`.
+
+| Component | Why it is in the model | What the estimate means |
+|---|---|---|
+| Response: first record only | A species-province pair can acquire a first record once; treating re-documentation as new information would inflate the event count | The annual probability of crossing from undocumented to documented |
+| cloglog link | Discrete-time analogue of proportional hazards; coefficients are hazard ratios and do not depend on the length of the time step | exp(β) is directly comparable with survival-analysis literature |
+| Risk set with absorbing exit | Only species whose modelled range approaches a province are plausible candidates; pairs recorded before 2002 are prevalent, not incident, cases | Hazard conditional on being a plausible, not-yet-recorded candidate |
+| Accumulated warming, *W* = 15 yr | Range boundaries integrate climate over years to decades; referencing to the species' own range is essential because absolute warming is near-uniform across China | HR 1.362 per 0.179 °C of province-minus-range warming |
+| Annual variability | Separates decadal signal from year-to-year weather, so neither term can absorb the other | HR 0.995: weather in the discovery year adds nothing |
+| Survey effort | A species can only be recorded where someone is looking; required for the climate coefficient to be interpretable | HR 1.404 per 1 SD; one SD multiplies annual visits by 7.75 |
+| Warming × effort | Sparsely surveyed provinces are disproportionately montane with steep climatic gradients, and densely surveyed ones have already absorbed much of their Wallacean shortfall | HR 0.849: warming matters most where coverage is sparse |
+| Offset log *c*(*t*) | Records enter only after publication, so recent years are under-represented; under incomplete reporting this is exactly an offset, not an approximation | Corrects for right-censoring without consuming a degree of freedom |
+| (1\|species), SD 0.405 | Body size, song conspicuousness, habitat accessibility, density and taxonomic attention | ×1.50 per SD; species span a 3.7-fold range |
+| (1\|province), SD 0.326 | Area, terrain complexity, habitat diversity, observer population, research tradition | ×1.39 per SD |
+| (1\|province:year), SD 0.804 | The scale at which the observation process operates: regional campaigns, festivals, new reserves, local reporting channels | ×2.23 per SD, larger than either fixed effect; levels span 13-fold |
+| Baseline 1980–2000 | Must end before the analysis period, or part of the warming being tested is written into the reference | Anomalies measured against the most recent non-overlapping period |
+
 ---
 
 ## References
@@ -333,6 +385,15 @@ All modelling data, analysis code, result tables, figures in four formats includ
 
 **Fig. 4 | Random-effect structures evaluated on fit, explanatory power, variance structure and ecological meaning.**
 **a**, ΔAIC; the main model is highlighted. **b**, Conditional *R*², conditional AUC and marginal AUC. Marginal AUC is flat across structures, confirming that the random terms absorb observational heterogeneity without redistributing the fixed-effect signal. **c**, Random-effect standard deviations on the latent scale; no component collapses in any structure.
+
+**Fig. 5 | Anatomy of the model, in units a reader can picture.**
+**a**, Construction of the species-referenced climate gradient, shown as 15-year trailing means for one province and two species. Yunnan has warmed more than the Chinese range of *Aethopyga christinae* and less than that of *Coracias garrulus*, so the same province in the same year yields opposite values of *x* for the two species. **b**, Variance of each climate term partitioned into variation between province-years and variation within a province-year, the latter arising purely from differences among species. **c**, Partial effects in natural units: annual hazard against how much more the province has warmed than the species' range, at three levels of survey effort expressed as annual visits. **d**, Every variance component and both focal fixed effects expressed as the hazard multiplier per one standard deviation, on a common axis.
+
+**Fig. 6 | The observation process made visible.**
+**a**, Species random intercepts as hazard multipliers, grouped by migratory strategy; diamonds are group medians. **b**, Province random intercepts mapped, after controlling for effort and climate; grey denotes provincial units outside the analysis scope. Base map GS(2019)1822. **c**, Province-by-year random intercepts, the largest variance component in the model. Provinces are ordered by their mean. **d**, Hazard ratio for survey effort as a function of year, from the model that allows effects to vary through time; the ribbon is the 95% confidence interval.
+
+**Fig. 7 | Accumulation window and climate baseline.**
+Windows of 5, 10, 15 and 20 years against three series: the main WorldClim 10-arc-minute data with a 1980–2000 baseline, the same baseline computed from CRU TS at 0.5° as a control for data source and resolution, and CRU TS with a 1970–2000 baseline. **a**, Hazard ratio for accumulated warming. **b**, Hazard ratio for survey effort. **c**, Hazard ratio for the interaction. **d**, ΔAIC within each series; circles mark the optimum. Ribbons are 95% confidence intervals.
 
 **Fig. M1 | Mechanistic projection of the latent generation hazard, restricted to the fitted covariate support.**
 Provincial hazard relative to 2024 under two SSP scenarios at three horizons, aggregating only species-province cells whose accumulated warming and survey effort fall inside the 1st–99th percentile of the fitted data. The percentage on each panel is the share of cells that qualify.

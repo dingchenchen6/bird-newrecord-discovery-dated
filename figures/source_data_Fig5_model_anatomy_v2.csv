@@ -1,0 +1,30 @@
+variable,source,share,term,sd,meaning,mult,spread
+"Raw
+gradient x","Between province-years
+(regional climate)",0.45654103601518,,,,,
+"Raw
+gradient x","Within province-year
+(purely among species)",0.543458963984821,,,,,
+"Accumulated
+warming","Between province-years
+(regional climate)",0.604975978917707,,,,,
+"Accumulated
+warming","Within province-year
+(purely among species)",0.395024021082293,,,,,
+"Annual
+variability","Between province-years
+(regional climate)",0.422960247044006,,,,,
+"Annual
+variability","Within province-year
+(purely among species)",0.577039752955994,,,,,
+,,,Species,0.405131409670008,"intrinsic detectability:
+body size, song, habitat access,
+taxonomic attention",1.49949953584946,2.82478662074536
+,,,Province,0.326206867064981,"regional survey setting:
+area, terrain, habitat diversity,
+observer population",1.38570199532969,2.30742790159539
+,,,Province x year,0.804057206066655,"observation-process shocks:
+regional surveys, festivals,
+new reserves, reporting channels",2.23458874867331,7.85350108605351
+,,,Accumulated warming (fixed),,"",1.36164754167317,
+,,,Survey effort (fixed),,"",1.4038169859134,
