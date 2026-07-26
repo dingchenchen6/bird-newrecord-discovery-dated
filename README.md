@@ -145,3 +145,51 @@ reference 25 of `docs/MANUSCRIPT_v2.md`.
 
 Code is released under the MIT licence (`LICENSE`). Derived result tables and figures are
 released under CC BY 4.0. Third-party source data retain their original licences.
+
+---
+
+## Ecological rationale
+
+Every component of the main model — the response definition, the link, the risk set, each fixed
+effect, the interaction, the offset and each random term — has a stated ecological or
+observational rationale, a plain-language reading of its estimate, and a falsifiable prediction
+that the specification implies. See `docs/ECOLOGICAL_RATIONALE.md` and
+`tables/tbl_v2_ecological_rationale.csv`. All twelve predictions are tested in the paper.
+
+Effect sizes in natural units, so the standardised coefficients can be pictured:
+
+| Quantity | One standard deviation |
+|---|---|
+| Accumulated warming | 0.179 °C of province-minus-range warming |
+| Survey effort | a 7.75-fold increase in annual provincial visits |
+| Species random intercept | hazard × 1.50 |
+| Province random intercept | hazard × 1.39 |
+| Province-by-year random intercept | hazard × 2.23 — larger than either fixed effect |
+
+## Sensitivity of the two analyst choices in the climate variable
+
+| Choice | Tested over | Result |
+|---|---|---|
+| Accumulation window | 5, 10, 15, 20 yr (and 3–23 yr on a finer grid) | Warming HR rises from ~1.17 to ~1.40; optimum interior at 18–20 yr; effort HR flat at 1.34–1.41 |
+| Climate baseline | 1980–2000 and 1970–2000 | HR 1.362 (WorldClim 1980–2000, main), 1.307 (CRU 1980–2000), 1.361 (CRU 1970–2000) |
+
+The 1970–2000 baseline needs data before 1980, which the WorldClim downscaling does not provide,
+so that comparison is run entirely on CRU TS 4.09 at 0.5°. Fitting CRU with the 1980–2000
+baseline as well separates the effect of changing the baseline from the effect of changing the
+data source. Note that one standard deviation of accumulated warming is 0.058 °C in the CRU
+series against 0.179 °C in the main one, because the coarser grid smooths sub-grid topography;
+standardised hazard ratios stay comparable but natural-unit statements refer to the main series.
+
+## Figures
+
+| Figure | Shows |
+|---|---|
+| Fig1 | Main result: coefficients across thresholds, the interaction, relative importance, discrimination ladder |
+| Fig2 | The dating correction: publication lag, the two event series, the S0–S5 waterfall |
+| Fig3 | Robustness across climate indicators, windows, effort proxies and missing-data rules |
+| Fig4 | Random-effect structures on four criteria |
+| Fig5 | Anatomy of the model in natural units, and the species-specificity of the climate variable |
+| Fig6 | The observation process: species, province and province-by-year random effects, and the declining return on effort |
+| Fig7 | Accumulation window and climate baseline sensitivity |
+| FigM1–M4 | CMIP6 projections with the covariate-support mask, SHAP interpretation, mechanistic vs ML |
+| FigS1, FigS3 | Residual diagnostics; unmasked extrapolation for contrast |
