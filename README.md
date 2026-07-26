@@ -15,10 +15,10 @@ entirely.
 ## What is in here
 
 ```
-code/        analysis pipeline, scripts 130-141, run in numerical order
+code/        analysis pipeline, scripts 130-145, run in numerical order
 data/        modelling datasets and the panels needed to rebuild them
 tables/      every result table cited in the manuscript and report
-figures/     Fig1-Fig4 and the diagnostic panel
+figures/     Fig1-Fig7 and the diagnostic panel
 figures_future/  projection figures FigM1-FigM4 and the unmasked contrast
 docs/        manuscript (English) and research report (Chinese)
 tests/       smoke test reproducing the headline coefficients
@@ -46,9 +46,10 @@ shipped data and checks it against the published coefficients; it takes about tw
 
 ## Reproducing the analysis
 
-Scripts 133–141 run entirely on data shipped in this repository. Scripts 130–132 rebuild the
-event table, effort panel and modelling matrix from primary sources, some of which are
-third-party licensed and are not redistributed here — set their paths in `config.R`.
+Scripts 133–144 run entirely on data shipped in this repository. Scripts 130–132 and 145 rebuild
+the event table, effort panel, modelling matrix and CRU climate panels from primary sources,
+some of which are third-party licensed and are not redistributed here — set their paths in
+`config.R`.
 
 | Script | Does what | Needs external data? |
 |---|---|---|
@@ -63,6 +64,10 @@ third-party licensed and are not redistributed here — set their paths in `conf
 | `138_diagnostics_v2.R` | DHARMa residuals, Moran's *I*, proportional hazards | no |
 | `139_figures_v2.R` | Fig1–Fig4 | no |
 | `141_future_projection_v2.R` | CMIP6 projections, support mask, mechanistic vs ML | yes (base map) |
+| `142_window_baseline_sensitivity.R` | Fine window grid, 3–23 years | no |
+| `143_ecological_anatomy_figures.R` | Fig5–Fig6, natural-unit effects and random effects | yes (base map) |
+| `144_sensitivity_figure_and_rationale.R` | Fig7 and the ecological rationale table | no |
+| `145_baseline_1970_sensitivity.R` | 1970–2000 baseline, rebuilt from CRU TS 0.5° | yes (CRU, ranges, grid) |
 
 Script 134 is run once per climate indicator and then merged:
 
@@ -73,10 +78,15 @@ done
 Rscript --no-init-file code/134_indicator_window_v2.R --merge
 ```
 
-Script 137 takes a block argument:
+Script 137 takes a block argument, and script 142 a baseline argument:
 
 ```bash
 for b in B C D E; do Rscript --no-init-file code/137_full_comparison_matrix.R $b; done
+```
+
+```bash
+for b in 1980_2000 1981_2010 1991_2020; do Rscript --no-init-file code/142_window_baseline_sensitivity.R $b; done
+Rscript --no-init-file code/142_window_baseline_sensitivity.R --merge
 ```
 
 Both are split this way because fitting sixteen mixed models in one R session exhausts memory
