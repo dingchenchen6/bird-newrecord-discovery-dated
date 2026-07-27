@@ -48,7 +48,7 @@ Publication lags discovery by a median of one year and a mean of 2.09 years; 81.
 
 We quantified the censoring directly. The compilation extends to publications appearing in 2025, so a record discovered in year *t* can only have been observed if its lag is at most 2025 − *t*. Using the pooled empirical lag distribution, the expected share of discoveries already reported falls from 99.7% for 2002 to 89.5% for 2021, 83.4% for 2022, 73.2% for 2023 and 56.7% for 2024. The pooled distribution is justified because publication lag is stationary over the study period (Spearman correlation between discovery year and lag ρ = −0.016, *P* = 0.685; Wilcoxon comparison of 2002–2010 with 2011–2018 *P* = 0.851; cumulative distributions differ by at most three percentage points at every lag). Because the observed hazard under incomplete reporting is approximately the product of the true hazard and the completeness *c*(*t*), and the complementary log-log link is logarithmic in the hazard, *c*(*t*) enters the linear predictor exactly as an offset log *c*(*t*). We include this offset throughout.
 
-The final risk set at the 50 km species-distribution-model threshold comprises 8,319 species × province pairs, 185,478 species-province-years and 657 events. After requiring non-missing effort and climate components, the modelling data contain 175,901 rows, 649 events, 392 species and 31 provincial units.
+The final risk set at the 50-cell species-distribution-model threshold comprises 8,319 species × province pairs, 185,478 species-province-years and 657 events. After requiring non-missing effort and climate components, the modelling data contain 175,901 rows, 649 events, 392 species and 31 provincial units.
 
 ### Publication-year dating inflates the apparent role of survey effort
 
@@ -157,6 +157,19 @@ breadth, number of congeners, hand-wing index, IUCN status, endemism and trophic
 null — a contrast with the mammal study, where smaller-bodied, nocturnal and data-deficient
 species were more likely to be newly recorded.
 
+Pooling all species conceals two group-specific patterns that a stratified fit recovers
+(Fig. 9alt a, b; Table 9). Splitting taxonomically, range size acts within Passeriformes
+(1.53, *P* = 0.0020) but not within non-passerines, whereas the partial-migrant effect is present
+in both and is stronger outside the passerines (3.19, *P* = 3.3 × 10⁻⁴, against 2.01,
+*P* = 0.0081). Splitting instead by migratory strategy is more revealing. Among residents only
+range size matters (1.60, *P* = 0.0042). Among full migrants neither range size nor migratory
+class can act, and two traits that are null in the pooled model become significant: the hand-wing
+index, a standard index of dispersal ability, *lowers* the odds (0.51, *P* = 3.8 × 10⁻⁴), and body
+mass raises them (1.74, *P* = 0.0037). Both fit a vagrancy mechanism. A migrant with poor flight
+efficiency is more easily displaced off its normal route, and a large-bodied bird sitting far
+outside its range is more likely to be noticed and reported. The pooled model averages these
+against residents, for whom neither applies, and returns zero for both.
+
 Range size must be measured as an **area**, not as a count of provinces occupied (Fig. 9c;
 Table 7). Both area measures are independent of the response and agree: global range area gives
 an odds ratio of 1.456 (95% CI 1.204–1.762, *P* = 1.1 × 10⁻⁴, n = 1,298) and Chinese range area,
@@ -190,6 +203,30 @@ reports before 2000 and 29 of 31 provinces have none. Early (2002–2008) and re
 coverage therefore take that role, which preserves the question — do provinces already well
 covered show diminishing returns? — on a shorter timescale than the original.
 
+### New records are strongly biased toward the east and northeast
+
+If new records simply filled in survey gaps at random, they would fall on all sides of a species'
+known range with equal frequency. They do not. Taking the bearing from the centroid of each
+species' BirdLife range to the record itself and binning into eight sectors, direction is far from
+uniform (χ² = 580.1, df = 7, *P* = 4.6 × 10⁻¹²¹; Fig. 11). Two sectors are over-represented after
+Holm correction: east holds 237 of 642 records (36.9%, against 80.2 expected) and northeast 179
+(27.9%). South and west are nearly empty, with 20 and 19.
+
+The pattern is not carried by one taxon. Five of the well-sampled orders reject uniformity on
+their own — Passeriformes (χ² = 376.6, *P* = 2.5 × 10⁻⁷⁷), Anseriformes (64.0), Accipitriformes
+(52.5), Charadriiformes (45.5) and Columbiformes (29.1) — and in every case the significant
+sectors are east, northeast or both.
+
+Two mechanisms are consistent with this and cannot be separated by these data. The eastern half of
+China holds the great majority of the observer population, so a species' range edge is far more
+likely to be watched on its eastern than on its western side; this is the observational reading,
+and it is the same asymmetry the province-by-year variance component captures. The ecological
+reading is that eastern and north-eastern range margins are where suitable climate is expanding
+fastest for a warming-tracking assemblage. The companion mammal study found a northward and
+eastward bias on the same reasoning. That birds show an eastward rather than a northward bias is
+itself informative: China's observer gradient runs west-to-east, not south-to-north, which tilts
+the balance of the two explanations toward the observational one for this taxon.
+
 ### The return on survey effort is declining
 
 The proportional-hazards assumption holds for accumulated warming (interaction with time β = −0.022, *P* = 0.82) but not for effort (β = −0.211, *P* = 7.7 × 10⁻⁴). This is a substantive result rather than a diagnostic failure. Allowing the effort coefficient to vary through time, its hazard ratio falls from 2.18 (95% CI 1.63–2.90) in 2002 to 1.07 (0.88–1.30) in 2024, crossing into non-significance in the early 2020s (Fig. 6d). Two decades of intensifying observation have used up the readily detectable gaps, so an additional standard deviation of effort now yields far fewer first records than it did at the start of the period. That the climate term shows no such decline is the sharpest available evidence that the two coefficients are capturing different processes: a saturating observational process and a non-saturating climatic one.
@@ -198,7 +235,7 @@ The proportional-hazards assumption holds for accumulated warming (interaction w
 
 The conclusions do not depend on any freely chosen analytical decision (Fig. 3).
 
-*Species-distribution-model threshold.* Tightening the candidate pool from a 50 km to a 200 km buffer changes the risk set from 175,901 to 155,435 rows but leaves the coefficients essentially fixed (effort 1.404, 1.405, 1.411; warming 1.362, 1.376, 1.372; interaction 0.849, 0.851, 0.850).
+*Species-distribution-model threshold.* A province enters a species' candidate pool when the species distribution model marks at least a threshold number of suitable cells inside it. Cells are those of the 2.5-arc-minute climate surface and have a median area of 18.3 km², so thresholds of 50, 100 and 200 cells correspond to roughly 0.9, 1.8 and 3.7 thousand km² of suitable habitat. Raising the requirement from 50 to 200 cells changes the risk set from 175,901 to 155,435 rows but leaves the coefficients essentially fixed (effort 1.404, 1.405, 1.411; warming 1.362, 1.376, 1.372; interaction 0.849, 0.851, 0.850).
 
 *Climate indicator.* Annual mean temperature carries the signal; warmest-month maximum temperature carries a weaker version of it (hazard ratio 1.30, ΔAIC 9.0 behind the best cell) but shows no interaction with effort; coldest-month minimum temperature and winter mean temperature show no signal at any window (hazard ratios 0.96–1.08, all *P* > 0.12). Annual mean temperature integrates the whole thermal regime, whereas seasonal extremes describe conditions that constrain overwintering or breeding but not the year-round climatic envelope within which a range boundary sits.
 
@@ -268,7 +305,7 @@ Let *F* be the empirical cumulative distribution of non-negative publication lag
 
 ### Risk set
 
-The candidate pool for each species comprises the provinces intersecting its BirdLife International range polygon buffered by 50, 100 or 200 km, plus every province in which the species was actually recorded. Each species × province pair contributes one row per year from 2002 until the year of its first record, after which it exits the risk set (absorbing exit). At the 50 km threshold this yields 8,319 pairs, 185,478 rows and 657 events.
+The candidate pool for each species comprises every province in which its species distribution model marks at least a threshold number of suitable grid cells, plus every province in which the species was actually recorded. Cells are those of the 2.5-arc-minute climate surface and have a median area of 18.3 km² (about 4.3 km on a side), so the three thresholds of 50, 100 and 200 cells require roughly 0.9, 1.8 and 3.7 thousand km² of suitable habitat within the province. Each species × province pair contributes one row per year from 2002 until the year of its first record, after which it exits the risk set (absorbing exit). At the 50-cell threshold this yields 8,319 pairs, 185,478 rows and 657 events.
 
 ### Climate variables
 
@@ -542,6 +579,22 @@ tree. Full results in `tables/tbl_v2_species_range_measures.csv` and
 | GDP per capita | 1.10 | **0.61** (*P* = 0.0027) |
 | Administrative area | 1.17 | 1.20 |
 | Habitat heterogeneity | 0.99 | 1.03 |
+
+**Fig. 11 | Directionality of new records relative to the species' known range.**
+Bearing from the centroid of each species' BirdLife range to the record, binned into eight 45° sectors. Radar and wind-rose forms are provided for the overall data, for the six largest orders overlaid, and for each of the sixteen best-sampled orders individually. Every order panel carries both sample sizes, new records and species, because one species can contribute records in several provinces. Overlay panels use each order's own proportions; absolute sample sizes are in the legend.
+
+**Table 9.** Species-level effects fitted separately within taxonomic and migratory groups, all
+from phylogenetic logistic regression on the dated tree. Only significant terms are shown; full
+results in `tables/tbl_v2_species_group_effects.csv`.
+
+| Grouping | Group | *n* species | With records | Significant terms (OR, *P*) |
+|---|---|---|---|---|
+| Taxonomic | Passeriformes | 710 | 203 | Range size 1.53 (0.0020); partial migrant 2.01 (0.0081) |
+| | Non-passerines | 588 | 131 | Partial migrant 3.19 (3.3 × 10⁻⁴) |
+| | All species | 1,298 | 334 | Range size 1.44; partial migrant 1.91; open habitat 0.55 |
+| Migratory | Resident | 567 | 116 | Range size 1.60 (0.0042) |
+| | Partial migrant | 228 | 91 | Granivore 0.28 (0.044) |
+| | Migratory | 503 | 127 | Hand-wing index 0.51 (3.8 × 10⁻⁴); body mass 1.74 (0.0037); open habitat 0.42 (0.013) |
 
 **Fig. M1 | Mechanistic projection of the latent generation hazard, restricted to the fitted covariate support.**
 Provincial hazard relative to 2024 under two SSP scenarios at three horizons, aggregating only species-province cells whose accumulated warming and survey effort fall inside the 1st–99th percentile of the fitted data. The percentage on each panel is the share of cells that qualify.

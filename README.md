@@ -141,6 +141,12 @@ AIC 8,313.2, conditional *R*² 0.411, conditional AUC 0.854.
 of rows, so AIC is not comparable across them. Those comparisons report coefficients only.
 This is stated on the relevant figure panels.
 
+**SDM thresholds are cell counts, not buffer radii.** A province enters a species' candidate pool
+when its species distribution model marks at least 50, 100 or 200 suitable cells inside it. Cells
+come from the 2.5-arc-minute climate surface and have a median area of 18.3 km² (about 4.3 km on a
+side), so the three thresholds require roughly 0.9, 1.8 and 3.7 thousand km² of suitable habitat
+within the province. Coefficients are unchanged across all three.
+
 **Projection support.** The species-specific climate gradient has a historical standard
 deviation of 0.18 °C; future province-minus-range warming differentials reach 2 °C. By 2050
 under SSP5-8.5 only 2.1% of species-province cells fall inside the fitted covariate range.
@@ -317,7 +323,7 @@ Both analyses ship in two interchangeable layouts, so either can be used at subm
 
 | | `figures/` | `figures_alt/` |
 |---|---|---|
-| Species level | Fig9: forest plots of odds ratios across three phylogenetic treatments, plus the range-measure comparison | Fig9alt: ridgeline distributions of the estimates by treatment, plus stacked bars with chi-square annotations, laid out as in the mammal paper |
+| Species level | Fig9: forest plots of odds ratios across three phylogenetic treatments, plus the range-measure comparison | Fig9alt: ridgeline distributions by ecological group - taxonomic and migratory - plus stacked bars with chi-square annotations, laid out as in the mammal paper |
 | Province level | Fig10: model comparison, coefficient plot, hierarchical partitioning, partial correlations | Fig10alt: six partial residual panels with beta and p annotated, a 100% stacked importance column, and slope estimates with matching colours |
 
 One difference from the original is unavoidable and is stated on the figure: the mammal paper's
@@ -353,3 +359,24 @@ output. Three things differ:
 The overlay figures use each order's own proportions rather than raw counts: Passeriformes
 contributes 388 of 642 records and on an absolute scale flattens every other order against the
 centre. Absolute sample sizes stay in the legend.
+
+## Group-specific species-level effects
+
+Pooling all species hides two patterns. Fitting the same phylogenetic model within groups:
+
+| Grouping | Group | n | With records | Significant terms |
+|---|---|---|---|---|
+| Taxonomic | Passeriformes | 710 | 203 | Range size 1.53 (P = 0.0020); partial migrant 2.01 (P = 0.0081) |
+| | Non-passerines | 588 | 131 | Partial migrant 3.19 (P = 3.3e-4) |
+| Migratory | Resident | 567 | 116 | Range size 1.60 (P = 0.0042) |
+| | Partial migrant | 228 | 91 | Granivore 0.28 (P = 0.044) |
+| | Migratory | 503 | 127 | Hand-wing index 0.51 (P = 3.8e-4); body mass 1.74 (P = 0.0037); open habitat 0.42 (P = 0.013) |
+
+Among full migrants, two traits that are null in the pooled model become significant and point the
+same way: lower dispersal ability raises the odds of a new record, and larger body mass raises them
+too. Both fit a vagrancy mechanism - a migrant with poor flight efficiency is more easily displaced
+off route, and a large bird far outside its range is more likely to be noticed. The pooled model
+averages these against residents, for whom neither applies, and returns zero.
+
+The ridgeline figure in `figures_alt/` therefore splits by ecological group, as the mammal paper
+does, rather than by statistical treatment.

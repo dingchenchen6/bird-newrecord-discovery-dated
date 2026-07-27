@@ -209,5 +209,51 @@ fwrite(fit, file.path(OUT, "tables", "tbl_v2_species_fast_fit.csv")); print(fit)
 
 msg("三法一致(方向相同)的项: ", sum(agree$same_direction), " / ", nrow(agree),
     " | 三法均显著: ", sum(agree$n_significant == agree$n_models))
+# ---- 分组拟合: 雀形目 vs 非雀形目, 以及三种迁徙类型 ----
+# 山脊图应当展示【生态学分组】之间的差异(对应 GEB 原文的 all/bats/non-flying),
+# 而不是同一批数据的三种系统发育处理 —— 后者是稳健性检验, 不是生态学对比。
+# 每组单独用系统发育树拟合(phyloglm), 组内重新标准化。
+grp_fit <- function(sub, lab) {
+  if (nrow(sub) < 60 || sum(sub$new_record_v2) < 20) {
+    msg("  跳过 ", lab, " (n=", nrow(sub), ", 事件=", sum(sub$new_record_v2), ")"); return(NULL) }
+  for (nm in names(CONT))
+    sub[[paste0("z_", nm)]] <- as.numeric(scale(log10(as.numeric(sub[[CONT[[nm]]]]) + 1)))
+  # 先剔除任一建模变量缺失的行, 再裁树; 否则 phyloglm 会在设计矩阵里遇到 NA
+  keep_c <- CATS[vapply(CATS, function(v) uniqueN(na.omit(sub[[v]])) > 1, logical(1))]
+  vv <- c(Z, keep_c, "new_record_v2")
+  ok <- Reduce(`&`, lapply(vv, function(v) !is.na(sub[[v]])))
+  if (sum(!ok)) msg("  ", lab, ": 剔除含缺失的 ", sum(!ok), " 行")
+  sub <- sub[ok]
+  keep_c <- keep_c[vapply(keep_c, function(v) uniqueN(droplevels(factor(sub[[v]]))) > 1, logical(1))]
+  for (v in keep_c) sub[[v]] <- droplevels(factor(sub[[v]]))
+  if (nrow(sub) < 60 || sum(sub$new_record_v2) < 20) { msg("  跳过 ", lab, " (剔除后过少)"); return(NULL) }
+  tg <- drop.tip(tr, setdiff(tr$tip.label, sub$tree_label))
+  sub <- sub[match(tg$tip.label, tree_label)]
+  df2 <- as.data.frame(sub); rownames(df2) <- df2$tree_label
+  f <- as.formula(paste("new_record_v2 ~", paste(c(Z, keep_c), collapse = " + ")))
+  m <- tryCatch(phyloglm(f, data = df2, phy = tg, method = "logistic_MPLE", btol = 30),
+                error = function(e) { msg("  ", lab, " 拟合失败: ", conditionMessage(e)); NULL })
+  if (is.null(m)) return(NULL)
+  st <- summary(m)$coefficients
+  msg(sprintf("  %-22s n=%4d 事件=%3d alpha=%.3f", lab, nrow(sub), sum(sub$new_record_v2), m$alpha))
+  data.table(group = lab, n = nrow(sub), n_events = sum(sub$new_record_v2),
+             term = rownames(st), estimate = st[, 1], se = st[, 2], p_value = st[, ncol(st)])
+}
+d[, passerine := fifelse(grepl("^Passeri", order_cn) | grepl("PASSERIFORMES", toupper(order_cn)),
+                         "Passeriformes", "Non-passerines")]
+msg("按类群分组拟合:")
+grp <- rbindlist(list(
+  grp_fit(copy(d[passerine == "Passeriformes"]),  "Passeriformes"),
+  grp_fit(copy(d[passerine == "Non-passerines"]), "Non-passerines"),
+  grp_fit(copy(d), "All species")), fill = TRUE)
+msg("按迁徙类型分组拟合:")
+mig <- rbindlist(lapply(c("Resident", "Partial migrant", "Migratory"),
+                        function(g) grp_fit(copy(d[migration_final == g]), g)), fill = TRUE)
+grp[, grouping := "Taxonomic"]; mig[, grouping := "Migratory strategy"]
+gm <- rbind(grp, mig, fill = TRUE)
+gm[, `:=`(odds_ratio = exp(estimate), OR_lo = exp(estimate - 1.96 * se),
+          OR_hi = exp(estimate + 1.96 * se), significant = p_value < 0.05)]
+fwrite(gm[term != "(Intercept)"], file.path(OUT, "tables", "tbl_v2_species_group_effects.csv"))
+
 saveRDS(list(m1 = m1, m2 = m2, m3 = m3), file.path(OUT, "models", "species_fast_fits.rds"))
 msg("DONE")
