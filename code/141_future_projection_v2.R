@@ -209,28 +209,60 @@ sup_lab <- copy(sup_smry)[, `:=`(
   hz_lab = factor(horizon, levels = c(2030, 2050, 2080)),
   lab = sprintf("%.0f%% within support", pct))]
 
+# 分析范围内的省级单元 / provincial units inside the analysis scope
+SCOPE_PROV <- sort(unique(d$province))
+
+# 制图要点 / Cartographic requirement:
+#   掩膜会让某些分面只剩极少数省份有值。若用内连接合并几何, 没有值的省份会
+#   整块从 sf 对象消失 —— 既无填充也【无省界】, 看起来像渲染失败。
+#   正确做法是展开完整的【省 x 情景 x 年代】网格, 保证每个分面都画出全部省界,
+#   并把三种状态用不同灰阶显式区分:
+#     modelled              有支撑域内的投影            -> 连续配色
+#     outside fitted range  在分析范围内, 但该情景-年代下无支撑域内的格子 -> 浅灰
+#     not modelled          不在分析范围内(台港澳、中朝共有区)          -> 深灰
 map_panel <- function(dt, valcol, title, sub, cap_extra = "") {
-  dt <- as.data.table(dt)[is.finite(get(valcol))]
-  geo <- pv[pv$province %in% unique(dt$province), c("province")]
-  mp <- merge(geo, dt[, .(province, ssp, horizon, val = get(valcol))], by = "province", all.x = FALSE)
+  dt <- as.data.table(dt)[is.finite(get(valcol)), .(province, ssp, horizon, val = get(valcol))]
+  pv2 <- pv[, "province"]; pv2$uid <- seq_len(nrow(pv2))
+  fac <- CJ(ssp = c("ssp245", "ssp585"), horizon = c(2030L, 2050L, 2080L))
+  ix  <- CJ(uid = pv2$uid, fid = seq_len(nrow(fac)))
+  full <- cbind(data.table(uid = ix$uid, province = pv2$province[ix$uid]), fac[ix$fid])
+  full <- merge(full, dt, by = c("province", "ssp", "horizon"), all.x = TRUE, sort = FALSE)
+  full[, state := fifelse(is.finite(val), "modelled",
+                   fifelse(!is.na(province) & province %in% SCOPE_PROV,
+                           "outside fitted range", "not modelled"))]
+  mp <- merge(pv2, full, by = "uid", all.x = FALSE)
   mp$ssp_lab <- factor(mp$ssp, levels = c("ssp245", "ssp585"), labels = c("SSP2-4.5", "SSP5-8.5"))
   mp$hz_lab  <- factor(mp$horizon, levels = c(2030, 2050, 2080))
-  brks <- c(0.5, 1, 2, 4, 8, 16, 64)
+  # 图例刻度按实际数据范围取 2 的幂; 固定刻度在掩膜后会大半落到范围之外,
+  # 使色标几乎没有可读的刻度 / adapt breaks to the data, else most fall outside
+  rng <- range(mp$val, na.rm = TRUE)
+  # NB: 必须【先过滤到数据范围再判断个数】。若先按 by=1 生成再过滤, 多数刻度
+  #     会落到范围之外, 判断永远不触发加密分支, 色标只剩一两个刻度。
+  mk <- function(step) { b <- 2^seq(floor(log2(rng[1])), ceiling(log2(rng[2])), by = step)
+                         b[b >= rng[1] & b <= rng[2]] }
+  brks <- mk(1)
+  for (st in c(0.5, 0.25)) if (length(brks) < 4) brks <- mk(st)
+  lab_brks <- ifelse(brks < 1, sprintf("%.2fx", brks), sprintf("%.2gx", brks))
   ggplot() +
     geom_sf(data = mp, aes(fill = val), colour = "grey45", linewidth = 0.1) +
+    geom_sf(data = mp[mp$state == "not modelled", ], fill = "grey62",
+            colour = "grey35", linewidth = 0.1) +
     { if (!is.null(outline)) geom_sf(data = outline, fill = NA, colour = "grey15", linewidth = 0.28) } +
     { if (!is.null(nanhai))  geom_sf(data = nanhai,  fill = NA, colour = "grey15", linewidth = 0.38) } +
     geom_text(data = sup_lab, aes(x = 76, y = 8, label = lab), hjust = 0, size = 2.2,
               colour = "grey25", inherit.aes = FALSE) +
     facet_grid(ssp_lab ~ hz_lab, switch = "y") +
-    scale_fill_distiller(palette = "RdYlBu", direction = -1, na.value = "grey93",
-                         trans = "log2", breaks = brks, labels = paste0(brks, "x"),
+    scale_fill_distiller(palette = "RdYlBu", direction = -1, na.value = "grey92",
+                         trans = "log2", breaks = brks, labels = lab_brks,
                          name = "Hazard relative\nto 2024") +
     coord_sf(xlim = c(72, 136), ylim = c(2.5, 54), expand = TRUE) +
     labs(title = title, subtitle = sub,
-         caption = paste0("Latent generation hazard relative to the 2024 baseline (log2 colour scale); province-by-year ",
-                          "shocks set to expectation and reporting completeness set to 1. Base map GS(2019)1822.\n",
-                          cap_extra)) +
+         caption = paste(strwrap(paste0(
+           "Latent generation hazard relative to the 2024 baseline (log2 colour scale); province-by-year shocks set to ",
+           "expectation and reporting completeness set to 1. Base map GS(2019)1822. Pale grey: inside the analysis scope ",
+           "but no cell falls within the fitted covariate range for that scenario and horizon. Mid grey: outside the ",
+           "analysis scope (Taiwan, Hong Kong, Macao and the jointly administered area, none of which have provincial ",
+           "effort coverage). ", cap_extra), width = 150), collapse = "\n")) +
     theme_map()
 }
 
@@ -241,13 +273,13 @@ save_all(map_panel(prov_sup, "mech_ratio",
   paste0("Only species-province rows whose warming and effort fall inside the 1st-99th percentile of the fitted data are ",
          "aggregated. The percentage in each panel is the share of rows that qualify:\nby 2050 under SSP5-8.5 only ",
          "2% do, so the later horizons rest on very few comparable cases and should be read as illustrations.")),
-  "FigM1_future_mechanistic_v2", 9.4, 7.4, prov_sup)
+  "FigM1_future_mechanistic_v2", 9.4, 6.6, prov_sup)
 
 save_all(map_panel(prov_sup, "ml_ratio",
   "Machine-learning projection of new-record generation hazard",
   "XGBoost on the same three predictors and identical future covariates; only rows inside the fitted covariate support",
   "Gradient boosting returns boundary leaf values outside the training range, so its surface flattens rather than extrapolating."),
-  "FigM2_future_ml_v2", 9.4, 7.4, prov_sup)
+  "FigM2_future_ml_v2", 9.4, 6.6, prov_sup)
 
 # 附图: 不加掩膜的全量外推, 用于展示外推的量级 / unmasked extrapolation, for contrast
 save_all(map_panel(prov_all, "mech_ratio",
@@ -256,7 +288,7 @@ save_all(map_panel(prov_all, "mech_ratio",
   paste0("Shown for contrast with the masked main figure. Hazard ratios reach 78x because the species-specific climate ",
          "gradient has a historical SD of only 0.18 degC,\nwhile future province-minus-range warming differentials reach ",
          "2 degC, i.e. more than ten standard deviations beyond the fitted range. These values are not forecasts.")),
-  "FigS3_future_unmasked_v2", 9.4, 7.4, prov_all)
+  "FigS3_future_unmasked_v2", 9.4, 6.6, prov_all)
 
 # ---- 4. SHAP 可解释性 ----
 FEAT_LAB <- c(clim_change_z = "Accumulated warming", clim_var_z = "Annual variability",
