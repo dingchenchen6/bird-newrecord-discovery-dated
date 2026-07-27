@@ -170,6 +170,22 @@ efficiency is more easily displaced off its normal route, and a large-bodied bir
 outside its range is more likely to be noticed and reported. The pooled model averages these
 against residents, for whom neither applies, and returns zero for both.
 
+*Imputed traits.* Trait gaps were filled by random forest, but the out-of-bag error for
+continuous traits is no better than mean imputation (NRMSE 1.00; the categorical error is
+acceptable at PFC 0.11), so imputed values are flagged per trait and should not be treated as
+equivalent to measured ones. Only 51 of the 1,298 modelled species (3.9%) carry an imputed value
+among the main-model traits, and 12 of those have a record. Refitting without them leaves the
+conclusions intact: 17 of 20 terms retain the same sign and significance, and all three
+significant effects survive — range size 1.456 → 1.309 (*P* 1.1 × 10⁻⁴ → 4.5 × 10⁻³), partial
+migrant 1.889 → 2.200 (9.7 × 10⁻⁴ → 6.5 × 10⁻⁵), open habitat 0.541 → 0.598 (2.1 × 10⁻³ →
+1.1 × 10⁻²). One caveat belongs with this: on the reduced subset the phylogenetic logistic
+regression reports α at its upper bound and fails to converge cleanly. The full model's α of 0.597
+is already close to that bound of 0.620, which indicates weak phylogenetic signal at this scale
+rather than a problem specific to the subset. We therefore repeated the sensitivity under
+taxonomic nesting and phylogenetic eigenvectors, which converge normally and return the same two
+headline effects (partial migrant 2.59 and 2.57, both *P* < 5 × 10⁻⁶; range size 1.22,
+*P* = 0.041).
+
 Range size must be measured as an **area**, not as a count of provinces occupied (Fig. 9c;
 Table 7). Both area measures are independent of the response and agree: global range area gives
 an odds ratio of 1.456 (95% CI 1.204–1.762, *P* = 1.1 × 10⁻⁴, n = 1,298) and Chinese range area,

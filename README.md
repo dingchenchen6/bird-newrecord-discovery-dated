@@ -268,7 +268,15 @@ resolved in three tiers: exact, BIRDBASE synonym bridge, and epithet-within-fami
 tier **must** be constrained to family: without it, over half the apparent matches are wrong
 (*Ardenna pacifica*, a shearwater, matches *Gavia pacifica*, a loon). Residual gaps (2.2-4.1%
 of cells) are filled by random-forest imputation and flagged per trait; the out-of-bag error is
-poor for continuous traits (NRMSE 1.00), so imputed values are marked and can be excluded.
+poor for continuous traits (NRMSE 1.00; categorical PFC 0.11), so imputed values are marked and
+can be excluded. Only 51 of the 1,298 modelled species (3.9%) carry an imputed value among the
+main-model traits. Refitting without them keeps 17 of 20 terms at the same sign and significance
+and preserves all three significant effects: range size 1.456 to 1.309, partial migrant 1.889 to
+2.200, open habitat 0.541 to 0.598. On that reduced subset phyloglm reports alpha at its upper
+bound and does not converge cleanly - the full model's alpha of 0.597 is already close to the
+0.620 bound, which reflects weak phylogenetic signal at this scale - so the sensitivity was
+repeated under taxonomic nesting and phylogenetic eigenvectors, which converge and return the same
+headline effects (`tables/tbl_v2_species_imputation_sensitivity*.csv`).
 
 Phylogenetic non-independence is handled with the dated tree itself, by phylogenetic logistic
 regression (Ives & Garland, alpha = 0.60); taxonomic nesting and phylogenetic eigenvector

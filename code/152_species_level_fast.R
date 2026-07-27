@@ -157,6 +157,71 @@ setorder(agree, -n_significant)
 fwrite(agree, file.path(OUT, "tables", "tbl_v2_species_fast_compare.csv"))
 print(agree)
 
+# ---- 敏感性: 剔除任一主用性状被随机森林插补的物种 ----
+# 插补的 OOB 精度对连续变量并不好(NRMSE 约 1.0), 所以插补值不应与实测值等价看待。
+# 主用性状中含插补值的物种只占 3.9%, 剔除后重拟主模型(系统发育树)以检验
+# 结论是否依赖插补。
+# NB: imputed values are flagged per trait; this refit drops any species whose
+#     main-model traits contain one, since the OOB error for continuous traits
+#     is no better than mean imputation.
+IMPF <- intersect(paste0(c(unname(CONT), CATS), "_imputed"), names(d))
+d[, any_imputed := Reduce(`|`, lapply(IMPF, function(v) as.logical(d[[v]])))]
+msg("主用性状含插补值的物种: ", sum(d$any_imputed), " / ", nrow(d),
+    sprintf(" (%.1f%%) | 其中有新纪录 %d", 100 * mean(d$any_imputed),
+            sum(d[any_imputed == TRUE]$new_record_v2)))
+sub_ni <- d[any_imputed == FALSE]
+for (nm in names(CONT))
+  sub_ni[[paste0("z_", nm)]] <- as.numeric(scale(log10(as.numeric(sub_ni[[CONT[[nm]]]]) + 1)))
+tr_ni <- drop.tip(tr, setdiff(tr$tip.label, sub_ni$tree_label))
+sub_ni <- sub_ni[match(tr_ni$tip.label, tree_label)]
+df_ni <- as.data.frame(sub_ni); rownames(df_ni) <- df_ni$tree_label
+# phyloglm 在该子集上 alpha 触到上界并报不收敛(全模型 alpha = 0.597 也已贴近
+# 上界 0.620, 说明本尺度的系统发育信号本就很弱)。因此不把结论压在单一模型上,
+# 同时用分类阶元嵌套与系统发育特征向量在同一子集上重拟。
+# NB: phyloglm hits its alpha bound on this subset, so the sensitivity is run
+#     under all three phylogenetic treatments rather than one.
+m_ni <- tryCatch(suppressWarnings(phyloglm(as.formula(paste("new_record_v2 ~", FX)),
+                                           data = df_ni, phy = tr_ni,
+                                           method = "logistic_MPLE", btol = 30)),
+                 error = function(e) { msg("  无插补 phyloglm 失败: ", conditionMessage(e)); NULL })
+ni_conv <- !is.null(m_ni) && isTRUE(m_ni$convergence == 0)
+msg("  无插补 phyloglm 收敛: ", if (ni_conv) "是" else "否 (alpha 触界)",
+    if (!is.null(m_ni)) paste0(" | alpha = ", signif(m_ni$alpha, 3)) else "")
+m_ni1 <- glmmTMB(as.formula(paste("new_record_v2 ~", FX, "+ (1|order_f/family_f/genus_f)")),
+                 data = sub_ni, family = binomial())
+for (i in seq_len(N_PV)) sub_ni[[PVN[i]]] <-
+  as.numeric(scale(pv$points[match(sub_ni$tree_label, rownames(pv$points)), i]))
+m_ni2 <- glmmTMB(as.formula(paste("new_record_v2 ~", FX, "+", paste(PVN, collapse = " + "))),
+                 data = sub_ni, family = binomial())
+ni_alt <- rbind(grab_tmb(m_ni1, "M1 taxonomic nesting"), grab_tmb(m_ni2, "M2 phylogenetic eigenvectors"))
+ni_alt <- ni_alt[term != "(Intercept)"]
+ni_alt[, `:=`(odds_ratio = exp(estimate), significant = p_value < 0.05,
+              subset = "no imputed traits")]
+fwrite(ni_alt, file.path(OUT, "tables", "tbl_v2_species_imputation_sensitivity_alt.csv"))
+msg("  同子集下 M1/M2 的显著项: ",
+    paste(unique(ni_alt[significant == TRUE]$term), collapse = ", "))
+
+if (!is.null(m_ni)) {
+  g1 <- summary(m3)$coefficients; g2 <- summary(m_ni)$coefficients
+  tms <- intersect(rownames(g1), rownames(g2)); tms <- setdiff(tms, "(Intercept)")
+  sens <- data.table(term = tms,
+    OR_full = exp(g1[tms, 1]), P_full = g1[tms, ncol(g1)],
+    OR_no_imputed = exp(g2[tms, 1]), P_no_imputed = g2[tms, ncol(g2)],
+    phyloglm_converged = ni_conv,
+    n_full = nrow(d), n_no_imputed = nrow(sub_ni),
+    events_full = sum(d$new_record_v2), events_no_imputed = sum(sub_ni$new_record_v2))
+  sens[, `:=`(sig_full = P_full < 0.05, sig_no_imputed = P_no_imputed < 0.05)]
+  sens[, same_conclusion := sig_full == sig_no_imputed &
+         sign(log(OR_full)) == sign(log(OR_no_imputed))]
+  fwrite(sens, file.path(OUT, "tables", "tbl_v2_species_imputation_sensitivity.csv"))
+  msg("剔除插补后 n = ", nrow(sub_ni), " (事件 ", sum(sub_ni$new_record_v2),
+      ") | 结论一致的项 ", sum(sens$same_conclusion), " / ", nrow(sens))
+  print(sens[sig_full | sig_no_imputed,
+             .(term, OR_full = round(OR_full, 3), P_full = signif(P_full, 2),
+               OR_no_imputed = round(OR_no_imputed, 3), P_no_imputed = signif(P_no_imputed, 2),
+               same_conclusion)])
+}
+
 # ---- 范围口径的平行拟合: 中国分布区面积(主模型 M3 = 系统发育树) ----
 sub <- d[is.finite(z_log_range_china)]
 FX_CN <- paste(c(setdiff(Z, "z_log_range"), "z_log_range_china", CATS), collapse = " + ")
