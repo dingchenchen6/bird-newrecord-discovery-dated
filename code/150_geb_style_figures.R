@@ -110,6 +110,7 @@ lab_of <- function(x) vapply(x, function(t) {
 eff <- rd("tbl_v2_species_fast_effects.csv")
 cmp <- rd("tbl_v2_species_fast_compare.csv")
 cir <- rd("tbl_v2_species_range_circularity.csv")
+rngm <- rd("tbl_v2_species_range_measures.csv")
 fitt <- rd("tbl_v2_species_fast_fit.csv")
 MCOL <- c(`M1 taxonomic nesting` = OI[["blue"]], `M2 phylogenetic eigenvectors` = OI[["green"]],
           `M3 phyloglm` = OI[["orange"]])
@@ -128,7 +129,8 @@ if (!is.null(eff)) {
     scale_x_continuous(trans = "log10") +
     labs(x = "Odds ratio per 1 SD (95% CI)", y = NULL,
          title = "Only range size survives among continuous traits",
-         subtitle = "Filled points are significant. Body mass, clutch size, habitat breadth and diet breadth are all null") +
+         subtitle = paste("Filled points are significant. M3 uses the dated phylogeny directly (Ives & Garland logistic",
+                          "\nregression, alpha = 0.60); M1 and M2 are coarser treatments shown for robustness.")) +
     theme_pub() + theme(legend.position = "bottom", panel.grid.major.y = element_blank())
   p9b <- ggplot(eff[kind == "Categorical contrasts"], aes(odds_ratio, lab, colour = model)) +
     geom_vline(xintercept = 1, linetype = 2, colour = "grey55", linewidth = 0.35) +

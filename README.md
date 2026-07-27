@@ -259,8 +259,10 @@ tier **must** be constrained to family: without it, over half the apparent match
 of cells) are filled by random-forest imputation and flagged per trait; the out-of-bag error is
 poor for continuous traits (NRMSE 1.00), so imputed values are marked and can be excluded.
 
-Two results hold under all three phylogenetic treatments — taxonomic nesting, phylogenetic
-eigenvectors, and phylogenetic logistic regression:
+Phylogenetic non-independence is handled with the dated tree itself, by phylogenetic logistic
+regression (Ives & Garland, alpha = 0.60); taxonomic nesting and phylogenetic eigenvector
+regression are coarser alternatives run to confirm nothing depends on the choice. Two results
+hold under all three:
 
 | Term | Taxonomic nesting | Eigenvectors | phyloglm |
 |---|---|---|---|
@@ -270,12 +272,19 @@ eigenvectors, and phylogenetic logistic regression:
 Body mass, clutch size, habitat breadth, diet breadth, number of congeners, hand-wing index,
 IUCN status, endemism and trophic niche are all null.
 
-**Range size must be measured globally.** The trait database was published in 2022, so its count
-of Chinese provinces occupied already contains the 2002-2021 records used as the response.
-Species with a new record occupy a median of 14 provinces against 4 for those without. Using
-that count gives an odds ratio of 2.06 (P = 3e-16); using AVONET global range size, which is
-independent of Chinese provincial records, gives 1.27 (P = 0.017); entered together the global
-measure is fully absorbed (0.96, P = 0.7). Only the global measure is reported as a result.
+**Range must be an area, not a count of provinces.** Both area measures are independent of the
+response and agree, under the tree-based model:
+
+| Measure | n | OR per SD (95% CI) | P |
+|---|---|---|---|
+| Global range area (AVONET) | 1,298 | 1.456 (1.204-1.762) | 1.1e-4 |
+| China range area (BirdLife, clipped) | 1,003 | 1.653 (1.420-1.925) | 9.0e-11 |
+
+The count of provinces occupied does not qualify. The trait database was published in 2022, so
+its provincial counts already contain the 2002-2021 records used as the response: species with a
+new record occupy a median of 14 provinces against 4 for those without, the count returns an odds
+ratio of 2.09 (P = 5e-15), and it absorbs the area effect entirely when both are entered
+(area 0.96, P = 0.70). Only the area measures are reported.
 
 ### Province level
 
