@@ -88,6 +88,46 @@ Each random term corresponds to a distinct process, and the fitted magnitudes ar
 
 *Reporting completeness offset.* Not a free parameter but a known correction, so it consumes no degrees of freedom. Omitting it attenuates the effort coefficient from 1.372 to 1.245, because censoring is concentrated in the recent, high-effort years.
 
+### Migratory strategy shifts the baseline, not the drivers
+
+New provincial records could plausibly arise by different routes in different migratory
+strategies. Residents disperse slowly, so a first record should more often mark a genuine
+boundary shift. Long-distance migrants are highly mobile and can appear far outside their range
+as vagrants or storm-displaced individuals, processes driven by navigation error and weather
+rather than by decadal warming at the destination, and they are visible only on passage. We
+therefore tested whether migratory strategy moderates either driver (Fig. 8; Table 6).
+
+The analysis uses the three groups with a known strategy — 137 resident, 72 partial-migrant and
+107 long-distance-migrant species, carrying 218, 156 and 175 events respectively. Species whose
+strategy is unrecorded are excluded rather than treated as a fourth category: their event rate is
+0.791% against 0.29–0.42% in the other groups, and they hold a third as many risk-set rows per
+species, because a species without trait data entered the candidate pool only by virtue of having
+a record. That is a selection artefact, not an ecological class.
+
+Migratory strategy shifts the baseline hazard: adding it as a main effect improves fit
+(ΔAIC 6.2 relative to the model without it) and is the best model in the ladder. It does not,
+however, moderate either driver. Adding warming × strategy, effort × strategy, both, or the full
+three-way warming × effort × strategy each *worsens* AIC, and none is supported by a
+likelihood-ratio test (*P* = 0.693, 0.854, 0.899 and 0.256 respectively).
+
+Fitting each group separately gives the same picture (Fig. 8b). Accumulated warming raises the
+hazard in every group — 1.363 (95% CI 1.158–1.605) in residents, 1.507 (1.244–1.826) in partial
+migrants and 1.514 (1.265–1.812) in long-distance migrants — and so does survey effort, at 1.293,
+1.270 and 1.344. The confidence intervals overlap almost completely, as the formal tests imply.
+Our prior expectation that warming would matter least for long-distance migrants was not borne
+out: their point estimate is the highest of the three, though indistinguishable from the others.
+The stratified fits use a reduced random structure of species and province intercepts, because
+689 province-year levels are not identifiable from 156–218 events; the ladder, which uses all 549
+events, retains the full structure.
+
+One pattern is worth flagging without claiming it. The warming × effort interaction is confined to
+long-distance migrants (0.753, 0.628–0.903, *P* = 0.0022) and is absent in residents (0.942,
+*P* = 0.54) and partial migrants (1.053, *P* = 0.62). But the test that matters for this claim is
+whether the groups differ, and it is not significant: the three-way likelihood-ratio test gives
+*P* = 0.256 and the long-distance-versus-resident contrast *P* = 0.078. With at most 218 events per
+group the design cannot resolve group differences in an interaction term, so we report this as a
+hypothesis for a larger compilation rather than as a result (Fig. 8d).
+
 ### The return on survey effort is declining
 
 The proportional-hazards assumption holds for accumulated warming (interaction with time β = −0.022, *P* = 0.82) but not for effort (β = −0.211, *P* = 7.7 × 10⁻⁴). This is a substantive result rather than a diagnostic failure. Allowing the effort coefficient to vary through time, its hazard ratio falls from 2.18 (95% CI 1.63–2.90) in 2002 to 1.07 (0.88–1.30) in 2024, crossing into non-significance in the early 2020s (Fig. 6d). Two decades of intensifying observation have used up the readily detectable gaps, so an additional standard deviation of effort now yields far fewer first records than it did at the start of the period. That the climate term shows no such decline is the sharpest available evidence that the two coefficients are capturing different processes: a saturating observational process and a non-saturating climatic one.
@@ -394,6 +434,19 @@ prediction column, is `tables/tbl_v2_ecological_rationale.csv` and `docs/ECOLOGI
 
 **Fig. 7 | Accumulation window and climate baseline.**
 Windows of 5, 10, 15 and 20 years against three series: the main WorldClim 10-arc-minute data with a 1980–2000 baseline, the same baseline computed from CRU TS at 0.5° as a control for data source and resolution, and CRU TS with a 1970–2000 baseline. **a**, Hazard ratio for accumulated warming. **b**, Hazard ratio for survey effort. **c**, Hazard ratio for the interaction. **d**, ΔAIC within each series; circles mark the optimum. Ribbons are 95% confidence intervals.
+
+**Fig. 8 | Migratory strategy shifts the baseline hazard but does not moderate either driver.**
+**a**, Risk-set rows, events and species in each group; the three groups with a known strategy carry 549 events in total. **b**, Group-specific hazard ratios from models fitted separately within each group, with 95% confidence intervals. **c**, ΔAIC across the moderation ladder; red text is the likelihood-ratio *P* value against the model with a migratory main effect only. **d**, Group-specific warming × effort interaction derived from the three-way model; filled points are significant within group, open points are not. The formal test for heterogeneity among groups is not significant.
+
+**Table 6.** Migratory stratification. Full results in `tables/tbl_v2_migratory_ladder.csv`,
+`tbl_v2_migratory_stratified.csv` and `tbl_v2_migratory_interaction_by_group.csv`.
+
+| Group | Events | Warming HR (95% CI) | Effort HR (95% CI) | Warming × effort HR | *P* |
+|---|---|---|---|---|---|
+| Resident | 218 | 1.363 (1.158–1.605) | 1.293 (1.110–1.506) | 0.942 | 0.54 |
+| Partial migrant | 156 | 1.507 (1.244–1.826) | 1.270 (1.030–1.566) | 1.053 | 0.62 |
+| Long-distance migrant | 175 | 1.514 (1.265–1.812) | 1.344 (1.130–1.598) | 0.753 | 0.0022 |
+| *Moderation tests* | | LR *P* = 0.693 | LR *P* = 0.854 | three-way LR *P* = 0.256 | |
 
 **Fig. M1 | Mechanistic projection of the latent generation hazard, restricted to the fitted covariate support.**
 Provincial hazard relative to 2024 under two SSP scenarios at three horizons, aggregating only species-province cells whose accumulated warming and survey effort fall inside the 1st–99th percentile of the fitted data. The percentage on each panel is the share of cells that qualify.

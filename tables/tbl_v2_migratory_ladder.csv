@@ -1,0 +1,7 @@
+model,converged,note,n,events,df,AIC,dAIC,LR_chisq,LR_P
+M0 main model (no migratory term),TRUE,clim_change_z * effort_z + clim_var_z,163254,549,8,7138.46378677587,6.2,,
+M1 + migratory main effect,TRUE,clim_change_z * effort_z + clim_var_z + mig,163254,549,10,7132.2632932206,0,,
+M2 + warming x migratory,TRUE,clim_change_z * effort_z + clim_var_z + mig + clim_change_z:mig,163254,549,12,7135.53024340231,3.27,0.733049818287327,0.693138870771808
+M3 + effort x migratory,TRUE,clim_change_z * effort_z + clim_var_z + mig + effort_z:mig,163254,549,12,7135.94653968556,3.68,0.316753535038515,0.853528139700295
+M4 + both interactions,TRUE,clim_change_z * effort_z + clim_var_z + mig + clim_change_z:mig + effort_z:mig,163254,549,14,7139.1944658224,6.93,1.06882739820321,0.899186020996385
+M5 + three-way warming x effort x mig,TRUE,clim_change_z * effort_z * mig + clim_var_z,163254,549,16,7136.49860416876,4.24,7.76468905183901,0.255854685276017

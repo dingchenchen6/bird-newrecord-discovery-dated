@@ -15,10 +15,10 @@ entirely.
 ## What is in here
 
 ```
-code/        analysis pipeline, scripts 130-145, run in numerical order
+code/        analysis pipeline, scripts 130-147, run in numerical order
 data/        modelling datasets and the panels needed to rebuild them
 tables/      every result table cited in the manuscript and report
-figures/     Fig1-Fig7 and the diagnostic panel
+figures/     Fig1-Fig8 and the diagnostic panel
 figures_future/  projection figures FigM1-FigM4 and the unmasked contrast
 docs/        manuscript (English) and research report (Chinese)
 tests/       smoke test reproducing the headline coefficients
@@ -69,6 +69,8 @@ some of which are third-party licensed and are not redistributed here — set th
 | `143_ecological_anatomy_figures.R` | Fig5–Fig6, natural-unit effects and random effects | yes (base map) |
 | `144_sensitivity_figure_and_rationale.R` | Fig7 and the ecological rationale table | no |
 | `145_baseline_1970_sensitivity.R` | 1970–2000 baseline, rebuilt from CRU TS 0.5° | yes (CRU, ranges, grid) |
+| `146_migratory_strategy.R` | Migratory stratification: moderation ladder and stratified fits | no |
+| `147_migratory_figure.R` | Fig8 | no |
 
 Script 134 is run once per climate indicator and then merged:
 
@@ -202,5 +204,30 @@ standardised hazard ratios stay comparable but natural-unit statements refer to 
 | Fig5 | Anatomy of the model in natural units, and the species-specificity of the climate variable |
 | Fig6 | The observation process: species, province and province-by-year random effects, and the declining return on effort |
 | Fig7 | Accumulation window and climate baseline sensitivity |
+| Fig8 | Migratory stratification: does strategy moderate either driver? |
 | FigM1–M4 | CMIP6 projections with the covariate-support mask, SHAP interpretation, mechanistic vs ML |
 | FigS1, FigS3 | Residual diagnostics; unmasked extrapolation for contrast |
+
+## Migratory strategy
+
+Stratifying by migratory strategy uses the three groups with a known strategy — 137 resident,
+72 partial-migrant and 107 long-distance-migrant species, carrying 218, 156 and 175 events.
+Species without trait data are excluded rather than pooled: their event rate is 0.791% against
+0.29–0.42% elsewhere because they entered the candidate pool only by virtue of having a record,
+which is a selection artefact rather than an ecological class.
+
+| Group | Events | Warming HR | Effort HR | Warming x effort HR |
+|---|---|---|---|---|
+| Resident | 218 | 1.363 (1.158–1.605) | 1.293 (1.110–1.506) | 0.942 (P = 0.54) |
+| Partial migrant | 156 | 1.507 (1.244–1.826) | 1.270 (1.030–1.566) | 1.053 (P = 0.62) |
+| Long-distance migrant | 175 | 1.514 (1.265–1.812) | 1.344 (1.130–1.598) | 0.753 (P = 0.0022) |
+
+Strategy shifts the baseline hazard (main effect, dAIC 6.2) but moderates neither driver:
+likelihood-ratio tests give P = 0.693 for warming x strategy, 0.854 for effort x strategy and
+0.256 for the full three-way term. The warming x effort interaction is significant only among
+long-distance migrants, but the test for whether the groups differ is not (P = 0.078 for the key
+contrast), so that pattern is reported as a hypothesis rather than a finding.
+
+Stratified fits drop the province-by-year random intercept: 689 levels are not identifiable from
+156–218 events, and forcing the full structure collapses variance components and yields a
+non-positive-definite Hessian. The moderation ladder, fitted on all 549 events, keeps it.
