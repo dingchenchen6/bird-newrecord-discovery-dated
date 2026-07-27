@@ -15,11 +15,12 @@ entirely.
 ## What is in here
 
 ```
-code/        analysis pipeline, scripts 130-153, run in numerical order
+code/        analysis pipeline, scripts 130-154, run in numerical order
 data/        modelling datasets and the panels needed to rebuild them
 tables/      every result table cited in the manuscript and report
 figures/     Fig1-Fig10 and the diagnostic panel
 figures_alt/     species- and province-level figures in the original GEB style
+figures_direction/  radar and wind-rose plots of record direction, overall and by order
 figures_future/  projection figures FigM1-FigM4 and the unmasked contrast
 docs/        manuscript (English) and research report (Chinese)
 tests/       smoke test reproducing the headline coefficients
@@ -77,6 +78,7 @@ some of which are third-party licensed and are not redistributed here — set th
 | `149_province_level_geb.R` | Province-level negative binomial, partial regression, hierarchical partitioning | no |
 | `150_geb_style_figures.R` | Fig9, Fig10 | no |
 | `153_geb_original_style_figures.R` | Fig9alt, Fig10alt in the original GEB layout | no |
+| `154_directional_windrose_radar.R` | Directionality of records: radar and wind-rose by order | yes (AVONET centroids) |
 
 Script 134 is run once per climate indicator and then merged:
 
@@ -323,3 +325,31 @@ ridgelines are Bayesian posteriors, whereas the species-level models here are ph
 logistic regression and glmmTMB, so the ridgelines show the sampling distribution of each
 estimate under a normal approximation. The shape carries the same reading, but it is not a
 posterior and is not labelled as one.
+
+## Directionality of new records
+
+Each record's direction is the bearing from the centroid of the species' BirdLife range to the
+record itself, binned into eight 45-degree sectors. Centroids come from AVONET and cover 642 of
+the 657 events (97.7%), spanning 361 species and 20 orders.
+
+New records are strongly non-random in direction (chi-square = 580.1, df = 7,
+P = 4.6e-121). Two sectors are over-represented after Holm correction: **East** (237 records,
+36.9%, against 80.2 expected) and **Northeast** (179, 27.9%). South and West are the emptiest
+(20 and 19). The pattern holds within every well-sampled order: Passeriformes (376.6, P = 2.5e-77),
+Anseriformes (64.0), Accipitriformes (52.5), Charadriiformes (45.5) and Columbiformes (29.1) all
+reject uniformity, and in each the significant sectors are East, Northeast or both.
+
+Figures follow the layout of the existing bird directional task — ggradar for the radar form,
+`coord_polar` for the wind-rose form, one colour per order, a header strip, and PNG/PDF/PPTX
+output. Three things differ:
+
+- events are the discovery-dated v2 set rather than publication-dated;
+- **every order panel carries both sample sizes in its header strip** — new records and species —
+  because one species can contribute records in several provinces and the two counts can give
+  different directional profiles;
+- directional tests are included (chi-square goodness-of-fit against uniform, plus one-sided
+  exact binomial tests per sector with Holm correction), which the earlier script did not have.
+
+The overlay figures use each order's own proportions rather than raw counts: Passeriformes
+contributes 388 of 642 records and on an absolute scale flattens every other order against the
+centre. Absolute sample sizes stay in the legend.
