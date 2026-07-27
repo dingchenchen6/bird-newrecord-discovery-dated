@@ -26,8 +26,9 @@ tests/       smoke test reproducing the headline coefficients
 
 Every figure ships as **PNG (450 dpi), PDF, SVG and editable PPTX**, plus the source data
 behind it as CSV. In the PPTX every element is a native PowerPoint shape, so the figures can
-be recoloured or relabelled without returning to R. Map figures omit SVG because it duplicates
-the PDF at ten times the size.
+be recoloured or relabelled without returning to R. Figures whose SVG exceeds 5 MB (the province
+maps and the SHAP scatter) ship as PDF only — the SVG is six times the size of the PDF and
+carries no extra information.
 
 ---
 
