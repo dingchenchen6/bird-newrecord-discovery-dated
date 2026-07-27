@@ -1,0 +1,10 @@
+cn_match,bb_match,av_match,n
+primary,primary,primary,1243
+primary,primary,,22
+synonym,primary,synonym,9
+primary,primary,synonym,5
+primary,,,3
+primary,,primary,3
+synonym,primary,primary,2
+synonym,synonym,synonym,1
+primary,synonym,primary,1

@@ -1,0 +1,4 @@
+model,AIC,note
+M1 taxonomic nesting,1465.1685906646,(1|order/family/genus)
+M2 phylogenetic eigenvectors,1463.31906593075,"10 eigenvectors, 71.6% of phylogenetic distance"
+M3 phyloglm,1486.62083104783,"Ives & Garland logistic MPLE, alpha = 0.613"

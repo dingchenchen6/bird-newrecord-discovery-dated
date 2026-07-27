@@ -15,10 +15,10 @@ entirely.
 ## What is in here
 
 ```
-code/        analysis pipeline, scripts 130-147, run in numerical order
+code/        analysis pipeline, scripts 130-152, run in numerical order
 data/        modelling datasets and the panels needed to rebuild them
 tables/      every result table cited in the manuscript and report
-figures/     Fig1-Fig8 and the diagnostic panel
+figures/     Fig1-Fig10 and the diagnostic panel
 figures_future/  projection figures FigM1-FigM4 and the unmasked contrast
 docs/        manuscript (English) and research report (Chinese)
 tests/       smoke test reproducing the headline coefficients
@@ -71,6 +71,10 @@ some of which are third-party licensed and are not redistributed here — set th
 | `145_baseline_1970_sensitivity.R` | 1970–2000 baseline, rebuilt from CRU TS 0.5° | yes (CRU, ranges, grid) |
 | `146_migratory_strategy.R` | Migratory stratification: moderation ladder and stratified fits | no |
 | `147_migratory_figure.R` | Fig8 | no |
+| `151_harmonise_species_traits.R` | Master trait table: Chinese trait database, BIRDBASE, AVONET, RF imputation | yes (three trait sources) |
+| `152_species_level_fast.R` | Species-level fits under three phylogenetic treatments | yes (phylogeny) |
+| `149_province_level_geb.R` | Province-level negative binomial, partial regression, hierarchical partitioning | no |
+| `150_geb_style_figures.R` | Fig9, Fig10 | no |
 
 Script 134 is run once per climate indicator and then merged:
 
@@ -205,6 +209,8 @@ standardised hazard ratios stay comparable but natural-unit statements refer to 
 | Fig6 | The observation process: species, province and province-by-year random effects, and the declining return on effort |
 | Fig7 | Accumulation window and climate baseline sensitivity |
 | Fig8 | Migratory stratification: does strategy moderate either driver? |
+| Fig9 | Species-level correlates under three phylogenetic treatments |
+| Fig10 | Province-level counts: model choice, effort, hierarchical partitioning |
 | FigM1–M4 | CMIP6 projections with the covariate-support mask, SHAP interpretation, mechanistic vs ML |
 | FigS1, FigS3 | Residual diagnostics; unmasked extrapolation for contrast |
 
@@ -231,3 +237,62 @@ contrast), so that pattern is reported as a hypothesis rather than a finding.
 Stratified fits drop the province-by-year random intercept: 689 levels are not identifiable from
 156–218 events, and forcing the full structure collapses variance components and yields a
 non-positive-definite Hessian. The moderation ladder, fitted on all 549 events, keeps it.
+
+## Species-level and province-level analyses
+
+Two further levels complement the hazard model, following the framework of the companion mammal
+study (Ding et al. 2025, *Global Ecology and Biogeography*).
+
+### Species level
+
+Pool: the 1,445 Chinese bird species of the national ecological trait database, of which 1,312
+match the Clements 2023 dated phylogeny and 361 acquired at least one new provincial record
+(636 of the 657 events; 13 event species are post-2022 taxonomic splits absent from the pool).
+
+Traits come from three sources in order of precedence — the Chinese trait database (mass,
+morphometrics, multi-category diet, clutch, nest type and site, flocking, migration, endemism),
+BIRDBASE v2025.1 (habitat breadth HB, diet breadth DB, specialisation index ESI, IUCN status)
+and AVONET (hand-wing index, habitat density, trophic niche, global range size). Names are
+resolved in three tiers: exact, BIRDBASE synonym bridge, and epithet-within-family. The last
+tier **must** be constrained to family: without it, over half the apparent matches are wrong
+(*Ardenna pacifica*, a shearwater, matches *Gavia pacifica*, a loon). Residual gaps (2.2-4.1%
+of cells) are filled by random-forest imputation and flagged per trait; the out-of-bag error is
+poor for continuous traits (NRMSE 1.00), so imputed values are marked and can be excluded.
+
+Two results hold under all three phylogenetic treatments — taxonomic nesting, phylogenetic
+eigenvectors, and phylogenetic logistic regression:
+
+| Term | Taxonomic nesting | Eigenvectors | phyloglm |
+|---|---|---|---|
+| Partial migrant vs resident | 2.49 (P = 9.5e-6) | 2.50 (P = 5.9e-6) | 1.91 (P = 8.1e-4) |
+| Global range size, per SD | 1.27 (P = 0.017) | 1.23 (P = 0.029) | 1.45 (P = 1.4e-4) |
+
+Body mass, clutch size, habitat breadth, diet breadth, number of congeners, hand-wing index,
+IUCN status, endemism and trophic niche are all null.
+
+**Range size must be measured globally.** The trait database was published in 2022, so its count
+of Chinese provinces occupied already contains the 2002-2021 records used as the response.
+Species with a new record occupy a median of 14 provinces against 4 for those without. Using
+that count gives an odds ratio of 2.06 (P = 3e-16); using AVONET global range size, which is
+independent of Chinese provincial records, gives 1.27 (P = 0.017); entered together the global
+measure is fully absorbed (0.96, P = 0.7). Only the global measure is reported as a result.
+
+### Province level
+
+Response: new records per province, discovery-dated. Poisson is rejected (dispersion 5.60,
+P = 2.3e-17); the negative binomial is not (1.24, P = 0.20, theta 6.11), and DHARMa passes.
+
+| Model | Significant terms |
+|---|---|
+| Counts | Regional species richness IRR 1.27 (P = 0.036) |
+| Rate per unit of recent effort (offset) | Early survey effort IRR 0.71 (P = 0.028); GDP per capita IRR 0.61 (P = 0.0027) |
+
+Hierarchical partitioning attributes 51.2% of explained deviance to species richness, 33.3% to
+area and 9% to the two effort terms combined; the full model explains 20.5% of deviance. Effort
+therefore appears at this scale not as a count effect but as diminishing returns, which is the
+same signal the hazard model shows as a declining effort coefficient through time.
+
+Note on the effort windows: the mammal study used publication counts from 1949-2000 as
+historical survey effort. No bird analogue exists here - the observation database holds seven
+reports before 2000 and 29 of 31 provinces have none - so early (2002-2008) and recent
+(2009-2024) coverage take that role instead.

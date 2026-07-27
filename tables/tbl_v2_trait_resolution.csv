@@ -1,0 +1,11 @@
+tier,step,N
+T1 exact,BIRDBASE,1331
+T3 epithet within family,BIRDBASE,64
+,BIRDBASE,50
+T1 exact,AVONET,1352
+T3 epithet within family,AVONET,53
+,AVONET,40
+T1 exact,phylogeny,1312
+,phylogeny,133
+T1 exact,events -> pool,340
+T3 epithet within family,events -> pool,21

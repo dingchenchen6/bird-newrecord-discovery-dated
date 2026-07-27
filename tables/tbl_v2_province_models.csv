@@ -1,0 +1,4 @@
+model,formula,df,AIC,AICc,dispersion,theta
+Poisson (main),new_record_count ~ z_early_effort + z_recent_effort + z_richness + z_gdp + z_area + z_habitat,7,295.664121542132,302.209576087586,5.60489122627276,
+Negative binomial (main),new_record_count ~ z_early_effort + z_recent_effort + z_richness + z_gdp + z_area + z_habitat,8,239.971505827149,246.516960372604,1.23604833016055,6.10805217907873
+Negative binomial (recent effort as offset),new_record_count ~ z_early_effort + z_richness + z_gdp + z_area + z_habitat + offset(log_recent_offset),7,261.933941292046,266.803506509438,1.51751545505405,2.56173565725574
