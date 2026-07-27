@@ -1,9 +1,9 @@
 term,n_models,same_direction,n_significant,OR_range
-migration_finalPartial migrant,3,TRUE,3,1.91-2.50
-z_log_range,3,TRUE,3,1.23-1.45
-habitat_densityOpen,3,TRUE,1,0.55-0.79
+migration_finalPartial migrant,3,TRUE,3,1.89-2.50
+z_log_range,3,TRUE,3,1.23-1.46
+habitat_densityOpen,3,TRUE,1,0.54-0.79
 migration_finalMigratory,3,TRUE,1,1.24-1.50
-endemic_finalEndemic,3,FALSE,0,1.00-1.01
+endemic_finalEndemic,3,FALSE,0,1.00-1.02
 habitat_densitySemi-open,3,FALSE,0,0.99-1.12
 iucn_groupNear Threatened,3,TRUE,0,1.04-1.25
 iucn_groupThreatened,3,TRUE,0,1.14-1.25
@@ -14,8 +14,8 @@ trophic_nicheHerbivore,3,FALSE,0,0.73-1.28
 trophic_nicheOmnivore,3,FALSE,0,0.77-1.03
 trophic_nicheVertivore/Scavenger,3,FALSE,0,0.79-1.15
 z_log_clutch,3,TRUE,0,1.06-1.12
-z_log_congeners,3,FALSE,0,0.95-1.04
-z_log_dietbreadth,3,TRUE,0,0.90-0.92
-z_log_habbreadth,3,TRUE,0,0.87-0.91
+z_log_congeners,3,FALSE,0,0.95-1.05
+z_log_dietbreadth,3,TRUE,0,0.89-0.92
+z_log_habbreadth,3,TRUE,0,0.88-0.91
 z_log_hwi,3,TRUE,0,0.93-0.98
 z_log_mass,3,TRUE,0,0.94-0.97

@@ -128,6 +128,68 @@ whether the groups differ, and it is not significant: the three-way likelihood-r
 group the design cannot resolve group differences in an interaction term, so we report this as a
 hypothesis for a larger compilation rather than as a result (Fig. 8d).
 
+### Which species, and which provinces
+
+The hazard model asks what governs the risk that a given species is recorded in a given province
+in a given year. Two complementary questions operate at coarser levels: which species are more
+likely to yield a new provincial record at all, and which provinces accumulate more of them. We
+address both following the framework of the companion mammal study, adapted to birds
+(Figs 9, 10; Tables 7, 8).
+
+*Species level.* The pool is the 1,445 Chinese bird species of the national ecological trait
+database, of which 1,312 match the dated Clements phylogeny and 361 acquired at least one new
+provincial record; these carry 636 of the 657 events, the remainder belonging to 13 species that
+are post-2022 taxonomic splits absent from the pool. Traits come from three sources in order of
+precedence: the Chinese database for body mass, morphometrics, multi-category diet, clutch size,
+nest type and site, flocking, migratory status and endemism; BIRDBASE for habitat breadth (the
+number of major habitats used), diet breadth (the number of major food types consumed) and IUCN
+status; and AVONET for the hand-wing index and global range area. Phylogenetic non-independence
+is handled with the tree itself, using phylogenetic logistic regression (Ives & Garland,
+estimated α = 0.60), with taxonomic nesting and phylogenetic eigenvector regression as coarser
+alternatives to confirm that nothing depends on the choice.
+
+Two effects hold under all three treatments (Fig. 9a, b, d). Partial migrants are about twice as
+likely as residents to yield a new provincial record (odds ratio 1.91–2.50 across treatments, all
+*P* < 0.001), and range size raises the odds by 1.23–1.46 per standard deviation. This converges
+with the hazard model from a different direction: partial migrants also carry the highest raw
+event rate there (0.417% against 0.29–0.33%). Body mass, clutch size, habitat breadth, diet
+breadth, number of congeners, hand-wing index, IUCN status, endemism and trophic niche are all
+null — a contrast with the mammal study, where smaller-bodied, nocturnal and data-deficient
+species were more likely to be newly recorded.
+
+Range size must be measured as an **area**, not as a count of provinces occupied (Fig. 9c;
+Table 7). Both area measures are independent of the response and agree: global range area gives
+an odds ratio of 1.456 (95% CI 1.204–1.762, *P* = 1.1 × 10⁻⁴, n = 1,298) and Chinese range area,
+taken from BirdLife polygons clipped to China, gives 1.653 (1.420–1.925, *P* = 9.0 × 10⁻¹¹,
+n = 1,003). The count of provinces occupied does not qualify: the trait database was published in
+2022 and its provincial counts therefore already contain the 2002–2021 records used as the
+response. Species with a new record occupy a median of 14 provinces against 4 for those without,
+that variable returns an odds ratio of 2.09 (*P* = 5 × 10⁻¹⁵), and it absorbs the area effect
+entirely when both are entered (area 0.96, *P* = 0.70). We report only the area measures.
+
+*Province level.* Counts of new records per province are overdispersed relative to Poisson
+(dispersion 5.60, *P* = 2.3 × 10⁻¹⁷); a negative binomial is adequate (1.24, *P* = 0.20, θ = 6.11)
+and passes simulation-based diagnostics (Fig. 10a; Table 8). In the count model only regional
+species richness is significant (incidence rate ratio 1.27, *P* = 0.036). The informative model is
+the one that treats recent survey effort as an offset, so that the response becomes the discovery
+rate per unit of effort: there, provinces already well covered in 2002–2008 yield fewer records
+per unit of recent effort (0.71, *P* = 0.028), as does higher GDP per capita (0.61, *P* = 0.0027)
+(Fig. 10b). Hierarchical partitioning attributes 51.2% of the explained deviance to species
+richness, 33.3% to area and 9% to the two effort terms combined, with the full model explaining
+20.5% of deviance (Fig. 10c).
+
+Effort therefore appears at the provincial scale not as a count effect but as diminishing
+returns — the same signal the hazard model shows as an effort coefficient that falls through time.
+Two analyses at different levels, on different response variables, converge on the conclusion that
+China's observational capacity is now large enough that additional effort recovers progressively
+less of what remains undocumented.
+
+One adaptation must be stated. The mammal study measured historical survey effort as publication
+counts for 1949–2000. No bird analogue exists in these data: the observation database holds seven
+reports before 2000 and 29 of 31 provinces have none. Early (2002–2008) and recent (2009–2024)
+coverage therefore take that role, which preserves the question — do provinces already well
+covered show diminishing returns? — on a shorter timescale than the original.
+
 ### The return on survey effort is declining
 
 The proportional-hazards assumption holds for accumulated warming (interaction with time β = −0.022, *P* = 0.82) but not for effort (β = −0.211, *P* = 7.7 × 10⁻⁴). This is a substantive result rather than a diagnostic failure. Allowing the effort coefficient to vary through time, its hazard ratio falls from 2.18 (95% CI 1.63–2.90) in 2002 to 1.07 (0.88–1.30) in 2024, crossing into non-significance in the early 2020s (Fig. 6d). Two decades of intensifying observation have used up the readily detectable gaps, so an additional standard deviation of effort now yields far fewer first records than it did at the start of the period. That the climate term shows no such decline is the sharpest available evidence that the two coefficients are capturing different processes: a saturating observational process and a non-saturating climatic one.
@@ -447,6 +509,39 @@ Windows of 5, 10, 15 and 20 years against three series: the main WorldClim 10-ar
 | Partial migrant | 156 | 1.507 (1.244–1.826) | 1.270 (1.030–1.566) | 1.053 | 0.62 |
 | Long-distance migrant | 175 | 1.514 (1.265–1.812) | 1.344 (1.130–1.598) | 0.753 | 0.0022 |
 | *Moderation tests* | | LR *P* = 0.693 | LR *P* = 0.854 | three-way LR *P* = 0.256 | |
+
+**Fig. 9 | Species-level correlates of new provincial records.**
+**a**, Continuous traits, as odds ratios per standard deviation with 95% confidence intervals, under three treatments of phylogenetic non-independence. Filled points are significant. **b**, Categorical contrasts against their reference levels. **c**, Range measured as an area, from two independent sources, against range measured as a count of provinces occupied. **d**, For every term, the number of phylogenetic treatments in which it is significant, with the range of odds ratios across treatments.
+
+**Fig. 10 | Province-level counts of new records.**
+**a**, Model comparison: Poisson against negative binomial, with and without recent effort as an offset. **b**, Incidence rate ratios per standard deviation from the two negative-binomial models. **c**, Hierarchical partitioning of explained deviance into independent and joint contributions. **d**, Partial correlation of each predictor with the record count, holding the others constant.
+
+**Table 7.** Species-level range measures, all from phylogenetic logistic regression on the dated
+tree. Full results in `tables/tbl_v2_species_range_measures.csv` and
+`tbl_v2_species_range_circularity.csv`.
+
+| Measure | *n* | Species with a record | OR per SD (95% CI) | *P* |
+|---|---|---|---|---|
+| Global range area (AVONET) | 1,298 | 334 | 1.456 (1.204–1.762) | 1.1 × 10⁻⁴ |
+| China range area (BirdLife, clipped) | 1,003 | 312 | 1.653 (1.420–1.925) | 9.0 × 10⁻¹¹ |
+| Provinces occupied — *not reported as a result* | 1,298 | 334 | 2.09 | 5 × 10⁻¹⁵ |
+
+**Table 8.** Province-level models. Full results in `tables/tbl_v2_province_*.csv`.
+
+| Model | Dispersion | *P* | AICc |
+|---|---|---|---|
+| Poisson | 5.60 | 2.3 × 10⁻¹⁷ | 302.2 |
+| Negative binomial | 1.24 | 0.20 | 246.5 |
+| Negative binomial, recent effort as offset | 1.52 | — | 266.8 |
+
+| Term | Counts, IRR | Rate per unit of effort, IRR |
+|---|---|---|
+| Regional species richness | **1.27** (*P* = 0.036) | 0.89 |
+| Early survey effort (2002–2008) | 0.92 | **0.71** (*P* = 0.028) |
+| Recent survey effort (2009–2024) | 0.93 | *offset* |
+| GDP per capita | 1.10 | **0.61** (*P* = 0.0027) |
+| Administrative area | 1.17 | 1.20 |
+| Habitat heterogeneity | 0.99 | 1.03 |
 
 **Fig. M1 | Mechanistic projection of the latent generation hazard, restricted to the fitted covariate support.**
 Provincial hazard relative to 2024 under two SSP scenarios at three horizons, aggregating only species-province cells whose accumulated warming and survey effort fall inside the 1st–99th percentile of the fitted data. The percentage on each panel is the share of cells that qualify.

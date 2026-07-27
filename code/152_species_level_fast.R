@@ -53,11 +53,20 @@ CONT <- c(log_mass = "mass_g_final", log_hwi = "hwi_final", log_range = "range_s
           log_clutch = "clutch_final", log_congeners = "n_congeners",
           log_habbreadth = "habitat_breadth", log_dietbreadth = "diet_breadth")
 CIRC <- c(log_range_provinces = "provinces_final")   # 仅用于展示循环性, 不作结论
+# 范围的两个可用口径, 均与"是否产生新纪录"无直接循环:
+#   全球分布区面积 range_size_av (AVONET, 覆盖 ~99%)  <- 主口径
+#   中国分布区面积 china_range_area_km2 (BirdLife 分布图裁到中国, 覆盖 ~70%) <- 平行口径
+CN_AREA <- "/Users/dingchenchen/Documents/New project/bird_geb_species_province_joint_v2_20260723/source_data/source_data_Fig2ab_china_range_area_v2.csv"
 CATS <- c("migration_final", "trophic_niche", "habitat_density", "iucn_group", "endemic_final")
 N_PV <- 10L                                   # 系统发育特征向量个数
 
 d <- fread(file.path(OUT, "data", "species_traits_harmonised_v2.csv"))
 d <- d[!is.na(tree_label) & nzchar(tree_label)]
+# 并入中国分布区面积
+ca <- fread(CN_AREA)[, .(tree_label, china_range_area_km2)]
+d <- merge(d, unique(ca, by = "tree_label"), by = "tree_label", all.x = TRUE)
+msg("中国分布区面积覆盖: ", sum(is.finite(d$china_range_area_km2)), " / ", nrow(d),
+    sprintf(" (%.1f%%)", 100 * mean(is.finite(d$china_range_area_km2))))
 d <- d[is.finite(range_size_av)]
 msg("物种池 ", nrow(d), " (有系统树标签且有全球分布区面积) | 有新纪录 ", sum(d$new_record_v2))
 
@@ -93,6 +102,7 @@ for (i in seq_len(N_PV)) d[[PVN[i]]] <- as.numeric(scale(pv$points[match(d$tree_
 msg("前 ", N_PV, " 个系统发育特征向量解释系统发育距离的 ", round(pv$explained, 1), "%")
 
 for (nm in names(CIRC)) d[[paste0("z_", nm)]] <- as.numeric(scale(log10(as.numeric(d[[CIRC[[nm]]]]) + 1)))
+d[, z_log_range_china := as.numeric(scale(log10(china_range_area_km2 + 1)))]
 FX <- paste(c(Z, CATS), collapse = " + ")
 
 # ---- M1 分类阶元嵌套 ----
@@ -146,6 +156,38 @@ agree <- data.table(term = w$term,
 setorder(agree, -n_significant)
 fwrite(agree, file.path(OUT, "tables", "tbl_v2_species_fast_compare.csv"))
 print(agree)
+
+# ---- 范围口径的平行拟合: 中国分布区面积(主模型 M3 = 系统发育树) ----
+sub <- d[is.finite(z_log_range_china)]
+FX_CN <- paste(c(setdiff(Z, "z_log_range"), "z_log_range_china", CATS), collapse = " + ")
+tr_cn <- drop.tip(tr, setdiff(tr$tip.label, sub$tree_label))
+sub <- sub[match(tr_cn$tip.label, tree_label)]
+dfc <- as.data.frame(sub); rownames(dfc) <- dfc$tree_label
+m_cn <- tryCatch(phyloglm(as.formula(paste("new_record_v2 ~", FX_CN)), data = dfc, phy = tr_cn,
+                          method = "logistic_MPLE", btol = 20),
+                 error = function(e) { msg("  中国面积模型失败: ", conditionMessage(e)); NULL })
+if (!is.null(m_cn)) {
+  sc2 <- summary(m_cn)$coefficients
+  rng2 <- data.table(measure = "China range area (BirdLife, clipped)",
+                     n = nrow(sub), n_events = sum(sub$new_record_v2),
+                     odds_ratio = exp(sc2["z_log_range_china", 1]),
+                     lo = exp(sc2["z_log_range_china", 1] - 1.96 * sc2["z_log_range_china", 2]),
+                     hi = exp(sc2["z_log_range_china", 1] + 1.96 * sc2["z_log_range_china", 2]),
+                     p_value = sc2["z_log_range_china", ncol(sc2)])
+  sc1 <- summary(m3)$coefficients
+  rng1 <- data.table(measure = "Global range area (AVONET)",
+                     n = nrow(d), n_events = sum(d$new_record_v2),
+                     odds_ratio = exp(sc1["z_log_range", 1]),
+                     lo = exp(sc1["z_log_range", 1] - 1.96 * sc1["z_log_range", 2]),
+                     hi = exp(sc1["z_log_range", 1] + 1.96 * sc1["z_log_range", 2]),
+                     p_value = sc1["z_log_range", ncol(sc1)])
+  rngt <- rbind(rng1, rng2)
+  fwrite(rngt, file.path(OUT, "tables", "tbl_v2_species_range_measures.csv"))
+  print(rngt)
+  msg("范围口径对比(均用系统发育树): 全球 OR=", round(rng1$odds_ratio, 3),
+      " (P=", signif(rng1$p_value, 2), ") | 中国 OR=", round(rng2$odds_ratio, 3),
+      " (P=", signif(rng2$p_value, 2), ")")
+}
 
 # ---- 循环性演示: 把中国省数加进 M1, 看它如何吞掉全球范围效应 ----
 m_circ <- glmmTMB(as.formula(paste("new_record_v2 ~", FX, "+ z_log_range_provinces + (1|order_f/family_f/genus_f)")),
