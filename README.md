@@ -15,10 +15,11 @@ entirely.
 ## What is in here
 
 ```
-code/        analysis pipeline, scripts 130-152, run in numerical order
+code/        analysis pipeline, scripts 130-153, run in numerical order
 data/        modelling datasets and the panels needed to rebuild them
 tables/      every result table cited in the manuscript and report
 figures/     Fig1-Fig10 and the diagnostic panel
+figures_alt/     species- and province-level figures in the original GEB style
 figures_future/  projection figures FigM1-FigM4 and the unmasked contrast
 docs/        manuscript (English) and research report (Chinese)
 tests/       smoke test reproducing the headline coefficients
@@ -75,6 +76,7 @@ some of which are third-party licensed and are not redistributed here — set th
 | `152_species_level_fast.R` | Species-level fits under three phylogenetic treatments | yes (phylogeny) |
 | `149_province_level_geb.R` | Province-level negative binomial, partial regression, hierarchical partitioning | no |
 | `150_geb_style_figures.R` | Fig9, Fig10 | no |
+| `153_geb_original_style_figures.R` | Fig9alt, Fig10alt in the original GEB layout | no |
 
 Script 134 is run once per climate indicator and then merged:
 
@@ -211,6 +213,7 @@ standardised hazard ratios stay comparable but natural-unit statements refer to 
 | Fig8 | Migratory stratification: does strategy moderate either driver? |
 | Fig9 | Species-level correlates under three phylogenetic treatments |
 | Fig10 | Province-level counts: model choice, effort, hierarchical partitioning |
+| Fig9alt, Fig10alt | The same two analyses laid out as in the companion mammal paper (`figures_alt/`) |
 | FigM1–M4 | CMIP6 projections with the covariate-support mask, SHAP interpretation, mechanistic vs ML |
 | FigS1, FigS3 | Residual diagnostics; unmasked extrapolation for contrast |
 
@@ -305,3 +308,18 @@ Note on the effort windows: the mammal study used publication counts from 1949-2
 historical survey effort. No bird analogue exists here - the observation database holds seven
 reports before 2000 and 29 of 31 provinces have none - so early (2002-2008) and recent
 (2009-2024) coverage take that role instead.
+
+## Two layouts for the species- and province-level figures
+
+Both analyses ship in two interchangeable layouts, so either can be used at submission.
+
+| | `figures/` | `figures_alt/` |
+|---|---|---|
+| Species level | Fig9: forest plots of odds ratios across three phylogenetic treatments, plus the range-measure comparison | Fig9alt: ridgeline distributions of the estimates by treatment, plus stacked bars with chi-square annotations, laid out as in the mammal paper |
+| Province level | Fig10: model comparison, coefficient plot, hierarchical partitioning, partial correlations | Fig10alt: six partial residual panels with beta and p annotated, a 100% stacked importance column, and slope estimates with matching colours |
+
+One difference from the original is unavoidable and is stated on the figure: the mammal paper's
+ridgelines are Bayesian posteriors, whereas the species-level models here are phylogenetic
+logistic regression and glmmTMB, so the ridgelines show the sampling distribution of each
+estimate under a normal approximation. The shape carries the same reading, but it is not a
+posterior and is not labelled as one.
