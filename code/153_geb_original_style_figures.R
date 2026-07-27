@@ -84,22 +84,39 @@ LAB <- c(z_log_range = "Range size", z_log_mass = "Body mass",
          z_log_hwi = "Hand-wing index", z_log_clutch = "Clutch size",
          z_log_congeners = "No. of congeners",
          z_log_habbreadth = "Habitat breadth", z_log_dietbreadth = "Diet breadth")
-cont <- eff[term %in% names(LAB)]
-cont[, lab := factor(LAB[term], levels = rev(unname(LAB)))]
-
-# (a) 山脊图: 每个模型 x 每个预测因子的估计量抽样分布(正态近似)
-draws <- cont[, .(x = rnorm(4000, estimate, se)), by = .(lab, model)]
-p9a <- ggplot(draws, aes(x = x, y = lab, fill = model, colour = model)) +
-  geom_vline(xintercept = 0, linetype = 2, colour = "grey40", linewidth = 0.4) +
-  geom_density_ridges(alpha = 0.55, scale = 1.35, linewidth = 0.3,
-                      rel_min_height = 0.006, quantile_lines = FALSE) +
-  scale_fill_manual(values = GEBCOL[c(1, 3, 2)], name = NULL) +
-  scale_colour_manual(values = GEBCOL[c(1, 3, 2)], name = NULL) +
-  labs(x = "Estimate (log-odds)", y = "Predictors",
-       title = "Species-level predictors of new provincial records",
-       subtitle = paste("Sampling distributions of the estimates (normal approximation), not posteriors.",
-                        "\nDistributions whose mass excludes zero indicate statistically supported effects.")) +
-  theme_geb() + theme(legend.position = "top")
+# (a) 山脊图: 按【生态学分组】而非按系统发育处理 —— 与 GEB 原文一致
+#     (原文三条脊是 all mammals / bats / non-flying mammals)
+#     本研究给出两套分组: 分类学(雀形目 / 非雀形目 / 全部) 与 迁徙类型。
+#     每组各自用系统发育树(phyloglm)拟合, 组内重新标准化。
+gm <- fread(file.path(TAB, "tbl_v2_species_group_effects.csv"))
+mk_ridge <- function(which_grouping, lv, cols, ttl, sub) {
+  # NB: 参数名不能与列名相同, 否则 data.table 的 i 表达式解析不出外部变量
+  g <- gm[grouping == which_grouping & term %in% names(LAB)]
+  g[, lab := factor(LAB[term], levels = rev(unname(LAB)))]
+  g[, grp := factor(group, levels = lv)]
+  dr <- g[, .(x = rnorm(4000, estimate, se)), by = .(lab, grp)]
+  ns <- unique(g[, .(grp, n, n_events)])[order(grp)]
+  leg <- sprintf("%s (%d spp., %d with records)", ns$grp, ns$n, ns$n_events)
+  dr[, grp := factor(leg[match(grp, ns$grp)], levels = leg)]
+  ggplot(dr, aes(x = x, y = lab, fill = grp, colour = grp)) +
+    geom_vline(xintercept = 0, linetype = 2, colour = "grey40", linewidth = 0.4) +
+    geom_density_ridges(alpha = 0.55, scale = 1.3, linewidth = 0.3, rel_min_height = 0.006) +
+    scale_fill_manual(values = cols, name = NULL) +
+    scale_colour_manual(values = cols, name = NULL) +
+    labs(x = "Estimate (log-odds)", y = "Predictors", title = ttl, subtitle = sub) +
+    theme_geb() + theme(legend.position = "top", legend.text = element_text(size = 7))
+}
+p9a1 <- mk_ridge("Taxonomic", c("All species", "Passeriformes", "Non-passerines"),
+                 GEBCOL[c(1, 3, 2)],
+                 "Species-level predictors by taxonomic group",
+                 paste("Each group fitted separately on the dated phylogeny (Ives & Garland).",
+                       "
+Sampling distributions of the estimates, not posteriors; mass excluding zero indicates support."))
+p9a2 <- mk_ridge("Migratory strategy", c("Resident", "Partial migrant", "Migratory"),
+                 GEBCOL[c(4, 2, 5)],
+                 "Species-level predictors by migratory strategy",
+                 "Same models fitted within each migratory class")
+p9a <- p9a1 | p9a2
 
 # (b) 分类性状: 堆叠柱 + 卡方检验标注(与原文同式)
 CATS <- c(migration_final = "Migratory strategy", trophic_niche = "Trophic niche",
@@ -158,8 +175,8 @@ p9b_lab <- wrap_elements(p9b) +
        subtitle = "Pearson chi-square or Fisher exact tests; Holm-adjusted standardised residuals > 1.96 are flagged") +
   theme(plot.title = element_text(face = "bold", size = 10, hjust = 0),
         plot.subtitle = element_text(size = 8, colour = "grey30", hjust = 0))
-F9 <- p9a / p9b_lab + plot_annotation(tag_levels = "a") + plot_layout(heights = c(1, 1.3))
-save_fig(F9, "Fig9alt_species_level_geb_style", 11.0, 10.6, src = bars)
+F9 <- p9a / p9b_lab + plot_annotation(tag_levels = "a") + plot_layout(heights = c(1, 1.25))
+save_fig(F9, "Fig9alt_species_level_geb_style", 13.6, 10.8, src = bars)
 
 # ==========================================================================
 # Fig 10-alt  省级水平(仿 GEB Fig4)

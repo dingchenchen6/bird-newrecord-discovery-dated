@@ -36,11 +36,11 @@ family = binomial("cloglog")
 
 **Specification.** species x province x year, absorbing exit after the first record; pairs recorded before 2002 removed
 
-**Why it is in the model.** Only species whose modelled range is close enough to a province can plausibly be recorded there, so the denominator is the set of ecologically plausible opportunities rather than all species. A pair already recorded before the window is a prevalent, not an incident, case and is not at risk.
+**Why it is in the model.** A province counts as a candidate for a species when the species distribution model marks at least a threshold number of suitable cells inside it, so the denominator is the set of ecologically plausible opportunities rather than all species. A pair already recorded before the window is a prevalent, not an incident, case and is not at risk.
 
 **What the estimate means.** The hazard is conditional on being a plausible candidate that has not yet been recorded.
 
-**Falsifiable prediction.** Tightening the candidate pool from a 50 km to a 200 km buffer should change the denominator but not the coefficients.
+**Falsifiable prediction.** Raising the requirement from 50 to 200 suitable cells (roughly 0.9 to 3.7 thousand km2) should change the denominator but not the coefficients.
 
 ## Accumulated warming (clim_change)
 

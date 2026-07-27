@@ -121,15 +121,17 @@ rd <- function(f) if (file.exists(file.path(TAB, f))) fread(file.path(TAB, f)) e
 C <- rd("tbl_v2_C_threshold.csv"); E <- rd("tbl_v2_E_importance.csv"); D <- rd("tbl_v2_D_ladder.csv")
 
 # (a) 系数森林图 x 三档阈值
-C[, threshold := paste0(threshold_km, " km")]
+# 阈值是【省内适宜 SDM 栅格数】的下限, 不是缓冲区半径。
+# 栅格中位面积 18.3 km2 (约 4.3 km 见方), 故 50/100/200 格约合 0.9/1.8/3.7 千 km2。
+C[, threshold := paste0(threshold_km, " cells")]
 fa <- forest_rows(C, names(TERM_LAB), "threshold")
 fa[, term := factor(term, levels = rev(TERM_LAB))]
-fa[, threshold := factor(threshold, levels = c("50 km", "100 km", "200 km"))]
+fa[, threshold := factor(threshold, levels = c("50 cells", "100 cells", "200 cells"))]
 p1a <- ggplot(fa, aes(HR, term, colour = threshold)) +
   geom_vline(xintercept = 1, linetype = 2, colour = "grey55", linewidth = 0.35) +
   geom_linerange(aes(xmin = lo, xmax = hi), position = position_dodge(0.6), linewidth = 0.55) +
   geom_point(position = position_dodge(0.6), size = 1.9) +
-  scale_colour_manual(values = unname(OI[c("blue", "orange", "green")]), name = "SDM buffer") +
+  scale_colour_manual(values = unname(OI[c("blue", "orange", "green")]), name = "Minimum suitable\ncells per province") +
   scale_x_continuous(trans = "log", breaks = c(0.8, 0.9, 1, 1.2, 1.4, 1.6)) +
   labs(x = "Hazard ratio per 1 SD (95% CI)", y = NULL,
        title = "Effort and warming contribute independently",
