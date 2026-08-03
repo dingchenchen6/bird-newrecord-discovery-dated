@@ -1,0 +1,4 @@
+quantity,mean,q05,median,q95,pct_positive
+"gap = T_prov - N_species (annual mean, degC)",3.132,-11.681,2.954,16.61,64.29
+niche proximity -|gap| (degC),-7.372,-17.602,-6.29,-0.507,
+heat exposure Tmax_prov - Tmax_species_base (degC),3.059,-8.286,3.446,11.705,78.419

@@ -79,6 +79,27 @@ some of which are third-party licensed and are not redistributed here — set th
 | `150_geb_style_figures.R` | Fig9, Fig10 | no |
 | `153_geb_original_style_figures.R` | Fig9alt, Fig10alt in the original GEB layout | no |
 | `154_directional_windrose_radar.R` | Directionality of records: radar and wind-rose by order | yes (AVONET centroids) |
+| `160_thermal_niche_specs.R` | Alternative climate proxies: thermal extremes, heat exposure, niche tracking; heat-exposure moderation of the warming effect | no |
+| `161_niche_sensitivity_grid.R` | Formal sensitivity grid: 6 proxies × 4 windows, plus the moderation across 3 thresholds and 4 effort proxies | no |
+| `162_niche_sensitivity_figures.R` | Fig12, Fig13 | no |
+| `163_climate_proxy_comparison.R` | Aligned comparison of all eight climate proxies, with the ecological rationale for each | no |
+
+Script 160 takes the accumulation window as its argument, writing an unsuffixed set of tables for
+*W* = 15 and a `_W20` set for *W* = 20:
+
+```bash
+Rscript --no-init-file code/160_thermal_niche_specs.R 15
+Rscript --no-init-file code/160_thermal_niche_specs.R 20
+```
+
+Script 161 is run once per specification and then merged (29 fits in total, about an hour):
+
+```bash
+for s in S0_tavg_annual S1_tmax_warm S2_niche_prox S3_niche_track S4_heat_exposure S4M_exposure_moderates extra; do
+  Rscript --no-init-file code/161_niche_sensitivity_grid.R $s
+done
+Rscript --no-init-file code/161_niche_sensitivity_grid.R --merge
+```
 
 Script 134 is run once per climate indicator and then merged:
 
@@ -388,3 +409,25 @@ averages these against residents, for whom neither applies, and returns zero.
 
 The ridgeline figure in `figures_alt/` therefore splits by ecological group, as the mammal paper
 does, rather than by statistical treatment.
+
+## 保护地关联模块 / Protected-area module
+
+把新纪录生成风险接到保护规划上,回答三个规划者会问的问题。完整方法、
+数值与局限见 [`docs/CONSERVATION_MODULE.md`](docs/CONSERVATION_MODULE.md)。
+
+**估计量口径**:全部结论只适用于 1028 处**已制图的、以国家级为主的、2012 年前建立的
+自然保护区**;不含 2021 年起的国家公园、自然公园与生态保护红线。
+
+| 问题 | 结果 |
+|---|---|
+| 保护区内的新纪录能否算保护成效? | 表观富集 2.5 倍;以观鸟人实际去过的地点为对照、按省×年匹配后 OR 1.57 (1.26–1.96),但按宿主保护区重抽后 CI 跨 1,且只在 2013 年后出现——**不能作为成效指标** |
+| 首次记录是否更容易在保护区内转为持续存在? | 否。控制后续观测努力后 OR 1.01 (0.62–1.64);全样本 41.1% 被再检出、22.5% 在 ≥3 年被检出 |
+| 保护网络是否建在增温慢的地方? | 用**格级实测**增温:落差仅 1.2 倍,分层置换 P = 0.48。8.5 倍的落差是把省级值当格级值用造成的 |
+
+**交付产品**:监测嫁接优先级——39.3 万 km² 高增温低观测格落在已建保护区内(可直接加挂监测),
+160.3 万 km² 落在保护体系之外(需另投调查力量)。
+
+**已判定不可估而删除**:建区前后 DiD(172 条区内事件无一早于宿主建区年)、
+方向性连通(与已发表的观测性解释循环)、保护空缺图(矢量完整度约三成,会制造假空缺)。
+
+脚本 `code/160`–`code/166`;结果表 `tables/tbl_pa_*.csv`;图件 `figures_pa/FigP1`–`FigP3`。
