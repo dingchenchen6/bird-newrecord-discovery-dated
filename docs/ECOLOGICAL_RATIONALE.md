@@ -4,6 +4,11 @@ This table states, for each element of the main model, why it is there (ecologic
 observational rationale), what its estimate means in plain terms, and one falsifiable
 prediction that the specification implies. The predictions are all tested in the paper.
 
+The last two entries, prefixed EXTENSION, are not part of the frozen main model. They
+record the rationale for the heat-exposure moderation reported as a mechanistic extension,
+and for retaining annual mean temperature rather than a seasonal extreme as the main
+climate proxy.
+
 Main model:
 
 ```
@@ -42,7 +47,7 @@ family = binomial("cloglog")
 
 **Falsifiable prediction.** Raising the requirement from 50 to 200 suitable cells (roughly 0.9 to 3.7 thousand km2) should change the denominator but not the coefficients.
 
-## Accumulated warming (clim_change)
+## Thermal displacement, range-referenced (clim_change)
 
 **Specification.** trailing W = 15 year mean of x, where x = province anomaly - species-range anomaly, both relative to 1980-2000
 
@@ -72,7 +77,7 @@ family = binomial("cloglog")
 
 **Falsifiable prediction.** Substituting observers, birding days or records for visits should give a similar coefficient if all four index the same latent effort.
 
-## Warming x effort
+## Thermal displacement x effort
 
 **Specification.** product of the two standardised terms
 
@@ -131,4 +136,24 @@ family = binomial("cloglog")
 **What the estimate means.** Anomalies are measured against the most recent complete period that does not overlap 2002-2024.
 
 **Falsifiable prediction.** Baselines that overlap the study period should attenuate the climate coefficient - and they do: 1.362 (1980-2000), 1.289 (1981-2010), 1.231 (1991-2020).
+
+## EXTENSION - Heat exposure x thermal displacement
+
+**Specification.** E = warmest-month maximum of the province minus its 1980-2000 mean over the species' Chinese range, accumulated over the same W = 15 window, interacted with thermal displacement (script 160)
+
+**Why it is in the model.** The main model assumes warming acts monotonically. Thermal-niche theory predicts a bound: colonisation becomes likelier as a province moves into the thermal conditions a species already occupies and unlikelier once it moves past them. Referencing the warm end of the year to the species' own range makes that bound species-specific rather than geographic.
+
+**What the estimate means.** HR 0.906 on the interaction: one SD of warming multiplies the hazard by 1.508 where a province is 1.5 SD inside the species' envelope, by 1.301 at mean exposure and by 1.123 (not distinguishable from 1) 1.5 SD past the warm end. The warming x effort interaction is unchanged at 0.854, and AIC improves by 6.4 (LR P = 5.7e-3). The moderation is the best of six specifications at all four windows and holds across three candidate-pool thresholds and four effort proxies (HR 0.886-0.917, all P < 0.04).
+
+**Falsifiable prediction.** If the bound is thermal rather than an artefact of added flexibility, the term should absorb variance at the species and province-year levels - and it does, lowering those SDs from 0.405 to 0.392 and 0.804 to 0.791. Proximity to the niche centre, which assumes a symmetric optimum rather than a one-sided limit, should then fail - and it does (P = 0.17; quadratic P = 0.34).
+
+## EXTENSION - why not the warmest-month indicator as the main proxy
+
+**Specification.** annual mean temperature replaced by warmest-month maximum in the frozen structure (script 134, 160)
+
+**Why it is in the model.** A seasonal extreme describes one constraint on overwintering or breeding; annual mean temperature describes the year-round thermal regime within which a range boundary sits. The extreme is the right variable for locating a province relative to a thermal envelope, but not for measuring how much a province has warmed.
+
+**What the estimate means.** Warming stays significant (1.299, P = 2.8e-6) but the warming x effort interaction vanishes (0.983, P = 0.74) and AIC worsens by 6.8; the interaction is absent at all four windows (P = 0.32-0.74). Raw event rates confirm this is in the data, not the estimator: the four warming x effort cells are 24.6, 37.4, 34.3, 51.4 per 10,000 rows against a multiplicative expectation of 52.3, a shortfall of 2%, against 10% for annual mean temperature.
+
+**Falsifiable prediction.** If the interaction reflects geographic confounding between warming and effort, it should track their correlation - and it does: annual-mean warming correlates +0.041 with effort and shows the interaction, warmest-month warming -0.020 and shows none.
 

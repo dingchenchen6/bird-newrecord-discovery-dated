@@ -1,0 +1,17 @@
+w,e,rate,rows,cell,indicator,expected
+high,low,37.6465017165858,42235,"High warming
+low effort",Annual mean,
+high,high,53.5929126107405,45715,"High warming
+high effort",Annual mean,59.7687265718357
+low,low,21.796365833657,46338,"Low warming
+low effort",Annual mean,
+low,high,34.6045706870449,41613,"Low warming
+high effort",Annual mean,
+high,low,34.3397096105093,43390,"High warming
+low effort",Warmest-month max,
+high,high,51.3913824057451,44560,"High warming
+high effort",Warmest-month max,52.2937449008484
+low,low,24.5667618352035,45183,"Low warming
+low effort",Warmest-month max,
+low,high,37.4111485222596,42768,"Low warming
+high effort",Warmest-month max,
