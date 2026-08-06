@@ -498,6 +498,8 @@ does, rather than by statistical treatment.
 分组残差按年 1/23 与按省 2/31 组超出名义水平、省级残差 Moran's I = −0.024 (P = 0.70)。
 比例风险对努力项违反 (P = 6.2×10⁻⁴),这是实质发现而非缺陷。
 
+**文稿已同步这一修正**:Results 主效应段、Table 2(新增聚类自助 CI 与置换零分布中位两列)、Fig. 1 图注、Model adequacy 段、Methods 新增 Resampling and null models 小节、Extended Data Fig. 1 与新增 Fig. 5 图注;中文报告同步,并顺带修正了遗留的「SDM 阈值 50/100/200 km」单位错误(应为适宜栅格数)。
+
 **设计保持的置换零模型**(各 199 次,每个只破坏一条关联):
 
 | 零模型 | 项 | 观测 | 零分布中位 | P |
