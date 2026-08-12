@@ -464,6 +464,56 @@ prediction column, is `tables/tbl_v2_ecological_rationale.csv` and `docs/ECOLOGI
 
 ---
 
+**Table 6.** Migratory stratification. Full results in `tables/tbl_v2_migratory_ladder.csv`,
+`tbl_v2_migratory_stratified.csv` and `tbl_v2_migratory_interaction_by_group.csv`.
+
+| Group | Events | Warming HR (95% CI) | Effort HR (95% CI) | Warming × effort HR | *P* |
+|---|---|---|---|---|---|
+| Resident | 218 | 1.363 (1.158–1.605) | 1.293 (1.110–1.506) | 0.942 | 0.54 |
+| Partial migrant | 156 | 1.507 (1.244–1.826) | 1.270 (1.030–1.566) | 1.053 | 0.62 |
+| Long-distance migrant | 175 | 1.514 (1.265–1.812) | 1.344 (1.130–1.598) | 0.753 | 0.0022 |
+| *Moderation tests* | | LR *P* = 0.693 | LR *P* = 0.854 | three-way LR *P* = 0.256 | |
+
+**Table 7.** Species-level range measures, all from phylogenetic logistic regression on the dated
+tree. Full results in `tables/tbl_v2_species_range_measures.csv` and
+`tbl_v2_species_range_circularity.csv`.
+
+| Measure | *n* | Species with a record | OR per SD (95% CI) | *P* |
+|---|---|---|---|---|
+| Global range area (AVONET) | 1,298 | 334 | 1.456 (1.204–1.762) | 1.1 × 10⁻⁴ |
+| China range area (BirdLife, clipped) | 1,003 | 312 | 1.653 (1.420–1.925) | 9.0 × 10⁻¹¹ |
+| Provinces occupied — *not reported as a result* | 1,298 | 334 | 2.09 | 5 × 10⁻¹⁵ |
+
+**Table 8.** Province-level models. Full results in `tables/tbl_v2_province_*.csv`.
+
+| Model | Dispersion | *P* | AICc |
+|---|---|---|---|
+| Poisson | 5.60 | 2.3 × 10⁻¹⁷ | 302.2 |
+| Negative binomial | 1.24 | 0.20 | 246.5 |
+| Negative binomial, recent effort as offset | 1.52 | — | 266.8 |
+
+| Term | Counts, IRR | Rate per unit of effort, IRR |
+|---|---|---|
+| Regional species richness | **1.27** (*P* = 0.036) | 0.89 |
+| Early survey effort (2002–2008) | 0.92 | **0.71** (*P* = 0.028) |
+| Recent survey effort (2009–2024) | 0.93 | *offset* |
+| GDP per capita | 1.10 | **0.61** (*P* = 0.0027) |
+| Administrative area | 1.17 | 1.20 |
+| Habitat heterogeneity | 0.99 | 1.03 |
+
+**Table 9.** Species-level effects fitted separately within taxonomic and migratory groups, all
+from phylogenetic logistic regression on the dated tree. Only significant terms are shown; full
+results in `tables/tbl_v2_species_group_effects.csv`.
+
+| Grouping | Group | *n* species | With records | Significant terms (OR, *P*) |
+|---|---|---|---|---|
+| Taxonomic | Passeriformes | 710 | 203 | Range size 1.53 (0.0020); partial migrant 2.01 (0.0081) |
+| | Non-passerines | 588 | 131 | Partial migrant 3.19 (3.3 × 10⁻⁴) |
+| | All species | 1,298 | 334 | Range size 1.44; partial migrant 1.91; open habitat 0.55 |
+| Migratory | Resident | 567 | 116 | Range size 1.60 (0.0042) |
+| | Partial migrant | 228 | 91 | Granivore 0.28 (0.044) |
+| | Migratory | 503 | 127 | Hand-wing index 0.51 (3.8 × 10⁻⁴); body mass 1.74 (0.0037); open habitat 0.42 (0.013) |
+
 ## References
 
 1. Hortal, J. et al. Seven shortfalls that beset large-scale knowledge of biodiversity. *Annu. Rev. Ecol. Evol. Syst.* **46**, 523–549 (2015). https://doi.org/10.1146/annurev-ecolsys-112414-054400
@@ -579,64 +629,14 @@ Windows of 5, 10, 15 and 20 years against three series: the main WorldClim 10-ar
 **Fig. 8 | Migratory strategy shifts the baseline hazard but does not moderate either driver.**
 **a**, Risk-set rows, events and species in each group; the three groups with a known strategy carry 549 events in total. **b**, Group-specific hazard ratios from models fitted separately within each group, with 95% confidence intervals. **c**, ΔAIC across the moderation ladder; red text is the likelihood-ratio *P* value against the model with a migratory main effect only. **d**, Group-specific warming × effort interaction derived from the three-way model; filled points are significant within group, open points are not. The formal test for heterogeneity among groups is not significant.
 
-**Table 6.** Migratory stratification. Full results in `tables/tbl_v2_migratory_ladder.csv`,
-`tbl_v2_migratory_stratified.csv` and `tbl_v2_migratory_interaction_by_group.csv`.
-
-| Group | Events | Warming HR (95% CI) | Effort HR (95% CI) | Warming × effort HR | *P* |
-|---|---|---|---|---|---|
-| Resident | 218 | 1.363 (1.158–1.605) | 1.293 (1.110–1.506) | 0.942 | 0.54 |
-| Partial migrant | 156 | 1.507 (1.244–1.826) | 1.270 (1.030–1.566) | 1.053 | 0.62 |
-| Long-distance migrant | 175 | 1.514 (1.265–1.812) | 1.344 (1.130–1.598) | 0.753 | 0.0022 |
-| *Moderation tests* | | LR *P* = 0.693 | LR *P* = 0.854 | three-way LR *P* = 0.256 | |
-
 **Fig. 9 | Species-level correlates of new provincial records.**
 **a**, Continuous traits, as odds ratios per standard deviation with 95% confidence intervals, under three treatments of phylogenetic non-independence. Filled points are significant. **b**, Categorical contrasts against their reference levels. **c**, Range measured as an area, from two independent sources, against range measured as a count of provinces occupied. **d**, For every term, the number of phylogenetic treatments in which it is significant, with the range of odds ratios across treatments.
 
 **Fig. 10 | Province-level counts of new records.**
 **a**, Model comparison: Poisson against negative binomial, with and without recent effort as an offset. **b**, Incidence rate ratios per standard deviation from the two negative-binomial models. **c**, Hierarchical partitioning of explained deviance into independent and joint contributions. **d**, Partial correlation of each predictor with the record count, holding the others constant.
 
-**Table 7.** Species-level range measures, all from phylogenetic logistic regression on the dated
-tree. Full results in `tables/tbl_v2_species_range_measures.csv` and
-`tbl_v2_species_range_circularity.csv`.
-
-| Measure | *n* | Species with a record | OR per SD (95% CI) | *P* |
-|---|---|---|---|---|
-| Global range area (AVONET) | 1,298 | 334 | 1.456 (1.204–1.762) | 1.1 × 10⁻⁴ |
-| China range area (BirdLife, clipped) | 1,003 | 312 | 1.653 (1.420–1.925) | 9.0 × 10⁻¹¹ |
-| Provinces occupied — *not reported as a result* | 1,298 | 334 | 2.09 | 5 × 10⁻¹⁵ |
-
-**Table 8.** Province-level models. Full results in `tables/tbl_v2_province_*.csv`.
-
-| Model | Dispersion | *P* | AICc |
-|---|---|---|---|
-| Poisson | 5.60 | 2.3 × 10⁻¹⁷ | 302.2 |
-| Negative binomial | 1.24 | 0.20 | 246.5 |
-| Negative binomial, recent effort as offset | 1.52 | — | 266.8 |
-
-| Term | Counts, IRR | Rate per unit of effort, IRR |
-|---|---|---|
-| Regional species richness | **1.27** (*P* = 0.036) | 0.89 |
-| Early survey effort (2002–2008) | 0.92 | **0.71** (*P* = 0.028) |
-| Recent survey effort (2009–2024) | 0.93 | *offset* |
-| GDP per capita | 1.10 | **0.61** (*P* = 0.0027) |
-| Administrative area | 1.17 | 1.20 |
-| Habitat heterogeneity | 0.99 | 1.03 |
-
 **Fig. 11 | Directionality of new records relative to the species' known range.**
 Bearing from the centroid of each species' BirdLife range to the record, binned into eight 45° sectors. Radar and wind-rose forms are provided for the overall data, for the six largest orders overlaid, and for each of the sixteen best-sampled orders individually. Every order panel carries both sample sizes, new records and species, because one species can contribute records in several provinces. Overlay panels use each order's own proportions; absolute sample sizes are in the legend.
-
-**Table 9.** Species-level effects fitted separately within taxonomic and migratory groups, all
-from phylogenetic logistic regression on the dated tree. Only significant terms are shown; full
-results in `tables/tbl_v2_species_group_effects.csv`.
-
-| Grouping | Group | *n* species | With records | Significant terms (OR, *P*) |
-|---|---|---|---|---|
-| Taxonomic | Passeriformes | 710 | 203 | Range size 1.53 (0.0020); partial migrant 2.01 (0.0081) |
-| | Non-passerines | 588 | 131 | Partial migrant 3.19 (3.3 × 10⁻⁴) |
-| | All species | 1,298 | 334 | Range size 1.44; partial migrant 1.91; open habitat 0.55 |
-| Migratory | Resident | 567 | 116 | Range size 1.60 (0.0042) |
-| | Partial migrant | 228 | 91 | Granivore 0.28 (0.044) |
-| | Migratory | 503 | 127 | Hand-wing index 0.51 (3.8 × 10⁻⁴); body mass 1.74 (0.0037); open habitat 0.42 (0.013) |
 
 **Fig. M1 | Mechanistic projection of the latent generation hazard, restricted to the fitted covariate support.**
 Provincial hazard relative to 2024 under two SSP scenarios at three horizons, aggregating only species-province cells whose accumulated warming and survey effort fall inside the 1st–99th percentile of the fitted data. The percentage on each panel is the share of cells that qualify.
