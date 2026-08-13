@@ -1,0 +1,67 @@
+{
+ "journal": "Nature Ecology &amp; Evolution (NEE)",
+ "verdict": "需修订",
+ "number_errors": [
+  {
+   "where": "Results「Robustness」第4句",
+   "in_draft": "Tested jointly against two climate baselines and two data sources, the warming coefficient rises with window length in every series... The effort coefficient is flat at 1.34–1.41 across the same grid",
+   "in_source": "源文稿明确只有三条序列(WorldClim 1980–2000、CRU 1980–2000、CRU 1970–2000),且写明「The 1970–2000 baseline cannot be computed from the WorldClim 2.1 downscaling」;十二个组合 = 4 窗口 × 3 序列。改写稿的「two baselines × two data sources」暗示 2×2 = 4 条序列的全因子设计,而该设计从未做过"
+  },
+  {
+   "where": "Results「Records inside nature reserves...」第4句",
+   "in_draft": "matching each event to 200 checklist-weighted controls from the same province and year. Conditioned in this way, the enrichment falls to an odds ratio of 1.57 (1.26–1.96)",
+   "in_source": "Conditioning on province and year, the enrichment falls from 2.5-fold to an odds ratio of 1.71 (95% CI 1.39–2.11), and to 1.57 (1.26–1.96) after adding elevation, longitude and two bioclimatic covariates. —— 1.57 这个数字本身正确,但它归属的模型被改写错了:只做省–年匹配得到的是 1.71,1.57 必须再加入海拔、经度与两个生物气候协变量"
+  },
+  {
+   "where": "Results「Publication-year dating inflates...」末句",
+   "in_draft": "The four remaining corrections — coverage-gap effort, area-weighted climate, the completeness offset and the province-by-year intercept — are individually minor.",
+   "in_source": "the completeness offset restores +0.159, recovering signal that right-censoring had attenuated(effort 1.289 → 1.448)。+0.159 约为改期步骤(−0.483)的三分之一,是仅次于改期的第二大单步修正,称其「individually minor」与源文稿的量级不符,也与改写稿自己后文「omitting it attenuates the effort coefficient from 1.372 to 1.245」互相矛盾"
+  },
+  {
+   "where": "改写者 notes 第1条(词数自报)",
+   "in_draft": "the 13 Results subheadings (103 words)... Including subheadings the main text is 3,693 words",
+   "in_source": "我实际逐词重数:13 个小标题合计 90–91 词,含标题总数约 3,681 词,不是 103 / 3,693。自报数偏高约 12 词,虽方向无害,但说明其词数审计流程不可靠"
+  }
+ ],
+ "orphaned_claims": [
+  "Introduction:「Publication lag ... is a right-skewed delay correlated in aggregate with the growth of the observational infrastructure」—— 改写稿把源文稿 Results 中支撑/制衡这句话的滞后平稳性证据(Spearman ρ = −0.016, P = 0.685;Wilcoxon P = 0.851;累积分布差异 ≤3 个百分点)全部移入 SI Note S1,正文再无任何数据。结果是:正文断言「相关」,而 SI 证明「平稳(不相关)」,审稿人一定会抓这一对表面冲突,且正文侧无任何缓冲句",
+  "Results「Robustness」:「the signature expected of a process that integrates climate over years to decades, with an interior optimum」—— 支撑「interior optimum」的 18–20 年最优、23 年 AIC 回升(源 Extended Data Table 2)已全部移入 Table S10;更严重的是,源文稿用来为主模型 W = 15 辩护的那句「We retain 15 years as pre-specified; it lies within 2.2–5.6 AIC units of the optimum in every series」被整句删除。正文现在等于说「最优在内部(≈18–20 年)」却用 W = 15 建模,却不解释为什么",
+  "Results「Warming and effort contribute comparably」:「four independent importance criteria agree that warming and effort are of comparable weight (Supplementary Note S2; Supplementary Fig. S4)」—— 指向错误。四项重要性判据的原始展示是源 Fig. 1c,而 Fig. 1 被改写稿整幅保留为正文 Fig. 1;Fig. S4 = 源 Fig. 5(anatomy),并不含该内容。同时正文全文从未引用 Fig. 1c(见下 must_fix)",
+  "Results「Warming and effort contribute comparably」:「The climate variable is genuinely species-specific rather than a relabelled regional index」—— 这是整篇论文气候项可解释性的前提命题,支撑数据(province-year 内方差占比 39% / 55%,Yunnan 2020 的 +0.309 °C vs −0.280 °C 对照)全部移入 Note S2,正文仅剩裸断言。有指向,但作为核心前提,正文应至少保留一个数字",
+  "Results「Model adequacy」:「Simulation-based residual diagnostics indicate a well-calibrated model」—— 源文稿在同一处同时报告了唯一一项显著的不利诊断(outlier test:95 outliers, P < 0.001)并作了解释;改写稿删掉了这项不利结果,只留下无保留的「well-calibrated」正面结论。这属于选择性报告风险,而不仅是压缩",
+  "Results「Records inside nature reserves...」:「we treat 1.57 as an upper bound on any ecological contribution」—— 源文稿授权这一措辞的是预先声明的非对称推断规则(「a null result would be strong evidence, a positive result weak」)以及三条残余关联属观测性的证据(68 个保护区承载、前两位占 27.3%、block bootstrap 0.89–3.19、2013–2023 vs 2002–2012 的 2.05 vs 0.97、每次访问物种数 18.9 vs 15.3)。改写稿把规则句删掉、证据全移 SI,「upper bound」在正文里失去了论证链条",
+  "Results「Migratory strategy...」:「no interaction with strategy is supported」—— 源文稿在同一节明确标注长距离迁徙类群内部存在 warming × effort 交互(0.753, 0.628–0.903, P = 0.0022),并说明这是「a hypothesis for a larger compilation」。改写稿的全称否定句与 SI Note S4 标题(明列 the long-distance-migrant interaction)之间会形成正文–SI 表观冲突,建议加半句限定(「no heterogeneity among strategies is supported」)",
+  "Results「Separating the observation process...」:声称按「four criteria」评估,但第四条判据(方差成分可识别性,源文稿的「No variance component collapses in any structure, minimum SD 0.274」)正文已无任何痕迹,仅靠 Fig. S1c 承载"
+ ],
+ "null_baseline_kept": true,
+ "my_word_counts": {
+  "introduction": 461,
+  "results": 2350,
+  "discussion": 779,
+  "total": 3590,
+  "within_limit": false
+ },
+ "language_issues": [
+  "「What the province-by-year level means, and why it is there」一节仅 86 词,且首句「Ecologically, that component is the scale at which...」以指示代词开头,其先行词落在上一节末尾、被一个小标题隔断——跨标题回指,英文写作上属明显缺陷。这一节应并入前一节(改写者自己在 notes 里也承认它是 remnant,却没有执行)",
+  "「The effort coefficient is flat at 1.34–1.41 across the same grid」中的「the same grid」指代不明:最近的先行词是紧邻上一句的「All twelve combinations of four effort proxies and three treatments」(该网格给出的 effort HR 是 1.25–1.52),而作者实际指的是窗口 × 序列网格。两个「twelve combinations」在同一段内混用,读起来像自相矛盾",
+  "「The four remaining corrections ... are individually minor」与后文「omitting it attenuates the effort coefficient from 1.372 to 1.245」以及第 4 节「Adding a province-by-year intercept ... improves AIC by 93.4 units / the single largest variance component」构成两处前后矛盾:被称作 minor 的两项修正,恰恰是全文后面重点论证其重要性的两项",
+  "「In the frozen main model」在第 3 节首次出现,但 frozen(结构冻结)的含义要到第 4 节末才解释。源文稿同样如此,但压缩后两节相距更远,建议首次出现时加一个从句",
+  "「Two qualifications should be carried through any reading of these effect sizes」删掉了源文稿的前向指引「follow from the resampling analyses described below」,导致置换零模型与 cluster bootstrap 的结果在正文中比其方法描述(Model adequacy 一节)早出现约五节,读者无从判断这些数字从何而来",
+  "「Two species-level effects hold under all three treatments of phylogenetic non-independence」中的「all three treatments」在正文中无先行定义(系统发育处理方式仅在 Methods 出现),压缩后成为空降术语",
+  "「Two X」句首结构在 Results 中出现 8 次(Two qualifications / Two random-slope alternatives / Two companion analyses / Two species-level effects / Two analyses / Two sectors / Two mechanisms / Two decades),节奏单调,NEE 文体上会被 copy-editor 挑出",
+  "Introduction 首句把源文稿的转折逻辑(「This has been recognised for decades, and yet...」)改成并列连词 and:「Documented species distributions are a joint product of where organisms occur and where people look, and the inferential consequences remain incompletely handled」——两个非平行命题用 and 连接,让步关系丢失,开篇张力下降",
+  "「Which reading is correct determines whether a body of records is evidence of...」句式生硬,建议改为「Which reading is right determines whether...」或还原为源文稿的两句式"
+ ],
+ "must_fix": [
+  "【词数,最高优先级】我逐词重数:Introduction 461 / Results 正文 2,350 / Discussion 779 = 3,590(不含小标题),含 13 个小标题为约 3,681 词。NEE 的正文词数通常包含小标题,因此实际超限约 80 词;即便按不含标题口径,余量也只有 10 词,任何 copy-edit 都会破线。改写者自报的 103 词标题数/3,693 总数亦不准(实为 90–91 / 3,681)。必须真正执行其自己提出的方案:把 86 词的「What the province-by-year level means」并入前一节,回收约 90 词",
+  "【显示项引用不全】正文从未引用 Fig. 1c、Fig. 3a、Fig. 3b、Fig. 5a。NEE 要求每个图板在正文被 call out。其中 Fig. 1c 正是「four independent importance criteria」的证据面板,而该句却被错误指向 Supplementary Fig. S4;Fig. 3a/3b(源 Fig. 6a 物种截距按迁徙策略、6b 省级截距地图)在删掉相应段落后彻底失去正文依托。必须补引用,或把这些面板降入 SI",
+  "【设计描述错误】Robustness 一节的「two climate baselines and two data sources」必须改为「three series: WorldClim 1980–2000, CRU 1980–2000 and CRU 1970–2000」,并说明 WorldClim 无法计算 1970–2000 基准。同时消除同段内两个「twelve combinations」的指代混淆(把「across the same grid」改为「across all twelve window × series combinations」)",
+  "【数据归属错误】保护区一节:1.57 (1.26–1.96) 是加入海拔、经度与两个生物气候协变量之后的估计,只做省–年清单加权匹配得到的是 1.71 (1.39–2.11)。必须补回 1.71 或改写归属句,否则等于把更保守的 1.57 说成更弱条件下的结果",
+  "【自相矛盾】删除或改写「The four remaining corrections ... are individually minor」。至少恢复 completeness offset 的 +0.159(1.289 → 1.448),否则与后文的 1.372 → 1.245 以及第 4 节对 province-by-year 层级的强调直接冲突",
+  "【选择性报告风险】Model adequacy 一节的「indicate a well-calibrated model」必须加上源文稿保留的那项显著不利诊断(95 outliers, P < 0.001,及其在 0.37% 事件率下属预期的解释),或至少写成「well-calibrated apart from the outlier test expected at a 0.37% event rate (Supplementary Table S3)」",
+  "【方法学辩护缺口】恢复一句 W = 15 的辩护(源文稿:「it lies within 2.2–5.6 AIC units of the optimum in every series」)。当前正文承认最优窗口在内部(≈18–20 年)却用 15 年,却不给理由,这是审稿人必问的点",
+  "【正文–SI 冲突预防】Introduction 关于 publication lag「correlated in aggregate with the growth of the observational infrastructure」的说法,与 SI Note S1 的滞后平稳性结果(ρ = −0.016, P = 0.685)表面冲突。需在 Introduction 中把措辞精确化为「lag 本身平稳,但因其为右偏正延迟,把事件对齐到出版年就把它放进了 effort 数据库系统性更大的年份」,或在 Results 第 1 节保留一句平稳性证据",
+  "【建议但非必须】保护区一节应保留源文稿的适用范围限定(仅适用于 1,028 个 2012 年前设立的已制图保护区,不含 2021 年后国家公园与生态红线,且不作因果推断)。删除该限定后,「should not be used as an indicator of reserve performance」这一政策性结论的适用边界在正文中不再可见",
+  "【核对项已通过,记录在案】四条主结论(效应量相当 / province-by-year 为最大方差成分 / 努力回报递减 / 方向偏东)均保留且各有正文显示项;零模型限定(1.157–1.167、P = 0.005、1.362/1.157 ≈ 1.18、effort 塌到 0.980、bootstrap 1.20–1.72 / 1.21–1.76 / 0.74–0.99)完整保留于 Results 3 与 Discussion 第二支柱。全部 179 个数字我已逐一回源比对(含 tbl_null_models.csv、tbl_change_decomposition.csv、tbl_bootstrap_ci.csv、tbl_v2_D_ladder.csv、tbl_v2_re_evaluation.csv、tbl_v2_C_threshold.csv、tbl_v2_direction_tests.csv、tbl_v2_future_support.csv、tbl_riskset_bridge_v2.csv),未发现任何被四舍五入、换算或凭空捏造的数值;改写者标注的源内不一致(tbl_null_models.csv 观测 warming HR = 1.36604 vs 主模型 1.36165)属实,且 effort 1.41361 vs 1.40382、interaction 0.84650 vs 0.84925 同样存在同一偏差,建议作者在投稿前统一零模型脚本所用的拟合"
+ ]
+}

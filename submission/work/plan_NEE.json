@@ -1,0 +1,319 @@
+{
+ "journal": "Nature Ecology & Evolution (NEE)",
+ "abstract": "Documented distributions reflect where organisms occur and where people look. Here we model the annual hazard of a first provincial record on a complete species-by-province-year risk set for 1,029 Chinese bird records (2002–2024), dated to discovery rather than publication. Publication-year dating inflates the effort hazard ratio from 1.305 to 1.788 and manufactures a spurious climate-variability effect. Corrected, accumulated warming relative to a species' historical range (1.362 per standard deviation) and survey effort (1.404) contribute comparably. Design-preserving permutation nulls centre warming on 1.157, not unity, an increment near 1.18, and collapse effort to 0.980 when its temporal alignment is broken. The largest variance component is a province-by-year random intercept (SD 0.804); effort's marginal return declines from 2.18 to 1.07 while the climate effect does not; and new records fall disproportionately east and northeast of species' ranges. Documented range gains therefore reflect climate and observation in roughly equal measure.",
+ "abstract_words": 147,
+ "triage": [
+  {
+   "section": "Introduction",
+   "source_words": 672,
+   "action": "compress",
+   "target_words": 430,
+   "reason": "Keep the joint-product framing, the China leverage sentence, and the three gaps, but collapse each gap from a bold-headed paragraph to one or two sentences and delete the 'we hypothesised effort would dominate' paragraph, whose content is recoverable from Results. The three questions are reduced to a single sentence. No numbers appear in the Introduction, so nothing is at risk of alteration.",
+   "si_destination": "—"
+  },
+  {
+   "section": "Results 1: The risk set and the dating problem",
+   "source_words": 457,
+   "action": "compress",
+   "target_words": 230,
+   "reason": "Retain verbatim the counts that define the analysis (1,029 records, 1,028 with a parseable date, 657 events in window, final 175,901 rows, 649 events, 392 species, 31 provinces) and the completeness logic in one sentence. Delete entirely the paragraph on stationarity testing (rho = -0.016, Wilcoxon P = 0.851), the year-by-year completeness ladder (99.7% to 56.7%), the 26 prevalent pairs and 11 re-entering pairs, and the 8,319-pair intermediate risk set. All are deleted as whole sentences, not reworded, and move to Supplementary Note S1 with Supplementary Table S1a.",
+   "si_destination": "Supplementary Note S1; Supplementary Table S9"
+  },
+  {
+   "section": "Results 2: Publication-year dating inflates the apparent role of survey effort",
+   "source_words": 236,
+   "action": "compress",
+   "target_words": 180,
+   "reason": "This is the title claim and must stay. Keep the two headline transitions verbatim (effort 1.788 to 1.305, a 37% reduction in excess hazard; variability 0.850, P = 1.8e-4, to 0.971, P = 0.48) plus the statement that warming is untouched (1.394 to 1.437) and the two-sentence mechanism. Delete the four minor step deltas (-0.038, +0.022, +0.159, -0.044) as whole clauses; the full ladder survives as Fig. 2c in main text and Supplementary Table S1.",
+   "si_destination": "Supplementary Table S1 (full five-step decomposition)"
+  },
+  {
+   "section": "Results 3: Warming and effort contribute comparably",
+   "source_words": 688,
+   "action": "compress",
+   "target_words": 470,
+   "reason": "Core conclusion (i) and the mandatory null-model qualification; the largest single allocation in Results. Kept verbatim: 1.362 (1.216-1.524, P = 8.3e-8), 1.404 (1.245-1.583, P = 2.9e-8), variability 0.995 (P = 0.92), interaction 0.849 (0.761-0.948, P = 3.7e-3); the null baselines 1.157-1.167, P = 0.005, increment about 1.18, effort collapsing to 0.980; province cluster bootstrap 1.20-1.72, 1.21-1.76, 0.74-0.99; natural units 0.179 degC and 7.75-fold; and the discrimination ladder 0.411/0.559/0.580/0.610. Dropped to SI: the AIC/AUC importance quadruplet (28.7, 0.053, 29.5, 0.032, 6.5, -2.0), the variance decomposition 39%/55%, and the Yunnan 2020 worked example (+0.309, -0.280), each removed as a whole sentence with one pointer to Supplementary Note S2 and Supplementary Fig. S4.",
+   "si_destination": "Supplementary Note S2; Supplementary Fig. S4 (retains Fig. 5a-c)"
+  },
+  {
+   "section": "Results 4: Separating the observation process requires a province-by-year level",
+   "source_words": 224,
+   "action": "compress",
+   "target_words": 190,
+   "reason": "Core conclusion (ii). Absorbs the three variance magnitudes from the following section so that no conclusion is left hanging. Kept verbatim: AIC improvement 93.4, conditional R2 0.274 to 0.411, conditional AUC 0.721 to 0.854, ICC 0.172 to 0.358, flat marginal AUC 0.607-0.613, and the SDs 0.405/0.326/0.804 with multipliers 1.50/1.39/2.23 and the thirteenfold span. Dropped to SI as whole sentences: the two random-slope alternatives (dAIC 4.5 and 0.0, conditional R2 0.403 and 0.395, effort 1.397/1.372, warming 1.348/1.366) and the minimum SD 0.274.",
+   "si_destination": "Supplementary Note S3; Supplementary Table S2; Supplementary Fig. S1"
+  },
+  {
+   "section": "Results 5: What each level of the model means, and why it is there",
+   "source_words": 319,
+   "action": "move_to_SI",
+   "target_words": 60,
+   "reason": "The numbers that carry conclusion (ii) are relocated into the preceding subsection, so this section is dissolved. Main text retains only two sentences: the ecological reading of the province-by-year term (regional campaigns, festivals, new reserves, local reporting channels) as the reason the level exists, and the completeness offset attenuating effort from 1.372 to 1.245. The species-detectability and province-baseline narratives, and the migratory grouping of species intercepts, move whole to SI.",
+   "si_destination": "Supplementary Note S3; Supplementary Table S4 (ecological rationale)"
+  },
+  {
+   "section": "Results 6: Migratory strategy shifts the baseline, not the drivers",
+   "source_words": 455,
+   "action": "move_to_SI",
+   "target_words": 40,
+   "reason": "Not one of the four protected conclusions and its headline finding is a null (strategy moderates neither driver). Moved whole. Main text keeps one sentence: migratory strategy shifts the baseline hazard but does not moderate either driver, with a pointer to Supplementary Note S4. All group-specific estimates (1.363, 1.507, 1.514; 1.293, 1.270, 1.344; dAIC 6.2; LR P = 0.693, 0.854, 0.899, 0.256; the long-distance interaction 0.753) travel intact to SI rather than being restated.",
+   "si_destination": "Supplementary Note S4; Supplementary Table S5; Supplementary Fig. S5"
+  },
+  {
+   "section": "Results 7: Which species, and which provinces",
+   "source_words": 1120,
+   "action": "move_to_SI",
+   "target_words": 150,
+   "reason": "Largest single saving (970 words). These are companion analyses at coarser levels, not the hazard model. Main text keeps three sentences: partial migrants about twice as likely as residents to yield a record and range size measured as an area raising the odds, both under three phylogenetic treatments; and the province-level result that provinces already well covered in 2002-2008 yield fewer records per unit of recent effort (0.71, P = 0.028), which is the second, independent leg of conclusion (iii) and therefore cannot be left without a main-text sentence. Everything else (trait sources, imputation sensitivity, taxonomic and migratory stratification, hierarchical partitioning, the provinces-occupied artefact, the historical-effort adaptation) moves whole.",
+   "si_destination": "Supplementary Note S5; Supplementary Tables S6-S8; Supplementary Figs S6, S7"
+  },
+  {
+   "section": "Results 8: New records are strongly biased toward the east and northeast",
+   "source_words": 267,
+   "action": "compress",
+   "target_words": 170,
+   "reason": "Core conclusion (iv). Kept verbatim: chi2 = 580.1, df = 7, P = 4.6e-121; east 237 of 642 (36.9%, against 80.2 expected); northeast 179 (27.9%); south and west 20 and 19; and the two-mechanism reading with the west-to-east observer gradient. Dropped as whole sentences to SI: the per-order statistics (Passeriformes 376.6, P = 2.5e-77; Anseriformes 64.0; Accipitriformes 52.5; Charadriiformes 45.5; Columbiformes 29.1), replaced by one clause stating that five well-sampled orders reject uniformity independently (Supplementary Note S6).",
+   "si_destination": "Supplementary Note S6 (per-order tests); Fig. 4 retained in main"
+  },
+  {
+   "section": "Results 9: The return on survey effort is declining",
+   "source_words": 128,
+   "action": "compress",
+   "target_words": 120,
+   "reason": "Core conclusion (iii) and already the tightest section in the manuscript; essentially keep_full. All numbers retained verbatim (warming x time beta = -0.022, P = 0.82; effort x time beta = -0.211, P = 7.7e-4; hazard ratio 2.18, 95% CI 1.63-2.90 in 2002 falling to 1.07, 0.88-1.30 in 2024). Only the closing rhetorical sentence is trimmed. The duplicate statement of the same test in the Model adequacy section is deleted rather than duplicated.",
+   "si_destination": "—"
+  },
+  {
+   "section": "Results 10: Robustness",
+   "source_words": 762,
+   "action": "move_to_SI",
+   "target_words": 190,
+   "reason": "Moved whole, but a substantial main-text remnant is mandatory because the Discussion claim that the climate signal is not an artefact of where people look rests entirely on it. Main text keeps one compressed paragraph carrying the coefficient envelopes verbatim: three SDM thresholds (effort 1.404, 1.405, 1.411; warming 1.362, 1.376, 1.372; interaction 0.849, 0.851, 0.850), twelve effort-proxy x missing-data combinations (effort 1.25-1.52, warming 1.35-1.37), and the window-and-baseline grid (warming rising from 1.16-1.21 at five years to 1.36-1.40 at twenty; effort flat at 1.34-1.41). Dropped whole: the climate-indicator comparison, the CRU rebuild rationale, the 1970-2000 versus 1980-2000 contrast, the 0.058 degC resolution caveat, and the 22-of-24 adjacent-year evidence.",
+   "si_destination": "Supplementary Note S7; Supplementary Figs S2, S3; Supplementary Table S10"
+  },
+  {
+   "section": "Results 11: Model adequacy",
+   "source_words": 377,
+   "action": "move_to_SI",
+   "target_words": 100,
+   "reason": "Moved whole to SI, with a main-text remnant of two sentences: the model is well calibrated with no spatial autocorrelation, and the three resampling analyses (design-preserving permutation nulls, cluster bootstrap, parametric bootstrap) place every reported coefficient outside its null except annual climate variability. This remnant is required because the permutation-null result is the anchor of the 1.157 / 0.980 qualification retained in Results 3. The DHARMa statistics (KS P = 0.74, dispersion P = 0.59, 95 outliers, Moran's I = -0.038, P = 0.86), the SE inflation factors 1.26-1.59 and 0.86-1.17, the coverage 91.3-95.3%, and the leave-one-out 4.2% / 9 of 164 all move intact. The proportional-hazards paragraph here is deleted outright as a duplicate of Results 9.",
+   "si_destination": "Supplementary Note S8; Supplementary Table S3; Supplementary Figs S8, S9"
+  },
+  {
+   "section": "Results 12: How far can these relationships be projected?",
+   "source_words": 346,
+   "action": "compress",
+   "target_words": 190,
+   "reason": "Third Discussion pillar; needs a main-text quantitative anchor. Kept verbatim: SD of 0.18 degC, future differentials reaching 2 degC and more than ten standard deviations beyond the fitted range, support shares 47.8% / 10.4% / 2.1% under SSP2-4.5 and 34.2% / 2.1% / 1.9% under SSP5-8.5, masked hazard ratios 0.79 to 2.94, unmasked up to 78, and the directional agreement of 23.7%. Dropped as whole sentences: the effort growth rates, the within-range Spearman rho = 0.54, the rank correlations -0.04 to 0.18, the 6.5% figure, 176 of 186 versus 42 cells, and the TreeSHAP monotonicity.",
+   "si_destination": "Supplementary Note S9; Supplementary Figs S10-S12"
+  },
+  {
+   "section": "Results 13: Records inside nature reserves measure the observation process, not reserve performance",
+   "source_words": 775,
+   "action": "move_to_SI",
+   "target_words": 130,
+   "reason": "A self-contained secondary analysis on a different design (conditional logistic regression on checklist-weighted controls); it supports none of the four protected conclusions and is the second-largest saving (645 words). Main text keeps one short paragraph with the operational conclusion and its two load-bearing numbers verbatim: the apparent 2.5-fold enrichment falls to an odds ratio of 1.57 (1.26-1.96) after conditioning, which we treat as an upper bound, so counts of new records inside reserves should not be used as an indicator of reserve performance. Everything else (the 172 events in 68 reserves, the 2013-2023 versus 2002-2012 contrast, per-visit yield 18.9 against 15.3, the persistence analysis, the warming-quintile coverage) moves whole.",
+   "si_destination": "Supplementary Note S10; Supplementary Figs S13-S15"
+  },
+  {
+   "section": "Discussion",
+   "source_words": 833,
+   "action": "compress",
+   "target_words": 780,
+   "reason": "Nearly kept in full because it is where the four conclusions are generalised beyond the dataset and where the compressed Results are given their meaning. The three bold pillars (dating as a modelling decision, warming as more than a sampling story, projection limited by covariate support) and the Limitations paragraph are retained. Compressed: the monitoring and conservation paragraph is cut from three numbered points to two sentences, and the two-reading discussion of the negative interaction is halved. All numbers already appear in Results, so nothing new is introduced.",
+   "si_destination": "—"
+  }
+ ],
+ "display_items": [
+  {
+   "item": "Fig. 1 | Survey effort and accumulated warming contribute comparably",
+   "keep_in_main": true,
+   "si_number": "— (main Fig. 1, panels a-d unchanged)",
+   "reason": "Sole visual support for protected conclusion (i). Panel a carries the effect sizes at three thresholds, panel d the discrimination ladder, and the legend already states the 1.16 null-centring caveat required by the null-model constraint."
+  },
+  {
+   "item": "Fig. 2 | Dating records to publication rather than to discovery is a systematic source of bias",
+   "keep_in_main": true,
+   "si_number": "— (main Fig. 2, panels a-c unchanged)",
+   "reason": "The title claim. Panel c carries the full five-step decomposition, which lets old Table 1 move to SI without leaving the 37% statement unsupported."
+  },
+  {
+   "item": "Fig. 6 | The observation process made visible",
+   "keep_in_main": true,
+   "si_number": "— (main Fig. 3, panels a-d unchanged)",
+   "reason": "Carries two protected conclusions in one item: panel c the province-by-year component (ii), panel d the declining effort hazard ratio (iii). Highest evidence density per display slot in the paper."
+  },
+  {
+   "item": "Fig. 11 | Directionality of new records relative to the species' known range",
+   "keep_in_main": true,
+   "si_number": "— (main Fig. 4, reduced to the overall rose plus the six-order overlay)",
+   "reason": "Sole support for protected conclusion (iv). The sixteen individual order panels are stripped to Supplementary Fig. S16 to fit a single-column main figure."
+  },
+  {
+   "item": "Fig. M4 | The two model families agree inside the fitted range and diverge outside it",
+   "keep_in_main": true,
+   "si_number": "— (main Fig. 5, panel b promoted, panels a and c retained)",
+   "reason": "Panel b is the covariate-support diagnostic, the third Discussion pillar and the paper's methodological recommendation. Keeping it in main text is what licenses moving Figs M1-M3 and Extended Data Fig. 3 to SI."
+  },
+  {
+   "item": "Table 2 | Main model with permutation null medians and cluster bootstrap intervals",
+   "keep_in_main": true,
+   "si_number": "— (main Table 1, unchanged)",
+   "reason": "The only display item that carries the permutation null medians (1.157, 0.980) and the province cluster bootstrap intervals side by side. Required by the null-baseline constraint; cannot be moved."
+  },
+  {
+   "item": "Table 1 | Step-by-step decomposition S0-S5",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S1",
+   "reason": "Fully redundant with main Fig. 2c for the headline transitions; the four minor step deltas that only the table carries are not cited in the compressed main text."
+  },
+  {
+   "item": "Table 3 | Random-effect structure comparison on four criteria",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S2",
+   "reason": "The four numbers that carry conclusion (ii) (dAIC 93.4, conditional R2 0.274 to 0.411, AUC 0.721 to 0.854, ICC 0.172 to 0.358) are stated in the main text; the six-row ladder itself is supporting detail."
+  },
+  {
+   "item": "Table 4 | Model adequacy",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S3",
+   "reason": "Diagnostic checks with no positive claim attached; the one substantive row (PH effort x time) is stated verbatim in the main text under Results 9."
+  },
+  {
+   "item": "Table 5 | Ecological rationale for every component of the main model",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S4",
+   "reason": "Interpretive rather than evidential, and its 12 rows restate estimates given elsewhere. Valuable for reviewers, which is exactly what SI is for."
+  },
+  {
+   "item": "Table 6 | Migratory stratification",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S5",
+   "reason": "Travels with Results 6, which is moved whole; its headline is a null moderation result."
+  },
+  {
+   "item": "Table 7 | Species-level range measures",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S6",
+   "reason": "Travels with Results 7. The range-size effect retains a one-sentence main-text statement pointing here."
+  },
+  {
+   "item": "Table 8 | Province-level models",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S7",
+   "reason": "Travels with Results 7. The diminishing-returns row (0.71, P = 0.028) is stated in main text with a pointer, so conclusion (iii) is not left hanging."
+  },
+  {
+   "item": "Table 9 | Species-level effects within taxonomic and migratory groups",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S8",
+   "reason": "Stratified secondary analysis; no main-text claim depends on it after Results 7 is moved."
+  },
+  {
+   "item": "Extended Data Table 1 | Risk-set bridge from compilation to modelling data",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S9",
+   "reason": "Bookkeeping. The final dimensions are stated verbatim in the compressed Results 1."
+  },
+  {
+   "item": "Extended Data Table 2 | Fine accumulation-window grid, 3 to 23 years",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S10",
+   "reason": "Supports the interior-optimum argument, which is compressed to a clause in the main-text robustness remnant."
+  },
+  {
+   "item": "Fig. 3 | Robustness across thresholds, indicators, windows and effort proxies",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S2",
+   "reason": "The coefficient envelopes it displays are all restated numerically in the 190-word main-text robustness remnant, so the figure adds range rather than a distinct claim."
+  },
+  {
+   "item": "Fig. 4 | Random-effect structures on four criteria",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S1",
+   "reason": "Duplicates Supplementary Table S2 graphically; the flat marginal AUC point is made in one main-text sentence."
+  },
+  {
+   "item": "Fig. 5 | Anatomy of the model, in units a reader can picture",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S4",
+   "reason": "Pedagogically strong but no protected conclusion rests on it. The natural-unit statements (0.179 degC, 7.75-fold) stay in main text with an explicit pointer here."
+  },
+  {
+   "item": "Fig. 7 | Accumulation window and climate baseline",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S3",
+   "reason": "Twelve-cell sensitivity grid; its summary range is quoted in the main-text robustness remnant."
+  },
+  {
+   "item": "Fig. 8 | Migratory strategy shifts the baseline but does not moderate either driver",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S5",
+   "reason": "Travels with Results 6."
+  },
+  {
+   "item": "Fig. 9 | Species-level correlates of new provincial records",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S6",
+   "reason": "Travels with Results 7; includes the Fig. 9alt stratified panels as S6c, d."
+  },
+  {
+   "item": "Fig. 10 | Province-level counts of new records",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S7",
+   "reason": "Travels with Results 7."
+  },
+  {
+   "item": "Extended Data Fig. 1 | Simulation-based residual diagnostics",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S8",
+   "reason": "Standard diagnostics; NEE convention places these in SI."
+  },
+  {
+   "item": "Extended Data Fig. 5 | Design-preserving null models, resampling and influence",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S9",
+   "reason": "Moved, but its key output is preserved in main Table 1 as the permutation null median column, so the mandatory null-baseline qualification remains visible in the main text without this figure."
+  },
+  {
+   "item": "Fig. M1 | Mechanistic projection restricted to the fitted support",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S10",
+   "reason": "The masked hazard-ratio range 0.79 to 2.94 is stated in main-text Results 12; the province maps are illustrative."
+  },
+  {
+   "item": "Extended Data Fig. 3 | Unmasked mechanistic projection",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S11",
+   "reason": "Exists only to show the magnitude of extrapolation (ratios up to 78), a number retained in the main text."
+  },
+  {
+   "item": "Fig. M2 | Machine-learning projection under identical inputs and mask",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S12a",
+   "reason": "Comparison model; the divergence statistic that matters (23.7% directional agreement) is in main text and main Fig. 5c."
+  },
+  {
+   "item": "Fig. M3 | TreeSHAP interpretation of the gradient-boosted model",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S12b, c",
+   "reason": "Interpretive support for the comparison model only."
+  },
+  {
+   "item": "Fig. P1-P3 | Nature-reserve conditional logistic, persistence and warming coverage",
+   "keep_in_main": false,
+   "si_number": "Supplementary Figs S13-S15",
+   "reason": "Travel with Results 13, which is moved whole; the operational conclusion and the odds ratio 1.57 (1.26-1.96) remain in the main text with a pointer."
+  },
+  {
+   "item": "Fig. 11 order-by-order panels (sixteen best-sampled orders)",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S16",
+   "reason": "Split off from main Fig. 4 so that the directionality figure fits one main-text slot; the five-order robustness statement in main text points here."
+  }
+ ],
+ "budget_check": "NEE hard limit: Introduction + Results + Discussion <= 3,600 words; abstract <= 150; main display items <= 6.\n\nTEXT BUDGET. Source: Intro 672 + Results 6,246 + Discussion 833 = 7,751. Targets: Intro 430 + Results 2,220 + Discussion 780 = 3,430. Headroom 170 words (4.7%) against the 3,600 cap, deliberately reserved for the section-linking sentences and SI pointers that compression always adds back at copy-edit.\n\nResults sum, section by section: 230 + 180 + 470 + 190 + 60 + 40 + 150 + 170 + 120 + 190 + 100 + 190 + 130 = 2,220, against the 2,400 brief. Under by 180, which is the real safety margin because Results is where a compressed draft rebounds.\n\nWHERE THE 4,026 WORDS COME FROM. Four sections supply 2,880 of the 4,321 words cut from Results (67%): species and provinces 1,120 -> 150 (-970); nature reserves 775 -> 130 (-645); robustness 762 -> 190 (-572); migratory strategy 455 -> 40 (-415). None of the four is a protected conclusion, and all four are moved as intact blocks to SI rather than abbreviated in place. The remaining 1,441 words come from proportional trimming of the nine sections that do carry the protected conclusions. Intro contributes 242 and Discussion only 53 - Discussion is deliberately barely touched, because with Results at 36% of source length the Discussion is now the only place the four conclusions are stated in continuous prose.\n\nPROTECTED CONCLUSIONS, WORDS ALLOCATED. (i) warming vs effort: 470 words, main Fig. 1 and main Table 1. (ii) province-by-year largest component: 190 + 60 = 250 words, main Fig. 3c. (iii) declining effort return, non-declining climate: 120 words in Results 9 plus a 1-sentence provincial-scale convergence in Results 7, main Fig. 3d. (iv) east / northeast bias: 170 words, main Fig. 4. Total 1,010 of 2,220 Results words (46%) go to the four protected conclusions, against 24% of the source. That is the intended shift: the compression is paid for by the supporting apparatus, not by the results.\n\nNULL-MODEL CONSTRAINT. The 1.157 / about 1.18 / 0.980 qualification appears three times in the finished paper: in the abstract (25 of 147 words, 17%), inside the 470-word Results 3 block, and as the permutation-null-median column of main Table 1 with the explanatory table note preserved verbatim. It therefore survives even if a copy-editor deletes any one instance.\n\nDISPLAY ITEMS. Source 27 (9 tables + 18 figure legends). Main: 5 figures + 1 table = 6, exactly at the cap, no slack. Every protected conclusion has at least one main-text display item, and Fig. 3 does double duty for (ii) and (iii), which is what makes 6 achievable. The 21 demoted items map to 10 Supplementary Notes, 10 Supplementary Tables and 16 Supplementary Figures (16 rather than 15 because main Fig. 11 is split, its order panels becoming Supplementary Fig. S16).\n\nABSTRACT. 147 words against the 150 cap, margin 3. Single paragraph, no citations, no subheadings, per NEE format. Fourteen numbers appear, all copied character-for-character from the source: 1,029 / 2002-2024 / 1.305 / 1.788 / 1.362 / 1.404 / 1.157 / 1.18 / 0.980 / 0.804 / 2.18 / 1.07. Note the abstract states the effort transition as 1.305 -> 1.788 whereas Results 2 states 1.788 -> 1.305; both digits are unaltered and both sentences are true, because the abstract describes what publication-year dating does to the corrected estimate and Results describes what re-dating does to the published one.\n\nNUMBER VERIFICATION. Spot-checked against the results tables rather than the manuscript alone: tbl_null_models.csv gives N3 clim_change null median 1.15696 (= 1.157) and N2 effort null median 0.97957 (= 0.980); tbl_bootstrap_ci.csv gives the province cluster bounds 1.1957-1.7215 and 1.2075-1.7619 (= 1.20-1.72, 1.21-1.76) and the interaction 0.7416-0.9944 (= 0.74-0.99); tbl_change_decomposition.csv confirms S0 effort 1.78764 and S1 1.30508; tbl_v2_future_support.csv confirms 47.8 / 10.4 / 2.1 and 34.2 / 2.1 / 1.9. One inconsistency exists inside the source itself and I have not touched it: tbl_null_models.csv records the observed warming HR as 1.36604 while the manuscript and tbl_change_decomposition.csv S5 give 1.36165 (= 1.362). All retained text uses the manuscript value 1.362, per the rule that the source manuscript governs.\n\nVERDICT. Within budget on all four NEE constraints, with margin on three (170 words of text, 3 words of abstract, 0 display items) and none on the fourth.",
+ "risks": [
+  "Display items are at exactly 6 with zero slack. If a reviewer asks for any new main-text panel, something must be demoted, and the only demotable candidate is Fig. 5 (projection support) - which would leave the third Discussion pillar without a main display item. Decide in advance that Fig. 5 is the sacrificial slot rather than negotiating it under revision pressure."
+ ]
+}

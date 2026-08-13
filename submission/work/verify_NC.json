@@ -1,0 +1,70 @@
+{
+ "journal": "Nature Communications",
+ "verdict": "需修订",
+ "number_errors": [
+  {
+   "where": "Results — Robustness, \"Accumulation window and climate baseline\"",
+   "in_draft": "We tested windows of 5, 10, 15 and 20 years jointly against two baselines and two climate data sources ... Across all twelve combinations the effort coefficient is flat at 1.34–1.41",
+   "in_source": "windows of 5, 10, 15 and 20 years against three series — WorldClim 1980–2000, CRU 1980–2000, CRU 1970–2000 — because \"The 1970–2000 baseline cannot be computed from the WorldClim 2.1 downscaling, which begins in 1980\"; 4 × 3 = 12. tbl_v2_baseline_sensitivity.csv confirms exactly 12 rows in 3 series."
+  },
+  {
+   "where": "Results — What each level of the model means, \"Reporting completeness offset\"",
+   "in_draft": "Omitting it attenuates the effort coefficient from 1.372 to 1.245 (stated inside a section that enumerates the components of the main model, whose effort HR is 1.404)",
+   "in_source": "Same sentence, but tbl_v2_re_ladder.csv shows 1.372 / 1.245 are the R5 structure (+ province effort slope) with and without offset; the main model R3 effort HR is 1.404. The draft's tightening makes the 1.404 vs 1.372 mismatch conspicuous."
+  },
+  {
+   "where": "Results — Robustness, effort proxy block (inherited, not introduced)",
+   "in_draft": "warming hazard ratios between 1.35 and 1.37",
+   "in_source": "Source says the same, but tbl_v2_B_effort.csv gives HR_change across the 12 cells = 1.329–1.381. Flagged so it is not re-propagated to submission."
+  },
+  {
+   "where": "Results — Robustness, interaction range (inherited, not introduced)",
+   "in_draft": "the interaction is negative throughout (0.87–1.00)",
+   "in_source": "Source says the same, but tbl_v2_baseline_sensitivity.csv gives interaction HR 0.823–0.998 across the 12 cells."
+  }
+ ],
+ "orphaned_claims": [
+  "Introduction: \"Publication lag is a right-skewed delay that is correlated in aggregate with the growth of the observational infrastructure.\" Nothing in Results or the SI manifest quantifies a lag–infrastructure correlation; Supplementary Note S1 reports the opposite-facing statistic (lag is stationary, Spearman rho = −0.016, P = 0.685). The draft deleted the source's softening clause (\"not a small, random offset; ... a mean above two years\"), so this now stands as a bare, unsupported mechanism claim that a referee will attack.",
+  "Introduction closing: \"Both expectations proved wrong in an informative way.\" The source explained how (\"effort dominance was largely an artefact of dating, and after correction the two drivers are of comparable importance\"). The Introduction now ends with no finding — contrary to NC house style and leaving the claim unresolved.",
+  "Reserve section: the source's standalone conservation result — the reserve network shows NO measurable mismatch with observed warming (fractional logit beta = −0.022, −0.107 to 0.063, P = 0.61; within-stratum permutation rho = −0.013, P = 0.48), plus the priority-monitoring areas 39.3 × 10⁴ km² inside reserves and 160.3 × 10⁴ km² outside — is gone from the main text entirely. It survives only as a phrase in the Supplementary Note S2 *title*, and the Discussion's \"Implications for monitoring and conservation planning\" paragraph does not pick it up. A titled SI note is not a main-text pointer for a headline conservation claim.",
+  "Reserve section: the estimation method for the headline odds ratios (1.71 and 1.57) is no longer named in the main text — \"conditional logistic regression\" was deleted along with the 200-control matched design detail. A quantitative effect size is left without its estimator.",
+  "Direction section: \"That birds show an eastward rather than a northward bias tilts the balance toward the observational reading\" lost its comparator. The source supplied it (\"The companion mammal study found a northward and eastward bias on the same reasoning\"), so the reader can no longer see why northward is the ecological expectation being contrasted against.",
+  "Robustness: \"Raising the requirement from 50 to 200 suitable cells\" and the earlier \"the 50-cell species-distribution-model threshold\" are now uninterpretable — the draft deleted the source's definition (2.5-arc-minute cells, median 18.3 km², i.e. roughly 0.9–3.7 thousand km² of suitable habitat), and no SI pointer replaces it.",
+  "Discussion: \"targeted survey campaigns have large and immediate effects on the biodiversity record\" is inferred from a random-intercept SD, with no interventional evidence anywhere in the paper (inherited from the source, but the draft removed the hedging clause \"identifies where monitoring investment changes what is documented\")."
+ ],
+ "null_baseline_kept": true,
+ "my_word_counts": {
+  "introduction": 605,
+  "results": 3655,
+  "discussion": 736,
+  "total": 4996,
+  "within_limit": true
+ },
+ "language_issues": [
+  "Intro 首段：\"Documented species distributions are a joint product ... . The inferential consequences remain incompletely handled ...\" — 删掉源文稿的 \"This has been recognised for decades, and yet\" 后，\"The inferential consequences\" 失去先行指代，且转折逻辑（早已认识 vs 仍未处理）消失。",
+  "Results 第一节：\"the discovery-year fall is right-censoring, which we corrected directly.\" — 范畴混淆（下降不等于删失，只是删失所致），且 \"which\" 的先行词在 fall 与 right-censoring 之间摇摆。源文稿有 \"because records made in 2023–2024 have not yet appeared in print\" 作解释，被删后语义更悬。",
+  "随机结构一节：\"Two structures with random slopes fit marginally better ... it is the most parsimonious of the three indistinguishable options.\" — 源文稿写的是 \"statistically indistinguishable\"，删掉 statistically 后，\"fit marginally better\" 与 \"indistinguishable\" 在同段内表面自相矛盾。",
+  "Migratory 一节末：\"Group sample sizes, group-specific hazard ratios, the exclusion of species whose strategy is unrecorded, and a warming × effort interaction confined to long-distance migrants — which we report as a hypothesis ... — are given in Supplementary Note S3\"：约 60 词长句，四项并列主语与谓语 \"are given\" 之间插入长破折号从句，可读性差，且 \"which\" 只能指最后一项。",
+  "Migratory 一节：\"Fitting each group separately gives the same picture, with almost completely overlapping intervals.\" — 组别 HR 数字已移入 SI，\"the same picture\" 在正文中无任何可指代内容。",
+  "\"Which species, and which provinces\" 开头：\"Two complementary questions operate at coarser levels\" — 删掉源文稿的引导句后，\"coarser\" 无比较对象（原本比的是 hazard model 的 species × province × year 尺度）。",
+  "Robustness：相邻两段各出现一次 \"all twelve combinations\"，分别指 4 窗口 × 3 气候序列 与 4 努力代理 × 3 缺失值规则，两套完全不同的设计共用同一措辞，极易误读；加上前句 \"two baselines and two climate data sources\" 暗示 16 格，三处互相打架。",
+  "Robustness：\"The choice of baseline period, of data source and of climate indicator moves the warming estimate only slightly\" — 语义上把 \"两个季节性指标下升温效应完全消失（HR 0.96–1.08）\" 说成 \"only slightly\"，属压缩造成的实质性失真（详见 must_fix）。",
+  "方向性一节：\"Two mechanisms are consistent with this and cannot be separated by these data\" 之后紧接 \"tilts the balance toward the observational reading\"，前后张力未加缓冲（源文稿有 mammal study 铺垫句）。",
+  "保护区一节：句尾 45 词括号 \"(matched design, two counter-tests, persistence of first records and the reserve–warming comparison in Supplementary Note S2; Supplementary Figs S12–S14)\" 与主句语法脱节，是把四段被删内容硬塞成的一个清单。",
+  "保护区一节：\"The residual association is itself largely observational.\" 由源文稿的 \"Three features ... argue that it too is largely observational\" 改为断言，且后文只给出两条特征，论证与断言强度不匹配。",
+  "Discussion 首段直接以粗体导语起头，删掉了源文稿的 \"Three results have implications beyond this dataset.\"（这一删除本身修正了源文稿 \"Three\" 却写四条的计数错误，属改进），但四条粗体导语加 Limitations 缺少统领句，NC 讨论部分略显碎片化。"
+ ],
+ "must_fix": [
+  "【实质性失真，最严重】Results — Robustness：\"The choice of baseline period, of data source and of climate indicator moves the warming estimate only slightly (Supplementary Note S5).\" 这句与源文稿和 tbl_v2_indicator_window.csv 直接矛盾。源文稿写的是：年均温携带信号；暖月最高温只有弱化版本（HR 1.30，ΔAIC 9.0）；冷月最低温与冬季均温在任何窗口下都没有信号（HR 0.96–1.08，全部 P > 0.12，最小 P = 0.129）。也就是说，换气候指标会让整个升温效应从 1.362 塌到约 1.0，不是 \"only slightly\"。必须恢复源文稿的分层表述，否则这是对稳健性的夸大，审稿人一查 SI 就会认定作者掩盖了指标依赖性。",
+  "【自相矛盾】\"two baselines and two climate data sources\" 应改为 \"three series (WorldClim 1980–2000, CRU 1980–2000, CRU 1970–2000)\"，并保留一句说明 WorldClim 起于 1980、无法计算 1970–2000 基期。否则 2 × 2 × 4 窗口 = 16，与紧接着的 \"all twelve combinations\" 冲突。",
+  "【数值归属错误】\"Omitting it attenuates the effort coefficient from 1.372 to 1.245\" 放在描述主模型各层的小节里，但主模型 effort HR 是 1.404（tbl_v2_re_ladder.csv 中 R3）；1.372/1.245 来自 R5（+ province effort slope）结构的有/无 offset 对比。必须改用主模型的对应数值，或在句中明确标注该对比所用的随机结构。",
+  "【方法锚点缺失】保护区一节的 OR 1.71（1.39–2.11）与 1.57（1.26–1.96）在正文中已无估计方法。至少补回 \"conditional logistic regression\" 与 \"200 matched controls per event\" 两个词组。",
+  "【保护学结论被整段丢弃】保护区网络与实测升温\"无错配\"（β = −0.022，P = 0.61；置换 P = 0.48）以及优先监测面积（reserve 内 39.3 × 10⁴ km²、reserve 外 160.3 × 10⁴ km²）在正文中彻底消失，Discussion 的 conservation 段也未承接，只在 Supplementary Note S2 的标题里出现半句。若这是论文的保护学卖点之一，需在正文保留一句带指向；若决定舍弃，需在 Discussion 明确不再声称。",
+  "【Intro 无落点】\"Both expectations proved wrong in an informative way.\" 必须补回\"怎么错的\"（effort 优势主要是定年伪迹；校正后两者量级相当），NC 要求 Introduction 末尾给出结果指向。",
+  "【SDM 阈值不可解读】恢复 cell 的定义与面积换算（2.5 arc-min，中位 18.3 km²，50/100/200 cells ≈ 0.9/1.8/3.7 千 km²），否则 \"50-cell threshold\" 与 \"50 to 200 suitable cells\" 在正文里是无意义的数字。",
+  "【方向性论证失去比较基线】补回 companion mammal study 的 northward + eastward 对照，否则 \"eastward rather than a northward bias\" 的推论链断裂。",
+  "【篇幅与版面余量为零】我复核的词数为 Introduction 605、Results 3,655、Discussion 736，合计 4,996（剥离 markdown 标记后 4,983），距 NC 5,000 词上限仅余 4 词；display items 恰好 10 个（7 图 + 3 表）。任何编辑修改都会越界，建议先压出 150–200 词缓冲。另：源文稿摘要 413 词，远超 NC 的 150 词上限，改写稿完全未处理，投稿前必须重写摘要。",
+  "【SI 编号未闭合】改写者自承 Fig. 5（原 Fig. 11）的十六个目级面板需要一个 Supplementary Fig. S15 但未列入 manifest，正文也没有指向；Supplementary Figs S12–S14 的图注仍标注 \"legend to be written\"。",
+  "【参考文献孤儿化未处理】删句移除了 refs 11–15、17–18、38–52 的唯一正文锚点；ref 25（Sci. Data companion, submitted）仍是 data-availability 风险。投稿前必须重做引用审计。"
+ ]
+}

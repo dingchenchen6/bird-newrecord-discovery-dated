@@ -1,0 +1,65 @@
+{
+ "journal": "Global Change Biology (GCB)",
+ "verdict": "需修订",
+ "number_errors": [
+  {
+   "where": "Results 10《Robustness》累积窗口与气候基准段：\"the interaction is negative throughout (0.87–1.00)\"",
+   "in_draft": "0.87–1.00",
+   "in_source": "tbl_v2_baseline_sensitivity.csv 十二个组合的交互项 HR 实为 0.823–0.998（主序列 W=20 为 0.8233，W=10 为 0.8468，W=15 为 0.8492），下界应为 0.82 而非 0.87。注：MANUSCRIPT_v2.md 原文同样写 0.87–1.00，改写稿是原样继承而非新造错误"
+  },
+  {
+   "where": "Results 10：\"at W = 15 the hazard ratio is 1.361 under CRU 1970–2000 against 1.307 under CRU 1980–2000, with the main WorldClim 1980–2000 estimate of 1.362 between the two\"",
+   "in_draft": "1.362 between the two（介于 1.361 与 1.307 之间）",
+   "in_source": "tbl_v2_baseline_sensitivity.csv：CRU1970-2000 W=15 HR=1.36059，CRU1980-2000 W=15 HR=1.30659，主 WorldClim W=15 HR=1.36164。1.362 高于 1.361，不在两者之间。源文稿写 \"sits between the two\"，同样有误，改写稿原样继承"
+  },
+  {
+   "where": "Results 13《Records inside nature reserves》第一段：\"from 2.86 million GBIF/eBird checklists (172,079 checklists at 43,571 distinct locations, 2002–2023)\"",
+   "in_draft": "2.86 million ... (172,079 checklists ...)",
+   "in_source": "源文稿同样并列这两个互相矛盾的清单数（286 万 vs 17.2 万），未解释二者关系（疑为原始记录数 vs 去重后清单数）。改写把\"using ... to define availability\"压成\"defining availability as ... from 2.86 million ... (172,079 ...)\"，使矛盾更突出。需回查 tbl_pa_* 确认口径"
+  }
+ ],
+ "orphaned_claims": [
+  "Results 13 结尾：\"All statements here apply only to the 1,028 mapped reserves established before 2012; because reserve status has almost no temporal variation within the window, we make no causal claim.\" —— 源文稿中支撑这句的两项内容被整段删除且无 SI 指向：(1) 矢量图层的排除范围（\"the vector layer excludes the national parks designated from 2021, nature parks, and the ecological conservation red lines\"）；(2) \"none of the 172 inside-reserve events pre-dates its host reserve's designation\"（\"几乎无时间变异\"的唯一证据）。si_manifest 的 Note S6 描述为\"panel-level description\"，并不覆盖这两项。适用范围限定与因果免责声明因此悬空。",
+  "Results 5《What each level of the model means》\"*Province (SD 0.326).* One standard deviation multiplies the hazard by 1.39 (Figure 5b).\" —— 省份随机效应的生态学含义（面积、地形复杂度、生境多样性、观察者人口、研究传统）被整句删除，无 SI 指向。小节标题承诺\"每一层意味着什么、为什么在模型里\"，而省份层现在只剩一个数字，标题与内容自相矛盾。",
+  "Results 5《Species (SD 0.405)》删除了\"Grouping the species intercepts by migratory strategy shows overlapping distributions with a modestly higher median for partial migrants...\"，但仍引用 Figure 5a（原 Fig. 6a），而该图面板恰恰就是\"按迁徙策略分组的物种随机截距\"。结果是图面板内容在正文无任何说明；同时这条与 Results 7 的\"partial migrant OR 1.91–2.50\"、Results 6 的\"0.417% 最高事件率\"三线汇合的证据被砍掉一条。",
+  "Results 12：删除\"Neither behaviour is validated by the data.\"（机制模型线性外推与树模型饱和\"两种行为都未被数据检验\"）。这是外推部分最关键的认识论限定，删除后正文只说明了分歧的结构性原因，读起来像在暗示机制模型的外推行为更可信。无 SI 指向。",
+  "Results 11：源文稿的年际变异置换零模型 P 值（P = 0.16 和 0.31）被删，正文只说\"which is null under the design as in the fitted model\"，而该段没有任何指向 Note S4 的钩子（段末的 Note S4 指向的是 time-varying refit）。si_manifest 声称 Note S4 收录了这两个 P 值，但正文缺少对应指针。",
+  "Results 10：删除\"with AIC rising again by 23 years\"后，\"places the optimum at 18–20 years, so it is interior rather than an artefact of the tested range\"中\"interior\"的直接证据消失（tbl_v2_window_baseline_sensitivity 显示 W=23 时 dAIC 回升到 4.07，这正是\"内点\"的证据）。",
+  "Results 12：删除\"— applying it to one end only would create a climate signal from spatially uniform warming —\"后，\"applying the four-model ensemble delta to both ends of the climate gradient\"中\"both ends\"指代不明（源文写明是省份端与物种分布区端），且做法的必要性论证消失；Methods 段亦只说\"added to both ends\"而未给理由。"
+ ],
+ "null_baseline_kept": true,
+ "my_word_counts": {
+  "introduction": 629,
+  "results": 4887,
+  "discussion": 838,
+  "total": 6354,
+  "within_limit": false
+ },
+ "language_issues": [
+  "Results 1 句法破碎（最严重的一处）：\"Pooling is justified because publication lag is stationary across discovery years, and because the observed hazard under incomplete reporting is approximately the product of the true hazard and the completeness c(t), the complementary log-log link makes c(t) enter the linear predictor exactly as an offset log c(t)\"。两个 because 从句挂在同一主句上，但第二个 because 从句的主句其实是\"the cloglog link makes...\"，句子读成\"合并是合理的，因为 A，且因为 B，cloglog 使 c(t) 成为 offset\"——语法不通，且把\"合并滞后分布的理由\"和\"offset 的推导\"两件互不相干的事混为一谈。必须拆成两句。",
+  "Results 6 第一句对比失效：\"residents disperse slowly, whereas long-distance migrants can appear far outside their range as vagrants or storm-displaced individuals and are visible only on passage\"。源文中\"residents disperse slowly\"后面跟着推论\"so a first record should more often mark a genuine boundary shift\"，删掉推论后 whereas 两端不再是可比的命题（扩散速度 vs 迷鸟机制），对比逻辑断裂。",
+  "Results 6 自相矛盾：\"because the test of group differences is not significant, we treat that pattern as an untested hypothesis rather than a result\"。同一段已报告 three-way LR P = 0.256 等检验结果，说明该模式已被检验（只是不显著），称其为 \"untested hypothesis\" 与前文直接冲突。源文的措辞是 \"a hypothesis for a larger compilation\"，应恢复或改为 unconfirmed/underpowered。",
+  "Results 8 事实性改写错误：\"That birds show an eastward rather than the northward bias reported for mammals is itself informative\"。源文明确写 \"The companion mammal study found a northward AND eastward bias\"，且该句被删除。改写把姊妹研究的结论窄化为\"northward\"，从而制造了一个并不存在的鸟兽对比，属于对已发表文献的错误表述（Ding et al. 2025 GEB，本文献 10）。",
+  "Results 3：\"Two qualifications should be carried through any reading of these effect sizes.\" 删去了源文的 \"follow from the resampling analyses described below\"，读者在此处无从知道 1.157、0.980、cluster bootstrap 这些数字的来源，直到 Results 11 才出现，缺前向指引。",
+  "Results 11：\"The three design-preserving permutation nulls place every reported coefficient outside...\" 使用定冠词\"The three\"，但正文此前从未把置换零模型列举为三个（Results 3 只描述了其中两种），指代无先行词。",
+  "Results 13：\"Three features argue that the residual association is itself largely observational. It is carried by very few sites: ... It is confined to ... And checklists made inside reserves record ...\"。源文的 First/Second/Third 被删，第三项主语从\"it（该关联）\"跳到\"checklists\"，且以 And 开头，三项并列结构断裂，读者难以对应\"Three features\"。同段 \"a 24% difference in per-visit yield that stratification cannot remove\" 删去了\"by province and year\"，stratification 所指变模糊。",
+  "Results 13：\"Because within-site observation bias cannot be conditioned out, we stated the rule in advance: a null result would be strong evidence, a positive one weak.\" 过去时\"stated ... in advance\"暗示该规则先前已声明，但全文此前并无声明，指代落空。源文为\"we treat the inference as asymmetric and state the rule in advance\"。",
+  "Results 10：\"places the optimum at 18–20 years, so it is interior rather than an artefact of the tested range\" 中的 \"it\" 指代不明（是 optimum 还是 grid），源文用的是 \"the optimum is interior\"。",
+  "Introduction：\"We construct a complete risk set of every species × province × year cell in which a new record could have occurred\" —— \"risk set of every cell\" 搭配不当（应为 comprising/of all cells），且删去了源文的 \"with absorbing exit after the first record\"，风险集的定义性特征在正文首次出现时缺失。",
+  "Results 7：\"Two effects hold under all three phylogenetic treatments\" —— 三种系统发育处理（phylogenetic logistic regression / taxonomic nesting / phylogenetic eigenvector regression）在正文中已不再列举，\"all three\" 无先行定义，只能靠读者去翻 Note S3。"
+ ],
+ "must_fix": [
+  "【硬指标超限】Results 实测 4,887 词（我用 wc 式空白分词，逐段排除小标题重新计数，与改写者自报一致；即使剔除独立成词的破折号等纯标点 token 仍为 4,812 词），超过 GCB 的 Results ≤ 4,800 上限。改写者在 notes 中承认相对 plan 的 4,754 超了，但只对照了 8,000 全文上限，未对照 Results 上限，实际不合规。其自列的删减顺序（Results 13 −60、Results 12 −40、Results 6 −40、Results 11 −30）可行，但必须真正执行至少 −87 词，且不得再删本报告列出的悬空条目。Introduction 629、Discussion 838、三节合计 6,354；加 1,400 词 Methods 后全文 7,754，符合 8,000 上限。",
+  "【结论错误】修正 Results 8 对姊妹哺乳动物研究的表述：源文为\"northward AND eastward bias\"，改写稿写成\"the northward bias reported for mammals\"，须恢复\"northward and eastward\"，否则鸟兽对比的立论基础被歪曲。",
+  "【句法】重写 Results 1 关于合并滞后分布与 offset 推导的那一句，拆为两句：一句讲 pooling 的依据（并指向 Note S1），一句讲 cloglog 下 log c(t) 恰为 offset。现句语法不成立。",
+  "【自相矛盾】Results 6 的 \"untested hypothesis\" 改回 \"a hypothesis for a larger compilation\"（或 unconfirmed/underpowered），与同段已报告的 LR 检验结果保持一致。",
+  "【标题与内容不符】Results 5 小标题为 \"What each level of the model means, and why it is there\"，但 Province 层只剩 \"SD 0.326 → ×1.39\"，含义整段被删。至少恢复一个短句（面积、地形、生境多样性、观察者人口、研究传统），或改小标题。",
+  "【限定条款丢失】恢复 Results 13 结尾的保护地图层适用范围（不含 2021 年起设立的国家公园、自然公园、生态保护红线）与 \"none of the 172 inside-reserve events pre-dates its host reserve's designation\"，或在 Supplementary Note S6 中明确收录并在正文给出指针。目前是无指向的裸限定。",
+  "【外推限定丢失】恢复 Results 12 的 \"Neither behaviour is validated by the data.\"（约 7 词），这是全文外推部分最关键的双向免责，删除后有偏向机制模型之嫌。",
+  "【数字与结果表不符（源文稿即错，须一并订正）】(a) 交互项跨十二组合的范围应为 0.82–1.00 而非 0.87–1.00（tbl_v2_baseline_sensitivity.csv：主序列 W=20 为 0.8233）；(b) \"the main WorldClim ... estimate of 1.362 between the two\" 不成立（1.3616 > 1.3606 > 1.3066），应改为\"与 CRU 1970–2000 的估计几乎相同（1.362 vs 1.361），而明显高于 CRU 1980–2000 的 1.307\"。",
+  "【口径矛盾】核实并统一 Results 13 的清单数：\"2.86 million GBIF/eBird checklists\" 与紧随其后的 \"(172,079 checklists at 43,571 distinct locations)\" 互相矛盾（源文亦然）。若 286 万为原始记录数，应改写为 \"2.86 million GBIF/eBird records, comprising 172,079 checklists at 43,571 distinct locations\"。",
+  "【图文对应】要么恢复 Results 5 中\"物种随机截距按迁徙策略分组\"的一句（同时补回与 Results 6、7 汇合的第三条证据），要么把 Figure 5a 的分组面板改掉；当前正文引用 Figure 5a 却完全不提该面板展示的分组内容。",
+  "【指针补齐】(a) 在 Results 11 的年际变异零模型处补上 Supplementary Note S4 指针（P = 0.16 与 0.31 现已无入口）；(b) 在 Results 3 的\"Two qualifications\"处补一个前向指引（如 see Model adequacy），说明这些重抽样数字的来源。",
+  "【核验结论（无需改动的部分）】零模型限定完整保留：气候零基线 1.157–1.167、观测值 1.362 落在零分布之外（P = 0.005）、增量 1.362/1.157 ≈ 1.18、努力项置换后塌到 0.980 且零分布 95% 区间跨越 1，均在 Results 3 原样保留，与 tbl_null_models.csv（N3 clim_change 零中位数 1.15696、P = 0.00508；N1 1.16708；N2 effort 0.97957，区间 0.878–1.086）一致。四条主结论（效应量相当 / 省×年为最大方差成分 / 努力回报递减 / 方向偏东）及其正文证据链均在位。Discussion 与源文逐词一致（程序核对，仅差一个分隔符）。全部数字 token 逐一比对（含上标数字规范化）后，改写稿中不存在源文稿没有的数字，未发现四舍五入或凭空生成的数值。"
+ ]
+}

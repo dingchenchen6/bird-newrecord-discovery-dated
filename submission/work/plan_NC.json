@@ -1,0 +1,322 @@
+{
+ "journal": "Nature Communications",
+ "abstract": "Documented range shifts confound where species occur with where people look. We model the annual hazard of a first provincial record across a complete species-by-province-by-year risk set for 1,029 new bird records in China (2002–2024). Publication-year dating, the near-universal practice, inflates the apparent contribution of survey effort by 37%; accumulated warming is unchanged. After correction, accumulated warming relative to a species' historical range (hazard ratio 1.36 per SD, 95% CI 1.22–1.52) and survey effort (1.40, 1.25–1.58) contribute comparably. Permutation nulls centre the warming null on 1.157 (increment ≈1.18) and collapse effort to 0.980 when temporal alignment is broken. A province-by-year random intercept, the largest variance component, raises conditional discrimination from 0.72 to 0.85; effort's marginal return declines through time, warming's does not; and records cluster east and northeast of species' ranges. Documented range gains reflect climate and observation in roughly equal measure; the record's date decides which appears to dominate.",
+ "abstract_words": 150,
+ "triage": [
+  {
+   "section": "Introduction",
+   "source_words": 672,
+   "action": "compress",
+   "target_words": 600,
+   "reason": "三条 gap 的框架必须保留（定年、观测过程尺度、外推支持度），但删去 hypothesis 反转段的铺陈句与重复的\"why China\"论述，改为两句。NC 的 Introduction 允许保持问题导向，不需要额外压缩到 400 词以下。",
+   "si_destination": "—"
+  },
+  {
+   "section": "Results — The risk set and the dating problem",
+   "source_words": 457,
+   "action": "compress",
+   "target_words": 300,
+   "reason": "保留 1,029/1,028（99.9%）、684、657、8,319、185,478、175,901、649、392、31 这一串定义风险集的数字，以及 c(t) 作为 offset 的一句话逻辑。删除 lag 平稳性三项检验（ρ = −0.016, P = 0.685；Wilcoxon P = 0.851；三个百分点）与逐年完整度序列（99.7%/89.5%/83.4%/73.2%/56.7%），整段移入 SI；正文留一句\"完整度按经验滞后分布逐年计算并作为 offset（Supplementary Note S1）\"以免结论悬空。",
+   "si_destination": "Supplementary Note S1；Supplementary Table S7（风险集桥表，原 Extended Data Table 1）"
+  },
+  {
+   "section": "Results — Publication-year dating inflates the apparent role of survey effort",
+   "source_words": 236,
+   "action": "keep_full",
+   "target_words": 230,
+   "reason": "这是全文最独特的方法学卖点，五步分解的每个数字（1.788→1.305、37%、0.850 P = 1.8 × 10⁻⁴→0.971 P = 0.48、1.394→1.437、0.876→0.859、−0.038、+0.022、+0.159、0.044）都要保留，配 Table 1 与新 Fig. 1c。只删最后一段机制解释里的一句同义重复。",
+   "si_destination": "—"
+  },
+  {
+   "section": "Results — Warming and effort contribute comparably",
+   "source_words": 688,
+   "action": "compress",
+   "target_words": 640,
+   "reason": "核心结论 (i) 所在，几乎全保留：1.362(1.216–1.524)、1.404(1.245–1.583)、0.995、0.849、0.179 °C、7.75 倍、9 倍跨度、39%/55% 方差分解、Yunnan 两物种 +0.309/−0.280、AIC 28.7/29.5/6.5/−2.0、AUC 0.411/0.559/0.580/0.610。零模型基线限定（1.157–1.167、P = 0.005、1.18、0.980、置换区间覆盖 1）与省聚类 bootstrap（1.20–1.72、1.21–1.76、0.74–0.99）按约束 3 必须留在正文，仅压缩措辞。删去\"Because standardised coefficients are hard to picture\"一类过渡句。",
+   "si_destination": "—"
+  },
+  {
+   "section": "Results — Separating the observation process requires a province-by-year level",
+   "source_words": 224,
+   "action": "compress",
+   "target_words": 200,
+   "reason": "核心结论 (ii) 的直接证据：ΔAIC 93.4、条件 R² 0.274→0.411、条件 AUC 0.721→0.854、ICC 0.172→0.358、边际 AUC 0.607–0.613 全留，Table 3 留正文。两个随机斜率结构（ΔAIC 4.5 / 0.0，条件 R² 0.403 / 0.395，效应 1.397/1.372/1.348/1.366）压成一句并把细节指向 SI。",
+   "si_destination": "Supplementary Fig. S1（原 Fig. 4）"
+  },
+  {
+   "section": "Results — What each level of the model means, and why it is there",
+   "source_words": 319,
+   "action": "compress",
+   "target_words": 230,
+   "reason": "保留三个方差成分的量值与解读（0.405/×1.50/3.7 倍；0.326/×1.39；0.804/×2.23/13 倍）与 completeness offset 的 1.372→1.245，这是结论 (ii) 的生态学落点。删去物种截距按迁徙策略分组的描述（与迁徙小节重复）与部分修辞性总结句。",
+   "si_destination": "Supplementary Table S2（原 Table 5，生态学理由全表）"
+  },
+  {
+   "section": "Results — Migratory strategy shifts the baseline, not the drivers",
+   "source_words": 455,
+   "action": "move_to_SI",
+   "target_words": 150,
+   "reason": "不承载四条主结论中的任何一条，属于\"物种尺度\"应大幅移出的部分。正文只保留：策略改变基线而不调节两个驱动（ΔAIC 6.2；四个交互 LR P = 0.693, 0.854, 0.899, 0.256），并一句话交代分组拟合与长距离迁徙者交互的观察为假设而非结论，明确指向 SI。分组样本量（137/72/107，218/156/175）、逐组 HR、未知策略组 0.791% vs 0.29–0.42% 的选择性论证全部移出。",
+   "si_destination": "Supplementary Note S3；Supplementary Fig. S3（原 Fig. 8）；Supplementary Table S3（原 Table 6）"
+  },
+  {
+   "section": "Results — Which species, and which provinces",
+   "source_words": 1120,
+   "action": "compress",
+   "target_words": 380,
+   "reason": "最大的可压缩块。正文只保留两个与主线呼应的结果：部分迁徙者 OR 1.91–2.50、范围面积 1.23–1.46（以及 1.456 与 1.653 两个独立面积测度），以及省级尺度上\"努力表现为收益递减\"（早期覆盖 0.71, P = 0.028；人均 GDP 0.61, P = 0.0027；层次分割 51.2%/33.3%/9%/20.5%）——后者是结论 (iii) 在另一尺度上的独立支撑，必须留。三来源性状表、系统发育三处理、随机森林插补（NRMSE 1.00、PFC 0.11、51/1,298、3.9%、17/20）、分类群与迁徙分层（1.53/3.19/2.01/1.60/0.51/1.74）、省份计数替代（2.09, P = 5 × 10⁻¹⁵）等整体移出。",
+   "si_destination": "Supplementary Note S4；Supplementary Figs S4–S5（原 Figs 9, 10）；Supplementary Tables S4–S6（原 Tables 7, 8, 9）"
+  },
+  {
+   "section": "Results — New records are strongly biased toward the east and northeast",
+   "source_words": 267,
+   "action": "compress",
+   "target_words": 230,
+   "reason": "核心结论 (iv)，主统计量全留：χ² = 580.1, df = 7, P = 4.6 × 10⁻¹²¹；东 237/642（36.9%，期望 80.2）；东北 179（27.9%）；南 20、西 19。五个目级的逐项 χ²（376.6/64.0/52.5/45.5/29.1）压成一句保留数值。两种机制的并列解释保留（这是本节不被读成生态学过度解读的关键），删去与哺乳类研究对比的展开。",
+   "si_destination": "—"
+  },
+  {
+   "section": "Results — The return on survey effort is declining",
+   "source_words": 128,
+   "action": "keep_full",
+   "target_words": 128,
+   "reason": "核心结论 (iii)，全文最短且信息密度最高的一节：β = −0.022, P = 0.82；β = −0.211, P = 7.7 × 10⁻⁴；2.18(1.63–2.90)→1.07(0.88–1.30)。原样保留，不动。",
+   "si_destination": "—"
+  },
+  {
+   "section": "Results — Robustness",
+   "source_words": 762,
+   "action": "compress",
+   "target_words": 380,
+   "reason": "NC 相对宽裕，可留一段实质性稳健性而非只留一句。正文保留：三个 SDM 阈值（175,901→155,435；effort 1.404/1.405/1.411；warming 1.362/1.376/1.372；interaction 0.849/0.851/0.850）、窗口长度效应的生态学解读（5 年 1.16–1.21 → 20 年 1.36–1.40，最优 18–20 年，15 年落在最优 2.2–5.6 AIC 内）、努力系数在十二组合下平飞 1.34–1.41 与交互 0.87–1.00 这一\"两项分别可识别\"的论证，以及四代理 × 三缺失规则 1.25–1.52 / 1.35–1.37。CRU 重建链条、两基线对比（1.361 vs 1.307 vs 1.362）、0.058 °C vs 0.179 °C 的分辨率说明、气候指标横向比较（1.30, ΔAIC 9.0；0.96–1.08）与 22/24 相邻年份证据移入 SI。",
+   "si_destination": "Supplementary Note S5；Supplementary Fig. S2（原 Fig. 7）；Supplementary Table S8（窗口细网格，原 Extended Data Table 2）"
+  },
+  {
+   "section": "Results — Model adequacy",
+   "source_words": 377,
+   "action": "move_to_SI",
+   "target_words": 160,
+   "reason": "诊断本身不承载主结论，但结论 (i) 的可信度依赖它，故正文保留一段浓缩：KS P = 0.74、离散度 P = 0.59、零膨胀 P = 0.59、Moran's I = −0.038（P = 0.86）、95 个离群点与 0.37% 事件率、三类重抽样的结论性数字（省聚类 SE 放大 1.26–1.59、物种 0.86–1.17、参数 bootstrap 偏差 < 0.01、覆盖率 91.3–95.3%、留一法最大 4.2% / 9 of 164）。比例风险两句因与\"努力收益递减\"一节完全重复，正文只留一次（保在该节），此处删除。DHARMa 分层细节与 Table 4 全表移出。",
+   "si_destination": "Supplementary Note S6；Supplementary Fig. S9（原 Extended Data Fig. 1）；Supplementary Fig. S11（原 Extended Data Fig. 5）；Supplementary Table S1（原 Table 4）"
+  },
+  {
+   "section": "Results — How far can these relationships be projected?",
+   "source_words": 346,
+   "action": "compress",
+   "target_words": 260,
+   "reason": "支持度诊断是 Discussion 第三条结论的唯一支撑，必须留正文：0.18 °C、2 °C、十个标准差、47.8%/10.4%/2.1% 与 34.2%/2.1%/1.9%、掩膜内 0.79–2.94、无掩膜 78。机器学习对照压成两句但保留 ρ = 0.54、−0.04 到 0.18、23.7%、6.5%、176/186 与 42 这组数字（树集成饱和 vs cloglog 线性外推是审稿人会问的机制解释，留一句）。TreeSHAP 一句移入 SI。",
+   "si_destination": "Supplementary Note S7；Supplementary Figs S6–S8（原 Figs M1–M3）；Supplementary Fig. S10（原 Extended Data Fig. 3）"
+  },
+  {
+   "section": "Results — Records inside nature reserves measure the observation process, not reserve performance",
+   "source_words": 775,
+   "action": "compress",
+   "target_words": 290,
+   "reason": "独立于四条主结论，但结论强（\"保护区内新纪录数不能当作保护成效指标\"），且是结论 (ii) 观测过程主导的一个外部验证，值得在 NC 正文留一段。保留：26% vs 10.4% 与 2.5 倍、清单加权 10.8%、OR 1.71(1.39–2.11) 与 1.57(1.26–1.96)、172 起事件落在 68 个保护区（6.6%）、前两位 27.3%、块 bootstrap 0.89–3.19、2013–2023 的 2.05(1.61–2.59) 对 2002–2012 的 0.97(0.62–1.50)、以及\"1.57 是生态学贡献的上界\"这一预先声明的非对称推断规则。2.86 million/172,079/43,571/200 对照点的设计细节、每访问物种数 18.9 vs 15.3、发现方式与坐标精度两个反证、持久性分析（41.1%/22.5%/1.01/1.10/148→14,974）、变暖错配（8.5–11.8%、1.2 倍、8.5 倍、β = −0.022、P = 0.61、ρ = −0.013、P = 0.48、39.3 × 10⁴ / 160.3 × 10⁴ km²）全部移出，正文留指向句。范围限定（1,028 个 2012 年前设立、无因果声明）保留一句。",
+   "si_destination": "Supplementary Note S2；Supplementary Figs S12–S14（原 Figs P1–P3）"
+  },
+  {
+   "section": "Discussion",
+   "source_words": 833,
+   "action": "compress",
+   "target_words": 700,
+   "reason": "四个粗体小标题结构保留（定年、气候不是次要项、外推受支持度限制、监测与保护规划），\"Limitations\"整段保留——NC 审稿人对\"documented records ≠ range expansion\"这一自限特别敏感。压缩来自：删去与哺乳类研究的对比、负交互两种解读中的重复展开（保留两句并保留\"效率递减支持第二种解读\"的判断），以及监测建议中的第三点与 Limitations 的重叠部分。37%、0.804、2.2、三分之三/四分之三等数字全部原样保留。",
+   "si_destination": "—"
+  }
+ ],
+ "display_items": [
+  {
+   "item": "Fig. 2（定年偏差：滞后分布与完整度、两种定年的年序列、五步分解）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Fig. 1，按出现顺序重编号）",
+   "reason": "论文最独特的方法学卖点，Results 第 1–2 节的唯一图件支撑，必须首图。"
+  },
+  {
+   "item": "Fig. 1（四个固定效应的 HR、边际预测、四准则重要性、判别力阶梯）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Fig. 2）",
+   "reason": "核心结论 (i) 的唯一图件支撑；图注中关于零分布中心 1.16、0.96 的说明同时承载约束 3。"
+  },
+  {
+   "item": "Fig. 5（模型解剖：物种特异梯度构建、方差分解、自然单位偏效应、每 SD 的风险倍数）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Fig. 3）",
+   "reason": "回答\"气候变量是不是换了标签的区域指数\"这一必被质疑的问题（39%/55%、0.179 °C、7.75 倍），并把三个方差成分与两个固定效应放在同一轴上，同时服务结论 (i) 和 (ii)。"
+  },
+  {
+   "item": "Fig. 6（观测过程可视化：物种/省/省×年随机截距、努力 HR 随年份变化）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Fig. 4）",
+   "reason": "结论 (ii) 与 (iii) 的图件支撑合在一张图内（6c 的 13 倍跨度、6d 的 2.18→1.07），性价比最高。"
+  },
+  {
+   "item": "Fig. 11（新纪录相对物种分布区的方位）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Fig. 5）",
+   "reason": "结论 (iv) 的唯一图件支撑，不可移出。可只保留总体雷达图 + 六个最大目的叠加两个面板，十六个目的独立面板移入 Supplementary Fig. S4 系列。"
+  },
+  {
+   "item": "Fig. 3（阈值、气候指标、努力代理与缺失规则的稳健性网格）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Fig. 6）",
+   "reason": "NC 审稿人对\"结论是否依赖分析者选择\"必问；保留一张综合稳健性图可以把正文文字压到 380 词而不失支撑。"
+  },
+  {
+   "item": "Fig. M4（两类模型在拟合范围内一致、范围外分歧；各情景的支持度区间）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Fig. 7）",
+   "reason": "Discussion 第三条结论（外推受协变量支持度限制，而非情景可得性）的唯一支撑，其 b 面板即支持度诊断本身。"
+  },
+  {
+   "item": "Table 1（从既发表设定到修正主模型的五步分解）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Table 1）",
+   "reason": "定年偏差的定量账本，每一步一个数字，无法用文字替代。"
+  },
+  {
+   "item": "Table 2（主模型：HR、Wald CI、省聚类 bootstrap CI、置换零分布中位、P）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Table 2）",
+   "reason": "约束 2 与约束 3 的共同载体：1.157 与 0.980 两个零分布中位就在此表，删不得。"
+  },
+  {
+   "item": "Table 3（六种随机结构在四准则下的比较）",
+   "keep_in_main": true,
+   "si_number": "—（正文 Table 3）",
+   "reason": "结论 (ii) 的表格支撑；边际 AUC 在六种结构下平飞（0.607–0.613）这一列是\"随机结构没有偷走固定效应信号\"的直接证据。"
+  },
+  {
+   "item": "Fig. 4（随机结构的 ΔAIC、R²/AUC、方差成分）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S1",
+   "reason": "与保留在正文的 Table 3 信息重叠，图可移出而结论数字仍在表内。"
+  },
+  {
+   "item": "Fig. 7（累积窗口 × 气候基线 × 数据源的三系列比较）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S2",
+   "reason": "稳健性细节；正文保留窗口长度的生态学解读文字（1.16–1.21 → 1.36–1.40、最优 18–20 年）指向此图。"
+  },
+  {
+   "item": "Fig. 8（迁徙策略的分组风险集、逐组 HR、调节阶梯、逐组交互）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S3",
+   "reason": "不承载四条主结论；正文保留\"策略只移动基线不调节驱动\"一句并给出四个 LR P 值。"
+  },
+  {
+   "item": "Fig. 9（物种性状相关：连续性状、分类对比、面积 vs 省份数、三处理一致性）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S4",
+   "reason": "物种尺度是 NC 版本必须大幅移出的两块之一；正文只保留部分迁徙者与范围面积两个效应的数值。"
+  },
+  {
+   "item": "Fig. 10（省级计数模型：模型比较、IRR、层次分割、偏相关）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S5",
+   "reason": "省级结果移入 SI，但正文必须保留\"努力在省级表现为收益递减\"一句及其 0.71/0.61/51.2% 等数字，以免结论 (iii) 的第二条独立支撑悬空。"
+  },
+  {
+   "item": "Fig. M1（掩膜内的机制外推）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S6",
+   "reason": "正文保留 0.79–2.94 与各情景支持度百分比即可；地图本身可移出。"
+  },
+  {
+   "item": "Fig. M2（同一输入与掩膜下的机器学习外推）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S7",
+   "reason": "对照模型的展示项，正文以 ρ = 0.54、23.7%、6.5% 等数字概括。"
+  },
+  {
+   "item": "Fig. M3（TreeSHAP 归因）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S8",
+   "reason": "解释性附属结果，与主结论无直接关系。"
+  },
+  {
+   "item": "Extended Data Fig. 1（DHARMa 残差诊断四面板）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S9",
+   "reason": "NC 无 Extended Data 类别，诊断图统一入 SI；正文保留 KS/离散度/Moran's I 三组数字。"
+  },
+  {
+   "item": "Extended Data Fig. 3（无掩膜的机制外推）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S10",
+   "reason": "仅用于展示外推幅度（比值高至 78），正文一句话交代。"
+  },
+  {
+   "item": "Extended Data Fig. 5（置换零模型、聚类/参数 bootstrap、影响力分析）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S11",
+   "reason": "图可移出，但正文必须保留 1.157/1.18/0.980/P = 0.005 与省聚类区间，否则违反约束 3 与约束 4。"
+  },
+  {
+   "item": "Fig. P1（保护区内外的条件 logistic 匹配设计与结果）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S12",
+   "reason": "保护区一节压至 290 词，正文保留 2.5 倍、10.8%、1.71、1.57 等关键数字并指向 SI。原稿未给该图图注，SI 需补写。"
+  },
+  {
+   "item": "Fig. P2（首次记录的持久性与后续调查努力）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S13",
+   "reason": "持久性/游荡个体论证整体移出，正文不再复述 41.1%/22.5%。原稿未给图注，SI 需补写。"
+  },
+  {
+   "item": "Fig. P3（保护区覆盖度与变暖分位、优先监测区）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Fig. S14",
+   "reason": "保护区—变暖错配分析移出正文；原稿未给图注，SI 需补写。"
+  },
+  {
+   "item": "Table 4（模型充分性九项检查）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S1",
+   "reason": "正文以浓缩段落给出关键统计量，全表入 SI。"
+  },
+  {
+   "item": "Table 5（主模型每个组分的生态学理由与可证伪预测）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S2",
+   "reason": "内容优秀但重复正文叙述；作为 SI 表可完整保留含预测列的版本。"
+  },
+  {
+   "item": "Table 6（迁徙分层结果）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S3",
+   "reason": "随迁徙小节整体移出。"
+  },
+  {
+   "item": "Table 7（物种范围测度：全球面积、中国面积、省份数）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S4",
+   "reason": "随物种尺度移出；正文保留 1.456 与 1.653 两个数值及\"省份数不作为结果报告\"的一句限定。"
+  },
+  {
+   "item": "Table 8（省级计数模型比较与 IRR）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S5",
+   "reason": "随省级尺度移出；正文保留 0.71 与 0.61 两个显著项。"
+  },
+  {
+   "item": "Table 9（分类群与迁徙分组的物种效应）",
+   "keep_in_main": false,
+   "si_number": "Supplementary Table S6",
+   "reason": "分组探索性结果，完全移出。"
+  }
+ ],
+ "budget_check": "摘要：150 词，正好压在 NC 上限 150 词（用 wc -w 逐词核过，\"(2002–2024)\"、\"(1.40,\"、\"≈1.18)\" 等按空格分词计一词）；无引文，符合 NC 规定。\n\n正文预算（Introduction + Results + Discussion ≤ 5,000 词）：\nIntroduction 600\nResults 十三节合计 3,578 = 300 + 230 + 640 + 200 + 230 + 150 + 380 + 230 + 128 + 380 + 160 + 260 + 290\nDiscussion 700\n合计 = 600 + 3,578 + 700 = 4,878 词，距 5,000 词上限余 122 词。\n\n对照源稿：Introduction 672 → 600（−72）；Results 6,246（十三节明细相加为 6,154，差 92 计在小节标题与过渡句上）→ 3,578（−2,668，压缩 43%）；Discussion 833 → 700（−133）。源稿正文 7,751 → 4,878，净减 2,873 词，压缩率 37%。\n\n压缩量的来源集中在三块：Which species / which provinces（1,120 → 380，−740）、Robustness（762 → 380，−382）、Records inside nature reserves（775 → 290，−485）、Migratory strategy（455 → 150，−305）、Model adequacy（377 → 160，−217），五块合计贡献 −2,129 词，占总压缩量的 74%；其余各节平均只削 10–35%，因此四条主结论所在的小节（第 3、5、9、8 节东北偏向、第 10 节努力收益递减）基本保持原有论证密度。\n\n展示项：源稿 9 表 + 18 图注 = 27 项 → 正文保留 10 项（Fig. 1–7 + Table 1–3，正好用满 NC 上限），17 项移入 SI（Supplementary Figs S1–S14 + Supplementary Tables S1–S6，其中 S7、S8 收纳原 Extended Data Table 1–2）。Methods 1,437 词置于 References 之后，NC 不限篇幅，因此风险集构建、完整度推导、置换/bootstrap 设计等细节优先回填 Methods 而非 SI，可再为正文腾出约 150 词的说明性文字。参考文献 82 条，NC 无硬性上限，保持不变，改为编号上标格式。\n\n余量结论：4,878 ≤ 5,000，通过；余 122 词留给 SI 指向句与图表交叉引用（每处约 6–10 词，17 项移出内容至少需 8–10 处指向句），刚好够用但不宽裕。",
+ "risks": [
+  "余量只有 122 词，而按约束 4，每一块移入 SI 的内容都要在正文留一句指向句（至少 8–10 处，每处 6–10 词）。定稿时若任何一节超出目标 20 词，就会吃掉全部余量。建议实际写作时把 Introduction 压到 560、Discussion 压到 660，预留 200 词缓冲。",
+  "约束 1（数字只能原样保留或整句删除）与目标词数存在张力：Results 多数小节的信息密度就是数字密度，压缩只能靠整句删除，删句后段落衔接需要重写。重写的过渡句必须不含任何新数字，否则核验阶段会判为改动。风险最高的是 Robustness（762 → 380）与保护区节（775 → 290），这两块删句后原有的\"层层递进\"逻辑容易断裂。",
+  "省级尺度分析移入 SI 后，结论 (iii)\"努力的边际产出随时间下降\"在正文只剩下 Results 第 10 节的 2.18 → 1.07 一条时间序列证据。方案中已在第 8 节保留 0.71（P = 0.028）与层次分割数字作为第二条独立证据，但若后续为省词把这一句也删掉，结论 (iii) 会退化为单一证据链，审稿人可能质疑其只是比例风险假设的检验失败。",
+  "保护区一节压到 290 词后，条件 logistic 的对照抽样设计（2.86 million 清单、200 对照点、按清单数加权）不在正文。审稿人若不读 SI，1.71 与 1.57 两个 OR 会显得来路不明，且\"1.57 是生态学贡献上界\"的非对称推断规则容易被误读为在为弱结果辩护。建议这一段的指向句明确写出\"匹配设计与两项反证见 Supplementary Note S2\"。",
+  "约束 3 的零模型限定（1.157、1.18、0.980）在 150 词摘要里已用掉 20 词，占摘要的 13%。这句话读者不易一眼消化，编辑在预审时可能建议删除以换取可读性。需要在 cover letter 中预先说明这是防止读者把 1.36 误读为\"相对于 1 的净效应\"的必要限定，不可删。",
+  "原稿的 Fig. P1–P3 只在正文被引用，没有图注；Fig. 9alt 同样没有独立图注，且未计入 18 项之内。转 SI 时需要补写四条图注，否则 SI 会出现无说明的图件。另外 Extended Data Table 1、Table 2 也只在正文被引用而未列入 9 张表内，本方案将其编为 Supplementary Table S7、S8，需在附件清单中确认存在。",
+  "NC 取消 Extended Data 类别，原稿三张 Extended Data Fig. 与两张 Extended Data Table 必须重编为 Supplementary，正文所有交叉引用（至少 6 处）需同步改写。同时正文图件按出现顺序重编号（原 Fig. 2 → 新 Fig. 1，原 Fig. 1 → 新 Fig. 2，原 Fig. 5 → 新 Fig. 3，原 Fig. 6 → 新 Fig. 4，原 Fig. 11 → 新 Fig. 5，原 Fig. 3 → 新 Fig. 6，原 Fig. M4 → 新 Fig. 7），改号过程是引用错配的高风险环节，建议定稿后做一次交叉引用逐项核对。",
+  "模型充分性一节把比例风险两句删掉、只在\"努力收益递减\"一节保留一次，这依赖两节的相邻性。若期刊要求把诊断内容整体后移或合并，需确认 β = −0.022（P = 0.82）与 β = −0.211（P = 7.7 × 10⁻⁴）在正文中仍各出现一次且不重复。",
+  "参考文献 82 条对 NC 的 Article 体量偏多，且引文密集的段落主要在 Introduction 与 Discussion——恰是本方案压缩的两节。删句时需检查是否有文献变成孤引（正文再无引用点），特别是 refs 11–15、17–18、38–52 这类只在被删段落中出现的方法学引文。",
+  "Reference 25 是仍在审稿的伴随数据描述论文。NC 对\"submitted\"状态的引用较严格，若数据描述论文未同期接收，风险集的数据来源在正文将无可引证的出处，可能触发编辑的数据可得性质询。"
+ ]
+}
