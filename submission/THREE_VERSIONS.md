@@ -95,3 +95,29 @@ python3.11 code/202_assemble_journal_versions.py
 投稿前仍需人工:GCB Results 比 agent 自设的 4,800 词子预算超 34 词(全文 7,864/8,000 达标,
 不构成硬伤);cover letter 与 CRediT;完整作者名单;图件按 GCB 版式尺寸复查。
 NEE 与 NC 的 SI 与展示项裁剪暂缓,待 GCB 投出后按各自方案(`work/plan_*.json`)执行。
+
+---
+
+## NEE 与 NC 全包(已完成)
+
+三家的包现在都是完整投稿套件,各自含:正文 docx、表格与图注 docx(按各版编号)、
+Supplementary Information docx(嵌图)、figures/ 重编号主图。
+
+| | NEE | NC | GCB |
+|---|---|---|---|
+| 正文展示项 | 5 图 + 1 表 | 7 图 + 3 表 | 7 图 + 3 表 |
+| SI | 10 Notes + 10 表 + 17 图(43 页) | 7 Notes + 8 表 + 14 图(33 页) | 6 Notes + 8 表 + 15 图(33 页) |
+| 引文体例 | 编号上标 | 编号上标 | 作者-年份 |
+
+主图映射:
+- **NEE** Fig 1←源1, 2←2, **3←6(观测过程), 4←11(风玫瑰), 5←M4**;Table 1←源 Table 2
+- **NC** Fig **1←源2(定年), 2←源1**, 3←5, 4←6, 5←11, 6←3, 7←M4;Tables 1–3←源 1–3
+
+交叉引用采用两阶段替换(源标签→占位符→新标签),NC 的 Fig 1↔2 互换与
+NEE 的多处降级(正文→SI)均无串号;三包 SI 残留旧标签均为 0。
+NEE 额外收入 Fig. S17(TreeSHAP),因其 Note S9 引用了它而原 manifest 遗漏。
+
+GCB 另有 `cover_letter_GCB.md` 草稿(需补作者名单后使用)。
+
+三包共同的剩余人工项:完整作者名单与单位、CRediT 声明、图件按各刊栏宽的最终版式复查;
+NEE 正文仍超约 4 词(其上限为约数)。
