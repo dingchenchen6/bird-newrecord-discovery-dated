@@ -71,3 +71,27 @@ python3.11 code/202_assemble_journal_versions.py
    NEE 需砍到 6 项、NC 砍到 10 项，取舍方案在 `work/plan_*.json` 的 `display_items` 字段。
 5. **图件未按刊尺寸重导**。NEE/NC 单栏 89 mm、双栏 183 mm；GCB 另有要求。
 6. 投稿件仍缺：cover letter、CRediT 声明、完整作者名单与单位、Data/Code availability 正式表述。
+
+---
+
+## GCB 全包(已完成)
+
+`GCB/` 目录现为**完整投稿包**:
+
+| 文件 | 内容 |
+|---|---|
+| `Manuscript_GCB_maintext.docx` | 正文(IMRaD,作者-年份引文),40 页 |
+| `Manuscript_GCB_tables_and_legends.docx` | Table 1–3 + Figure 1–7 图注(GCB 编号) |
+| `Supporting_Information_GCB.docx` | Notes S1–S6、Tables S1–S8、Figs S1–S15(嵌图),33 页 |
+| `figures/Figure1–7.(pdf,png)` | 主图按 GCB 编号重命名 |
+| `data_code_availability.md` | Data/Code availability 正式表述 |
+
+主图映射:GCB Figure 1←源 Fig.1,2←2,3←3,**4←5(anatomy),5←6(observation process),
+6←11(风玫瑰),7←M4(机制 vs ML)**。SI 内文的全部交叉引用已按新编号重映射,零残留。
+
+为 SI 新补一张图:**Fig. S11 重抽样四面板**(置换零分布 / 聚类自助 / 参数自助 / 影响力),
+源文件 `figures/FigS5_resampling_v2`,同时可用作 Nature 系的 Extended Data Fig. 5。
+
+投稿前仍需人工:GCB Results 比 agent 自设的 4,800 词子预算超 34 词(全文 7,864/8,000 达标,
+不构成硬伤);cover letter 与 CRediT;完整作者名单;图件按 GCB 版式尺寸复查。
+NEE 与 NC 的 SI 与展示项裁剪暂缓,待 GCB 投出后按各自方案(`work/plan_*.json`)执行。
