@@ -282,3 +282,17 @@ b <- ggplot(alloc, aes(lv, rank_pct, fill = model)) +
 FigMS2 <- a / b + plot_layout(heights = c(1, 1.05))
 save_fig(FigMS2, "FigMS2_multiscale_model_skill", 8.8, 7.6)
 msg("完成 / done")
+
+# ---------------- FigMS1w:横版三联(机制面,供幻灯片) ----------------
+# Wide companion: mechanistic two-stage surface at the three scales, one row.
+msg("FigMS1w(横版三联)")
+p1 <- prov_cell("mech", "a  省级:期望新纪录数(2024)", lims_p, show_legend = TRUE)
+lay_pref <- unit_layer("prefecture", "mech"); lay_cnty <- unit_layer("county", "mech")
+lm_pref <- quantile(lay_pref$val[lay_pref$val > 0], c(0.02, 0.999))
+lm_cnty <- quantile(lay_cnty$val[lay_cnty$val > 0], c(0.02, 0.999))
+p2 <- map_cell(pref_sf, lay_pref, "b  市级落点", lm_pref, TRUE, "期望新纪录数(市级)")
+p3 <- map_cell(cnty_sf, lay_cnty, "c  县级落点", lm_cnty, TRUE, "期望新纪录数(县级)")
+FigMS1w <- p1 | p2 | p3
+ggsave(file.path(D_FG, "FigMS1w_mech_three_scales.png"), FigMS1w,
+       width = 13.2, height = 4.9, dpi = 400, bg = "white")
+cat("wrote FigMS1w\n")
