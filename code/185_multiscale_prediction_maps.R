@@ -129,14 +129,13 @@ map_cell <- function(sfobj, values, title, lims, show_legend, legend_name) {
     geom_sf(data = prov_sf, fill = NA, colour = "white", linewidth = .12) +
     geom_sf(data = nation, fill = NA, colour = "grey35", linewidth = .18) +
     geom_sf(data = nine, colour = "grey25", linewidth = .3) +
-    scale_fill_viridis_c(option = "mako", direction = -1, trans = "log10",
-                         begin = 0.05, end = 0.95,      # 两端收一点,浅端不与省界白线混淆
+    scale_fill_distiller(palette = "RdYlBu", direction = -1, trans = "log10",
                          limits = lims, oob = squish, name = legend_name,
                          labels = function(x) formatC(signif(x, 1), format = "fg")) +
     coord_sf(expand = FALSE) +
     labs(title = title) + theme_map() +
     theme(legend.position = if (show_legend) "bottom" else "none")
-  add_scs(p)
+  p          # 主图全幅已含南海诸岛与九段线,不再加插图
 }
 
 prov_cell <- function(fam, title, lims, show_legend) {
@@ -147,15 +146,14 @@ prov_cell <- function(fam, title, lims, show_legend) {
     geom_sf(data = m, aes(fill = pmax(val, lims[1])), colour = "white", linewidth = .15) +
     geom_sf(data = nation, fill = NA, colour = "grey35", linewidth = .18) +
     geom_sf(data = nine, colour = "grey25", linewidth = .3) +
-    scale_fill_viridis_c(option = "mako", direction = -1, trans = "log10",
-                         begin = 0.05, end = 0.95,
+    scale_fill_distiller(palette = "RdYlBu", direction = -1, trans = "log10",
                          limits = lims, oob = squish,
-                         name = "期望新纪录数(2024,种·省求和)",
+                         name = "预测新纪录数(2024)",
                          labels = function(x) formatC(signif(x, 1), format = "fg")) +
     coord_sf(expand = FALSE) +
     labs(title = title) + theme_map() +
     theme(legend.position = if (show_legend) "bottom" else "none")
-  add_scs(p)
+  p
 }
 
 # ---------------- FigMS1:3 × 3 矩阵 ----------------
@@ -196,7 +194,7 @@ for (lv in names(lv_meta)) {
     map_cell(meta$sf, layers[[fam]],
              if (i == 1) paste0(meta$tag, "  ", meta$lab, ":", FAM[i]) else FAM[i],
              lims, show_legend = (i == 2),
-             legend_name = paste0("期望新纪录数(2024,", meta$lab, "落点)"))
+             legend_name = paste0("预测新纪录数(2024,", meta$lab, ")"))
   })
   rows_all[[length(rows_all) + 1]] <- rw
 }
@@ -206,7 +204,7 @@ FigMS1 <- wrap_plots(c(rows_all[[1]], rows_all[[2]], rows_all[[3]]), ncol = 3, n
     title = "三族模型 × 三个尺度的当前预测面(2024)",
     subtitle = paste0("每列为族内自洽的两段式:省级期望数 × 省内分配份额;色标行内共享(log10)。",
                       "机制面 = 冻结主模型 + 条件 logit;RF / XGBoost 为类平衡变体。\n", rho_txt),
-    caption = "底图:审图号 GS(2019)1822;南海诸岛见插图。Basemap GS(2019)1822; South China Sea islands shown in inset.",
+    caption = "底图:审图号 GS(2019)1822(主图全幅含南海诸岛与九段线)。Basemap GS(2019)1822.",
     theme = theme(plot.title = element_text(face = "bold", size = 12, hjust = 0),
                   plot.subtitle = element_text(size = 8.6, colour = "grey30", hjust = 0),
                   plot.caption = element_text(size = 7, colour = "grey45", hjust = 0)))
@@ -286,12 +284,12 @@ msg("完成 / done")
 # ---------------- FigMS1w:横版三联(机制面,供幻灯片) ----------------
 # Wide companion: mechanistic two-stage surface at the three scales, one row.
 msg("FigMS1w(横版三联)")
-p1 <- prov_cell("mech", "a  省级:期望新纪录数(2024)", lims_p, show_legend = TRUE)
+p1 <- prov_cell("mech", "a  省级:预测新纪录数(2024)", lims_p, show_legend = TRUE)
 lay_pref <- unit_layer("prefecture", "mech"); lay_cnty <- unit_layer("county", "mech")
 lm_pref <- quantile(lay_pref$val[lay_pref$val > 0], c(0.02, 0.999))
 lm_cnty <- quantile(lay_cnty$val[lay_cnty$val > 0], c(0.02, 0.999))
-p2 <- map_cell(pref_sf, lay_pref, "b  市级落点", lm_pref, TRUE, "期望新纪录数(市级)")
-p3 <- map_cell(cnty_sf, lay_cnty, "c  县级落点", lm_cnty, TRUE, "期望新纪录数(县级)")
+p2 <- map_cell(pref_sf, lay_pref, "b  市级落点", lm_pref, TRUE, "预测新纪录数(市级)")
+p3 <- map_cell(cnty_sf, lay_cnty, "c  县级落点", lm_cnty, TRUE, "预测新纪录数(县级)")
 FigMS1w <- p1 | p2 | p3
 ggsave(file.path(D_FG, "FigMS1w_mech_three_scales.png"), FigMS1w,
        width = 13.2, height = 4.9, dpi = 400, bg = "white")
