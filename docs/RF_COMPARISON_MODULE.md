@@ -179,3 +179,7 @@ Rscript code/182_rf_figures.R              # FigR1–FigR2
 需 `RENV_CONFIG_AUTOLOADER_ENABLED=FALSE`。省级脚本约 24 分钟(20 次 glmmTMB 拟合)。
 产出:`analysis_v2/tables/tbl_rf_*.csv`、`analysis_v2/data/rf_extrapolation_curve.csv`、
 `analysis_v2/figures_rf/`。
+
+---
+
+**更新(2026-08-25)**:XGBoost 已按同一验证设计加入对照(脚本 183–184),结论与随机森林一致——内插强、外推弱;三族 × 三尺度的预测面与技能对比见 `MULTISCALE_MODELS_MODULE.md` 与 `figures_multiscale/FigMS1–MS2`。注意 xgboost 3.x 的 `xgboost()` 会静默丢弃 `params`,必须用 `xgb.train`(详见该文档)。

@@ -16,3 +16,5 @@ analysis_species_specific/
 
 # macOS
 .DS_Store
+figures_multiscale/FigMS1_multiscale_model_maps.pdf
+figures_multiscale/FigMS1_multiscale_model_maps.svg

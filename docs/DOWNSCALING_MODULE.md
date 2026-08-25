@@ -190,3 +190,7 @@ Rscript code/173_county_figures.R       # FigC1–FigC2
 均需 `RENV_CONFIG_AUTOLOADER_ENABLED=FALSE`。
 产出:`analysis_v2/data/admin/`、`analysis_v2/tables/tbl_alloc_*.csv`、
 `analysis_v2/tables/tbl_county_surface_top50.csv`、`analysis_v2/figures_admin/`。
+
+---
+
+**更新(2026-08-25)**:市县分配已扩展为三族对照(条件 logit / RF / XGBoost,脚本 184),并产出三族各自的两段式预测面(`data/admin/*_surface_{rf,xgb}.csv`);地图矩阵与技能对比见 `MULTISCALE_MODELS_MODULE.md`。留一省下机制两段式在市、县两级都最好(0.32/0.28),XGBoost 最弱(0.40/0.35)。
