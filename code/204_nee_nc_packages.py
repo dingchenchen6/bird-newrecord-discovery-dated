@@ -77,6 +77,14 @@ def methods_sub(frag: str) -> str:
     return m.group(1).strip()
 
 
+def proj_split() -> tuple[str, str]:
+    """投影小节拆成原有正文(head)与新增的情景网格/模型族段(tail)。"""
+    t = results_sub("How far can these relationships be projected")
+    key = "consistent with the mechanistic coefficients."
+    h, _, tl = t.partition(key)
+    return (h + key).strip(), tl.strip()
+
+
 def src_table(n: int) -> str:
     tb = PARTS["Tables"]
     m = re.search(rf"^\*\*Table {n}\.\*\*", tb, re.M)
@@ -142,6 +150,10 @@ F = {
     "pa1": A2 / "figures_pa/FigP1_pa_enrichment",
     "pa2": A2 / "figures_pa/FigP2_pa_persistence",
     "pa3": A2 / "figures_pa/FigP3_pa_mismatch_monitoring",
+    "st1": A2 / "figures_multiscale/FigST1_spatiotemporal_pattern",
+    "ms3": A2 / "figures_multiscale/FigMS3_future_scenarios",
+    "ms2": A2 / "figures_multiscale/FigMS2_multiscale_model_skill",
+    "ms1": A2 / "figures_multiscale/FigMS1_multiscale_model_maps_si",
 }
 PA_LEG = {
     "pa1": "**{sid} | Enrichment of new records inside mapped nature reserves, decomposed against the observation process.** **a**, Share of records, checklist-weighted birding effort, birding locations and land area inside the 1,028 mapped reserves. **b**, Conditional logistic estimand ladder, each event matched to 200 same-province same-year checklist-weighted control locations. **c**, Robustness across host-reserve exclusions, period splits and discovery-method subsets. **d**, Concentration of inside-reserve events among host reserves.",
@@ -166,7 +178,9 @@ CONFIG = {
                     ("Fig. S9", "resamp", "Extended Data Fig. 5"), ("Fig. S10", "m1", "Fig. M1"),
                     ("Fig. S11", "unmask", "Extended Data Fig. 3"), ("Fig. S12", "m2", "Fig. M2"),
                     ("Fig. S13", "pa1", None), ("Fig. S14", "pa2", None), ("Fig. S15", "pa3", None),
-                    ("Fig. S16", "windfac", None), ("Fig. S17", "m3", "Fig. M3")],
+                    ("Fig. S16", "windfac", None), ("Fig. S17", "m3", "Fig. M3"),
+                    ("Fig. S18", "st1", "Extended Data Fig. 6"), ("Fig. S19", "ms3", "Extended Data Fig. 7"),
+                    ("Fig. S20", "ms2", "Extended Data Fig. 8"), ("Fig. S21", "ms1", "Extended Data Fig. 9")],
         "si_tables": [("Table S1", "Step-by-step decomposition S0–S5", src_table(1)),
                       ("Table S2", "Random-effect structure comparison on four criteria", src_table(3)),
                       ("Table S3", "Model adequacy checks", src_table(4)),
@@ -195,12 +209,16 @@ CONFIG = {
             ("Note S8", "Model adequacy and resampling",
              results_sub("Model adequacy") + "\n\n" + methods_sub("Resampling and null models")),
             ("Note S9", "Projection detail and covariate support",
-             results_sub("How far can these relationships be projected") + "\n\n" + methods_sub("Projections")),
+             proj_split()[0] + "\n\n" + methods_sub("Projections")),
             ("Note S10", "Nature-reserve conditional logistic analysis",
              results_sub("nature reserves")),
+            ("Note S11", "Model families, prediction scales and independent climate × effort scenarios",
+             proj_split()[1] + "\n\n" + methods_sub("Model-family comparison")),
         ],
         # 源标签 → NEE 标签(两阶段)
         "remap": [
+            ("Extended Data Fig. 9", "Supplementary Fig. S21"), ("Extended Data Fig. 8", "Supplementary Fig. S20"),
+            ("Extended Data Fig. 7", "Supplementary Fig. S19"), ("Extended Data Fig. 6", "Supplementary Fig. S18"),
             ("Extended Data Table 2", "Supplementary Table S10"),
             ("Extended Data Table 1", "Supplementary Table S9"),
             ("Extended Data Fig. 5", "Supplementary Fig. S9"),
@@ -235,7 +253,9 @@ CONFIG = {
                     ("Fig. S9", "dharma", "Extended Data Fig. 1"),
                     ("Fig. S10", "unmask", "Extended Data Fig. 3"),
                     ("Fig. S11", "resamp", "Extended Data Fig. 5"),
-                    ("Fig. S12", "pa1", None), ("Fig. S13", "pa2", None), ("Fig. S14", "pa3", None)],
+                    ("Fig. S12", "pa1", None), ("Fig. S13", "pa2", None), ("Fig. S14", "pa3", None),
+                    ("Fig. S15", "st1", "Extended Data Fig. 6"), ("Fig. S16", "ms3", "Extended Data Fig. 7"),
+                    ("Fig. S17", "ms2", "Extended Data Fig. 8"), ("Fig. S18", "ms1", "Extended Data Fig. 9")],
         "si_tables": [("Table S1", "Model adequacy checks", src_table(4)),
                       ("Table S2", "Ecological rationale for every model component", src_table(5)),
                       ("Table S3", "Migratory stratification", src_table(6)),
@@ -258,9 +278,13 @@ CONFIG = {
             ("Note S6", "Permutation nulls, bootstraps and model adequacy",
              methods_sub("Resampling and null models") + "\n\n" + results_sub("Model adequacy")),
             ("Note S7", "Projection design and covariate support",
-             results_sub("How far can these relationships be projected") + "\n\n" + methods_sub("Projections")),
+             proj_split()[0] + "\n\n" + methods_sub("Projections")),
+            ("Note S8", "Model families, prediction scales and independent climate × effort scenarios",
+             proj_split()[1] + "\n\n" + methods_sub("Model-family comparison")),
         ],
         "remap": [
+            ("Extended Data Fig. 9", "Supplementary Fig. S18"), ("Extended Data Fig. 8", "Supplementary Fig. S17"),
+            ("Extended Data Fig. 7", "Supplementary Fig. S16"), ("Extended Data Fig. 6", "Supplementary Fig. S15"),
             ("Extended Data Table 2", "Supplementary Table S8"),
             ("Extended Data Table 1", "Supplementary Table S7"),
             ("Extended Data Fig. 5", "Supplementary Fig. S11"),

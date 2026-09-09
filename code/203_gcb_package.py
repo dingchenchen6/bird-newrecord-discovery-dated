@@ -165,6 +165,10 @@ NOTES = [
         grab_results_subsection("Robustness")),
     si_note("Note S6", "Records inside nature reserves: design, estimand ladder and limits",
         grab_results_subsection("nature reserves")),
+    si_note("Note S7", "Model families, prediction scales and independent climate × effort scenarios",
+        grab_results_subsection("How far can these relationships be projected").split(
+            "consistent with the mechanistic coefficients.")[1].strip() + "\n\n" +
+        re.search(r"### Model-family comparison\s*(.*?)(?=^### |\Z)", PARTS["Methods"], re.M | re.S).group(1).strip()),
 ]
 
 # ---- SI 表:源稿 Tables 4–9 + 两张 CSV ----
@@ -218,6 +222,10 @@ SI_FIGS = [
     ("Fig. S13", A2 / "figures_pa/FigP2_pa_persistence.png", None),
     ("Fig. S14", A2 / "figures_pa/FigP3_pa_mismatch_monitoring.png", None),
     ("Fig. S15", V2 / "analysis_v2/figures_direction/combined", None),
+    ("Fig. S16", A2 / "figures_multiscale/FigST1_spatiotemporal_pattern.png", "Extended Data Fig. 6"),
+    ("Fig. S17", A2 / "figures_multiscale/FigMS3_future_scenarios.png", "Extended Data Fig. 7"),
+    ("Fig. S18", A2 / "figures_multiscale/FigMS2_multiscale_model_skill.png", "Extended Data Fig. 8"),
+    ("Fig. S19", A2 / "figures_multiscale/FigMS1_multiscale_model_maps_si.png", "Extended Data Fig. 9"),
 ]
 PA_LEGENDS = {
     "Fig. S12": "**Fig. S12 | Enrichment of new records inside mapped nature reserves, decomposed against the observation process.** **a**, Share of records, checklist-weighted birding effort, birding locations and land area falling inside the 1,028 mapped reserves. **b**, Conditional logistic estimand ladder matching each event to 200 same-province same-year checklist-weighted control locations. **c**, Robustness: host-reserve exclusions, period splits and discovery-method subsets. **d**, Concentration of inside-reserve events among host reserves.",
@@ -260,6 +268,8 @@ def remap_si_refs(md: str) -> str:
     """
     import re as _re
     RULES = [
+        ("Extended Data Fig. 9", "Fig. S19"), ("Extended Data Fig. 8", "Fig. S18"),
+        ("Extended Data Fig. 7", "Fig. S17"), ("Extended Data Fig. 6", "Fig. S16"),
         ("Extended Data Table 2", "Table S8"),
         ("Extended Data Table 1", "Table S7"),
         ("Extended Data Fig. 5", "Fig. S11"),
