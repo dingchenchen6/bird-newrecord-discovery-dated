@@ -226,6 +226,8 @@ SI_FIGS = [
     ("Fig. S17", A2 / "figures_multiscale/FigMS3_future_scenarios.png", "Extended Data Fig. 7"),
     ("Fig. S18", A2 / "figures_multiscale/FigMS2_multiscale_model_skill.png", "Extended Data Fig. 8"),
     ("Fig. S19", A2 / "figures_multiscale/FigMS1_multiscale_model_maps_si.png", "Extended Data Fig. 9"),
+    ("Fig. S20", A2 / "figures_multiscale/FigMS4_future_scenarios_by_model_si.png", "Extended Data Fig. 10"),
+    ("Fig. S21", A2 / "figures_multiscale/FigMS5_future_multiscale_by_model_si.png", "Extended Data Fig. 11"),
 ]
 PA_LEGENDS = {
     "Fig. S12": "**Fig. S12 | Enrichment of new records inside mapped nature reserves, decomposed against the observation process.** **a**, Share of records, checklist-weighted birding effort, birding locations and land area falling inside the 1,028 mapped reserves. **b**, Conditional logistic estimand ladder matching each event to 200 same-province same-year checklist-weighted control locations. **c**, Robustness: host-reserve exclusions, period splits and discovery-method subsets. **d**, Concentration of inside-reserve events among host reserves.",
@@ -268,6 +270,7 @@ def remap_si_refs(md: str) -> str:
     """
     import re as _re
     RULES = [
+        ("Extended Data Fig. 11", "Fig. S21"), ("Extended Data Fig. 10", "Fig. S20"),
         ("Extended Data Fig. 9", "Fig. S19"), ("Extended Data Fig. 8", "Fig. S18"),
         ("Extended Data Fig. 7", "Fig. S17"), ("Extended Data Fig. 6", "Fig. S16"),
         ("Extended Data Table 2", "Table S8"),
