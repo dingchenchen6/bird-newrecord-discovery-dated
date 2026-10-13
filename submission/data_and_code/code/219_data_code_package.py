@@ -146,7 +146,7 @@ display item of the manuscript. The repository remains the maintained version.
 
 | Folder / file | What it holds |
 |---|---|
-| `code/` | Analysis pipeline ({n_code} scripts). Scripts 130–154 fit and summarise the models; 160–192 run the conservation, downscaling, machine-learning and null-model modules; 200–220 build the submission package, the figures and their editable versions. Run in numerical order. |
+| `code/` | Analysis pipeline ({n_code} scripts). Scripts 130–154 fit and summarise the models; 160–192 run the conservation, downscaling, machine-learning and null-model modules; 200–221 build the submission package, the figures, their editable versions and the animated map used in the talk. Run in numerical order. |
 | `data/`, `data_admin/` | Modelling data: discovery-dated events, effort panel, model matrices (three thresholds), climate panels, traits, protected-area and administrative-unit tables ({data_mb:.0f} MB) |
 | `tables/` | Every result table cited in the manuscript and the Supplementary Information |
 | `source_data/{{GCB,NEE,NC}}/` | Source data for each main figure, named by that journal's figure number (long format, one row per plotted value, `panel` column) |
@@ -207,6 +207,10 @@ def zip_folder() -> Path:
 
 
 def main() -> None:
+    if "--zip-only" in sys.argv:             # wm-clean 之后只重打压缩包 / rezip after cleaning
+        z = zip_folder()
+        logger.info("重打压缩包 / rezipped: %s (%.1f MB)", z.name, z.stat().st_size / 1e6)
+        return
     if not (REPO / "code").is_dir():
         sys.exit(f"找不到仓库克隆 / repository clone not found: {REPO}")
     if OUT.exists():

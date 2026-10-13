@@ -22,7 +22,7 @@ from docx import Document
 SUB = Path(__file__).resolve().parent.parent / "analysis_v2" / "submission"
 CN_OK = {"README.md", "SUBMISSION_CHECKLIST.md", "THREE_VERSIONS.md", "CRediT_and_authors_TEMPLATE.md",
          "FIGURE_MANIFEST.md", "Translated_Abstract_zh.md", "Translated_Abstract_zh.docx",
-         "00_UPLOAD_GUIDE.md"}                                    # 中文上传说明 / Chinese upload guides
+         "00_UPLOAD_GUIDE.md", "FIGURES_POLISHED_NOTES.md"}       # 中文说明 / Chinese guides and notes
 MAIN = {k: SUB / k / f"Manuscript_{k}_maintext.md" for k in ("GCB", "NEE", "NC")}
 fails = 0
 
@@ -204,6 +204,28 @@ n_pp, n_pdf = len(list(v3.glob("*.pptx"))), len(list(v3.glob("*.pdf")))
 n_nt = len(list(v3.glob("AOC2026_v3_speaker_notes_*.md")))
 report(n_pp == 4 and n_pdf == 4 and n_nt == 2, f"PPTX {n_pp}/4、PDF {n_pdf}/4、讲稿 {n_nt}/2;旧版保留: "
        + ", ".join(p.name for p in sorted((SUB / "presentation").rglob("*.pptx")) if "v3" not in p.name))
+
+print("[12] 第 4 版报告与时空动图 / v4 PKU deck and animation (221)")
+v4 = SUB / "presentation" / "AOC2026_v4_PKU"
+v4p = v4 / "AOC2026_ChenchenDing_v4_PKU_EN.pptx"
+gif_ok, n_fr = False, 0
+if v4p.exists():
+    with zipfile.ZipFile(v4p) as z4:
+        gifs = [n for n in z4.namelist() if n.startswith("ppt/media/") and n.endswith(".gif")]
+        if gifs:
+            import io  # noqa: E402
+
+            from PIL import Image  # noqa: E402
+            with Image.open(io.BytesIO(z4.read(gifs[0]))) as g4:
+                n_fr = getattr(g4, "n_frames", 1)
+            gif_ok = n_fr > 20 and 'Extension="gif"' in z4.read("[Content_Types].xml").decode()
+need4 = ["AOC2026_ChenchenDing_v4_PKU_EN.pdf", "AOC2026_v4_speaker_notes_EN.md",
+         "FigAnim_warming_effort_records.gif", "FigAnim_warming_effort_records.mp4", "LEGEND_FigAnim.md"]
+miss4 = [n for n in need4 if not (v4 / n).exists()]
+anim_src = [f for f in (SUB.parent / "figures_animation").glob("source_data_FigAnim_*.csv")]
+report(v4p.exists() and gif_ok and not miss4 and len(anim_src) == 3,
+       f"PPTX 内嵌 GIF {n_fr} 帧、PDF/讲稿/MP4/图注齐全、动图源数据 {len(anim_src)}/3"
+       + (f";缺 {miss4}" if miss4 else ""))
 
 print("[6] 须作者补充的占位符")
 ph = {}

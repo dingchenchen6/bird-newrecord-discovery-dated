@@ -11,7 +11,7 @@
 # Input data / 输入数据: 任务目录 code/ 与 analysis_v2/{figures*,tables,docs,submission}/
 # Main workflow / 主要流程:
 #   1. 仓库已跟踪文件: 有源且内容不同 → 覆盖 / tracked files: overwrite when changed
-#   2. 新内容: submission/、figures_topjournal/、figures_direction/、tables/、205 号起的新脚本
+#   2. 新内容: submission/、figures_topjournal/、figures_direction/、figures_animation/、tables/、205 号起的新脚本
 #   3. submission/ 镜像删除: 任务目录已移除的投稿件在仓库中也删除
 #   4. 跳过: 上传压缩包、Office 锁文件、> 95 MB 的文件(GitHub 单文件上限 100 MB)
 # Expected output / 预期输出: 仓库工作区改动 + 同步摘要(新增/更新/删除/跳过)
@@ -41,7 +41,7 @@ A2 = V2 / "analysis_v2"
 REPO = Path.home() / "bird-newrecord-discovery-dated"
 MAX_MB = 95
 FIRST_NEW = 205
-NEW_DIRS = ["submission", "figures_topjournal", "figures_direction", "tables"]   # 新文件也同步的目录
+NEW_DIRS = ["submission", "figures_topjournal", "figures_direction", "figures_animation", "tables"]   # 新文件也同步的目录
 SKIP_PARTS = {"_archives", ".DS_Store"}
 DRY = "--dry-run" in sys.argv
 

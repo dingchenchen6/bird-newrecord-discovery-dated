@@ -18,7 +18,7 @@
 #   4. Nature 系把 Reporting Summary 草稿复制进期刊目录
 #   5. 会议 PPT 与讲稿从 deck 工程同步; 旧版移出投稿包归档
 #   6. 每刊写 00_UPLOAD_GUIDE.md; 打包 _archives/{J}_upload_{DATE}.zip 与 presentation zip
-#      (含可编辑图件、顶刊版主图与 v3 新版报告; --zips-only 只重打压缩包)
+#      (含可编辑图件、顶刊版主图、v3 新版报告与 v4 北大红版 + 时空动图; --zips-only 只重打压缩包)
 #   7. 自检: zip 完整性、PDF 页数、完整稿件的嵌图数
 # 输出 / Output: 见上; 压缩包内文件按上传类别编号
 # 关键假设 / Key assumptions:
@@ -60,6 +60,12 @@ ZH_STEM = "鸟类新纪录生成风险_会议报告_20页_v8"
 DECK_V3 = DECKS / "bird_talk_aoc2026_v3_20261011" / "variants"
 V3_VARIANTS = ["light_en", "dark_en", "warm_en", "light_zh"]
 V3_DIR = "AOC2026_v3_redesign"
+# 2026-10-13 第 4 版: ECCB 叙事 + 出站答辩北大红顶部导航 + 时空动图 / v4: ECCB storyline, PKU-red nav, animation
+DECK_V4 = DECKS / "bird_talk_aoc2026_v4_pku_20261013" / "deck"
+V4_STEM = "AOC2026_ChenchenDing_v4_PKU_EN"
+V4_DIR = "AOC2026_v4_PKU"
+ANIM = V2 / "analysis_v2" / "figures_animation"
+ANIM_FILES = ["FigAnim_warming_effort_records.gif", "FigAnim_warming_effort_records.mp4", "LEGEND_FigAnim.md"]
 FIG_W = "6.3in"
 
 # 复用 205 的渲染与版式(双倍行距、行号、页码)/ reuse 205's renderer and manuscript styling
@@ -264,6 +270,23 @@ def sync_v3(pres: Path) -> None:
     log(f"新版报告 / v3 decks -> {dst.relative_to(SUB)}: {len(list(dst.glob('*.pptx')))} pptx")
 
 
+def sync_v4(pres: Path) -> None:
+    """第 4 版报告(北大红)、讲稿与时空动图(GIF 已嵌入第 3 页, MP4 备用)
+    v4 PKU-red deck with notes and the animation (GIF embedded on slide 3, MP4 as a standalone backup)."""
+    dst = pres / V4_DIR
+    dst.mkdir(exist_ok=True)
+    for ext in ("pptx", "pdf"):
+        src = DECK_V4 / "exports" / f"{V4_STEM}.{ext}"
+        if not src.exists():
+            sys.exit(f"缺第 4 版报告 / missing v4 deck: {src}")
+        shutil.copy2(src, dst / src.name)
+    shutil.copy2(DECK_V4 / "notes" / "total.md", dst / "AOC2026_v4_speaker_notes_EN.md")
+    for f in ANIM_FILES:
+        shutil.copy2(ANIM / f, dst / f)
+    log(f"第 4 版报告与动图 / v4 deck and animation -> {dst.relative_to(SUB)}: "
+        f"{', '.join(sorted(p.name for p in dst.iterdir() if p.is_file()))}")
+
+
 def archives(pres: Path, en_dir: Path) -> None:
     """上传说明与压缩包 / guides and archives."""
     ARCH.mkdir(exist_ok=True)
@@ -274,11 +297,12 @@ def archives(pres: Path, en_dir: Path) -> None:
         make_zip(ARCH / f"{J}_upload_{DATE}.zip", upload_members(J))
     for old in ARCH.glob("presentation_*.zip"):
         old.unlink()
-    v3 = pres / V3_DIR
+    v3, v4 = pres / V3_DIR, pres / V4_DIR
     make_zip(ARCH / f"presentation_{DATE}.zip",
              [(en_dir / f, f"AOC2026_Singapore_EN/{f}") for f in EN_FILES]
              + [(pres / f"{ZH_STEM}.{e}", f"{ZH_STEM}.{e}") for e in ("pptx", "pdf")]
-             + [(f, f"{V3_DIR}/{f.name}") for f in sorted(v3.glob("*")) if f.is_file()])
+             + [(f, f"{V3_DIR}/{f.name}") for f in sorted(v3.glob("*")) if f.is_file()]
+             + [(f, f"{V4_DIR}/{f.name}") for f in sorted(v4.glob("*")) if f.is_file()])
 
 
 def main() -> None:
@@ -318,6 +342,7 @@ def main() -> None:
     for ext in ("pptx", "pdf"):
         shutil.copy2(DECK_ZH / f"{ZH_STEM}.{ext}", pres / f"{ZH_STEM}.{ext}")
     sync_v3(pres)
+    sync_v4(pres)
     old = sorted(p for p in pres.glob("鸟类新纪录生成风险_会议报告_20页_v*.*") if not p.stem.endswith(ZH_STEM[-2:]))
     if old:
         keep = DECK_ZH / "archive_from_submission"; keep.mkdir(exist_ok=True)
