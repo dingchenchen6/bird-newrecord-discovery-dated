@@ -1,0 +1,215 @@
+"panel","term","group","estimate","lo","hi","unit","main_spec","x_var","x","effort_z"
+"a","Survey effort","50 cells",1.4038169859134,1.24527316128327,1.58254605592572,"hazard ratio per 1 SD",TRUE,NA,NA,NA
+"a","Survey effort","100 cells",1.40503279504023,1.24580578467528,1.5846106828386,"hazard ratio per 1 SD",FALSE,NA,NA,NA
+"a","Survey effort","200 cells",1.41060359860605,1.25001808662618,1.59181897741244,"hazard ratio per 1 SD",FALSE,NA,NA,NA
+"a","Accumulated warming","50 cells",1.36164754167317,1.21629159022553,1.52437461760366,"hazard ratio per 1 SD",TRUE,NA,NA,NA
+"a","Accumulated warming","100 cells",1.37590541618651,1.22618651446358,1.54390518241798,"hazard ratio per 1 SD",FALSE,NA,NA,NA
+"a","Accumulated warming","200 cells",1.37172237575755,1.21920521630923,1.54331875469657,"hazard ratio per 1 SD",FALSE,NA,NA,NA
+"a","Annual climate variability","50 cells",0.995095739809156,0.908555481495667,1.08987899094091,"hazard ratio per 1 SD",TRUE,NA,NA,NA
+"a","Annual climate variability","100 cells",0.995397804788633,0.908456312742171,1.09065981036254,"hazard ratio per 1 SD",FALSE,NA,NA,NA
+"a","Annual climate variability","200 cells",0.995651719591521,0.908367549686771,1.09132294198245,"hazard ratio per 1 SD",FALSE,NA,NA,NA
+"a","Warming × effort","50 cells",0.84924794872335,0.760651657734799,0.948163421556983,"hazard ratio per 1 SD",TRUE,NA,NA,NA
+"a","Warming × effort","100 cells",0.850724133801374,0.761699610236662,0.950153501597872,"hazard ratio per 1 SD",FALSE,NA,NA,NA
+"a","Warming × effort","200 cells",0.849681219589684,0.760565473318974,0.949238691802449,"hazard ratio per 1 SD",FALSE,NA,NA,NA
+"b","annual hazard of a new record","Low effort (10th pct)",0.0521988842207999,0.0307705649844836,0.0885430646231034,"per cent",NA,"clim_change_z",-2.12122806872051,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.124619763889799,0.0905525904135729,0.171492488881231,"per cent",NA,"clim_change_z",-2.12122806872051,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.324467717422483,0.206413566314811,0.509867902911687,"per cent",NA,"clim_change_z",-2.12122806872051,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0541127878490588,0.0322852594470624,0.0906908507647741,"per cent",NA,"clim_change_z",-2.05203160293163,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.127347489246465,0.0931221347964972,0.174140785843224,"per cent",NA,"clim_change_z",-2.05203160293163,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.32637570393802,0.209713580301063,0.507770791664575,"per cent",NA,"clim_change_z",-2.05203160293163,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0560968462151479,0.0338716575909448,0.092898511867856,"per cent",NA,"clim_change_z",-1.98283513714276,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.130134881199495,0.0957578167817497,0.176842387363929,"per cent",NA,"clim_change_z",-1.98283513714276,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.328294891611403,0.213046786864257,0.505728523686011,"per cent",NA,"clim_change_z",-1.98283513714276,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0581536293920104,0.0355327906187641,0.0951684604382774,"per cent",NA,"clim_change_z",-1.91363867135388,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.132983243180762,0.0984606965832469,0.179599290311527,"per cent",NA,"clim_change_z",-1.91363867135388,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.33022534598266,0.216411703921526,0.503743744434459,"per cent",NA,"clim_change_z",-1.91363867135388,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0602858014956409,0.0372717664438915,0.0975032803536835,"per cent",NA,"clim_change_z",-1.844442205565,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.135893907019657,0.10123178149033,0.182413628467359,"per cent",NA,"clim_change_z",-1.844442205565,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.332167132972672,0.219806631814501,0.50181933976603,"per cent",NA,"clim_change_z",-1.844442205565,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0624961241181055,0.0390917631169496,0.0999057453668128,"per cent",NA,"clim_change_z",-1.77524573977612,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.138868233558387,0.104072016489498,0.185287684297109,"per cent",NA,"clim_change_z",-1.77524573977612,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.334120318885445,0.223229631077593,0.499958458551819,"per cent",NA,"clim_change_z",-1.77524573977612,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0647874598851628,0.0409960204497462,0.10237883999975,"per cent",NA,"clim_change_z",-1.70604927398725,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.141907613280512,0.106982274025347,0.188223901651763,"per cent",NA,"clim_change_z",-1.70604927398725,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.336084970410278,0.226678498326627,0.498164537181722,"per cent",NA,"clim_change_z",-1.70604927398725,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0671627761431925,0.0429878295488906,0.104925783145637,"per cent",NA,"clim_change_z",-1.63685280819837,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.145013466952848,0.109963342880803,0.191224899420117,"per cent",NA,"clim_change_z",-1.63685280819837,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.338061154623925,0.230150740242241,0.496441325980213,"per cent",NA,"clim_change_z",-1.63685280819837,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0696251487798616,0.0450705199379509,0.10755005472961,"per cent",NA,"clim_change_z",-1.56765634240949,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.148187246281151,0.113015916173798,0.194293486137953,"per cent",NA,"clim_change_z",-1.56765634240949,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.340048938992898,0.233643545675077,0.494792917507214,"per cent",NA,"clim_change_z",-1.56765634240949,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0721777661834677,0.0472474439142445,0.110255425815309,"per cent",NA,"clim_change_z",-1.49845987662061,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.151430434579891,0.116140578490609,0.197432675535514,"per cent",NA,"clim_change_z",-1.49845987662061,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.342048391375627,0.237153755973574,0.493223776643437,"per cent",NA,"clim_change_z",-1.49845987662061,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0748239333458911,0.0495219577552719,0.113045992575167,"per cent",NA,"clim_change_z",-1.42926341083173,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.154744547456209,0.119337792205998,0.200645702975433,"per cent",NA,"clim_change_z",-1.42926341083173,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.344059580024725,0.240677833733915,0.491738772260608,"per cent",NA,"clim_change_z",-1.42926341083173,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0775670761142933,0.0518973993643534,0.115926214570594,"per cent",NA,"clim_change_z",-1.36006694504286,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.158131133508643,0.122607883078685,0.203936042694697,"per cent",NA,"clim_change_z",-1.36006694504286,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.346082573589279,0.244211830303287,0.490343210145705,"per cent",NA,"clim_change_z",-1.36006694504286,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0804107455968706,0.054377061929789,0.118900957804791,"per cent",NA,"clim_change_z",-1.29087047925398,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.161591775040626,0.125951025258386,0.207307425716696,"per cent",NA,"clim_change_z",-1.29087047925398,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.348117441117091,0.247751352536274,0.48904286667939,"per cent",NA,"clim_change_z",-1.29087047925398,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0833586227283023,0.0569641631713136,0.121975543013042,"per cent",NA,"clim_change_z",-1.2216740134651,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.165128088789346,0.129367225898602,0.210763858241458,"per cent",NA,"clim_change_z",-1.2216740134651,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.350164252056928,0.251291529518449,0.487844022554684,"per cent",NA,"clim_change_z",-1.2216740134651,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0864145230003666,0.0596618097729262,0.125155799632537,"per cent",NA,"clim_change_z",-1.15247754767622,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.168741726670063,0.132856309638341,0.214309640253374,"per cent",NA,"clim_change_z",-1.15247754767622,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.352223076260894,0.254826980234968,0.486753495558334,"per cent",NA,"clim_change_z",-1.15247754767622,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0895824013638524,0.0624729566597537,0.128448125836522,"per cent",NA,"clim_change_z",-1.08328108188734,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.172434376536312,0.136417903295516,0.217949384005955,"per cent",NA,"clim_change_z",-1.08328108188734,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.354293983986675,0.258351783479305,0.485778671119652,"per cent",NA,"clim_change_z",-1.08328108188734,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0928663573077748,0.0654003608853371,0.131859554911473,"per cent",NA,"clim_change_z",-1.01408461609847,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.176207762956382,0.140051421204168,0.22168803195407,"per cent",NA,"clim_change_z",-1.01408461609847,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.356377045899869,0.261859451667945,0.484927528961299,"per cent",NA,"clim_change_z",-1.01408461609847,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0962706401221758,0.0684465300687997,0.135397828084527,"per cent",NA,"clim_change_z",-0.944888150309588,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.180063648006157,0.143756051724286,0.22553087360756,"per cent",NA,"clim_change_z",-0.944888150309588,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.358472333076354,0.265342910642996,0.484208663770169,"per cent",NA,"clim_change_z",-0.944888150309588,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.0997996543511737,0.071613665579795,0.139071473652941,"per cent",NA,"clim_change_z",-0.87569168452071,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.18400383207906,0.147530745551983,0.229483560680865,"per cent",NA,"clim_change_z",-0.87569168452071,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.3605799170046,0.26879448798981,0.483631297361209,"per cent",NA,"clim_change_z",-0.87569168452071,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.103457965442832,0.0749036010318727,0.142889891906328,"per cent",NA,"clim_change_z",-0.806495218731832,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.188030154712981,0.151374206553723,0.233552119817926,"per cent",NA,"clim_change_z",-0.806495218731832,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.362699869588012,0.27220591284024,0.483205279363985,"per cent",NA,"clim_change_z",-0.806495218731832,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.107250305603079,0.0783177371319499,0.146863444848078,"per cent",NA,"clim_change_z",-0.737298752942954,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.192144495434965,0.155284885930729,0.237742962088983,"per cent",NA,"clim_change_z",-0.737298752942954,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.364832263147385,0.275568330524989,0.482941073068499,"per cent",NA,"clim_change_z",-0.737298752942954,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.111181579860709,0.0818569745578701,0.151003549100936,"per cent",NA,"clim_change_z",-0.668102287154076,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.196348774623734,0.159260980577447,0.242062888398098,"per cent",NA,"clim_change_z",-0.668102287154076,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.366977170423177,0.278872335712721,0.4828497227926,"per cent",NA,"clim_change_z",-0.668102287154076,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.115256872351033,0.0855216472971931,0.155322769622945,"per cent",NA,"clim_change_z",-0.598905821365198,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.200644954390528,0.163300436517277,0.246519089921216,"per cent",NA,"clim_change_z",-0.598905821365198,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.369134664577997,0.282108027738792,0.482942799068575,"per cent",NA,"clim_change_z",-0.598905821365198,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.11948145282592,0.0893114597568023,0.159834910986267,"per cent",NA,"clim_change_z",-0.52970935557632,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.205035039478696,0.16740095826342,0.251119142730161,"per cent",NA,"clim_change_z",-0.52970935557632,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.37130481919897,0.285265091574727,0.483232318197635,"per cent",NA,"clim_change_z",-0.52970935557632,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.123860783398244,0.093225431889099,0.164555102038721,"per cent",NA,"clim_change_z",-0.460512889787442,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.209521078182251,0.17156002484755,0.255870995862406,"per cent",NA,"clim_change_z",-0.460512889787442,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.37348770830018,0.288332907208066,0.483730633403034,"per cent",NA,"clim_change_z",-0.460512889787442,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.128400525528927,0.0972618574741846,0.169499868876544,"per cent",NA,"clim_change_z",-0.391316423998564,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.214105163283917,0.175774913072557,0.260782952284211,"per cent",NA,"clim_change_z",-0.391316423998564,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.375683406325089,0.29130068898997,0.484450296024319,"per cent",NA,"clim_change_z",-0.391316423998564,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.133106547265183,0.101418281395449,0.174687190362799,"per cent",NA,"clim_change_z",-0.322119958209687,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.218789433013056,0.180042728268581,0.265863642470543,"per cent",NA,"clim_change_z",-0.322119958209687,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.377891988149037,0.294157654706606,0.485403886997171,"per cent",NA,"clim_change_z",-0.322119958209687,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.137984930738844,0.105691502042493,0.180136530132358,"per cent",NA,"clim_change_z",-0.252923492420809,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.22357607202379,0.184360442469056,0.271121990688883,"per cent",NA,"clim_change_z",-0.252923492420809,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.380113529081649,0.296893221759142,0.486603821233833,"per cent",NA,"clim_change_z",-0.252923492420809,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.143041979933778,0.110077604634495,0.185868839368653,"per cent",NA,"clim_change_z",-0.183727026631931,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.228467312393821,0.188724939486595,0.276567174510167,"per cent",NA,"clim_change_z",-0.183727026631931,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.382348104869346,0.299497225028067,0.488062130328704,"per cent",NA,"clim_change_z",-0.183727026631931,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.148284228731965,0.11457203005556,0.191906525842778,"per cent",NA,"clim_change_z",-0.114530560843053,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.233465434644353,0.193133065888051,0.282208578551324,"per cent",NA,"clim_change_z",-0.114530560843053,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.384595791697828,0.301960148015479,0.489790231995635,"per cent",NA,"clim_change_z",-0.114530560843053,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.153718449247897,0.11916968158856,0.198273386914327,"per cent",NA,"clim_change_z",-0.0453340950541747,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.238572768781442,0.197581686382986,0.288055743938442,"per cent",NA,"clim_change_z",-0.0453340950541747,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.38685666619459,0.304273356098217,0.491798697404122,"per cent",NA,"clim_change_z",-0.0453340950541747,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.159351660461371,0.123865068746687,0.204994507384604,"per cent",NA,"clim_change_z",0.0238623707347032,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.243791695359385,0.202067741703593,0.294118315416558,"per cent",NA,"clim_change_z",0.0238623707347032,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.389130805431437,0.306429318661916,0.49409702964448,"per cent",NA,"clim_change_z",0.0238623707347032,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.165191137159204,0.128652483489622,0.21209612700912,"per cent",NA,"clim_change_z",0.0930588365235812,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.249124646566445,0.206588306720767,0.300405988364927,"per cent",NA,"clim_change_z",0.0930588365235812,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.391418286927026,0.308421805994852,0.496693467443332,"per cent",NA,"clim_change_z",0.0930588365235812,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.171244419196415,0.133526199991041,0.219605486600949,"per cent",NA,"clim_change_z",0.162255302312459,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.254574107333416,0.21114064636133,0.306928458156652,"per cent",NA,"clim_change_z",0.162255302312459,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.3937191886494,0.310246047453533,0.499594827617567,"per cent",NA,"clim_change_z",0.162255302312459,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.177519321088171,0.138480685518261,0.227550665266929,"per cent",NA,"clim_change_z",0.231451768101337,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.260142616465486,0.215722266902085,0.313695374291123,"per cent",NA,"clim_change_z",0.231451768101337,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.39603358901853,0.311898839692437,0.502806397474531,"per cent",NA,"clim_change_z",0.231451768101337,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.184023941943801,0.143510807664793,0.235960423643011,"per cent",NA,"clim_change_z",0.300648233890215,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.265832767797869,0.220330960429338,0.320716301514534,"per cent",NA,"clim_change_z",0.300648233890215,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.398361566908978,0.313378597497505,0.506331884619038,"per cent",NA,"clim_change_z",0.300648233890215,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.190766675754828,0.148612022754624,0.244864068422268,"per cent",NA,"clim_change_z",0.369844699679093,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.271647211375681,0.224964840655262,0.328000689741303,"per cent",NA,"clim_change_z",0.369844699679093,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.400703201652364,0.314685344498922,0.51017342689178,"per cent",NA,"clim_change_z",0.369844699679093,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.197756222049139,0.153780531953929,0.254291351756819,"per cent",NA,"clim_change_z",0.439041165467971,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.2775886546585,0.229622368834426,0.335557854037372,"per cent",NA,"clim_change_z",0.439041165467971,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.403058573040083,0.315820646077869,0.514331660124623,"per cent",NA,"clim_change_z",0.439041165467971,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.20500159692397,0.159013395242635,0.264272415503386,"per cent",NA,"clim_change_z",0.508237631256849,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.283659863750207,0.23430236916383,0.343396965286435,"per cent",NA,"clim_change_z",0.508237631256849,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.405427761325861,0.316787491382087,0.518805836798153,"per cent",NA,"clim_change_z",0.508237631256849,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.212512144470633,0.164308598240093,0.274837785446047,"per cent",NA,"clim_change_z",0.577434097045727,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.289863664654455,0.23900403370789,0.351527051502043,"per cent",NA,"clim_change_z",0.577434097045727,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.407810847228385,0.317590134894752,0.5235939851571,"per cent",NA,"clim_change_z",0.577434097045727,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.220297548604431,0.169665072019531,0.286018415494282,"per cent",NA,"clim_change_z",0.646630562834605,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.296202944556434,0.243726917495946,0.359957009142597,"per cent",NA,"clim_change_z",0.646630562834605,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.410207911934002,0.318233910071353,0.528693096269139,"per cent",NA,"clim_change_z",0.646630562834605,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.228367845313682,0.175082670578308,0.297845777328365,"per cent",NA,"clim_change_z",0.715827028623483,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.302680653131338,0.248470924937993,0.368695623288295,"per cent",NA,"clim_change_z",0.715827028623483,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.412619037099315,0.318725028075151,0.534099325996618,"per cent",NA,"clim_change_z",0.715827028623483,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.236733435341907,0.180562113889982,0.310351987710344,"per cent",NA,"clim_change_z",0.785023494412361,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.309299803880136,0.25323628905709,0.377751595186249,"per cent",NA,"clim_change_z",0.785023494412361,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.415044304853929,0.319070373782815,0.53980819970989,"per cent",NA,"clim_change_z",0.785023494412361,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.24540509731813,0.186104906162043,0.323569963987969,"per cent",NA,"clim_change_z",0.854219960201239,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.3160634754931,0.258023545231012,0.387133575476184,"per cent",NA,"clim_change_z",0.854219960201239,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.417483797803087,0.319277309359567,0.545814809442957,"per cent",NA,"clim_change_z",0.854219960201239,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.254394001350267,0.191713239131219,0.337533598116202,"per cent",NA,"clim_change_z",0.923416425990117,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.322974813241705,0.262833501177762,0.396850201367105,"per cent",NA,"clim_change_z",0.923416425990117,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.419937599030396,0.319353493258479,0.552113995637038,"per cent",NA,"clim_change_z",0.923416425990117,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.263711723097337,0.197389889279009,0.352277940477019,"per cent",NA,"clim_change_z",0.992612891778994,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.330037030399477,0.267667204833344,0.406910136121519,"per cent",NA,"clim_change_z",0.992612891778994,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.422405792100566,0.319306719897894,0.558700508218313,"per cent",NA,"clim_change_z",0.992612891778994,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.273370258336503,0.20313811618774,0.367839386447455,"per cent",NA,"clim_change_z",1.06180935756787,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.33725340969224,0.272525911588484,0.417322109385987,"per cent",NA,"clim_change_z",1.06180935756787,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.424888461062112,0.319144782842051,0.565569144184808,"per cent",NA,"clim_change_z",1.06180935756787,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.283382038041569,0.208961567311428,0.384255860617766,"per cent",NA,"clim_change_z",1.13100582335675,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.344627304778422,0.277411052109566,0.428094957147873,"per cent",NA,"clim_change_z",1.13100582335675,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.427385690450133,0.318875362264914,0.572714860922763,"per cent",NA,"clim_change_z",1.13100582335675,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.293759943990035,0.214864192542752,0.401566995462321,"per cent",NA,"clim_change_z",1.20020228914563,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.352162141760037,0.2823242017015,0.439237660366021,"per cent",NA,"clim_change_z",1.20020228914563,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.429897565289072,0.318505935912694,0.580132866036953,"per cent",NA,"clim_change_z",1.20020228914563,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.304517324916187,0.220850170328479,0.419814302901156,"per cent",NA,"clim_change_z",1.26939875493451,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.359861420724839,0.287267051904316,0.45075938158945,"per cent",NA,"clim_change_z",1.26939875493451,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.432424171095491,0.318043711705551,0.587818685555019,"per cent",NA,"clim_change_z",1.26939875493451,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.315668013228299,0.226923845818361,0.439041338464796,"per cent",NA,"clim_change_z",1.33859522072338,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.367728717320248,0.292241384770087,0.462669499122559,"per cent",NA,"clim_change_z",1.33859522072338,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.434965593880876,0.317495579480065,0.595768213004044,"per cent",NA,"clim_change_z",1.33859522072338,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.327226342308662,0.233089680637921,0.459293858677023,"per cent",NA,"clim_change_z",1.40779168651226,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.375767684359818,0.297249050056714,0.474977638506813,"per cent",NA,"clim_change_z",1.40779168651226,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.437521920154438,0.316868079089561,0.60397774214257,"per cent",NA,"clim_change_z",1.40779168651226,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.339207164415456,0.239352213311628,0.480619972841012,"per cent",NA,"clim_change_z",1.47698815230114,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.383982053462661,0.302291945403332,0.48769370125944,"per cent",NA,"clim_change_z",1.47698815230114,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.440093236925942,0.316167382057853,0.612443986152955,"per cent",NA,"clim_change_z",1.47698815230114,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.351625869206118,0.245716029063869,0.503070290721153,"per cent",NA,"clim_change_z",1.54618461809002,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.39237563672655,0.307371999421635,0.500827890941291,"per cent",NA,"clim_change_z",1.54618461809002,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.442679631708565,0.315399284136675,0.62116408594356,"per cent",NA,"clim_change_z",1.54618461809002,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.364498402902469,0.252185737619948,0.526698067725051,"per cent",NA,"clim_change_z",1.6153810838789,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.400952328435433,0.312491157543904,0.514390736718917,"per cent",NA,"clim_change_z",1.6153810838789,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.445281192521729,0.314569206379345,0.630135609948768,"per cent",NA,"clim_change_z",1.6153810838789,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.37784128811833,0.258765957654483,0.551559349173036,"per cent",NA,"clim_change_z",1.68457754966777,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.409716106801783,0.317651370407823,0.528393114647396,"per cent",NA,"clim_change_z",1.68457754966777,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.447898007894021,0.313682202655374,0.639356547502123,"per cent",NA,"clim_change_z",1.68457754966777,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.39167164437085,0.265461306638337,0.577713115145373,"per cent",NA,"clim_change_z",1.75377401545665,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.418671035744678,0.322854584523524,0.542846266934427,"per cent",NA,"clim_change_z",1.75377401545665,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.450530166866014,0.312742971856106,0.648825297532785,"per cent",NA,"clim_change_z",1.75377401545665,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.406007209297632,0.272276394979909,0.605221427260294,"per cent",NA,"clim_change_z",1.82297048124553,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.427821266704154,0.328102734954938,0.557761819460401,"per cent",NA,"clim_change_z",1.82297048124553,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.453177758993217,0.311755873353003,0.658540654023898,"per cent",NA,"clim_change_z",1.82297048124553,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.420866360601724,0.279215823515722,0.634149578584353,"per cent",NA,"clim_change_z",1.89216694703441,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.437171040492479,0.333397739749197,0.573151797827198,"per cent",NA,"clim_change_z",1.89216694703441,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.455840874349012,0.310724944553742,0.668501789387765,"per cent",NA,"clim_change_z",1.89216694703441,1.36976631912746
+"b","annual hazard of a new record","Low effort (10th pct)",0.436268138747942,0.28628418356127,0.664566247726583,"per cent",NA,"clim_change_z",1.96136341282329,-1.29639825832484
+"b","annual hazard of a new record","Median effort",0.446724689183153,0.338741495859729,0.589028642196754,"per cent",NA,"clim_change_z",1.96136341282329,-0.0270006587369665
+"b","annual hazard of a new record","High effort (90th pct)",0.458519603527552,0.309653919649744,0.67870823666466,"per cent",NA,"clim_change_z",1.96136341282329,1.36976631912746
+"c","Accumulated warming","ΔAIC",28.71053984629,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Survey effort","ΔAIC",29.4608432162404,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Warming × effort","ΔAIC",6.45968349492796,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Annual climate variability","ΔAIC",-1.98880459519023,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Accumulated warming","ΔAUC",0.0527594215462769,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Survey effort","ΔAUC",0.0322416284054571,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Warming × effort","ΔAUC",0.00223780771334081,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Annual climate variability","ΔAUC",0.000181987552743901,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Accumulated warming","ΔR²",0.00706832684159986,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Survey effort","ΔR²",-0.00069096734041002,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Warming × effort","ΔR²",0.00988024730670584,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Annual climate variability","ΔR²",-0.000250580833245195,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Accumulated warming","|β|",0.308695394262358,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Survey effort","|β|",0.339194945193539,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Warming × effort","|β|",0.163404087342241,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"c","Annual climate variability","|β|",0.00491632553875464,NA,NA,"loss when the term is dropped (|beta|: absolute standardised coefficient)",NA,NA,NA,NA
+"d","F0 null","AUC_marginal",0.411147476579356,NA,NA,"AUC from fixed effects only",FALSE,NA,NA,NA
+"d","F1 effort","AUC_marginal",0.558865161528174,NA,NA,"AUC from fixed effects only",FALSE,NA,NA,NA
+"d","F2 climate","AUC_marginal",0.580186068491099,NA,NA,"AUC from fixed effects only",FALSE,NA,NA,NA
+"d","F3 effort + climate","AUC_marginal",0.609648111562063,NA,NA,"AUC from fixed effects only",FALSE,NA,NA,NA
+"d","F4 + annual variability","AUC_marginal",0.609440266460736,NA,NA,"AUC from fixed effects only",FALSE,NA,NA,NA
+"d","F5 + interaction (MAIN)","AUC_marginal",0.611678074174077,NA,NA,"AUC from fixed effects only",TRUE,NA,NA,NA

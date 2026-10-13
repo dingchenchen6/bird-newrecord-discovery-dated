@@ -1,0 +1,7 @@
+step,records,species_province_pairs,note
+1. CBNR released records,1029,,official release
+2. dated by discovery year,1029,,"1019 from Discovery_date, 10 from pub_year-1 (unparseable or later than publication)"
+3. matched to candidate pool,684,,species name via COL 2026 / BirdLife v10 / Clements v2025; Xizang -> Tibet
+4. first record per species-province,684,684,earliest event_year retained; later reports treated as re-documentation
+5. within 2002-2024 window,657,657,"removed 26 discovered before 2002, 1 after 2024"
+6. comparison with publication-year dating,633,633,"526 events change year (83.1%); 24 new-only, 22 old-only"

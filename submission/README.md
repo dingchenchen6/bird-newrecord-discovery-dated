@@ -1,87 +1,111 @@
-# 投稿 Word 文件与期刊适配说明
+# 投稿包 / Submission package
 
-## 文件
+三个期刊版本由同一套结果派生,共用一份数据、模型与图件源码;差别只在长度、结构与引文体例。
+**数值结论三版完全一致。** 每个期刊目录都可直接用于上传:打开其中的 `00_UPLOAD_GUIDE.md`,
+按编号逐项上传即可;`_archives/` 中的压缩包是同一套上传文件的打包版本。
 
-| 文件 | 内容 | 页数 |
-|---|---|---|
-| `Manuscript_NatureFamily_maintext.docx` | 题名、作者、摘要、Introduction、Results、Discussion、References、Methods | 45 |
-| `Manuscript_NatureFamily_tables_and_legends.docx` | Table 1–9(真正的 Word 表格)、全部图注 | 15 |
-| `wordcount_vs_journal_limits.csv` | 字数与三家硬约束的逐项比对 |  |
+## 目录
 
-格式：Times New Roman 12 pt、双倍行距、上下左右 1 英寸边距、**连续行号**、页脚居中页码。
-引文为编号上标（Nature 系样式）。图件按 Nature 政策单独提交，正文只留图注；
-主图 PDF 在 `analysis_v2/figures/`、`figures_pa/`、`figures_admin/`、`figures_rf/`。
-
-生成命令：
-
-```bash
-python3.11 code/200_build_submission_docx.py
+```
+submission/
+├── GCB/                 Global Change Biology 版(IMRaD,作者-年份引文)
+│   ├── 00_UPLOAD_GUIDE.md             上传清单(文件 → 投稿系统类别)
+│   ├── Manuscript_GCB_main_document.docx   上传用主文档:正文 + 表 + 图注
+│   ├── figures/                       Figure1–7(矢量 PDF + 450 dpi PNG)
+│   ├── pdf/                           含图全文、SI、投稿信的 PDF(SI 上传用 PDF)
+│   ├── cover_letter_GCB.docx          GCB 七问格式
+│   ├── Translated_Abstract_zh.docx    中文摘要
+│   └── *.md / 其余 docx               可编辑源与分件(正文、表与图注、SI)
+│   ├── figures_SI/                    全部 SI 图的可编辑 PPTX(FigS1…)
+│   ├── figures_polished/              顶刊设计版主图(PDF + PNG + 可编辑 PPTX),见 FIGURES_POLISHED_NOTES.md
+├── NEE/  NC/            Nature Ecology & Evolution / Nature Communications 版
+│   ├── Manuscript_{J}_complete.docx   上传用单文件稿件:正文 + 表 + 图注,图嵌在图注前
+│   ├── pdf/Supplementary_Information_{J}.pdf   上传用 SI(Nature 系要求单一合并 PDF)
+│   ├── ReportingSummary_DRAFT_{J}.docx         Reporting Summary 逐题草稿
+│   └── cover_letter_{J}.docx, figures/, 可编辑源
+├── data_and_code/       数据、代码、各图源数据与运行环境(公开仓库复现核心的冻结快照)
+├── presentation/
+│   ├── AOC2026_v3_redesign/           2026-10 新版报告:同一叙事三种风格(浅色/深色/暖色)+ 中文版,含讲稿
+│   ├── AOC2026_Singapore_EN/          英文会议报告 20 页(pptx + pdf)与中英对照讲稿
+│   └── 鸟类新纪录生成风险_会议报告_20页_v8.{pptx,pdf}   中文报告
+├── _archives/           {GCB,NEE,NC}_upload_日期.zip、presentation_日期.zip、data_and_code_日期.zip
+├── editable_figures_manifest.csv    每个可编辑 PPTX 的来源、形状数与回渲染差异
+├── FIGURES_POLISHED_NOTES.md        顶刊版主图:改了什么、改用时图注要补哪句
+├── work/                修订说明与中间件(REVISION_NOTES_*.md)
+├── SUBMISSION_CHECKLIST.md          逐项投稿核对表
+├── FIGURE_MANIFEST.md               图件清单
+├── THREE_VERSIONS.md                三版差异说明
+├── CRediT_and_authors_TEMPLATE.md   作者与贡献声明模板(待作者填写)
+├── ReportingSummary_DRAFT_NatureFamily.*   Reporting Summary 共用源稿
+└── three_versions_wordcount.csv     分节词数与硬约束对照
 ```
 
----
+根目录下的 `Manuscript_NatureFamily_*` 是**三版共同的历史源稿**(装配脚本 202 的
+输入),不是投稿件;`wordcount_vs_journal_limits.csv` 为早期对照,已由
+`three_versions_wordcount.csv` 取代。两者保留以便追溯。
 
-## 字数现状与三家的差距
+> ⚠️ 源稿早于 2026-09-24 的修订:其中「新纪录强烈偏向东与东北」的结论已被几何零假设检验推翻
+> (脚本 214;见三版正文「Records lie slightly north of where geometry and effort place them」)。
+> 请勿再从源稿摘取正文文字。
 
-**当前文稿按 Nature 系结构写成，但长度是 GCB 的量级。**
+## 当前状态(2026-10-13)
 
-| 项目 | 现状 | NEE | NC | GCB |
-|---|---|---|---|---|
-| 摘要词数 | **428** | ~150 | ≤150 | ≤250 |
-| 正文（Intro+Results+Disc） | **7,751** | ~3,500 | ~5,000（建议） | — |
-| 全文含 Methods | **9,191** | — | — | ≤8,000 |
-| 参考文献 | 82 | 正文约 50 | 不限 | 不限 |
-| 展示项（9 表 + 18 图） | **27** | ≤6 | ≤10 | 从宽 |
+| | GCB | NEE | NC |
+|---|---|---|---|
+| 字数 / 上限 | **7,959 / 8,000**(含致谢) | **3,404 / 3,500** | **4,967 / 5,000** |
+| 摘要 / 上限 | **293 / 300** | **189 / 200** | **197 / 200** |
+| 参考文献 | 38 | 37 | 37 |
+| 正文图 | 7 | 5 | 7 |
+| SI(Notes / Tables / Figs) | 7 / 10 / 21 | 11 / 12 / 23 | 8 / 10 / 20 |
+| 引文体例 | 作者-年份 | 编号上标 | 编号上标 |
+| 上传压缩包 | 13.0 MB | 15.4 MB | 16.7 MB |
 
-三家都需要压缩，程度差别很大：
+各刊限额于 2026-09-24 核对官方页面;Nature 系初投格式与 SI 要求于 2026-09-27 复核。
+逐项状态见 `SUBMISSION_CHECKLIST.md`。
 
-- **NEE**：正文要砍到 45%，摘要砍到 35%，展示项砍到 22%。这不是编辑加工，是重写。
-- **NC**：正文砍到 65%，摘要砍到 35%，展示项砍到 37%。工作量中等。
-- **GCB**：全文砍 13%（9,191 → 8,000），摘要砍到 58%，展示项基本不用动。**改动最小。**
+## 重新生成
 
-但 GCB 需要两处结构性改造，Nature 系不需要：
+```bash
+Rscript --no-init-file code/186_spatiotemporal_pattern_en.R   # SI 时空格局图(CBNR v2, 1,029 条)
+Rscript --no-init-file code/214_direction_geometric_null.R    # 方向的几何零假设(须先于 154)
+Rscript --no-init-file code/154_directional_windrose_radar.R   # 方向图(主图读取 214 的结果)
+Rscript --no-init-file code/216_aoc_direction_null_figure.R    # 报告用方向图
+python3.11 code/203_gcb_package.py        # GCB 包(图注与 SI 由 docs/MANUSCRIPT_v2.md 生成)
+python3.11 code/204_nee_nc_packages.py    # NEE / NC 包
+python3.11 code/205_prune_references.py   # 文献裁剪与重编号;渲染正文(双倍行距)与 SI(1.15 倍)docx
+python3.11 code/206_restyle_tables.py     # 全部表格改为三线表
+python3.11 code/217_editable_figures.py    # 主图与 SI 图的可编辑 PPTX;顶刊版主图按各刊编号放入 figures_polished/
+Rscript --no-init-file code/218a_tj_main_results.R   # 顶刊版主图(218a–218d,共用主题 218_theme_topjournal.R)
+python3.11 code/219_data_code_package.py   # data_and_code/ 与压缩包
+python3.11 code/215_build_final_package.py  # 完整稿件、投稿信、PDF、Reporting Summary、PPT 同步、上传压缩包
+wm-clean <交付文件…>                         # 清除 AI 印记(不处理代码与数据),之后运行 215 --zips-only 与 219 --zip-only
+python3.11 code/207_recount_wordcounts.py # 只读复核词数
+python3.11 code/212_package_qc.py         # 终检(须 0 失败)
+python3.11 code/213_ai_style_scan.py      # 写作风格扫描
+python3.11 code/220_sync_public_repo.py   # 同步到公开仓库克隆(只改工作区,提交与推送另行执行)
+```
 
-1. **引文改为作者-年份制**（Wiley/GCB 用 author–date），82 条编号引文需逐条映射
-2. **Methods 移到 Introduction 之后**，改为常规 IMRaD 顺序
+- 所有 R 脚本须 `--no-init-file` 且在任务根目录运行。
+- **`code/202_assemble_journal_versions.py` 会覆盖手工改写的正文,不要运行。**
+- 会议报告由 deck 工程生成:英文 `~/.claude/skills/easyslides/projects/bird_talk_aoc2026_en_ppt169_20260923/`
+  (`build_deck_en.py` → easyslides 导出 → `src/make_script_doc.py`),中文
+  `…/bird_talk_v2_ppt169_20260816/`(`build_deck.py` → 导出 → `export_pdf_cjk.py` 生成 PDF;
+  本机无微软雅黑,直接转 PDF 会回退到手写体)。215 负责把两份 deck 同步进本目录。
 
----
+## 图件
 
-## 建议的压缩路径
+- 全部投稿图件为英文;地图底图审图号 GS(2019)1822,含南海诸岛与九段线,未作几何改动。
+- 方位主图(GCB 图 6 / NEE 图 4 / NC 图 5)为三联图:观测与两个零假设的方位份额、
+  各方位观测/期望比及 95% 蒙特卡洛区间、六个目的风玫瑰。
+- 版面字号:正文图在 GCB 全页宽(176 mm)下最小 5.3–6.2 pt,满足 Nature 系 5 pt 下限;
+  GCB 要求最终 8 pt,定稿时由编辑部排版确认。
+- 排版质检:`python3.11 code/208_figure_qc.py <pdf>...`。
 
-Results 占 6,246 词，是压缩的主战场。可搬进 Supplementary 的整段：
+## 仍需作者提供(详见核对表第 4 节)
 
-| 小节 | 词数量级 | 处置建议 |
-|---|---|---|
-| 迁徙策略分层 | 中 | 整体移入 SI，正文留两句 |
-| 物种尺度与省级尺度 | 大 | 移入 SI，正文留结论句 + 指向 SI 图 |
-| 方向偏倚 | 中 | 正文保留一段（它是四条主结论之一） |
-| 稳健性（阈值/指标/窗口/基线/努力代理） | 大 | 整体移入 SI，正文压成一句「在 N 种设定下方向不变（SI 表 Sx）」|
-| 模型充分性与重抽样 | 中 | 移入 SI，正文留一句 |
-| 保护地关联 | 中 | 若投 NEE/NC 建议整体移出，单独成文 |
-| 市县降尺度 | — | 尚未写入文稿正文 |
-
-按上表处理后，正文可压到约 3,800–4,200 词——够 NC，接近 NEE 但仍需再砍一轮。
-
-摘要 428 → 150 需要重写，不是删句：Nature 系摘要不带引文、不分小标题，
-通常是 1 句背景 + 1 句问题 + 3–4 句结果 + 1 句意义。
-
----
-
-## 尚未完成的投稿件
-
-以下是投稿必需但目前没有的，按需要补：
-
-- Cover letter
-- 作者贡献声明（CRediT）、利益冲突声明、致谢、基金号
-- 完整作者名单与单位（当前为 `Chenchen Ding, et al.`，单一单位占位）
-- Supplementary Information 文档（把上表移出的内容组织成 SI）
-- Extended Data 图件的正式编号与文件（当前 Fig. 1、3、5 编号不连续）
-- Data availability 与 Code availability 的正式表述（仓库 README 已有素材）
-- 图件按目标期刊的尺寸与分辨率重新导出（NEE/NC 单栏 89 mm、双栏 183 mm）
-
----
-
-## 已知的小问题
-
-- 行号从第 2 行开始计（第 1 行是空段），Word 中重新编号即可
-- `Extended Data Fig.` 编号为 1、3、5，不连续，投稿前需重排
-- 表格与图注在单独文件，若目标期刊要求单文件投稿，合并即可
+- 完整作者名单、单位、ORCID 与 CRediT 贡献声明(见 `CRediT_and_authors_TEMPLATE.md`)
+- 基金来源与项目编号(三版致谢中的方括号占位;GCB 已预留约 41 词余量)
+- GCB 的五位推荐审稿人(姓名 + 机构邮箱);NEE/NC 的推荐与回避审稿人(可选);是否有预印本
+- 正文中 S0 "previously published specification" 的正式引文
+- GBIF 下载 DOI(或注册 GBIF derived dataset);代码仓库的 Zenodo DOI(接收后)
+- 确认:竞争利益声明、AI 使用披露措辞、CBNR 数据论文状态("in review")、方位结论的更正

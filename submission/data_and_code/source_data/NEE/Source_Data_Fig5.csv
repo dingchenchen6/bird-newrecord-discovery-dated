@@ -1,0 +1,905 @@
+"panel","series","group","x","y","xmin","xmax"
+"a","province-year mean hazard","Anhui 2002",0.00234659831646251,0.0015962175940968,NA,NA
+"a","province-year mean hazard","Anhui 2004",0.0022908938395248,0.00175440998104097,NA,NA
+"a","province-year mean hazard","Anhui 2005",0.0023856151614891,0.0018074632951749,NA,NA
+"a","province-year mean hazard","Anhui 2006",0.00284026767809097,0.00306033689918874,NA,NA
+"a","province-year mean hazard","Anhui 2007",0.00280730719241752,0.00408430347233911,NA,NA
+"a","province-year mean hazard","Anhui 2008",0.00335916422138428,0.00256126954001148,NA,NA
+"a","province-year mean hazard","Anhui 2009",0.00350531733047354,0.00350388837503285,NA,NA
+"a","province-year mean hazard","Anhui 2010",0.00346624312723944,0.00230207357081882,NA,NA
+"a","province-year mean hazard","Anhui 2011",0.00380188882357556,0.00542659811617341,NA,NA
+"a","province-year mean hazard","Anhui 2012",0.00382425787687199,0.00326043704826908,NA,NA
+"a","province-year mean hazard","Anhui 2013",0.0042112207462164,0.00561081541170904,NA,NA
+"a","province-year mean hazard","Anhui 2014",0.00423011627428086,0.00513544291452844,NA,NA
+"a","province-year mean hazard","Anhui 2015",0.00365393488497636,0.00320457528236687,NA,NA
+"a","province-year mean hazard","Anhui 2016",0.00375722386901667,0.00489880551179719,NA,NA
+"a","province-year mean hazard","Anhui 2017",0.00393270105841195,0.00514527069827515,NA,NA
+"a","province-year mean hazard","Anhui 2018",0.00441620062654416,0.00869720501519834,NA,NA
+"a","province-year mean hazard","Anhui 2019",0.00462240990186886,0.00431161035233262,NA,NA
+"a","province-year mean hazard","Anhui 2020",0.00450407753903186,0.0065044672482393,NA,NA
+"a","province-year mean hazard","Anhui 2021",0.00455698389541739,0.00450349926386513,NA,NA
+"a","province-year mean hazard","Anhui 2022",0.00481063003061222,0.00693830647608539,NA,NA
+"a","province-year mean hazard","Anhui 2023",0.00518551947618576,0.00444706749477971,NA,NA
+"a","province-year mean hazard","Anhui 2024",0.00585885978441261,0.00254866707529697,NA,NA
+"a","province-year mean hazard","Beijing 2002",0.00260233421167996,0.00322045669608313,NA,NA
+"a","province-year mean hazard","Beijing 2003",0.001971169038756,0.00237508517450404,NA,NA
+"a","province-year mean hazard","Beijing 2004",0.0023311653833155,0.00371560477787022,NA,NA
+"a","province-year mean hazard","Beijing 2005",0.0022522443665854,0.00405736866390757,NA,NA
+"a","province-year mean hazard","Beijing 2006",0.00245609063112418,0.0048950110678561,NA,NA
+"a","province-year mean hazard","Beijing 2007",0.00267371153003639,0.00408845052836716,NA,NA
+"a","province-year mean hazard","Beijing 2008",0.00259832758609619,0.00222337992662298,NA,NA
+"a","province-year mean hazard","Beijing 2009",0.00279446920562164,0.00434220991467425,NA,NA
+"a","province-year mean hazard","Beijing 2010",0.00288289454792441,0.00420895904653934,NA,NA
+"a","province-year mean hazard","Beijing 2011",0.00277955549278946,0.00435774844358703,NA,NA
+"a","province-year mean hazard","Beijing 2012",0.00300823478407954,0.00355127232860359,NA,NA
+"a","province-year mean hazard","Beijing 2013",0.00303426478662523,0.00471858172123433,NA,NA
+"a","province-year mean hazard","Beijing 2014",0.0032507685209552,0.00353134981020171,NA,NA
+"a","province-year mean hazard","Beijing 2015",0.00328808751361832,0.00447582270795811,NA,NA
+"a","province-year mean hazard","Beijing 2016",0.00346476483577577,0.00271132099442184,NA,NA
+"a","province-year mean hazard","Beijing 2017",0.00388884019847169,0.00420276485750003,NA,NA
+"a","province-year mean hazard","Beijing 2018",0.00433883091786,0.00789656834452708,NA,NA
+"a","province-year mean hazard","Beijing 2019",0.00442615031597292,0.00248183404176455,NA,NA
+"a","province-year mean hazard","Beijing 2020",0.00464555088007669,0.0024161281702618,NA,NA
+"a","province-year mean hazard","Beijing 2021",0.00497348262270182,0.00749524823040701,NA,NA
+"a","province-year mean hazard","Beijing 2022",0.00526885229653431,0.00219105412397766,NA,NA
+"a","province-year mean hazard","Beijing 2023",0.00547425600955608,0.00150396178996743,NA,NA
+"a","province-year mean hazard","Beijing 2024",0.00604081167507574,0.00156269366070774,NA,NA
+"a","province-year mean hazard","Chongqing 2002",0.00147888372474386,0.00172089502621317,NA,NA
+"a","province-year mean hazard","Chongqing 2003",0.00117690082902158,0.00165624495132886,NA,NA
+"a","province-year mean hazard","Chongqing 2004",0.00104071522425002,0.00140300511155777,NA,NA
+"a","province-year mean hazard","Chongqing 2005",0.000953414384881849,0.00140654689792522,NA,NA
+"a","province-year mean hazard","Chongqing 2006",0.00128646986018006,0.00152647022313508,NA,NA
+"a","province-year mean hazard","Chongqing 2007",0.00130064248545981,0.00231199341976064,NA,NA
+"a","province-year mean hazard","Chongqing 2008",0.00144540352365917,0.0016363907049769,NA,NA
+"a","province-year mean hazard","Chongqing 2009",0.00115091370227871,0.00157153212286635,NA,NA
+"a","province-year mean hazard","Chongqing 2010",0.00148113547452942,0.00204321299368098,NA,NA
+"a","province-year mean hazard","Chongqing 2011",0.00125605564124783,0.00162899801548611,NA,NA
+"a","province-year mean hazard","Chongqing 2012",0.00098248980681874,0.0018265595680709,NA,NA
+"a","province-year mean hazard","Chongqing 2013",0.00124177960794986,0.00152549583626202,NA,NA
+"a","province-year mean hazard","Chongqing 2014",0.00131668233254184,0.00200462038291817,NA,NA
+"a","province-year mean hazard","Chongqing 2015",0.0016012230562968,0.00290282838577451,NA,NA
+"a","province-year mean hazard","Chongqing 2016",0.00164635627951529,0.00255382807576488,NA,NA
+"a","province-year mean hazard","Chongqing 2017",0.00201294076871617,0.00287792035737919,NA,NA
+"a","province-year mean hazard","Chongqing 2018",0.00190859813850978,0.00337305363453454,NA,NA
+"a","province-year mean hazard","Chongqing 2019",0.00202231624800536,0.00370715529130098,NA,NA
+"a","province-year mean hazard","Chongqing 2020",0.00194409963694059,0.00198459944442368,NA,NA
+"a","province-year mean hazard","Chongqing 2021",0.00234209237827188,0.00296032751341684,NA,NA
+"a","province-year mean hazard","Chongqing 2022",0.00285028691641496,0.00327130517127166,NA,NA
+"a","province-year mean hazard","Chongqing 2023",0.00325854985403704,0.00273209266597405,NA,NA
+"a","province-year mean hazard","Chongqing 2024",0.00418327765707023,0.00273656594128964,NA,NA
+"a","province-year mean hazard","Fujian 2002",0.000819539902846715,0.0018658331068367,NA,NA
+"a","province-year mean hazard","Fujian 2003",0.00119255945758422,0.00215414274974582,NA,NA
+"a","province-year mean hazard","Fujian 2004",0.00111608416026388,0.00223194177416013,NA,NA
+"a","province-year mean hazard","Fujian 2005",0.000905269640448831,0.00205935648791821,NA,NA
+"a","province-year mean hazard","Fujian 2006",0.000705375769515946,0.00178258173831704,NA,NA
+"a","province-year mean hazard","Fujian 2007",0.00123534040565165,0.00230762623392071,NA,NA
+"a","province-year mean hazard","Fujian 2008",0.00106597077486643,0.00220301826600523,NA,NA
+"a","province-year mean hazard","Fujian 2009",0.000742496188728369,0.00135329105777035,NA,NA
+"a","province-year mean hazard","Fujian 2010",0.000982501460849505,0.00165150455703386,NA,NA
+"a","province-year mean hazard","Fujian 2011",0.00085579673786423,0.00149281552178247,NA,NA
+"a","province-year mean hazard","Fujian 2012",0.00110222424695612,0.00209908701280919,NA,NA
+"a","province-year mean hazard","Fujian 2013",0.00130051922545484,0.00275371583887357,NA,NA
+"a","province-year mean hazard","Fujian 2014",0.00132911553858539,0.00257531128261542,NA,NA
+"a","province-year mean hazard","Fujian 2015",0.00148541192180563,0.00452801155693971,NA,NA
+"a","province-year mean hazard","Fujian 2016",0.00152965961894979,0.00426663814252637,NA,NA
+"a","province-year mean hazard","Fujian 2017",0.00176435238907687,0.00305409402748317,NA,NA
+"a","province-year mean hazard","Fujian 2018",0.00202824378401935,0.00345743135588591,NA,NA
+"a","province-year mean hazard","Fujian 2019",0.00213037530509894,0.00281203019371556,NA,NA
+"a","province-year mean hazard","Fujian 2020",0.00207720456520641,0.00251066124384767,NA,NA
+"a","province-year mean hazard","Fujian 2021",0.00244273255881887,0.00330588576994175,NA,NA
+"a","province-year mean hazard","Fujian 2022",0.00270193537628392,0.00276758269932909,NA,NA
+"a","province-year mean hazard","Fujian 2023",0.00329129295464226,0.00253718588564786,NA,NA
+"a","province-year mean hazard","Fujian 2024",0.00386522955861847,0.00195224028507426,NA,NA
+"a","province-year mean hazard","Gansu 2002",0.00252254861540416,0.00208156527163378,NA,NA
+"a","province-year mean hazard","Gansu 2004",0.00255946133072991,0.00186772355797929,NA,NA
+"a","province-year mean hazard","Gansu 2005",0.00225963877818103,0.00157304816732031,NA,NA
+"a","province-year mean hazard","Gansu 2006",0.00271739929031692,0.0022417965313803,NA,NA
+"a","province-year mean hazard","Gansu 2007",0.00337870746139919,0.00212896366960468,NA,NA
+"a","province-year mean hazard","Gansu 2008",0.00251150745403217,0.00264150120048028,NA,NA
+"a","province-year mean hazard","Gansu 2009",0.00351585353536084,0.00226914907633199,NA,NA
+"a","province-year mean hazard","Gansu 2010",0.00337625071992786,0.00242716351981628,NA,NA
+"a","province-year mean hazard","Gansu 2011",0.00438984862128856,0.00374618658518965,NA,NA
+"a","province-year mean hazard","Gansu 2012",0.00426676338945816,0.00485332892075631,NA,NA
+"a","province-year mean hazard","Gansu 2013",0.00447949399516413,0.0040787982743936,NA,NA
+"a","province-year mean hazard","Gansu 2014",0.00440299719006033,0.00512281131947627,NA,NA
+"a","province-year mean hazard","Gansu 2015",0.00437643841149825,0.00441440321502636,NA,NA
+"a","province-year mean hazard","Gansu 2016",0.0044404555713383,0.00582497232142588,NA,NA
+"a","province-year mean hazard","Gansu 2017",0.0047393189679736,0.00536553784053119,NA,NA
+"a","province-year mean hazard","Gansu 2018",0.0048999000698942,0.00531972272084593,NA,NA
+"a","province-year mean hazard","Gansu 2019",0.00523755772911949,0.00477956447414953,NA,NA
+"a","province-year mean hazard","Gansu 2020",0.00491895718053238,0.00669831901169536,NA,NA
+"a","province-year mean hazard","Gansu 2021",0.00480617706927532,0.0089281176533133,NA,NA
+"a","province-year mean hazard","Gansu 2022",0.00531085197492728,0.0068092602039528,NA,NA
+"a","province-year mean hazard","Gansu 2023",0.00609303040382027,0.00414176475247726,NA,NA
+"a","province-year mean hazard","Gansu 2024",0.00657812723485967,0.00197185563395529,NA,NA
+"a","province-year mean hazard","Guangdong 2002",0.00123976854737325,0.00165131433394307,NA,NA
+"a","province-year mean hazard","Guangdong 2003",0.0011707557581202,0.00156677306890131,NA,NA
+"a","province-year mean hazard","Guangdong 2004",0.000921102304791626,0.00216071537981216,NA,NA
+"a","province-year mean hazard","Guangdong 2005",0.00104588716762144,0.00160294541724872,NA,NA
+"a","province-year mean hazard","Guangdong 2006",0.00107280303369602,0.00175460774107026,NA,NA
+"a","province-year mean hazard","Guangdong 2007",0.00111869588303983,0.00197935423409999,NA,NA
+"a","province-year mean hazard","Guangdong 2008",0.00100668130119183,0.00197429479163448,NA,NA
+"a","province-year mean hazard","Guangdong 2009",0.00120498040266755,0.00245867470736961,NA,NA
+"a","province-year mean hazard","Guangdong 2010",0.00117979380757324,0.00223422421870272,NA,NA
+"a","province-year mean hazard","Guangdong 2011",0.000879531083566539,0.00165651536969305,NA,NA
+"a","province-year mean hazard","Guangdong 2012",0.0010470966583465,0.00190583561295591,NA,NA
+"a","province-year mean hazard","Guangdong 2013",0.00132852336371766,0.00354370631215878,NA,NA
+"a","province-year mean hazard","Guangdong 2014",0.00153757699228672,0.00475166250827543,NA,NA
+"a","province-year mean hazard","Guangdong 2015",0.00154669883828845,0.00526170551335295,NA,NA
+"a","province-year mean hazard","Guangdong 2016",0.00180948924046303,0.0025845000764777,NA,NA
+"a","province-year mean hazard","Guangdong 2017",0.00193495274017292,0.00258274149502841,NA,NA
+"a","province-year mean hazard","Guangdong 2018",0.00236367406544216,0.00234049894236233,NA,NA
+"a","province-year mean hazard","Guangdong 2019",0.00268501595873013,0.00278352523993708,NA,NA
+"a","province-year mean hazard","Guangdong 2020",0.00265329239376203,0.00306778163371233,NA,NA
+"a","province-year mean hazard","Guangdong 2021",0.0030388174029487,0.00169998841752289,NA,NA
+"a","province-year mean hazard","Guangdong 2022",0.00343000019104428,0.00282953360429877,NA,NA
+"a","province-year mean hazard","Guangdong 2023",0.00410956115365271,0.00322805812385978,NA,NA
+"a","province-year mean hazard","Guangdong 2024",0.00242489190531769,0.00258898490217382,NA,NA
+"a","province-year mean hazard","Guangxi 2002",0.00183426705123582,0.00186855323921698,NA,NA
+"a","province-year mean hazard","Guangxi 2003",0.00183076613477555,0.00186197740466394,NA,NA
+"a","province-year mean hazard","Guangxi 2004",0.00180655571748995,0.00334565682536201,NA,NA
+"a","province-year mean hazard","Guangxi 2005",0.0020726033392731,0.0035506759308513,NA,NA
+"a","province-year mean hazard","Guangxi 2006",0.00152241437708421,0.00180769241425,NA,NA
+"a","province-year mean hazard","Guangxi 2007",0.00155319922679606,0.00119827524441654,NA,NA
+"a","province-year mean hazard","Guangxi 2008",0.00148202996336545,0.00121199766316557,NA,NA
+"a","province-year mean hazard","Guangxi 2009",0.00128492622316418,0.00159225268013514,NA,NA
+"a","province-year mean hazard","Guangxi 2010",0.00182607588803763,0.00191637738038884,NA,NA
+"a","province-year mean hazard","Guangxi 2011",0.00171194720925485,0.00206093154934529,NA,NA
+"a","province-year mean hazard","Guangxi 2012",0.00168493977336589,0.00183253803283555,NA,NA
+"a","province-year mean hazard","Guangxi 2013",0.00186981476791564,0.00564870796385351,NA,NA
+"a","province-year mean hazard","Guangxi 2014",0.00255436901231196,0.00319576755364741,NA,NA
+"a","province-year mean hazard","Guangxi 2015",0.00252881665179418,0.00443290343934568,NA,NA
+"a","province-year mean hazard","Guangxi 2016",0.00224125456006377,0.00255128332951066,NA,NA
+"a","province-year mean hazard","Guangxi 2017",0.00259912041283144,0.00251948470592782,NA,NA
+"a","province-year mean hazard","Guangxi 2018",0.00299675280845573,0.00254738579294229,NA,NA
+"a","province-year mean hazard","Guangxi 2019",0.00329532323768849,0.00223444802447505,NA,NA
+"a","province-year mean hazard","Guangxi 2020",0.00310406926404098,0.00289814009982885,NA,NA
+"a","province-year mean hazard","Guangxi 2021",0.00407090501832639,0.00228216620564785,NA,NA
+"a","province-year mean hazard","Guangxi 2022",0.0041317292505299,0.00237381068040787,NA,NA
+"a","province-year mean hazard","Guangxi 2023",0.00526058720831277,0.00147429156927876,NA,NA
+"a","province-year mean hazard","Guangxi 2024",0.0064613485302777,0.00318548696642413,NA,NA
+"a","province-year mean hazard","Guizhou 2002",0.00158015754766186,0.00168371733710223,NA,NA
+"a","province-year mean hazard","Guizhou 2004",0.00204572994440294,0.00310238467837377,NA,NA
+"a","province-year mean hazard","Guizhou 2006",0.00173153943830873,0.00188262591148896,NA,NA
+"a","province-year mean hazard","Guizhou 2007",0.00153996256785744,0.00103788512566249,NA,NA
+"a","province-year mean hazard","Guizhou 2008",0.00232066322851295,0.00194824369848905,NA,NA
+"a","province-year mean hazard","Guizhou 2009",0.00110195942382094,0.00132709038827885,NA,NA
+"a","province-year mean hazard","Guizhou 2010",0.00139094030689205,0.0010913883485993,NA,NA
+"a","province-year mean hazard","Guizhou 2011",0.000974810287976919,0.00124754601947468,NA,NA
+"a","province-year mean hazard","Guizhou 2012",0.00188214668790063,0.00162218641048493,NA,NA
+"a","province-year mean hazard","Guizhou 2013",0.00113464537225685,0.00104868249017595,NA,NA
+"a","province-year mean hazard","Guizhou 2014",0.0020530087803308,0.00231358413518812,NA,NA
+"a","province-year mean hazard","Guizhou 2015",0.00230474119816205,0.00230544509555897,NA,NA
+"a","province-year mean hazard","Guizhou 2016",0.00226931040680593,0.00370431265255795,NA,NA
+"a","province-year mean hazard","Guizhou 2017",0.00222042065178687,0.00552201184280003,NA,NA
+"a","province-year mean hazard","Guizhou 2018",0.00328745770575417,0.00348572921769986,NA,NA
+"a","province-year mean hazard","Guizhou 2019",0.00339568096892709,0.00403564697364345,NA,NA
+"a","province-year mean hazard","Guizhou 2020",0.00347693253593764,0.00360386627778819,NA,NA
+"a","province-year mean hazard","Guizhou 2021",0.0033944255352059,0.00286780380226847,NA,NA
+"a","province-year mean hazard","Guizhou 2022",0.00398448167612374,0.002405282918787,NA,NA
+"a","province-year mean hazard","Guizhou 2023",0.0046929546430981,0.00606284465007972,NA,NA
+"a","province-year mean hazard","Guizhou 2024",0.0060478210072771,0.00347715634508603,NA,NA
+"a","province-year mean hazard","Hainan 2002",0.00153390726886694,0.00219278720154155,NA,NA
+"a","province-year mean hazard","Hainan 2003",0.00192112760880749,0.0018770055507452,NA,NA
+"a","province-year mean hazard","Hainan 2004",0.00209095488343849,0.00237803360128223,NA,NA
+"a","province-year mean hazard","Hainan 2005",0.00204189977516428,0.00257142975758545,NA,NA
+"a","province-year mean hazard","Hainan 2006",0.00215921457188888,0.00199122983506972,NA,NA
+"a","province-year mean hazard","Hainan 2007",0.00202674796490576,0.0021857398629127,NA,NA
+"a","province-year mean hazard","Hainan 2008",0.00132109554233547,0.00194119237837315,NA,NA
+"a","province-year mean hazard","Hainan 2009",0.00178222963850142,0.00179309619173485,NA,NA
+"a","province-year mean hazard","Hainan 2010",0.00184122021796191,0.00222906262344969,NA,NA
+"a","province-year mean hazard","Hainan 2011",0.000914474572420468,0.00137512929056343,NA,NA
+"a","province-year mean hazard","Hainan 2012",0.0017227076753427,0.00168240281617331,NA,NA
+"a","province-year mean hazard","Hainan 2013",0.0017299235405075,0.00289998381244326,NA,NA
+"a","province-year mean hazard","Hainan 2014",0.00166329760658449,0.00191127621154741,NA,NA
+"a","province-year mean hazard","Hainan 2015",0.00167059674097194,0.00128521258342186,NA,NA
+"a","province-year mean hazard","Hainan 2016",0.00192874073761504,0.00298279667043118,NA,NA
+"a","province-year mean hazard","Hainan 2017",0.00224755435097088,0.00483838630768885,NA,NA
+"a","province-year mean hazard","Hainan 2018",0.00246498681547237,0.00483968323220359,NA,NA
+"a","province-year mean hazard","Hainan 2019",0.00228568555958076,0.00189406680681928,NA,NA
+"a","province-year mean hazard","Hainan 2020",0.00238234849578323,0.00268246084741287,NA,NA
+"a","province-year mean hazard","Hainan 2021",0.00338656692556877,0.00382220185708195,NA,NA
+"a","province-year mean hazard","Hainan 2022",0.00387044322742835,0.00269073435077283,NA,NA
+"a","province-year mean hazard","Hainan 2023",0.00448701454261098,0.00269932760586178,NA,NA
+"a","province-year mean hazard","Hainan 2024",0.00554789743996681,0.00214469296071623,NA,NA
+"a","province-year mean hazard","Hebei 2002",0.00178154079513653,0.00316531667230676,NA,NA
+"a","province-year mean hazard","Hebei 2003",0.00132931382064852,0.00148759790208216,NA,NA
+"a","province-year mean hazard","Hebei 2004",0.00157376090908544,0.00345568252051224,NA,NA
+"a","province-year mean hazard","Hebei 2005",0.00183045666800006,0.0021717463582092,NA,NA
+"a","province-year mean hazard","Hebei 2006",0.00164157488089644,0.00332530835027157,NA,NA
+"a","province-year mean hazard","Hebei 2007",0.00192118642828562,0.00253902546155753,NA,NA
+"a","province-year mean hazard","Hebei 2008",0.00195877837095687,0.00641377913923678,NA,NA
+"a","province-year mean hazard","Hebei 2009",0.00181424869739023,0.0026719497154689,NA,NA
+"a","province-year mean hazard","Hebei 2010",0.00210706261656731,0.0050030397905417,NA,NA
+"a","province-year mean hazard","Hebei 2011",0.00194707766713041,0.00684264101410592,NA,NA
+"a","province-year mean hazard","Hebei 2012",0.00176963882169302,0.00570271468620935,NA,NA
+"a","province-year mean hazard","Hebei 2013",0.00177403281023541,0.00589187922802062,NA,NA
+"a","province-year mean hazard","Hebei 2014",0.00178780589326725,0.00163369501601539,NA,NA
+"a","province-year mean hazard","Hebei 2015",0.00168632741652995,0.00591381903472912,NA,NA
+"a","province-year mean hazard","Hebei 2016",0.00182061707516656,0.00264169556713204,NA,NA
+"a","province-year mean hazard","Hebei 2017",0.00214172619092549,0.00357651536450571,NA,NA
+"a","province-year mean hazard","Hebei 2018",0.00231722848157986,0.00348636119445134,NA,NA
+"a","province-year mean hazard","Hebei 2019",0.00248008510966817,0.00590911027688366,NA,NA
+"a","province-year mean hazard","Hebei 2020",0.00228051440757104,0.00411978239760544,NA,NA
+"a","province-year mean hazard","Hebei 2021",0.0024985517096717,0.00427599649049592,NA,NA
+"a","province-year mean hazard","Hebei 2022",0.00236243036728153,0.00629663926354328,NA,NA
+"a","province-year mean hazard","Hebei 2023",0.00294446296812674,0.00478852970311288,NA,NA
+"a","province-year mean hazard","Hebei 2024",0.00322865354504487,0.00234135257180293,NA,NA
+"a","province-year mean hazard","Heilongjiang 2002",0.0032639679143283,0.00307799486621153,NA,NA
+"a","province-year mean hazard","Heilongjiang 2004",0.00297996903141572,0.0021378951072541,NA,NA
+"a","province-year mean hazard","Heilongjiang 2005",0.0028826767772959,0.00187215458604244,NA,NA
+"a","province-year mean hazard","Heilongjiang 2006",0.00220812391551385,0.00412333337382214,NA,NA
+"a","province-year mean hazard","Heilongjiang 2007",0.00219685087746417,0.00189997241202001,NA,NA
+"a","province-year mean hazard","Heilongjiang 2008",0.00234918747848849,0.00242059247571483,NA,NA
+"a","province-year mean hazard","Heilongjiang 2009",0.00261689539515736,0.00400487889094127,NA,NA
+"a","province-year mean hazard","Heilongjiang 2010",0.00176895646053305,0.00425232644102947,NA,NA
+"a","province-year mean hazard","Heilongjiang 2011",0.00186637620546701,0.00150390542162183,NA,NA
+"a","province-year mean hazard","Heilongjiang 2012",0.00209918325817639,0.00151879264831743,NA,NA
+"a","province-year mean hazard","Heilongjiang 2013",0.00199601509202486,0.00132376547083566,NA,NA
+"a","province-year mean hazard","Heilongjiang 2014",0.00123694879710935,0.00109403841650774,NA,NA
+"a","province-year mean hazard","Heilongjiang 2015",0.00307113503895675,0.0028988465117478,NA,NA
+"a","province-year mean hazard","Heilongjiang 2016",0.0026577608584842,0.00178292985989395,NA,NA
+"a","province-year mean hazard","Heilongjiang 2017",0.00222717191171841,0.00196175833637799,NA,NA
+"a","province-year mean hazard","Heilongjiang 2018",0.0022556077220563,0.00169532623424126,NA,NA
+"a","province-year mean hazard","Heilongjiang 2019",0.00268953089434427,0.00232615380792954,NA,NA
+"a","province-year mean hazard","Heilongjiang 2020",0.00170702896742044,0.00126762797866155,NA,NA
+"a","province-year mean hazard","Heilongjiang 2021",0.00266669558583762,0.00291217868077585,NA,NA
+"a","province-year mean hazard","Heilongjiang 2022",0.00271772961408938,0.00291814467745795,NA,NA
+"a","province-year mean hazard","Heilongjiang 2023",0.00362250479109913,0.00293058766717941,NA,NA
+"a","province-year mean hazard","Heilongjiang 2024",0.00559999474704909,0.00267422332955689,NA,NA
+"a","province-year mean hazard","Henan 2002",0.00181733350906889,0.00143223978853142,NA,NA
+"a","province-year mean hazard","Henan 2003",0.00179444431333143,0.00156748687351946,NA,NA
+"a","province-year mean hazard","Henan 2004",0.00223570640251924,0.00186556824999896,NA,NA
+"a","province-year mean hazard","Henan 2005",0.00219702917006542,0.00196012605130221,NA,NA
+"a","province-year mean hazard","Henan 2006",0.00263830645985248,0.00239874645107627,NA,NA
+"a","province-year mean hazard","Henan 2007",0.00313731644733063,0.00301273907809466,NA,NA
+"a","province-year mean hazard","Henan 2008",0.00373025612517791,0.00510156639783612,NA,NA
+"a","province-year mean hazard","Henan 2009",0.00363379707379885,0.00375338471704688,NA,NA
+"a","province-year mean hazard","Henan 2010",0.00392865417589411,0.00562731471263692,NA,NA
+"a","province-year mean hazard","Henan 2011",0.00416925652743627,0.00757782988355688,NA,NA
+"a","province-year mean hazard","Henan 2012",0.00423480636148538,0.00587618711736864,NA,NA
+"a","province-year mean hazard","Henan 2013",0.00425761242234757,0.00521637464185665,NA,NA
+"a","province-year mean hazard","Henan 2014",0.00450990142392691,0.00766593500112112,NA,NA
+"a","province-year mean hazard","Henan 2015",0.00432687407289827,0.00610038227627313,NA,NA
+"a","province-year mean hazard","Henan 2016",0.00452517427046412,0.0124096239288879,NA,NA
+"a","province-year mean hazard","Henan 2017",0.00461600289195922,0.00805277155577353,NA,NA
+"a","province-year mean hazard","Henan 2018",0.00499616549737652,0.00333478836156428,NA,NA
+"a","province-year mean hazard","Henan 2019",0.00498005606929122,0.00809634456038475,NA,NA
+"a","province-year mean hazard","Henan 2020",0.00489167283111262,0.00379730949066655,NA,NA
+"a","province-year mean hazard","Henan 2021",0.00500316653312269,0.00693850669247,NA,NA
+"a","province-year mean hazard","Henan 2022",0.00500400183949941,0.00929869730880826,NA,NA
+"a","province-year mean hazard","Henan 2023",0.00516293300303455,0.00432460426610867,NA,NA
+"a","province-year mean hazard","Henan 2024",0.0054281330409959,0.002128994596974,NA,NA
+"a","province-year mean hazard","Hubei 2002",0.00203615557920995,0.00181584611685197,NA,NA
+"a","province-year mean hazard","Hubei 2003",0.00156828716178415,0.00181156293135677,NA,NA
+"a","province-year mean hazard","Hubei 2005",0.0019173744986715,0.00179217552677319,NA,NA
+"a","province-year mean hazard","Hubei 2006",0.00240098422906146,0.00204456183780929,NA,NA
+"a","province-year mean hazard","Hubei 2007",0.00265319771962061,0.00207597318493188,NA,NA
+"a","province-year mean hazard","Hubei 2008",0.00280108621439183,0.00337761427009182,NA,NA
+"a","province-year mean hazard","Hubei 2009",0.00271722176140914,0.00220650854906715,NA,NA
+"a","province-year mean hazard","Hubei 2010",0.00294827905537676,0.00255877561038518,NA,NA
+"a","province-year mean hazard","Hubei 2011",0.00319291820314764,0.00571055553056363,NA,NA
+"a","province-year mean hazard","Hubei 2012",0.00315323258664503,0.00561039434839676,NA,NA
+"a","province-year mean hazard","Hubei 2013",0.00332355907915161,0.00464450207311635,NA,NA
+"a","province-year mean hazard","Hubei 2014",0.00317516279873144,0.005116820794295,NA,NA
+"a","province-year mean hazard","Hubei 2015",0.00337762286445493,0.00340853196639196,NA,NA
+"a","province-year mean hazard","Hubei 2016",0.00350374928147268,0.00294281321874788,NA,NA
+"a","province-year mean hazard","Hubei 2017",0.00354555722735248,0.00714886425472475,NA,NA
+"a","province-year mean hazard","Hubei 2018",0.00365499911821991,0.00691527009524822,NA,NA
+"a","province-year mean hazard","Hubei 2019",0.00356809277176215,0.00756117688540957,NA,NA
+"a","province-year mean hazard","Hubei 2020",0.00357450620949696,0.00478483520877412,NA,NA
+"a","province-year mean hazard","Hubei 2021",0.0041566500314077,0.00424766949683071,NA,NA
+"a","province-year mean hazard","Hubei 2022",0.00449973174990885,0.00228140781908719,NA,NA
+"a","province-year mean hazard","Hubei 2023",0.00490581596532822,0.0022169255850498,NA,NA
+"a","province-year mean hazard","Hubei 2024",0.00563030867969392,0.00161709722433576,NA,NA
+"a","province-year mean hazard","Hunan 2002",0.00377044552603549,0.00214753491024527,NA,NA
+"a","province-year mean hazard","Hunan 2003",0.00311657933632488,0.00209351505001424,NA,NA
+"a","province-year mean hazard","Hunan 2004",0.00321068206498362,0.00231967870304501,NA,NA
+"a","province-year mean hazard","Hunan 2005",0.00277175471204335,0.00209434320963296,NA,NA
+"a","province-year mean hazard","Hunan 2006",0.00298501261965596,0.0017852368332402,NA,NA
+"a","province-year mean hazard","Hunan 2007",0.00297675424101418,0.00212007793054866,NA,NA
+"a","province-year mean hazard","Hunan 2008",0.00345748461518132,0.00193873108512114,NA,NA
+"a","province-year mean hazard","Hunan 2009",0.00431092117329164,0.00335722096270124,NA,NA
+"a","province-year mean hazard","Hunan 2010",0.00486100730552814,0.00553969117229944,NA,NA
+"a","province-year mean hazard","Hunan 2011",0.00369565544914001,0.00315332892782909,NA,NA
+"a","province-year mean hazard","Hunan 2012",0.00440828046884704,0.00419287008157516,NA,NA
+"a","province-year mean hazard","Hunan 2013",0.00423669748169494,0.0030548719295577,NA,NA
+"a","province-year mean hazard","Hunan 2014",0.00422459337001477,0.00277771021959702,NA,NA
+"a","province-year mean hazard","Hunan 2015",0.00490947996486828,0.00488358956538842,NA,NA
+"a","province-year mean hazard","Hunan 2016",0.00503629985171077,0.00317616351089019,NA,NA
+"a","province-year mean hazard","Hunan 2017",0.00521334459755088,0.00432710589209646,NA,NA
+"a","province-year mean hazard","Hunan 2018",0.00561085894547071,0.00270599336154327,NA,NA
+"a","province-year mean hazard","Hunan 2019",0.0057294058280211,0.00501561035661209,NA,NA
+"a","province-year mean hazard","Hunan 2020",0.00542046412774011,0.00734740101231508,NA,NA
+"a","province-year mean hazard","Hunan 2021",0.00690193421455243,0.00611214719739599,NA,NA
+"a","province-year mean hazard","Hunan 2022",0.00810861880342835,0.00432022873507921,NA,NA
+"a","province-year mean hazard","Hunan 2023",0.008736912903959,0.00703119752308955,NA,NA
+"a","province-year mean hazard","Hunan 2024",0.0104580370693257,0.00315665855859628,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2003",0.00348962994487712,0.0022166610607848,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2004",0.00369817548744652,0.00324353437056882,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2005",0.00316340376150919,0.00206698147143865,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2006",0.00337321220720808,0.00205262021579868,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2007",0.00382498159077775,0.00430121843105738,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2008",0.00367510738025364,0.00241819937919817,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2009",0.00393385874057727,0.00219379429895939,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2010",0.00337098186200235,0.00316551531937194,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2011",0.00347966347397916,0.00266241874127145,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2012",0.00322678878959788,0.00427367191381907,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2013",0.0036748842097783,0.00446490022516917,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2014",0.0039990889308087,0.00923461705381267,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2015",0.00439111242378664,0.00468688823360329,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2016",0.00432171163481412,0.00264357956697322,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2017",0.0043232567524149,0.00350369740211006,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2018",0.00492766427560352,0.0044083045854046,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2019",0.00476041340951692,0.00767030874703778,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2020",0.00484948499627401,0.0079286249181,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2021",0.00502979675974022,0.00537406349962112,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2022",0.00466796448369237,0.00634589470920595,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2023",0.00567108144805892,0.00338151663475271,NA,NA
+"a","province-year mean hazard","Inner Mongolia 2024",0.00677421476796819,0.00702785924077034,NA,NA
+"a","province-year mean hazard","Jiangsu 2002",0.0022240134910301,0.00151854379063783,NA,NA
+"a","province-year mean hazard","Jiangsu 2003",0.00190158024474905,0.00193593408868765,NA,NA
+"a","province-year mean hazard","Jiangsu 2004",0.00224247194837251,0.00172524904822543,NA,NA
+"a","province-year mean hazard","Jiangsu 2005",0.0022642411044762,0.00159117939435722,NA,NA
+"a","province-year mean hazard","Jiangsu 2006",0.00242828459228778,0.00176976323292668,NA,NA
+"a","province-year mean hazard","Jiangsu 2007",0.00278229425793774,0.0032123626167214,NA,NA
+"a","province-year mean hazard","Jiangsu 2008",0.00308386474671325,0.00259243239613124,NA,NA
+"a","province-year mean hazard","Jiangsu 2009",0.00305469275608485,0.00391094103175357,NA,NA
+"a","province-year mean hazard","Jiangsu 2010",0.00342621937283395,0.00307597840516591,NA,NA
+"a","province-year mean hazard","Jiangsu 2011",0.00364669326930987,0.00264396565834108,NA,NA
+"a","province-year mean hazard","Jiangsu 2012",0.00369129780925979,0.0057249959088641,NA,NA
+"a","province-year mean hazard","Jiangsu 2013",0.00373188502276387,0.00873980110045522,NA,NA
+"a","province-year mean hazard","Jiangsu 2014",0.00399589462684633,0.00517934732389364,NA,NA
+"a","province-year mean hazard","Jiangsu 2015",0.0040249022545637,0.00385216298458894,NA,NA
+"a","province-year mean hazard","Jiangsu 2016",0.0040193646075597,0.00401454396970085,NA,NA
+"a","province-year mean hazard","Jiangsu 2017",0.00414546353638971,0.00504991227544138,NA,NA
+"a","province-year mean hazard","Jiangsu 2018",0.00426939519454518,0.00460609340559688,NA,NA
+"a","province-year mean hazard","Jiangsu 2019",0.00462419674741999,0.00402812058422973,NA,NA
+"a","province-year mean hazard","Jiangsu 2020",0.00459767064026941,0.00361270597122871,NA,NA
+"a","province-year mean hazard","Jiangsu 2021",0.00489898571654775,0.0068187271114112,NA,NA
+"a","province-year mean hazard","Jiangsu 2022",0.00523217545348869,0.00739960587795598,NA,NA
+"a","province-year mean hazard","Jiangsu 2023",0.00591085229050686,0.00926989412082614,NA,NA
+"a","province-year mean hazard","Jiangsu 2024",0.00671054219243577,0.00160326468777616,NA,NA
+"a","province-year mean hazard","Jiangxi 2002",0.00164056176138487,0.00221766547336461,NA,NA
+"a","province-year mean hazard","Jiangxi 2003",0.0015373819790452,0.0021420955817499,NA,NA
+"a","province-year mean hazard","Jiangxi 2004",0.00177761729633106,0.00346585605353432,NA,NA
+"a","province-year mean hazard","Jiangxi 2005",0.00176593871982183,0.00180945741599097,NA,NA
+"a","province-year mean hazard","Jiangxi 2006",0.00196885075779254,0.00177465392740575,NA,NA
+"a","province-year mean hazard","Jiangxi 2007",0.00208754410498425,0.00277256396689901,NA,NA
+"a","province-year mean hazard","Jiangxi 2008",0.00242364358354618,0.00216043673973937,NA,NA
+"a","province-year mean hazard","Jiangxi 2009",0.00259341798618015,0.0031878654671913,NA,NA
+"a","province-year mean hazard","Jiangxi 2010",0.00259751197135944,0.00320397907668145,NA,NA
+"a","province-year mean hazard","Jiangxi 2011",0.00232734863752303,0.00309098527919339,NA,NA
+"a","province-year mean hazard","Jiangxi 2012",0.00281381625246425,0.00380920743319128,NA,NA
+"a","province-year mean hazard","Jiangxi 2013",0.00292151686704232,0.00330741140362273,NA,NA
+"a","province-year mean hazard","Jiangxi 2014",0.00320175967187195,0.00483407361903015,NA,NA
+"a","province-year mean hazard","Jiangxi 2015",0.00320466824837961,0.0043793092321832,NA,NA
+"a","province-year mean hazard","Jiangxi 2016",0.00335377981899793,0.00629306453296147,NA,NA
+"a","province-year mean hazard","Jiangxi 2017",0.00356493064593164,0.00758577125607294,NA,NA
+"a","province-year mean hazard","Jiangxi 2018",0.00387520503950245,0.00386824450083799,NA,NA
+"a","province-year mean hazard","Jiangxi 2019",0.00398814035680181,0.00472378547419794,NA,NA
+"a","province-year mean hazard","Jiangxi 2020",0.00378703269941651,0.00429141717613675,NA,NA
+"a","province-year mean hazard","Jiangxi 2021",0.00419389995953725,0.00434694722075727,NA,NA
+"a","province-year mean hazard","Jiangxi 2022",0.00426697988043422,0.00401774061409258,NA,NA
+"a","province-year mean hazard","Jiangxi 2023",0.00521066035112577,0.00153883631656489,NA,NA
+"a","province-year mean hazard","Jiangxi 2024",0.0057426855657428,0.00253045061895602,NA,NA
+"a","province-year mean hazard","Jilin 2002",0.00236907492336818,0.00274886768801743,NA,NA
+"a","province-year mean hazard","Jilin 2003",0.0026496580186617,0.00231700423492714,NA,NA
+"a","province-year mean hazard","Jilin 2004",0.00263423866034035,0.00232552841121359,NA,NA
+"a","province-year mean hazard","Jilin 2005",0.00247311069207746,0.00217647857131994,NA,NA
+"a","province-year mean hazard","Jilin 2006",0.00210123578519393,0.0018638315970175,NA,NA
+"a","province-year mean hazard","Jilin 2007",0.00274365634154527,0.00353781033333448,NA,NA
+"a","province-year mean hazard","Jilin 2008",0.00236914372259759,0.00395408621499177,NA,NA
+"a","province-year mean hazard","Jilin 2009",0.00221660694376717,0.00318397552028004,NA,NA
+"a","province-year mean hazard","Jilin 2010",0.00191816502244222,0.00468297787458421,NA,NA
+"a","province-year mean hazard","Jilin 2011",0.00200140413771574,0.00213332880855963,NA,NA
+"a","province-year mean hazard","Jilin 2012",0.0015314519144321,0.00224397769586878,NA,NA
+"a","province-year mean hazard","Jilin 2013",0.00132677492992241,0.00189546432522237,NA,NA
+"a","province-year mean hazard","Jilin 2014",0.00174646219538822,0.00165337194747278,NA,NA
+"a","province-year mean hazard","Jilin 2015",0.00170594405159562,0.00303774968831959,NA,NA
+"a","province-year mean hazard","Jilin 2016",0.00179843589940731,0.00196408268754609,NA,NA
+"a","province-year mean hazard","Jilin 2017",0.00199441637150878,0.00205275177387569,NA,NA
+"a","province-year mean hazard","Jilin 2018",0.00233469463120224,0.00254089784953519,NA,NA
+"a","province-year mean hazard","Jilin 2019",0.00226113018481151,0.00651038461395441,NA,NA
+"a","province-year mean hazard","Jilin 2020",0.00143088989246866,0.00227432035019915,NA,NA
+"a","province-year mean hazard","Jilin 2021",0.00297621568452493,0.00583427998589704,NA,NA
+"a","province-year mean hazard","Jilin 2022",0.00222829213308997,0.00384707794253937,NA,NA
+"a","province-year mean hazard","Jilin 2023",0.0036969730121534,0.00623783761820169,NA,NA
+"a","province-year mean hazard","Jilin 2024",0.00461919934102524,0.00431105944058483,NA,NA
+"a","province-year mean hazard","Liaoning 2002",0.00238456034639859,0.00231591715109077,NA,NA
+"a","province-year mean hazard","Liaoning 2004",0.00260919293261226,0.00221548709417636,NA,NA
+"a","province-year mean hazard","Liaoning 2006",0.00196929455464817,0.00136332591962749,NA,NA
+"a","province-year mean hazard","Liaoning 2007",0.00240364497498779,0.00209247857079996,NA,NA
+"a","province-year mean hazard","Liaoning 2008",0.00306521432595092,0.00386254589909212,NA,NA
+"a","province-year mean hazard","Liaoning 2009",0.00292973716580772,0.00243274395175816,NA,NA
+"a","province-year mean hazard","Liaoning 2010",0.00253431659019916,0.00347932033843817,NA,NA
+"a","province-year mean hazard","Liaoning 2011",0.00263027148281079,0.00439271374477003,NA,NA
+"a","province-year mean hazard","Liaoning 2012",0.00266063892860696,0.00678495127470976,NA,NA
+"a","province-year mean hazard","Liaoning 2013",0.00260661931756428,0.0027415096243358,NA,NA
+"a","province-year mean hazard","Liaoning 2014",0.00267254031570001,0.00144330684164975,NA,NA
+"a","province-year mean hazard","Liaoning 2015",0.00313661105583487,0.00487705540702123,NA,NA
+"a","province-year mean hazard","Liaoning 2016",0.00291561385339855,0.00288505197898385,NA,NA
+"a","province-year mean hazard","Liaoning 2017",0.00285664076743484,0.0046617301736055,NA,NA
+"a","province-year mean hazard","Liaoning 2018",0.00312085061470068,0.00269637948949191,NA,NA
+"a","province-year mean hazard","Liaoning 2019",0.00288790922420182,0.00516109821337247,NA,NA
+"a","province-year mean hazard","Liaoning 2020",0.00299619766978036,0.00351132217227765,NA,NA
+"a","province-year mean hazard","Liaoning 2021",0.00365200169002887,0.00415394640671024,NA,NA
+"a","province-year mean hazard","Liaoning 2022",0.0041120552088589,0.00289908899467105,NA,NA
+"a","province-year mean hazard","Liaoning 2023",0.00393158922274138,0.00317319248323965,NA,NA
+"a","province-year mean hazard","Liaoning 2024",0.00518933914620814,0.00228284083703986,NA,NA
+"a","province-year mean hazard","Ningxia 2002",0.00194558979697129,0.00149033461715781,NA,NA
+"a","province-year mean hazard","Ningxia 2007",0.00283988895005061,0.00201501779470139,NA,NA
+"a","province-year mean hazard","Ningxia 2011",0.00361054447947793,0.00319147905133463,NA,NA
+"a","province-year mean hazard","Ningxia 2012",0.00352849483882087,0.00268820155938358,NA,NA
+"a","province-year mean hazard","Ningxia 2013",0.00397481130532768,0.0035534218822368,NA,NA
+"a","province-year mean hazard","Ningxia 2014",0.00397593114602405,0.00288740672429254,NA,NA
+"a","province-year mean hazard","Ningxia 2015",0.0039493885004312,0.00551480249028511,NA,NA
+"a","province-year mean hazard","Ningxia 2016",0.00366873692931322,0.0054601123297091,NA,NA
+"a","province-year mean hazard","Ningxia 2017",0.00403977305355834,0.00436936413445817,NA,NA
+"a","province-year mean hazard","Ningxia 2018",0.00442970365708394,0.00674509073659364,NA,NA
+"a","province-year mean hazard","Ningxia 2019",0.00443614705266096,0.00691161116106467,NA,NA
+"a","province-year mean hazard","Ningxia 2020",0.0042720736534837,0.00647119706594491,NA,NA
+"a","province-year mean hazard","Ningxia 2021",0.00421531798532434,0.00703885309198605,NA,NA
+"a","province-year mean hazard","Ningxia 2022",0.00422113041227854,0.00587552551068474,NA,NA
+"a","province-year mean hazard","Ningxia 2023",0.00467107279350247,0.00853165634363149,NA,NA
+"a","province-year mean hazard","Ningxia 2024",0.00503631337708479,0.00732599255051573,NA,NA
+"a","province-year mean hazard","Qinghai 2002",0.00258322285251467,0.00286445639633276,NA,NA
+"a","province-year mean hazard","Qinghai 2003",0.00116545468824114,0.00151125718426143,NA,NA
+"a","province-year mean hazard","Qinghai 2004",0.00270538954145571,0.00506748754566363,NA,NA
+"a","province-year mean hazard","Qinghai 2005",0.00226290750770872,0.00183103127359068,NA,NA
+"a","province-year mean hazard","Qinghai 2006",0.00209162334986326,0.0020899177316631,NA,NA
+"a","province-year mean hazard","Qinghai 2007",0.00283619746423258,0.00260965231332519,NA,NA
+"a","province-year mean hazard","Qinghai 2008",0.00211332163709496,0.00258884791253854,NA,NA
+"a","province-year mean hazard","Qinghai 2009",0.00217151344398968,0.00300640031328928,NA,NA
+"a","province-year mean hazard","Qinghai 2010",0.00301229181436082,0.00335707195950004,NA,NA
+"a","province-year mean hazard","Qinghai 2011",0.0027428980982685,0.00297220326976788,NA,NA
+"a","province-year mean hazard","Qinghai 2012",0.00356586461906618,0.00454755431436049,NA,NA
+"a","province-year mean hazard","Qinghai 2013",0.00383896623347146,0.00716819210763295,NA,NA
+"a","province-year mean hazard","Qinghai 2014",0.00382735453909035,0.00975824505313421,NA,NA
+"a","province-year mean hazard","Qinghai 2015",0.00344874702765099,0.0055627486737037,NA,NA
+"a","province-year mean hazard","Qinghai 2016",0.00401888692877882,0.00406915432384786,NA,NA
+"a","province-year mean hazard","Qinghai 2017",0.00431626265308902,0.00679338608408995,NA,NA
+"a","province-year mean hazard","Qinghai 2018",0.00440565105366444,0.00401773392361032,NA,NA
+"a","province-year mean hazard","Qinghai 2019",0.00404830381752901,0.00416144442588621,NA,NA
+"a","province-year mean hazard","Qinghai 2020",0.00406659335165934,0.00251645414845445,NA,NA
+"a","province-year mean hazard","Qinghai 2021",0.00407418244653653,0.00408896708640979,NA,NA
+"a","province-year mean hazard","Qinghai 2022",0.00431028862107197,0.00263715021136273,NA,NA
+"a","province-year mean hazard","Qinghai 2023",0.00468005091977849,0.00654648046474904,NA,NA
+"a","province-year mean hazard","Qinghai 2024",0.00503141847995093,0.00214724859065744,NA,NA
+"a","province-year mean hazard","Shaanxi 2002",0.00332925118620395,0.00253047461245653,NA,NA
+"a","province-year mean hazard","Shaanxi 2003",0.00283159136122528,0.00174990718976927,NA,NA
+"a","province-year mean hazard","Shaanxi 2004",0.00357472140970947,0.00442156625279737,NA,NA
+"a","province-year mean hazard","Shaanxi 2005",0.00334242695565172,0.00281039362564146,NA,NA
+"a","province-year mean hazard","Shaanxi 2006",0.00453181058331843,0.00536267486172045,NA,NA
+"a","province-year mean hazard","Shaanxi 2007",0.00509350984235218,0.00533748912455024,NA,NA
+"a","province-year mean hazard","Shaanxi 2008",0.00504966135006395,0.00674338882890879,NA,NA
+"a","province-year mean hazard","Shaanxi 2009",0.0052057540989494,0.0052001606505251,NA,NA
+"a","province-year mean hazard","Shaanxi 2010",0.00548035572534195,0.00683203927129312,NA,NA
+"a","province-year mean hazard","Shaanxi 2011",0.00582040078103762,0.00926736129464157,NA,NA
+"a","province-year mean hazard","Shaanxi 2012",0.00566265675775384,0.00681941990218991,NA,NA
+"a","province-year mean hazard","Shaanxi 2013",0.00599623525921871,0.00579796952000614,NA,NA
+"a","province-year mean hazard","Shaanxi 2014",0.00586989302681269,0.00836397849224798,NA,NA
+"a","province-year mean hazard","Shaanxi 2015",0.00547278905733858,0.00791208961194942,NA,NA
+"a","province-year mean hazard","Shaanxi 2016",0.00536724676826808,0.011185455834493,NA,NA
+"a","province-year mean hazard","Shaanxi 2017",0.00577175005318971,0.0042474005767402,NA,NA
+"a","province-year mean hazard","Shaanxi 2018",0.00601953089126704,0.0057354813846932,NA,NA
+"a","province-year mean hazard","Shaanxi 2019",0.00594614976386039,0.00650392637738636,NA,NA
+"a","province-year mean hazard","Shaanxi 2020",0.00546937263747002,0.0105801231401332,NA,NA
+"a","province-year mean hazard","Shaanxi 2021",0.0051701258689971,0.00301097033560657,NA,NA
+"a","province-year mean hazard","Shaanxi 2022",0.00516072683617582,0.00506631906088585,NA,NA
+"a","province-year mean hazard","Shaanxi 2023",0.00603067830127468,0.00471546334826366,NA,NA
+"a","province-year mean hazard","Shaanxi 2024",0.00670390562816035,0.00198859992747202,NA,NA
+"a","province-year mean hazard","Shandong 2003",0.00178190838883187,0.00141996404877126,NA,NA
+"a","province-year mean hazard","Shandong 2004",0.00169911222289158,0.00175026828967507,NA,NA
+"a","province-year mean hazard","Shandong 2005",0.00160145719432227,0.0015140385858872,NA,NA
+"a","province-year mean hazard","Shandong 2006",0.00215676936631407,0.00178220428970747,NA,NA
+"a","province-year mean hazard","Shandong 2007",0.00182492815590768,0.00200652484093386,NA,NA
+"a","province-year mean hazard","Shandong 2008",0.0020440686758752,0.00183540611328761,NA,NA
+"a","province-year mean hazard","Shandong 2009",0.00195857104860046,0.00170771413389758,NA,NA
+"a","province-year mean hazard","Shandong 2010",0.00204507843431452,0.00212930646022349,NA,NA
+"a","province-year mean hazard","Shandong 2011",0.00220791152515125,0.00291859149022327,NA,NA
+"a","province-year mean hazard","Shandong 2012",0.00190207415571281,0.0019283855675451,NA,NA
+"a","province-year mean hazard","Shandong 2013",0.00184368960310948,0.00206338716772056,NA,NA
+"a","province-year mean hazard","Shandong 2014",0.00201149553208465,0.00180905988395271,NA,NA
+"a","province-year mean hazard","Shandong 2015",0.00177417848293649,0.00157469235693178,NA,NA
+"a","province-year mean hazard","Shandong 2016",0.00251606253801689,0.00363566090956685,NA,NA
+"a","province-year mean hazard","Shandong 2017",0.00302256620543168,0.00387431787887652,NA,NA
+"a","province-year mean hazard","Shandong 2018",0.00323329006482587,0.00536041855476906,NA,NA
+"a","province-year mean hazard","Shandong 2019",0.00315485253546748,0.00479916377045976,NA,NA
+"a","province-year mean hazard","Shandong 2020",0.00328051510137956,0.00652465571734038,NA,NA
+"a","province-year mean hazard","Shandong 2021",0.0038800595702907,0.00609939233297208,NA,NA
+"a","province-year mean hazard","Shandong 2022",0.0040358467328591,0.0044800004137128,NA,NA
+"a","province-year mean hazard","Shandong 2023",0.00476460167720898,0.00650740112981641,NA,NA
+"a","province-year mean hazard","Shandong 2024",0.00566265750796296,0.00216078729234759,NA,NA
+"a","province-year mean hazard","Shanghai 2002",0.00197911225463905,0.0019115865546271,NA,NA
+"a","province-year mean hazard","Shanghai 2003",0.00193396926667079,0.0016673559553149,NA,NA
+"a","province-year mean hazard","Shanghai 2004",0.00249653088861742,0.00228181231882875,NA,NA
+"a","province-year mean hazard","Shanghai 2005",0.00289895149838736,0.00644843894430275,NA,NA
+"a","province-year mean hazard","Shanghai 2006",0.00310715623243131,0.00272831578591174,NA,NA
+"a","province-year mean hazard","Shanghai 2007",0.00274949122884977,0.00342342151107684,NA,NA
+"a","province-year mean hazard","Shanghai 2008",0.00282371930387171,0.00428040916606382,NA,NA
+"a","province-year mean hazard","Shanghai 2009",0.00275704862555324,0.00374853137485237,NA,NA
+"a","province-year mean hazard","Shanghai 2010",0.00288720022648188,0.00310470187762815,NA,NA
+"a","province-year mean hazard","Shanghai 2011",0.00284985752062317,0.00541479935797485,NA,NA
+"a","province-year mean hazard","Shanghai 2012",0.00312405903368902,0.0144448712720793,NA,NA
+"a","province-year mean hazard","Shanghai 2013",0.00313426315878025,0.011389238026106,NA,NA
+"a","province-year mean hazard","Shanghai 2014",0.00322058007793713,0.00810565658952151,NA,NA
+"a","province-year mean hazard","Shanghai 2015",0.00337516964318386,0.00500270800716761,NA,NA
+"a","province-year mean hazard","Shanghai 2016",0.00370344801834519,0.00550179938207813,NA,NA
+"a","province-year mean hazard","Shanghai 2017",0.0038935922986612,0.00402420642162075,NA,NA
+"a","province-year mean hazard","Shanghai 2018",0.00417041759293567,0.0055831394699583,NA,NA
+"a","province-year mean hazard","Shanghai 2019",0.00434613275832981,0.0019135919931484,NA,NA
+"a","province-year mean hazard","Shanghai 2020",0.00434977783663482,0.00165105608749755,NA,NA
+"a","province-year mean hazard","Shanghai 2021",0.00447883379740067,0.0028949631607753,NA,NA
+"a","province-year mean hazard","Shanghai 2022",0.00457082900249899,0.00256554845609857,NA,NA
+"a","province-year mean hazard","Shanghai 2023",0.00511996844896055,0.00852810461262049,NA,NA
+"a","province-year mean hazard","Shanghai 2024",0.00515400889916495,0.00320400452844782,NA,NA
+"a","province-year mean hazard","Shanxi 2002",0.00120806826444706,0.00177331263529918,NA,NA
+"a","province-year mean hazard","Shanxi 2005",0.00137742167433488,0.00192287597378227,NA,NA
+"a","province-year mean hazard","Shanxi 2007",0.00190855091145095,0.00221742454649993,NA,NA
+"a","province-year mean hazard","Shanxi 2008",0.00198016714183456,0.0028314197034989,NA,NA
+"a","province-year mean hazard","Shanxi 2009",0.00179731474555396,0.0033173784416889,NA,NA
+"a","province-year mean hazard","Shanxi 2010",0.00194264306929358,0.00363199637447704,NA,NA
+"a","province-year mean hazard","Shanxi 2011",0.00213429742171328,0.00237093925183958,NA,NA
+"a","province-year mean hazard","Shanxi 2012",0.00221610868543943,0.00405147737937686,NA,NA
+"a","province-year mean hazard","Shanxi 2013",0.00222333392038702,0.00503340012154594,NA,NA
+"a","province-year mean hazard","Shanxi 2014",0.00219932814337387,0.00387394674072749,NA,NA
+"a","province-year mean hazard","Shanxi 2015",0.0019092044309327,0.0019349218152153,NA,NA
+"a","province-year mean hazard","Shanxi 2016",0.00214640633283779,0.0059681847315342,NA,NA
+"a","province-year mean hazard","Shanxi 2017",0.00217227791899198,0.00457587694775348,NA,NA
+"a","province-year mean hazard","Shanxi 2018",0.002586845251639,0.00578341784530154,NA,NA
+"a","province-year mean hazard","Shanxi 2019",0.00269746643294517,0.00535857894549697,NA,NA
+"a","province-year mean hazard","Shanxi 2020",0.00269054545008035,0.00618228429522348,NA,NA
+"a","province-year mean hazard","Shanxi 2021",0.00266477405497942,0.00303420668105944,NA,NA
+"a","province-year mean hazard","Shanxi 2022",0.00255164661360953,0.00673922177589547,NA,NA
+"a","province-year mean hazard","Shanxi 2023",0.00295915905942019,0.00748981500234261,NA,NA
+"a","province-year mean hazard","Shanxi 2024",0.00332025594056593,0.0057241264134822,NA,NA
+"a","province-year mean hazard","Sichuan 2002",0.00206639967623467,0.00342673176477241,NA,NA
+"a","province-year mean hazard","Sichuan 2003",0.00129026469911527,0.00228688034789033,NA,NA
+"a","province-year mean hazard","Sichuan 2004",0.00152623002407138,0.00276790138763339,NA,NA
+"a","province-year mean hazard","Sichuan 2005",0.00152007971296058,0.00197965587923155,NA,NA
+"a","province-year mean hazard","Sichuan 2006",0.0018574251753222,0.00357447981179969,NA,NA
+"a","province-year mean hazard","Sichuan 2007",0.00186005413814868,0.00536989257775818,NA,NA
+"a","province-year mean hazard","Sichuan 2008",0.00148175415220304,0.00205346055225016,NA,NA
+"a","province-year mean hazard","Sichuan 2009",0.00151269104509731,0.00243685901141935,NA,NA
+"a","province-year mean hazard","Sichuan 2010",0.00202417431231346,0.0034317454178003,NA,NA
+"a","province-year mean hazard","Sichuan 2011",0.00195698594996812,0.0064100320183521,NA,NA
+"a","province-year mean hazard","Sichuan 2012",0.00214017439778124,0.00456146420622554,NA,NA
+"a","province-year mean hazard","Sichuan 2013",0.00240485443730626,0.00453066033781109,NA,NA
+"a","province-year mean hazard","Sichuan 2014",0.00247284860002984,0.00517064022580332,NA,NA
+"a","province-year mean hazard","Sichuan 2015",0.00258088675476167,0.00334566614131352,NA,NA
+"a","province-year mean hazard","Sichuan 2016",0.00269705054494069,0.00443540950126825,NA,NA
+"a","province-year mean hazard","Sichuan 2017",0.00279040052801368,0.00279417848567718,NA,NA
+"a","province-year mean hazard","Sichuan 2018",0.00288972238133047,0.00328827241162449,NA,NA
+"a","province-year mean hazard","Sichuan 2019",0.00297791817663572,0.00289666426858948,NA,NA
+"a","province-year mean hazard","Sichuan 2020",0.00289627854899666,0.00381891791879606,NA,NA
+"a","province-year mean hazard","Sichuan 2021",0.00316060354088281,0.00295390424353427,NA,NA
+"a","province-year mean hazard","Sichuan 2022",0.00335516547467299,0.00162389339029687,NA,NA
+"a","province-year mean hazard","Sichuan 2023",0.00390166546164543,0.00526917237766611,NA,NA
+"a","province-year mean hazard","Sichuan 2024",0.00464016821667936,0.00204254304547208,NA,NA
+"a","province-year mean hazard","Tianjin 2002",0.00178548187224006,0.0018697976752239,NA,NA
+"a","province-year mean hazard","Tianjin 2003",0.00167488663825867,0.00144215369236713,NA,NA
+"a","province-year mean hazard","Tianjin 2005",0.00162825735143066,0.00141830668855453,NA,NA
+"a","province-year mean hazard","Tianjin 2008",0.00172785276938791,0.00222939863185664,NA,NA
+"a","province-year mean hazard","Tianjin 2009",0.00162262309506538,0.0022299442322193,NA,NA
+"a","province-year mean hazard","Tianjin 2010",0.00138174199990527,0.00257067601728652,NA,NA
+"a","province-year mean hazard","Tianjin 2011",0.00137385707845805,0.00153707132541708,NA,NA
+"a","province-year mean hazard","Tianjin 2012",0.00172978464169125,0.00203872160187789,NA,NA
+"a","province-year mean hazard","Tianjin 2013",0.00171577732679286,0.00184031698890197,NA,NA
+"a","province-year mean hazard","Tianjin 2014",0.00241023211700575,0.00379956509784928,NA,NA
+"a","province-year mean hazard","Tianjin 2015",0.00240050632542696,0.00540692642845235,NA,NA
+"a","province-year mean hazard","Tianjin 2016",0.0024520845525012,0.00384297875137031,NA,NA
+"a","province-year mean hazard","Tianjin 2017",0.00267981491588661,0.00231434387455391,NA,NA
+"a","province-year mean hazard","Tianjin 2018",0.00300207973606554,0.0108329676676117,NA,NA
+"a","province-year mean hazard","Tianjin 2019",0.00319632372415075,0.00355046317090242,NA,NA
+"a","province-year mean hazard","Tianjin 2020",0.0032042638722004,0.00744129146504052,NA,NA
+"a","province-year mean hazard","Tianjin 2021",0.00357794951113695,0.00332420278711998,NA,NA
+"a","province-year mean hazard","Tianjin 2022",0.00350036946019816,0.00666145088880079,NA,NA
+"a","province-year mean hazard","Tianjin 2023",0.00432173381015746,0.0023484942898254,NA,NA
+"a","province-year mean hazard","Tianjin 2024",0.00480150374418039,0.00245494255700794,NA,NA
+"a","province-year mean hazard","Tibet 2002",0.00251047140054286,0.002105570304584,NA,NA
+"a","province-year mean hazard","Tibet 2003",0.00164706604041261,0.00146310523551045,NA,NA
+"a","province-year mean hazard","Tibet 2004",0.00330677228589802,0.00284691945252778,NA,NA
+"a","province-year mean hazard","Tibet 2005",0.00270809072146957,0.00197376359872139,NA,NA
+"a","province-year mean hazard","Tibet 2006",0.0028542457288474,0.00195769682540652,NA,NA
+"a","province-year mean hazard","Tibet 2007",0.00414395639068923,0.00451625016128844,NA,NA
+"a","province-year mean hazard","Tibet 2008",0.00279742732125834,0.00244947734008381,NA,NA
+"a","province-year mean hazard","Tibet 2009",0.00371625183783024,0.00189351525238556,NA,NA
+"a","province-year mean hazard","Tibet 2010",0.0040645019577717,0.00235011733051908,NA,NA
+"a","province-year mean hazard","Tibet 2011",0.00407797248779458,0.00265903143716403,NA,NA
+"a","province-year mean hazard","Tibet 2012",0.00476343467537449,0.00403878070033357,NA,NA
+"a","province-year mean hazard","Tibet 2013",0.00534848877872869,0.00803656954568538,NA,NA
+"a","province-year mean hazard","Tibet 2014",0.00508173533269685,0.00666129995665364,NA,NA
+"a","province-year mean hazard","Tibet 2015",0.0051175871665593,0.00423437297127716,NA,NA
+"a","province-year mean hazard","Tibet 2016",0.00532009964833024,0.0122123518727508,NA,NA
+"a","province-year mean hazard","Tibet 2017",0.00560080998613135,0.00784442089897424,NA,NA
+"a","province-year mean hazard","Tibet 2018",0.00600955410112233,0.00515620303024698,NA,NA
+"a","province-year mean hazard","Tibet 2019",0.00574826759318666,0.0274681921838527,NA,NA
+"a","province-year mean hazard","Tibet 2020",0.00577646190734956,0.00690355267501078,NA,NA
+"a","province-year mean hazard","Tibet 2021",0.00606224715539878,0.0046059624178712,NA,NA
+"a","province-year mean hazard","Tibet 2022",0.00541932735314502,0.00473355511030604,NA,NA
+"a","province-year mean hazard","Tibet 2023",0.00640265662546304,0.0101538363145664,NA,NA
+"a","province-year mean hazard","Tibet 2024",0.00674993901935123,0.00183941249409134,NA,NA
+"a","province-year mean hazard","Xinjiang 2002",0.00134616970504079,0.00195623323634865,NA,NA
+"a","province-year mean hazard","Xinjiang 2003",0.00132138062300416,0.00148290952765097,NA,NA
+"a","province-year mean hazard","Xinjiang 2004",0.00151833930907121,0.00196756455994342,NA,NA
+"a","province-year mean hazard","Xinjiang 2005",0.00164737984444634,0.0028139084547613,NA,NA
+"a","province-year mean hazard","Xinjiang 2006",0.00181992122366575,0.00237959869011083,NA,NA
+"a","province-year mean hazard","Xinjiang 2007",0.00212526576636808,0.00343947132595518,NA,NA
+"a","province-year mean hazard","Xinjiang 2008",0.00229976214809529,0.00613236747849969,NA,NA
+"a","province-year mean hazard","Xinjiang 2010",0.00263466486095404,0.0133752001897282,NA,NA
+"a","province-year mean hazard","Xinjiang 2011",0.00295384509852718,0.00764895476929535,NA,NA
+"a","province-year mean hazard","Xinjiang 2012",0.0027463352652563,0.00503658967051494,NA,NA
+"a","province-year mean hazard","Xinjiang 2013",0.00298959982244529,0.00626629550921157,NA,NA
+"a","province-year mean hazard","Xinjiang 2014",0.00278992937291065,0.00373044266423239,NA,NA
+"a","province-year mean hazard","Xinjiang 2015",0.00278078887357772,0.0081322754377016,NA,NA
+"a","province-year mean hazard","Xinjiang 2016",0.00292511151684244,0.00654146277182824,NA,NA
+"a","province-year mean hazard","Xinjiang 2017",0.00297254080175291,0.00684979514036498,NA,NA
+"a","province-year mean hazard","Xinjiang 2018",0.00315287635517296,0.00504316805380294,NA,NA
+"a","province-year mean hazard","Xinjiang 2019",0.00306893982266415,0.00665494318592925,NA,NA
+"a","province-year mean hazard","Xinjiang 2020",0.00283850351287697,0.00351772117742759,NA,NA
+"a","province-year mean hazard","Xinjiang 2021",0.0030499097836124,0.0040874776741164,NA,NA
+"a","province-year mean hazard","Xinjiang 2022",0.00308257071652535,0.0067735232117129,NA,NA
+"a","province-year mean hazard","Xinjiang 2023",0.00329876086381053,0.00175201427946862,NA,NA
+"a","province-year mean hazard","Xinjiang 2024",0.00351374093911344,0.00191339536226543,NA,NA
+"a","province-year mean hazard","Yunnan 2002",0.00231804442851821,0.00199509160661187,NA,NA
+"a","province-year mean hazard","Yunnan 2003",0.00222302035374771,0.00363258238826643,NA,NA
+"a","province-year mean hazard","Yunnan 2004",0.00179781951100852,0.00204356655790182,NA,NA
+"a","province-year mean hazard","Yunnan 2005",0.00223570175752205,0.00223415212952972,NA,NA
+"a","province-year mean hazard","Yunnan 2006",0.00236481082703506,0.0043313650530763,NA,NA
+"a","province-year mean hazard","Yunnan 2007",0.00250597330539635,0.00360220924759393,NA,NA
+"a","province-year mean hazard","Yunnan 2008",0.00263340012471198,0.00296816647220878,NA,NA
+"a","province-year mean hazard","Yunnan 2009",0.00244247576736058,0.00300807181625523,NA,NA
+"a","province-year mean hazard","Yunnan 2010",0.00258191812151522,0.0030715590895756,NA,NA
+"a","province-year mean hazard","Yunnan 2011",0.00261044467507742,0.00240423991645544,NA,NA
+"a","province-year mean hazard","Yunnan 2012",0.00310399675434098,0.00405841764101448,NA,NA
+"a","province-year mean hazard","Yunnan 2013",0.00327384955122509,0.00420760194615771,NA,NA
+"a","province-year mean hazard","Yunnan 2014",0.00344196771556881,0.00457095909228293,NA,NA
+"a","province-year mean hazard","Yunnan 2015",0.00351841629596552,0.00547868015413366,NA,NA
+"a","province-year mean hazard","Yunnan 2016",0.00364890824462963,0.00492326203528979,NA,NA
+"a","province-year mean hazard","Yunnan 2017",0.00370805094392949,0.00398735007901556,NA,NA
+"a","province-year mean hazard","Yunnan 2018",0.00384264272280608,0.00384924880748021,NA,NA
+"a","province-year mean hazard","Yunnan 2019",0.00395469277908133,0.0057344467319151,NA,NA
+"a","province-year mean hazard","Yunnan 2020",0.00370067562454014,0.00330109578299764,NA,NA
+"a","province-year mean hazard","Yunnan 2021",0.00353297055444086,0.00269413759556363,NA,NA
+"a","province-year mean hazard","Yunnan 2022",0.00350508021180495,0.00410679740114362,NA,NA
+"a","province-year mean hazard","Yunnan 2023",0.00413906388912669,0.00191620358344347,NA,NA
+"a","province-year mean hazard","Yunnan 2024",0.00177253200476173,0.001855580083573,NA,NA
+"a","province-year mean hazard","Zhejiang 2002",0.00174983914790584,0.00172128625599253,NA,NA
+"a","province-year mean hazard","Zhejiang 2003",0.00157479951699755,0.00155843123194461,NA,NA
+"a","province-year mean hazard","Zhejiang 2004",0.00189365594905702,0.00233652802159197,NA,NA
+"a","province-year mean hazard","Zhejiang 2005",0.0023118738546186,0.00287343751383545,NA,NA
+"a","province-year mean hazard","Zhejiang 2006",0.0024346472171674,0.00442319349969771,NA,NA
+"a","province-year mean hazard","Zhejiang 2007",0.00257128627804127,0.00259224287583493,NA,NA
+"a","province-year mean hazard","Zhejiang 2008",0.00272959675909124,0.00818278065143936,NA,NA
+"a","province-year mean hazard","Zhejiang 2009",0.00270110764750658,0.00445774954097901,NA,NA
+"a","province-year mean hazard","Zhejiang 2010",0.0030966715204974,0.00389873287392134,NA,NA
+"a","province-year mean hazard","Zhejiang 2011",0.00297155600879778,0.00464795760568444,NA,NA
+"a","province-year mean hazard","Zhejiang 2012",0.00302231519478701,0.00464515226888577,NA,NA
+"a","province-year mean hazard","Zhejiang 2013",0.00310550659627026,0.00352968008910436,NA,NA
+"a","province-year mean hazard","Zhejiang 2014",0.00312865976575811,0.00361818475433811,NA,NA
+"a","province-year mean hazard","Zhejiang 2015",0.00327316246435927,0.00323010344915306,NA,NA
+"a","province-year mean hazard","Zhejiang 2016",0.00333126158336549,0.00361039675408392,NA,NA
+"a","province-year mean hazard","Zhejiang 2017",0.00340759270703284,0.00636023589616506,NA,NA
+"a","province-year mean hazard","Zhejiang 2018",0.00371919049596245,0.00613441240569237,NA,NA
+"a","province-year mean hazard","Zhejiang 2019",0.00391307245325705,0.00373570009449739,NA,NA
+"a","province-year mean hazard","Zhejiang 2020",0.00411254551527534,0.00528754765103685,NA,NA
+"a","province-year mean hazard","Zhejiang 2021",0.00453968197542972,0.00832360560769751,NA,NA
+"a","province-year mean hazard","Zhejiang 2022",0.00484630484208932,0.00280675799541104,NA,NA
+"a","province-year mean hazard","Zhejiang 2023",0.00532705419557204,0.00170919730067319,NA,NA
+"a","province-year mean hazard","Zhejiang 2024",0.00564190190791024,0.00174474055766105,NA,NA
+"a","lm on log10 scale","intercept",NA,-0.938653498528423,NA,NA
+"a","lm on log10 scale","slope",NA,0.607829668220729,NA,NA
+"a","Spearman rho","observed 2002-2024",NA,0.536845943990573,NA,NA
+"b","Accumulated warming","Observed 2002-2024",NA,NA,-2.46308066603435,2.1841026819823
+"b","Survey effort","Observed 2002-2024",NA,NA,-1.75262978227772,2.36554937462423
+"b","Accumulated warming","SSP2-4.5 2030",NA,NA,-5.62710917871171,5.05454385145983
+"b","Accumulated warming","SSP2-4.5 2050",NA,NA,-7.1697961329278,6.64222822839792
+"b","Accumulated warming","SSP2-4.5 2080",NA,NA,-8.24138673610147,7.55442692306436
+"b","Accumulated warming","SSP5-8.5 2030",NA,NA,-6.0334452998394,5.93263018251465
+"b","Accumulated warming","SSP5-8.5 2050",NA,NA,-8.07015413248674,7.56413115130398
+"b","Accumulated warming","SSP5-8.5 2080",NA,NA,-10.2673365556148,9.6297953705898
+"b","Survey effort","SSP2-4.5 2030",NA,NA,-1.02561829208484,3.14295941599519
+"b","Survey effort","SSP2-4.5 2050",NA,NA,-0.425618292084841,3.74295941599519
+"b","Survey effort","SSP2-4.5 2080",NA,NA,0.474381707915159,4.64295941599519
+"b","Survey effort","SSP5-8.5 2030",NA,NA,-0.845618292084841,3.32295941599519
+"b","Survey effort","SSP5-8.5 2050",NA,NA,0.354381707915159,4.52295941599519
+"b","Survey effort","SSP5-8.5 2080",NA,NA,2.15438170791516,6.3229594159952
+"c","SSP2-4.5 2030","Anhui",1.06435286800965,1.10353428154202,NA,NA
+"c","SSP2-4.5 2030","Beijing",1.27128053859464,0.971548497002296,NA,NA
+"c","SSP2-4.5 2030","Chongqing",1.08313117528013,0.869910268143998,NA,NA
+"c","SSP2-4.5 2030","Fujian",1.21333518341307,0.773763806545511,NA,NA
+"c","SSP2-4.5 2030","Gansu",1.06756241613508,0.964021831926292,NA,NA
+"c","SSP2-4.5 2030","Guangdong",0.927007892111247,1.14258907010001,NA,NA
+"c","SSP2-4.5 2030","Guangxi",1.16754967721906,1.95668200744874,NA,NA
+"c","SSP2-4.5 2030","Guizhou",1.07380990262286,0.446166957331352,NA,NA
+"c","SSP2-4.5 2030","Hainan",1.14199298211003,1.05135403846853,NA,NA
+"c","SSP2-4.5 2030","Hebei",1.06117539467676,1.01658022803662,NA,NA
+"c","SSP2-4.5 2030","Heilongjiang",1.2353337743684,1.03291723506225,NA,NA
+"c","SSP2-4.5 2030","Henan",1.09441832784863,1.37640813624608,NA,NA
+"c","SSP2-4.5 2030","Hubei",1.1491811265765,1.29123219411847,NA,NA
+"c","SSP2-4.5 2030","Hunan",1.14933029744336,0.496761608836619,NA,NA
+"c","SSP2-4.5 2030","Inner Mongolia",1.03836571707297,0.247153023469095,NA,NA
+"c","SSP2-4.5 2030","Jiangsu",1.30968177378048,0.958417147956438,NA,NA
+"c","SSP2-4.5 2030","Jiangxi",1.09824110116983,2.71425095330617,NA,NA
+"c","SSP2-4.5 2030","Jilin",1.17888684202017,0.38989550189916,NA,NA
+"c","SSP2-4.5 2030","Liaoning",1.05607561113451,0.814761011951432,NA,NA
+"c","SSP2-4.5 2030","Ningxia",1.12419851862772,0.515208829325367,NA,NA
+"c","SSP2-4.5 2030","Qinghai",1.08072896982925,0.923099597011686,NA,NA
+"c","SSP2-4.5 2030","Shaanxi",1.03374459759392,1.05682935911909,NA,NA
+"c","SSP2-4.5 2030","Shandong",1.11923590786727,1.05114402802729,NA,NA
+"c","SSP2-4.5 2030","Shanghai",1.19294841123225,0.493057662775189,NA,NA
+"c","SSP2-4.5 2030","Shanxi",1.02435429286539,0.379846768000463,NA,NA
+"c","SSP2-4.5 2030","Sichuan",1.14805843633687,1.03643577255942,NA,NA
+"c","SSP2-4.5 2030","Tianjin",1.08355424005629,1.86675510597676,NA,NA
+"c","SSP2-4.5 2030","Tibet",1.05374064619624,0.988486884409068,NA,NA
+"c","SSP2-4.5 2030","Xinjiang",0.960124684440571,5.2514504417039,NA,NA
+"c","SSP2-4.5 2030","Yunnan",0.61969676520806,0.708053801604511,NA,NA
+"c","SSP2-4.5 2030","Zhejiang",1.20092721003225,0.989246868075261,NA,NA
+"c","SSP2-4.5 2050","Anhui",1.38089004104775,0.637588168899314,NA,NA
+"c","SSP2-4.5 2050","Beijing",1.85659760519533,0.947963121595676,NA,NA
+"c","SSP2-4.5 2050","Chongqing",1.45487199069424,0.537345812528042,NA,NA
+"c","SSP2-4.5 2050","Fujian",2.12821658438161,0.82663617133949,NA,NA
+"c","SSP2-4.5 2050","Gansu",1.11947366206522,0.919212447159726,NA,NA
+"c","SSP2-4.5 2050","Guangdong",1.40025728055125,1.0153342637773,NA,NA
+"c","SSP2-4.5 2050","Guangxi",2.00037213488869,0.568307771887767,NA,NA
+"c","SSP2-4.5 2050","Guizhou",1.65471366907742,0.751604921500082,NA,NA
+"c","SSP2-4.5 2050","Hainan",2.24054654123909,0.789632412720525,NA,NA
+"c","SSP2-4.5 2050","Hebei",1.37418934769687,0.672989209968714,NA,NA
+"c","SSP2-4.5 2050","Heilongjiang",1.34418533547971,1.11791093826589,NA,NA
+"c","SSP2-4.5 2050","Henan",1.3133603534594,0.84324818705574,NA,NA
+"c","SSP2-4.5 2050","Hubei",1.53462898848453,1.11377071543045,NA,NA
+"c","SSP2-4.5 2050","Hunan",1.73200409103017,0.529666851380096,NA,NA
+"c","SSP2-4.5 2050","Inner Mongolia",1.0368638868632,0.183281709822378,NA,NA
+"c","SSP2-4.5 2050","Jiangsu",2.14088443134444,0.848368882913358,NA,NA
+"c","SSP2-4.5 2050","Jiangxi",1.54020326714983,0.664178259869796,NA,NA
+"c","SSP2-4.5 2050","Jilin",1.29194250481636,0.789030807785592,NA,NA
+"c","SSP2-4.5 2050","Liaoning",1.29686636352148,0.467491427200848,NA,NA
+"c","SSP2-4.5 2050","Ningxia",1.11836053278684,0.208754136410382,NA,NA
+"c","SSP2-4.5 2050","Qinghai",1.40987134008169,0.968467970347073,NA,NA
+"c","SSP2-4.5 2050","Shaanxi",1.14877699990212,0.921774401124624,NA,NA
+"c","SSP2-4.5 2050","Shandong",1.59592720184687,0.568229441560208,NA,NA
+"c","SSP2-4.5 2050","Shanghai",2.02614004349944,0.490200193087706,NA,NA
+"c","SSP2-4.5 2050","Shanxi",1.17010618390816,0.229719698724355,NA,NA
+"c","SSP2-4.5 2050","Sichuan",1.74384304534843,1.06891773644491,NA,NA
+"c","SSP2-4.5 2050","Tianjin",1.42575316892192,0.633461640529271,NA,NA
+"c","SSP2-4.5 2050","Tibet",1.26123390607044,1.09523195121291,NA,NA
+"c","SSP2-4.5 2050","Xinjiang",0.839221687833738,0.822093716540101,NA,NA
+"c","SSP2-4.5 2050","Yunnan",0.67792852246677,1.25310272795405,NA,NA
+"c","SSP2-4.5 2050","Zhejiang",2.01613068650423,0.894309335358055,NA,NA
+"c","SSP2-4.5 2080","Anhui",2.08380871185514,0.64470532778689,NA,NA
+"c","SSP2-4.5 2080","Beijing",3.27740036637816,0.96919153037901,NA,NA
+"c","SSP2-4.5 2080","Chongqing",2.44766185703865,0.52356273751182,NA,NA
+"c","SSP2-4.5 2080","Fujian",6.65708780477706,0.819586505679152,NA,NA
+"c","SSP2-4.5 2080","Gansu",1.27338441456981,0.793882700808011,NA,NA
+"c","SSP2-4.5 2080","Guangdong",3.50521302303484,0.621665900600308,NA,NA
+"c","SSP2-4.5 2080","Guangxi",5.75313745761414,0.535343251864624,NA,NA
+"c","SSP2-4.5 2080","Guizhou",3.79327555889895,0.436842514416878,NA,NA
+"c","SSP2-4.5 2080","Hainan",9.24488430752828,0.776513043984136,NA,NA
+"c","SSP2-4.5 2080","Hebei",2.17553895600932,0.604308507055013,NA,NA
+"c","SSP2-4.5 2080","Heilongjiang",1.59397683330722,0.580555179745519,NA,NA
+"c","SSP2-4.5 2080","Henan",1.66596938077238,0.738643347594073,NA,NA
+"c","SSP2-4.5 2080","Hubei",2.4126138163477,1.13033260129578,NA,NA
+"c","SSP2-4.5 2080","Hunan",3.64904157500065,0.552446594627361,NA,NA
+"c","SSP2-4.5 2080","Inner Mongolia",1.14902575179536,0.189409465836818,NA,NA
+"c","SSP2-4.5 2080","Jiangsu",4.30743396336143,0.843419245248482,NA,NA
+"c","SSP2-4.5 2080","Jiangxi",3.12078635740957,0.674199697022228,NA,NA
+"c","SSP2-4.5 2080","Jilin",1.58994582956829,0.267901585569889,NA,NA
+"c","SSP2-4.5 2080","Liaoning",1.90880772560869,0.507689713930788,NA,NA
+"c","SSP2-4.5 2080","Ningxia",1.0776571770563,0.195483970122199,NA,NA
+"c","SSP2-4.5 2080","Qinghai",2.61500581855399,0.96695270255341,NA,NA
+"c","SSP2-4.5 2080","Shaanxi",1.58704420144201,0.942607367285837,NA,NA
+"c","SSP2-4.5 2080","Shandong",3.0051979091459,0.558363139090017,NA,NA
+"c","SSP2-4.5 2080","Shanghai",4.58483617759138,0.480753399499841,NA,NA
+"c","SSP2-4.5 2080","Shanxi",1.64269838305077,0.252299349025496,NA,NA
+"c","SSP2-4.5 2080","Sichuan",3.95228205667656,1.03669241264675,NA,NA
+"c","SSP2-4.5 2080","Tianjin",2.36078969770085,0.624388784984767,NA,NA
+"c","SSP2-4.5 2080","Tibet",2.07865967760519,1.0646016384352,NA,NA
+"c","SSP2-4.5 2080","Xinjiang",0.764209078823062,0.792551932429152,NA,NA
+"c","SSP2-4.5 2080","Yunnan",1.01489071141541,2.05467073016655,NA,NA
+"c","SSP2-4.5 2080","Zhejiang",4.74755718919003,0.8342672981993,NA,NA
+"c","SSP5-8.5 2030","Anhui",1.10863946265373,1.21839865633649,NA,NA
+"c","SSP5-8.5 2030","Beijing",1.39515796503477,0.933099609419789,NA,NA
+"c","SSP5-8.5 2030","Chongqing",1.15603226069394,0.950220875365436,NA,NA
+"c","SSP5-8.5 2030","Fujian",1.35552479812094,0.883263387240583,NA,NA
+"c","SSP5-8.5 2030","Gansu",1.09244976018699,0.918480699875463,NA,NA
+"c","SSP5-8.5 2030","Guangdong",1.05316833769215,1.64211889411552,NA,NA
+"c","SSP5-8.5 2030","Guangxi",1.31649068924873,0.623816738884164,NA,NA
+"c","SSP5-8.5 2030","Guizhou",1.21582680701712,0.641635092272104,NA,NA
+"c","SSP5-8.5 2030","Hainan",1.35766436831768,3.10632288843758,NA,NA
+"c","SSP5-8.5 2030","Hebei",1.1310743599156,1.83513890075845,NA,NA
+"c","SSP5-8.5 2030","Heilongjiang",1.26486482763199,2.51355346282758,NA,NA
+"c","SSP5-8.5 2030","Henan",1.11964079680506,0.756479414685519,NA,NA
+"c","SSP5-8.5 2030","Hubei",1.17533785686963,1.14749533387664,NA,NA
+"c","SSP5-8.5 2030","Hunan",1.21101099806708,0.599748476622618,NA,NA
+"c","SSP5-8.5 2030","Inner Mongolia",1.03519833432076,0.328059861657214,NA,NA
+"c","SSP5-8.5 2030","Jiangsu",1.37429623760343,1.03269053075342,NA,NA
+"c","SSP5-8.5 2030","Jiangxi",1.15582080852386,1.04044906253716,NA,NA
+"c","SSP5-8.5 2030","Jilin",1.20768610910421,0.48666186891756,NA,NA
+"c","SSP5-8.5 2030","Liaoning",1.10351412761074,1.76331088132628,NA,NA
+"c","SSP5-8.5 2030","Ningxia",1.13817407837228,0.472014430888619,NA,NA
+"c","SSP5-8.5 2030","Qinghai",1.17583216054744,0.978487084746351,NA,NA
+"c","SSP5-8.5 2030","Shaanxi",1.06566377676392,4.05139711070863,NA,NA
+"c","SSP5-8.5 2030","Shandong",1.20888263833481,0.587570749747364,NA,NA
+"c","SSP5-8.5 2030","Shanghai",1.30239276157478,0.509486946920509,NA,NA
+"c","SSP5-8.5 2030","Shanxi",1.06154860100552,0.415585516193635,NA,NA
+"c","SSP5-8.5 2030","Sichuan",1.27524719238567,1.08215239376584,NA,NA
+"c","SSP5-8.5 2030","Tianjin",1.14421043427759,1.01053625506467,NA,NA
+"c","SSP5-8.5 2030","Tibet",1.13144442696848,1.21889740460101,NA,NA
+"c","SSP5-8.5 2030","Xinjiang",0.917539092858796,0.995819877713315,NA,NA
+"c","SSP5-8.5 2030","Yunnan",0.542147076215809,0.828873392237851,NA,NA
+"c","SSP5-8.5 2030","Zhejiang",1.2998845026685,0.962091086395512,NA,NA
+"c","SSP5-8.5 2050","Anhui",2.20025745771436,0.582161430181247,NA,NA
+"c","SSP5-8.5 2050","Beijing",2.72943543646231,0.932261077162033,NA,NA
+"c","SSP5-8.5 2050","Chongqing",2.47620704950582,0.526470172984798,NA,NA
+"c","SSP5-8.5 2050","Fujian",4.92162078240312,0.814504371053073,NA,NA
+"c","SSP5-8.5 2050","Gansu",1.35469454449722,0.863109386448418,NA,NA
+"c","SSP5-8.5 2050","Guangdong",2.92175388482905,0.60794565726812,NA,NA
+"c","SSP5-8.5 2050","Guangxi",4.60465996520176,0.546342786955807,NA,NA
+"c","SSP5-8.5 2050","Guizhou",3.45397246812709,0.425890878299601,NA,NA
+"c","SSP5-8.5 2050","Hainan",6.78661556687258,0.763656747344624,NA,NA
+"c","SSP5-8.5 2050","Hebei",1.95304974161558,0.607751946288574,NA,NA
+"c","SSP5-8.5 2050","Heilongjiang",1.52940776638711,0.606554364946012,NA,NA
+"c","SSP5-8.5 2050","Henan",2.10061214750058,0.782488967239071,NA,NA
+"c","SSP5-8.5 2050","Hubei",2.82540860621763,1.089014258971,NA,NA
+"c","SSP5-8.5 2050","Hunan",3.1844108568822,0.553133846681849,NA,NA
+"c","SSP5-8.5 2050","Inner Mongolia",1.05451397912994,0.191668571465425,NA,NA
+"c","SSP5-8.5 2050","Jiangsu",4.45836380485766,0.837011023990218,NA,NA
+"c","SSP5-8.5 2050","Jiangxi",2.60927347688168,0.658117637479119,NA,NA
+"c","SSP5-8.5 2050","Jilin",1.45598146006806,0.255154283426063,NA,NA
+"c","SSP5-8.5 2050","Liaoning",1.65810073063644,0.474175106678968,NA,NA
+"c","SSP5-8.5 2050","Ningxia",1.13142690825431,0.208810450997041,NA,NA
+"c","SSP5-8.5 2050","Qinghai",2.4350518500698,0.958973069921501,NA,NA
+"c","SSP5-8.5 2050","Shaanxi",1.6599878333255,0.96782650283832,NA,NA
+"c","SSP5-8.5 2050","Shandong",2.8114385394662,0.534331213298358,NA,NA
+"c","SSP5-8.5 2050","Shanghai",4.23932848696623,0.475843702356182,NA,NA
+"c","SSP5-8.5 2050","Shanxi",1.64494645284838,0.242676122378472,NA,NA
+"c","SSP5-8.5 2050","Sichuan",3.76235270552855,0.979866449203357,NA,NA
+"c","SSP5-8.5 2050","Tianjin",2.11520384828284,0.639196474434503,NA,NA
+"c","SSP5-8.5 2050","Tibet",1.86373531095335,1.07915571495839,NA,NA
+"c","SSP5-8.5 2050","Xinjiang",0.830872267315053,0.855550821867433,NA,NA
+"c","SSP5-8.5 2050","Yunnan",0.919249343468894,2.68178737187589,NA,NA
+"c","SSP5-8.5 2050","Zhejiang",3.85946599928033,0.869929944133986,NA,NA
+"c","SSP5-8.5 2080","Anhui",20.3622029499469,0.550511353980699,NA,NA
+"c","SSP5-8.5 2080","Beijing",18.1767332186682,0.756050020052307,NA,NA
+"c","SSP5-8.5 2080","Chongqing",20.0827389070245,0.524752375321591,NA,NA
+"c","SSP5-8.5 2080","Fujian",70.0950497463361,0.803924155886314,NA,NA
+"c","SSP5-8.5 2080","Gansu",3.84898163566539,0.988221252618602,NA,NA
+"c","SSP5-8.5 2080","Guangdong",54.6275577488055,0.629685407712418,NA,NA
+"c","SSP5-8.5 2080","Guangxi",45.2330355568239,0.534453939303156,NA,NA
+"c","SSP5-8.5 2080","Guizhou",35.5728842775188,0.430993778380516,NA,NA
+"c","SSP5-8.5 2080","Hainan",78.0207234431025,0.749333767734366,NA,NA
+"c","SSP5-8.5 2080","Hebei",11.524605391292,0.500809655089785,NA,NA
+"c","SSP5-8.5 2080","Heilongjiang",2.62404883753657,0.527567124495083,NA,NA
+"c","SSP5-8.5 2080","Henan",16.981361384949,0.701255092651032,NA,NA
+"c","SSP5-8.5 2080","Hubei",26.7289993463232,0.975342370333159,NA,NA
+"c","SSP5-8.5 2080","Hunan",25.0104873140491,0.559423856888453,NA,NA
+"c","SSP5-8.5 2080","Inner Mongolia",1.76688073470982,0.189221081794732,NA,NA
+"c","SSP5-8.5 2080","Jiangsu",45.2353744580918,0.849272383969659,NA,NA
+"c","SSP5-8.5 2080","Jiangxi",27.0946272381615,0.666645391308729,NA,NA
+"c","SSP5-8.5 2080","Jilin",2.73073374741847,0.243068256504208,NA,NA
+"c","SSP5-8.5 2080","Liaoning",6.146476556606,0.456679575437117,NA,NA
+"c","SSP5-8.5 2080","Ningxia",2.33553146261162,0.21780719908389,NA,NA
+"c","SSP5-8.5 2080","Qinghai",17.3003814081438,0.909528613247136,NA,NA
+"c","SSP5-8.5 2080","Shaanxi",8.81330736754475,0.815686911552089,NA,NA
+"c","SSP5-8.5 2080","Shandong",27.769934718181,0.509427180816324,NA,NA
+"c","SSP5-8.5 2080","Shanghai",64.9985679173181,0.47163174266721,NA,NA
+"c","SSP5-8.5 2080","Shanxi",9.03123385463638,0.219263268302907,NA,NA
+"c","SSP5-8.5 2080","Sichuan",37.5896265338497,1.02652598713225,NA,NA
+"c","SSP5-8.5 2080","Tianjin",12.875095096008,0.514145661171991,NA,NA
+"c","SSP5-8.5 2080","Tibet",9.30180324725856,0.954790344358423,NA,NA
+"c","SSP5-8.5 2080","Xinjiang",1.11653892708061,0.880893099332101,NA,NA
+"c","SSP5-8.5 2080","Yunnan",3.20736110612942,2.63422021053173,NA,NA
+"c","SSP5-8.5 2080","Zhejiang",44.99157572526,0.88368266181321,NA,NA
+"c","SSP2-4.5 2030","Spearman rho",NA,-0.0366935483870968,NA,NA
+"c","SSP2-4.5 2050","Spearman rho",NA,-0.000806451612903226,NA,NA
+"c","SSP2-4.5 2080","Spearman rho",NA,0.112903225806452,NA,NA
+"c","SSP5-8.5 2030","Spearman rho",NA,-0.0306451612903226,NA,NA
+"c","SSP5-8.5 2050","Spearman rho",NA,0.108870967741935,NA,NA
+"c","SSP5-8.5 2080","Spearman rho",NA,0.178225806451613,NA,NA
+"c","SSP2-4.5 2030","share agreeing on sign",NA,0.419354838709677,NA,NA
+"c","SSP2-4.5 2050","share agreeing on sign",NA,0.193548387096774,NA,NA
+"c","SSP2-4.5 2080","share agreeing on sign",NA,0.161290322580645,NA,NA
+"c","SSP5-8.5 2030","share agreeing on sign",NA,0.483870967741935,NA,NA
+"c","SSP5-8.5 2050","share agreeing on sign",NA,0.0967741935483871,NA,NA
+"c","SSP5-8.5 2080","share agreeing on sign",NA,0.0645161290322581,NA,NA

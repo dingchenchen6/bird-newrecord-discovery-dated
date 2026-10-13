@@ -18,3 +18,7 @@ analysis_species_specific/
 .DS_Store
 figures_multiscale/FigMS1_multiscale_model_maps.pdf
 figures_multiscale/FigMS1_multiscale_model_maps.svg
+
+# 上传压缩包由 215/219 在本地重建, 不入库 / upload zips are rebuilt locally
+submission/_archives/
+*.zip

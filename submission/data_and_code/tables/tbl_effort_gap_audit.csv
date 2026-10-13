@@ -1,0 +1,25 @@
+province,year,prev_year,prev_visits,next_year,next_visits
+Anhui,2003,2002,7,2004,2
+Gansu,2003,2002,4,2004,3
+Guizhou,2003,2002,3,2004,12
+Guizhou,2005,2004,12,2006,9
+Heilongjiang,2003,2002,2,2004,1
+Hubei,2004,2003,2,2005,3
+Inner Mongolia,2002,,,2003,5
+Liaoning,2003,2002,3,2004,8
+Liaoning,2005,2004,8,2006,1
+Ningxia,2003,2002,1,2007,6
+Ningxia,2004,2002,1,2007,6
+Ningxia,2005,2002,1,2007,6
+Ningxia,2006,2002,1,2007,6
+Ningxia,2008,2007,6,2011,4
+Ningxia,2009,2007,6,2011,4
+Ningxia,2010,2007,6,2011,4
+Shandong,2002,,,2003,2
+Shanxi,2003,2002,1,2005,1
+Shanxi,2004,2002,1,2005,1
+Shanxi,2006,2005,1,2007,5
+Tianjin,2004,2003,1,2005,1
+Tianjin,2006,2005,1,2008,1
+Tianjin,2007,2005,1,2008,1
+Xinjiang,2009,2008,27,2010,23

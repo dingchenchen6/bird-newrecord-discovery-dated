@@ -1,0 +1,57 @@
+"panel","term","indicator","window","estimate","p_value","label","unit","main_spec","group","proxy","lo","hi"
+"a","Annual mean T","tavg_annual",20,1.39643304332344,1.48837451312238e-08,"***","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Annual mean T","tavg_annual",15,1.36164754167317,8.33903878612454e-08,"***","hazard ratio per 1 SD, accumulated warming",TRUE,NA,NA,NA,NA
+"a","Warmest-month Tmax","tmax_warm",15,1.29871602704989,2.83111941921862e-06,"***","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Warmest-month Tmax","tmax_warm",20,1.29503164225504,7.18866750992572e-06,"***","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Warmest-month Tmax","tmax_warm",10,1.24609518247796,8.90421712484084e-05,"***","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Annual mean T","tavg_annual",10,1.21277497955454,0.000613392432158084,"***","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Annual mean T","tavg_annual",5,1.16687433053163,0.00308143421236181,"**","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Warmest-month Tmax","tmax_warm",5,1.15554643198171,0.00623293510800373,"**","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Coldest-month Tmin","tmin_cold",15,1.07685056806329,0.129406497340597,"","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Coldest-month Tmin","tmin_cold",10,0.985964311595793,0.771104343599594,"","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Coldest-month Tmin","tmin_cold",20,1.03447536380458,0.509551104651757,"","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Coldest-month Tmin","tmin_cold",5,1.02576045062192,0.594580072737028,"","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Winter mean T","tavg_winter",10,0.956272938790165,0.345614065039611,"","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Winter mean T","tavg_winter",20,1.00373546887564,0.944467970589098,"","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Winter mean T","tavg_winter",15,1.02809734449938,0.576811113443906,"","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"a","Winter mean T","tavg_winter",5,0.984913692421662,0.750540562234739,"","hazard ratio per 1 SD, accumulated warming",FALSE,NA,NA,NA,NA
+"b","Annual mean T","tavg_annual",20,0,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Annual mean T","tavg_annual",15,2.20290250042308,NA,NA,"delta AIC relative to the best cell",TRUE,NA,NA,NA,NA
+"b","Warmest-month Tmax","tmax_warm",15,9.02027836046545,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Warmest-month Tmax","tmax_warm",20,10.1371618549874,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Warmest-month Tmax","tmax_warm",10,15.1626431662426,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Annual mean T","tavg_annual",10,16.9007184544353,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Annual mean T","tavg_annual",5,23.7947616170168,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Warmest-month Tmax","tmax_warm",5,23.8706753510724,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Coldest-month Tmin","tmin_cold",15,30.6922119972915,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Coldest-month Tmin","tmin_cold",10,30.9256894012524,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Coldest-month Tmin","tmin_cold",20,31.56001442241,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Coldest-month Tmin","tmin_cold",5,32.0382588555895,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Winter mean T","tavg_winter",10,32.2150748334734,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Winter mean T","tavg_winter",20,33.1626582478439,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Winter mean T","tavg_winter",15,33.5629645538393,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"b","Winter mean T","tavg_winter",5,33.6771223684627,NA,NA,"delta AIC relative to the best cell",FALSE,NA,NA,NA,NA
+"c","Survey effort",NA,NA,1.4038169859134,NA,NA,"hazard ratio per 1 SD",TRUE,"coverage gap (main)","Visits",1.24527316128327,1.58254605592572
+"c","Survey effort",NA,NA,1.45025362504814,NA,NA,"hazard ratio per 1 SD",FALSE,"zero-filled (v1)","Visits",1.28501531639464,1.63673969495267
+"c","Survey effort",NA,NA,1.43100277350953,NA,NA,"hazard ratio per 1 SD",FALSE,"bounded imputation","Visits",1.26942510271231,1.61314671768867
+"c","Survey effort",NA,NA,1.43481918018771,NA,NA,"hazard ratio per 1 SD",FALSE,"coverage gap (main)","Observers",1.27678370972302,1.61241568494098
+"c","Survey effort",NA,NA,1.47672881845167,NA,NA,"hazard ratio per 1 SD",FALSE,"zero-filled (v1)","Observers",1.31267110120707,1.6612904795728
+"c","Survey effort",NA,NA,1.46081175680258,NA,NA,"hazard ratio per 1 SD",FALSE,"bounded imputation","Observers",1.29995431107688,1.64157383888736
+"c","Survey effort",NA,NA,1.46323745828964,NA,NA,"hazard ratio per 1 SD",FALSE,"coverage gap (main)","Birding days",1.29391443187118,1.65471827703912
+"c","Survey effort",NA,NA,1.51914276083697,NA,NA,"hazard ratio per 1 SD",FALSE,"zero-filled (v1)","Birding days",1.34028697602123,1.72186611456471
+"c","Survey effort",NA,NA,1.49734845473978,NA,NA,"hazard ratio per 1 SD",FALSE,"bounded imputation","Birding days",1.32359668172431,1.6939090478761
+"c","Survey effort",NA,NA,1.25038683851047,NA,NA,"hazard ratio per 1 SD",FALSE,"coverage gap (main)","Records",1.11071959178133,1.40761651949686
+"c","Survey effort",NA,NA,1.30971461100695,NA,NA,"hazard ratio per 1 SD",FALSE,"zero-filled (v1)","Records",1.16207487768545,1.47611173361017
+"c","Survey effort",NA,NA,1.27354490889563,NA,NA,"hazard ratio per 1 SD",FALSE,"bounded imputation","Records",1.13163438522932,1.4332514601395
+"c","Accumulated warming",NA,NA,1.36164754167317,NA,NA,"hazard ratio per 1 SD",TRUE,"coverage gap (main)","Visits",1.21629159022553,1.52437461760366
+"c","Accumulated warming",NA,NA,1.36721996619799,NA,NA,"hazard ratio per 1 SD",FALSE,"zero-filled (v1)","Visits",1.22242697463335,1.52916327499326
+"c","Accumulated warming",NA,NA,1.36354741184804,NA,NA,"hazard ratio per 1 SD",FALSE,"bounded imputation","Visits",1.21950522965408,1.52460317442418
+"c","Accumulated warming",NA,NA,1.35202808969216,NA,NA,"hazard ratio per 1 SD",FALSE,"coverage gap (main)","Observers",1.20685162672762,1.51466834433757
+"c","Accumulated warming",NA,NA,1.35573595449879,NA,NA,"hazard ratio per 1 SD",FALSE,"zero-filled (v1)","Observers",1.21145642827774,1.51719858462738
+"c","Accumulated warming",NA,NA,1.35255803645593,NA,NA,"hazard ratio per 1 SD",FALSE,"bounded imputation","Observers",1.20890767947832,1.51327787310521
+"c","Accumulated warming",NA,NA,1.37293758339838,NA,NA,"hazard ratio per 1 SD",FALSE,"coverage gap (main)","Birding days",1.22412939595774,1.5398352609881
+"c","Accumulated warming",NA,NA,1.38050380315852,NA,NA,"hazard ratio per 1 SD",FALSE,"zero-filled (v1)","Birding days",1.23166932702372,1.54732338357439
+"c","Accumulated warming",NA,NA,1.37538029326345,NA,NA,"hazard ratio per 1 SD",FALSE,"bounded imputation","Birding days",1.22748524389532,1.54109465714993
+"c","Accumulated warming",NA,NA,1.32953504034892,NA,NA,"hazard ratio per 1 SD",FALSE,"coverage gap (main)","Records",1.19059531778209,1.48468870750182
+"c","Accumulated warming",NA,NA,1.33513231904134,NA,NA,"hazard ratio per 1 SD",FALSE,"zero-filled (v1)","Records",1.1970488193431,1.48914420242854
+"c","Accumulated warming",NA,NA,1.32924823568002,NA,NA,"hazard ratio per 1 SD",FALSE,"bounded imputation","Records",1.19236524125284,1.48184533641883

@@ -19,7 +19,7 @@
 | 7 | Zhengwang Zhang | *to add* | *to add* |
 | 8 | Zhiheng Wang | *to add* | *to add* |
 
-Corresponding author: Chenchen Ding (dingchenchen@pku.edu.cn)
+Corresponding author: Chenchen Ding (chenchen.ding@pku.edu.cn)
 
 ## CRediT statement (fill per author before submission)
 

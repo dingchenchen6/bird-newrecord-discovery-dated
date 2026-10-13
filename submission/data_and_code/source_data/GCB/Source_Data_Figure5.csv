@@ -1,0 +1,1168 @@
+"panel","item","group","x_var","x","y_var","y","y_lo","y_hi"
+"a","Abroscopus albogularis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.3301516317713,NA,NA
+"a","Accipiter gularis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.854526955512494,NA,NA
+"a","Accipiter soloensis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.05014021033881,NA,NA
+"a","Accipiter trivirgatus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.56206525599994,NA,NA
+"a","Accipiter virgatus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.882415640241174,NA,NA
+"a","Acridotheres cristatellus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17006117029591,NA,NA
+"a","Acridotheres tristis","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.30489134736857,NA,NA
+"a","Acrocephalus agricola","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.923364039561154,NA,NA
+"a","Acrocephalus bistrigiceps","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.00805913496289,NA,NA
+"a","Acrocephalus concinens","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.903288127442649,NA,NA
+"a","Acrocephalus orientalis","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.854276260010764,NA,NA
+"a","Acrocephalus tangorum","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.936320589885981,NA,NA
+"a","Aegithalos bonvaloti","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.1733426307075,NA,NA
+"a","Aegithalos caudatus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.0161387899331,NA,NA
+"a","Aegithalos concinnus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.02036804777979,NA,NA
+"a","Aegithalos fuliginosus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.08428113748554,NA,NA
+"a","Aerodramus brevirostris","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.765517716019326,NA,NA
+"a","Aethopyga christinae","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.04393662881023,NA,NA
+"a","Aethopyga gouldiae","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.891605403360274,NA,NA
+"a","Agropsar sturninus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.14887648120084,NA,NA
+"a","Aix galericulata","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.935811025265409,NA,NA
+"a","Alauda gulgula","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.849369873420702,NA,NA
+"a","Alaudala cheleensis","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17477765221442,NA,NA
+"a","Alcedo hercules","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.864708732209391,NA,NA
+"a","Alcippe morrisonia","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.892181780452327,NA,NA
+"a","Amaurornis phoenicurus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.58053000634933,NA,NA
+"a","Anastomus oscitans","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.36626232306397,NA,NA
+"a","Anser anser","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.865968527078378,NA,NA
+"a","Anser fabalis","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.15847923582041,NA,NA
+"a","Anser indicus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.02661993211236,NA,NA
+"a","Anthus godlewskii","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.898334518822755,NA,NA
+"a","Anthus gustavi","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.17837977576391,NA,NA
+"a","Anthus richardi","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16347370499365,NA,NA
+"a","Anthus roseatus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.879581073662078,NA,NA
+"a","Anthus trivialis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.9171044141913,NA,NA
+"a","Aquila fasciata","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.04160427611145,NA,NA
+"a","Aquila heliaca","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.02101773007331,NA,NA
+"a","Ardea intermedia","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.986756310664663,NA,NA
+"a","Ardea purpurea","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.764342404948753,NA,NA
+"a","Ardenna pacifica","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.969879974451153,NA,NA
+"a","Artamus fuscus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.24250811227749,NA,NA
+"a","Asio flammeus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.89392891343523,NA,NA
+"a","Athene noctua","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.905611554891573,NA,NA
+"a","Aviceda jerdoni","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.06739956370867,NA,NA
+"a","Aviceda leuphotes","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.28656917118742,NA,NA
+"a","Aythya fuligula","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.737897568024756,NA,NA
+"a","Aythya nyroca","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.03248743636444,NA,NA
+"a","Bombycilla japonica","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.02523657712678,NA,NA
+"a","Branta canadensis","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.84671078256204,NA,NA
+"a","Bubo nipalensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.972142387126055,NA,NA
+"a","Bucanetes mongolicus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.36890210450108,NA,NA
+"a","Butastur indicus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.965003885974284,NA,NA
+"a","Cacomantis merulinus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.15873759069018,NA,NA
+"a","Calandrella brachydactyla","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.15591947689939,NA,NA
+"a","Calliope obscura","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.952259824524513,NA,NA
+"a","Caprimulgus macrurus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.1700803787349,NA,NA
+"a","Carpodacus roborowskii","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.862548597905434,NA,NA
+"a","Carpodacus vinaceus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.910584790534788,NA,NA
+"a","Cecropis daurica","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.971618869702011,NA,NA
+"a","Centropus bengalensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.13330066257258,NA,NA
+"a","Cephalopyrus flammiceps","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.972673277525022,NA,NA
+"a","Certhia familiaris","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.916085220406014,NA,NA
+"a","Certhia himalayana","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.991899733122766,NA,NA
+"a","Certhia tianquanensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.882334360077494,NA,NA
+"a","Ceryle rudis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.14426194786935,NA,NA
+"a","Cettia brunnifrons","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.861571446263246,NA,NA
+"a","Cettia castaneocoronata","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.855728250006873,NA,NA
+"a","Chalcophaps indica","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.6146652148982,NA,NA
+"a","Charadrius atrifrons","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.05950136638113,NA,NA
+"a","Charadrius dealbatus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.805089623796046,NA,NA
+"a","Charadrius placidus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.878700734932723,NA,NA
+"a","Charadrius veredus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.19631778448692,NA,NA
+"a","Chlidonias leucopterus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.86122296276241,NA,NA
+"a","Chlidonias niger","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.13839423837108,NA,NA
+"a","Chloris ambigua","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.04723779280503,NA,NA
+"a","Chloris sinica","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.747597266670892,NA,NA
+"a","Chrysolophus pictus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.76121562654263,NA,NA
+"a","Ciconia boyciana","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.33961087593202,NA,NA
+"a","Ciconia nigra","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.877122902337,NA,NA
+"a","Circaetus gallicus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.55460976325879,NA,NA
+"a","Circus macrourus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.08723683318666,NA,NA
+"a","Circus spilonotus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.865271888029823,NA,NA
+"a","Cisticola exilis","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.9612489072511,NA,NA
+"a","Cisticola juncidis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.896499791975924,NA,NA
+"a","Clamator coromandus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.36347986076644,NA,NA
+"a","Clanga clanga","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.837935481083667,NA,NA
+"a","Columba oenas","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.13178902491481,NA,NA
+"a","Copsychus saularis","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.93573149429655,NA,NA
+"a","Coracias garrulus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.932581998911148,NA,NA
+"a","Coturnicops exquisitus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.824600167662526,NA,NA
+"a","Crex crex","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.947767124816498,NA,NA
+"a","Crossoptilon mantchuricum","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.955688834263351,NA,NA
+"a","Curruca curruca","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.36479476165867,NA,NA
+"a","Cyanistes cyanus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.864175492603732,NA,NA
+"a","Cyanoderma pyrrhops","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.14187202623427,NA,NA
+"a","Cygnus cygnus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17151259154683,NA,NA
+"a","Cygnus olor","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.01914829147895,NA,NA
+"a","Cyornis glaucicomans","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.10644254413942,NA,NA
+"a","Cyornis hainanus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.07531110192439,NA,NA
+"a","Cyornis rubeculoides","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.85466054489757,NA,NA
+"a","Delichon dasypus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.878890187407167,NA,NA
+"a","Dendrocitta formosae","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.92139894798559,NA,NA
+"a","Dendrocopos hyperythrus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.85182040536542,NA,NA
+"a","Dendrocygna javanica","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16830680928829,NA,NA
+"a","Dicaeum cruentatum","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17341396363581,NA,NA
+"a","Dicaeum ignipectus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16916107122708,NA,NA
+"a","Dicaeum minullum","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17755704276902,NA,NA
+"a","Dicrurus annectens","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.07946060964749,NA,NA
+"a","Dicrurus hottentottus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.990159416638496,NA,NA
+"a","Dicrurus remifer","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.07504903474235,NA,NA
+"a","Egretta eulophotes","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.81775885304929,NA,NA
+"a","Egretta garzetta","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16986884846539,NA,NA
+"a","Elachura formosa","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.11116336937255,NA,NA
+"a","Elanus caeruleus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.68242337577351,NA,NA
+"a","Emberiza buchanani","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.910784172001281,NA,NA
+"a","Emberiza citrinella","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.897457024374251,NA,NA
+"a","Emberiza elegans","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.05502511258047,NA,NA
+"a","Emberiza godlewskii","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.01725650860889,NA,NA
+"a","Emberiza hortulana","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.925857977333266,NA,NA
+"a","Emberiza leucocephalos","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17214171698723,NA,NA
+"a","Emberiza pallasi","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.82388876782748,NA,NA
+"a","Emberiza pusilla","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.839849052894925,NA,NA
+"a","Emberiza rustica","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.92070917653749,NA,NA
+"a","Emberiza siemsseni","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.1430002349399,NA,NA
+"a","Emberiza yessoensis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.10929684556248,NA,NA
+"a","Enicurus leschenaulti","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16646942006451,NA,NA
+"a","Enicurus maculatus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.08891699709519,NA,NA
+"a","Enicurus schistaceus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.921478461997281,NA,NA
+"a","Erpornis zantholeuca","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.03261570042786,NA,NA
+"a","Erythrogenys hypoleucos","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.954419705096046,NA,NA
+"a","Eudynamys scolopaceus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.22566152677101,NA,NA
+"a","Eumyias thalassinus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.66784622306359,NA,NA
+"a","Falco cherrug","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.941165629043197,NA,NA
+"a","Falco severus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.83476473407909,NA,NA
+"a","Ficedula albicilla","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.808338711298481,NA,NA
+"a","Ficedula elisae","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.16812919777629,NA,NA
+"a","Ficedula erithacus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.04123454868997,NA,NA
+"a","Ficedula hyperythra","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.05412929589383,NA,NA
+"a","Ficedula mugimaki","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.86123699751049,NA,NA
+"a","Ficedula strophiata","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16699538003965,NA,NA
+"a","Ficedula superciliaris","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16754931615815,NA,NA
+"a","Ficedula tricolor","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.12659022165213,NA,NA
+"a","Fringilla coelebs","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.77806579260613,NA,NA
+"a","Fringilla montifringilla","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.783181210585324,NA,NA
+"a","Galerida cristata","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.897624348086603,NA,NA
+"a","Gallicrex cinerea","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.912421085991916,NA,NA
+"a","Garrulax maesi","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.773717354099417,NA,NA
+"a","Garrulax monileger","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.15000039277162,NA,NA
+"a","Gavia arctica","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.19045767233312,NA,NA
+"a","Gelochelidon nilotica","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.04930018242503,NA,NA
+"a","Geokichla citrina","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.09730409916781,NA,NA
+"a","Glaucidium cuculoides","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17484540060753,NA,NA
+"a","Gorsachius melanolophus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.35277225174442,NA,NA
+"a","Gracupica nigricollis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.41579877979943,NA,NA
+"a","Grandala coelicolor","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.966593337657621,NA,NA
+"a","Grus japonensis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.947716754449674,NA,NA
+"a","Grus monacha","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16010101383278,NA,NA
+"a","Grus nigricollis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.02167647902436,NA,NA
+"a","Gypaetus barbatus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.12087941696833,NA,NA
+"a","Gyps himalayensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.0320139684149,NA,NA
+"a","Halcyon coromanda","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.888492310084687,NA,NA
+"a","Halcyon pileata","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.865173604700368,NA,NA
+"a","Halcyon smyrnensis","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.35079821669967,NA,NA
+"a","Haliaeetus leucoryphus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.914145646883204,NA,NA
+"a","Harpactes wardi","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.859194999995186,NA,NA
+"a","Helopsaltes certhiola","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.879165433313155,NA,NA
+"a","Helopsaltes pryeri","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.932357701505233,NA,NA
+"a","Hemiprocne coronata","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17119704102211,NA,NA
+"a","Hemitesia pallidipes","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.14817780991699,NA,NA
+"a","Hemixos castanonotus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.02680348020265,NA,NA
+"a","Heterophasia desgodinsi","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.947126895918939,NA,NA
+"a","Heteroxenicus stellatus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.956433987227301,NA,NA
+"a","Hieraaetus pennatus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.82763419839505,NA,NA
+"a","Hierococcyx nisicolor","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16156565275361,NA,NA
+"a","Hirundapus caudacutus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.899855793612233,NA,NA
+"a","Hirundo rustica","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.867670924877744,NA,NA
+"a","Histrionicus histrionicus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.06432380145888,NA,NA
+"a","Hydrocoloeus minutus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.898482148125198,NA,NA
+"a","Hydrophasianus chirurgus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.35887518316431,NA,NA
+"a","Hydroprogne caspia","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.00351039646704,NA,NA
+"a","Hypothymis azurea","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16357262568993,NA,NA
+"a","Hypsipetes leucocephalus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.90266950230148,NA,NA
+"a","Ianthocincla lunulata","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.96118804374173,NA,NA
+"a","Ibidorhyncha struthersii","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.975548812816708,NA,NA
+"a","Ictinaetus malaiensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.02540596268326,NA,NA
+"a","Iduna caligata","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16555591190823,NA,NA
+"a","Indicator xanthonotus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.850920080808505,NA,NA
+"a","Ixobrychus cinnamomeus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16071827286105,NA,NA
+"a","Ixobrychus eurhythmus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.879911660747865,NA,NA
+"a","Ixobrychus minutus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.960991929239198,NA,NA
+"a","Ixos mcclellandii","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.977542644295355,NA,NA
+"a","Ketupa flavipes","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.900954096580337,NA,NA
+"a","Lalage melaschistos","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.911869452642353,NA,NA
+"a","Lanius borealis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.997750816938343,NA,NA
+"a","Lanius collurioides","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.01123378687106,NA,NA
+"a","Lanius isabellinus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.982595152606952,NA,NA
+"a","Lanius schach","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.02898832574858,NA,NA
+"a","Lanius sphenocercus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.855464202752603,NA,NA
+"a","Lanius tephronotus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.08719615893009,NA,NA
+"a","Larus crassirostris","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17609865984823,NA,NA
+"a","Larvivora brunnea","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.86088944913142,NA,NA
+"a","Larvivora cyane","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.939613591703275,NA,NA
+"a","Leptopoecile elegans","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.971574561660839,NA,NA
+"a","Leptoptilos javanicus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.01889014214177,NA,NA
+"a","Limnodromus semipalmatus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.946956396542761,NA,NA
+"a","Limosa limosa","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.854955602572993,NA,NA
+"a","Linaria cannabina","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.913951389620721,NA,NA
+"a","Locustella davidi","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.836484042783604,NA,NA
+"a","Locustella mandelli","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.1212932759537,NA,NA
+"a","Lonchura striata","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.04250587771904,NA,NA
+"a","Lophotriorchis kienerii","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.815901497302606,NA,NA
+"a","Lophura leucomelanos","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.753011654333404,NA,NA
+"a","Lophura nycthemera","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.09622905548537,NA,NA
+"a","Loxia curvirostra","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.854340548717834,NA,NA
+"a","Macropygia unchall","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.21096308751671,NA,NA
+"a","Mareca falcata","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.953780704045232,NA,NA
+"a","Megaceryle lugubris","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.09397446016393,NA,NA
+"a","Melanitta fusca","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.04999601478546,NA,NA
+"a","Melanitta stejnegeri","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.916711764100784,NA,NA
+"a","Melanochlora sultanea","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.966086464016748,NA,NA
+"a","Mergus serrator","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.21213674488336,NA,NA
+"a","Merops philippinus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.15562837494015,NA,NA
+"a","Mixornis gularis","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.927767523985196,NA,NA
+"a","Monticola gularis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.855918810586838,NA,NA
+"a","Monticola rufiventris","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.870464088792795,NA,NA
+"a","Monticola solitarius","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.855338525177495,NA,NA
+"a","Motacilla citreola","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.89377934052877,NA,NA
+"a","Moupinia poecilotis","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.930578172617622,NA,NA
+"a","Muscicapa dauurica","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.876417517862217,NA,NA
+"a","Muscicapa ferruginea","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.04419066734103,NA,NA
+"a","Muscicapa muttui","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.27061966957361,NA,NA
+"a","Mycerobas affinis","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.977032210006199,NA,NA
+"a","Mycerobas carnipes","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.902503154064845,NA,NA
+"a","Myiomela leucura","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.92947948684905,NA,NA
+"a","Myophonus caeruleus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.780041409110809,NA,NA
+"a","Netta rufina","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.35182276152921,NA,NA
+"a","Niltava davidi","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.892642117192765,NA,NA
+"a","Niltava grandis","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.895570076286844,NA,NA
+"a","Niltava macgrigoriae","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16396019158447,NA,NA
+"a","Niltava sundara","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.847244160894861,NA,NA
+"a","Ninox japonica","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.885364785077318,NA,NA
+"a","Nipponia nippon","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.916964933241604,NA,NA
+"a","Nisaetus nipalensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.02399847302608,NA,NA
+"a","Numenius madagascariensis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.743670464427748,NA,NA
+"a","Nycticorax nycticorax","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16711510822229,NA,NA
+"a","Oenanthe deserti","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.30755520657907,NA,NA
+"a","Oenanthe oenanthe","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.983021972471488,NA,NA
+"a","Onychoprion anaethetus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.43251899308158,NA,NA
+"a","Oriolus oriolus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.0909874688496,NA,NA
+"a","Otus lettia","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.907189266084539,NA,NA
+"a","Otus semitorques","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.15729899047071,NA,NA
+"a","Otus spilocephalus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.13342613850494,NA,NA
+"a","Oxyura leucocephala","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.04597418144657,NA,NA
+"a","Panurus biarmicus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.03363139212806,NA,NA
+"a","Paradoxornis guttaticollis","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.935965571497802,NA,NA
+"a","Paradoxornis heudei","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.19089760160264,NA,NA
+"a","Parayuhina diademata","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.93410462883916,NA,NA
+"a","Pardaliparus venustulus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.986707593518452,NA,NA
+"a","Parus monticolus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.843510304171775,NA,NA
+"a","Passer cinnamomeus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.989764884068873,NA,NA
+"a","Passer domesticus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.62926351356405,NA,NA
+"a","Passer hispaniolensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.18863455184647,NA,NA
+"a","Pelecanus crispus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.899485845819814,NA,NA
+"a","Pellorneum tickelli","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.898656084484965,NA,NA
+"a","Perdix hodgsoniae","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.03362521642566,NA,NA
+"a","Pericrocotus cantonensis","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16843213960705,NA,NA
+"a","Pericrocotus divaricatus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.846911707118083,NA,NA
+"a","Pericrocotus ethologus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.17698340206224,NA,NA
+"a","Pericrocotus solaris","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.04262105611148,NA,NA
+"a","Periparus rubidiventris","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.812951503726235,NA,NA
+"a","Pernis ptilorhynchus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.7420480574518,NA,NA
+"a","Phasianus colchicus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.742051544389107,NA,NA
+"a","Phoenicurus erythronotus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.980916513844449,NA,NA
+"a","Phoenicurus frontalis","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.01760891591634,NA,NA
+"a","Phoenicurus leucocephalus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.79808216582158,NA,NA
+"a","Phoenicurus ochruros","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.82698702380888,NA,NA
+"a","Phoenicurus schisticeps","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17478672649866,NA,NA
+"a","Phylloscopus affinis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.01368216778434,NA,NA
+"a","Phylloscopus burkii","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17794203197569,NA,NA
+"a","Phylloscopus cantator","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.17509531717894,NA,NA
+"a","Phylloscopus castaniceps","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.12532583791173,NA,NA
+"a","Phylloscopus claudiae","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.875648791037098,NA,NA
+"a","Phylloscopus coronatus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.811928589793429,NA,NA
+"a","Phylloscopus emeiensis","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.853412443451701,NA,NA
+"a","Phylloscopus intermedius","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.38970257311753,NA,NA
+"a","Phylloscopus magnirostris","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.91331309686262,NA,NA
+"a","Phylloscopus ogilviegranti","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.943934774185051,NA,NA
+"a","Phylloscopus omeiensis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.89373714089174,NA,NA
+"a","Phylloscopus pulcher","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.897281303041516,NA,NA
+"a","Phylloscopus ricketti","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.12359214836795,NA,NA
+"a","Phylloscopus soror","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.23044897393063,NA,NA
+"a","Phylloscopus subaffinis","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16047467691813,NA,NA
+"a","Phylloscopus tenellipes","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.922826311357632,NA,NA
+"a","Phylloscopus tephrocephalus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.56927716994546,NA,NA
+"a","Phylloscopus yunnanensis","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17342691093054,NA,NA
+"a","Picumnus innominatus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.02449358159123,NA,NA
+"a","Picus chlorolophus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.969899282658326,NA,NA
+"a","Pitta nympha","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.06017220381089,NA,NA
+"a","Platalea minor","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.958833587239839,NA,NA
+"a","Pnoepyga immaculata","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.887906494418142,NA,NA
+"a","Podiceps auritus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.06902291685035,NA,NA
+"a","Podiceps grisegena","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.907463789410512,NA,NA
+"a","Podiceps nigricollis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.00144130734403,NA,NA
+"a","Podoces biddulphi","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.916708345096736,NA,NA
+"a","Pomatorhinus schisticeps","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.971677943233689,NA,NA
+"a","Pomatorhinus superciliaris","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.742962298220025,NA,NA
+"a","Prinia atrogularis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.17598910538234,NA,NA
+"a","Prinia flaviventris","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.08367752890709,NA,NA
+"a","Prinia inornata","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.915417966196815,NA,NA
+"a","Prunella collaris","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.880559023848237,NA,NA
+"a","Prunella himalayana","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.992212343644002,NA,NA
+"a","Prunella immaculata","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.89474220514187,NA,NA
+"a","Prunella montanella","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.03486140556798,NA,NA
+"a","Prunella strophiata","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.09924781532499,NA,NA
+"a","Psarisomus dalhousiae","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.869398780742411,NA,NA
+"a","Pseudopodoces humilis","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.00368924177744,NA,NA
+"a","Psilopogon faber","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.0558488217862,NA,NA
+"a","Psilopogon virens","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.892894059372137,NA,NA
+"a","Pterorhinus berthemyi","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.835062090486219,NA,NA
+"a","Pterorhinus lanceolatus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.945323967114038,NA,NA
+"a","Pterorhinus pectoralis","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.916605703666324,NA,NA
+"a","Pterorhinus sannio","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.877402935296192,NA,NA
+"a","Pteruthius rufiventer","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.85322016168725,NA,NA
+"a","Pteruthius xanthochlorus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.26556637145195,NA,NA
+"a","Ptyonoprogne rupestris","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.07821306883182,NA,NA
+"a","Pycnonotus aurigaster","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.86506974929523,NA,NA
+"a","Pycnonotus jocosus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.31507725675441,NA,NA
+"a","Pycnonotus sinensis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.45139950253538,NA,NA
+"a","Pycnonotus xanthorrhous","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.997923627020509,NA,NA
+"a","Pyrrhula erythaca","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.916598465252687,NA,NA
+"a","Pyrrhula nipalensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.19791245646949,NA,NA
+"a","Rallina eurizonoides","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.09704946234151,NA,NA
+"a","Rallus aquaticus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.19673634905291,NA,NA
+"a","Recurvirostra avosetta","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.861095682494527,NA,NA
+"a","Regulus regulus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.97744475969117,NA,NA
+"a","Remiz consobrinus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.32487438554614,NA,NA
+"a","Remiz coronatus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.10108926725547,NA,NA
+"a","Rhodospiza obsoleta","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.920548988284713,NA,NA
+"a","Rubigula flaviventris","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.843491406827304,NA,NA
+"a","Sasia ochracea","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.10748603802157,NA,NA
+"a","Saxicola ferreus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17026215460335,NA,NA
+"a","Sitta cinnamoventris","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.922956457782629,NA,NA
+"a","Sitta formosa","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.861494793340332,NA,NA
+"a","Sitta villosa","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.03522520173848,NA,NA
+"a","Sittiparus varius","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.834607742112451,NA,NA
+"a","Spilopelia chinensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.00408830020221,NA,NA
+"a","Spilopelia senegalensis","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.96127859754617,NA,NA
+"a","Spilornis cheela","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.06600185044255,NA,NA
+"a","Spinus spinus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.814040134747791,NA,NA
+"a","Spizixos semitorques","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.10933709709751,NA,NA
+"a","Spodiopsar cineraceus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.16333540233556,NA,NA
+"a","Spodiopsar sericeus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.28078034527797,NA,NA
+"a","Stachyris humei","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.842390319433301,NA,NA
+"a","Staphida torqueola","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.888592866035215,NA,NA
+"a","Streptopelia decaocto","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.908279223304104,NA,NA
+"a","Sturnia sinensis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.999981511925124,NA,NA
+"a","Sturnus vulgaris","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.20259649435366,NA,NA
+"a","Suthora fulvifrons","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.886010225917657,NA,NA
+"a","Syrmaticus humiae","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.965461332718542,NA,NA
+"a","Syrmaticus reevesii","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.829890571940142,NA,NA
+"a","Syrrhaptes paradoxus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.773603866645436,NA,NA
+"a","Tarsiger chrysaeus","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.10331032715441,NA,NA
+"a","Tarsiger indicus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.910673372406067,NA,NA
+"a","Temnurus temnurus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.779259675425214,NA,NA
+"a","Tephrodornis virgatus","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.860051217126662,NA,NA
+"a","Thalasseus bergii","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.00670099858732,NA,NA
+"a","Timalia pileata","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17752167996693,NA,NA
+"a","Tragopan caboti","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.937439951055151,NA,NA
+"a","Tragopan temminckii","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.908008348729977,NA,NA
+"a","Treron curvirostra","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.91776829716787,NA,NA
+"a","Treron sieboldii","Partial","migratory group","Partial","species hazard multiplier exp(b)",1.1420430476741,NA,NA
+"a","Treron sphenurus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.904172535434866,NA,NA
+"a","Turdus boulboul","Partial","migratory group","Partial","species hazard multiplier exp(b)",2.71461644768885,NA,NA
+"a","Turdus cardis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.03763816838447,NA,NA
+"a","Turdus feae","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.29732877548641,NA,NA
+"a","Turdus mandarinus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.01311243657117,NA,NA
+"a","Turdus pilaris","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.931409573355832,NA,NA
+"a","Turdus rubrocanus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.33179986826474,NA,NA
+"a","Turdus ruficollis","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",1.06933107701301,NA,NA
+"a","Turdus viscivorus","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.39033580505784,NA,NA
+"a","Turnix suscitator","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.33772197683851,NA,NA
+"a","Tyto longimembris","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.17734714799544,NA,NA
+"a","Urile pelagicus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",0.903819286857216,NA,NA
+"a","Urosphena squameiceps","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.830043718940713,NA,NA
+"a","Vanellus cinereus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.757224325413678,NA,NA
+"a","Vanellus indicus","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.1734059826379,NA,NA
+"a","Vanellus vanellus","Partial","migratory group","Partial","species hazard multiplier exp(b)",0.757034448666575,NA,NA
+"a","Yuhina nigrimenta","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.08348721796377,NA,NA
+"a","Zoothera dixoni","Unknown","migratory group","Unknown","species hazard multiplier exp(b)",1.35365452060896,NA,NA
+"a","Zoothera mollissima","Resident","migratory group","Resident","species hazard multiplier exp(b)",1.03218311358225,NA,NA
+"a","Zoothera monticola","Resident","migratory group","Resident","species hazard multiplier exp(b)",0.932531689094396,NA,NA
+"a","Zosterops erythropleurus","Long-distance","migratory group","Long-distance","species hazard multiplier exp(b)",0.82947968733851,NA,NA
+"a","median Resident",NA,"migratory group","Resident","group median multiplier",0.965461332718542,NA,NA
+"a","median Long-distance",NA,"migratory group","Long-distance","group median multiplier",0.939613591703275,NA,NA
+"a","median Partial",NA,"migratory group","Partial","group median multiplier",1.01424067726541,NA,NA
+"a","median Unknown",NA,"migratory group","Unknown","group median multiplier",1.16601257652581,NA,NA
+"b","Anhui","in scope","province","Anhui","province hazard multiplier exp(b)",1.29786491881414,NA,NA
+"b","Beijing","in scope","province","Beijing","province hazard multiplier exp(b)",1.03852800724265,NA,NA
+"b","Chongqing","in scope","province","Chongqing","province hazard multiplier exp(b)",0.945471100111237,NA,NA
+"b","Fujian","in scope","province","Fujian","province hazard multiplier exp(b)",0.719340522323078,NA,NA
+"b","Gansu","in scope","province","Gansu","province hazard multiplier exp(b)",1.58375416623349,NA,NA
+"b","Guangdong","in scope","province","Guangdong","province hazard multiplier exp(b)",0.73290670648323,NA,NA
+"b","Guangxi","in scope","province","Guangxi","province hazard multiplier exp(b)",1.31066727780163,NA,NA
+"b","Guizhou","in scope","province","Guizhou","province hazard multiplier exp(b)",1.66088197293062,NA,NA
+"b","Hainan","in scope","province","Hainan","province hazard multiplier exp(b)",1.27181874621835,NA,NA
+"b","Hebei","in scope","province","Hebei","province hazard multiplier exp(b)",0.732852657938036,NA,NA
+"b","Heilongjiang","in scope","province","Heilongjiang","province hazard multiplier exp(b)",1.6415836061484,NA,NA
+"b","Henan","in scope","province","Henan","province hazard multiplier exp(b)",1.19971296304088,NA,NA
+"b","Hong Kong","outside analysis scope","province","Hong Kong","province hazard multiplier exp(b)",NA,NA,NA
+"b","Hubei","in scope","province","Hubei","province hazard multiplier exp(b)",1.05980704446491,NA,NA
+"b","Hunan","in scope","province","Hunan","province hazard multiplier exp(b)",2.05665575672072,NA,NA
+"b","Inner Mongolia","in scope","province","Inner Mongolia","province hazard multiplier exp(b)",1.58761764627795,NA,NA
+"b","Jiangsu","in scope","province","Jiangsu","province hazard multiplier exp(b)",1.1974680002245,NA,NA
+"b","Jiangxi","in scope","province","Jiangxi","province hazard multiplier exp(b)",1.22538203658845,NA,NA
+"b","Jilin","in scope","province","Jilin","province hazard multiplier exp(b)",1.27287204622729,NA,NA
+"b","Liaoning","in scope","province","Liaoning","province hazard multiplier exp(b)",1.18706160925188,NA,NA
+"b","Macau","outside analysis scope","province","Macau","province hazard multiplier exp(b)",NA,NA,NA
+"b","Ningxia","in scope","province","Ningxia","province hazard multiplier exp(b)",1.26297233911937,NA,NA
+"b","Qinghai","in scope","province","Qinghai","province hazard multiplier exp(b)",1.2431665356809,NA,NA
+"b","Shaanxi","in scope","province","Shaanxi","province hazard multiplier exp(b)",1.51040558082876,NA,NA
+"b","Shandong","in scope","province","Shandong","province hazard multiplier exp(b)",1.17924122521484,NA,NA
+"b","Shanghai","in scope","province","Shanghai","province hazard multiplier exp(b)",1.02317078083761,NA,NA
+"b","Shanxi","in scope","province","Shanxi","province hazard multiplier exp(b)",0.758088849446776,NA,NA
+"b","Sichuan","in scope","province","Sichuan","province hazard multiplier exp(b)",0.785980872219305,NA,NA
+"b","Taiwan","outside analysis scope","province","Taiwan","province hazard multiplier exp(b)",NA,NA,NA
+"b","Tianjin","in scope","province","Tianjin","province hazard multiplier exp(b)",1.06003269150054,NA,NA
+"b","Tibet","in scope","province","Tibet","province hazard multiplier exp(b)",1.55713832934093,NA,NA
+"b","Xinjiang","in scope","province","Xinjiang","province hazard multiplier exp(b)",0.747498542778905,NA,NA
+"b","Yunnan","in scope","province","Yunnan","province hazard multiplier exp(b)",0.964615657449058,NA,NA
+"b","Zhejiang","in scope","province","Zhejiang","province hazard multiplier exp(b)",1.02337681689275,NA,NA
+"c","Anhui","in model","year","2002","province x year hazard multiplier exp(b)",0.724303067284399,NA,NA
+"c","Beijing","in model","year","2002","province x year hazard multiplier exp(b)",1.30769782896414,NA,NA
+"c","Chongqing","in model","year","2002","province x year hazard multiplier exp(b)",0.793262522580547,NA,NA
+"c","Fujian","in model","year","2002","province x year hazard multiplier exp(b)",0.871708609114172,NA,NA
+"c","Gansu","in model","year","2002","province x year hazard multiplier exp(b)",0.711363578832198,NA,NA
+"c","Guangdong","in model","year","2002","province x year hazard multiplier exp(b)",0.835961352312465,NA,NA
+"c","Guangxi","in model","year","2002","province x year hazard multiplier exp(b)",1.2354720234286,NA,NA
+"c","Guizhou","in model","year","2002","province x year hazard multiplier exp(b)",0.779721149707185,NA,NA
+"c","Hainan","in model","year","2002","province x year hazard multiplier exp(b)",0.836296517362069,NA,NA
+"c","Hebei","in model","year","2002","province x year hazard multiplier exp(b)",0.814589694383338,NA,NA
+"c","Heilongjiang","in model","year","2002","province x year hazard multiplier exp(b)",1.80499852489645,NA,NA
+"c","Henan","in model","year","2002","province x year hazard multiplier exp(b)",0.782076393380754,NA,NA
+"c","Hubei","in model","year","2002","province x year hazard multiplier exp(b)",0.747090555753158,NA,NA
+"c","Hunan","in model","year","2002","province x year hazard multiplier exp(b)",0.631402525264189,NA,NA
+"c","Jiangsu","in model","year","2002","province x year hazard multiplier exp(b)",0.73019094527856,NA,NA
+"c","Jiangxi","in model","year","2002","province x year hazard multiplier exp(b)",0.794244939082752,NA,NA
+"c","Jilin","in model","year","2002","province x year hazard multiplier exp(b)",0.788552701535953,NA,NA
+"c","Liaoning","in model","year","2002","province x year hazard multiplier exp(b)",1.21211351183326,NA,NA
+"c","Ningxia","in model","year","2002","province x year hazard multiplier exp(b)",1.37660319568328,NA,NA
+"c","Qinghai","in model","year","2002","province x year hazard multiplier exp(b)",0.744252269757103,NA,NA
+"c","Shaanxi","in model","year","2002","province x year hazard multiplier exp(b)",1.0040208560958,NA,NA
+"c","Shanghai","in model","year","2002","province x year hazard multiplier exp(b)",0.784015813012332,NA,NA
+"c","Shanxi","in model","year","2002","province x year hazard multiplier exp(b)",0.864054346393706,NA,NA
+"c","Sichuan","in model","year","2002","province x year hazard multiplier exp(b)",0.724800627543806,NA,NA
+"c","Tianjin","in model","year","2002","province x year hazard multiplier exp(b)",1.42486168809487,NA,NA
+"c","Tibet","in model","year","2002","province x year hazard multiplier exp(b)",0.709188307967902,NA,NA
+"c","Xinjiang","in model","year","2002","province x year hazard multiplier exp(b)",0.820818538924483,NA,NA
+"c","Yunnan","in model","year","2002","province x year hazard multiplier exp(b)",0.718227448603795,NA,NA
+"c","Zhejiang","in model","year","2002","province x year hazard multiplier exp(b)",1.24096929522086,NA,NA
+"c","Beijing","in model","year","2003","province x year hazard multiplier exp(b)",0.833329976368753,NA,NA
+"c","Chongqing","in model","year","2003","province x year hazard multiplier exp(b)",0.825497346801464,NA,NA
+"c","Fujian","in model","year","2003","province x year hazard multiplier exp(b)",0.827256063835511,NA,NA
+"c","Guangdong","in model","year","2003","province x year hazard multiplier exp(b)",0.843122516068406,NA,NA
+"c","Guangxi","in model","year","2003","province x year hazard multiplier exp(b)",0.764678351253869,NA,NA
+"c","Hainan","in model","year","2003","province x year hazard multiplier exp(b)",0.805892518469248,NA,NA
+"c","Hebei","in model","year","2003","province x year hazard multiplier exp(b)",0.852118481741281,NA,NA
+"c","Henan","in model","year","2003","province x year hazard multiplier exp(b)",0.784028822677988,NA,NA
+"c","Hubei","in model","year","2003","province x year hazard multiplier exp(b)",1.29457950827095,NA,NA
+"c","Hunan","in model","year","2003","province x year hazard multiplier exp(b)",0.668713972493289,NA,NA
+"c","Inner Mongolia","in model","year","2003","province x year hazard multiplier exp(b)",0.70332994098697,NA,NA
+"c","Jiangsu","in model","year","2003","province x year hazard multiplier exp(b)",0.756825256502222,NA,NA
+"c","Jiangxi","in model","year","2003","province x year hazard multiplier exp(b)",2.07786604087215,NA,NA
+"c","Jilin","in model","year","2003","province x year hazard multiplier exp(b)",0.771152705784793,NA,NA
+"c","Qinghai","in model","year","2003","province x year hazard multiplier exp(b)",0.857726582055788,NA,NA
+"c","Shaanxi","in model","year","2003","province x year hazard multiplier exp(b)",0.688194666817391,NA,NA
+"c","Shandong","in model","year","2003","province x year hazard multiplier exp(b)",0.776119822106597,NA,NA
+"c","Shanghai","in model","year","2003","province x year hazard multiplier exp(b)",0.787541373466279,NA,NA
+"c","Sichuan","in model","year","2003","province x year hazard multiplier exp(b)",0.800923770327394,NA,NA
+"c","Tianjin","in model","year","2003","province x year hazard multiplier exp(b)",0.849271630618195,NA,NA
+"c","Tibet","in model","year","2003","province x year hazard multiplier exp(b)",1.27432982275803,NA,NA
+"c","Xinjiang","in model","year","2003","province x year hazard multiplier exp(b)",0.823323532934698,NA,NA
+"c","Yunnan","in model","year","2003","province x year hazard multiplier exp(b)",1.14928102245229,NA,NA
+"c","Zhejiang","in model","year","2003","province x year hazard multiplier exp(b)",0.783239576157794,NA,NA
+"c","Anhui","in model","year","2004","province x year hazard multiplier exp(b)",0.72870645221997,NA,NA
+"c","Beijing","in model","year","2004","province x year hazard multiplier exp(b)",1.34852031593897,NA,NA
+"c","Chongqing","in model","year","2004","province x year hazard multiplier exp(b)",0.841419629376933,NA,NA
+"c","Fujian","in model","year","2004","province x year hazard multiplier exp(b)",1.41118771876869,NA,NA
+"c","Gansu","in model","year","2004","province x year hazard multiplier exp(b)",0.708908160117653,NA,NA
+"c","Guangdong","in model","year","2004","province x year hazard multiplier exp(b)",0.8706758004913,NA,NA
+"c","Guangxi","in model","year","2004","province x year hazard multiplier exp(b)",2.72332333919195,NA,NA
+"c","Guizhou","in model","year","2004","province x year hazard multiplier exp(b)",0.737519297468088,NA,NA
+"c","Hainan","in model","year","2004","province x year hazard multiplier exp(b)",1.30580688741037,NA,NA
+"c","Hebei","in model","year","2004","province x year hazard multiplier exp(b)",1.40005676217526,NA,NA
+"c","Heilongjiang","in model","year","2004","province x year hazard multiplier exp(b)",0.76336755784533,NA,NA
+"c","Henan","in model","year","2004","province x year hazard multiplier exp(b)",0.748789399560709,NA,NA
+"c","Hunan","in model","year","2004","province x year hazard multiplier exp(b)",0.663169556577553,NA,NA
+"c","Inner Mongolia","in model","year","2004","province x year hazard multiplier exp(b)",1.07920330238992,NA,NA
+"c","Jiangsu","in model","year","2004","province x year hazard multiplier exp(b)",0.728917200999715,NA,NA
+"c","Jiangxi","in model","year","2004","province x year hazard multiplier exp(b)",2.867129094729,NA,NA
+"c","Jilin","in model","year","2004","province x year hazard multiplier exp(b)",0.772240669573811,NA,NA
+"c","Liaoning","in model","year","2004","province x year hazard multiplier exp(b)",1.77239576481813,NA,NA
+"c","Qinghai","in model","year","2004","province x year hazard multiplier exp(b)",0.736507196272081,NA,NA
+"c","Shaanxi","in model","year","2004","province x year hazard multiplier exp(b)",1.40111764484159,NA,NA
+"c","Shandong","in model","year","2004","province x year hazard multiplier exp(b)",0.783668110741178,NA,NA
+"c","Shanghai","in model","year","2004","province x year hazard multiplier exp(b)",1.19630520262525,NA,NA
+"c","Sichuan","in model","year","2004","province x year hazard multiplier exp(b)",0.775636208238189,NA,NA
+"c","Tibet","in model","year","2004","province x year hazard multiplier exp(b)",0.65811462629226,NA,NA
+"c","Xinjiang","in model","year","2004","province x year hazard multiplier exp(b)",1.33169979557572,NA,NA
+"c","Yunnan","in model","year","2004","province x year hazard multiplier exp(b)",0.762419549782953,NA,NA
+"c","Zhejiang","in model","year","2004","province x year hazard multiplier exp(b)",0.75387241206261,NA,NA
+"c","Anhui","in model","year","2005","province x year hazard multiplier exp(b)",1.14090744065286,NA,NA
+"c","Beijing","in model","year","2005","province x year hazard multiplier exp(b)",1.36273665834251,NA,NA
+"c","Chongqing","in model","year","2005","province x year hazard multiplier exp(b)",0.852006836554289,NA,NA
+"c","Fujian","in model","year","2005","province x year hazard multiplier exp(b)",0.861381167613501,NA,NA
+"c","Gansu","in model","year","2005","province x year hazard multiplier exp(b)",0.731115409569919,NA,NA
+"c","Guangdong","in model","year","2005","province x year hazard multiplier exp(b)",0.856653312611522,NA,NA
+"c","Guangxi","in model","year","2005","province x year hazard multiplier exp(b)",3.45207238869796,NA,NA
+"c","Hainan","in model","year","2005","province x year hazard multiplier exp(b)",1.31686805269653,NA,NA
+"c","Hebei","in model","year","2005","province x year hazard multiplier exp(b)",0.811590090257888,NA,NA
+"c","Heilongjiang","in model","year","2005","province x year hazard multiplier exp(b)",1.90497934795829,NA,NA
+"c","Henan","in model","year","2005","province x year hazard multiplier exp(b)",0.751719437038755,NA,NA
+"c","Hubei","in model","year","2005","province x year hazard multiplier exp(b)",0.757842910193959,NA,NA
+"c","Hunan","in model","year","2005","province x year hazard multiplier exp(b)",0.691129568288131,NA,NA
+"c","Inner Mongolia","in model","year","2005","province x year hazard multiplier exp(b)",0.722056989445801,NA,NA
+"c","Jiangsu","in model","year","2005","province x year hazard multiplier exp(b)",0.727226496691536,NA,NA
+"c","Jiangxi","in model","year","2005","province x year hazard multiplier exp(b)",0.78607093535968,NA,NA
+"c","Jilin","in model","year","2005","province x year hazard multiplier exp(b)",0.782136991271379,NA,NA
+"c","Qinghai","in model","year","2005","province x year hazard multiplier exp(b)",0.76634934730841,NA,NA
+"c","Shaanxi","in model","year","2005","province x year hazard multiplier exp(b)",1.45115320688964,NA,NA
+"c","Shandong","in model","year","2005","province x year hazard multiplier exp(b)",0.792650453857415,NA,NA
+"c","Shanghai","in model","year","2005","province x year hazard multiplier exp(b)",1.14043372168634,NA,NA
+"c","Shanxi","in model","year","2005","province x year hazard multiplier exp(b)",0.849107210778896,NA,NA
+"c","Sichuan","in model","year","2005","province x year hazard multiplier exp(b)",0.776271724278822,NA,NA
+"c","Tianjin","in model","year","2005","province x year hazard multiplier exp(b)",1.45888635260347,NA,NA
+"c","Tibet","in model","year","2005","province x year hazard multiplier exp(b)",0.696084152908874,NA,NA
+"c","Xinjiang","in model","year","2005","province x year hazard multiplier exp(b)",0.792697853715821,NA,NA
+"c","Yunnan","in model","year","2005","province x year hazard multiplier exp(b)",0.725408430197009,NA,NA
+"c","Zhejiang","in model","year","2005","province x year hazard multiplier exp(b)",0.719463143533861,NA,NA
+"c","Anhui","in model","year","2006","province x year hazard multiplier exp(b)",1.5727664564029,NA,NA
+"c","Beijing","in model","year","2006","province x year hazard multiplier exp(b)",1.33462200036263,NA,NA
+"c","Chongqing","in model","year","2006","province x year hazard multiplier exp(b)",2.12846620954725,NA,NA
+"c","Fujian","in model","year","2006","province x year hazard multiplier exp(b)",1.54924110379733,NA,NA
+"c","Gansu","in model","year","2006","province x year hazard multiplier exp(b)",1.08991492676541,NA,NA
+"c","Guangdong","in model","year","2006","province x year hazard multiplier exp(b)",0.853712445192626,NA,NA
+"c","Guangxi","in model","year","2006","province x year hazard multiplier exp(b)",1.31462882745112,NA,NA
+"c","Guizhou","in model","year","2006","province x year hazard multiplier exp(b)",0.765376652211759,NA,NA
+"c","Hainan","in model","year","2006","province x year hazard multiplier exp(b)",2.00854213812566,NA,NA
+"c","Hebei","in model","year","2006","province x year hazard multiplier exp(b)",0.826441015486678,NA,NA
+"c","Heilongjiang","in model","year","2006","province x year hazard multiplier exp(b)",1.34728835545888,NA,NA
+"c","Henan","in model","year","2006","province x year hazard multiplier exp(b)",1.13736615199428,NA,NA
+"c","Hubei","in model","year","2006","province x year hazard multiplier exp(b)",0.71921052564969,NA,NA
+"c","Hunan","in model","year","2006","province x year hazard multiplier exp(b)",1.0460772470132,NA,NA
+"c","Inner Mongolia","in model","year","2006","province x year hazard multiplier exp(b)",0.710532439595548,NA,NA
+"c","Jiangsu","in model","year","2006","province x year hazard multiplier exp(b)",1.67023416111503,NA,NA
+"c","Jiangxi","in model","year","2006","province x year hazard multiplier exp(b)",1.24783181075942,NA,NA
+"c","Jilin","in model","year","2006","province x year hazard multiplier exp(b)",1.33697056644429,NA,NA
+"c","Liaoning","in model","year","2006","province x year hazard multiplier exp(b)",1.28811869036057,NA,NA
+"c","Qinghai","in model","year","2006","province x year hazard multiplier exp(b)",1.27105288694474,NA,NA
+"c","Shaanxi","in model","year","2006","province x year hazard multiplier exp(b)",2.14937293876429,NA,NA
+"c","Shandong","in model","year","2006","province x year hazard multiplier exp(b)",0.745086789271146,NA,NA
+"c","Shanghai","in model","year","2006","province x year hazard multiplier exp(b)",0.709758004099879,NA,NA
+"c","Sichuan","in model","year","2006","province x year hazard multiplier exp(b)",0.743467735980877,NA,NA
+"c","Tibet","in model","year","2006","province x year hazard multiplier exp(b)",0.686269929248437,NA,NA
+"c","Xinjiang","in model","year","2006","province x year hazard multiplier exp(b)",0.777453148518304,NA,NA
+"c","Yunnan","in model","year","2006","province x year hazard multiplier exp(b)",1.12697323749335,NA,NA
+"c","Zhejiang","in model","year","2006","province x year hazard multiplier exp(b)",0.710155278371013,NA,NA
+"c","Anhui","in model","year","2007","province x year hazard multiplier exp(b)",2.20226516834893,NA,NA
+"c","Beijing","in model","year","2007","province x year hazard multiplier exp(b)",1.30627507598138,NA,NA
+"c","Chongqing","in model","year","2007","province x year hazard multiplier exp(b)",4.38345482921702,NA,NA
+"c","Fujian","in model","year","2007","province x year hazard multiplier exp(b)",0.823599001730259,NA,NA
+"c","Gansu","in model","year","2007","province x year hazard multiplier exp(b)",1.00536505977559,NA,NA
+"c","Guangdong","in model","year","2007","province x year hazard multiplier exp(b)",0.848762974506619,NA,NA
+"c","Guangxi","in model","year","2007","province x year hazard multiplier exp(b)",0.79461607350078,NA,NA
+"c","Guizhou","in model","year","2007","province x year hazard multiplier exp(b)",0.783860194357018,NA,NA
+"c","Hainan","in model","year","2007","province x year hazard multiplier exp(b)",2.06275452221407,NA,NA
+"c","Hebei","in model","year","2007","province x year hazard multiplier exp(b)",0.804718270642018,NA,NA
+"c","Heilongjiang","in model","year","2007","province x year hazard multiplier exp(b)",1.35107947713933,NA,NA
+"c","Henan","in model","year","2007","province x year hazard multiplier exp(b)",0.689087486060069,NA,NA
+"c","Hubei","in model","year","2007","province x year hazard multiplier exp(b)",0.701100308714111,NA,NA
+"c","Hunan","in model","year","2007","province x year hazard multiplier exp(b)",0.678312899568057,NA,NA
+"c","Inner Mongolia","in model","year","2007","province x year hazard multiplier exp(b)",1.06804138379626,NA,NA
+"c","Jiangsu","in model","year","2007","province x year hazard multiplier exp(b)",2.18170526301523,NA,NA
+"c","Jiangxi","in model","year","2007","province x year hazard multiplier exp(b)",0.760179325243878,NA,NA
+"c","Jilin","in model","year","2007","province x year hazard multiplier exp(b)",0.766551508925658,NA,NA
+"c","Liaoning","in model","year","2007","province x year hazard multiplier exp(b)",1.21613469361396,NA,NA
+"c","Ningxia","in model","year","2007","province x year hazard multiplier exp(b)",0.766839207630685,NA,NA
+"c","Qinghai","in model","year","2007","province x year hazard multiplier exp(b)",0.72902195931195,NA,NA
+"c","Shaanxi","in model","year","2007","province x year hazard multiplier exp(b)",0.851209948382975,NA,NA
+"c","Shandong","in model","year","2007","province x year hazard multiplier exp(b)",1.2555826086669,NA,NA
+"c","Shanghai","in model","year","2007","province x year hazard multiplier exp(b)",0.731525318470244,NA,NA
+"c","Shanxi","in model","year","2007","province x year hazard multiplier exp(b)",0.806971935219894,NA,NA
+"c","Sichuan","in model","year","2007","province x year hazard multiplier exp(b)",0.743226289350661,NA,NA
+"c","Tibet","in model","year","2007","province x year hazard multiplier exp(b)",0.613340193798639,NA,NA
+"c","Xinjiang","in model","year","2007","province x year hazard multiplier exp(b)",0.752369042838964,NA,NA
+"c","Yunnan","in model","year","2007","province x year hazard multiplier exp(b)",1.63072382609647,NA,NA
+"c","Zhejiang","in model","year","2007","province x year hazard multiplier exp(b)",0.700172883970807,NA,NA
+"c","Anhui","in model","year","2008","province x year hazard multiplier exp(b)",0.661639460865309,NA,NA
+"c","Beijing","in model","year","2008","province x year hazard multiplier exp(b)",0.798656147877276,NA,NA
+"c","Chongqing","in model","year","2008","province x year hazard multiplier exp(b)",1.32077285491914,NA,NA
+"c","Fujian","in model","year","2008","province x year hazard multiplier exp(b)",0.84256280509398,NA,NA
+"c","Gansu","in model","year","2008","province x year hazard multiplier exp(b)",1.12283583431895,NA,NA
+"c","Guangdong","in model","year","2008","province x year hazard multiplier exp(b)",0.860987775872609,NA,NA
+"c","Guangxi","in model","year","2008","province x year hazard multiplier exp(b)",0.801507495318277,NA,NA
+"c","Guizhou","in model","year","2008","province x year hazard multiplier exp(b)",0.715314223592685,NA,NA
+"c","Hainan","in model","year","2008","province x year hazard multiplier exp(b)",0.85780796225965,NA,NA
+"c","Hebei","in model","year","2008","province x year hazard multiplier exp(b)",0.801917158422799,NA,NA
+"c","Heilongjiang","in model","year","2008","province x year hazard multiplier exp(b)",1.33076967601683,NA,NA
+"c","Henan","in model","year","2008","province x year hazard multiplier exp(b)",1.00382850234525,NA,NA
+"c","Hubei","in model","year","2008","province x year hazard multiplier exp(b)",0.69103165713444,NA,NA
+"c","Hunan","in model","year","2008","province x year hazard multiplier exp(b)",0.649380344675276,NA,NA
+"c","Inner Mongolia","in model","year","2008","province x year hazard multiplier exp(b)",0.69560726566838,NA,NA
+"c","Jiangsu","in model","year","2008","province x year hazard multiplier exp(b)",0.673497160956552,NA,NA
+"c","Jiangxi","in model","year","2008","province x year hazard multiplier exp(b)",1.75411449311589,NA,NA
+"c","Jilin","in model","year","2008","province x year hazard multiplier exp(b)",0.789462232588594,NA,NA
+"c","Liaoning","in model","year","2008","province x year hazard multiplier exp(b)",0.713705234413414,NA,NA
+"c","Qinghai","in model","year","2008","province x year hazard multiplier exp(b)",0.777871865402744,NA,NA
+"c","Shaanxi","in model","year","2008","province x year hazard multiplier exp(b)",0.580004238049877,NA,NA
+"c","Shandong","in model","year","2008","province x year hazard multiplier exp(b)",0.754668440518796,NA,NA
+"c","Shanghai","in model","year","2008","province x year hazard multiplier exp(b)",1.15245648006223,NA,NA
+"c","Shanxi","in model","year","2008","province x year hazard multiplier exp(b)",0.801658937686168,NA,NA
+"c","Sichuan","in model","year","2008","province x year hazard multiplier exp(b)",0.780254689256479,NA,NA
+"c","Tianjin","in model","year","2008","province x year hazard multiplier exp(b)",0.847695256454402,NA,NA
+"c","Tibet","in model","year","2008","province x year hazard multiplier exp(b)",0.690025592431975,NA,NA
+"c","Xinjiang","in model","year","2008","province x year hazard multiplier exp(b)",1.17911958658009,NA,NA
+"c","Yunnan","in model","year","2008","province x year hazard multiplier exp(b)",0.69757608104723,NA,NA
+"c","Zhejiang","in model","year","2008","province x year hazard multiplier exp(b)",0.689070524191108,NA,NA
+"c","Anhui","in model","year","2009","province x year hazard multiplier exp(b)",0.653361737038807,NA,NA
+"c","Beijing","in model","year","2009","province x year hazard multiplier exp(b)",1.29245846915836,NA,NA
+"c","Chongqing","in model","year","2009","province x year hazard multiplier exp(b)",0.831591507947369,NA,NA
+"c","Fujian","in model","year","2009","province x year hazard multiplier exp(b)",0.882530302813197,NA,NA
+"c","Gansu","in model","year","2009","province x year hazard multiplier exp(b)",0.992706045557718,NA,NA
+"c","Guangdong","in model","year","2009","province x year hazard multiplier exp(b)",0.839675322995813,NA,NA
+"c","Guangxi","in model","year","2009","province x year hazard multiplier exp(b)",1.37459572591686,NA,NA
+"c","Guizhou","in model","year","2009","province x year hazard multiplier exp(b)",2.22646080179281,NA,NA
+"c","Hainan","in model","year","2009","province x year hazard multiplier exp(b)",0.820421149131765,NA,NA
+"c","Hebei","in model","year","2009","province x year hazard multiplier exp(b)",0.812833398616369,NA,NA
+"c","Heilongjiang","in model","year","2009","province x year hazard multiplier exp(b)",1.29321272643078,NA,NA
+"c","Henan","in model","year","2009","province x year hazard multiplier exp(b)",0.661789936028046,NA,NA
+"c","Hubei","in model","year","2009","province x year hazard multiplier exp(b)",1.08716243399514,NA,NA
+"c","Hunan","in model","year","2009","province x year hazard multiplier exp(b)",2.19318675342195,NA,NA
+"c","Inner Mongolia","in model","year","2009","province x year hazard multiplier exp(b)",1.05831402903199,NA,NA
+"c","Jiangsu","in model","year","2009","province x year hazard multiplier exp(b)",0.67531580157905,NA,NA
+"c","Jiangxi","in model","year","2009","province x year hazard multiplier exp(b)",1.14716641885889,NA,NA
+"c","Jilin","in model","year","2009","province x year hazard multiplier exp(b)",1.31995422971489,NA,NA
+"c","Liaoning","in model","year","2009","province x year hazard multiplier exp(b)",0.721802301654258,NA,NA
+"c","Qinghai","in model","year","2009","province x year hazard multiplier exp(b)",0.773600053096074,NA,NA
+"c","Shaanxi","in model","year","2009","province x year hazard multiplier exp(b)",0.844311061286365,NA,NA
+"c","Shandong","in model","year","2009","province x year hazard multiplier exp(b)",2.68150746974994,NA,NA
+"c","Shanghai","in model","year","2009","province x year hazard multiplier exp(b)",1.16405592419506,NA,NA
+"c","Shanxi","in model","year","2009","province x year hazard multiplier exp(b)",0.815399774904263,NA,NA
+"c","Sichuan","in model","year","2009","province x year hazard multiplier exp(b)",0.777032513691362,NA,NA
+"c","Tianjin","in model","year","2009","province x year hazard multiplier exp(b)",0.855118231719503,NA,NA
+"c","Tibet","in model","year","2009","province x year hazard multiplier exp(b)",0.635148138433003,NA,NA
+"c","Yunnan","in model","year","2009","province x year hazard multiplier exp(b)",1.11841627465501,NA,NA
+"c","Zhejiang","in model","year","2009","province x year hazard multiplier exp(b)",0.691033003882333,NA,NA
+"c","Anhui","in model","year","2010","province x year hazard multiplier exp(b)",0.65555570316777,NA,NA
+"c","Beijing","in model","year","2010","province x year hazard multiplier exp(b)",0.783940286401769,NA,NA
+"c","Chongqing","in model","year","2010","province x year hazard multiplier exp(b)",1.31307523771875,NA,NA
+"c","Fujian","in model","year","2010","province x year hazard multiplier exp(b)",0.852379121103222,NA,NA
+"c","Gansu","in model","year","2010","province x year hazard multiplier exp(b)",0.659332255117341,NA,NA
+"c","Guangdong","in model","year","2010","province x year hazard multiplier exp(b)",0.842300428283135,NA,NA
+"c","Guangxi","in model","year","2010","province x year hazard multiplier exp(b)",0.770196667436356,NA,NA
+"c","Guizhou","in model","year","2010","province x year hazard multiplier exp(b)",0.800070117488126,NA,NA
+"c","Hainan","in model","year","2010","province x year hazard multiplier exp(b)",1.36131048343403,NA,NA
+"c","Hebei","in model","year","2010","province x year hazard multiplier exp(b)",0.791138057398903,NA,NA
+"c","Heilongjiang","in model","year","2010","province x year hazard multiplier exp(b)",3.46754624653414,NA,NA
+"c","Henan","in model","year","2010","province x year hazard multiplier exp(b)",0.984612878399825,NA,NA
+"c","Hubei","in model","year","2010","province x year hazard multiplier exp(b)",0.682054139412739,NA,NA
+"c","Hunan","in model","year","2010","province x year hazard multiplier exp(b)",1.60077779540064,NA,NA
+"c","Inner Mongolia","in model","year","2010","province x year hazard multiplier exp(b)",1.12033774840756,NA,NA
+"c","Jiangsu","in model","year","2010","province x year hazard multiplier exp(b)",0.653159895951232,NA,NA
+"c","Jiangxi","in model","year","2010","province x year hazard multiplier exp(b)",1.14783464505406,NA,NA
+"c","Jilin","in model","year","2010","province x year hazard multiplier exp(b)",2.16600091215144,NA,NA
+"c","Liaoning","in model","year","2010","province x year hazard multiplier exp(b)",0.746947522090767,NA,NA
+"c","Qinghai","in model","year","2010","province x year hazard multiplier exp(b)",0.718351545643267,NA,NA
+"c","Shaanxi","in model","year","2010","province x year hazard multiplier exp(b)",1.14436000497802,NA,NA
+"c","Shandong","in model","year","2010","province x year hazard multiplier exp(b)",0.756361541038432,NA,NA
+"c","Shanghai","in model","year","2010","province x year hazard multiplier exp(b)",0.724401029051229,NA,NA
+"c","Shanxi","in model","year","2010","province x year hazard multiplier exp(b)",0.804431425580251,NA,NA
+"c","Sichuan","in model","year","2010","province x year hazard multiplier exp(b)",0.728611069644455,NA,NA
+"c","Tianjin","in model","year","2010","province x year hazard multiplier exp(b)",0.872824753804384,NA,NA
+"c","Tibet","in model","year","2010","province x year hazard multiplier exp(b)",1.31102229681569,NA,NA
+"c","Xinjiang","in model","year","2010","province x year hazard multiplier exp(b)",7.03218618622859,NA,NA
+"c","Yunnan","in model","year","2010","province x year hazard multiplier exp(b)",1.09794485316611,NA,NA
+"c","Zhejiang","in model","year","2010","province x year hazard multiplier exp(b)",0.665078981861467,NA,NA
+"c","Anhui","in model","year","2011","province x year hazard multiplier exp(b)",1.86940320774401,NA,NA
+"c","Beijing","in model","year","2011","province x year hazard multiplier exp(b)",1.29673950582267,NA,NA
+"c","Chongqing","in model","year","2011","province x year hazard multiplier exp(b)",0.82044521386492,NA,NA
+"c","Fujian","in model","year","2011","province x year hazard multiplier exp(b)",0.86792155290541,NA,NA
+"c","Gansu","in model","year","2011","province x year hazard multiplier exp(b)",0.607156066554009,NA,NA
+"c","Guangdong","in model","year","2011","province x year hazard multiplier exp(b)",0.875497359349661,NA,NA
+"c","Guangxi","in model","year","2011","province x year hazard multiplier exp(b)",0.780355401172373,NA,NA
+"c","Guizhou","in model","year","2011","province x year hazard multiplier exp(b)",1.44129513704554,NA,NA
+"c","Hainan","in model","year","2011","province x year hazard multiplier exp(b)",0.895575644720681,NA,NA
+"c","Hebei","in model","year","2011","province x year hazard multiplier exp(b)",0.802787663753507,NA,NA
+"c","Heilongjiang","in model","year","2011","province x year hazard multiplier exp(b)",0.838207966689555,NA,NA
+"c","Henan","in model","year","2011","province x year hazard multiplier exp(b)",1.86138205161931,NA,NA
+"c","Hubei","in model","year","2011","province x year hazard multiplier exp(b)",1.48389218589814,NA,NA
+"c","Hunan","in model","year","2011","province x year hazard multiplier exp(b)",2.4526584872228,NA,NA
+"c","Inner Mongolia","in model","year","2011","province x year hazard multiplier exp(b)",1.11020588298696,NA,NA
+"c","Jiangsu","in model","year","2011","province x year hazard multiplier exp(b)",0.64089964350446,NA,NA
+"c","Jiangxi","in model","year","2011","province x year hazard multiplier exp(b)",1.79413393400733,NA,NA
+"c","Jilin","in model","year","2011","province x year hazard multiplier exp(b)",0.816092911594583,NA,NA
+"c","Liaoning","in model","year","2011","province x year hazard multiplier exp(b)",1.18336327110532,NA,NA
+"c","Ningxia","in model","year","2011","province x year hazard multiplier exp(b)",1.15944298433925,NA,NA
+"c","Qinghai","in model","year","2011","province x year hazard multiplier exp(b)",0.734845764459926,NA,NA
+"c","Shaanxi","in model","year","2011","province x year hazard multiplier exp(b)",1.11206404909809,NA,NA
+"c","Shandong","in model","year","2011","province x year hazard multiplier exp(b)",1.18937435653262,NA,NA
+"c","Shanghai","in model","year","2011","province x year hazard multiplier exp(b)",3.24368260163099,NA,NA
+"c","Shanxi","in model","year","2011","province x year hazard multiplier exp(b)",0.790574763374442,NA,NA
+"c","Sichuan","in model","year","2011","province x year hazard multiplier exp(b)",1.7509052593412,NA,NA
+"c","Tianjin","in model","year","2011","province x year hazard multiplier exp(b)",0.873421566030774,NA,NA
+"c","Tibet","in model","year","2011","province x year hazard multiplier exp(b)",0.617914150354513,NA,NA
+"c","Xinjiang","in model","year","2011","province x year hazard multiplier exp(b)",0.700990043707056,NA,NA
+"c","Yunnan","in model","year","2011","province x year hazard multiplier exp(b)",1.6103091659538,NA,NA
+"c","Zhejiang","in model","year","2011","province x year hazard multiplier exp(b)",0.672999839025524,NA,NA
+"c","Anhui","in model","year","2012","province x year hazard multiplier exp(b)",0.969313889899753,NA,NA
+"c","Beijing","in model","year","2012","province x year hazard multiplier exp(b)",0.778901517399121,NA,NA
+"c","Chongqing","in model","year","2012","province x year hazard multiplier exp(b)",0.852058967566267,NA,NA
+"c","Fujian","in model","year","2012","province x year hazard multiplier exp(b)",0.838905687970949,NA,NA
+"c","Gansu","in model","year","2012","province x year hazard multiplier exp(b)",0.919814489516118,NA,NA
+"c","Guangdong","in model","year","2012","province x year hazard multiplier exp(b)",0.85698270363025,NA,NA
+"c","Guangxi","in model","year","2012","province x year hazard multiplier exp(b)",1.9744667308542,NA,NA
+"c","Guizhou","in model","year","2012","province x year hazard multiplier exp(b)",0.753939898982406,NA,NA
+"c","Hainan","in model","year","2012","province x year hazard multiplier exp(b)",0.826158823266886,NA,NA
+"c","Hebei","in model","year","2012","province x year hazard multiplier exp(b)",0.8168429431354,NA,NA
+"c","Heilongjiang","in model","year","2012","province x year hazard multiplier exp(b)",1.38026441161498,NA,NA
+"c","Henan","in model","year","2012","province x year hazard multiplier exp(b)",0.635520604236738,NA,NA
+"c","Hubei","in model","year","2012","province x year hazard multiplier exp(b)",0.671321879532999,NA,NA
+"c","Hunan","in model","year","2012","province x year hazard multiplier exp(b)",2.21555475534462,NA,NA
+"c","Inner Mongolia","in model","year","2012","province x year hazard multiplier exp(b)",0.722483617366095,NA,NA
+"c","Jiangsu","in model","year","2012","province x year hazard multiplier exp(b)",0.639292799165136,NA,NA
+"c","Jiangxi","in model","year","2012","province x year hazard multiplier exp(b)",0.713326046513187,NA,NA
+"c","Jilin","in model","year","2012","province x year hazard multiplier exp(b)",0.850907507718043,NA,NA
+"c","Liaoning","in model","year","2012","province x year hazard multiplier exp(b)",2.51685032414512,NA,NA
+"c","Ningxia","in model","year","2012","province x year hazard multiplier exp(b)",0.735671387080624,NA,NA
+"c","Qinghai","in model","year","2012","province x year hazard multiplier exp(b)",1.06973453245558,NA,NA
+"c","Shaanxi","in model","year","2012","province x year hazard multiplier exp(b)",0.820366737521081,NA,NA
+"c","Shandong","in model","year","2012","province x year hazard multiplier exp(b)",0.769388253756887,NA,NA
+"c","Shanghai","in model","year","2012","province x year hazard multiplier exp(b)",3.10711076225546,NA,NA
+"c","Shanxi","in model","year","2012","province x year hazard multiplier exp(b)",0.785481464879396,NA,NA
+"c","Sichuan","in model","year","2012","province x year hazard multiplier exp(b)",2.37493884943739,NA,NA
+"c","Tianjin","in model","year","2012","province x year hazard multiplier exp(b)",0.84805187119994,NA,NA
+"c","Tibet","in model","year","2012","province x year hazard multiplier exp(b)",1.21603313148131,NA,NA
+"c","Xinjiang","in model","year","2012","province x year hazard multiplier exp(b)",0.714977615163208,NA,NA
+"c","Yunnan","in model","year","2012","province x year hazard multiplier exp(b)",0.669829086320035,NA,NA
+"c","Zhejiang","in model","year","2012","province x year hazard multiplier exp(b)",0.670527470026551,NA,NA
+"c","Anhui","in model","year","2013","province x year hazard multiplier exp(b)",0.934073324566414,NA,NA
+"c","Beijing","in model","year","2013","province x year hazard multiplier exp(b)",2.82970832000112,NA,NA
+"c","Chongqing","in model","year","2013","province x year hazard multiplier exp(b)",0.822924894808823,NA,NA
+"c","Fujian","in model","year","2013","province x year hazard multiplier exp(b)",0.817570492367458,NA,NA
+"c","Gansu","in model","year","2013","province x year hazard multiplier exp(b)",0.903769014191448,NA,NA
+"c","Guangdong","in model","year","2013","province x year hazard multiplier exp(b)",1.39119006668061,NA,NA
+"c","Guangxi","in model","year","2013","province x year hazard multiplier exp(b)",2.7377736223007,NA,NA
+"c","Guizhou","in model","year","2013","province x year hazard multiplier exp(b)",0.829649385870703,NA,NA
+"c","Hainan","in model","year","2013","province x year hazard multiplier exp(b)",0.825991413031527,NA,NA
+"c","Hebei","in model","year","2013","province x year hazard multiplier exp(b)",0.816903655473424,NA,NA
+"c","Heilongjiang","in model","year","2013","province x year hazard multiplier exp(b)",0.831241084390197,NA,NA
+"c","Henan","in model","year","2013","province x year hazard multiplier exp(b)",1.37433788929376,NA,NA
+"c","Hubei","in model","year","2013","province x year hazard multiplier exp(b)",0.661746224868282,NA,NA
+"c","Hunan","in model","year","2013","province x year hazard multiplier exp(b)",1.32354084973919,NA,NA
+"c","Inner Mongolia","in model","year","2013","province x year hazard multiplier exp(b)",1.6078442918336,NA,NA
+"c","Jiangsu","in model","year","2013","province x year hazard multiplier exp(b)",0.966247578343653,NA,NA
+"c","Jiangxi","in model","year","2013","province x year hazard multiplier exp(b)",0.707042068874775,NA,NA
+"c","Jilin","in model","year","2013","province x year hazard multiplier exp(b)",0.867475812030115,NA,NA
+"c","Liaoning","in model","year","2013","province x year hazard multiplier exp(b)",0.746217280490281,NA,NA
+"c","Ningxia","in model","year","2013","province x year hazard multiplier exp(b)",0.71514529847811,NA,NA
+"c","Qinghai","in model","year","2013","province x year hazard multiplier exp(b)",4.25442633188265,NA,NA
+"c","Shaanxi","in model","year","2013","province x year hazard multiplier exp(b)",0.550394876286316,NA,NA
+"c","Shandong","in model","year","2013","province x year hazard multiplier exp(b)",0.774801090070585,NA,NA
+"c","Shanghai","in model","year","2013","province x year hazard multiplier exp(b)",4.0242154948031,NA,NA
+"c","Shanxi","in model","year","2013","province x year hazard multiplier exp(b)",0.785427718525905,NA,NA
+"c","Sichuan","in model","year","2013","province x year hazard multiplier exp(b)",0.701608469647143,NA,NA
+"c","Tianjin","in model","year","2013","province x year hazard multiplier exp(b)",0.849373832963749,NA,NA
+"c","Tibet","in model","year","2013","province x year hazard multiplier exp(b)",2.84559911639612,NA,NA
+"c","Xinjiang","in model","year","2013","province x year hazard multiplier exp(b)",0.700045737628639,NA,NA
+"c","Yunnan","in model","year","2013","province x year hazard multiplier exp(b)",1.01128380639145,NA,NA
+"c","Zhejiang","in model","year","2013","province x year hazard multiplier exp(b)",1.02300657810262,NA,NA
+"c","Anhui","in model","year","2014","province x year hazard multiplier exp(b)",0.621152532820257,NA,NA
+"c","Beijing","in model","year","2014","province x year hazard multiplier exp(b)",0.770159390583279,NA,NA
+"c","Chongqing","in model","year","2014","province x year hazard multiplier exp(b)",0.815076478299397,NA,NA
+"c","Fujian","in model","year","2014","province x year hazard multiplier exp(b)",1.35777745791687,NA,NA
+"c","Gansu","in model","year","2014","province x year hazard multiplier exp(b)",0.911702353024373,NA,NA
+"c","Guangdong","in model","year","2014","province x year hazard multiplier exp(b)",1.3427804576152,NA,NA
+"c","Guangxi","in model","year","2014","province x year hazard multiplier exp(b)",1.13198220206243,NA,NA
+"c","Guizhou","in model","year","2014","province x year hazard multiplier exp(b)",1.77484961252303,NA,NA
+"c","Hainan","in model","year","2014","province x year hazard multiplier exp(b)",0.831278626815837,NA,NA
+"c","Hebei","in model","year","2014","province x year hazard multiplier exp(b)",0.81597760854417,NA,NA
+"c","Heilongjiang","in model","year","2014","province x year hazard multiplier exp(b)",0.88530508870524,NA,NA
+"c","Henan","in model","year","2014","province x year hazard multiplier exp(b)",0.94209584184575,NA,NA
+"c","Hubei","in model","year","2014","province x year hazard multiplier exp(b)",1.49926998964498,NA,NA
+"c","Hunan","in model","year","2014","province x year hazard multiplier exp(b)",1.33055065872783,NA,NA
+"c","Inner Mongolia","in model","year","2014","province x year hazard multiplier exp(b)",3.59361486385084,NA,NA
+"c","Jiangsu","in model","year","2014","province x year hazard multiplier exp(b)",1.33792853590207,NA,NA
+"c","Jiangxi","in model","year","2014","province x year hazard multiplier exp(b)",0.690317312108258,NA,NA
+"c","Jilin","in model","year","2014","province x year hazard multiplier exp(b)",0.835239627203199,NA,NA
+"c","Liaoning","in model","year","2014","province x year hazard multiplier exp(b)",0.742145106714682,NA,NA
+"c","Ningxia","in model","year","2014","province x year hazard multiplier exp(b)",0.715287979618688,NA,NA
+"c","Qinghai","in model","year","2014","province x year hazard multiplier exp(b)",2.79155259725567,NA,NA
+"c","Shaanxi","in model","year","2014","province x year hazard multiplier exp(b)",1.47204623436985,NA,NA
+"c","Shandong","in model","year","2014","province x year hazard multiplier exp(b)",0.760978735306128,NA,NA
+"c","Shanghai","in model","year","2014","province x year hazard multiplier exp(b)",1.12927228993357,NA,NA
+"c","Shanxi","in model","year","2014","province x year hazard multiplier exp(b)",0.787240289740111,NA,NA
+"c","Sichuan","in model","year","2014","province x year hazard multiplier exp(b)",1.59619701633842,NA,NA
+"c","Tianjin","in model","year","2014","province x year hazard multiplier exp(b)",2.08642985910522,NA,NA
+"c","Tibet","in model","year","2014","province x year hazard multiplier exp(b)",1.58558460143664,NA,NA
+"c","Xinjiang","in model","year","2014","province x year hazard multiplier exp(b)",0.712846158259493,NA,NA
+"c","Yunnan","in model","year","2014","province x year hazard multiplier exp(b)",0.993662426027488,NA,NA
+"c","Zhejiang","in model","year","2014","province x year hazard multiplier exp(b)",1.47835513185163,NA,NA
+"c","Anhui","in model","year","2015","province x year hazard multiplier exp(b)",1.4292066366439,NA,NA
+"c","Beijing","in model","year","2015","province x year hazard multiplier exp(b)",1.2492831820621,NA,NA
+"c","Chongqing","in model","year","2015","province x year hazard multiplier exp(b)",0.787667822684056,NA,NA
+"c","Fujian","in model","year","2015","province x year hazard multiplier exp(b)",0.80035598923616,NA,NA
+"c","Gansu","in model","year","2015","province x year hazard multiplier exp(b)",0.918421732513779,NA,NA
+"c","Guangdong","in model","year","2015","province x year hazard multiplier exp(b)",0.809401097765714,NA,NA
+"c","Guangxi","in model","year","2015","province x year hazard multiplier exp(b)",1.14002975063734,NA,NA
+"c","Guizhou","in model","year","2015","province x year hazard multiplier exp(b)",1.69850536836865,NA,NA
+"c","Hainan","in model","year","2015","province x year hazard multiplier exp(b)",0.831605402664619,NA,NA
+"c","Hebei","in model","year","2015","province x year hazard multiplier exp(b)",1.38312996154682,NA,NA
+"c","Heilongjiang","in model","year","2015","province x year hazard multiplier exp(b)",1.25001583106431,NA,NA
+"c","Henan","in model","year","2015","province x year hazard multiplier exp(b)",0.962530848067506,NA,NA
+"c","Hubei","in model","year","2015","province x year hazard multiplier exp(b)",1.01444774447156,NA,NA
+"c","Hunan","in model","year","2015","province x year hazard multiplier exp(b)",2.6276808219551,NA,NA
+"c","Inner Mongolia","in model","year","2015","province x year hazard multiplier exp(b)",0.673642041737766,NA,NA
+"c","Jiangsu","in model","year","2015","province x year hazard multiplier exp(b)",0.626258191156174,NA,NA
+"c","Jiangxi","in model","year","2015","province x year hazard multiplier exp(b)",0.69143664449256,NA,NA
+"c","Jilin","in model","year","2015","province x year hazard multiplier exp(b)",0.839080412872732,NA,NA
+"c","Liaoning","in model","year","2015","province x year hazard multiplier exp(b)",1.67227702640211,NA,NA
+"c","Ningxia","in model","year","2015","province x year hazard multiplier exp(b)",0.717734444433553,NA,NA
+"c","Qinghai","in model","year","2015","province x year hazard multiplier exp(b)",1.63139628645415,NA,NA
+"c","Shaanxi","in model","year","2015","province x year hazard multiplier exp(b)",1.97667224576218,NA,NA
+"c","Shandong","in model","year","2015","province x year hazard multiplier exp(b)",1.27820826263019,NA,NA
+"c","Shanghai","in model","year","2015","province x year hazard multiplier exp(b)",1.11561861652187,NA,NA
+"c","Shanxi","in model","year","2015","province x year hazard multiplier exp(b)",0.80903262445149,NA,NA
+"c","Sichuan","in model","year","2015","province x year hazard multiplier exp(b)",1.5755347112135,NA,NA
+"c","Tianjin","in model","year","2015","province x year hazard multiplier exp(b)",0.808013437520047,NA,NA
+"c","Tibet","in model","year","2015","province x year hazard multiplier exp(b)",1.59528522311372,NA,NA
+"c","Xinjiang","in model","year","2015","province x year hazard multiplier exp(b)",2.3350543897329,NA,NA
+"c","Yunnan","in model","year","2015","province x year hazard multiplier exp(b)",0.648897320152051,NA,NA
+"c","Zhejiang","in model","year","2015","province x year hazard multiplier exp(b)",0.659119742579248,NA,NA
+"c","Anhui","in model","year","2016","province x year hazard multiplier exp(b)",2.5211961671622,NA,NA
+"c","Beijing","in model","year","2016","province x year hazard multiplier exp(b)",0.763619244343357,NA,NA
+"c","Chongqing","in model","year","2016","province x year hazard multiplier exp(b)",0.784973488034753,NA,NA
+"c","Fujian","in model","year","2016","province x year hazard multiplier exp(b)",0.797538488872633,NA,NA
+"c","Gansu","in model","year","2016","province x year hazard multiplier exp(b)",2.24319546476595,NA,NA
+"c","Guangdong","in model","year","2016","province x year hazard multiplier exp(b)",0.787877485716451,NA,NA
+"c","Guangxi","in model","year","2016","province x year hazard multiplier exp(b)",1.19170546247091,NA,NA
+"c","Guizhou","in model","year","2016","province x year hazard multiplier exp(b)",1.15414585120694,NA,NA
+"c","Hainan","in model","year","2016","province x year hazard multiplier exp(b)",0.81365404385396,NA,NA
+"c","Hebei","in model","year","2016","province x year hazard multiplier exp(b)",0.816451360433638,NA,NA
+"c","Heilongjiang","in model","year","2016","province x year hazard multiplier exp(b)",0.794676067124666,NA,NA
+"c","Henan","in model","year","2016","province x year hazard multiplier exp(b)",3.59215890679939,NA,NA
+"c","Hubei","in model","year","2016","province x year hazard multiplier exp(b)",0.656998297252243,NA,NA
+"c","Hunan","in model","year","2016","province x year hazard multiplier exp(b)",0.595822366157041,NA,NA
+"c","Inner Mongolia","in model","year","2016","province x year hazard multiplier exp(b)",0.678606185211162,NA,NA
+"c","Jiangsu","in model","year","2016","province x year hazard multiplier exp(b)",1.35043703237356,NA,NA
+"c","Jiangxi","in model","year","2016","province x year hazard multiplier exp(b)",1.06217967097967,NA,NA
+"c","Jilin","in model","year","2016","province x year hazard multiplier exp(b)",2.24104734917422,NA,NA
+"c","Liaoning","in model","year","2016","province x year hazard multiplier exp(b)",0.731530177326963,NA,NA
+"c","Ningxia","in model","year","2016","province x year hazard multiplier exp(b)",1.74601839266541,NA,NA
+"c","Qinghai","in model","year","2016","province x year hazard multiplier exp(b)",0.680178751373885,NA,NA
+"c","Shaanxi","in model","year","2016","province x year hazard multiplier exp(b)",2.038807368957,NA,NA
+"c","Shandong","in model","year","2016","province x year hazard multiplier exp(b)",0.726451038451938,NA,NA
+"c","Shanghai","in model","year","2016","province x year hazard multiplier exp(b)",0.695520366929305,NA,NA
+"c","Shanxi","in model","year","2016","province x year hazard multiplier exp(b)",2.02516961879756,NA,NA
+"c","Sichuan","in model","year","2016","province x year hazard multiplier exp(b)",1.06437912895912,NA,NA
+"c","Tianjin","in model","year","2016","province x year hazard multiplier exp(b)",1.33765207071364,NA,NA
+"c","Tibet","in model","year","2016","province x year hazard multiplier exp(b)",4.06236465125197,NA,NA
+"c","Xinjiang","in model","year","2016","province x year hazard multiplier exp(b)",0.709413503324502,NA,NA
+"c","Yunnan","in model","year","2016","province x year hazard multiplier exp(b)",2.47558423075463,NA,NA
+"c","Zhejiang","in model","year","2016","province x year hazard multiplier exp(b)",1.45165949335362,NA,NA
+"c","Anhui","in model","year","2017","province x year hazard multiplier exp(b)",0.980520308257502,NA,NA
+"c","Beijing","in model","year","2017","province x year hazard multiplier exp(b)",1.19428724325699,NA,NA
+"c","Chongqing","in model","year","2017","province x year hazard multiplier exp(b)",1.21249225521306,NA,NA
+"c","Fujian","in model","year","2017","province x year hazard multiplier exp(b)",0.776744241224278,NA,NA
+"c","Gansu","in model","year","2017","province x year hazard multiplier exp(b)",1.26714520168724,NA,NA
+"c","Guangdong","in model","year","2017","province x year hazard multiplier exp(b)",0.778478300470424,NA,NA
+"c","Guangxi","in model","year","2017","province x year hazard multiplier exp(b)",0.720493169092405,NA,NA
+"c","Guizhou","in model","year","2017","province x year hazard multiplier exp(b)",3.30672912737072,NA,NA
+"c","Hainan","in model","year","2017","province x year hazard multiplier exp(b)",2.02026780916804,NA,NA
+"c","Hebei","in model","year","2017","province x year hazard multiplier exp(b)",0.794016452916457,NA,NA
+"c","Heilongjiang","in model","year","2017","province x year hazard multiplier exp(b)",0.820653966046814,NA,NA
+"c","Henan","in model","year","2017","province x year hazard multiplier exp(b)",1.35918053694142,NA,NA
+"c","Hubei","in model","year","2017","province x year hazard multiplier exp(b)",2.56972264199726,NA,NA
+"c","Hunan","in model","year","2017","province x year hazard multiplier exp(b)",3.11566960929586,NA,NA
+"c","Inner Mongolia","in model","year","2017","province x year hazard multiplier exp(b)",1.05167394686345,NA,NA
+"c","Jiangsu","in model","year","2017","province x year hazard multiplier exp(b)",0.941750965432508,NA,NA
+"c","Jiangxi","in model","year","2017","province x year hazard multiplier exp(b)",2.08795402946884,NA,NA
+"c","Jilin","in model","year","2017","province x year hazard multiplier exp(b)",0.822211072869999,NA,NA
+"c","Liaoning","in model","year","2017","province x year hazard multiplier exp(b)",1.76011184609059,NA,NA
+"c","Ningxia","in model","year","2017","province x year hazard multiplier exp(b)",1.68700093086039,NA,NA
+"c","Qinghai","in model","year","2017","province x year hazard multiplier exp(b)",3.37740567244951,NA,NA
+"c","Shaanxi","in model","year","2017","province x year hazard multiplier exp(b)",0.839857569796268,NA,NA
+"c","Shandong","in model","year","2017","province x year hazard multiplier exp(b)",1.08204385402462,NA,NA
+"c","Shanghai","in model","year","2017","province x year hazard multiplier exp(b)",0.687288033267419,NA,NA
+"c","Shanxi","in model","year","2017","province x year hazard multiplier exp(b)",0.793967083426928,NA,NA
+"c","Sichuan","in model","year","2017","province x year hazard multiplier exp(b)",0.681210188417498,NA,NA
+"c","Tianjin","in model","year","2017","province x year hazard multiplier exp(b)",0.795199211232436,NA,NA
+"c","Tibet","in model","year","2017","province x year hazard multiplier exp(b)",0.846939526846106,NA,NA
+"c","Xinjiang","in model","year","2017","province x year hazard multiplier exp(b)",0.707577001780383,NA,NA
+"c","Yunnan","in model","year","2017","province x year hazard multiplier exp(b)",1.40337646895492,NA,NA
+"c","Zhejiang","in model","year","2017","province x year hazard multiplier exp(b)",1.96934513815719,NA,NA
+"c","Anhui","in model","year","2018","province x year hazard multiplier exp(b)",0.940933321938899,NA,NA
+"c","Beijing","in model","year","2018","province x year hazard multiplier exp(b)",0.72973562434785,NA,NA
+"c","Chongqing","in model","year","2018","province x year hazard multiplier exp(b)",1.23836069902616,NA,NA
+"c","Fujian","in model","year","2018","province x year hazard multiplier exp(b)",0.756268853472058,NA,NA
+"c","Gansu","in model","year","2018","province x year hazard multiplier exp(b)",1.68364668465885,NA,NA
+"c","Guangdong","in model","year","2018","province x year hazard multiplier exp(b)",0.747975950049427,NA,NA
+"c","Guangxi","in model","year","2018","province x year hazard multiplier exp(b)",0.696854970618332,NA,NA
+"c","Guizhou","in model","year","2018","province x year hazard multiplier exp(b)",1.02283934958282,NA,NA
+"c","Hainan","in model","year","2018","province x year hazard multiplier exp(b)",2.8541005883459,NA,NA
+"c","Hebei","in model","year","2018","province x year hazard multiplier exp(b)",0.783956772895128,NA,NA
+"c","Heilongjiang","in model","year","2018","province x year hazard multiplier exp(b)",1.37298179049293,NA,NA
+"c","Henan","in model","year","2018","province x year hazard multiplier exp(b)",0.619664470758983,NA,NA
+"c","Hubei","in model","year","2018","province x year hazard multiplier exp(b)",1.00098562599001,NA,NA
+"c","Hunan","in model","year","2018","province x year hazard multiplier exp(b)",1.19902100184284,NA,NA
+"c","Inner Mongolia","in model","year","2018","province x year hazard multiplier exp(b)",1.00755013270397,NA,NA
+"c","Jiangsu","in model","year","2018","province x year hazard multiplier exp(b)",0.936171117317724,NA,NA
+"c","Jiangxi","in model","year","2018","province x year hazard multiplier exp(b)",0.663634397870485,NA,NA
+"c","Jilin","in model","year","2018","province x year hazard multiplier exp(b)",1.32665226369504,NA,NA
+"c","Liaoning","in model","year","2018","province x year hazard multiplier exp(b)",0.724297113552874,NA,NA
+"c","Ningxia","in model","year","2018","province x year hazard multiplier exp(b)",1.1099316311207,NA,NA
+"c","Qinghai","in model","year","2018","province x year hazard multiplier exp(b)",1.03280946115793,NA,NA
+"c","Shaanxi","in model","year","2018","province x year hazard multiplier exp(b)",1.93030369241818,NA,NA
+"c","Shandong","in model","year","2018","province x year hazard multiplier exp(b)",1.55182250975934,NA,NA
+"c","Shanghai","in model","year","2018","province x year hazard multiplier exp(b)",0.676617236042722,NA,NA
+"c","Shanxi","in model","year","2018","province x year hazard multiplier exp(b)",1.2479415669819,NA,NA
+"c","Sichuan","in model","year","2018","province x year hazard multiplier exp(b)",0.676902939937715,NA,NA
+"c","Tianjin","in model","year","2018","province x year hazard multiplier exp(b)",1.27415533117695,NA,NA
+"c","Tibet","in model","year","2018","province x year hazard multiplier exp(b)",0.564084134219989,NA,NA
+"c","Xinjiang","in model","year","2018","province x year hazard multiplier exp(b)",0.699030845580099,NA,NA
+"c","Yunnan","in model","year","2018","province x year hazard multiplier exp(b)",0.64112306500088,NA,NA
+"c","Zhejiang","in model","year","2018","province x year hazard multiplier exp(b)",1.90081954420145,NA,NA
+"c","Anhui","in model","year","2019","province x year hazard multiplier exp(b)",0.619098489122924,NA,NA
+"c","Beijing","in model","year","2019","province x year hazard multiplier exp(b)",1.15719740677707,NA,NA
+"c","Chongqing","in model","year","2019","province x year hazard multiplier exp(b)",0.758590887645517,NA,NA
+"c","Fujian","in model","year","2019","province x year hazard multiplier exp(b)",1.82286616072357,NA,NA
+"c","Gansu","in model","year","2019","province x year hazard multiplier exp(b)",2.10221141620225,NA,NA
+"c","Guangdong","in model","year","2019","province x year hazard multiplier exp(b)",0.728550039751548,NA,NA
+"c","Guangxi","in model","year","2019","province x year hazard multiplier exp(b)",0.681801293511639,NA,NA
+"c","Guizhou","in model","year","2019","province x year hazard multiplier exp(b)",1.01694137883178,NA,NA
+"c","Hainan","in model","year","2019","province x year hazard multiplier exp(b)",0.797493168398176,NA,NA
+"c","Hebei","in model","year","2019","province x year hazard multiplier exp(b)",1.26343251574914,NA,NA
+"c","Heilongjiang","in model","year","2019","province x year hazard multiplier exp(b)",0.798624328405514,NA,NA
+"c","Henan","in model","year","2019","province x year hazard multiplier exp(b)",2.32115965352528,NA,NA
+"c","Hubei","in model","year","2019","province x year hazard multiplier exp(b)",2.63225031234613,NA,NA
+"c","Hunan","in model","year","2019","province x year hazard multiplier exp(b)",0.859914047586508,NA,NA
+"c","Inner Mongolia","in model","year","2019","province x year hazard multiplier exp(b)",2.68227735903518,NA,NA
+"c","Jiangsu","in model","year","2019","province x year hazard multiplier exp(b)",1.72743629606172,NA,NA
+"c","Jiangxi","in model","year","2019","province x year hazard multiplier exp(b)",2.00156874375757,NA,NA
+"c","Jilin","in model","year","2019","province x year hazard multiplier exp(b)",3.10912458627911,NA,NA
+"c","Liaoning","in model","year","2019","province x year hazard multiplier exp(b)",1.18324458845854,NA,NA
+"c","Ningxia","in model","year","2019","province x year hazard multiplier exp(b)",2.30659681087425,NA,NA
+"c","Qinghai","in model","year","2019","province x year hazard multiplier exp(b)",0.690086605431857,NA,NA
+"c","Shaanxi","in model","year","2019","province x year hazard multiplier exp(b)",1.56017652377358,NA,NA
+"c","Shandong","in model","year","2019","province x year hazard multiplier exp(b)",0.693346811729257,NA,NA
+"c","Shanghai","in model","year","2019","province x year hazard multiplier exp(b)",1.0348610823024,NA,NA
+"c","Shanxi","in model","year","2019","province x year hazard multiplier exp(b)",1.8896357208331,NA,NA
+"c","Sichuan","in model","year","2019","province x year hazard multiplier exp(b)",0.673946017512899,NA,NA
+"c","Tianjin","in model","year","2019","province x year hazard multiplier exp(b)",1.25788213668426,NA,NA
+"c","Tibet","in model","year","2019","province x year hazard multiplier exp(b)",6.94968972903801,NA,NA
+"c","Xinjiang","in model","year","2019","province x year hazard multiplier exp(b)",0.706654066589542,NA,NA
+"c","Yunnan","in model","year","2019","province x year hazard multiplier exp(b)",0.638313340322306,NA,NA
+"c","Zhejiang","in model","year","2019","province x year hazard multiplier exp(b)",1.38115759728641,NA,NA
+"c","Anhui","in model","year","2020","province x year hazard multiplier exp(b)",1.34770433478216,NA,NA
+"c","Beijing","in model","year","2020","province x year hazard multiplier exp(b)",0.724490769138791,NA,NA
+"c","Chongqing","in model","year","2020","province x year hazard multiplier exp(b)",0.767893008979321,NA,NA
+"c","Fujian","in model","year","2020","province x year hazard multiplier exp(b)",0.758792043517624,NA,NA
+"c","Gansu","in model","year","2020","province x year hazard multiplier exp(b)",2.77966197109519,NA,NA
+"c","Guangdong","in model","year","2020","province x year hazard multiplier exp(b)",1.1673400672379,NA,NA
+"c","Guangxi","in model","year","2020","province x year hazard multiplier exp(b)",1.08629712476818,NA,NA
+"c","Guizhou","in model","year","2020","province x year hazard multiplier exp(b)",1.46798319052234,NA,NA
+"c","Hainan","in model","year","2020","province x year hazard multiplier exp(b)",0.793993158501906,NA,NA
+"c","Hebei","in model","year","2020","province x year hazard multiplier exp(b)",0.791992634004056,NA,NA
+"c","Heilongjiang","in model","year","2020","province x year hazard multiplier exp(b)",0.859942474448814,NA,NA
+"c","Henan","in model","year","2020","province x year hazard multiplier exp(b)",0.633580663932809,NA,NA
+"c","Hubei","in model","year","2020","province x year hazard multiplier exp(b)",2.68075122750838,NA,NA
+"c","Hunan","in model","year","2020","province x year hazard multiplier exp(b)",2.65352026332576,NA,NA
+"c","Inner Mongolia","in model","year","2020","province x year hazard multiplier exp(b)",2.70875309931603,NA,NA
+"c","Jiangsu","in model","year","2020","province x year hazard multiplier exp(b)",0.616593075302535,NA,NA
+"c","Jiangxi","in model","year","2020","province x year hazard multiplier exp(b)",1.04533190914579,NA,NA
+"c","Jilin","in model","year","2020","province x year hazard multiplier exp(b)",2.46265824637858,NA,NA
+"c","Liaoning","in model","year","2020","province x year hazard multiplier exp(b)",1.17721715939361,NA,NA
+"c","Ningxia","in model","year","2020","province x year hazard multiplier exp(b)",1.14302798068146,NA,NA
+"c","Qinghai","in model","year","2020","province x year hazard multiplier exp(b)",0.692566306555954,NA,NA
+"c","Shaanxi","in model","year","2020","province x year hazard multiplier exp(b)",2.14230120954856,NA,NA
+"c","Shandong","in model","year","2020","province x year hazard multiplier exp(b)",2.17130131444132,NA,NA
+"c","Shanghai","in model","year","2020","province x year hazard multiplier exp(b)",0.675602663262595,NA,NA
+"c","Shanxi","in model","year","2020","province x year hazard multiplier exp(b)",0.769998897662962,NA,NA
+"c","Sichuan","in model","year","2020","province x year hazard multiplier exp(b)",1.54235471730101,NA,NA
+"c","Tianjin","in model","year","2020","province x year hazard multiplier exp(b)",1.94448432531575,NA,NA
+"c","Tibet","in model","year","2020","province x year hazard multiplier exp(b)",1.62547210226805,NA,NA
+"c","Xinjiang","in model","year","2020","province x year hazard multiplier exp(b)",0.723878695751678,NA,NA
+"c","Yunnan","in model","year","2020","province x year hazard multiplier exp(b)",0.654868140202866,NA,NA
+"c","Zhejiang","in model","year","2020","province x year hazard multiplier exp(b)",1.36345065992892,NA,NA
+"c","Anhui","in model","year","2021","province x year hazard multiplier exp(b)",0.95756120702518,NA,NA
+"c","Beijing","in model","year","2021","province x year hazard multiplier exp(b)",0.717910532604257,NA,NA
+"c","Chongqing","in model","year","2021","province x year hazard multiplier exp(b)",1.18627382629833,NA,NA
+"c","Fujian","in model","year","2021","province x year hazard multiplier exp(b)",0.736753599221965,NA,NA
+"c","Gansu","in model","year","2021","province x year hazard multiplier exp(b)",2.91760876696443,NA,NA
+"c","Guangdong","in model","year","2021","province x year hazard multiplier exp(b)",0.715955898869837,NA,NA
+"c","Guangxi","in model","year","2021","province x year hazard multiplier exp(b)",0.651227082002988,NA,NA
+"c","Guizhou","in model","year","2021","province x year hazard multiplier exp(b)",1.04038566687653,NA,NA
+"c","Hainan","in model","year","2021","province x year hazard multiplier exp(b)",1.18788433673632,NA,NA
+"c","Hebei","in model","year","2021","province x year hazard multiplier exp(b)",1.28074962491676,NA,NA
+"c","Heilongjiang","in model","year","2021","province x year hazard multiplier exp(b)",1.33910961624104,NA,NA
+"c","Henan","in model","year","2021","province x year hazard multiplier exp(b)",0.961829211799218,NA,NA
+"c","Hubei","in model","year","2021","province x year hazard multiplier exp(b)",1.41906418130995,NA,NA
+"c","Hunan","in model","year","2021","province x year hazard multiplier exp(b)",1.48909506226117,NA,NA
+"c","Inner Mongolia","in model","year","2021","province x year hazard multiplier exp(b)",1.51386802058492,NA,NA
+"c","Jiangsu","in model","year","2021","province x year hazard multiplier exp(b)",2.22489316430527,NA,NA
+"c","Jiangxi","in model","year","2021","province x year hazard multiplier exp(b)",0.663670757406086,NA,NA
+"c","Jilin","in model","year","2021","province x year hazard multiplier exp(b)",1.27319070165968,NA,NA
+"c","Liaoning","in model","year","2021","province x year hazard multiplier exp(b)",0.709079245398014,NA,NA
+"c","Ningxia","in model","year","2021","province x year hazard multiplier exp(b)",3.30373630393205,NA,NA
+"c","Qinghai","in model","year","2021","province x year hazard multiplier exp(b)",1.08996887486441,NA,NA
+"c","Shaanxi","in model","year","2021","province x year hazard multiplier exp(b)",0.618476168703368,NA,NA
+"c","Shandong","in model","year","2021","province x year hazard multiplier exp(b)",1.47979907528768,NA,NA
+"c","Shanghai","in model","year","2021","province x year hazard multiplier exp(b)",0.675991380010601,NA,NA
+"c","Shanxi","in model","year","2021","province x year hazard multiplier exp(b)",0.776483452287263,NA,NA
+"c","Sichuan","in model","year","2021","province x year hazard multiplier exp(b)",1.03778417645703,NA,NA
+"c","Tianjin","in model","year","2021","province x year hazard multiplier exp(b)",0.765793477085841,NA,NA
+"c","Tibet","in model","year","2021","province x year hazard multiplier exp(b)",0.87027518935988,NA,NA
+"c","Xinjiang","in model","year","2021","province x year hazard multiplier exp(b)",0.716661333718365,NA,NA
+"c","Yunnan","in model","year","2021","province x year hazard multiplier exp(b)",1.03133047586979,NA,NA
+"c","Zhejiang","in model","year","2021","province x year hazard multiplier exp(b)",3.47886410650414,NA,NA
+"c","Anhui","in model","year","2022","province x year hazard multiplier exp(b)",3.04104750050081,NA,NA
+"c","Beijing","in model","year","2022","province x year hazard multiplier exp(b)",0.720138908572889,NA,NA
+"c","Chongqing","in model","year","2022","province x year hazard multiplier exp(b)",0.720820229590692,NA,NA
+"c","Fujian","in model","year","2022","province x year hazard multiplier exp(b)",0.731444451055486,NA,NA
+"c","Gansu","in model","year","2022","province x year hazard multiplier exp(b)",1.80274623688352,NA,NA
+"c","Guangdong","in model","year","2022","province x year hazard multiplier exp(b)",2.2819575999126,NA,NA
+"c","Guangxi","in model","year","2022","province x year hazard multiplier exp(b)",0.662015445812273,NA,NA
+"c","Guizhou","in model","year","2022","province x year hazard multiplier exp(b)",0.657598915785654,NA,NA
+"c","Hainan","in model","year","2022","province x year hazard multiplier exp(b)",1.165985916479,NA,NA
+"c","Hebei","in model","year","2022","province x year hazard multiplier exp(b)",1.32751251345691,NA,NA
+"c","Heilongjiang","in model","year","2022","province x year hazard multiplier exp(b)",0.815002410722032,NA,NA
+"c","Henan","in model","year","2022","province x year hazard multiplier exp(b)",2.52727968138233,NA,NA
+"c","Hubei","in model","year","2022","province x year hazard multiplier exp(b)",0.64817853605468,NA,NA
+"c","Hunan","in model","year","2022","province x year hazard multiplier exp(b)",1.41915773311094,NA,NA
+"c","Inner Mongolia","in model","year","2022","province x year hazard multiplier exp(b)",1.62694949113723,NA,NA
+"c","Jiangsu","in model","year","2022","province x year hazard multiplier exp(b)",1.7476806633076,NA,NA
+"c","Jiangxi","in model","year","2022","province x year hazard multiplier exp(b)",0.673847461670924,NA,NA
+"c","Jilin","in model","year","2022","province x year hazard multiplier exp(b)",0.831811350319483,NA,NA
+"c","Liaoning","in model","year","2022","province x year hazard multiplier exp(b)",1.61136532506756,NA,NA
+"c","Ningxia","in model","year","2022","province x year hazard multiplier exp(b)",0.747143874001209,NA,NA
+"c","Qinghai","in model","year","2022","province x year hazard multiplier exp(b)",0.701435807434526,NA,NA
+"c","Shaanxi","in model","year","2022","province x year hazard multiplier exp(b)",0.957114698420805,NA,NA
+"c","Shandong","in model","year","2022","province x year hazard multiplier exp(b)",1.50700928441332,NA,NA
+"c","Shanghai","in model","year","2022","province x year hazard multiplier exp(b)",0.685439801457775,NA,NA
+"c","Shanxi","in model","year","2022","province x year hazard multiplier exp(b)",0.793875150233614,NA,NA
+"c","Sichuan","in model","year","2022","province x year hazard multiplier exp(b)",0.675732173643127,NA,NA
+"c","Tianjin","in model","year","2022","province x year hazard multiplier exp(b)",0.780396732646875,NA,NA
+"c","Tibet","in model","year","2022","province x year hazard multiplier exp(b)",0.942646469414498,NA,NA
+"c","Xinjiang","in model","year","2022","province x year hazard multiplier exp(b)",1.15319245313147,NA,NA
+"c","Yunnan","in model","year","2022","province x year hazard multiplier exp(b)",0.685413355134854,NA,NA
+"c","Zhejiang","in model","year","2022","province x year hazard multiplier exp(b)",1.33972521021191,NA,NA
+"c","Anhui","in model","year","2023","province x year hazard multiplier exp(b)",1.43089473321463,NA,NA
+"c","Beijing","in model","year","2023","province x year hazard multiplier exp(b)",0.736300634389278,NA,NA
+"c","Chongqing","in model","year","2023","province x year hazard multiplier exp(b)",0.720195412815081,NA,NA
+"c","Fujian","in model","year","2023","province x year hazard multiplier exp(b)",0.719627502822648,NA,NA
+"c","Gansu","in model","year","2023","province x year hazard multiplier exp(b)",1.33809856138175,NA,NA
+"c","Guangdong","in model","year","2023","province x year hazard multiplier exp(b)",1.09335369757488,NA,NA
+"c","Guangxi","in model","year","2023","province x year hazard multiplier exp(b)",0.971361077373311,NA,NA
+"c","Guizhou","in model","year","2023","province x year hazard multiplier exp(b)",3.18013142801698,NA,NA
+"c","Hainan","in model","year","2023","province x year hazard multiplier exp(b)",0.730455567292359,NA,NA
+"c","Hebei","in model","year","2023","province x year hazard multiplier exp(b)",0.789843731549363,NA,NA
+"c","Heilongjiang","in model","year","2023","province x year hazard multiplier exp(b)",1.30400950288723,NA,NA
+"c","Henan","in model","year","2023","province x year hazard multiplier exp(b)",1.50495631672753,NA,NA
+"c","Hubei","in model","year","2023","province x year hazard multiplier exp(b)",1.00504493517554,NA,NA
+"c","Hunan","in model","year","2023","province x year hazard multiplier exp(b)",1.12173945813902,NA,NA
+"c","Inner Mongolia","in model","year","2023","province x year hazard multiplier exp(b)",1.080774983,NA,NA
+"c","Jiangsu","in model","year","2023","province x year hazard multiplier exp(b)",4.06413240341471,NA,NA
+"c","Jiangxi","in model","year","2023","province x year hazard multiplier exp(b)",0.660448041603686,NA,NA
+"c","Jilin","in model","year","2023","province x year hazard multiplier exp(b)",0.778037592590201,NA,NA
+"c","Liaoning","in model","year","2023","province x year hazard multiplier exp(b)",0.733191859322958,NA,NA
+"c","Ningxia","in model","year","2023","province x year hazard multiplier exp(b)",0.752016658963684,NA,NA
+"c","Qinghai","in model","year","2023","province x year hazard multiplier exp(b)",1.65199871395152,NA,NA
+"c","Shaanxi","in model","year","2023","province x year hazard multiplier exp(b)",1.34971258884899,NA,NA
+"c","Shandong","in model","year","2023","province x year hazard multiplier exp(b)",2.03834820573434,NA,NA
+"c","Shanghai","in model","year","2023","province x year hazard multiplier exp(b)",0.688591638097893,NA,NA
+"c","Shanxi","in model","year","2023","province x year hazard multiplier exp(b)",0.791213928749228,NA,NA
+"c","Sichuan","in model","year","2023","province x year hazard multiplier exp(b)",1.50166463837749,NA,NA
+"c","Tianjin","in model","year","2023","province x year hazard multiplier exp(b)",0.767669528666739,NA,NA
+"c","Tibet","in model","year","2023","province x year hazard multiplier exp(b)",2.28641932738149,NA,NA
+"c","Xinjiang","in model","year","2023","province x year hazard multiplier exp(b)",0.738795705723903,NA,NA
+"c","Yunnan","in model","year","2023","province x year hazard multiplier exp(b)",0.678614104365271,NA,NA
+"c","Zhejiang","in model","year","2023","province x year hazard multiplier exp(b)",0.959471128466375,NA,NA
+"c","Anhui","in model","year","2024","province x year hazard multiplier exp(b)",0.678699178348089,NA,NA
+"c","Beijing","in model","year","2024","province x year hazard multiplier exp(b)",0.762521714383443,NA,NA
+"c","Chongqing","in model","year","2024","province x year hazard multiplier exp(b)",0.721069308007344,NA,NA
+"c","Fujian","in model","year","2024","province x year hazard multiplier exp(b)",1.17267569838329,NA,NA
+"c","Gansu","in model","year","2024","province x year hazard multiplier exp(b)",0.661573137590682,NA,NA
+"c","Guangdong","in model","year","2024","province x year hazard multiplier exp(b)",0.82545697908409,NA,NA
+"c","Guangxi","in model","year","2024","province x year hazard multiplier exp(b)",0.650541073825461,NA,NA
+"c","Guizhou","in model","year","2024","province x year hazard multiplier exp(b)",1.43986645599878,NA,NA
+"c","Hainan","in model","year","2024","province x year hazard multiplier exp(b)",0.73780946121191,NA,NA
+"c","Hebei","in model","year","2024","province x year hazard multiplier exp(b)",1.35493119249532,NA,NA
+"c","Heilongjiang","in model","year","2024","province x year hazard multiplier exp(b)",0.765028878115952,NA,NA
+"c","Henan","in model","year","2024","province x year hazard multiplier exp(b)",0.712007225820285,NA,NA
+"c","Hubei","in model","year","2024","province x year hazard multiplier exp(b)",0.679924198479995,NA,NA
+"c","Hunan","in model","year","2024","province x year hazard multiplier exp(b)",0.843197499855909,NA,NA
+"c","Inner Mongolia","in model","year","2024","province x year hazard multiplier exp(b)",1.11337633156501,NA,NA
+"c","Jiangsu","in model","year","2024","province x year hazard multiplier exp(b)",1.4177936525225,NA,NA
+"c","Jiangxi","in model","year","2024","province x year hazard multiplier exp(b)",1.07391265683349,NA,NA
+"c","Jilin","in model","year","2024","province x year hazard multiplier exp(b)",0.783001830927881,NA,NA
+"c","Liaoning","in model","year","2024","province x year hazard multiplier exp(b)",0.729180054065714,NA,NA
+"c","Ningxia","in model","year","2024","province x year hazard multiplier exp(b)",0.780935160247066,NA,NA
+"c","Qinghai","in model","year","2024","province x year hazard multiplier exp(b)",1.19195538476997,NA,NA
+"c","Shaanxi","in model","year","2024","province x year hazard multiplier exp(b)",0.659404998680736,NA,NA
+"c","Shandong","in model","year","2024","province x year hazard multiplier exp(b)",0.685139062396797,NA,NA
+"c","Shanghai","in model","year","2024","province x year hazard multiplier exp(b)",0.73347488383569,NA,NA
+"c","Shanxi","in model","year","2024","province x year hazard multiplier exp(b)",1.34975690896206,NA,NA
+"c","Sichuan","in model","year","2024","province x year hazard multiplier exp(b)",0.688396757108884,NA,NA
+"c","Tianjin","in model","year","2024","province x year hazard multiplier exp(b)",0.790934542521782,NA,NA
+"c","Tibet","in model","year","2024","province x year hazard multiplier exp(b)",0.661895224799702,NA,NA
+"c","Xinjiang","in model","year","2024","province x year hazard multiplier exp(b)",0.770581864069911,NA,NA
+"c","Yunnan","in model","year","2024","province x year hazard multiplier exp(b)",3.55871609302073,NA,NA
+"c","Zhejiang","in model","year","2024","province x year hazard multiplier exp(b)",0.673390940505852,NA,NA
+"c","Shanxi","effort coverage gap, not in model (grey cell)","year","2003","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Shanxi","effort coverage gap, not in model (grey cell)","year","2004","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Shanxi","effort coverage gap, not in model (grey cell)","year","2006","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Xinjiang","effort coverage gap, not in model (grey cell)","year","2009","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Hubei","effort coverage gap, not in model (grey cell)","year","2004","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Tianjin","effort coverage gap, not in model (grey cell)","year","2004","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Tianjin","effort coverage gap, not in model (grey cell)","year","2006","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Tianjin","effort coverage gap, not in model (grey cell)","year","2007","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Shandong","effort coverage gap, not in model (grey cell)","year","2002","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Liaoning","effort coverage gap, not in model (grey cell)","year","2003","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Liaoning","effort coverage gap, not in model (grey cell)","year","2005","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Anhui","effort coverage gap, not in model (grey cell)","year","2003","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Ningxia","effort coverage gap, not in model (grey cell)","year","2003","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Ningxia","effort coverage gap, not in model (grey cell)","year","2004","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Ningxia","effort coverage gap, not in model (grey cell)","year","2005","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Ningxia","effort coverage gap, not in model (grey cell)","year","2006","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Ningxia","effort coverage gap, not in model (grey cell)","year","2008","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Ningxia","effort coverage gap, not in model (grey cell)","year","2009","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Ningxia","effort coverage gap, not in model (grey cell)","year","2010","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Gansu","effort coverage gap, not in model (grey cell)","year","2003","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Inner Mongolia","effort coverage gap, not in model (grey cell)","year","2002","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Heilongjiang","effort coverage gap, not in model (grey cell)","year","2003","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Guizhou","effort coverage gap, not in model (grey cell)","year","2003","province x year hazard multiplier exp(b)",NA,NA,NA
+"c","Guizhou","effort coverage gap, not in model (grey cell)","year","2005","province x year hazard multiplier exp(b)",NA,NA,NA
+"d","effort hazard ratio",NA,"year","2002","hazard ratio per 1 SD of effort",2.18233532439339,1.63837281230086,2.90690093996788
+"d","effort hazard ratio",NA,"year","2003","hazard ratio per 1 SD of effort",2.11310691459358,1.61325327693136,2.76783620796153
+"d","effort hazard ratio",NA,"year","2004","hazard ratio per 1 SD of effort",2.04607458010349,1.58807349014131,2.63616338496598
+"d","effort hazard ratio",NA,"year","2005","hazard ratio per 1 SD of effort",1.98116865665117,1.56275692319165,2.51160573205514
+"d","effort hazard ratio",NA,"year","2006","hazard ratio per 1 SD of effort",1.91832168986649,1.5372086631806,2.39392230473
+"d","effort hazard ratio",NA,"year","2007","hazard ratio per 1 SD of effort",1.85746836517825,1.51131030268615,2.28291219976843
+"d","effort hazard ratio",NA,"year","2008","hazard ratio per 1 SD of effort",1.79854543993509,1.48491375073891,2.17841992364987
+"d","effort hazard ratio",NA,"year","2009","hazard ratio per 1 SD of effort",1.74149167767973,1.45783430419896,2.08034154134835
+"d","effort hazard ratio",NA,"year","2010","hazard ratio per 1 SD of effort",1.68624778450815,1.4298441493133,1.98863043369044
+"d","effort hazard ratio",NA,"year","2011","hazard ratio per 1 SD of effort",1.63275634744753,1.40066909098671,1.9032998638188
+"d","effort hazard ratio",NA,"year","2012","hazard ratio per 1 SD of effort",1.58096177478911,1.36999395750671,1.82441690319068
+"d","effort hazard ratio",NA,"year","2013","hazard ratio per 1 SD of effort",1.53081023831369,1.33748518003363,1.75207921606061
+"d","effort hazard ratio",NA,"year","2014","hazard ratio per 1 SD of effort",1.48224961734991,1.30283955383726,1.68636569381313
+"d","effort hazard ratio",NA,"year","2015","hazard ratio per 1 SD of effort",1.4352294446072,1.26586017878741,1.62725994006754
+"d","effort hazard ratio",NA,"year","2016","hazard ratio per 1 SD of effort",1.38970085372686,1.22654015898017,1.57456602518009
+"d","effort hazard ratio",NA,"year","2017","hazard ratio per 1 SD of effort",1.3456165284971,1.18511292163889,1.52785764858644
+"d","effort hazard ratio",NA,"year","2018","hazard ratio per 1 SD of effort",1.302930653679,1.14203246710951,1.48649739581668
+"d","effort hazard ratio",NA,"year","2019","hazard ratio per 1 SD of effort",1.26159886739235,1.09788718020878,1.44972245864369
+"d","effort hazard ratio",NA,"year","2020","hazard ratio per 1 SD of effort",1.22157821501205,1.05329135801932,1.41675266205369
+"d","effort hazard ratio",NA,"year","2021","hazard ratio per 1 SD of effort",1.18282710452683,1.00880054481484,1.38687470619885
+"d","effort hazard ratio",NA,"year","2022","hazard ratio per 1 SD of effort",1.14530526331424,0.964868727942051,1.35948456840658
+"d","effort hazard ratio",NA,"year","2023","hazard ratio per 1 SD of effort",1.10897369628678,0.92184024562541,1.33409521323471
+"d","effort hazard ratio",NA,"year","2024","hazard ratio per 1 SD of effort",1.07379464536568,0.879961066850321,1.31032494942432
+"d","effort x time interaction",NA,NA,NA,"P value",0.000768256915418116,NA,NA

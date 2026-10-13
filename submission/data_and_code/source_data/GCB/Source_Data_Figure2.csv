@@ -1,0 +1,113 @@
+"panel","series","x","x_label","y"
+"a","publication lag (% of records)",0,"0",17.41
+"a","publication lag (% of records)",1,"1",38.81
+"a","publication lag (% of records)",2,"2",16.34
+"a","publication lag (% of records)",3,"3",10.12
+"a","publication lag (% of records)",4,"4",6.03
+"a","publication lag (% of records)",5,"5",2.82
+"a","publication lag (% of records)",6,"6",1.65
+"a","publication lag (% of records)",7,"7",1.36
+"a","publication lag (% of records)",8,"8",1.17
+"a","publication lag (% of records)",9,"9",0.58
+"a","publication lag (% of records)",10,"10",0.97
+"a","publication lag (% of records)",11,"11",0.68
+"a","publication lag (% of records)",12,"12",0.1
+"a","reporting completeness c(t) (%)",23,"discovery year 2002",99.71
+"a","reporting completeness c(t) (%)",22,"discovery year 2003",99.71
+"a","reporting completeness c(t) (%)",21,"discovery year 2004",99.61
+"a","reporting completeness c(t) (%)",20,"discovery year 2005",99.61
+"a","reporting completeness c(t) (%)",19,"discovery year 2006",99.61
+"a","reporting completeness c(t) (%)",18,"discovery year 2007",99.61
+"a","reporting completeness c(t) (%)",17,"discovery year 2008",99.61
+"a","reporting completeness c(t) (%)",16,"discovery year 2009",99.61
+"a","reporting completeness c(t) (%)",15,"discovery year 2010",99.61
+"a","reporting completeness c(t) (%)",14,"discovery year 2011",99.61
+"a","reporting completeness c(t) (%)",13,"discovery year 2012",99.21
+"a","reporting completeness c(t) (%)",12,"discovery year 2013",98.92
+"a","reporting completeness c(t) (%)",11,"discovery year 2014",98.82
+"a","reporting completeness c(t) (%)",10,"discovery year 2015",98.14
+"a","reporting completeness c(t) (%)",9,"discovery year 2016",97.15
+"a","reporting completeness c(t) (%)",8,"discovery year 2017",96.57
+"a","reporting completeness c(t) (%)",7,"discovery year 2018",95.39
+"a","reporting completeness c(t) (%)",6,"discovery year 2019",94.01
+"a","reporting completeness c(t) (%)",5,"discovery year 2020",92.35
+"a","reporting completeness c(t) (%)",4,"discovery year 2021",89.5
+"a","reporting completeness c(t) (%)",3,"discovery year 2022",83.42
+"a","reporting completeness c(t) (%)",2,"discovery year 2023",73.21
+"a","reporting completeness c(t) (%)",1,"discovery year 2024",56.72
+"a","annotation",NA,"median lag (yr)",1
+"a","annotation",NA,"mean lag (yr)",2.0943579766537
+"a","annotation",NA,"lagged >= 1 yr (%)",81.7120622568093
+"b","Discovery year",2002,"2002",9
+"b","Discovery year",2003,"2003",5
+"b","Discovery year",2004,"2004",19
+"b","Discovery year",2005,"2005",13
+"b","Discovery year",2006,"2006",25
+"b","Discovery year",2007,"2007",21
+"b","Discovery year",2008,"2008",8
+"b","Discovery year",2009,"2009",22
+"b","Discovery year",2010,"2010",29
+"b","Discovery year",2011,"2011",30
+"b","Discovery year",2012,"2012",23
+"b","Discovery year",2013,"2013",35
+"b","Discovery year",2014,"2014",36
+"b","Discovery year",2015,"2015",34
+"b","Discovery year",2016,"2016",45
+"b","Discovery year",2017,"2017",45
+"b","Discovery year",2018,"2018",29
+"b","Discovery year",2019,"2019",57
+"b","Discovery year",2020,"2020",45
+"b","Discovery year",2021,"2021",40
+"b","Discovery year",2022,"2022",34
+"b","Discovery year",2023,"2023",39
+"b","Discovery year",2024,"2024",14
+"b","Publication year",2002,"2002",5
+"b","Publication year",2003,"2003",9
+"b","Publication year",2004,"2004",4
+"b","Publication year",2005,"2005",5
+"b","Publication year",2006,"2006",33
+"b","Publication year",2007,"2007",17
+"b","Publication year",2008,"2008",10
+"b","Publication year",2009,"2009",16
+"b","Publication year",2010,"2010",35
+"b","Publication year",2011,"2011",26
+"b","Publication year",2012,"2012",15
+"b","Publication year",2013,"2013",27
+"b","Publication year",2014,"2014",32
+"b","Publication year",2015,"2015",24
+"b","Publication year",2016,"2016",27
+"b","Publication year",2017,"2017",45
+"b","Publication year",2018,"2018",41
+"b","Publication year",2019,"2019",46
+"b","Publication year",2020,"2020",34
+"b","Publication year",2021,"2021",33
+"b","Publication year",2022,"2022",44
+"b","Publication year",2023,"2023",60
+"b","Publication year",2024,"2024",67
+"b","annotation",2021.5,"censored band start",NA
+"b","annotation",2024.5,"censored band end",NA
+"b","annotation",NA,"records changing year (%)",83.0963665086888
+"c","Accumulated warming",1,"S0",1.39397021236197
+"c","Accumulated warming",2,"S1",1.43687958668667
+"c","Accumulated warming",3,"S2",1.43240628583331
+"c","Accumulated warming",4,"S3",1.43170373443825
+"c","Accumulated warming",5,"S4",1.42804702059126
+"c","Accumulated warming",6,"S5",1.36164754167317
+"c","Annual climate variability",1,"S0",0.850311450793247
+"c","Annual climate variability",2,"S1",0.971116950860858
+"c","Annual climate variability",3,"S2",0.958461199270241
+"c","Annual climate variability",4,"S3",0.958288682742615
+"c","Annual climate variability",5,"S4",0.96155332012369
+"c","Annual climate variability",6,"S5",0.995095739809156
+"c","Survey effort",1,"S0",1.78763810006655
+"c","Survey effort",2,"S1",1.30508400917427
+"c","Survey effort",3,"S2",1.26659271199213
+"c","Survey effort",4,"S3",1.2889343025808
+"c","Survey effort",5,"S4",1.44796449132282
+"c","Survey effort",6,"S5",1.4038169859134
+"c","Warming x effort",1,"S0",0.875934348839496
+"c","Warming x effort",2,"S1",0.858863754897665
+"c","Warming x effort",3,"S2",0.86346574482767
+"c","Warming x effort",4,"S3",0.862903435534574
+"c","Warming x effort",5,"S4",0.862427384195833
+"c","Warming x effort",6,"S5",0.84924794872335

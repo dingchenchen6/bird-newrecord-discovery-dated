@@ -1,60 +1,41 @@
 Dear Editors,
 
-Please consider our manuscript, "Warming and survey effort contribute comparably to
-the generation of new bird distribution records once records are dated to discovery",
-for publication in *Global Change Biology* as a Research Article.
+We submit our manuscript, "Warming and survey effort contribute comparably to new bird distribution records when dated to discovery", for consideration as a Research Article in *Global Change Biology*. Our answers to the journal's cover-letter questions follow, each in 50 words or fewer.
 
-New provincial distribution records are widely read as evidence of climate-driven
-range shifts, yet every such record is jointly produced by three processes — a species
-being present, someone looking, and the observation being written up. Using a complete
-species × province × year risk set built around 1,029 documented new bird records from
-China (2002–2024), we model the annual hazard of a first provincial record with a
-discrete-time proportional-hazards formulation, and separate the ecological from the
-observational contribution rather than discarding either.
+**1. What scientific question is addressed in this manuscript?**
 
-Three findings should interest the journal's readership.
+When a bird species is recorded in a new province, how much does the record reflect climate-driven range change, and how much the growth of survey effort? And does the usual practice of dating records to their publication year bias the answer?
 
-First, the date attached to a record is a modelling decision with quantitative
-consequences. Nearly all analyses of such compilations date records to publication,
-because that is the field primary sources report. We show that publication lag
-(mean 2.09 years) grew alongside the observational infrastructure, so publication-year
-dating inflates the apparent effect of survey effort by 37% and manufactures a spurious
-climate-variability effect; re-dating to discovery removes both artefacts while leaving
-the accumulated-warming coefficient unchanged.
+**2. What is/are the key finding(s) that answer this question?**
 
-Second, once dated correctly, accumulated warming relative to a species' own historical
-range (hazard ratio 1.36 per SD) and survey effort (1.40) contribute comparably, and
-they interact negatively: warming matters most where survey coverage is sparse. A
-province-by-year random intercept — the scale at which survey campaigns, birding
-festivals and reporting channels actually operate — is the largest variance component
-in the model, larger than either driver. Design-preserving permutation nulls,
-province-cluster bootstraps and a parametric bootstrap all support these estimates,
-and we report the null-model baselines explicitly so that effect sizes are read
-against the correct reference.
+Publication-year dating inflates the survey-effort effect by 37% and creates a spurious climate effect. Dated to discovery, species-referenced warming (hazard ratio 1.36 per SD) and effort (1.40) contribute comparably. Province-by-year survey pulses are the largest variance component, and returns on effort are falling; warming shows no such decline.
 
-Third, the observational process is saturating while the climatic one is not: the
-marginal return of survey effort fell from a hazard ratio of 2.18 in 2002 to 1.07 in
-2024, whereas the climate coefficient shows no time trend. Companion analyses show
-that the 2.5-fold apparent enrichment of new records inside nature reserves largely
-reflects the reserves' role as observation platforms rather than ecological reception,
-with direct implications for how record counts should — and should not — be used in
-conservation assessment.
+**3. Why is this work important and timely?**
 
-All data, code and every reported number (70+ result tables, one per statistic) are
-openly available, and the pipeline reproduces the four main-model coefficients from
-released inputs. The manuscript is 7,864 words all-inclusive with three tables and
-seven figures; Supporting Information contains six notes, eight tables and fifteen
-figures. Reference 25 is a companion data descriptor currently under review at
-*Scientific Data* and will be updated on acceptance.
+New distribution records are widely read as fingerprints of climate-driven range shifts, yet citizen-science effort has grown as fast as the climate has warmed. Without separating the two, range-shift attribution, monitoring priorities and protected-area assessments risk mistaking the history of observation for ecological change.
 
-This work is original, is not under consideration elsewhere, and all authors have
-approved the submission. We have no conflicts of interest. We suggest the paper be
-handled within the biodiversity-redistribution / biogeography remit, and would be
-happy to suggest reviewers on request.
+**4. Describe how your paper fits within the scope of GCB.**
 
-Yours sincerely,
+GCB promotes understanding of biological responses to environmental change. We quantify one such response, the redistribution of bird species across China under warming, while explicitly modelling how it is detected, and we delimit how far the fitted relationships can be projected under CMIP6 scenarios.
+
+**5. What biological AND global change aspects does it address?**
+
+Biological: first provincial records of 392 bird species, with species detectability, migratory strategy and traits. Global change: accumulated warming relative to each species' historical range, CMIP6 SSP2-4.5 and SSP5-8.5 projections, and the rapid growth of citizen-science monitoring that shapes which changes are observed.
+
+**6. What are the three most recently published papers that are relevant to this manuscript?**
+
+Chen, S. et al. (2025) *Avian Research* 16, 100310 (https://doi.org/10.1016/j.avrs.2025.100310); Bowler, D. E. et al. (2025) *Biological Reviews* 100, 50–67 (https://doi.org/10.1111/brv.13127); Xing, X. et al. (2024) *Frontiers in Ecology and Evolution* 12, 1415268 (https://doi.org/10.3389/fevo.2024.1415268).
+
+**7. Provide the name and institutional email addresses of five potential reviewers.**
+
+[To be provided by the authors: five researchers without conflicts of interest, with institutional email addresses; for example, specialists in biodiversity-data bias, range-shift detection, and discrete-time hazard or occupancy modelling.]
+
+**Related manuscripts.** A data descriptor for the China Bird New Record dataset (CBNR) is under consideration at *Scientific Data*; it documents the dataset and contains none of the analyses reported here. Our companion study of new mammal distribution records in China has been published (Ding et al., 2025, *Global Ecology and Biogeography*).
+
+This manuscript has not been published and is not under consideration elsewhere. All authors have approved its submission and declare no conflicts of interest. [Authors: confirm, and state any preprint.]
+
+Sincerely,
 
 Chenchen Ding, on behalf of all authors
-Institute of Ecology, College of Urban and Environmental Sciences,
-Peking University, Beijing 100871, China
-dingchenchen@pku.edu.cn
+Institute of Ecology, College of Urban and Environmental Sciences, Peking University, Beijing 100871, China
+chenchen.ding@pku.edu.cn

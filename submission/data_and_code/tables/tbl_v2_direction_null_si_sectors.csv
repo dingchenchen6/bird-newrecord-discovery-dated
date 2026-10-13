@@ -1,0 +1,17 @@
+Null,Sector,Observed,Expected,95% null interval,Obs./exp.,P (Holm)
+Geometry,North,48,49.5,39–61,0.97,1.000
+Geometry,Northeast,179,158.6,142–176,1.13,0.144
+Geometry,East,237,234.8,218–252,1.01,1.000
+Geometry,Southeast,52,64.9,53–78,0.80,0.240
+Geometry,South,20,29.9,22–39,0.67,0.168
+Geometry,Southwest,56,52.6,44–61,1.06,1.000
+Geometry,West,19,25.0,17–35,0.76,1.000
+Geometry,Northwest,31,26.8,18–36,1.16,1.000
+Geometry + effort,North,48,41.1,32–50,1.17,0.492
+Geometry + effort,Northeast,179,153.2,139–169,1.17,0.016
+Geometry + effort,East,237,263.9,246–282,0.90,0.036
+Geometry + effort,Southeast,52,64.7,53–75,0.80,0.168
+Geometry + effort,South,20,32.1,24–40,0.62,0.036
+Geometry + effort,Southwest,56,49.6,42–58,1.13,0.492
+Geometry + effort,West,19,19.7,12–27,0.96,0.988
+Geometry + effort,Northwest,31,17.9,11–26,1.74,0.028

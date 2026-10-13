@@ -15,16 +15,30 @@ entirely.
 ## What is in here
 
 ```
-code/        analysis pipeline, scripts 130-154, run in numerical order
+code/        analysis pipeline, scripts 130-220, run in numerical order
 data/        modelling datasets and the panels needed to rebuild them
 tables/      every result table cited in the manuscript and report
 figures/     Fig1-Fig10 and the diagnostic panel
 figures_alt/     species- and province-level figures in the original GEB style
 figures_direction/  radar and wind-rose plots of record direction, overall and by order
 figures_future/  projection figures FigM1-FigM4 and the unmasked contrast
+figures_topjournal/  redesigned main figures (one palette and type scale), per-panel files, source data
 docs/        manuscript (English) and research report (Chinese)
+submission/  three journal packages (GCB, NEE, NC), data-and-code snapshot, conference talks
 tests/       smoke test reproducing the headline coefficients
 ```
+
+**Submission package (October 2026).** `submission/{GCB,NEE,NC}/` hold the manuscript as Word
+and PDF, the Supplementary Information, cover letter, reporting summary and an upload guide. Every
+main and supplementary figure is also an editable PowerPoint file (`figures/*.pptx`,
+`figures_SI/`), converted from the submitted PDF at its printed size; four county-level map
+figures whose vector files exceed 50 MB are included as pictures. `figures_polished/` is an
+alternative set of the main figures with a single colour-blind-safe palette and Nature-style type
+sizes, plotting exactly the same values (scripts 218a–218d, theme `code/218_theme_topjournal.R`).
+`submission/data_and_code/` is a frozen copy of this repository's reproducibility core with
+source data named by each journal's figure numbers. `submission/presentation/` keeps the earlier
+talks and adds the October 2026 version of the AOC 2026 talk in three visual styles and in Chinese.
+Scripts 205–220 build all of this; upload zips are rebuilt locally and not tracked.
 
 Every figure ships as **PNG (450 dpi), PDF, SVG and editable PPTX**, plus the source data
 behind it as CSV. In the PPTX every element is a native PowerPoint shape, so the figures can

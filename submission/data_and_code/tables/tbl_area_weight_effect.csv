@@ -1,0 +1,5 @@
+indicator,mean_abs_diff,max_abs_diff,cor
+tavg_annual,0.223,1.8847,0.998388
+tavg_winter,0.2951,1.9943,0.99897
+tmax_warm,0.1685,1.8421,0.996369
+tmin_cold,0.3643,2.2564,0.998875

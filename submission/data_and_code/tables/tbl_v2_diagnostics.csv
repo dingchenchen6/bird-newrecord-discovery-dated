@@ -1,0 +1,15 @@
+test,statistic,p_value,note
+KS uniformity,0.00162145792664429,0.74414074416603,"scaled residuals vs Uniform(0,1)"
+dispersion,0.946506705556212,0.588,simulated vs observed dispersion
+outliers (bootstrap),95,0,95 outliers observed; rare-event binary outcomes inflate this test
+zero inflation,1.00021019869455,0.588,ratio observed/simulated zeros
+grouped by year (levels with P<0.05),2,0.00182964485634242,"2 of 23 levels below 0.05 (8.7%); nominal rate is 5%. Statistic = count, p = smallest level P"
+grouped by province (levels with P<0.05),2,0.0241547227901292,"2 of 31 levels below 0.05 (6.5%); nominal rate is 5%. Statistic = count, p = smallest level P"
+Moran's I (province-mean residuals),-0.0380978907984684,0.863,"inverse-distance weights, 31 provinces, 999 permutations; E[I] = -0.033"
+proportional hazards: clim_change_z:year_c,-0.0224869723969185,0.815296113598451,non-zero => effect changes over time (PH violated for that term)
+proportional hazards: effort_z:year_c,-0.211089630945561,0.000768256915418116,non-zero => effect changes over time (PH violated for that term)
+proportional hazards: AIC vs main,-7.67303742484182,,negative favours the time-varying model
+time-varying model HR: effort_z,1.52671533037117,6.84488374720764e-10,coefficient in the model that allows effects to change over time
+time-varying model HR: clim_change_z,1.36890966455553,2.59841781057469e-07,coefficient in the model that allows effects to change over time
+time-varying model HR: clim_var_z,0.996393276435371,0.937967880336442,coefficient in the model that allows effects to change over time
+time-varying model HR: clim_change_z:effort_z,0.86391216645347,0.116140959563107,coefficient in the model that allows effects to change over time

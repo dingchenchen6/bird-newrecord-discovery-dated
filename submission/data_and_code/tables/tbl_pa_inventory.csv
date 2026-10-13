@@ -1,0 +1,5 @@
+pa_level,n,area_km2,est_year_min,est_year_med,est_year_max,n_missing_year,n_since_2002
+national,447,824917.6,1958,1989,2010,0,37
+provincial,296,213798.6,1957,1997,2012,0,83
+local,268,38705.8,1972,1998,2011,0,53
+unknown,17,2511.9,1985,2004,2010,0,12
