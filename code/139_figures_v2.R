@@ -54,7 +54,7 @@ msg <- function(...) cat(sprintf("[139 %s] ", format(Sys.time(), "%H:%M:%S")), .
 OI <- c(blue = "#0072B2", orange = "#E69F00", green = "#009E73", red = "#D55E00",
         purple = "#CC79A7", sky = "#56B4E9", yellow = "#F0E442", grey = "#999999")
 
-theme_pub <- function(base = 9) {
+theme_pub <- function(base = 10) {
   theme_classic(base_size = base, base_family = "sans") +
     theme(axis.line = element_line(linewidth = 0.35, colour = "grey20"),
           axis.ticks = element_line(linewidth = 0.3, colour = "grey20"),
@@ -63,7 +63,7 @@ theme_pub <- function(base = 9) {
           panel.grid.major.y = element_line(linewidth = 0.25, colour = "grey92"),
           strip.background = element_blank(),
           strip.text = element_text(face = "bold", size = base, hjust = 0),
-          plot.title = element_text(face = "bold", size = base + 1, hjust = 0),
+          plot.title = element_text(face = "bold", size = base, hjust = 0),
           plot.subtitle = element_text(size = base - 0.8, colour = "grey30", hjust = 0),
           plot.tag = element_text(face = "bold", size = base + 3),
           plot.tag.position = c(0.005, 0.985),
@@ -165,7 +165,7 @@ p1b <- ggplot(grid, aes(clim_change_z, 100 * haz, colour = eff_lab, fill = eff_l
   scale_colour_manual(values = unname(OI[c("sky", "blue", "red")]), name = NULL) +
   scale_fill_manual(values = unname(OI[c("sky", "blue", "red")]), guide = "none") +
   labs(x = "Accumulated warming relative to the species' range (z)",
-       y = "Annual hazard of a new provincial record (%)",
+       y = "Annual hazard of a new record (%)",
        title = "Warming matters most where effort is low",
        subtitle = "Marginal predictions at fixed-effect level; ribbons are 95% CI") +
   theme_pub() + theme(legend.position = c(0.28, 0.86))
@@ -181,8 +181,9 @@ p1c <- ggplot(imp, aes(value, term, fill = term)) +
   scale_fill_manual(values = unname(OI[c("green", "blue", "purple", "grey")]), guide = "none") +
   scale_x_continuous(breaks = scales::breaks_pretty(n = 3), labels = scales::label_number(drop0trailing = TRUE)) +
   labs(x = "Loss when the term is dropped from the full model",
-       y = NULL, title = "Warming and effort are of comparable importance",
-       subtitle = "ΔAIC and ΔAUC on fixed effects, ΔR² conditional, |β| standardised; larger = more important") +
+       y = NULL, title = "Warming and effort matter equally",
+       subtitle = paste("ΔAIC and ΔAUC on fixed effects; ΔR² conditional;\n",
+                        "|β| standardised. Larger = more important")) +
   theme_pub() + theme(panel.grid.major.y = element_blank(),
                       panel.grid.major.x = element_line(linewidth = 0.25, colour = "grey92"),
                       panel.spacing.x = unit(10, "pt"))
@@ -194,15 +195,16 @@ p1d <- ggplot(D2, aes(lab, AUC_marginal, group = 1)) +
   geom_hline(yintercept = 0.5, linetype = 2, colour = "grey55", linewidth = 0.35) +
   geom_line(colour = OI[["grey"]], linewidth = 0.5) +
   geom_point(size = 2.4, colour = OI[["blue"]]) +
-  geom_text(aes(label = sprintf("%.3f", AUC_marginal)), vjust = -1.1, size = 2.5, colour = "grey20") +
+  geom_text(aes(label = sprintf("%.3f", AUC_marginal)), vjust = -1.1, size = 2.85, colour = "grey20") +
   scale_y_continuous(limits = c(0.38, 0.68)) +
   labs(x = NULL, y = "AUC from fixed effects only",
        title = "Neither factor alone is sufficient",
-       subtitle = "Discrimination gained as fixed effects are added; random structure held at the main model") +
+       subtitle = paste("Discrimination gained as fixed effects are added;\n",
+                        "random structure held at the main model")) +
   theme_pub() + theme(axis.text.x = element_text(angle = 20, hjust = 1))
 
 F1 <- (p1a | p1b) / (p1c | p1d) + plot_annotation(tag_levels = "a")
-save_fig(F1, "Fig1_main_results_v2", 11.2, 8.0,
+save_fig(F1, "Fig1_main_results_v2", 9.0, 6.9,
          src = rbindlist(list(fa[, .(panel = "a", term, group = threshold, HR, lo, hi)],
                               grid[, .(panel = "b", term = "hazard", group = eff_lab,
                                        HR = haz, lo, hi)]), fill = TRUE))
@@ -220,12 +222,13 @@ p2a <- ggplot(lag[lag >= 0 & lag <= 12], aes(lag, pct)) +
   geom_point(data = comp, aes(x = 2025 - year, y = 100 * completeness),
              colour = OI[["red"]], size = 1.1, inherit.aes = FALSE) +
   annotate("text", x = 7.5, y = 92, label = "Reporting completeness c(t)",
-           colour = OI[["red"]], size = 2.7, hjust = 0) +
+           colour = OI[["red"]], size = 2.85, hjust = 0) +
   annotate("text", x = 4.2, y = 33, label = "Publication lag\n(% of records)",
-           colour = OI[["blue"]], size = 2.7, hjust = 0) +
+           colour = OI[["blue"]], size = 2.85, hjust = 0) +
   labs(x = "Years between discovery and publication", y = "Per cent",
-       title = "Records appear in print years after they are made",
-       subtitle = "Median lag 1 yr, mean 2.09 yr; 81.7% of records lag by at least one year") +
+       title = "Records reach print years after discovery",
+       subtitle = paste("Median lag 1 yr, mean 2.09 yr;\n",
+                        "81.7% lag by at least one year")) +
   theme_pub()
 
 ts <- rbind(cmp[!is.na(new_year), .(year = new_year, dating = "Discovery year (v2)")],
@@ -235,11 +238,12 @@ p2b <- ggplot(ts, aes(year, N, colour = dating)) +
   scale_colour_manual(values = unname(OI[c("blue", "orange")]), name = NULL) +
   annotate("rect", xmin = 2021.5, xmax = 2024.5, ymin = -Inf, ymax = Inf,
            fill = "grey70", alpha = 0.18) +
-  annotate("text", x = 2023, y = max(ts$N) * 0.97, label = "right-censored\nby publication lag",
-           size = 2.4, colour = "grey30") +
+  annotate("text", x = 2021.2, y = max(ts$N) * 0.97, label = "right-censored\nby publication lag",
+           size = 2.85, colour = "grey30", hjust = 1) +
   labs(x = NULL, y = "New provincial records",
-       title = "Publication-year dating manufactures a terminal surge",
-       subtitle = "The same events, dated two ways; 83.1% change year") +
+       title = "Publication-year dating fakes a terminal surge",
+       subtitle = paste("The same events, dated two ways;\n",
+                        "83.1% change year")) +
   theme_pub() + theme(legend.position = c(0.24, 0.87))
 
 wf <- melt(dec[, .(step, `Survey effort` = HR_effort, `Accumulated warming` = HR_change,
@@ -250,7 +254,7 @@ p2c <- ggplot(wf, aes(step, value, colour = variable, group = variable)) +
   geom_line(linewidth = 0.65) + geom_point(size = 2) +
   scale_colour_manual(values = unname(OI[c("blue", "green", "grey", "purple")]), name = NULL) +
   annotate("rect", xmin = 1.5, xmax = 2.5, ymin = -Inf, ymax = Inf, fill = OI[["red"]], alpha = 0.10) +
-  annotate("text", x = 2, y = 1.72, label = "re-dating", size = 2.5, colour = OI[["red"]]) +
+  annotate("text", x = 2, y = 1.72, label = "re-dating", size = 2.85, colour = OI[["red"]]) +
   labs(x = NULL, y = "Hazard ratio per 1 SD",
        title = "Re-dating is the single decisive correction",
        subtitle = "S0 v1 published -> S1 discovery-year -> S2 effort gaps -> S3 area weights -> S4 offset -> S5 province x year") +
@@ -258,7 +262,7 @@ p2c <- ggplot(wf, aes(step, value, colour = variable, group = variable)) +
                       axis.text.x = element_text(angle = 0))
 
 F2 <- (p2a | p2b) / p2c + plot_annotation(tag_levels = "a") + plot_layout(heights = c(1, 0.95))
-save_fig(F2, "Fig2_dating_correction_v2", 11.2, 7.4, src = dec)
+save_fig(F2, "Fig2_dating_correction_v2", 9.0, 6.4, src = dec)
 
 # ==========================================================================
 # Fig 3  规格稳健性
@@ -272,20 +276,22 @@ if (!is.null(IW)) {
                 fifelse(P_change < 0.05, "*", "")))]
   p3a <- ggplot(IW, aes(factor(window), ind_lab, fill = HR_change)) +
     geom_tile(colour = "white", linewidth = 0.7) +
-    geom_text(aes(label = sprintf("%.2f%s", HR_change, star)), size = 2.6, colour = "grey10") +
+    geom_text(aes(label = sprintf("%.2f%s", HR_change, star)), size = 2.85, colour = "grey10") +
     scale_fill_gradient2(midpoint = 1, low = OI[["sky"]], mid = "white", high = OI[["red"]],
                          name = "HR") +
     labs(x = "Accumulation window (years)", y = NULL,
-         title = "Only annual mean temperature carries the signal",
-         subtitle = "Hazard ratio for accumulated warming; * P<0.05, ** P<0.01, *** P<0.001") +
+         title = "Signal is confined to annual mean T",
+         subtitle = paste("Hazard ratio for accumulated warming;\n",
+                          "* P<0.05, ** P<0.01, *** P<0.001")) +
     theme_pub() + theme(panel.grid.major.y = element_blank())
   p3b <- ggplot(IW, aes(factor(window), ind_lab, fill = dAIC)) +
     geom_tile(colour = "white", linewidth = 0.7) +
-    geom_text(aes(label = sprintf("%.0f", dAIC)), size = 2.6, colour = "grey10") +
+    geom_text(aes(label = sprintf("%.0f", dAIC)), size = 2.85, colour = "grey10") +
     scale_fill_gradient(low = OI[["green"]], high = "white", name = "Delta AIC") +
     labs(x = "Accumulation window (years)", y = NULL,
-         title = "Model support across climate specifications",
-         subtitle = "Delta AIC relative to the best cell; all fitted on the same rows") +
+         title = "Model support across specifications",
+         subtitle = paste("Delta AIC relative to the best cell;\n",
+                          "all fitted on the same rows")) +
     theme_pub() + theme(panel.grid.major.y = element_blank())
 } else { p3a <- p3b <- ggplot() + theme_void() }
 
@@ -300,15 +306,16 @@ if (!is.null(B)) {
     geom_linerange(aes(xmin = lo, xmax = hi), position = position_dodge(0.7), linewidth = 0.5) +
     geom_point(position = position_dodge(0.7), size = 1.8) +
     scale_colour_manual(values = unname(OI[c("blue", "orange", "grey")]), name = "Missing-data rule") +
-    scale_shape_manual(values = c(16, 17), name = NULL) +
+    scale_shape_manual(values = c(16, 17), name = "Coefficient") +
     labs(x = "Hazard ratio per 1 SD (95% CI)", y = NULL,
          title = "Robust to the choice of effort proxy and missing-data rule",
-         subtitle = "AIC is not comparable across rules (different sample sizes); coefficients are") +
+         subtitle = paste("AIC is not comparable across rules because the sample size changes;",
+                          "the coefficients are what should be compared")) +
     theme_pub() + theme(legend.position = "right")
 } else p3c <- ggplot() + theme_void()
 
 F3 <- (p3a | p3b) / p3c + plot_annotation(tag_levels = "a") + plot_layout(heights = c(1, 1.15))
-save_fig(F3, "Fig3_specification_robustness_v2", 11.2, 7.6,
+save_fig(F3, "Fig3_specification_robustness_v2", 9.0, 6.6,
          src = rbindlist(list(IW, if (!is.null(B)) B), fill = TRUE))
 
 # ==========================================================================
@@ -321,7 +328,7 @@ RE_LAB <- c(R0 = "species", R1 = "species + province\n(v1)", R2 = "+ year",
 R[, lab := factor(RE_LAB[structure], levels = RE_LAB)]
 p4a <- ggplot(R, aes(lab, dAIC, fill = structure == "R3")) +
   geom_col(width = 0.65) +
-  geom_text(aes(label = sprintf("%.1f", dAIC)), vjust = -0.5, size = 2.5, colour = "grey20") +
+  geom_text(aes(label = sprintf("%.1f", dAIC)), vjust = -0.5, size = 2.85, colour = "grey20") +
   scale_fill_manual(values = c(`TRUE` = OI[["blue"]], `FALSE` = OI[["grey"]]), guide = "none") +
   labs(x = NULL, y = "Delta AIC", title = "Fit",
        subtitle = "Lower is better") + theme_pub() +
@@ -357,6 +364,6 @@ p4c <- ggplot(vcm, aes(lab, sd, fill = term)) +
   theme_pub() + theme(axis.text.x = element_text(angle = 25, hjust = 1),
                       legend.position = "right")
 F4 <- (p4a | p4b | p4c) + plot_annotation(tag_levels = "a")
-save_fig(F4, "Fig4_random_structure_v2", 12.5, 4.4, src = R)
+save_fig(F4, "Fig4_random_structure_v2", 10.0, 3.9, src = R)
 
 msg("all v2 figures written to ", FIG, " | DONE")

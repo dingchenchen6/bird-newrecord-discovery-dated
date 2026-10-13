@@ -42,14 +42,14 @@ msg <- function(...) cat(sprintf("[143 %s] ", format(Sys.time(), "%H:%M:%S")), .
 
 OI <- c(blue = "#0072B2", orange = "#E69F00", green = "#009E73", red = "#D55E00",
         purple = "#CC79A7", sky = "#56B4E9", yellow = "#F0E442", grey = "#999999")
-theme_pub <- function(base = 9) theme_classic(base_size = base, base_family = "sans") +
+theme_pub <- function(base = 10) theme_classic(base_size = base, base_family = "sans") +
   theme(axis.line = element_line(linewidth = 0.35, colour = "grey20"),
         axis.ticks = element_line(linewidth = 0.3, colour = "grey20"),
         axis.text = element_text(colour = "grey15"), axis.title = element_text(colour = "grey5"),
         panel.grid.major.y = element_line(linewidth = 0.25, colour = "grey92"),
         strip.background = element_blank(),
         strip.text = element_text(face = "bold", size = base, hjust = 0),
-        plot.title = element_text(face = "bold", size = base + 1, hjust = 0),
+        plot.title = element_text(face = "bold", size = base, hjust = 0),
         plot.subtitle = element_text(size = base - 0.8, colour = "grey30", hjust = 0),
         plot.tag = element_text(face = "bold", size = base + 3), plot.tag.position = c(0.005, 0.985),
         legend.key.size = unit(9, "pt"), legend.text = element_text(size = base - 1),
@@ -118,15 +118,16 @@ p5a <- ggplot(ex, aes(year, anom, colour = who)) +
            colour = OI[["red"]], linewidth = 0.7, arrow = arrow(length = unit(3.5, "pt"), ends = "both")) +
   annotate("segment", x = 2022.4, xend = 2022.4, y = s2[year == 2020]$anom, yend = pv[year == 2020]$anom,
            colour = OI[["blue"]], linewidth = 0.7, arrow = arrow(length = unit(3.5, "pt"), ends = "both")) +
-  annotate("text", x = 2019.4, y = pv[year == 2020]$anom, hjust = 1, vjust = -0.3, size = 2.4,
+  annotate("text", x = 2019.4, y = pv[year == 2020]$anom, hjust = 1, vjust = -0.3, size = 2.85,
            colour = OI[["red"]], label = sprintf("x = %+.2f °C", gap_hi)) +
   annotate("text", x = 2023.2, y = mean(c(s2[year == 2020]$anom, pv[year == 2020]$anom)),
-           hjust = 0, size = 2.4, colour = OI[["blue"]], label = sprintf("x = %+.2f °C", gap_lo)) +
+           hjust = 0, size = 2.85, colour = OI[["blue"]], label = sprintf("x = %+.2f °C", gap_lo)) +
   scale_x_continuous(limits = c(1994, 2027), breaks = seq(1995, 2025, 10)) +
   labs(x = NULL, y = "15-yr mean anomaly vs 1980-2000 (°C)",
-       title = "The climate variable is referenced to each species' own range",
-       subtitle = "Same province, same year, opposite sign for two species") +
-  theme_pub() + theme(legend.position = c(0.34, 0.92), legend.text = element_text(size = 6.2),
+       title = "Climate is referenced to each species' range",
+       subtitle = paste("Same province, same year,\n",
+                        "opposite sign for two species")) +
+  theme_pub() + theme(legend.position = c(0.34, 0.92), legend.text = element_text(size = 8),
                       legend.key.height = unit(7, "pt"))
 
 # ---- 5b 方差分解: 物种维度贡献多少 ----
@@ -148,14 +149,15 @@ vpart[, variable := factor(variable, levels = c("clim_change", "clim_var", "x"),
 p5b <- ggplot(vpart, aes(variable, share, fill = source)) +
   geom_col(width = 0.6) +
   geom_text(aes(label = sprintf("%.0f%%", 100 * share)),
-            position = position_stack(vjust = 0.5), size = 2.7, colour = "white", fontface = "bold") +
+            position = position_stack(vjust = 0.5), size = 2.85, colour = "white", fontface = "bold") +
   scale_fill_manual(values = unname(OI[c("grey", "green")]), name = NULL) +
   scale_y_continuous(labels = scales::percent, expand = expansion(mult = c(0, 0.02))) +
   labs(x = NULL, y = "Share of variance",
-       title = "Species identity carries much of the signal",
-       subtitle = "A purely regional variable would have no green band") +
+       title = "Species identity carries much of it",
+       subtitle = paste("A purely regional variable\n",
+                        "would have no green band")) +
   theme_pub() + theme(legend.position = "right", panel.grid.major.y = element_blank(),
-                      legend.text = element_text(size = 6.5))
+                      legend.text = element_text(size = 8))
 
 # ---- 5c 自然单位的偏效应 ----
 eff_raw <- fread(file.path(OUT, "data", "effort_panel_v2.csv"))
@@ -183,8 +185,8 @@ p5c <- ggplot(gc1, aes(cc_deg, 100 * haz, colour = eff_lab, fill = eff_lab)) +
   scale_fill_manual(values = unname(OI[c("sky", "blue", "red")]), guide = "none") +
   labs(x = "Province warmed more than the species' range (°C)",
        y = "Annual hazard of a new record (%)",
-       title = "Effect sizes in units a reader can picture",
-       subtitle = sprintf("One SD of accumulated warming is %.2f °C; one SD of effort multiplies annual visits by %.1f", CC_SD, exp(LV_SD))) +
+       title = "Effect sizes you can picture",
+       subtitle = sprintf("One SD of accumulated warming is %.2f °C;\none SD of effort multiplies annual visits by %.1f", CC_SD, exp(LV_SD))) +
   theme_pub() + theme(legend.position = c(0.28, 0.84))
 
 # ---- 5d 层级方差 → 风险倍数 ----
@@ -204,16 +206,17 @@ hb[, term := factor(term, levels = rev(hb$term))]
 p5d <- ggplot(hb, aes(mult, term, fill = is.na(sd))) +
   geom_vline(xintercept = 1, linetype = 2, colour = "grey55", linewidth = 0.35) +
   geom_col(width = 0.55) +
-  geom_text(aes(label = sprintf("x%.2f", mult)), hjust = -0.18, size = 2.7, colour = "grey20") +
+  geom_text(aes(label = sprintf("x%.2f", mult)), hjust = -0.18, size = 2.85, colour = "grey20") +
   scale_fill_manual(values = c(`FALSE` = OI[["blue"]], `TRUE` = OI[["grey"]]), guide = "none") +
   scale_x_continuous(limits = c(0, 2.7)) +
   labs(x = "Hazard multiplier per 1 SD", y = NULL,
-       title = "The observation process outweighs either driver",
-       subtitle = "One SD of province-by-year shock multiplies the hazard by 2.23, more than warming or effort") +
+       title = "The observation process outweighs both",
+       subtitle = paste("One SD of province-by-year shock multiplies\n",
+                        "the hazard by 2.23 - more than either driver")) +
   theme_pub() + theme(panel.grid.major.y = element_blank())
 
 F5 <- (p5a | p5b) / (p5c | p5d) + plot_annotation(tag_levels = "a")
-save_fig(F5, "Fig5_model_anatomy_v2", 11.2, 7.8, src = rbind(vpart, hb, fill = TRUE))
+save_fig(F5, "Fig5_model_anatomy_v2", 9.0, 6.6, src = rbind(vpart, hb, fill = TRUE))
 
 # =====================================================================
 # Fig 6  观测过程的可视化
@@ -258,13 +261,22 @@ p6b <- tryCatch({
     scale_fill_distiller(palette = "RdYlBu", direction = -1, na.value = "grey93",
                          trans = "log2", breaks = c(0.75, 1, 1.5, 2), name = "Province\nmultiplier") +
     coord_sf(xlim = c(72, 136), ylim = c(2.5, 54)) +
-    labs(title = "Regional baselines after controlling for effort and climate",
+    labs(title = "Regional baselines, net of effort and climate",
          subtitle = "Province random intercepts. Base map GS(2019)1822",
-         caption = "Grey: outside the analysis scope (Taiwan, Hong Kong, Macao have no effort coverage)") +
+         caption = paste0("Grey: outside the analysis scope\n",
+                          "(Taiwan, Hong Kong and Macao have no effort coverage)")) +
     theme_void(base_size = 9) +
-    theme(plot.title = element_text(face = "bold", size = 10, hjust = 0),
-          plot.subtitle = element_text(size = 8, colour = "grey30", hjust = 0),
-          plot.caption = element_text(size = 6.5, colour = "grey35", hjust = 0),
+    theme(plot.tag = element_text(face = "bold", size = 12),
+          plot.tag.position = c(0.005, 0.985),
+          plot.margin = margin(6, 10, 6, 8),
+          # theme_void 没有 y 轴把标题推开, 需手动缩进以让开面板字母
+          # NB: no y-axis here to offset the title, so indent past the panel tag.
+          plot.title = element_text(face = "bold", size = 10, hjust = 0,
+                                    margin = margin(l = 16, b = 2)),
+          plot.subtitle = element_text(size = 8, colour = "grey30", hjust = 0,
+                                       margin = margin(l = 16, b = 4)),
+          plot.caption = element_text(size = 7.5, colour = "grey35", hjust = 0,
+                                      margin = margin(l = 16, t = 4)),
           legend.key.width = unit(8, "pt"))
 }, error = function(e) { msg("  map failed: ", conditionMessage(e)); ggplot() + theme_void() })
 
@@ -280,9 +292,10 @@ p6c <- ggplot(py_b, aes(year, province, fill = exp(b))) +
                        breaks = c(0.6, 1, 2, 4, 7), name = "Multiplier") +
   scale_x_continuous(breaks = seq(2002, 2024, 4), expand = c(0, 0)) +
   labs(x = NULL, y = NULL,
-       title = "Where and when the observation process actually moved",
-       subtitle = "Province-by-year random intercepts, the largest variance component (SD 0.804, spanning a 7-fold range)") +
-  theme_pub(8) + theme(panel.grid = element_blank(), axis.text.y = element_text(size = 5.6))
+       title = "Where and when the observation process moved",
+       subtitle = paste("Province-by-year random intercepts: the largest\n",
+                        "variance component (SD 0.804, a 7-fold range)")) +
+  theme_pub(10) + theme(panel.grid = element_blank(), axis.text.y = element_text(size = 7.5))
 
 mtv <- tryCatch(readRDS(file.path(OUT, "data", "fit_R3_time_varying.rds")), error = function(e) NULL)
 p6d <- if (!is.null(mtv)) {
@@ -301,13 +314,14 @@ p6d <- if (!is.null(mtv)) {
     geom_line(colour = OI[["blue"]], linewidth = 0.7) +
     labs(x = NULL, y = "Hazard ratio per 1 SD of effort",
          title = "The return on survey effort is falling",
-         subtitle = "Effort x time interaction P = 7.7e-4; easily detectable gaps are being used up") +
+         subtitle = paste("Effort x time interaction P = 7.7e-4;\n",
+                          "easily detectable gaps are being used up")) +
     theme_pub()
 } else ggplot() + theme_void()
 
 F6 <- (p6a | p6b) / (p6c | p6d) + plot_annotation(tag_levels = "a") +
   plot_layout(heights = c(1, 1.15))
-save_fig(F6, "Fig6_observation_process_v2", 11.6, 8.4,
+save_fig(F6, "Fig6_observation_process_v2", 9.3, 8.0,
          src = rbind(sp_b[, .(level = species, group = as.character(mig_grp), term = "species", b)],
                      pv_b[, .(level = province, group = NA_character_, term = "province", b)],
                      py_b[, .(level = lvl, group = NA_character_, term = "province_year", b)]))

@@ -36,7 +36,7 @@ msg <- function(...) cat(sprintf("[147 %s] ", format(Sys.time(), "%H:%M:%S")), .
 OI <- c(blue = "#0072B2", orange = "#E69F00", green = "#009E73", red = "#D55E00",
         purple = "#CC79A7", sky = "#56B4E9", grey = "#999999")
 GCOL <- c(Resident = OI[["green"]], Partial = OI[["orange"]], `Long-distance` = OI[["blue"]])
-theme_pub <- function(base = 9) theme_classic(base_size = base, base_family = "sans") +
+theme_pub <- function(base = 10) theme_classic(base_size = base, base_family = "sans") +
   theme(axis.line = element_line(linewidth = 0.35, colour = "grey20"),
         axis.ticks = element_line(linewidth = 0.3, colour = "grey20"),
         axis.text = element_text(colour = "grey15"), axis.title = element_text(colour = "grey5"),
@@ -133,9 +133,10 @@ p8d <- ggplot(gi, aes(HR_int, group, colour = group)) +
   scale_shape_manual(values = c(`FALSE` = 1, `TRUE` = 16), guide = "none") +
   labs(x = "Warming x effort hazard ratio (95% CI)", y = NULL,
        title = "A hint, not a result",
-       subtitle = paste("The interaction is significant only among long-distance migrants, but the formal test for",
-                        "\nheterogeneity is not (three-way LR P = 0.26; long-distance vs resident contrast P = 0.078).",
-                        "\nWith 156-218 events per group the design cannot resolve group differences in an interaction.")) +
+       subtitle = paste("The interaction is significant only among long-distance migrants,",
+                        "\nbut the formal test for heterogeneity is not (three-way LR P = 0.26;",
+                        "\nlong-distance vs resident contrast P = 0.078). With 156-218 events per",
+                        "\ngroup the design cannot resolve group differences in an interaction.")) +
   theme_pub() + theme(panel.grid.major.y = element_blank())
 
 F8 <- (p8a | p8b) / (p8c | p8d) + plot_annotation(tag_levels = "a")

@@ -105,20 +105,34 @@ AD = lambda t: cit.to_author_date(t, REF_MAP)   # noqa: E731  作者-年份转�
 # ------------------------------------------------------------
 # 1. 主图重编号
 # ------------------------------------------------------------
+
+def copy_fresh(src, dst) -> None:
+    """复制并确保目标是独立文件 / copy, ensuring dst is not a hard link to src.
+
+    投稿目录下的图件曾以硬链接创建, 与源图共享 inode; 直接 shutil.copy 会抛
+    SameFileError, 而保留硬链接又会让"投稿副本"随源图悄悄改变。
+    NB: submission figures were hard-linked to the sources, so copy in place
+        would raise SameFileError and keeping the link hides what was shipped.
+    """
+    dst = Path(dst)
+    if dst.exists():
+        dst.unlink()
+    shutil.copy(src, dst)
+
 FIGMAP = [
     ("Figure1", A2 / "figures/Fig1_main_results_v2"),
     ("Figure2", A2 / "figures/Fig2_dating_correction_v2"),
     ("Figure3", A2 / "figures/Fig3_specification_robustness_v2"),
     ("Figure4", A2 / "figures/Fig5_model_anatomy_v2"),
     ("Figure5", A2 / "figures/Fig6_observation_process_v2"),
-    ("Figure6", A2 / "figures_direction/overall/overall_direction_windrose"),
+    ("Figure6", A2 / "figures_direction/overall/overall_direction_null"),
     ("Figure7", A2 / "figures_future/FigM4_mech_vs_ml_agreement_v2"),
 ]
 for new, base in FIGMAP:
     for ext in ("pdf", "png"):
         srcf = base.with_suffix("." + ext)
         if srcf.exists():
-            shutil.copy(srcf, FIGOUT / f"{new}.{ext}")
+            copy_fresh(srcf, FIGOUT / f"{new}.{ext}")
         else:
             log(f"警告: 缺 {srcf.name}")
 log(f"主图 {len(FIGMAP)} 张已重编号 -> {FIGOUT}")
@@ -126,17 +140,63 @@ log(f"主图 {len(FIGMAP)} 张已重编号 -> {FIGOUT}")
 # ------------------------------------------------------------
 # 2. 图注重编号(GCB 口径)
 # ------------------------------------------------------------
+# GCB 作者指南: 凡显示边界的地图须在图注中注明以下声明(2026-09-24 核对)。
+# 含地图的图由图件 PDF 中的底图审图号文字 GS(2019)1822 自动识别后固定于此。
+# NB: GCB requires this note on every map showing boundaries; list detected from the PDFs.
+MAP_NOTE = ("Map lines delineate study areas and do not necessarily depict accepted national "
+            "boundaries. Base map: standard map GS(2019)1822.")
+MAP_FIGS = {"Figure 5", "Fig. S6", "Fig. S7", "Fig. S10", "Fig. S14", "Fig. S16",
+            "Fig. S17", "Fig. S19", "Fig. S20", "Fig. S21"}
+
+
+def with_map_note(fig_id: str, body: str) -> str:
+    """为含地图的图注追加 GCB 边界声明(幂等)/ append the boundary note once."""
+    if fig_id not in MAP_FIGS or MAP_NOTE in body:
+        return body
+    return body.rstrip() + " " + MAP_NOTE
+
+
+MAIN_LEGEND_RULES = [
+    ("Extended Data Fig. 11", "Supplementary Fig. S21"), ("Extended Data Fig. 10", "Supplementary Fig. S20"),
+    ("Extended Data Fig. 9", "Supplementary Fig. S19"), ("Extended Data Fig. 8", "Supplementary Fig. S18"),
+    ("Extended Data Fig. 7", "Supplementary Fig. S17"), ("Extended Data Fig. 6", "Supplementary Fig. S16"),
+    ("Extended Data Fig. 5", "Supplementary Fig. S11"), ("Extended Data Fig. 3", "Supplementary Fig. S10"),
+    ("Extended Data Fig. 1", "Supplementary Fig. S9"),
+    ("Extended Data Table 4", "Supplementary Table S10"), ("Extended Data Table 3", "Supplementary Table S9"),
+    ("Extended Data Table 2", "Supplementary Table S8"), ("Extended Data Table 1", "Supplementary Table S7"),
+    ("Fig. M1", "Supplementary Fig. S6"), ("Fig. M2", "Supplementary Fig. S7"),
+    ("Fig. M3", "Supplementary Fig. S8"), ("Fig. M4", "Figure 7"),
+    ("Fig. P1", "Supplementary Fig. S12"), ("Fig. P2", "Supplementary Fig. S13"), ("Fig. P3", "Supplementary Fig. S14"),
+    ("Fig. 11", "Figure 6"), ("Fig. 10", "Supplementary Fig. S5"), ("Fig. 9", "Supplementary Fig. S4"),
+    ("Fig. 8", "Supplementary Fig. S3"), ("Fig. 7", "Supplementary Fig. S2"), ("Fig. 6", "Figure 5"),
+    ("Fig. 5", "Figure 4"), ("Fig. 4", "Supplementary Fig. S1"), ("Fig. 3", "Figure 3"),
+    ("Fig. 2", "Figure 2"), ("Fig. 1", "Figure 1"),
+]
+
+
+def remap_main_legend(body: str) -> str:
+    """正文图注交叉引用重编号:长标签优先、占位符两阶段、数字边界安全。"""
+    toks = []
+    for k, (old, new) in enumerate(MAIN_LEGEND_RULES):
+        tok = f"\x00L{k}\x00"
+        body = re.sub(re.escape(old) + r"(?![0-9])", tok, body)
+        toks.append((tok, new))
+    for tok, new in toks:
+        body = body.replace(tok, new)
+    return body
+
+
 LEGEND_SRC = ["Fig. 1", "Fig. 2", "Fig. 3", "Fig. 5", "Fig. 6", "Fig. 11", "Fig. M4"]
 legends = []
 for i, tag in enumerate(LEGEND_SRC, 1):
     body = grab_legend(tag)
     body = re.sub(rf"^\*\*{re.escape(tag)} \|", f"**Figure {i} |", body)
-    # 图注内部对其他图的交叉引用一律按新编号改写
-    body = (body.replace("Fig. 1", "Figure 1").replace("Fig. 2", "Figure 2")
-                .replace("Fig. 3", "Figure 3").replace("Fig. 5", "Figure 4")
-                .replace("Fig. 6", "Figure 5").replace("Fig. 11", "Figure 6")
-                .replace("Fig. M4", "Figure 7"))
-    legends.append(AD(body))
+    # 图注内部对其他图的交叉引用一律按新编号改写。
+    # 旧做法是朴素 str.replace 链:"Fig. 5" -> "Figure 4" 会把 "Extended Data Fig. 5a"
+    # 误改成 "Extended Data Figure 4a"(GCB 并无此图)。改为有序、两阶段、数字边界安全的映射。
+    # NB: the naive replace chain turned "Extended Data Fig. 5a" into "Extended Data Figure 4a".
+    body = remap_main_legend(body)
+    legends.append(AD(with_map_note(f"Figure {i}", body)))
 
 tables_md = "\n\n".join(AD(grab_table(n)) for n in (1, 2, 3))
 back_md = "\n\n".join(["## Tables", tables_md, "## Figure legends"] + legends)
@@ -199,6 +259,10 @@ SI_TABLES = [
      csv_to_md(A2 / "tables/tbl_riskset_bridge_v2.csv")),
     ("Table S8", "Fine grid of accumulation windows (3–23 years), annual mean temperature",
      csv_to_md(A2 / "tables/_iw_tavg_annual.csv")),
+    ("Table S9", "Direction of new records by sector against Monte Carlo geometric and effort-weighted nulls (all records, 999 draws)",
+     csv_to_md(A2 / "tables/tbl_v2_direction_null_si_sectors.csv")),
+    ("Table S10", "Omnibus tests of direction against Monte Carlo nulls, all records and the five best-sampled orders",
+     csv_to_md(A2 / "tables/tbl_v2_direction_null_si_omnibus.csv")),
 ]
 si_tables_md = []
 for sid, title, body in SI_TABLES:
@@ -206,6 +270,37 @@ for sid, title, body in SI_TABLES:
     si_tables_md.append(f"### Supplementary {sid}. {title}\n\n{AD(body)}")
 
 # ---- SI 图:图注 + 嵌图 ----
+# ---------------------------------------------------------------------------
+# SI 嵌入用降采样副本 / downsampled copies for SI embedding
+# 这些 *_si.png 过去是手工生成的, 源图重渲后会静默变旧 —— 此处纳入流水线。
+# NB: these used to be made by hand and went stale whenever the source was
+#     re-rendered; regenerate them here so they can never lag behind.
+SI_DOWNSAMPLE = [
+    "figures_multiscale/en/FigMS1_multiscale_model_maps",
+    "figures_multiscale/en/FigMS4_future_scenarios_by_model",
+    "figures_multiscale/en/FigMS5_future_multiscale_by_model",
+]
+SI_MAX_W = 3000
+
+
+def refresh_si_downsamples() -> None:
+    """从全分辨率 PNG 重建 *_si.png / rebuild *_si.png from the full-size PNG."""
+    from PIL import Image
+    for rel in SI_DOWNSAMPLE:
+        src = A2 / f"{rel}.png"
+        dst = A2 / f"{rel}_si.png"
+        if not src.exists():
+            print(f"[si] 缺源图: {src.name}")
+            continue
+        if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
+            continue
+        im = Image.open(src)
+        if im.width > SI_MAX_W:
+            im = im.resize((SI_MAX_W, round(SI_MAX_W * im.height / im.width)), Image.LANCZOS)
+        im.save(dst)
+        print(f"[si] 重建 {dst.name}  {im.width}x{im.height}")
+
+
 SI_FIGS = [
     ("Fig. S1", A2 / "figures/Fig4_random_structure_v2.png", "Fig. 4"),
     ("Fig. S2", A2 / "figures/Fig7_window_baseline_sensitivity_v2.png", "Fig. 7"),
@@ -239,6 +334,11 @@ PA_LEGENDS = {
 
 def find_s15() -> Path | None:
     comb = A2 / "figures_direction/combined"
+    # 图注写的是各目风玫瑰;按文件名排序会先取到雷达图, 故优先指定
+    # NB: the legend describes wind roses; alphabetical order would pick the radar facets first
+    pref = comb / "order_direction_windrose_facets.png"
+    if pref.exists():
+        return pref
     for cand in sorted(comb.glob("*.png")):
         if "order" in cand.name or "facet" in cand.name or "wind" in cand.name:
             return cand
@@ -247,6 +347,7 @@ def find_s15() -> Path | None:
 
 
 si_figs_md = []
+refresh_si_downsamples()
 for sid, path, src_tag in SI_FIGS:
     if sid == "Fig. S15":
         path = find_s15()
@@ -259,7 +360,7 @@ for sid, path, src_tag in SI_FIGS:
         body = re.sub(r"^\*\*(?:Fig\.|Extended Data Fig\.) [^|]*\|", f"**{sid} |", body)
     else:
         body = PA_LEGENDS[sid]
-    si_figs_md.append(f"![]({Path(path).as_posix()})\n\n{AD(body)}")
+    si_figs_md.append(f"![]({Path(path).as_posix()})\n\n{AD(with_map_note(sid, body))}")
 
 def remap_si_refs(md: str) -> str:
     """把 SI 内文里源稿编号的交叉引用改写成 GCB 编号。
@@ -273,6 +374,7 @@ def remap_si_refs(md: str) -> str:
         ("Extended Data Fig. 11", "Fig. S21"), ("Extended Data Fig. 10", "Fig. S20"),
         ("Extended Data Fig. 9", "Fig. S19"), ("Extended Data Fig. 8", "Fig. S18"),
         ("Extended Data Fig. 7", "Fig. S17"), ("Extended Data Fig. 6", "Fig. S16"),
+        ("Extended Data Table 4", "Table S10"), ("Extended Data Table 3", "Table S9"),
         ("Extended Data Table 2", "Table S8"),
         ("Extended Data Table 1", "Table S7"),
         ("Extended Data Fig. 5", "Fig. S11"),
@@ -300,8 +402,7 @@ def remap_si_refs(md: str) -> str:
 si_md = "\n\n".join([
     "# Supporting Information",
     "",
-    "**Warming and survey effort contribute comparably to the generation of new bird "
-    "distribution records once records are dated to discovery**",
+    "**Warming and survey effort contribute comparably to new bird distribution records when dated to discovery**",
     "",
     "Chenchen Ding, et al.",
     "",
@@ -316,23 +417,25 @@ si_md = "\n\n".join([
 # ------------------------------------------------------------
 # 4. Data / Code availability
 # ------------------------------------------------------------
-avail = """## Data availability
+avail = """## Data availability statement (GCB)
 
-The released compilation of provincial new bird records (CBNR), the harmonised
-species-trait table, the effort panel, the derived climate panels and every result
-table reported in this paper (70+ CSV files, one per reported number) are available
-at https://github.com/dingchenchen6/bird-newrecord-discovery-dated. BirdLife
-International range polygons and the Chinese nature-reserve boundary layer are
-redistributed under their providers' licences and are referenced by version in the
-repository README. CRU TS 4.09, WorldClim 2.1 and CMIP6 (WorldClim downscaling)
-climate surfaces are publicly available from their providers.
+Standalone copy for convenience. The authoritative text is the "Data availability
+statement" section of Manuscript_GCB_maintext.md.
 
-## Code availability
-
-The full analysis pipeline (R scripts 130–203, run in order) reproduces every
-number, table and figure in this paper from the released inputs, including a smoke
-test that re-derives the four main-model coefficients. Archived at the same
-repository.
+The new-record data analysed in this study are version 2 of the China Bird New Record
+dataset (CBNR), openly available under a CC BY 4.0 licence in Zenodo at
+https://doi.org/10.5281/zenodo.20809949. Nature-reserve boundaries are openly available
+in Zenodo at https://doi.org/10.5281/zenodo.14875797. Historical monthly climate
+(WorldClim 2.1 downscaling of CRU TS 4.09) and CMIP6 projections are publicly available
+from WorldClim (https://www.worldclim.org). Species range maps are available on request
+from BirdLife International (http://datazone.birdlife.org/species/requestdis); their
+licence does not permit redistribution. Survey-effort indicators were derived from
+eBird/GBIF occurrence records and China Bird Report checklists (http://www.birdreport.cn);
+the raw records remain subject to their providers' terms, and the province-year effort
+panel is provided in the project repository. All analysis code, the risk set, the derived
+panels and every result table are available at
+https://github.com/dingchenchen6/bird-newrecord-discovery-dated and will be archived in
+Zenodo with a DOI upon acceptance.
 """
 (OUT / "data_code_availability.md").write_text(avail, encoding="utf-8")
 

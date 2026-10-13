@@ -262,7 +262,7 @@ rd <- ggplot(pri2, aes(area_km2 / 1e4, priority, fill = priority)) +
   geom_text(aes(label = sprintf("%d 格 · 区内覆盖 %.0f%%", n_cell, 100 * pa_cover)),
             hjust = -0.05, size = 2.6) +
   scale_fill_manual(values = rev(c(GREEN, RED, BLUE)), guide = "none") +
-  scale_x_continuous(expand = expansion(c(0, .38))) +
+  scale_x_continuous(expand = expansion(c(0, .52))) +
   labs(x = "面积 (万 km²)", y = NULL,
        title = "d  两类监测缺口的量级",
        subtitle = "A 类可直接嫁接到已建保护区的管理机构;B 类必须另投调查力量") +

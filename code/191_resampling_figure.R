@@ -26,7 +26,7 @@ D_TB <- file.path(V2, "analysis_v2/tables")
 D_FG <- file.path(V2, "analysis_v2/figures")
 GREEN <- "#009E73"; BLUE <- "#0072B2"; RED <- "#D55E00"; GREY <- "grey55"
 
-theme_pub <- function(base = 9) {
+theme_pub <- function(base = 10) {
   theme_classic(base_size = base, base_family = "sans") +
     theme(axis.text = element_text(colour = "grey15"),
           axis.title = element_text(colour = "grey5"),
@@ -83,7 +83,8 @@ pb <- ggplot(bl, aes(mid, lbl, colour = kind)) +
   scale_x_continuous(trans = "log", breaks = c(0.8, 1, 1.2, 1.4, 1.6, 1.8)) +
   labs(x = "Hazard ratio (95% CI)", y = NULL,
        title = "b  Cluster bootstraps (300 resamples each)",
-       subtitle = "Provincial clustering widens the intervals (SE ratio 1.26–1.59); species clustering does not (0.86–1.17)") +
+       subtitle = paste("Provincial clustering widens the intervals\n",
+                        "(SE ratio 1.26-1.59); species clustering does not (0.86-1.17)")) +
   theme_pub() + theme(legend.position = c(.78, .24))
 
 # ---------- c 参数自助 ----------
@@ -96,7 +97,8 @@ pc <- ggplot(pbt, aes(lbl, coverage_95)) +
   scale_y_continuous(labels = percent_format(1), limits = c(0, 1.0), expand = expansion(c(0, 0.02))) +
   labs(x = NULL, y = "Actual coverage of the nominal 95% CI",
        title = "c  Parametric bootstrap (150 simulations)",
-       subtitle = "Coverage 91.3–95.3%; absolute bias below 0.01 on the log-hazard scale") +
+       subtitle = paste("Coverage 91.3-95.3%; absolute bias\n",
+                        "below 0.01 on the log-hazard scale")) +
   theme_pub() + theme(axis.text.x = element_text(angle = 15, hjust = 1))
 
 # ---------- d 影响力 ----------
@@ -106,7 +108,7 @@ dl <- melt(il, id.vars = c("type", "dropped"),
 dl[, term := sub("^d_", "", term)]
 dl[, lbl := factor(TERM[term], levels = TERM)]
 dl[, pct := 100 * (exp(dlog) - 1)]
-dl[, grp := fifelse(type == "省", "Leave one province out", "Leave one species decile out")]
+dl[, grp := fifelse(type == "省", "Leave one province out", "Leave one species\ndecile out")]
 pd <- ggplot(dl, aes(lbl, pct)) +
   geom_hline(yintercept = 0, colour = "grey60") +
   geom_hline(yintercept = c(-3, 3), linetype = 3, colour = "grey60") +

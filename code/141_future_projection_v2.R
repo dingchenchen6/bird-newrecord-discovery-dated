@@ -53,7 +53,7 @@ OI <- c(blue = "#0072B2", orange = "#E69F00", green = "#009E73", red = "#D55E00"
 EFF_GROW <- c(ssp245 = 0.30, ssp585 = 0.60)
 FEATS <- c("clim_change_z", "clim_var_z", "effort_z")
 
-theme_pub <- function(base = 9) theme_classic(base_size = base, base_family = "sans") +
+theme_pub <- function(base = 10) theme_classic(base_size = base, base_family = "sans") +
   theme(axis.line = element_line(linewidth = 0.35, colour = "grey20"),
         axis.ticks = element_line(linewidth = 0.3, colour = "grey20"),
         panel.grid.major.y = element_line(linewidth = 0.25, colour = "grey92"),
@@ -61,14 +61,14 @@ theme_pub <- function(base = 9) theme_classic(base_size = base, base_family = "s
         strip.text = element_text(face = "bold", size = base, hjust = 0),
         plot.title = element_text(face = "bold", size = base + 1, hjust = 0),
         plot.subtitle = element_text(size = base - 0.8, colour = "grey30", hjust = 0),
-        plot.caption = element_text(size = base - 2, colour = "grey35", hjust = 0),
+        plot.caption = element_text(size = base - 1.5, colour = "grey35", hjust = 0),
         plot.tag = element_text(face = "bold", size = base + 3),
         legend.key.size = unit(9, "pt"), plot.margin = margin(6, 8, 6, 8))
 theme_map <- function(base = 9) theme_void(base_size = base, base_family = "sans") +
   theme(strip.text = element_text(face = "bold", size = base),
         plot.title = element_text(face = "bold", size = base + 2, hjust = 0),
         plot.subtitle = element_text(size = base - 0.5, colour = "grey30", hjust = 0),
-        plot.caption = element_text(size = base - 2.5, colour = "grey35", hjust = 0),
+        plot.caption = element_text(size = base - 1.5, colour = "grey35", hjust = 0),
         legend.position = "right", legend.key.width = unit(9, "pt"),
         plot.margin = margin(8, 10, 8, 10))
 
@@ -249,7 +249,7 @@ map_panel <- function(dt, valcol, title, sub, cap_extra = "") {
             colour = "grey35", linewidth = 0.1) +
     { if (!is.null(outline)) geom_sf(data = outline, fill = NA, colour = "grey15", linewidth = 0.28) } +
     { if (!is.null(nanhai))  geom_sf(data = nanhai,  fill = NA, colour = "grey15", linewidth = 0.38) } +
-    geom_text(data = sup_lab, aes(x = 76, y = 8, label = lab), hjust = 0, size = 2.2,
+    geom_text(data = sup_lab, aes(x = 76, y = 8, label = lab), hjust = 0, size = 2.85,
               colour = "grey25", inherit.aes = FALSE) +
     facet_grid(ssp_lab ~ hz_lab, switch = "y") +
     scale_fill_distiller(palette = "RdYlBu", direction = -1, na.value = "grey92",
@@ -338,11 +338,12 @@ pa1 <- ggplot(inr, aes(mech, ml)) +
   geom_point(colour = OI[["green"]], size = 0.8, alpha = 0.45) +
   geom_smooth(method = "lm", formula = y ~ x, se = FALSE, colour = "grey25", linewidth = 0.5) +
   scale_x_continuous(trans = "log10") + scale_y_continuous(trans = "log10") +
-  annotate("text", x = -Inf, y = Inf, hjust = -0.12, vjust = 1.6, size = 2.8, colour = "grey20",
+  annotate("text", x = -Inf, y = Inf, hjust = -0.12, vjust = 1.6, size = 2.85, colour = "grey20",
            label = sprintf("Spearman rho = %.2f", r_in)) +
   labs(x = "Mechanistic hazard", y = "Machine-learning hazard",
        title = "Within the observed range they track each other",
-       subtitle = "Province-year mean predicted hazard, 2002-2024; moderate but clearly positive") + theme_pub()
+       subtitle = paste("Province-year mean predicted hazard, 2002-2024;\n",
+                        "moderate but clearly positive")) + theme_pub()
 
 # (b) 范围外: 未来投影
 ag <- prov_proj[, .(province, ssp, horizon, mech_ratio, ml_ratio)]
@@ -359,7 +360,7 @@ pa2 <- ggplot(ag, aes(mech_ratio, ml_ratio)) +
   geom_abline(slope = 1, intercept = 0, linetype = 2, colour = "grey55", linewidth = 0.35) +
   geom_point(colour = OI[["red"]], size = 1.2, alpha = 0.85) +
   geom_text(data = cors, aes(x = 0.2, y = 5.0, label = lab), hjust = 0, vjust = 1,
-            size = 2.4, colour = "grey25", inherit.aes = FALSE) +
+            size = 2.85, colour = "grey25", inherit.aes = FALSE) +
   facet_grid(ssp_lab ~ hz_lab) +
   scale_x_continuous(trans = "log2", breaks = c(0.5, 1, 4, 16, 64)) +
   scale_y_continuous(trans = "log2", breaks = c(0.25, 0.5, 1, 2, 4)) +
@@ -385,11 +386,12 @@ pa3 <- ggplot(rng, aes(y = src, colour = src == "observed 2002-2024")) +
   scale_colour_manual(values = c(`TRUE` = OI[["green"]], `FALSE` = OI[["red"]]), guide = "none") +
   labs(x = "Standardised value (1st-99th percentile)", y = NULL,
        title = "Why: the scenarios leave the training range",
-       subtitle = "Tree ensembles return boundary leaf values once covariates exit the observed support") +
+       subtitle = paste("Tree ensembles return boundary leaf values\n",
+                        "once covariates exit the observed support")) +
   theme_pub() + theme(panel.grid.major.y = element_blank())
 
 save_all((pa1 | pa3) / pa2 + plot_annotation(tag_levels = "a") + plot_layout(heights = c(0.85, 1)),
-         "FigM4_mech_vs_ml_agreement_v2", 11.0, 7.6,
+         "FigM4_mech_vs_ml_agreement_v2", 9.0, 6.4,
          src = rbindlist(list(cors[, .(panel = "b", group = paste(ssp_lab, hz_lab), rho, agree_dir)],
                               data.table(panel = "a", group = "observed 2002-2024",
                                          rho = r_in, agree_dir = NA_real_)), fill = TRUE))

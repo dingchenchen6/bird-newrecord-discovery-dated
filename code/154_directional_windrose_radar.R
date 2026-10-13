@@ -220,31 +220,103 @@ p_ov_radar <- ggradar(rad_in, grid.min = 0, grid.mid = 50, grid.max = 100,
 # 叠加的意义在于比较形状, 绝对样本量已写在图例中。
 # NB: overlay uses proportions - Passeriformes' 388 records would flatten every
 #     other order against the centre, and the point of an overlay is shape.
-ymax <- max(ovd$prop_records) * 1.08
+ymax <- max(ovd$prop_records) * 1.04
+# 环形刻度取整值并【全部标注】: 原图只标 2 环却画 4 环, 读者无法解码任一多边形
+# NB: label every ring - the previous version drew four rings but labelled two.
+brk  <- pretty(c(0, ymax), n = 4); brk <- brk[brk > 0]
+ymax <- max(brk)   # 让最外环落在整值刻度上, 避免出现一条无标注的边界环
 ovd[, leg := sprintf("%s (%d records, %d spp.)", order, tot_records, tot_species)]
 ovd[, leg := factor(leg, levels = leg[match(ovl, order)])]
 p_ov_wind <- ggplot(ovd, aes(direction, prop_records, group = leg, colour = leg, fill = leg)) +
-  geom_polygon(alpha = 0.22, linewidth = 1.05) +
-  geom_line(linewidth = 1.05) + geom_point(size = 3.0) +
-  annotate("segment", x = 1:8, xend = 1:8, y = 0, yend = ymax, colour = "#111111", linewidth = 0.65) +
+  # 方位辐条自绘, 止于 ymax; 同时关闭 panel.grid.major.x —— 后者会延伸到面板外
+  # 把八个方位标签逐字划穿(原图的主要缺陷)。
+  # NB: draw spokes ourselves and blank the theta gridlines, which previously
+  #     ran straight through all eight compass labels.
+  # 用方位名而非 1:8: 作为首个图层时整数会把离散轴判成连续轴
+  # NB: use the level names - integers on the first layer force a continuous scale.
+  annotate("segment", x = DIRLV, xend = DIRLV, y = 0, yend = ymax,
+           colour = "grey78", linewidth = 0.35) +
+  geom_polygon(alpha = 0.20, linewidth = 0.9, show.legend = FALSE) +
+  geom_line(linewidth = 0.9) + geom_point(size = 2.1) +
   scale_colour_manual(values = unname(pal[ovl])) + scale_fill_manual(values = unname(pal[ovl])) +
-  scale_y_continuous(limits = c(0, ymax), breaks = c(ymax * 0.5, ymax),
+  scale_y_continuous(limits = c(0, ymax), breaks = brk,
                      labels = function(x) percent(x, accuracy = 1)) +
   coord_polar(start = -pi / 8) +
   labs(x = NULL, y = NULL, colour = NULL, fill = NULL,
        caption = "Share of each order's own new records; absolute sample sizes are given in the legend") +
-  theme_minimal(base_size = 14) +
-  theme(panel.grid.major = element_line(colour = "#111111", linewidth = 0.8, linetype = "22"),
+  theme_minimal(base_size = 11) +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_line(colour = "grey80", linewidth = 0.35, linetype = "22"),
         panel.grid.minor = element_blank(),
-        axis.text.y = element_text(size = 9, colour = "#6B6B6B"),
-        axis.text.x = element_text(size = 14, colour = "#222222"),
-        plot.caption = element_text(size = 9, colour = "grey35", hjust = 0),
-        legend.position = "right", legend.text = element_text(size = 10.5),
+        axis.text.y = element_text(size = 8, colour = "grey45"),
+        axis.text.x = element_text(size = 11, colour = "grey10"),
+        plot.caption = element_text(size = 8, colour = "grey35", hjust = 0),
+        legend.position = "right", legend.text = element_text(size = 9),
+        legend.key.height = unit(4.6, "mm"),
         plot.background = element_rect(fill = "white", colour = NA),
         panel.background = element_rect(fill = "white", colour = NA),
-        plot.margin = margin(12, 12, 12, 12))
+        plot.margin = margin(4, 6, 4, 6))
 save_bundle(p_ov_radar, DIRS[1], "overall_direction_radar", 13.0, 8.8)
-save_bundle(p_ov_wind,  DIRS[1], "overall_direction_windrose", 13.0, 8.8)
+save_bundle(p_ov_wind,  DIRS[1], "overall_direction_windrose", 9.4, 6.0)
+
+# ---- 6b. 主图: 观测方位 vs 几何零假设(读取脚本 214 的结果)----
+# 均匀零假设对以【全球】分布区质心为原点的方位并不成立(见脚本 214 表头说明);
+# 主图因此并列: (a) 全部记录的观测份额与两个零假设期望; (b) 各方位观测/期望比
+# 及蒙特卡洛 95% 区间; (c) 六个目各自的观测份额。
+# NB: the uniform null is inappropriate for bearings from global range centroids
+#     (see script 214); the main figure sets observation against geometric nulls.
+NULLF <- file.path(OUT, "tables", "tbl_v2_direction_geometric_null.csv")
+if (file.exists(NULLF)) {
+  gn <- fread(NULLF)[scope == "Overall (records)" & null %in% c("geometric", "geometric_effort")]
+  NLAB <- c(geometric = "Expected: geometry", geometric_effort = "Expected: geometry + effort")
+  NCOL <- c("Observed" = "grey10", "Expected: geometry" = "#0072B2", "Expected: geometry + effort" = "#D55E00")
+  NLTY <- c("Observed" = "solid", "Expected: geometry" = "22", "Expected: geometry + effort" = "12")
+  shr <- rbind(gn[null == "geometric", .(direction, series = "Observed", share = observed / sum(observed))],
+               gn[, .(direction, series = NLAB[null], share = null_mean / sum(null_mean)), by = null][, null := NULL])
+  shr[, `:=`(direction = factor(direction, levels = DIRLV), series = factor(series, levels = names(NCOL)))]
+  ym <- max(pretty(c(0, max(shr$share) * 1.04), n = 4)); bk <- pretty(c(0, ym), n = 4); bk <- bk[bk > 0]
+  pa <- ggplot(shr, aes(direction, share, group = series, colour = series, linetype = series)) +
+    annotate("segment", x = DIRLV, xend = DIRLV, y = 0, yend = ym, colour = "grey80", linewidth = 0.3) +
+    geom_polygon(fill = NA, linewidth = 0.75, key_glyph = "path") + geom_point(size = 1.3, show.legend = FALSE) +
+    scale_colour_manual(values = NCOL) + scale_linetype_manual(values = NLTY) +
+    scale_y_continuous(limits = c(0, ym), breaks = bk, labels = function(x) percent(x, accuracy = 1)) +
+    coord_polar(start = -pi / 8, clip = "off") + labs(x = NULL, y = NULL, colour = NULL, linetype = NULL) +
+    theme_minimal(base_size = 8) +
+    theme(panel.grid.major.x = element_blank(), panel.grid.minor = element_blank(),
+          panel.grid.major.y = element_line(colour = "grey82", linewidth = 0.3, linetype = "22"),
+          axis.text.y = element_text(size = 6.5, colour = "grey40"),
+          axis.text.x = element_text(size = 7.5, colour = "grey10"),
+          legend.position = "bottom", legend.direction = "vertical", legend.text = element_text(size = 7),
+          legend.key.width = unit(9, "mm"), legend.key.height = unit(3.2, "mm"),
+          plot.margin = margin(4, 16, 2, 16))
+  rt <- gn[, .(null = NLAB[null], direction = factor(direction, levels = DIRLV), ratio,
+               lo = null_lo / null_mean, hi = null_hi / null_mean, sig = mc_p_holm < 0.05)]
+  rt[, null := factor(null, levels = NLAB)]
+  dg <- position_dodge(width = 0.55)
+  pb <- ggplot(rt, aes(direction, ratio, colour = null)) +
+    geom_hline(yintercept = 1, colour = "grey55", linewidth = 0.35) +
+    geom_linerange(aes(ymin = lo, ymax = hi), position = dg, linewidth = 2.6, alpha = 0.25) +
+    geom_point(aes(shape = sig), position = dg, size = 1.9, stroke = 0.6, fill = "white") +
+    scale_colour_manual(values = NCOL[NLAB], name = NULL) +
+    scale_shape_manual(values = c(`FALSE` = 21, `TRUE` = 16), labels = c(`FALSE` = "Holm P ≥ 0.05", `TRUE` = "Holm P < 0.05"),
+                       name = NULL) +
+    scale_y_continuous(trans = "log2", breaks = c(0.5, 0.75, 1, 1.5, 2), labels = c("0.5", "0.75", "1", "1.5", "2")) +
+    labs(x = NULL, y = "Observed / expected records") +
+    theme_classic(base_size = 8) +
+    theme(axis.text.x = element_text(angle = 40, hjust = 1, size = 7, colour = "grey10"),
+          axis.text.y = element_text(size = 7, colour = "grey10"), axis.title.y = element_text(size = 7.5),
+          legend.position = "bottom", legend.box = "vertical", legend.spacing.y = unit(0.5, "mm"),
+          legend.text = element_text(size = 7), plot.margin = margin(2, 4, 2, 2)) +
+    guides(colour = guide_legend(order = 1, nrow = 1), shape = guide_legend(order = 2, nrow = 1))
+  pc <- p_ov_wind + labs(caption = NULL) +
+    theme(axis.text.x = element_text(size = 7.5, colour = "grey10"), axis.text.y = element_text(size = 6.5),
+          legend.text = element_text(size = 7), legend.key.height = unit(3.4, "mm"), plot.margin = margin(2, 2, 2, 2))
+  p_null <- ((pa | pb) + plot_layout(widths = c(1, 1.05))) / pc +
+    plot_layout(heights = c(1, 1.05)) +
+    plot_annotation(tag_levels = "a") & theme(plot.tag = element_text(face = "bold", size = 10))
+  save_bundle(p_null, DIRS[1], "overall_direction_null", 7.2, 7.6)
+  msg("主图(含几何零假设)已导出 / main figure with geometric nulls exported")
+} else msg("缺少脚本 214 输出, 跳过零假设主图 / run script 214 first")
 
 # ---- 7. 4x4 组合图 + 各目单图 ----
 mk_radar <- function(o) {

@@ -40,7 +40,7 @@ T = {
     # ---------------- 166 保护地图件 ----------------
     "a  基准对比:事件 vs 观鸟努力 vs 面积": "a  Baseline: events vs effort vs area",
     "全国尺度上观鸟努力并未向保护区集中,新纪录却集中":
-        "Birding effort is not concentrated in reserves; new records are",
+        "New records concentrate in reserves; birding effort does not",
     "新纪录事件": "New records",
     "观鸟 checklist\\n(按努力加权)": "Birding checklists\\n(effort-weighted)",
     "观鸟地点\\n(等权)": "Birding locations\\n(equal weight)",
@@ -76,7 +76,7 @@ T = {
     "被再检出的比例": "Proportion re-detected",
     "b  控制后续观测努力与年份后": "b  After controlling for subsequent effort and year",
     "绿带为预先声明的等价界 [0.67, 1.5];CI 稍宽于等价界,判为不确定而非无差异":
-        "Green band: pre-declared equivalence bounds [0.67, 1.5]. The intervals are slightly\nwider, so we report no detectable difference rather than equivalence",
+        "Green band: pre-declared equivalence bounds [0.67, 1.5]; the intervals are\nslightly wider, so we report no detectable difference rather than equivalence",
     "c  决定再检出的是后续观测努力": "c  Re-detection is governed by subsequent survey effort",
     "再检出率随后续 checklist 量陡升;区内外差异在各努力档内均不可分辨":
         "Re-detection rises steeply with checklist volume; inside-outside differences\nare indistinguishable within every effort band",
@@ -91,7 +91,7 @@ T = {
     "以 GBIF/eBird 同种同省的后续年份检出为存续代理":
         "Persistence proxied by later-year detections of the same species in the same province",
     "a  「保护区都建在增温慢的地方」是口径造成的":
-        "a  'Reserves sit where warming is slow' is an artefact of the warming field",
+        "a  'Reserves sit where warming is slow' is an artefact",
     "省级广播口径给出 8.5 倍落差;格级实测口径下落差仅 1.2 倍":
         "Provincial broadcast implies an 8.5-fold spread; cell-level only 1.2-fold",
     "省级广播口径(原 grid 文件)": "Provincial broadcast (original grid file)",
@@ -182,7 +182,7 @@ T = {
     "未来情景下的预测新纪录数:气候情景 × 调查努力情景(2030 / 2050)":
         "Predicted new records under future scenarios: climate scenario × survey-effort scenario (2030 / 2050)",
     "离散风险主模型;气候 delta 取 CMIP6 4-GCM 集成中位,分别施加于省端与物种分布区端;":
-        "Frozen discrete-time hazard model; CMIP6 four-model ensemble median deltas applied separately to the provincial and species-range ends of the gradient; ",
+        "Frozen discrete-time hazard model; CMIP6 four-model ensemble median deltas\napplied separately to the provincial and species-range ends of the gradient; ",
     "努力停滞 = 冻结于 2024,努力延续 = +0.6 SD/十年(历史观测增速约 1.2)。\\n":
         "effort frozen at 2024, or continuing at +0.6 SD per decade (observed pace ≈ 1.2).\\n",
     "透明度 = 该省落在训练协变量支撑域(1–99 百分位)内的比例;":
@@ -207,7 +207,7 @@ T = {
     "未来情景下的多尺度预测面:%s · %s · %d 年":
         "Multi-scale prediction surfaces under one future scenario: %s · %s · %d",
     "行=尺度,列=模型族;每列为族内自洽的两段式(该族的省级期望 × 该族的省内分配份额),":
-        "Rows are scales, columns are model families; each column is a self-consistent two-stage pipeline (that family's provincial expectation × its own within-province shares), ",
+        "Rows are scales, columns are model families; each column is a self-consistent\ntwo-stage pipeline (that family's provincial expectation\n× its own within-province shares), ",
     "市县为份额冻结假设(份额取各族 2024 面)。色标行内共享(log10);透明度=支撑域内比例。":
         "\nwith prefecture and county surfaces holding the 2024 shares fixed. Colour scales are shared within rows (log10); transparency encodes the in-support fraction.",
     "全国预测新纪录数 / 年": "National predicted new records per year",
@@ -226,9 +226,9 @@ T = {
     "全国 %.1f 条/年 · 支撑域内 %d%%": "National %.1f per year · %d%% in support",
     "预测新纪录数 / 年": "Predicted new records per year",
     "离散风险模型": "Mechanistic hazard", "随机森林": "Random forest",
-    "a  省级:": "a  Province: ", "市级": "Prefecture", "县级": "County",
+    "a  省级 · ": "a  Province · ", "市级": "Prefecture", "县级": "County",
     "完成 / done": "done",
-    "a  省级:": "a  Province: ", " 省级单元,年份 ": " provincial units, years ",
+    "a  省级 · ": "a  Province · ", " 省级单元,年份 ": " provincial units, years ",
 }
 
 def translate_line(line: str, protect: list[str]) -> str:

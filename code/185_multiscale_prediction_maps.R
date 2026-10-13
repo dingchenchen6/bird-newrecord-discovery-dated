@@ -290,7 +290,10 @@ lm_pref <- quantile(lay_pref$val[lay_pref$val > 0], c(0.02, 0.999))
 lm_cnty <- quantile(lay_cnty$val[lay_cnty$val > 0], c(0.02, 0.999))
 p2 <- map_cell(pref_sf, lay_pref, "b  市级落点", lm_pref, TRUE, "预测新纪录数(市级)")
 p3 <- map_cell(cnty_sf, lay_cnty, "c  县级落点", lm_cnty, TRUE, "预测新纪录数(县级)")
-FigMS1w <- p1 | p2 | p3
+# 水平色标标题默认在左侧, 三联横排时会与相邻色标首尾相接 -> 放到色条上方
+# NB: horizontal legend titles sit left by default and collide across panels.
+FigMS1w <- (p1 | p2 | p3) & theme(legend.title.position = "top",
+                                  legend.title = element_text(hjust = 0.5))
 ggsave(file.path(D_FG, "FigMS1w_mech_three_scales.png"), FigMS1w,
        width = 13.2, height = 4.9, dpi = 400, bg = "white")
 cat("wrote FigMS1w\n")

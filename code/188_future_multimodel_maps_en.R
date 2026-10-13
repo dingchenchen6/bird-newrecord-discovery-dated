@@ -271,7 +271,7 @@ rows5 <- list()
 r1 <- lapply(seq_along(FAM), function(fi) {
   n0 <- nat[fam == names(FAM)[fi] & ssp == FS$ssp & eff == FS$eff & horizon == FS$hz]
   cell_prov(names(FAM)[fi], FS$ssp, FS$eff, FS$hz,
-            if (fi == 1) paste0("a  Province: ", FAM[fi]) else FAM[fi],
+            if (fi == 1) paste0("a  Province · ", FAM[fi]) else FAM[fi],
             sprintf("National %.1f per year · %d%% in support", n0$total, n0$pct_sup),
             lims4, show_legend = (fi == 2))
 })
@@ -285,14 +285,16 @@ for (li in 1:2) {
   lims <- quantile(allv[allv > 0], c(0.02, 0.999))
   rows5[[li + 1]] <- lapply(seq_along(FAM), function(fi)
     cell_unit(meta$sf, lays[[fi]],
-              if (fi == 1) paste0(meta$tag, "  ", meta$lab, ":", FAM[fi]) else FAM[fi],
+              if (fi == 1) paste0(meta$tag, "  ", meta$lab, " · ", FAM[fi]) else FAM[fi],
               lims, show_legend = (fi == 2),
               legend_name = paste0("Predicted new records (", meta$lab, ",2050)")))
 }
 FigMS5 <- wrap_plots(c(rows5[[1]], rows5[[2]], rows5[[3]]), nrow = 3, ncol = 3) +
   plot_annotation(
     title = sprintf("Multi-scale prediction surfaces under one future scenario: %s · %s · %d", SSP_LAB[FS$ssp], FS$eff, FS$hz),
-    subtitle = paste0("Rows are scales, columns are model families; each column is a self-consistent two-stage pipeline (that family's provincial expectation × its own within-province shares), ",
+    subtitle = paste0("Rows are scales, columns are model families; each column is a self-consistent
+two-stage pipeline (that family's provincial expectation
+× its own within-province shares), ",
                       "
 with prefecture and county surfaces holding the 2024 shares fixed. Colour scales are shared within rows (log10); transparency encodes the in-support fraction."),
     caption = "Basemap GS(2019)1822.",

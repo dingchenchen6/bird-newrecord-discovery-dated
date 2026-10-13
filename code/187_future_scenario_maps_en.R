@@ -157,21 +157,22 @@ cell_cnty <- function(sp_, ef_, title, show_legend) {
 COLS <- CJ(ssp = c("ssp245", "ssp585"), eff = names(EFF_SCEN), sorted = FALSE)
 row1 <- lapply(seq_len(4), function(i)
   cell_prov(COLS$ssp[i], COLS$eff[i], 2030L,
-            paste0(if (i == 1) "a  2030:" else "", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
+            paste0(if (i == 1) "a  2030\n" else "\n", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
             show_legend = FALSE))
 row2 <- lapply(seq_len(4), function(i)
   cell_prov(COLS$ssp[i], COLS$eff[i], 2050L,
-            paste0(if (i == 1) "b  2050:" else "", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
+            paste0(if (i == 1) "b  2050\n" else "\n", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
             show_legend = (i == 2)))
 row3 <- lapply(seq_len(4), function(i)
   cell_cnty(COLS$ssp[i], COLS$eff[i],
-            paste0(if (i == 1) "c  2050, county: " else "", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
+            paste0(if (i == 1) "c  2050 County\n" else "\n", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
             show_legend = (i == 2)))
 
 FigMS3 <- wrap_plots(c(row1, row2, row3), nrow = 3, ncol = 4) +
   plot_annotation(
     title = "Predicted new records under future scenarios: climate scenario × survey-effort scenario (2030 / 2050)",
-    subtitle = paste0("Frozen discrete-time hazard model; CMIP6 four-model ensemble median deltas applied separately to the provincial and species-range ends of the gradient; ",
+    subtitle = paste0("Frozen discrete-time hazard model; CMIP6 four-model ensemble median deltas
+applied separately to the provincial and species-range ends of the gradient; ",
                       "effort frozen at 2024, or continuing at +0.6 SD per decade (observed pace ≈ 1.2).\n",
                       "Transparency encodes the fraction of species–province cells inside the fitted covariate support (1st–99th percentile); ",
                       "the county row assumes frozen 2024 allocation shares; colour scales are shared within rows (log10)."),

@@ -31,6 +31,22 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Pt, Inches, RGBColor
 
+
+def copy_fresh(src, dst) -> None:
+    """复制并确保目标是独立文件 / copy, ensuring dst is not a hard link to src.
+
+    投稿目录下的图件曾以硬链接创建, 与源图共享 inode; 直接 shutil.copy 会抛
+    SameFileError, 而保留硬链接又会让"投稿副本"随源图悄悄改变。
+    NB: submission figures were hard-linked to the sources, so copying in place
+        raises SameFileError and keeping the link hides what was actually shipped.
+    """
+    dst = Path(dst)
+    if dst.exists():
+        dst.unlink()
+    shutil.copy(src, dst)
+
+
+
 V2 = Path("/Users/dingchenchen/Documents/New records/bird-new-distribution-records/"
           "tasks/bird_hazard_model_effort_upgrade_v2")
 A2 = V2 / "analysis_v2"
@@ -138,7 +154,7 @@ F = {
     "migr": A2 / "figures/Fig8_migratory_strategy_v2",
     "species": A2 / "figures/Fig9_species_level_v2",
     "prov": A2 / "figures/Fig10_province_level_v2",
-    "wind": A2 / "figures_direction/overall/overall_direction_windrose",
+    "wind": A2 / "figures_direction/overall/overall_direction_null",
     "windfac": A2 / "figures_direction/combined/order_direction_windrose_facets",
     "m1": A2 / "figures_future/FigM1_future_mechanistic_v2",
     "m2": A2 / "figures_future/FigM2_future_ml_v2",
@@ -195,7 +211,11 @@ CONFIG = {
                       ("Table S9", "Risk-set bridge from compilation to modelling data",
                        csv_to_md(A2 / "tables/tbl_riskset_bridge_v2.csv")),
                       ("Table S10", "Fine accumulation-window grid, 3–23 years",
-                       csv_to_md(A2 / "tables/_iw_tavg_annual.csv"))],
+                       csv_to_md(A2 / "tables/_iw_tavg_annual.csv")),
+                      ("Table S11", "Direction of new records by sector against Monte Carlo geometric and effort-weighted nulls",
+                       csv_to_md(A2 / "tables/tbl_v2_direction_null_si_sectors.csv")),
+                      ("Table S12", "Omnibus tests of direction against Monte Carlo nulls, all records and five orders",
+                       csv_to_md(A2 / "tables/tbl_v2_direction_null_si_omnibus.csv"))],
         "si_notes": [
             ("Note S1", "Risk-set construction, publication-lag stationarity and the completeness offset",
              results_sub("risk set and the dating problem") + "\n\n" + methods_sub("Reporting completeness") + "\n\n" + methods_sub("Risk set")),
@@ -206,8 +226,8 @@ CONFIG = {
             ("Note S4", "Migratory stratification", results_sub("Migratory strategy")),
             ("Note S5", "Species-level and province-level companion analyses",
              results_sub("Which species, and which provinces")),
-            ("Note S6", "Per-order tests of directional uniformity",
-             results_sub("east and northeast")),
+            ("Note S6", "Direction of new records against geometric and effort-weighted nulls",
+             results_sub("where geometry and effort place them")),
             ("Note S7", "Full robustness suite", results_sub("Robustness")),
             ("Note S8", "Model adequacy and resampling",
              results_sub("Model adequacy") + "\n\n" + methods_sub("Resampling and null models")),
@@ -223,6 +243,7 @@ CONFIG = {
             ("Extended Data Fig. 11", "Supplementary Fig. S23"), ("Extended Data Fig. 10", "Supplementary Fig. S22"),
             ("Extended Data Fig. 9", "Supplementary Fig. S21"), ("Extended Data Fig. 8", "Supplementary Fig. S20"),
             ("Extended Data Fig. 7", "Supplementary Fig. S19"), ("Extended Data Fig. 6", "Supplementary Fig. S18"),
+            ("Extended Data Table 4", "Supplementary Table S12"), ("Extended Data Table 3", "Supplementary Table S11"),
             ("Extended Data Table 2", "Supplementary Table S10"),
             ("Extended Data Table 1", "Supplementary Table S9"),
             ("Extended Data Fig. 5", "Supplementary Fig. S9"),
@@ -270,7 +291,11 @@ CONFIG = {
                       ("Table S7", "Risk-set bridge from compilation to modelling data",
                        csv_to_md(A2 / "tables/tbl_riskset_bridge_v2.csv")),
                       ("Table S8", "Fine accumulation-window grid, 3–23 years",
-                       csv_to_md(A2 / "tables/_iw_tavg_annual.csv"))],
+                       csv_to_md(A2 / "tables/_iw_tavg_annual.csv")),
+                      ("Table S9", "Direction of new records by sector against Monte Carlo geometric and effort-weighted nulls",
+                       csv_to_md(A2 / "tables/tbl_v2_direction_null_si_sectors.csv")),
+                      ("Table S10", "Omnibus tests of direction against Monte Carlo nulls, all records and five orders",
+                       csv_to_md(A2 / "tables/tbl_v2_direction_null_si_omnibus.csv"))],
         "si_notes": [
             ("Note S1", "Publication-lag stationarity and the completeness offset",
              results_sub("risk set and the dating problem") + "\n\n" + methods_sub("Reporting completeness")),
@@ -291,6 +316,7 @@ CONFIG = {
             ("Extended Data Fig. 11", "Supplementary Fig. S20"), ("Extended Data Fig. 10", "Supplementary Fig. S19"),
             ("Extended Data Fig. 9", "Supplementary Fig. S18"), ("Extended Data Fig. 8", "Supplementary Fig. S17"),
             ("Extended Data Fig. 7", "Supplementary Fig. S16"), ("Extended Data Fig. 6", "Supplementary Fig. S15"),
+            ("Extended Data Table 4", "Supplementary Table S10"), ("Extended Data Table 3", "Supplementary Table S9"),
             ("Extended Data Table 2", "Supplementary Table S8"),
             ("Extended Data Table 1", "Supplementary Table S7"),
             ("Extended Data Fig. 5", "Supplementary Fig. S11"),
@@ -385,7 +411,7 @@ for J, cfg in CONFIG.items():
         for ext in ("pdf", "png"):
             f = F[key].with_suffix("." + ext)
             if f.exists():
-                shutil.copy(f, FIGOUT / f"{newname}.{ext}")
+                copy_fresh(f, FIGOUT / f"{newname}.{ext}")
             else:
                 log(f"警告: 缺 {f.name}")
     log(f"{J}: 主图 {len(cfg['main_figs'])} 张")
@@ -427,8 +453,7 @@ for J, cfg in CONFIG.items():
         si_figs_md.append(f"![]({png.as_posix()})\n\n{body}")
     si_md = "\n\n".join([
         "# Supplementary Information", "",
-        "**Warming and survey effort contribute comparably to the generation of new bird "
-        "distribution records once records are dated to discovery**", "",
+        "**Warming and survey effort contribute comparably to new bird distribution records when dated to discovery**", "",
         "Chenchen Ding, et al.", "",
         "## Supplementary Notes", "\n\n".join(notes_md),
         "## Supplementary Tables", "\n\n".join(si_tables_md),

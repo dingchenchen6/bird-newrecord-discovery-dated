@@ -80,7 +80,7 @@ pa <- ggplot(base_share, aes(what, pct, fill = grp)) +
   scale_y_continuous(limits = c(0, 32), expand = expansion(c(0, .04))) +
   labs(x = NULL, y = "Share falling inside nature reserves (%)",
        title = "a  Baseline: events vs effort vs area",
-       subtitle = "Birding effort is not concentrated in reserves; new records are") +
+       subtitle = "New records concentrate in reserves; birding effort does not") +
   theme_pub()
 
 lad[, wt := fifelse(grepl("effort", model), "Effort-weighted controls", "Location-equal controls")]
@@ -165,8 +165,8 @@ qb <- ggplot(c5, aes(OR, lbl)) +
   scale_x_continuous(trans = "log", breaks = c(0.5, 0.67, 1, 1.5, 2), limits = c(0.5, 2.2)) +
   labs(x = "Inside-vs-outside odds ratio (95% CI)", y = NULL,
        title = "b  After controlling for subsequent effort and year",
-       subtitle = "Green band: pre-declared equivalence bounds [0.67, 1.5]. The intervals are slightly
-wider, so we report no detectable difference rather than equivalence") +
+       subtitle = "Green band: pre-declared equivalence bounds [0.67, 1.5]; the intervals are
+slightly wider, so we report no detectable difference rather than equivalence") +
   theme_pub()
 
 pers[, eff_bin := cut(log1p(eff_after), 5)]
@@ -234,7 +234,7 @@ ra <- ggplot(qcmp, aes(q, cover, fill = src)) +
   scale_fill_manual(values = setNames(c(GREY, BLUE), c(L_PROV, L_CELL)), name = NULL) +
   scale_y_continuous(labels = percent_format(1)) +
   labs(x = "Warming-rate quintile (Q1 slowest → Q5 fastest)", y = "Area-weighted reserve coverage",
-       title = "a  'Reserves sit where warming is slow' is an artefact of the warming field",
+       title = "a  'Reserves sit where warming is slow' is an artefact",
        subtitle = "Provincial broadcast implies an 8.5-fold spread; cell-level only 1.2-fold") +
   theme_pub() + theme(legend.position = c(.78, .82))
 
@@ -273,7 +273,7 @@ rd <- ggplot(pri2, aes(area_km2 / 1e4, priority, fill = priority)) +
   geom_text(aes(label = sprintf("%d cells · %.0f%% inside reserves", n_cell, 100 * pa_cover)),
             hjust = -0.05, size = 2.6) +
   scale_fill_manual(values = rev(c(GREEN, RED, BLUE)), guide = "none") +
-  scale_x_continuous(expand = expansion(c(0, .38))) +
+  scale_x_continuous(expand = expansion(c(0, .52))) +
   labs(x = "Area (10⁴ km²)", y = NULL,
        title = "d  Magnitude of the two monitoring gaps",
        subtitle = "Class A grafts onto existing reserve administrations; class B needs new capacity") +

@@ -155,15 +155,15 @@ cell_cnty <- function(sp_, ef_, title, show_legend) {
 COLS <- CJ(ssp = c("ssp245", "ssp585"), eff = names(EFF_SCEN), sorted = FALSE)
 row1 <- lapply(seq_len(4), function(i)
   cell_prov(COLS$ssp[i], COLS$eff[i], 2030L,
-            paste0(if (i == 1) "a  2030:" else "", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
+            paste0(if (i == 1) "a  2030\n" else "\n", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
             show_legend = FALSE))
 row2 <- lapply(seq_len(4), function(i)
   cell_prov(COLS$ssp[i], COLS$eff[i], 2050L,
-            paste0(if (i == 1) "b  2050:" else "", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
+            paste0(if (i == 1) "b  2050\n" else "\n", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
             show_legend = (i == 2)))
 row3 <- lapply(seq_len(4), function(i)
   cell_cnty(COLS$ssp[i], COLS$eff[i],
-            paste0(if (i == 1) "c  2050 县级:" else "", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
+            paste0(if (i == 1) "c  2050 县级\n" else "\n", SSP_LAB[COLS$ssp[i]], " · ", COLS$eff[i]),
             show_legend = (i == 2)))
 
 FigMS3 <- wrap_plots(c(row1, row2, row3), nrow = 3, ncol = 4) +

@@ -268,7 +268,7 @@ rows5 <- list()
 r1 <- lapply(seq_along(FAM), function(fi) {
   n0 <- nat[fam == names(FAM)[fi] & ssp == FS$ssp & eff == FS$eff & horizon == FS$hz]
   cell_prov(names(FAM)[fi], FS$ssp, FS$eff, FS$hz,
-            if (fi == 1) paste0("a  省级:", FAM[fi]) else FAM[fi],
+            if (fi == 1) paste0("a  省级 · ", FAM[fi]) else FAM[fi],
             sprintf("全国 %.1f 条/年 · 支撑域内 %d%%", n0$total, n0$pct_sup),
             lims4, show_legend = (fi == 2))
 })
@@ -282,7 +282,7 @@ for (li in 1:2) {
   lims <- quantile(allv[allv > 0], c(0.02, 0.999))
   rows5[[li + 1]] <- lapply(seq_along(FAM), function(fi)
     cell_unit(meta$sf, lays[[fi]],
-              if (fi == 1) paste0(meta$tag, "  ", meta$lab, ":", FAM[fi]) else FAM[fi],
+              if (fi == 1) paste0(meta$tag, "  ", meta$lab, " · ", FAM[fi]) else FAM[fi],
               lims, show_legend = (fi == 2),
               legend_name = paste0("预测新纪录数(", meta$lab, ",2050)")))
 }

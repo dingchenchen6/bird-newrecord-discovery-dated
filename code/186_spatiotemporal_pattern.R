@@ -1,7 +1,7 @@
 # ============================================================
 # Scientific question / 科学问题:
 # 在进入预测之前,先展示原始数据本身的时空格局:
-# 1,059 条中国鸟类新分布记录(CBNR 发布版, Zenodo 20809949)在
+# 1,029 条中国鸟类新分布记录(CBNR v2, Zenodo 20809949)在
 # 空间上落在哪里、在时间上如何累积、记录的地理位置随时间怎样漂移。
 # Before any prediction, show the raw spatio-temporal pattern of the
 # released CBNR compilation (Zenodo record 20809949, CC-BY-4.0).
@@ -13,7 +13,7 @@
 #   d 记录纬度/经度随时间的漂移        space × time
 #
 # Input / 输入:
-#   source_data/bird_new_records_clean.csv     1,059 条(发布口径)
+#   source_data/CBNR_v2_zenodo20809949/CBNR_EN.csv   1,029 条(已发布 v2)
 #   analysis_v2/data/events_discovery_dated.csv  657 条(建模窗口,发现年)
 #   data/spatial/basemap_GS2019_1822/*.shp
 # Output / 输出: analysis_v2/figures_multiscale/FigST1_spatiotemporal_pattern
@@ -59,7 +59,18 @@ theme_map <- function(base = 9) {
 }
 
 # ---------------- 数据 ----------------
-rec <- fread(file.path(SRCD, "bird_new_records_clean.csv"))
+# 输入改为已发布的 CBNR v2(Zenodo 20809949,1,029 条)。此前误用预发布 clean.csv(1,059 条),
+# 图中写 1,056 条却标注 Zenodo 20809949,与正文 1,029 条不一致(2026-09-27 更正)。
+# NB: read the published CBNR v2 (1,029 records); the pre-release clean.csv disagreed with the text.
+year_of <- function(x) as.integer(sub(".*?((19|20)[0-9]{2}).*", "\\1",
+                                      ifelse(grepl("(19|20)[0-9]{2}", x), x, NA)))
+cb  <- fread(file.path(SRCD, "CBNR_v2_zenodo20809949/CBNR_EN.csv"), encoding = "UTF-8")
+stopifnot(nrow(cb) == 1029L)                          # 与 Zenodo v2 一致 / must match v2
+# year = 报告(发表)年,与旧图口径一致 / year = reported (publication) year, as before
+rec <- cb[, .(species   = Scientific_name_COL_China_2026,
+              province  = fifelse(New_distribution_province == "Xizang", "Tibet", New_distribution_province),
+              year      = year_of(as.character(Source_publication_year)),
+              longitude = as.numeric(Longitude), latitude = as.numeric(Latitude))]
 rec <- rec[is.finite(longitude) & is.finite(latitude) & is.finite(year)]
 # 剔除明显的坐标异常(如经纬度错位;中国陆域约 lat 15-56, lon 73-136)
 n_bad <- rec[!(latitude %between% c(15, 56) & longitude %between% c(73, 136)), .N]
@@ -142,7 +153,8 @@ pd <- ggplot(dl, aes(year, v)) +
 
 FigST1 <- (pa | pb) / (pc3 | pd) + plot_layout(heights = c(1.25, 1)) +
   plot_annotation(
-    caption = paste0(sprintf("数据:China Bird New Record (CBNR) 数据集,Zenodo 记录 20809949(CC-BY-4.0);剔除坐标异常 %d 条。", n_bad),
+    caption = paste0("数据:China Bird New Record (CBNR) v2 数据集,Zenodo 记录 20809949(CC-BY-4.0)。",
+                     if (n_bad > 0) sprintf("剔除坐标异常 %d 条。", n_bad) else "",
                      "底图:审图号 GS(2019)1822。"),
     theme = theme(plot.caption = element_text(size = 7, colour = "grey45", hjust = 0)))
 ggsave(file.path(D_FG, "FigST1_spatiotemporal_pattern.png"), FigST1,

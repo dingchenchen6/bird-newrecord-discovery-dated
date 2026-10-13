@@ -34,7 +34,7 @@ msg <- function(...) cat(sprintf("[150 %s] ", format(Sys.time(), "%H:%M:%S")), .
 
 OI <- c(blue = "#0072B2", orange = "#E69F00", green = "#009E73", red = "#D55E00",
         purple = "#CC79A7", sky = "#56B4E9", yellow = "#F0E442", grey = "#999999")
-theme_pub <- function(base = 9) theme_classic(base_size = base, base_family = "sans") +
+theme_pub <- function(base = 10) theme_classic(base_size = base, base_family = "sans") +
   theme(axis.line = element_line(linewidth = 0.35, colour = "grey20"),
         axis.ticks = element_line(linewidth = 0.3, colour = "grey20"),
         axis.text = element_text(colour = "grey15"), axis.title = element_text(colour = "grey5"),
@@ -141,7 +141,8 @@ if (!is.null(eff)) {
     scale_x_continuous(trans = "log10") +
     labs(x = "Odds ratio vs reference level (95% CI)", y = NULL,
          title = "Partial migrants stand out",
-         subtitle = "References: resident, invertivore, dense habitat, Least Concern, non-endemic") +
+         subtitle = paste("References: resident, invertivore,\n",
+                          "dense habitat, Least Concern, non-endemic")) +
     theme_pub() + theme(panel.grid.major.y = element_blank())
 } else { p9a <- p9b <- ggplot() + theme_void() }
 
@@ -178,7 +179,9 @@ p9d <- if (!is.null(cmp)) {
     scale_x_continuous(breaks = 0:3, limits = c(0, 4.6)) +
     labs(x = "Number of phylogenetic treatments in which the term is significant", y = NULL,
          title = "Robustness to how phylogeny is handled",
-         subtitle = "Taxonomic nesting, phylogenetic eigenvectors, phylogenetic logistic regression;\ntext gives the range of odds ratios across the three") +
+         subtitle = paste("Taxonomic nesting, phylogenetic eigenvectors,\n",
+                          "phylogenetic logistic regression; text gives the range\n",
+                          "of odds ratios across the three")) +
     theme_pub() + theme(legend.position = "bottom", panel.grid.major.y = element_blank(),
                         axis.text.y = element_text(size = 6.4))
 } else ggplot() + theme_void()
@@ -229,8 +232,9 @@ p10b <- if (!is.null(cf)) {
     scale_x_continuous(trans = "log10") +
     labs(x = "Incidence rate ratio per 1 SD (95% CI)", y = NULL,
          title = "Effort shows up as diminishing returns",
-         subtitle = paste("Left: both efforts as predictors. Right: recent effort as an offset, so the response is the",
-                          "discovery rate\nper unit of effort. Provinces already well covered in 2002-2008 then yield fewer records")) +
+         subtitle = paste("Left: both efforts as predictors. Right: recent effort as an offset,",
+                          "\nso the response is the discovery rate per unit of effort.",
+                          "\nProvinces already well covered in 2002-2008 then yield fewer records")) +
     theme_pub() + theme(legend.position = "bottom", panel.grid.major.y = element_blank())
 } else ggplot() + theme_void()
 
@@ -262,7 +266,8 @@ p10d <- if (!is.null(pr)) {
     scale_x_continuous(limits = c(-0.55, 0.75)) +
     labs(x = "Partial correlation with new-record count", y = NULL,
          title = "Partial regression",
-         subtitle = "Each predictor against the residuals of a model holding all the others constant") +
+         subtitle = paste("Each predictor against the residuals of a model\n",
+                          "holding all the others constant")) +
     theme_pub() + theme(panel.grid.major.y = element_blank(),
                         panel.grid.major.x = element_line(linewidth = 0.25, colour = "grey92"))
 } else ggplot() + theme_void()
