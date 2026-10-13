@@ -406,7 +406,9 @@ tj_save(F6, "TJ_Fig_observation_process", 183, 150)
 tj_panel(p6a, "TJ_Fig_observation_process_a", 120, 85)
 tj_panel(p6b, "TJ_Fig_observation_process_b", 120, 80)   # 贴合地图宽高比 / fits the map aspect
 tj_panel(p6c, "TJ_Fig_observation_process_c", 120, 95)
-tj_panel(p6d, "TJ_Fig_observation_process_d", 120, 85)
+# 单面板右侧留出末端数值标签(2024 年 HR)的位置, 否则幻灯片版会被裁掉
+# room for the end-point label (2024 HR) in the single panel; the slide version clipped it
+tj_panel(p6d + theme(plot.margin = margin(4, 30, 4, 4)), "TJ_Fig_observation_process_d", 120, 85)
 
 # =====================================================================
 # 3. 与原图源数据逐值核对 / check against the original source data
