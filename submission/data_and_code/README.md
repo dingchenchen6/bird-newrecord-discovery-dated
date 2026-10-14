@@ -1,6 +1,6 @@
 # Data and code for the submission
 
-Frozen snapshot (20261013) of the reproducibility core of the public repository
+Frozen snapshot (20261014) of the reproducibility core of the public repository
 <https://github.com/dingchenchen6/bird-newrecord-discovery-dated>, prepared for peer review. It reproduces the main model and every
 display item of the manuscript. The repository remains the maintained version.
 
@@ -8,7 +8,7 @@ display item of the manuscript. The repository remains the maintained version.
 
 | Folder / file | What it holds |
 |---|---|
-| `code/` | Analysis pipeline (85 scripts). Scripts 130–154 fit and summarise the models; 160–192 run the conservation, downscaling, machine-learning and null-model modules; 200–221 build the submission package, the figures, their editable versions and the animated map used in the talk. Run in numerical order. |
+| `code/` | Analysis pipeline (100 scripts). Scripts 130–154 fit and summarise the models; 160–192 run the conservation, downscaling, machine-learning and null-model modules; 200–221 build the submission package, the figures, their editable versions and the animated map used in the talk; 222–230 correct the 2024 survey effort (eBird 2024 added from GBIF download https://doi.org/10.15468/dl.vfeeak), drive the full rerun (`rerun_effort2024_*.sh`) and trace every changed number; `helper_projection_base.R` completes the projection base year; `191b` refits the 50 province-bootstrap resamples lost to a worker crash in 191 (same seeds), restoring all 300. Run in numerical order. |
 | `data/`, `data_admin/` | Modelling data: discovery-dated events, effort panel, model matrices (three thresholds), climate panels, traits, protected-area and administrative-unit tables (45 MB) |
 | `tables/` | Every result table cited in the manuscript and the Supplementary Information |
 | `source_data/{GCB,NEE,NC}/` | Source data for each main figure, named by that journal's figure number (long format, one row per plotted value, `panel` column) |

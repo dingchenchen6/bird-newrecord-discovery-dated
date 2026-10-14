@@ -36,7 +36,7 @@ If asked: How is 'could reach' defined? Provinces with at least 50 suitable cell
 
 [about 30 s]
 
-First finding. Warming and survey effort contribute about equally: a hazard ratio of 1.36 per standard deviation for warming, and 1.40 for effort. And they interact negatively. On the right you can see what that means: where few people are looking, the warming curve is steep; where many people are looking, it flattens out. Annual climate variability has no effect at all.
+First finding. Warming and survey effort contribute about equally: a hazard ratio of 1.36 per standard deviation for warming, and 1.43 for effort. And they interact negatively. On the right you can see what that means: where few people are looking, the warming curve is steep; where many people are looking, it flattens out. Annual climate variability has no effect at all.
 
 If asked: How big is the warming effect, really? A permutation null puts the baseline at 1.16, so the species-specific increment is about ×1.18 per SD.
 
@@ -46,13 +46,13 @@ If asked: What does 1 SD of warming mean? 0.18 °C of species-referenced accumul
 
 [about 30 s]  [optional: can be cut]
 
-This balance is not fragile. Drop either term and the model loses about the same, around 29 AIC units each. Across twelve specifications, with different distribution-model thresholds, effort proxies and missing-data rules, the numbers stay put. And against design-preserving nulls, both effects stand: the warming increment over its null is about 1.18, and effort collapses to 0.98 if we break its timing.
+This balance is not fragile. Drop either term and the model loses about the same, around 30 AIC units or more each. Across twelve specifications, with different distribution-model thresholds, effort proxies and missing-data rules, the numbers stay put. And against design-preserving nulls, both effects stand: the warming increment over its null is about 1.18, and effort collapses to 0.98 if we break its timing.
 
 ## P07
 
 [about 35 s]
 
-Second finding. The biggest single component is not a driver at all. It is the province-by-year effect: one standard deviation multiplies the hazard by 2.23, more than warming or effort. This is where a provincial bird survey, a big birding event or a new reserve shows up. Adding this layer lifts conditional AUC from 0.72 to 0.85, and leaves the fixed effects unchanged. Treat it as noise, and survey history reads as range change.
+Second finding. The biggest single component is not a driver at all. It is the province-by-year effect: one standard deviation multiplies the hazard by 2.22, more than warming or effort. This is where a provincial bird survey, a big birding event or a new reserve shows up. Adding this layer lifts conditional AUC from 0.72 to 0.85, and leaves the fixed effects unchanged. Treat it as noise, and survey history reads as range change.
 
 If asked: Could the province-by-year effect absorb climate anomalies too? Partly; that protects the fixed effects at some cost in climatic signal, and we say so in the paper.
 
@@ -60,7 +60,7 @@ If asked: Could the province-by-year effect absorb climate anomalies too? Partly
 
 [about 40 s]
 
-Third finding. Effort is saturating. Its hazard ratio fell from 2.2 in 2002 to about 1.1 in 2024, and after 2022 it is no longer different from one. The easy gaps have been filled. Warming shows no such trend. One way to read this is a stock and a flow: effort mines a finite stock of undiscovered records, while warming keeps adding new candidates. We haven't tested the two trends against each other, so I'd call it consistent, not proven.
+Third finding. Effort is saturating. Its hazard ratio fell from 2.1 in 2002 to about 1.1 in 2024, and from 2023 it is no longer different from one. The easy gaps have been filled. Warming shows no such trend. One way to read this is a stock and a flow: effort mines a finite stock of undiscovered records, while warming keeps adding new candidates. We haven't tested the two trends against each other, so I'd call it consistent, not proven.
 
 ## P09
 
@@ -84,27 +84,27 @@ Second, we can push the predictions down to counties. We split the problem in tw
 
 [about 20 s]  [optional: can be cut]
 
-Here is the same model at three scales: province, prefecture and county. We also refitted it with random forests and with XGBoost. The maps barely change, with rank correlations between 0.62 and 0.90. Where to look first is robust to the choice of model.
+Here is the same model at three scales: province, prefecture and county. We also refitted it with random forests and with XGBoost. The maps barely change, with rank correlations between 0.59 and 0.89. Where to look first is robust to the choice of model.
 
 ## P13
 
 [about 35 s]
 
-What about the future? We crossed two climate scenarios with two effort scenarios. Switching from SSP2-4.5 to SSP5-8.5 changes the expected national count from 23.2 to 23.1 records a year: essentially nothing. If effort keeps growing, the count more than doubles by 2050. What we will record depends on how we look, more than on how the climate changes. But most of that increase lies outside the data we fitted.
+What about the future? We crossed two climate scenarios with two effort scenarios. Switching from SSP2-4.5 to SSP5-8.5 changes the expected national count from 26.1 to 25.9 records a year: essentially nothing. If effort keeps growing, the count roughly triples by 2050. What we will record depends on how we look, more than on how the climate changes. But most of that increase lies outside the data we fitted.
 
-If asked: Is 57 to 62 records a year a forecast? No. At 2050 only 2 percent of cells are inside the fitted support; the credible statement is about 23 to 27 records a year in 2030, under any scenario.
+If asked: Is 79 to 89 records a year a forecast? No. At 2050 no cell is inside the fitted support; the credible statement is about 26 to 31 records a year in 2030, under any scenario.
 
 ## P14
 
 [about 35 s]  [optional: can be cut]
 
-A warning about machine learning. We ran the same futures with three model families, all calibrated to the same 2024 baseline. Under continuing effort in 2050, the hazard model rises to 57 records a year, the random forest stays flat, and XGBoost goes down. They all agree on where records will appear. But outside the data, tree models simply return their edge values, and nobody can check which direction is right.
+A warning about machine learning. We ran the same futures with three model families, all calibrated to the same 2024 baseline. Under continuing effort in 2050, the hazard model rises to 79 records a year, the random forest stays flat, and XGBoost goes down. They all agree on where records will appear. But outside the data, tree models simply return their edge values, and nobody can check which direction is right.
 
 ## P15
 
 [about 25 s]
 
-So our rule is simple: report where the model breaks. Under SSP2-4.5, the share of species-province combinations inside the fitted range drops from 48 percent in 2030, to 10 percent in 2050, and 2 percent by 2080. So 2030 is usable. End-of-century maps are illustrations, not forecasts.
+So our rule is simple: report where the model breaks. Under SSP2-4.5, the share of species-province combinations inside the fitted range drops from 46 percent in 2030, to 6 percent in 2050, and to none by 2080, mostly because effort outgrows its observed range. So 2030 is usable. End-of-century maps are illustrations, not forecasts.
 
 ## P16
 

@@ -1,0 +1,12 @@
+check,value
+eBird/GBIF events: last year,2023
+"2023 self-test (visits, observers, days identical)",1
+"Additivity of visits and observers, 2002-2023",1
+"Union-of-days approximation, 2023 MAE (days)",6.88
+"Union-of-days approximation, 2023 max abs error (days)",25
+"National mainland visits 2024, original",151245
+"National mainland visits 2024, corrected (all provinces)",193663
+"National mainland visits 2024, corrected (panel; download gaps excluded)",189573
+"Fold change 2002-04 to 2022-24, original",175.3
+"Fold change 2002-04 to 2022-24, corrected (all provinces)",204
+"Fold change 2002-04 to 2022-24, corrected (panel)",201.3

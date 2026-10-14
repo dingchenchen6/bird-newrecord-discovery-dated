@@ -50,7 +50,7 @@ Measured on the configuration above.
 |---|---|
 | `setup_workspace.R` | < 5 s |
 | `tests/smoke_test.R` | ~2 min |
-| One mixed-model fit (175,901 rows, three random terms) | 70–90 s |
+| One mixed-model fit (175,640 rows, three random terms) | 70–90 s |
 | `133_model_selection_v2.R` (7 fits) | ~11 min |
 | `134_indicator_window_v2.R` (per indicator, 4 fits) | ~5 min |
 | `137_full_comparison_matrix.R` block B (12 fits) | ~17 min |

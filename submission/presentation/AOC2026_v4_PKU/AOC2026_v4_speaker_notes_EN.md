@@ -16,9 +16,9 @@ If asked: Is this specific to China? No; the chain applies to any dated compilat
 
 [about 50 s]
 
-This is why the question is hard in China. On the left, accumulated warming: the fifteen-year mean temperature relative to 1980 to 2000. The country turns red, from about 0.2 degrees in 2002 to almost 0.8 by 2024, most strongly across the north and northwest. On the right, survey effort: birding visits per province, which rose about 175-fold over the same years and spread from the east coast inland. The amber dots are new records, appearing in the year they were discovered: 657 of them. Everything rises together, so a trend in new records cannot, on its own, tell us which process is behind it.
+This is why the question is hard in China. On the left, accumulated warming: the fifteen-year mean temperature relative to 1980 to 2000. The country turns red, from about 0.2 degrees in 2002 to almost 0.8 by 2024, most strongly across the north and northwest. On the right, survey effort: birding visits per province, which rose about 200-fold over the same years and spread from the east coast inland. The amber dots are new records, appearing in the year they were discovered: 657 of them. Everything rises together, so a trend in new records cannot, on its own, tell us which process is behind it.
 
-If asked: Why are Yunnan and Guangdong grey in 2024? Their visit counts in the source download fall by more than 90% from 2023 while record counts do not, so the map shows them as incomplete; national totals and the model input are unchanged.
+If asked: Why is Guangdong grey in 2024? Its China Bird Report records cover only 14 days of that year, so we treat that province-year as missing; eBird checklists for 2024, absent from the first download, were added for every province.
 
 If asked: Is this the warming variable in the model? It is the provincial side; the model uses the difference from the same quantity over each species' range.
 
@@ -26,7 +26,7 @@ If asked: Is this the warming variable in the model? It is the provincial side; 
 
 [about 55 s]
 
-Here is the gap. When the original papers explain their own records, sixty-one percent say range shift, and only seven percent mention survey effort, although birding visits rose about 175-fold. Three things have not been separated. Warming and observation grew together, so a model with only one of them gives it the credit for both. Survey pulses, such as campaigns, festivals and new reserves, and the set of species that could have been recorded where, are rarely part of the model. And a warming effect needs a benchmark: what shared regional climate would produce anyway. Projections, finally, are rarely checked against the range of data the model was fitted to.
+Here is the gap. When the original papers explain their own records, sixty-one percent say range shift, and only seven percent mention survey effort, although birding visits rose about 200-fold. Three things have not been separated. Warming and observation grew together, so a model with only one of them gives it the credit for both. Survey pulses, such as campaigns, festivals and new reserves, and the set of species that could have been recorded where, are rarely part of the model. And a warming effect needs a benchmark: what shared regional climate would produce anyway. Projections, finally, are rarely checked against the range of data the model was fitted to.
 
 If asked: Where do these percentages come from? From CBNR's 'inferred discovery reason' field, which records the reason given in each source paper; 31% of papers give none.
 
@@ -42,7 +42,7 @@ If asked: Were these hypotheses pre-specified? H2 to H4 are among the four predi
 
 [about 50 s]
 
-The framework has four steps. Records come from CBNR, our compilation of provincial first records from the literature: 1,029 in the published version, each dated to its discovery, 657 of them between 2002 and 2024. We then build a risk set of every species, province and year in which a first record could have happened: 175,901 cells. Each cell carries accumulated warming, survey effort, annual climate variability, and an offset for how complete recent reporting is. Finally, a discrete-time hazard model, tested with permutation nulls, twelve alternative specifications, time-varying effects, and scenario projections that report their own data support.
+The framework has four steps. Records come from CBNR, our compilation of provincial first records from the literature: 1,029 in the published version, each dated to its discovery, 657 of them between 2002 and 2024. We then build a risk set of every species, province and year in which a first record could have happened: 175,640 cells. Each cell carries accumulated warming, survey effort, annual climate variability, and an offset for how complete recent reporting is. Finally, a discrete-time hazard model, tested with permutation nulls, twelve alternative specifications, time-varying effects, and scenario projections that report their own data support.
 
 If asked: Why does the model use v2 and not v1.1? v2 is the citable Zenodo release; v1.1 adds 47 records and is not yet on Zenodo.
 
@@ -50,7 +50,7 @@ If asked: Why does the model use v2 and not v1.1? v2 is the citable Zenodo relea
 
 [about 60 s]
 
-For every species, in every province it could reach, in every year, we ask: is this the year of its first record? Each pair stays in the risk set until its first record and then leaves it; pairs that are never recorded stay to the end. The model is a binomial mixed model with a complementary log-log link, the discrete-time form of a proportional-hazards model, so exp of beta is a hazard ratio. Warming is measured relative to each species' own range over fifteen years; one standard deviation is 0.18 degrees. Effort is provincial birding visits; one standard deviation is a 7.7-fold difference. A province-by-year random effect absorbs survey campaigns, and an offset corrects the latest years, which are still being published.
+For every species, in every province it could reach, in every year, we ask: is this the year of its first record? Each pair stays in the risk set until its first record and then leaves it; pairs that are never recorded stay to the end. The model is a binomial mixed model with a complementary log-log link, the discrete-time form of a proportional-hazards model, so exp of beta is a hazard ratio. Warming is measured relative to each species' own range over fifteen years; one standard deviation is 0.18 degrees. Effort is provincial birding visits; one standard deviation is a 7.9-fold difference. A province-by-year random effect absorbs survey campaigns, and an offset corrects the latest years, which are still being published.
 
 If asked: How is 'could reach' defined? Provinces with at least 50 suitable cells in the species' distribution model; results are the same at 100 and 200.
 
@@ -58,7 +58,7 @@ If asked: How is 'could reach' defined? Provinces with at least 50 suitable cell
 
 [about 40 s]
 
-First finding. Warming and survey effort contribute about equally: a hazard ratio of 1.36 per standard deviation for warming, and 1.40 for effort. And they interact negatively. On the right you can see what that means: where few people are looking, the warming curve is steep; where many people are looking, it flattens out. Annual climate variability has no effect at all. So the answer to question one is yes, and to question three, the interaction is negative, as we expected.
+First finding. Warming and survey effort contribute about equally: a hazard ratio of 1.36 per standard deviation for warming, and 1.43 for effort. And they interact negatively. On the right you can see what that means: where few people are looking, the warming curve is steep; where many people are looking, it flattens out. Annual climate variability has no effect at all. So the answer to question one is yes, and to question three, the interaction is negative, as we expected.
 
 If asked: How big is the warming effect, really? A permutation null puts the baseline at 1.16, so the species-specific increment is about ×1.18 per SD.
 
@@ -68,13 +68,13 @@ If asked: What does 1 SD of warming mean? 0.18 °C of species-referenced accumul
 
 [about 30 s]  [optional: can be cut]
 
-This balance is not fragile. Drop either term and the model loses about the same, around 29 AIC units each. Across twelve specifications, with different distribution-model thresholds, effort proxies and missing-data rules, the numbers stay put. And against design-preserving nulls, both effects stand: the warming increment over its null is about 1.18, and effort collapses to 0.98 if we break its timing.
+This balance is not fragile. Drop either term and the model loses about the same, around 30 AIC units or more each. Across twelve specifications, with different distribution-model thresholds, effort proxies and missing-data rules, the numbers stay put. And against design-preserving nulls, both effects stand: the warming increment over its null is about 1.18, and effort collapses to 0.98 if we break its timing.
 
 ## P10
 
 [about 35 s]
 
-Second finding. The biggest single component is not a driver at all. It is the province-by-year effect: one standard deviation multiplies the hazard by 2.23, more than warming or effort. This is where a provincial bird survey, a big birding event or a new reserve shows up. Adding this layer lifts conditional AUC from 0.72 to 0.85, and leaves the fixed effects unchanged. Treat it as noise, and survey history reads as range change.
+Second finding. The biggest single component is not a driver at all. It is the province-by-year effect: one standard deviation multiplies the hazard by 2.22, more than warming or effort. This is where a provincial bird survey, a big birding event or a new reserve shows up. Adding this layer lifts conditional AUC from 0.72 to 0.85, and leaves the fixed effects unchanged. Treat it as noise, and survey history reads as range change.
 
 If asked: Could the province-by-year effect absorb climate anomalies too? Partly; that protects the fixed effects at some cost in climatic signal, and we say so in the paper.
 
@@ -82,7 +82,7 @@ If asked: Could the province-by-year effect absorb climate anomalies too? Partly
 
 [about 40 s]
 
-Third finding. Effort is saturating. Its hazard ratio fell from 2.2 in 2002 to about 1.1 in 2024, and after 2022 it is no longer different from one. The easy gaps have been filled. Warming shows no such trend. One way to read this is a stock and a flow: effort mines a finite stock of undocumented occurrences, while warming keeps adding new candidates. We haven't tested the two trends against each other, so I'd call it consistent, not proven.
+Third finding. Effort is saturating. Its hazard ratio fell from 2.1 in 2002 to about 1.1 in 2024, and from 2023 it is no longer different from one. The easy gaps have been filled. Warming shows no such trend. One way to read this is a stock and a flow: effort mines a finite stock of undocumented occurrences, while warming keeps adding new candidates. We haven't tested the two trends against each other, so I'd call it consistent, not proven.
 
 ## P12
 
@@ -100,15 +100,15 @@ A first use. Nature reserves look like hot spots for new records: twenty-six per
 
 [about 35 s]
 
-What about the future? We crossed two climate scenarios with two effort scenarios. Switching from SSP2-4.5 to SSP5-8.5 changes the expected national count from 23.2 to 23.1 records a year: essentially nothing. If effort keeps growing, the count more than doubles by 2050. What we will record depends on how we look, more than on how the climate changes. But most of that increase lies outside the data we fitted.
+What about the future? We crossed two climate scenarios with two effort scenarios. Switching from SSP2-4.5 to SSP5-8.5 changes the expected national count from 26.1 to 25.9 records a year: essentially nothing. If effort keeps growing, the count roughly triples by 2050. What we will record depends on how we look, more than on how the climate changes. But most of that increase lies outside the data we fitted.
 
-If asked: Is 57 to 62 records a year a forecast? No. At 2050 only 2 percent of cells are inside the fitted support; the credible statement is about 23 to 27 records a year in 2030, under any scenario.
+If asked: Is 79 to 89 records a year a forecast? No. At 2050 no cell is inside the fitted support; the credible statement is about 26 to 31 records a year in 2030, under any scenario.
 
 ## P15
 
-[about 30 s]  [optional: can be cut]
+[about 35 s]  [optional: can be cut]
 
-So our rule is simple: report where the model breaks. Under SSP2-4.5, the share of species-province combinations inside the fitted range drops from 48 percent in 2030, to 10 percent in 2050, and 2 percent by 2080. Machine learning does not rescue it: inside the range the two model families agree, outside it they diverge. So 2030 is usable; end-of-century maps are illustrations, not forecasts.
+So our rule is simple: report where the model breaks. Under SSP2-4.5, the share of species-province combinations inside the fitted range drops from 46 percent in 2030 to 6 percent in 2050, and to none by 2080, mostly because effort outgrows its observed range. Machine learning does not rescue it: inside the range the two model families agree, outside it they diverge. So 2030 is usable; end-of-century maps are illustrations, not forecasts.
 
 ## P16
 

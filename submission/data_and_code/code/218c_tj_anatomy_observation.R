@@ -344,17 +344,20 @@ py_b[, c("province", "year") := tstrsplit(lvl, "\\.", keep = 1:2)]
 py_b[, year := as.integer(year)]
 ord <- py_b[, .(m = mean(b)), by = province][order(m)]$province
 py_b[, province := factor(province, levels = ord)]
-# 模型中不存在的省-年(均为努力覆盖缺口 coverage_gap)显式画成灰格, 不再留白(留白会被读成 ≈1)
-# province-years absent from the model (all effort coverage gaps) are grey cells, not white gaps
+# 模型中不存在的省-年(24 个努力覆盖缺口与广东 2024 年下载缺口)显式画成灰格, 不再留白(留白会被读成 ≈1)
+# province-years absent from the model (24 coverage gaps and the Guangdong 2024 download gap) are grey cells
 py_miss <- CJ(province = factor(ord, levels = ord), year = seq(min(py_b$year), max(py_b$year)))[
   !py_b, on = .(province, year)]
 YR <- range(py_b$year)
+# 注记由模型现算(省 × 年随机截距的 SD 与最大乘数), 不写死 / note computed from the fit, not typed in
+SD_PY <- attr(glmmTMB::VarCorr(m)$cond$prov_year, "stddev")[[1]]
+PY_NOTE <- sprintf("SD %.3f,\nup to\n%.0f-fold", SD_PY, max(exp(py_b$b)))
 p6c <- ggplot(py_b, aes(year, province)) +
   geom_tile(data = py_miss, fill = NA_COL, colour = "white", linewidth = 0.2) +
   geom_tile(aes(fill = exp(b)), colour = "white", linewidth = 0.2) +
   div_fill(range(exp(py_b$b)), c(0.6, 1, 2, 4, 7), "Multiplier", key_h = 20) +
   annotate("text", x = YR[2] + 1.15, y = length(ord) - 10.4, hjust = 0, vjust = 1, size = pt2mm(6),
-           lineheight = 0.95, colour = TJ$subink, label = "SD 0.804,\na 7-fold\nrange") +
+           lineheight = 0.95, colour = TJ$subink, label = PY_NOTE) +
   scale_x_continuous(breaks = seq(2002, 2024, 4), expand = c(0, 0)) +
   scale_y_discrete(limits = ord, expand = c(0, 0)) +   # 原图顺序 / original row order
   coord_cartesian(clip = "off") +
@@ -375,7 +378,13 @@ Vs <- Vt[nm, nm]
 se_t <- sqrt(Vs[1, 1] + yc^2 * Vs[2, 2] + 2 * yc * Vs[1, 2])
 dt6 <- data.table(year = yrs, hr = exp(b_t), lo = exp(b_t - 1.96 * se_t), hi = exp(b_t + 1.96 * se_t))
 P_INT <- summary(mtv)$coefficients$cond[nm[2], "Pr(>|z|)"]
-stopifnot(sprintf("%.1e", P_INT) == "7.7e-04")   # 原图标注值 / value printed in the original
+# P 值标注由模型现算: < 0.001 用科学记数(上标显式 5 pt), 否则两位有效数字
+# P label from the fit: scientific notation below 0.001 (explicit 5 pt superscript), else 2 significant digits
+P_LAB <- if (P_INT < 0.001) {
+  ex <- floor(log10(P_INT))
+  sprintf("Effort × time, *P* = %.1f × 10<sup><span style='font-size:5pt'>−%d</span></sup>", P_INT / 10^ex, -ex)
+} else sprintf("Effort × time, *P* = %s", formatC(P_INT, digits = 2, format = "fg"))
+msg("effort × time P = ", signif(P_INT, 3), " | label: ", P_LAB)
 p6d <- ggplot(dt6, aes(year, hr)) +
   ref_h(1) +
   geom_ribbon(aes(ymin = lo, ymax = hi), fill = TJ$effort, alpha = 0.18) +
@@ -388,7 +397,7 @@ p6d <- ggplot(dt6, aes(year, hr)) +
   # 富文本: 上标显式 5 pt(plotmath 上标会缩到 4.2 pt, 低于下限)
   # rich text with an explicit 5 pt superscript (a plotmath superscript shrinks to 4.2 pt)
   ggtext::geom_richtext(data = data.frame(x = max(yrs), y = 3.0), aes(x, y), inherit.aes = FALSE,
-           label = "Effort × time, *P* = 7.7 × 10<sup><span style='font-size:5pt'>−4</span></sup>",
+           label = P_LAB,
            hjust = 1, vjust = 1, size = pt2mm(6), family = "Arial", colour = TJ$subink, fill = NA,
            label.colour = NA, label.padding = unit(0, "pt")) +
   scale_x_continuous(breaks = seq(2002, 2022, 4), expand = expansion(add = 0.6)) +
@@ -457,7 +466,7 @@ src6 <- rbind(
   S("c", py_b$province, "year", py_b$year, "province x year hazard multiplier exp(b)", exp(py_b$b),
     group = "in model"),
   S("c", py_miss$province, "year", py_miss$year, "province x year hazard multiplier exp(b)", NA_real_,
-    group = "effort coverage gap, not in model (grey cell)"),
+    group = "effort missing (coverage or download gap), not in model (grey cell)"),
   S("d", "effort hazard ratio", "year", dt6$year, "hazard ratio per 1 SD of effort", dt6$hr, dt6$lo, dt6$hi),
   S("d", "effort x time interaction", NA, NA, "P value", P_INT))
 src6 <- unique(src6[!(panel == "b" & is.na(item))])

@@ -47,6 +47,7 @@ FIG <- file.path(OUT, "figures_future"); TAB <- file.path(OUT, "tables")
 SHP <- file.path(V2, "data", "spatial", "basemap_GS2019_1822")
 dir.create(FIG, recursive = TRUE, showWarnings = FALSE)
 msg <- function(...) cat(sprintf("[141 %s] ", format(Sys.time(), "%H:%M:%S")), ..., "\n")
+source(file.path(V2, "code", "helper_projection_base.R"))   # 基期补齐 / base-year completion
 
 OI <- c(blue = "#0072B2", orange = "#E69F00", green = "#009E73", red = "#D55E00",
         purple = "#CC79A7", sky = "#56B4E9", grey = "#999999")
@@ -95,7 +96,8 @@ d <- as.data.table(read_parquet(file.path(OUT, "data", "model_v2_thr50.parquet")
 d[, c("x", "clim_change", "clim_var") := NULL]
 cc <- as.data.table(read_parquet(file.path(OUT, "data", "components_v2_tavg_annual_W15.parquet")))
 d <- merge(d, cc[, .(species, province, year, clim_change, clim_var)], by = c("species", "province", "year"))
-d <- d[is.finite(clim_change) & is.finite(clim_var) & is.finite(eff_visits_gap_z)]
+full <- d[is.finite(clim_change) & is.finite(clim_var)]            # 基期补齐用 / for the base year
+d <- full[is.finite(eff_visits_gap_z)]
 CC_MU <- mean(d$clim_change); CC_SD <- stats::sd(d$clim_change)
 CV_MU <- mean(d$clim_var);    CV_SD <- stats::sd(d$clim_var)
 EF_MU <- mean(d$eff_visits_gap_z); EF_SD <- stats::sd(d$eff_visits_gap_z)
@@ -139,7 +141,14 @@ pred_mech <- function(nd) {
 cm6 <- fread(file.path(SS, "tables", "tbl_F_cmip6_delta.csv"))
 dp <- cm6[unit == "province", .(province = name, ssp, horizon, d_prov = delta)]
 ds <- cm6[unit == "species",  .(species  = name, ssp, horizon, d_sp   = delta)]
-base_yr <- d[year == max(year)]
+# 基期: 可用行 + 下载缺口省份(广东 2024, 努力沿用 2023), 后者只用于预测, 不进入标准化常数与支撑域
+# base: usable rows + download-gap provinces (Guangdong 2024, effort from 2023); prediction only
+gb <- gap_base_rows(full, max(d$year), file.path(OUT, "data", "effort_panel_v2.csv"))
+gb[, `:=`(clim_change_z = (clim_change - CC_MU) / CC_SD,
+          clim_var_z    = (clim_var - CV_MU) / CV_SD,
+          effort_z      = (eff_visits_gap_z - EF_MU) / EF_SD,
+          prov_year     = interaction(province, year, drop = TRUE))]
+base_yr <- rbind(d[year == max(year)], gb, fill = TRUE)
 msg("投影基期 ", max(d$year), ": ", nrow(base_yr), " 行 | ", uniqueN(base_yr$province), " 省")
 
 proj <- rbindlist(lapply(c("ssp245", "ssp585"), function(sp_)
@@ -270,9 +279,11 @@ map_panel <- function(dt, valcol, title, sub, cap_extra = "") {
 save_all(map_panel(prov_sup, "mech_ratio",
   "Mechanistic projection of new-record generation hazard",
   "Discrete-time cloglog model; CMIP6 4-GCM delta applied to both province and species-range climate; only rows inside the fitted covariate support",
+  # 比例由支撑域表计算, 不写死 / share computed from the support table, not typed in
   paste0("Only species-province rows whose warming and effort fall inside the 1st-99th percentile of the fitted data are ",
-         "aggregated. The percentage in each panel is the share of rows that qualify:\nby 2050 under SSP5-8.5 only ",
-         "2% do, so the later horizons rest on very few comparable cases and should be read as illustrations.")),
+         "aggregated. The percentage in each panel is the share of rows that qualify:\nby 2050 under SSP5-8.5 ",
+         {p50 <- sup_smry[ssp == "ssp585" & horizon == 2050, pct]; if (p50 == 0) "none do" else sprintf("only %.0f%% do", p50)},
+         ", so the later horizons rest on few or no comparable cases and should be read as illustrations.")),
   "FigM1_future_mechanistic_v2", 9.4, 6.6, prov_sup)
 
 save_all(map_panel(prov_sup, "ml_ratio",
@@ -285,9 +296,12 @@ save_all(map_panel(prov_sup, "ml_ratio",
 save_all(map_panel(prov_all, "mech_ratio",
   "Unmasked extrapolation of the mechanistic projection",
   "The same model applied to every row regardless of covariate support",
-  paste0("Shown for contrast with the masked main figure. Hazard ratios reach 78x because the species-specific climate ",
-         "gradient has a historical SD of only 0.18 degC,\nwhile future province-minus-range warming differentials reach ",
-         "2 degC, i.e. more than ten standard deviations beyond the fitted range. These values are not forecasts.")),
+  # 最大倍数与 SD 由数据计算; 修正后努力增长同样把单元推出拟合范围
+  # maximum ratio and SD computed; after the correction, effort growth also pushes cells out of range
+  sprintf(paste0("Shown for contrast with the masked main figure. Hazard ratios reach %.0fx because both drivers leave ",
+                 "their fitted range: the species-specific climate gradient has a historical SD of only %.2f degC,\nwhile ",
+                 "future province-minus-range warming differentials reach 2 degC, and effort grows beyond its highest ",
+                 "observed level. These values are not forecasts."), max(prov_all$mech_ratio), CC_SD)),
   "FigS3_future_unmasked_v2", 9.4, 6.6, prov_all)
 
 # ---- 4. SHAP 可解释性 ----
@@ -366,7 +380,9 @@ pa2 <- ggplot(ag, aes(mech_ratio, ml_ratio)) +
   scale_y_continuous(trans = "log2", breaks = c(0.25, 0.5, 1, 2, 4)) +
   labs(x = "Mechanistic hazard ratio vs 2024", y = "Machine-learning hazard ratio vs 2024",
        title = "Outside it they diverge completely",
-       subtitle = "The mechanistic model projects increases in 176 of 186 province-scenario cells, the ML model in only 42") +
+       # 计数从投影表读取 / counts read from the projection table
+       subtitle = sprintf("The mechanistic model projects increases in %d of %d province-scenario cells, the ML model in only %d",
+                          sum(ag$mech_ratio > 1), nrow(ag), sum(ag$ml_ratio > 1))) +
   theme_pub()
 
 # (c) 外推距离: 未来协变量相对训练范围的位置

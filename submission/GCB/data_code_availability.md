@@ -11,7 +11,8 @@ in Zenodo at https://doi.org/10.5281/zenodo.14875797. Historical monthly climate
 from WorldClim (https://www.worldclim.org). Species range maps are available on request
 from BirdLife International (http://datazone.birdlife.org/species/requestdis); their
 licence does not permit redistribution. Survey-effort indicators were derived from
-eBird/GBIF occurrence records and China Bird Report checklists (http://www.birdreport.cn);
+eBird/GBIF occurrence records (2024 records: GBIF.org, 2026, https://doi.org/10.15468/dl.vfeeak) and China Bird
+Report checklists (http://www.birdreport.cn);
 the raw records remain subject to their providers' terms, and the province-year effort
 panel is provided in the project repository. All analysis code, the risk set, the derived
 panels and every result table are available at

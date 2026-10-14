@@ -88,26 +88,26 @@
 "b","annotation",2024.5,"censored band end",NA
 "b","annotation",NA,"records changing year (%)",83.0963665086888
 "c","Accumulated warming",1,"S0",1.39397021236197
-"c","Accumulated warming",2,"S1",1.43687958668667
-"c","Accumulated warming",3,"S2",1.43240628583331
-"c","Accumulated warming",4,"S3",1.43170373443825
-"c","Accumulated warming",5,"S4",1.42804702059126
-"c","Accumulated warming",6,"S5",1.36164754167317
+"c","Accumulated warming",2,"S1",1.43958299312833
+"c","Accumulated warming",3,"S2",1.43471648438239
+"c","Accumulated warming",4,"S3",1.43412613013062
+"c","Accumulated warming",5,"S4",1.43046612997355
+"c","Accumulated warming",6,"S5",1.36477001403378
 "c","Annual climate variability",1,"S0",0.850311450793247
-"c","Annual climate variability",2,"S1",0.971116950860858
-"c","Annual climate variability",3,"S2",0.958461199270241
-"c","Annual climate variability",4,"S3",0.958288682742615
-"c","Annual climate variability",5,"S4",0.96155332012369
-"c","Annual climate variability",6,"S5",0.995095739809156
+"c","Annual climate variability",2,"S1",0.970878861264082
+"c","Annual climate variability",3,"S2",0.958141034184883
+"c","Annual climate variability",4,"S3",0.957881083158199
+"c","Annual climate variability",5,"S4",0.960936105191554
+"c","Annual climate variability",6,"S5",0.994530128578253
 "c","Survey effort",1,"S0",1.78763810006655
-"c","Survey effort",2,"S1",1.30508400917427
-"c","Survey effort",3,"S2",1.26659271199213
-"c","Survey effort",4,"S3",1.2889343025808
-"c","Survey effort",5,"S4",1.44796449132282
-"c","Survey effort",6,"S5",1.4038169859134
+"c","Survey effort",2,"S1",1.3091319882336
+"c","Survey effort",3,"S2",1.27094512152445
+"c","Survey effort",4,"S3",1.30006873851588
+"c","Survey effort",5,"S4",1.4674637509397
+"c","Survey effort",6,"S5",1.4293404709696
 "c","Warming x effort",1,"S0",0.875934348839496
-"c","Warming x effort",2,"S1",0.858863754897665
-"c","Warming x effort",3,"S2",0.86346574482767
-"c","Warming x effort",4,"S3",0.862903435534574
-"c","Warming x effort",5,"S4",0.862427384195833
-"c","Warming x effort",6,"S5",0.84924794872335
+"c","Warming x effort",2,"S1",0.851652136222901
+"c","Warming x effort",3,"S2",0.855874121805334
+"c","Warming x effort",4,"S3",0.855674338787572
+"c","Warming x effort",5,"S4",0.854350218744841
+"c","Warming x effort",6,"S5",0.838920438768299

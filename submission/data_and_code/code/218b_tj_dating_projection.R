@@ -60,6 +60,7 @@ source("code/218_theme_topjournal.R")   # TJ 调色板、主题、导出 / palet
 OUT <- file.path(TJ_V2, "analysis_v2"); TAB <- file.path(OUT, "tables")
 SS  <- file.path(TJ_V2, "analysis_species_specific")
 msg <- function(...) message(sprintf("[218b %s] ", format(Sys.time(), "%H:%M:%S")), ...)
+source(file.path(TJ_V2, "code", "helper_projection_base.R"))   # 基期补齐 / base-year completion
 rd  <- function(f) fread(file.path(TAB, f))
 
 # ---- 0. 小工具 / helpers ----
@@ -215,7 +216,8 @@ d <- as.data.table(read_parquet(file.path(OUT, "data", "model_v2_thr50.parquet")
 d[, c("x", "clim_change", "clim_var") := NULL]
 cc <- as.data.table(read_parquet(file.path(OUT, "data", "components_v2_tavg_annual_W15.parquet")))
 d <- merge(d, cc[, .(species, province, year, clim_change, clim_var)], by = c("species", "province", "year"))
-d <- d[is.finite(clim_change) & is.finite(clim_var) & is.finite(eff_visits_gap_z)]
+full <- d[is.finite(clim_change) & is.finite(clim_var)]            # 基期补齐用 / for the base year
+d <- full[is.finite(eff_visits_gap_z)]
 CC_MU <- mean(d$clim_change); CC_SD <- stats::sd(d$clim_change)
 CV_MU <- mean(d$clim_var);    CV_SD <- stats::sd(d$clim_var)
 EF_MU <- mean(d$eff_visits_gap_z); EF_SD <- stats::sd(d$eff_visits_gap_z)
@@ -246,7 +248,14 @@ pred_mech <- function(nd) {
 cm6 <- fread(file.path(SS, "tables", "tbl_F_cmip6_delta.csv"))
 dp <- cm6[unit == "province", .(province = name, ssp, horizon, d_prov = delta)]
 ds <- cm6[unit == "species",  .(species  = name, ssp, horizon, d_sp   = delta)]
-base_yr <- d[year == max(year)]
+# 基期: 可用行 + 下载缺口省份(广东 2024, 努力沿用 2023), 后者只用于预测, 不进入标准化常数与支撑域
+# base: usable rows + download-gap provinces (Guangdong 2024, effort from 2023); prediction only
+gb <- gap_base_rows(full, max(d$year), file.path(OUT, "data", "effort_panel_v2.csv"))
+gb[, `:=`(clim_change_z = (clim_change - CC_MU) / CC_SD,
+          clim_var_z    = (clim_var - CV_MU) / CV_SD,
+          effort_z      = (eff_visits_gap_z - EF_MU) / EF_SD,
+          prov_year     = interaction(province, year, drop = TRUE))]
+base_yr <- rbind(d[year == max(year)], gb, fill = TRUE)
 proj <- rbindlist(lapply(c("ssp245", "ssp585"), function(sp_)
   rbindlist(lapply(c(2030L, 2050L, 2080L), function(hz) {
     b <- copy(base_yr)
@@ -292,7 +301,9 @@ chk <- merge(cors[, .(group = paste(ssp_lab, hz_lab), rho, agree_dir)], src4[pan
 stopifnot(nrow(chk) == 6, isTRUE(all.equal(chk$rho.x, chk$rho.y, tolerance = 1e-10)),
           isTRUE(all.equal(chk$agree_dir.x, chk$agree_dir.y, tolerance = 1e-10)),
           isTRUE(all.equal(r_in, src4[panel == "a", rho], tolerance = 1e-10)),
-          nrow(ag) == 186, sum(ag$mech_ratio > 1) == 176, sum(ag$ml_ratio > 1) == 42)
+          nrow(ag) == 31 * 6)                      # 31 省 × 6 情景, 基期须覆盖全部省份 / all provinces
+msg(sprintf("province x scenario cells with ratio > 1: mechanistic %d, ML %d (of %d)",
+            sum(ag$mech_ratio > 1), sum(ag$ml_ratio > 1), nrow(ag)))
 msg(sprintf("FigM4: Spearman rho in range = %.4f (n = %d province-years); 6 facet rho/agree values match",
             r_in, nrow(inr)))
 

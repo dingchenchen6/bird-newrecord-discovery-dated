@@ -256,7 +256,7 @@ def main() -> None:
             keys = cited_keys(head) | cited_keys(tail) | cited_keys(si_txt)
             # 数据集/代码引用(机构作者难以按姓氏匹配)一律保留 —— 期刊要求在文献表中正式引用数据
             # NB: always keep data/code citations; corporate authors defeat surname matching.
-            DATA_CIT = re.compile(r"Zenodo|datazone\.birdlife|GitHub")
+            DATA_CIT = re.compile(r"Zenodo|datazone\.birdlife|GitHub|GBIF\.org")   # GBIF 下载引用 / GBIF download citation
             kept = [e for e in entries if first_surname_year(e) in keys or DATA_CIT.search(e)]
             new_reflist = "\n\n".join(kept)
             new_main = head + "## References\n\n" + new_reflist + "\n" + tail

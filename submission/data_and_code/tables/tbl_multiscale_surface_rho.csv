@@ -1,0 +1,10 @@
+level,pair,rho
+province,mech-rf,0.76491935483871
+province,mech-xgb,0.712903225806452
+province,rf-xgb,0.589112903225807
+prefecture,mech-rf,0.778601695822735
+prefecture,mech-xgb,0.691479705381854
+prefecture,rf-xgb,0.885368649001897
+county,mech-rf,0.758598438292024
+county,mech-xgb,0.603602853910174
+county,rf-xgb,0.71050457354206

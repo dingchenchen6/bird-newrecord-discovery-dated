@@ -72,7 +72,7 @@ d <- merge(b, cmp[, .(species, province, year, clim_change, clim_var)],
 d <- d[is.finite(clim_change) & is.finite(clim_var) & is.finite(eff_visits_gap_z)]
 chk("risk-set rows (all)",  nrow(b),             185478)
 chk("risk-set events (all)", sum(b$event),       657)
-chk("modelling rows",       nrow(d),             175901)
+chk("modelling rows",       nrow(d),             175640)
 chk("events",               sum(d$event),        649)
 chk("species",              uniqueN(d$species),  392)
 chk("provincial units",     uniqueN(d$province), 31)
@@ -93,11 +93,11 @@ chk2 <- function(lab, got, want, tol) {
   say(if (abs(got - want) <= tol) "PASS" else "FAIL",
       sprintf("%-30s HR = %.3f, expected %.3f (+/- %.3f)", lab, got, want, tol))
 }
-chk2("accumulated warming",       hr("clim_change_z"), 1.362, 0.02)
-chk2("survey effort",             hr("effort_z"),      1.404, 0.02)
+chk2("accumulated warming",       hr("clim_change_z"), 1.365, 0.02)
+chk2("survey effort",             hr("effort_z"),      1.429, 0.02)
 chk2("annual climate variability", hr("clim_var_z"),   0.995, 0.02)
-chk2("warming x effort",          hr(int_name),        0.849, 0.02)
-chk("AIC", round(AIC(m), 1), 8313.2, 1.0)
+chk2("warming x effort",          hr(int_name),        0.839, 0.02)
+chk("AIC", round(AIC(m), 1), 8308.5, 1.0)
 
 cat("\n=== 6. dating and reporting completeness ===\n")
 ev <- fread("analysis_v2/data/events_discovery_dated.csv")
@@ -110,6 +110,8 @@ chk("completeness 2024", round(comp[year == 2024]$completeness, 3), 0.567, 0.002
 eff <- fread("analysis_v2/data/effort_panel_v2.csv")
 chk("coverage-gap province-years", sum(eff$effort_status_v2 == "coverage_gap"), 24)
 chk("no-coverage province-years",  sum(eff$effort_status_v2 == "no_coverage"),  39)
+# 2024 年努力修正(2026-10-14): 广东 2024 年下载不全, 按缺失处理 / Guangdong 2024 treated as missing
+chk("download-gap province-years", sum(eff$effort_status_v2 == "download_gap"), 1)
 
 cat("\n============================================================\n")
 # NB: keep `else` on the same line as the closing brace - a top-level `cat(...)`

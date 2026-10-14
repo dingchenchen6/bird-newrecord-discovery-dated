@@ -61,7 +61,9 @@ FAM      <- c(mech = "离散风险模型", rf = "随机森林", xgb = "XGBoost")
 BLUE <- "#0072B2"; RED <- "#D55E00"; AMBER <- "#B45309"
 
 # ---------------- 数据与三族终拟合 ----------------
-d <- as.data.table(read_parquet(file.path(V2, "analysis_v2/data/model_v2_thr50.parquet")))[usable_main == TRUE]
+source(file.path(V2, "code", "helper_projection_base.R"))   # 基期补齐 / base-year completion
+full <- as.data.table(read_parquet(file.path(V2, "analysis_v2/data/model_v2_thr50.parquet")))
+d <- full[usable_main == TRUE]
 CC_MU <- mean(d$clim_change); CC_SD <- sd(d$clim_change)
 d[, `:=`(clim_change_z = (clim_change - CC_MU) / CC_SD,
          clim_var_z = as.numeric(scale(clim_var)), effort_z = eff_visits_gap_z,
@@ -87,7 +89,15 @@ fit_xgb <- xgb.train(data = xgb.DMatrix(Xall, label = d$event), nrounds = 300, v
 msg("三族终拟合完成")
 
 SUP  <- list(cc = quantile(d$clim_change_z, c(.01, .99)), ef = quantile(d$effort_z, c(.01, .99)))
-base <- d[year == max(d$year)]
+# 基期: 可用行 + 下载缺口省份(广东 2024, 努力沿用 2023), 后者只用于预测
+# base: usable rows + download-gap provinces (Guangdong 2024, effort from 2023), prediction only
+gb <- gap_base_rows(full, max(d$year), file.path(V2, "analysis_v2/data/effort_panel_v2.csv"))
+gb[, `:=`(clim_change_z = (clim_change - CC_MU) / CC_SD,
+          clim_var_z = (clim_var - mean(d$clim_var)) / sd(d$clim_var), effort_z = eff_visits_gap_z,
+          yr = year - 2002, species_f = factor(species, levels = levels(d$species_f)),
+          province_f = factor(province, levels = levels(d$province_f)),
+          mig_f = factor(mig_grp, levels = levels(d$mig_f)), ev = factor(event, levels = c(0, 1)))]
+base <- rbind(d[year == max(d$year)], gb, fill = TRUE)
 
 #' 对给定协变量表给出三族的原始预测 / raw predictions from all three families
 predict_all <- function(b) {

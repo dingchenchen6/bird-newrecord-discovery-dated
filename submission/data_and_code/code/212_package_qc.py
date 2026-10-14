@@ -70,7 +70,8 @@ for k, f in MAIN.items():
     report(n <= 15 or k != "NC", f"{k}: {n} 词")
 
 print("[4] 关键数字三版一致")
-KEYS = ["1,029", "175,901", "649", "392", "1.36", "1.40", "0.85", "1.157", "0.980", "2.23", "2.18", "1.07", "37%", "2.09"]
+# 2026-10-13 2024 年努力修正后的新值 / values after the 2024 effort correction
+KEYS = ["1,029", "175,640", "649", "392", "1.36", "1.43", "0.84", "1.161", "0.979", "2.22", "2.14", "1.13", "37%", "2.09"]
 txt = {k: f.read_text(encoding="utf-8") for k, f in MAIN.items()}
 missing = {k: [x for x in KEYS if x not in t] for k, t in txt.items()}
 report(all(not v for v in missing.values()),
@@ -80,14 +81,15 @@ print("[5] GCB 作者-年份引文完整性")
 g = txt["GCB"]; body, _, refs = g.partition("## References")
 entries = [e.strip() for e in refs.split("\n\n") if e.strip()]
 keys = set()
+SUR = r"([A-Z][A-Za-zÀ-ɏ'\-]+(?:\.[a-z]+)?)"      # 允许 GBIF.org 这类带域名的机构作者 / dotted corporate authors
 for e in entries:
-    sur = re.match(r"([A-Z][A-Za-zÀ-ɏ'\-]+)", e)
+    sur = re.match(SUR, e)
     yrs = re.findall(r"\((\d{4})[a-z]?\)", e) or re.findall(r"\b(19\d{2}|20\d{2})\b", e)
     if sur and yrs:
         keys.add((sur.group(1), yrs[-1]))
 cited = set()
 for c in re.findall(r"\(([^()]*?(?:19|20)\d{2}[a-z]?[^()]*?)\)", body):
-    for sur, yr in re.findall(r"([A-Z][A-Za-zÀ-ɏ'\-]+)(?:\s+(?:et al\.|&\s*[A-Z][A-Za-z'\-]+))?,?\s*((?:19|20)\d{2})", c):
+    for sur, yr in re.findall(SUR + r"(?:\s+(?:et al\.|&\s*[A-Z][A-Za-z'\-]+))?,?\s*((?:19|20)\d{2})", c):
         cited.add((sur, yr))
 corporate = {("World", "2024"), ("Platform", "2024"), ("International", "2024")}   # 机构作者的尾词
 unresolved = sorted(c for c in cited - keys - corporate
@@ -203,7 +205,8 @@ v3 = SUB / "presentation" / "AOC2026_v3_redesign"
 n_pp, n_pdf = len(list(v3.glob("*.pptx"))), len(list(v3.glob("*.pdf")))
 n_nt = len(list(v3.glob("AOC2026_v3_speaker_notes_*.md")))
 report(n_pp == 4 and n_pdf == 4 and n_nt == 2, f"PPTX {n_pp}/4、PDF {n_pdf}/4、讲稿 {n_nt}/2;旧版保留: "
-       + ", ".join(p.name for p in sorted((SUB / "presentation").rglob("*.pptx")) if "v3" not in p.name))
+       + ", ".join(p.name for p in sorted((SUB / "presentation").rglob("*.pptx"))
+                   if "_v3_" not in p.name and "_v4_" not in p.name))
 
 print("[12] 第 4 版报告与时空动图 / v4 PKU deck and animation (221)")
 v4 = SUB / "presentation" / "AOC2026_v4_PKU"

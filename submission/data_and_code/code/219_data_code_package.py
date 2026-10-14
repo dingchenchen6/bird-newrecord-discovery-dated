@@ -57,6 +57,8 @@ REPO = Path.home() / "bird-newrecord-discovery-dated"
 DATE = datetime.date.today().strftime("%Y%m%d")
 REPO_URL = "https://github.com/dingchenchen6/bird-newrecord-discovery-dated"
 FIRST_NEW = 205        # 205 号起为投稿包与图件脚本, 仓库尚未收录 / scripts from 205 on are new
+EXTRA_CODE = ("191b_province_bootstrap_fill.R",)   # 编号小于 205 的新增脚本(补跑丢失的自助法重抽样)
+                                                  # new scripts numbered below 205 (bootstrap refill)
 
 
 
@@ -94,6 +96,9 @@ def build_code() -> list[str]:
     for f in (V2 / "code").iterdir():
         m = re.match(r"(\d+)", f.name)
         if f.is_file() and m and int(m.group(1)) >= FIRST_NEW and f.suffix in {".R", ".py"}:
+            names.add(f.name)
+        # 无编号的共用函数与重跑驱动脚本 / unnumbered shared helpers and rerun drivers
+        if f.is_file() and (re.match(r"(helper_.*\.R|rerun_.*\.sh)$", f.name) or f.name in EXTRA_CODE):
             names.add(f.name)
     for name in sorted(names):
         src = V2 / "code" / name if (V2 / "code" / name).exists() else REPO / "code" / name
@@ -146,7 +151,7 @@ display item of the manuscript. The repository remains the maintained version.
 
 | Folder / file | What it holds |
 |---|---|
-| `code/` | Analysis pipeline ({n_code} scripts). Scripts 130–154 fit and summarise the models; 160–192 run the conservation, downscaling, machine-learning and null-model modules; 200–221 build the submission package, the figures, their editable versions and the animated map used in the talk. Run in numerical order. |
+| `code/` | Analysis pipeline ({n_code} scripts). Scripts 130–154 fit and summarise the models; 160–192 run the conservation, downscaling, machine-learning and null-model modules; 200–221 build the submission package, the figures, their editable versions and the animated map used in the talk; 222–230 correct the 2024 survey effort (eBird 2024 added from GBIF download https://doi.org/10.15468/dl.vfeeak), drive the full rerun (`rerun_effort2024_*.sh`) and trace every changed number; `helper_projection_base.R` completes the projection base year; `191b` refits the 50 province-bootstrap resamples lost to a worker crash in 191 (same seeds), restoring all 300. Run in numerical order. |
 | `data/`, `data_admin/` | Modelling data: discovery-dated events, effort panel, model matrices (three thresholds), climate panels, traits, protected-area and administrative-unit tables ({data_mb:.0f} MB) |
 | `tables/` | Every result table cited in the manuscript and the Supplementary Information |
 | `source_data/{{GCB,NEE,NC}}/` | Source data for each main figure, named by that journal's figure number (long format, one row per plotted value, `panel` column) |

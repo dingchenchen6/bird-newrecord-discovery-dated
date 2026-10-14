@@ -211,8 +211,9 @@ p5d <- ggplot(hb, aes(mult, term, fill = is.na(sd))) +
   scale_x_continuous(limits = c(0, 2.7)) +
   labs(x = "Hazard multiplier per 1 SD", y = NULL,
        title = "The observation process outweighs both",
-       subtitle = paste("One SD of province-by-year shock multiplies\n",
-                        "the hazard by 2.23 - more than either driver")) +
+       # 数值从模型读取, 避免重拟合后图注过时 / values read from the model so labels track refits
+       subtitle = sprintf("One SD of province-by-year shock multiplies\nthe hazard by %.2f - more than either driver",
+                          hier[term == "Province x year", mult])) +
   theme_pub() + theme(panel.grid.major.y = element_blank())
 
 F5 <- (p5a | p5b) / (p5c | p5d) + plot_annotation(tag_levels = "a")
@@ -293,8 +294,8 @@ p6c <- ggplot(py_b, aes(year, province, fill = exp(b))) +
   scale_x_continuous(breaks = seq(2002, 2024, 4), expand = c(0, 0)) +
   labs(x = NULL, y = NULL,
        title = "Where and when the observation process moved",
-       subtitle = paste("Province-by-year random intercepts: the largest\n",
-                        "variance component (SD 0.804, a 7-fold range)")) +
+       subtitle = sprintf("Province-by-year random intercepts: the largest\nvariance component (SD %.3f, multipliers up to %.0f-fold)",
+                          hier[term == "Province x year", sd], max(exp(py_b$b)))) +
   theme_pub(10) + theme(panel.grid = element_blank(), axis.text.y = element_text(size = 7.5))
 
 mtv <- tryCatch(readRDS(file.path(OUT, "data", "fit_R3_time_varying.rds")), error = function(e) NULL)

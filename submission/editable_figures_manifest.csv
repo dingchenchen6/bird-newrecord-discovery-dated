@@ -1,103 +1,103 @@
 journal,label,pptx,source,route,editable,slide_in,shapes,text_boxes,pictures,mean_abs_diff,pct_px_diff_gt64,size_kb
-GCB,Figure 1,GCB/figures/Figure1.pptx,analysis_v2/submission/GCB/figures/Figure1.pdf,vector,native shapes + editable text,9.00 x 6.89,271,79,0,9.56,5.57,18
-GCB,Figure 2,GCB/figures/Figure2.pptx,analysis_v2/submission/GCB/figures/Figure2.pdf,vector,native shapes + editable text,9.00 x 6.39,347,56,0,6.87,3.96,17
-GCB,Figure 3,GCB/figures/Figure3.pptx,analysis_v2/submission/GCB/figures/Figure3.pdf,vector,native shapes + editable text,9.00 x 6.60,248,87,2,8.07,4.67,15
-GCB,Figure 4,GCB/figures/Figure4.pptx,analysis_v2/submission/GCB/figures/Figure4.pdf,vector,native shapes + editable text,9.00 x 6.60,185,80,0,9.53,5.64,17
-GCB,Figure 5,GCB/figures/Figure5.pptx,analysis_v2/submission/GCB/figures/Figure5.pdf,vector,native shapes + editable text,9.29 x 8.00,3476,86,2,6.84,4.02,720
-GCB,Figure 6,GCB/figures/Figure6.pptx,analysis_v2/submission/GCB/figures/Figure6.pdf,vector,native shapes + editable text,7.19 x 7.60,344,52,0,3.86,2.13,29
-GCB,Figure 7,GCB/figures/Figure7.pptx,analysis_v2/submission/GCB/figures/Figure7.pdf,vector,native shapes + editable text,9.00 x 6.39,1973,83,0,10.36,5.9,48
+GCB,Figure 1,GCB/figures/Figure1.pptx,analysis_v2/submission/GCB/figures/Figure1.pdf,vector,native shapes + editable text,9.00 x 6.89,269,77,0,9.55,5.56,18
+GCB,Figure 2,GCB/figures/Figure2.pptx,analysis_v2/submission/GCB/figures/Figure2.pdf,vector,native shapes + editable text,9.00 x 6.39,350,57,0,6.88,3.95,17
+GCB,Figure 3,GCB/figures/Figure3.pptx,analysis_v2/submission/GCB/figures/Figure3.pdf,vector,native shapes + editable text,9.00 x 6.60,251,88,2,8.09,4.68,15
+GCB,Figure 4,GCB/figures/Figure4.pptx,analysis_v2/submission/GCB/figures/Figure4.pdf,vector,native shapes + editable text,9.00 x 6.60,185,80,0,9.52,5.63,17
+GCB,Figure 5,GCB/figures/Figure5.pptx,analysis_v2/submission/GCB/figures/Figure5.pdf,vector,native shapes + editable text,9.29 x 8.00,3467,84,2,6.84,4.03,720
+GCB,Figure 6,GCB/figures/Figure6.pptx,analysis_v2/submission/GCB/figures/Figure6.pdf,vector,native shapes + editable text,7.19 x 7.60,345,52,0,3.86,2.13,29
+GCB,Figure 7,GCB/figures/Figure7.pptx,analysis_v2/submission/GCB/figures/Figure7.pdf,vector,native shapes + editable text,9.00 x 6.39,1968,82,0,10.46,5.99,48
 GCB,Fig. S1,GCB/figures_SI/FigS1.pptx,analysis_v2/figures/Fig4_random_structure_v2.pdf,vector,native shapes + editable text,10.00 x 3.89,204,63,0,9.06,5.57,13
-GCB,Fig. S2,GCB/figures_SI/FigS2.pptx,analysis_v2/figures/Fig7_window_baseline_sensitivity_v2.pdf,vector,native shapes + editable text,11.19 x 7.39,262,60,0,7.33,4.2,16
-GCB,Fig. S3,GCB/figures_SI/FigS3.pptx,analysis_v2/figures/Fig8_migratory_strategy_v2.pdf,vector,native shapes + editable text,11.39 x 7.60,242,106,0,6.94,4.31,14
+GCB,Fig. S2,GCB/figures_SI/FigS2.pptx,analysis_v2/figures/Fig7_window_baseline_sensitivity_v2.pdf,vector,native shapes + editable text,11.19 x 7.39,265,61,0,7.34,4.22,16
+GCB,Fig. S3,GCB/figures_SI/FigS3.pptx,analysis_v2/figures/Fig8_migratory_strategy_v2.pdf,vector,native shapes + editable text,11.39 x 7.60,239,105,0,6.94,4.31,14
 GCB,Fig. S4,GCB/figures_SI/FigS4.pptx,analysis_v2/figures/Fig9_species_level_v2.pdf,vector,native shapes + editable text,12.39 x 8.39,330,107,0,8.59,5.6,17
-GCB,Fig. S5,GCB/figures_SI/FigS5.pptx,analysis_v2/figures/Fig10_province_level_v2.pdf,vector,native shapes + editable text,12.00 x 8.00,251,94,0,6.85,4.44,15
-GCB,Fig. S6,GCB/figures_SI/FigS6.pptx,analysis_v2/figures_future/FigM1_future_mechanistic_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10838,25,1,5.92,3.72,3570
-GCB,Fig. S7,GCB/figures_SI/FigS7.pptx,analysis_v2/figures_future/FigM2_future_ml_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10829,24,1,5.21,3.19,3564
-GCB,Fig. S8,GCB/figures_SI/FigS8.pptx,analysis_v2/figures_future/FigM3_shap_interpretability_v2.pdf,vector,native shapes + editable text,11.00 x 3.79,120096,35,0,4.99,2.82,2128
-GCB,Fig. S9,GCB/figures_SI/FigS9.pptx,analysis_v2/figures/FigS1_dharma_v2.png,raster,picture only,10.00 x 7.50,1,0,1,4.58,1.98,698
-GCB,Fig. S10,GCB/figures_SI/FigS10.pptx,analysis_v2/figures_future/FigS3_future_unmasked_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10850,28,1,5.55,3.46,3564
-GCB,Fig. S11,GCB/figures_SI/FigS11.pptx,analysis_v2/figures/FigS5_resampling_v2.pdf,vector,native shapes + editable text,12.39 x 7.60,591,98,0,6.98,4.41,32
+GCB,Fig. S5,GCB/figures_SI/FigS5.pptx,analysis_v2/figures/Fig10_province_level_v2.pdf,vector,native shapes + editable text,12.00 x 8.00,251,94,0,6.85,4.45,15
+GCB,Fig. S6,GCB/figures_SI/FigS6.pptx,analysis_v2/figures_future/FigM1_future_mechanistic_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10836,24,1,5.88,3.68,3563
+GCB,Fig. S7,GCB/figures_SI/FigS7.pptx,analysis_v2/figures_future/FigM2_future_ml_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10830,23,1,5.2,3.17,3578
+GCB,Fig. S8,GCB/figures_SI/FigS8.pptx,analysis_v2/figures_future/FigM3_shap_interpretability_v2.pdf,vector,native shapes + editable text,11.00 x 3.79,120103,37,0,5.06,2.85,2096
+GCB,Fig. S9,GCB/figures_SI/FigS9.pptx,analysis_v2/figures/FigS1_dharma_v2.png,raster,picture only,10.00 x 7.50,1,0,1,4.6,2.0,683
+GCB,Fig. S10,GCB/figures_SI/FigS10.pptx,analysis_v2/figures_future/FigS3_future_unmasked_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10850,28,1,5.67,3.54,3564
+GCB,Fig. S11,GCB/figures_SI/FigS11.pptx,analysis_v2/figures/FigS5_resampling_v2.pdf,vector,native shapes + editable text,12.39 x 7.60,589,97,0,6.89,4.37,32
 GCB,Fig. S12,GCB/figures_SI/FigS12.pptx,analysis_v2/figures_pa/en/FigP1_pa_enrichment.pdf,vector,native shapes + editable text,10.19 x 7.00,179,67,0,6.22,3.77,13
 GCB,Fig. S13,GCB/figures_SI/FigS13.pptx,analysis_v2/figures_pa/en/FigP2_pa_persistence.pdf,vector,native shapes + editable text,10.19 x 7.00,242,53,0,6.79,4.06,18
 GCB,Fig. S14,GCB/figures_SI/FigS14.pptx,analysis_v2/figures_pa/en/FigP3_pa_mismatch_monitoring.pdf,vector,native shapes + editable text,10.19 x 7.60,3354,54,0,6.27,3.71,632
 GCB,Fig. S15,GCB/figures_SI/FigS15.pptx,analysis_v2/figures_direction/combined/order_direction_windrose_facets.pdf,vector,native shapes + editable text,14.60 x 15.39,850,192,0,3.84,1.96,88
 GCB,Fig. S16,GCB/figures_SI/FigS16.pptx,analysis_v2/figures_multiscale/en/FigST1_spatiotemporal_pattern.pdf,vector,native shapes + editable text,12.19 x 9.00,10356,48,2,2.66,1.48,2830
-GCB,Fig. S17,GCB/figures_SI/FigS17.pptx,analysis_v2/figures_multiscale/en/FigMS3_future_scenarios.png,raster,picture only,14.60 x 11.00,1,0,1,3.04,1.02,2540
+GCB,Fig. S17,GCB/figures_SI/FigS17.pptx,analysis_v2/figures_multiscale/en/FigMS3_future_scenarios.png,raster,picture only,14.60 x 11.00,1,0,1,3.12,1.02,2600
 GCB,Fig. S18,GCB/figures_SI/FigS18.pptx,analysis_v2/figures_multiscale/en/FigMS2_multiscale_model_skill.pdf,vector,native shapes + editable text,8.79 x 7.60,134,44,0,5.93,3.3,11
-GCB,Fig. S19,GCB/figures_SI/FigS19.pptx,analysis_v2/figures_multiscale/en/FigMS1_multiscale_model_maps.png,raster,picture only,12.60 x 13.39,1,0,1,2.33,0.75,3874
-GCB,Fig. S20,GCB/figures_SI/FigS20.pptx,analysis_v2/figures_multiscale/en/FigMS4_future_scenarios_by_model.png,raster,picture only,14.39 x 13.60,1,0,1,2.6,0.76,1817
-GCB,Fig. S21,GCB/figures_SI/FigS21.pptx,analysis_v2/figures_multiscale/en/FigMS5_future_multiscale_by_model.png,raster,picture only,12.60 x 13.39,1,0,1,2.04,0.7,2886
-NEE,Fig. 1,NEE/figures/Fig1.pptx,analysis_v2/submission/NEE/figures/Fig1.pdf,vector,native shapes + editable text,9.00 x 6.89,271,79,0,9.56,5.57,18
-NEE,Fig. 2,NEE/figures/Fig2.pptx,analysis_v2/submission/NEE/figures/Fig2.pdf,vector,native shapes + editable text,9.00 x 6.39,347,56,0,6.87,3.96,17
-NEE,Fig. 3,NEE/figures/Fig3.pptx,analysis_v2/submission/NEE/figures/Fig3.pdf,vector,native shapes + editable text,9.29 x 8.00,3476,86,2,6.84,4.02,720
-NEE,Fig. 4,NEE/figures/Fig4.pptx,analysis_v2/submission/NEE/figures/Fig4.pdf,vector,native shapes + editable text,7.19 x 7.60,344,52,0,3.86,2.13,29
-NEE,Fig. 5,NEE/figures/Fig5.pptx,analysis_v2/submission/NEE/figures/Fig5.pdf,vector,native shapes + editable text,9.00 x 6.39,1973,83,0,10.36,5.9,48
+GCB,Fig. S19,GCB/figures_SI/FigS19.pptx,analysis_v2/figures_multiscale/en/FigMS1_multiscale_model_maps.png,raster,picture only,12.60 x 13.39,1,0,1,2.34,0.75,3881
+GCB,Fig. S20,GCB/figures_SI/FigS20.pptx,analysis_v2/figures_multiscale/en/FigMS4_future_scenarios_by_model.png,raster,picture only,14.39 x 13.60,1,0,1,2.57,0.76,1808
+GCB,Fig. S21,GCB/figures_SI/FigS21.pptx,analysis_v2/figures_multiscale/en/FigMS5_future_multiscale_by_model.png,raster,picture only,12.60 x 13.39,1,0,1,2.03,0.7,2868
+NEE,Fig. 1,NEE/figures/Fig1.pptx,analysis_v2/submission/NEE/figures/Fig1.pdf,vector,native shapes + editable text,9.00 x 6.89,269,77,0,9.55,5.56,18
+NEE,Fig. 2,NEE/figures/Fig2.pptx,analysis_v2/submission/NEE/figures/Fig2.pdf,vector,native shapes + editable text,9.00 x 6.39,350,57,0,6.88,3.95,17
+NEE,Fig. 3,NEE/figures/Fig3.pptx,analysis_v2/submission/NEE/figures/Fig3.pdf,vector,native shapes + editable text,9.29 x 8.00,3467,84,2,6.84,4.03,720
+NEE,Fig. 4,NEE/figures/Fig4.pptx,analysis_v2/submission/NEE/figures/Fig4.pdf,vector,native shapes + editable text,7.19 x 7.60,345,52,0,3.86,2.13,29
+NEE,Fig. 5,NEE/figures/Fig5.pptx,analysis_v2/submission/NEE/figures/Fig5.pdf,vector,native shapes + editable text,9.00 x 6.39,1968,82,0,10.46,5.99,48
 NEE,Fig. S1,NEE/figures_SI/FigS1.pptx,analysis_v2/figures/Fig4_random_structure_v2.pdf,vector,native shapes + editable text,10.00 x 3.89,204,63,0,9.06,5.57,13
-NEE,Fig. S2,NEE/figures_SI/FigS2.pptx,analysis_v2/figures/Fig3_specification_robustness_v2.pdf,vector,native shapes + editable text,9.00 x 6.60,248,87,2,8.07,4.67,15
-NEE,Fig. S3,NEE/figures_SI/FigS3.pptx,analysis_v2/figures/Fig7_window_baseline_sensitivity_v2.pdf,vector,native shapes + editable text,11.19 x 7.39,262,60,0,7.33,4.2,16
-NEE,Fig. S4,NEE/figures_SI/FigS4.pptx,analysis_v2/figures/Fig5_model_anatomy_v2.pdf,vector,native shapes + editable text,9.00 x 6.60,185,80,0,9.53,5.64,17
-NEE,Fig. S5,NEE/figures_SI/FigS5.pptx,analysis_v2/figures/Fig8_migratory_strategy_v2.pdf,vector,native shapes + editable text,11.39 x 7.60,242,106,0,6.94,4.31,14
+NEE,Fig. S2,NEE/figures_SI/FigS2.pptx,analysis_v2/figures/Fig3_specification_robustness_v2.pdf,vector,native shapes + editable text,9.00 x 6.60,251,88,2,8.09,4.68,15
+NEE,Fig. S3,NEE/figures_SI/FigS3.pptx,analysis_v2/figures/Fig7_window_baseline_sensitivity_v2.pdf,vector,native shapes + editable text,11.19 x 7.39,265,61,0,7.34,4.22,16
+NEE,Fig. S4,NEE/figures_SI/FigS4.pptx,analysis_v2/figures/Fig5_model_anatomy_v2.pdf,vector,native shapes + editable text,9.00 x 6.60,185,80,0,9.52,5.63,17
+NEE,Fig. S5,NEE/figures_SI/FigS5.pptx,analysis_v2/figures/Fig8_migratory_strategy_v2.pdf,vector,native shapes + editable text,11.39 x 7.60,239,105,0,6.94,4.31,14
 NEE,Fig. S6,NEE/figures_SI/FigS6.pptx,analysis_v2/figures/Fig9_species_level_v2.pdf,vector,native shapes + editable text,12.39 x 8.39,330,107,0,8.59,5.6,17
-NEE,Fig. S7,NEE/figures_SI/FigS7.pptx,analysis_v2/figures/Fig10_province_level_v2.pdf,vector,native shapes + editable text,12.00 x 8.00,251,94,0,6.85,4.44,15
-NEE,Fig. S8,NEE/figures_SI/FigS8.pptx,analysis_v2/figures/FigS1_dharma_v2.png,raster,picture only,10.00 x 7.50,1,0,1,4.58,1.98,698
-NEE,Fig. S9,NEE/figures_SI/FigS9.pptx,analysis_v2/figures/FigS5_resampling_v2.pdf,vector,native shapes + editable text,12.39 x 7.60,591,98,0,6.98,4.41,32
-NEE,Fig. S10,NEE/figures_SI/FigS10.pptx,analysis_v2/figures_future/FigM1_future_mechanistic_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10838,25,1,5.92,3.72,3570
-NEE,Fig. S11,NEE/figures_SI/FigS11.pptx,analysis_v2/figures_future/FigS3_future_unmasked_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10850,28,1,5.55,3.46,3564
-NEE,Fig. S12,NEE/figures_SI/FigS12.pptx,analysis_v2/figures_future/FigM2_future_ml_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10829,24,1,5.21,3.19,3564
+NEE,Fig. S7,NEE/figures_SI/FigS7.pptx,analysis_v2/figures/Fig10_province_level_v2.pdf,vector,native shapes + editable text,12.00 x 8.00,251,94,0,6.85,4.45,15
+NEE,Fig. S8,NEE/figures_SI/FigS8.pptx,analysis_v2/figures/FigS1_dharma_v2.png,raster,picture only,10.00 x 7.50,1,0,1,4.6,2.0,683
+NEE,Fig. S9,NEE/figures_SI/FigS9.pptx,analysis_v2/figures/FigS5_resampling_v2.pdf,vector,native shapes + editable text,12.39 x 7.60,589,97,0,6.89,4.37,32
+NEE,Fig. S10,NEE/figures_SI/FigS10.pptx,analysis_v2/figures_future/FigM1_future_mechanistic_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10836,24,1,5.88,3.68,3563
+NEE,Fig. S11,NEE/figures_SI/FigS11.pptx,analysis_v2/figures_future/FigS3_future_unmasked_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10850,28,1,5.67,3.54,3564
+NEE,Fig. S12,NEE/figures_SI/FigS12.pptx,analysis_v2/figures_future/FigM2_future_ml_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10830,23,1,5.2,3.17,3578
 NEE,Fig. S13,NEE/figures_SI/FigS13.pptx,analysis_v2/figures_pa/en/FigP1_pa_enrichment.pdf,vector,native shapes + editable text,10.19 x 7.00,179,67,0,6.22,3.77,13
 NEE,Fig. S14,NEE/figures_SI/FigS14.pptx,analysis_v2/figures_pa/en/FigP2_pa_persistence.pdf,vector,native shapes + editable text,10.19 x 7.00,242,53,0,6.79,4.06,18
 NEE,Fig. S15,NEE/figures_SI/FigS15.pptx,analysis_v2/figures_pa/en/FigP3_pa_mismatch_monitoring.pdf,vector,native shapes + editable text,10.19 x 7.60,3354,54,0,6.27,3.71,632
 NEE,Fig. S16,NEE/figures_SI/FigS16.pptx,analysis_v2/figures_direction/combined/order_direction_windrose_facets.pdf,vector,native shapes + editable text,14.60 x 15.39,850,192,0,3.84,1.96,88
-NEE,Fig. S17,NEE/figures_SI/FigS17.pptx,analysis_v2/figures_future/FigM3_shap_interpretability_v2.pdf,vector,native shapes + editable text,11.00 x 3.79,120096,35,0,4.99,2.82,2128
+NEE,Fig. S17,NEE/figures_SI/FigS17.pptx,analysis_v2/figures_future/FigM3_shap_interpretability_v2.pdf,vector,native shapes + editable text,11.00 x 3.79,120103,37,0,5.06,2.85,2096
 NEE,Fig. S18,NEE/figures_SI/FigS18.pptx,analysis_v2/figures_multiscale/en/FigST1_spatiotemporal_pattern.pdf,vector,native shapes + editable text,12.19 x 9.00,10356,48,2,2.66,1.48,2830
-NEE,Fig. S19,NEE/figures_SI/FigS19.pptx,analysis_v2/figures_multiscale/en/FigMS3_future_scenarios.png,raster,picture only,14.60 x 11.00,1,0,1,3.04,1.02,2540
+NEE,Fig. S19,NEE/figures_SI/FigS19.pptx,analysis_v2/figures_multiscale/en/FigMS3_future_scenarios.png,raster,picture only,14.60 x 11.00,1,0,1,3.12,1.02,2600
 NEE,Fig. S20,NEE/figures_SI/FigS20.pptx,analysis_v2/figures_multiscale/en/FigMS2_multiscale_model_skill.pdf,vector,native shapes + editable text,8.79 x 7.60,134,44,0,5.93,3.3,11
-NEE,Fig. S21,NEE/figures_SI/FigS21.pptx,analysis_v2/figures_multiscale/en/FigMS1_multiscale_model_maps.png,raster,picture only,12.60 x 13.39,1,0,1,2.33,0.75,3874
-NEE,Fig. S22,NEE/figures_SI/FigS22.pptx,analysis_v2/figures_multiscale/en/FigMS4_future_scenarios_by_model.png,raster,picture only,14.39 x 13.60,1,0,1,2.6,0.76,1817
-NEE,Fig. S23,NEE/figures_SI/FigS23.pptx,analysis_v2/figures_multiscale/en/FigMS5_future_multiscale_by_model.png,raster,picture only,12.60 x 13.39,1,0,1,2.04,0.7,2886
-NC,Fig. 1,NC/figures/Fig1.pptx,analysis_v2/submission/NC/figures/Fig1.pdf,vector,native shapes + editable text,9.00 x 6.39,347,56,0,6.87,3.96,17
-NC,Fig. 2,NC/figures/Fig2.pptx,analysis_v2/submission/NC/figures/Fig2.pdf,vector,native shapes + editable text,9.00 x 6.89,271,79,0,9.56,5.57,18
-NC,Fig. 3,NC/figures/Fig3.pptx,analysis_v2/submission/NC/figures/Fig3.pdf,vector,native shapes + editable text,9.00 x 6.60,185,80,0,9.53,5.64,17
-NC,Fig. 4,NC/figures/Fig4.pptx,analysis_v2/submission/NC/figures/Fig4.pdf,vector,native shapes + editable text,9.29 x 8.00,3476,86,2,6.84,4.02,720
-NC,Fig. 5,NC/figures/Fig5.pptx,analysis_v2/submission/NC/figures/Fig5.pdf,vector,native shapes + editable text,7.19 x 7.60,344,52,0,3.86,2.13,29
-NC,Fig. 6,NC/figures/Fig6.pptx,analysis_v2/submission/NC/figures/Fig6.pdf,vector,native shapes + editable text,9.00 x 6.60,248,87,2,8.07,4.67,15
-NC,Fig. 7,NC/figures/Fig7.pptx,analysis_v2/submission/NC/figures/Fig7.pdf,vector,native shapes + editable text,9.00 x 6.39,1973,83,0,10.36,5.9,48
+NEE,Fig. S21,NEE/figures_SI/FigS21.pptx,analysis_v2/figures_multiscale/en/FigMS1_multiscale_model_maps.png,raster,picture only,12.60 x 13.39,1,0,1,2.34,0.75,3881
+NEE,Fig. S22,NEE/figures_SI/FigS22.pptx,analysis_v2/figures_multiscale/en/FigMS4_future_scenarios_by_model.png,raster,picture only,14.39 x 13.60,1,0,1,2.57,0.76,1808
+NEE,Fig. S23,NEE/figures_SI/FigS23.pptx,analysis_v2/figures_multiscale/en/FigMS5_future_multiscale_by_model.png,raster,picture only,12.60 x 13.39,1,0,1,2.03,0.7,2868
+NC,Fig. 1,NC/figures/Fig1.pptx,analysis_v2/submission/NC/figures/Fig1.pdf,vector,native shapes + editable text,9.00 x 6.39,350,57,0,6.88,3.95,17
+NC,Fig. 2,NC/figures/Fig2.pptx,analysis_v2/submission/NC/figures/Fig2.pdf,vector,native shapes + editable text,9.00 x 6.89,269,77,0,9.55,5.56,18
+NC,Fig. 3,NC/figures/Fig3.pptx,analysis_v2/submission/NC/figures/Fig3.pdf,vector,native shapes + editable text,9.00 x 6.60,185,80,0,9.52,5.63,17
+NC,Fig. 4,NC/figures/Fig4.pptx,analysis_v2/submission/NC/figures/Fig4.pdf,vector,native shapes + editable text,9.29 x 8.00,3467,84,2,6.84,4.03,720
+NC,Fig. 5,NC/figures/Fig5.pptx,analysis_v2/submission/NC/figures/Fig5.pdf,vector,native shapes + editable text,7.19 x 7.60,345,52,0,3.86,2.13,29
+NC,Fig. 6,NC/figures/Fig6.pptx,analysis_v2/submission/NC/figures/Fig6.pdf,vector,native shapes + editable text,9.00 x 6.60,251,88,2,8.09,4.68,15
+NC,Fig. 7,NC/figures/Fig7.pptx,analysis_v2/submission/NC/figures/Fig7.pdf,vector,native shapes + editable text,9.00 x 6.39,1968,82,0,10.46,5.99,48
 NC,Fig. S1,NC/figures_SI/FigS1.pptx,analysis_v2/figures/Fig4_random_structure_v2.pdf,vector,native shapes + editable text,10.00 x 3.89,204,63,0,9.06,5.57,13
-NC,Fig. S2,NC/figures_SI/FigS2.pptx,analysis_v2/figures/Fig7_window_baseline_sensitivity_v2.pdf,vector,native shapes + editable text,11.19 x 7.39,262,60,0,7.33,4.2,16
-NC,Fig. S3,NC/figures_SI/FigS3.pptx,analysis_v2/figures/Fig8_migratory_strategy_v2.pdf,vector,native shapes + editable text,11.39 x 7.60,242,106,0,6.94,4.31,14
+NC,Fig. S2,NC/figures_SI/FigS2.pptx,analysis_v2/figures/Fig7_window_baseline_sensitivity_v2.pdf,vector,native shapes + editable text,11.19 x 7.39,265,61,0,7.34,4.22,16
+NC,Fig. S3,NC/figures_SI/FigS3.pptx,analysis_v2/figures/Fig8_migratory_strategy_v2.pdf,vector,native shapes + editable text,11.39 x 7.60,239,105,0,6.94,4.31,14
 NC,Fig. S4,NC/figures_SI/FigS4.pptx,analysis_v2/figures/Fig9_species_level_v2.pdf,vector,native shapes + editable text,12.39 x 8.39,330,107,0,8.59,5.6,17
-NC,Fig. S5,NC/figures_SI/FigS5.pptx,analysis_v2/figures/Fig10_province_level_v2.pdf,vector,native shapes + editable text,12.00 x 8.00,251,94,0,6.85,4.44,15
-NC,Fig. S6,NC/figures_SI/FigS6.pptx,analysis_v2/figures_future/FigM1_future_mechanistic_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10838,25,1,5.92,3.72,3570
-NC,Fig. S7,NC/figures_SI/FigS7.pptx,analysis_v2/figures_future/FigM2_future_ml_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10829,24,1,5.21,3.19,3564
-NC,Fig. S8,NC/figures_SI/FigS8.pptx,analysis_v2/figures_future/FigM3_shap_interpretability_v2.pdf,vector,native shapes + editable text,11.00 x 3.79,120096,35,0,4.99,2.82,2128
-NC,Fig. S9,NC/figures_SI/FigS9.pptx,analysis_v2/figures/FigS1_dharma_v2.png,raster,picture only,10.00 x 7.50,1,0,1,4.58,1.98,698
-NC,Fig. S10,NC/figures_SI/FigS10.pptx,analysis_v2/figures_future/FigS3_future_unmasked_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10850,28,1,5.55,3.46,3564
-NC,Fig. S11,NC/figures_SI/FigS11.pptx,analysis_v2/figures/FigS5_resampling_v2.pdf,vector,native shapes + editable text,12.39 x 7.60,591,98,0,6.98,4.41,32
+NC,Fig. S5,NC/figures_SI/FigS5.pptx,analysis_v2/figures/Fig10_province_level_v2.pdf,vector,native shapes + editable text,12.00 x 8.00,251,94,0,6.85,4.45,15
+NC,Fig. S6,NC/figures_SI/FigS6.pptx,analysis_v2/figures_future/FigM1_future_mechanistic_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10836,24,1,5.88,3.68,3563
+NC,Fig. S7,NC/figures_SI/FigS7.pptx,analysis_v2/figures_future/FigM2_future_ml_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10830,23,1,5.2,3.17,3578
+NC,Fig. S8,NC/figures_SI/FigS8.pptx,analysis_v2/figures_future/FigM3_shap_interpretability_v2.pdf,vector,native shapes + editable text,11.00 x 3.79,120103,37,0,5.06,2.85,2096
+NC,Fig. S9,NC/figures_SI/FigS9.pptx,analysis_v2/figures/FigS1_dharma_v2.png,raster,picture only,10.00 x 7.50,1,0,1,4.6,2.0,683
+NC,Fig. S10,NC/figures_SI/FigS10.pptx,analysis_v2/figures_future/FigS3_future_unmasked_v2.pdf,vector,native shapes + editable text,9.39 x 6.60,10850,28,1,5.67,3.54,3564
+NC,Fig. S11,NC/figures_SI/FigS11.pptx,analysis_v2/figures/FigS5_resampling_v2.pdf,vector,native shapes + editable text,12.39 x 7.60,589,97,0,6.89,4.37,32
 NC,Fig. S12,NC/figures_SI/FigS12.pptx,analysis_v2/figures_pa/en/FigP1_pa_enrichment.pdf,vector,native shapes + editable text,10.19 x 7.00,179,67,0,6.22,3.77,13
 NC,Fig. S13,NC/figures_SI/FigS13.pptx,analysis_v2/figures_pa/en/FigP2_pa_persistence.pdf,vector,native shapes + editable text,10.19 x 7.00,242,53,0,6.79,4.06,18
 NC,Fig. S14,NC/figures_SI/FigS14.pptx,analysis_v2/figures_pa/en/FigP3_pa_mismatch_monitoring.pdf,vector,native shapes + editable text,10.19 x 7.60,3354,54,0,6.27,3.71,632
 NC,Fig. S15,NC/figures_SI/FigS15.pptx,analysis_v2/figures_multiscale/en/FigST1_spatiotemporal_pattern.pdf,vector,native shapes + editable text,12.19 x 9.00,10356,48,2,2.66,1.48,2830
-NC,Fig. S16,NC/figures_SI/FigS16.pptx,analysis_v2/figures_multiscale/en/FigMS3_future_scenarios.png,raster,picture only,14.60 x 11.00,1,0,1,3.04,1.02,2540
+NC,Fig. S16,NC/figures_SI/FigS16.pptx,analysis_v2/figures_multiscale/en/FigMS3_future_scenarios.png,raster,picture only,14.60 x 11.00,1,0,1,3.12,1.02,2600
 NC,Fig. S17,NC/figures_SI/FigS17.pptx,analysis_v2/figures_multiscale/en/FigMS2_multiscale_model_skill.pdf,vector,native shapes + editable text,8.79 x 7.60,134,44,0,5.93,3.3,11
-NC,Fig. S18,NC/figures_SI/FigS18.pptx,analysis_v2/figures_multiscale/en/FigMS1_multiscale_model_maps.png,raster,picture only,12.60 x 13.39,1,0,1,2.33,0.75,3874
-NC,Fig. S19,NC/figures_SI/FigS19.pptx,analysis_v2/figures_multiscale/en/FigMS4_future_scenarios_by_model.png,raster,picture only,14.39 x 13.60,1,0,1,2.6,0.76,1817
-NC,Fig. S20,NC/figures_SI/FigS20.pptx,analysis_v2/figures_multiscale/en/FigMS5_future_multiscale_by_model.png,raster,picture only,12.60 x 13.39,1,0,1,2.04,0.7,2886
-GCB,Figure1 (polished),GCB/figures_polished/Figure1.pptx,analysis_v2/figures_topjournal/TJ_Fig_main_results.pdf,vector,native shapes + editable text,7.19 x 4.92,256,83,0,4.32,2.64,18
-GCB,Figure2 (polished),GCB/figures_polished/Figure2.pptx,analysis_v2/figures_topjournal/TJ_Fig_dating_correction.pdf,vector,native shapes + editable text,7.19 x 4.51,315,63,0,3.77,2.35,16
-GCB,Figure3 (polished),GCB/figures_polished/Figure3.pptx,analysis_v2/figures_topjournal/TJ_Fig_specification_robustness.pdf,vector,native shapes + editable text,7.19 x 4.72,254,80,2,3.31,2.0,15
+NC,Fig. S18,NC/figures_SI/FigS18.pptx,analysis_v2/figures_multiscale/en/FigMS1_multiscale_model_maps.png,raster,picture only,12.60 x 13.39,1,0,1,2.34,0.75,3881
+NC,Fig. S19,NC/figures_SI/FigS19.pptx,analysis_v2/figures_multiscale/en/FigMS4_future_scenarios_by_model.png,raster,picture only,14.39 x 13.60,1,0,1,2.57,0.76,1808
+NC,Fig. S20,NC/figures_SI/FigS20.pptx,analysis_v2/figures_multiscale/en/FigMS5_future_multiscale_by_model.png,raster,picture only,12.60 x 13.39,1,0,1,2.03,0.7,2868
+GCB,Figure1 (polished),GCB/figures_polished/Figure1.pptx,analysis_v2/figures_topjournal/TJ_Fig_main_results.pdf,vector,native shapes + editable text,7.19 x 4.92,256,83,0,4.33,2.64,18
+GCB,Figure2 (polished),GCB/figures_polished/Figure2.pptx,analysis_v2/figures_topjournal/TJ_Fig_dating_correction.pdf,vector,native shapes + editable text,7.19 x 4.51,315,63,0,3.79,2.35,16
+GCB,Figure3 (polished),GCB/figures_polished/Figure3.pptx,analysis_v2/figures_topjournal/TJ_Fig_specification_robustness.pdf,vector,native shapes + editable text,7.19 x 4.72,254,80,2,3.35,2.0,15
 GCB,Figure4 (polished),GCB/figures_polished/Figure4.pptx,analysis_v2/figures_topjournal/TJ_Fig_model_anatomy.pdf,vector,native shapes + editable text,7.19 x 5.19,161,78,0,4.52,2.71,16
-GCB,Figure5 (polished),GCB/figures_polished/Figure5.pptx,analysis_v2/figures_topjournal/TJ_Fig_observation_process.pdf,vector,native shapes + editable text,7.19 x 5.90,3866,89,2,3.43,2.03,810
+GCB,Figure5 (polished),GCB/figures_polished/Figure5.pptx,analysis_v2/figures_topjournal/TJ_Fig_observation_process.pdf,vector,native shapes + editable text,7.19 x 5.90,3862,87,2,3.43,2.02,810
 GCB,Figure6 (polished),GCB/figures_polished/Figure6.pptx,analysis_v2/figures_topjournal/TJ_Fig_direction_null.pdf,vector,native shapes + editable text,7.19 x 4.60,274,90,0,4.5,2.8,42
-GCB,Figure7 (polished),GCB/figures_polished/Figure7.pptx,analysis_v2/figures_topjournal/TJ_Fig_mech_vs_ml.pdf,vector,native shapes + editable text,7.19 x 4.92,1958,84,0,4.4,2.65,47
-NEE,Fig1 (polished),NEE/figures_polished/Fig1.pptx,analysis_v2/figures_topjournal/TJ_Fig_main_results.pdf,vector,native shapes + editable text,7.19 x 4.92,256,83,0,4.32,2.64,18
-NEE,Fig2 (polished),NEE/figures_polished/Fig2.pptx,analysis_v2/figures_topjournal/TJ_Fig_dating_correction.pdf,vector,native shapes + editable text,7.19 x 4.51,315,63,0,3.77,2.35,16
-NEE,Fig3 (polished),NEE/figures_polished/Fig3.pptx,analysis_v2/figures_topjournal/TJ_Fig_observation_process.pdf,vector,native shapes + editable text,7.19 x 5.90,3866,89,2,3.43,2.03,810
+GCB,Figure7 (polished),GCB/figures_polished/Figure7.pptx,analysis_v2/figures_topjournal/TJ_Fig_mech_vs_ml.pdf,vector,native shapes + editable text,7.19 x 4.92,1948,84,0,4.37,2.64,47
+NEE,Fig1 (polished),NEE/figures_polished/Fig1.pptx,analysis_v2/figures_topjournal/TJ_Fig_main_results.pdf,vector,native shapes + editable text,7.19 x 4.92,256,83,0,4.33,2.64,18
+NEE,Fig2 (polished),NEE/figures_polished/Fig2.pptx,analysis_v2/figures_topjournal/TJ_Fig_dating_correction.pdf,vector,native shapes + editable text,7.19 x 4.51,315,63,0,3.79,2.35,16
+NEE,Fig3 (polished),NEE/figures_polished/Fig3.pptx,analysis_v2/figures_topjournal/TJ_Fig_observation_process.pdf,vector,native shapes + editable text,7.19 x 5.90,3862,87,2,3.43,2.02,810
 NEE,Fig4 (polished),NEE/figures_polished/Fig4.pptx,analysis_v2/figures_topjournal/TJ_Fig_direction_null.pdf,vector,native shapes + editable text,7.19 x 4.60,274,90,0,4.5,2.8,42
-NEE,Fig5 (polished),NEE/figures_polished/Fig5.pptx,analysis_v2/figures_topjournal/TJ_Fig_mech_vs_ml.pdf,vector,native shapes + editable text,7.19 x 4.92,1958,84,0,4.4,2.65,47
-NC,Fig1 (polished),NC/figures_polished/Fig1.pptx,analysis_v2/figures_topjournal/TJ_Fig_dating_correction.pdf,vector,native shapes + editable text,7.19 x 4.51,315,63,0,3.77,2.35,16
-NC,Fig2 (polished),NC/figures_polished/Fig2.pptx,analysis_v2/figures_topjournal/TJ_Fig_main_results.pdf,vector,native shapes + editable text,7.19 x 4.92,256,83,0,4.32,2.64,18
+NEE,Fig5 (polished),NEE/figures_polished/Fig5.pptx,analysis_v2/figures_topjournal/TJ_Fig_mech_vs_ml.pdf,vector,native shapes + editable text,7.19 x 4.92,1948,84,0,4.37,2.64,47
+NC,Fig1 (polished),NC/figures_polished/Fig1.pptx,analysis_v2/figures_topjournal/TJ_Fig_dating_correction.pdf,vector,native shapes + editable text,7.19 x 4.51,315,63,0,3.79,2.35,16
+NC,Fig2 (polished),NC/figures_polished/Fig2.pptx,analysis_v2/figures_topjournal/TJ_Fig_main_results.pdf,vector,native shapes + editable text,7.19 x 4.92,256,83,0,4.33,2.64,18
 NC,Fig3 (polished),NC/figures_polished/Fig3.pptx,analysis_v2/figures_topjournal/TJ_Fig_model_anatomy.pdf,vector,native shapes + editable text,7.19 x 5.19,161,78,0,4.52,2.71,16
-NC,Fig4 (polished),NC/figures_polished/Fig4.pptx,analysis_v2/figures_topjournal/TJ_Fig_observation_process.pdf,vector,native shapes + editable text,7.19 x 5.90,3866,89,2,3.43,2.03,810
+NC,Fig4 (polished),NC/figures_polished/Fig4.pptx,analysis_v2/figures_topjournal/TJ_Fig_observation_process.pdf,vector,native shapes + editable text,7.19 x 5.90,3862,87,2,3.43,2.02,810
 NC,Fig5 (polished),NC/figures_polished/Fig5.pptx,analysis_v2/figures_topjournal/TJ_Fig_direction_null.pdf,vector,native shapes + editable text,7.19 x 4.60,274,90,0,4.5,2.8,42
-NC,Fig6 (polished),NC/figures_polished/Fig6.pptx,analysis_v2/figures_topjournal/TJ_Fig_specification_robustness.pdf,vector,native shapes + editable text,7.19 x 4.72,254,80,2,3.31,2.0,15
-NC,Fig7 (polished),NC/figures_polished/Fig7.pptx,analysis_v2/figures_topjournal/TJ_Fig_mech_vs_ml.pdf,vector,native shapes + editable text,7.19 x 4.92,1958,84,0,4.4,2.65,47
+NC,Fig6 (polished),NC/figures_polished/Fig6.pptx,analysis_v2/figures_topjournal/TJ_Fig_specification_robustness.pdf,vector,native shapes + editable text,7.19 x 4.72,254,80,2,3.35,2.0,15
+NC,Fig7 (polished),NC/figures_polished/Fig7.pptx,analysis_v2/figures_topjournal/TJ_Fig_mech_vs_ml.pdf,vector,native shapes + editable text,7.19 x 4.92,1948,84,0,4.37,2.64,47

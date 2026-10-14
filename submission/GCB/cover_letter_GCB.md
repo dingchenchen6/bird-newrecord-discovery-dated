@@ -8,7 +8,7 @@ When a bird species is recorded in a new province, how much does the record refl
 
 **2. What is/are the key finding(s) that answer this question?**
 
-Publication-year dating inflates the survey-effort effect by 37% and creates a spurious climate effect. Dated to discovery, species-referenced warming (hazard ratio 1.36 per SD) and effort (1.40) contribute comparably. Province-by-year survey pulses are the largest variance component, and returns on effort are falling; warming shows no such decline.
+Publication-year dating inflates the survey-effort effect by 37% and creates a spurious climate effect. Dated to discovery, species-referenced warming (hazard ratio 1.36 per SD) and effort (1.43) contribute comparably. Province-by-year survey pulses are the largest variance component, and returns on effort are falling; warming shows no such decline.
 
 **3. Why is this work important and timely?**
 

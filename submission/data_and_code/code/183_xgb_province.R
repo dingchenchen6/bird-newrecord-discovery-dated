@@ -38,8 +38,9 @@ D_AD <- file.path(D_DT, "admin")
 msg  <- function(...) cat(sprintf("[%s] ", format(Sys.time(), "%H:%M:%S")), ..., "\n", sep = "")
 
 # ---------------- 数据(与 180 相同) ----------------
-d <- as.data.table(read_parquet(file.path(D_DT, "model_v2_thr50.parquet")))
-d <- d[usable_main == TRUE]
+source(file.path(V2, "code", "helper_projection_base.R"))   # 基期补齐 / base-year completion
+full <- as.data.table(read_parquet(file.path(D_DT, "model_v2_thr50.parquet")))
+d <- full[usable_main == TRUE]
 zs <- function(x) as.numeric(scale(x))
 d[, `:=`(clim_change_z = zs(clim_change), clim_var_z = zs(clim_var),
          effort_z = eff_visits_gap_z, yr = year - 2002,
@@ -138,7 +139,16 @@ print(smry[, .(scheme, model, AUC = round(auc, 3), `PR-AUC` = round(prauc, 4),
 
 # ---------------- 2. 三族终拟合 → 2024 省级预测面 ----------------
 msg("终拟合与 2024 预测 / final fits and 2024 provincial surface")
-d24 <- d[year == max(year)]
+# 2024 预测面基期: 可用行 + 下载缺口省份(广东 2024, 努力沿用 2023), 后者只用于预测
+# 2024 surface base: usable rows + download-gap provinces (Guangdong, effort from 2023), prediction only
+gb <- gap_base_rows(full, max(d$year), file.path(D_DT, "effort_panel_v2.csv"))
+gb[, `:=`(clim_change_z = (clim_change - mean(d$clim_change)) / sd(d$clim_change),
+          clim_var_z = (clim_var - mean(d$clim_var)) / sd(d$clim_var),
+          effort_z = eff_visits_gap_z, yr = year - 2002,
+          species_f = factor(species, levels = levels(d$species_f)),
+          province_f = factor(province, levels = levels(d$province_f)),
+          mig_f = factor(mig_grp, levels = levels(d$mig_f)), ev = factor(event, levels = c(0, 1)))]
+d24 <- rbind(d[year == max(year)], gb, fill = TRUE)
 
 FORM_H <- event ~ clim_change_z * effort_z + clim_var_z + offset(log_completeness) +
   (1 | species) + (1 | province) + (1 | province:year)
