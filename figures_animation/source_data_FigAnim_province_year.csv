@@ -21,7 +21,7 @@ Anhui,2020,0.7431,observed,163,visits,2
 Anhui,2021,0.763,observed,218,visits,1
 Anhui,2022,0.7563,observed,392,visits,5
 Anhui,2023,0.8104,observed,877,visits,2
-Anhui,2024,0.8723,observed,3083,visits,0
+Anhui,2024,0.8723,observed,3754,visits,0
 Beijing,2002,0.2534,observed,85,visits,1
 Beijing,2003,0.2471,observed,21,visits,0
 Beijing,2004,0.2679,observed,63,visits,1
@@ -44,7 +44,7 @@ Beijing,2020,0.6277,observed,3446,visits,0
 Beijing,2021,0.654,observed,5363,visits,0
 Beijing,2022,0.6425,observed,7814,visits,0
 Beijing,2023,0.7107,observed,11436,visits,0
-Beijing,2024,0.7966,observed,25948,visits,0
+Beijing,2024,0.7966,observed,32723,visits,0
 Chongqing,2002,0.1187,observed,14,visits,0
 Chongqing,2003,0.1562,observed,3,visits,0
 Chongqing,2004,0.1844,observed,1,visits,0
@@ -67,7 +67,7 @@ Chongqing,2020,0.4458,observed,87,visits,0
 Chongqing,2021,0.4698,observed,206,visits,1
 Chongqing,2022,0.4972,observed,438,visits,0
 Chongqing,2023,0.5781,observed,734,visits,0
-Chongqing,2024,0.6365,observed,2467,visits,0
+Chongqing,2024,0.6365,observed,2707,visits,0
 Fujian,2002,0.0713,observed,4,visits,0
 Fujian,2003,0.107,observed,25,visits,0
 Fujian,2004,0.1151,observed,21,visits,1
@@ -90,7 +90,7 @@ Fujian,2020,0.4887,observed,327,visits,0
 Fujian,2021,0.5496,observed,646,visits,0
 Fujian,2022,0.5686,observed,1019,visits,0
 Fujian,2023,0.6507,observed,2937,visits,0
-Fujian,2024,0.7245,observed,7816,visits,1
+Fujian,2024,0.7245,observed,9015,visits,1
 Gansu,2002,0.2028,observed,4,visits,0
 Gansu,2003,0.228,coverage_gap,0,no data or not analysed,0
 Gansu,2004,0.2676,observed,3,visits,0
@@ -113,7 +113,7 @@ Gansu,2020,0.6781,observed,163,visits,5
 Gansu,2021,0.6722,observed,192,visits,5
 Gansu,2022,0.6792,observed,364,visits,3
 Gansu,2023,0.7429,observed,932,visits,2
-Gansu,2024,0.7869,observed,1692,visits,0
+Gansu,2024,0.7869,observed,2232,visits,0
 Guangdong,2002,0.1302,observed,16,visits,0
 Guangdong,2003,0.181,observed,8,visits,0
 Guangdong,2004,0.1883,observed,2,visits,0
@@ -136,7 +136,7 @@ Guangdong,2020,0.3756,observed,1183,visits,1
 Guangdong,2021,0.4252,observed,1966,visits,0
 Guangdong,2022,0.4418,observed,3150,visits,3
 Guangdong,2023,0.5352,observed,7082,visits,1
-Guangdong,2024,0.6068,observed,630,suspected incomplete download,0
+Guangdong,2024,0.6068,download_gap,4090,download gap,0
 Guangxi,2002,0.0583,observed,14,visits,1
 Guangxi,2003,0.1041,observed,11,visits,0
 Guangxi,2004,0.1134,observed,12,visits,3
@@ -159,7 +159,7 @@ Guangxi,2020,0.3387,observed,264,visits,1
 Guangxi,2021,0.3747,observed,705,visits,0
 Guangxi,2022,0.3886,observed,714,visits,0
 Guangxi,2023,0.4805,observed,1735,visits,1
-Guangxi,2024,0.5332,observed,3963,visits,0
+Guangxi,2024,0.5332,observed,4467,visits,0
 Guizhou,2002,0.0308,observed,3,visits,0
 Guizhou,2003,0.06,coverage_gap,0,no data or not analysed,0
 Guizhou,2004,0.0719,observed,12,visits,0
@@ -182,7 +182,7 @@ Guizhou,2020,0.2974,observed,215,visits,2
 Guizhou,2021,0.3232,observed,201,visits,1
 Guizhou,2022,0.3412,observed,324,visits,0
 Guizhou,2023,0.4321,observed,517,visits,5
-Guizhou,2024,0.4861,observed,1306,visits,2
+Guizhou,2024,0.4861,observed,1573,visits,2
 Hainan,2002,0.1226,observed,2,visits,0
 Hainan,2003,0.1836,observed,5,visits,0
 Hainan,2004,0.2032,observed,9,visits,1
@@ -205,7 +205,7 @@ Hainan,2020,0.3157,observed,124,visits,0
 Hainan,2021,0.3382,observed,449,visits,1
 Hainan,2022,0.3406,observed,710,visits,1
 Hainan,2023,0.4358,observed,1165,visits,0
-Hainan,2024,0.4925,observed,2594,visits,0
+Hainan,2024,0.4925,observed,3306,visits,0
 Hebei,2002,0.2481,observed,61,visits,0
 Hebei,2003,0.2409,observed,13,visits,0
 Hebei,2004,0.2734,observed,37,visits,1
@@ -228,7 +228,7 @@ Hebei,2020,0.6336,observed,270,visits,0
 Hebei,2021,0.6631,observed,497,visits,1
 Hebei,2022,0.6549,observed,345,visits,1
 Hebei,2023,0.723,observed,1394,visits,0
-Hebei,2024,0.8097,observed,2602,visits,1
+Hebei,2024,0.8097,observed,3497,visits,1
 Heilongjiang,2002,0.3425,observed,2,visits,2
 Heilongjiang,2003,0.3812,coverage_gap,0,no data or not analysed,0
 Heilongjiang,2004,0.377,observed,1,visits,0
@@ -251,7 +251,7 @@ Heilongjiang,2020,0.4175,observed,8,visits,0
 Heilongjiang,2021,0.488,observed,40,visits,1
 Heilongjiang,2022,0.447,observed,55,visits,0
 Heilongjiang,2023,0.4346,observed,228,visits,1
-Heilongjiang,2024,0.5388,observed,1089,visits,0
+Heilongjiang,2024,0.5388,observed,1228,visits,0
 Henan,2002,0.2307,observed,1,visits,0
 Henan,2003,0.2486,observed,1,visits,0
 Henan,2004,0.3269,observed,2,visits,0
@@ -274,7 +274,7 @@ Henan,2020,0.8698,observed,201,visits,0
 Henan,2021,0.8874,observed,558,visits,1
 Henan,2022,0.8879,observed,524,visits,4
 Henan,2023,0.9488,observed,1057,visits,2
-Henan,2024,1.014,observed,5004,visits,0
+Henan,2024,1.014,observed,5375,visits,0
 Hong Kong,2002,0.1303,no_coverage,,no data or not analysed,0
 Hong Kong,2003,0.1818,no_coverage,,no data or not analysed,0
 Hong Kong,2004,0.1911,no_coverage,,no data or not analysed,0
@@ -297,7 +297,7 @@ Hong Kong,2020,0.4222,observed,5,no data or not analysed,0
 Hong Kong,2021,0.4753,observed,6,no data or not analysed,0
 Hong Kong,2022,0.4895,observed,16,no data or not analysed,0
 Hong Kong,2023,0.5804,observed,127,no data or not analysed,0
-Hong Kong,2024,0.651,observed,763,no data or not analysed,0
+Hong Kong,2024,0.651,observed,764,no data or not analysed,0
 Hubei,2002,0.1952,observed,15,visits,0
 Hubei,2003,0.2224,observed,2,visits,1
 Hubei,2004,0.2983,coverage_gap,0,no data or not analysed,0
@@ -320,7 +320,7 @@ Hubei,2020,0.6797,observed,229,visits,4
 Hubei,2021,0.6933,observed,895,visits,2
 Hubei,2022,0.6907,observed,1714,visits,0
 Hubei,2023,0.742,observed,3238,visits,1
-Hubei,2024,0.7934,observed,9287,visits,0
+Hubei,2024,0.7934,observed,10348,visits,0
 Hunan,2002,0.1166,observed,29,visits,0
 Hunan,2003,0.153,observed,9,visits,0
 Hunan,2004,0.1957,observed,8,visits,0
@@ -343,7 +343,7 @@ Hunan,2020,0.5502,observed,134,visits,5
 Hunan,2021,0.581,observed,554,visits,3
 Hunan,2022,0.5874,observed,1374,visits,3
 Hunan,2023,0.6567,observed,2106,visits,2
-Hunan,2024,0.7111,observed,6196,visits,1
+Hunan,2024,0.7111,observed,6533,visits,1
 Inner Mongolia,2002,0.3302,coverage_gap,0,no data or not analysed,0
 Inner Mongolia,2003,0.3569,observed,5,visits,0
 Inner Mongolia,2004,0.383,observed,10,visits,1
@@ -366,7 +366,7 @@ Inner Mongolia,2020,0.7057,observed,141,visits,4
 Inner Mongolia,2021,0.7465,observed,167,visits,2
 Inner Mongolia,2022,0.7034,observed,131,visits,2
 Inner Mongolia,2023,0.7312,observed,648,visits,1
-Inner Mongolia,2024,0.8156,observed,2259,visits,1
+Inner Mongolia,2024,0.8156,observed,2652,visits,1
 Jiangsu,2002,0.2307,observed,7,visits,0
 Jiangsu,2003,0.2503,observed,2,visits,0
 Jiangsu,2004,0.3015,observed,5,visits,0
@@ -389,7 +389,7 @@ Jiangsu,2020,0.6869,observed,729,visits,0
 Jiangsu,2021,0.711,observed,1247,visits,4
 Jiangsu,2022,0.7007,observed,2128,visits,3
 Jiangsu,2023,0.7561,observed,5256,visits,7
-Jiangsu,2024,0.8212,observed,14810,visits,2
+Jiangsu,2024,0.8212,observed,17901,visits,2
 Jiangxi,2002,0.1276,observed,4,visits,0
 Jiangxi,2003,0.1635,observed,2,visits,2
 Jiangxi,2004,0.2049,observed,4,visits,3
@@ -412,7 +412,7 @@ Jiangxi,2020,0.6174,observed,201,visits,1
 Jiangxi,2021,0.6607,observed,400,visits,0
 Jiangxi,2022,0.6674,observed,423,visits,0
 Jiangxi,2023,0.7375,observed,1864,visits,0
-Jiangxi,2024,0.7993,observed,4111,visits,1
+Jiangxi,2024,0.7993,observed,4894,visits,1
 Jilin,2002,0.3175,observed,2,visits,0
 Jilin,2003,0.3658,observed,3,visits,0
 Jilin,2004,0.391,observed,3,visits,0
@@ -435,7 +435,7 @@ Jilin,2020,0.4885,observed,4,visits,2
 Jilin,2021,0.5424,observed,136,visits,1
 Jilin,2022,0.4958,observed,45,visits,0
 Jilin,2023,0.5089,observed,504,visits,0
-Jilin,2024,0.6186,observed,1184,visits,0
+Jilin,2024,0.6186,observed,1390,visits,0
 Liaoning,2002,0.3114,observed,3,visits,1
 Liaoning,2003,0.3385,coverage_gap,0,no data or not analysed,0
 Liaoning,2004,0.3604,observed,8,visits,2
@@ -458,7 +458,7 @@ Liaoning,2020,0.5047,observed,196,visits,1
 Liaoning,2021,0.5569,observed,462,visits,0
 Liaoning,2022,0.5231,observed,874,visits,2
 Liaoning,2023,0.5677,observed,727,visits,0
-Liaoning,2024,0.6754,observed,2609,visits,0
+Liaoning,2024,0.6754,observed,2908,visits,0
 Macao,2002,0.1348,no_coverage,,no data or not analysed,0
 Macao,2003,0.1877,no_coverage,,no data or not analysed,0
 Macao,2004,0.1957,no_coverage,,no data or not analysed,0
@@ -504,7 +504,7 @@ Ningxia,2020,0.8218,observed,48,visits,1
 Ningxia,2021,0.8208,observed,78,visits,4
 Ningxia,2022,0.8433,observed,46,visits,0
 Ningxia,2023,0.9098,observed,135,visits,0
-Ningxia,2024,0.9633,observed,521,visits,0
+Ningxia,2024,0.9633,observed,570,visits,0
 Qinghai,2002,0.1161,observed,68,visits,0
 Qinghai,2003,0.1158,observed,1,visits,0
 Qinghai,2004,0.1427,observed,102,visits,0
@@ -527,7 +527,7 @@ Qinghai,2020,0.6247,observed,413,visits,0
 Qinghai,2021,0.5947,observed,541,visits,1
 Qinghai,2022,0.5884,observed,748,visits,0
 Qinghai,2023,0.6302,observed,1157,visits,2
-Qinghai,2024,0.6289,observed,1837,visits,1
+Qinghai,2024,0.6289,observed,2679,visits,1
 Shaanxi,2002,0.2613,observed,15,visits,1
 Shaanxi,2003,0.2895,observed,3,visits,0
 Shaanxi,2004,0.3532,observed,11,visits,2
@@ -550,7 +550,7 @@ Shaanxi,2020,0.8025,observed,140,visits,4
 Shaanxi,2021,0.794,observed,148,visits,0
 Shaanxi,2022,0.7938,observed,144,visits,1
 Shaanxi,2023,0.8502,observed,798,visits,2
-Shaanxi,2024,0.9015,observed,2663,visits,0
+Shaanxi,2024,0.9015,observed,3090,visits,0
 Shandong,2002,0.239,coverage_gap,0,no data or not analysed,0
 Shandong,2003,0.239,observed,2,visits,0
 Shandong,2004,0.2727,observed,1,visits,0
@@ -573,7 +573,7 @@ Shandong,2020,0.6035,observed,133,visits,3
 Shandong,2021,0.6417,observed,369,visits,2
 Shandong,2022,0.6378,observed,476,visits,2
 Shandong,2023,0.7152,observed,1307,visits,3
-Shandong,2024,0.7994,observed,4343,visits,0
+Shandong,2024,0.7994,observed,4963,visits,0
 Shanghai,2002,0.2187,observed,15,visits,0
 Shanghai,2003,0.2407,observed,13,visits,0
 Shanghai,2004,0.2951,observed,50,visits,1
@@ -596,7 +596,7 @@ Shanghai,2020,0.6428,observed,1853,visits,0
 Shanghai,2021,0.6698,observed,2336,visits,0
 Shanghai,2022,0.6639,observed,2676,visits,0
 Shanghai,2023,0.7234,observed,5792,visits,0
-Shanghai,2024,0.7854,observed,6130,visits,0
+Shanghai,2024,0.7854,observed,10335,visits,0
 Shanxi,2002,0.2645,observed,1,visits,0
 Shanxi,2003,0.2667,coverage_gap,0,no data or not analysed,0
 Shanxi,2004,0.3314,coverage_gap,0,no data or not analysed,0
@@ -619,7 +619,7 @@ Shanxi,2020,0.8106,observed,97,visits,0
 Shanxi,2021,0.8158,observed,145,visits,0
 Shanxi,2022,0.8128,observed,74,visits,0
 Shanxi,2023,0.8855,observed,391,visits,0
-Shanxi,2024,0.9584,observed,2228,visits,1
+Shanxi,2024,0.9584,observed,2379,visits,1
 Sichuan,2002,0.0936,observed,209,visits,0
 Sichuan,2003,0.1125,observed,23,visits,0
 Sichuan,2004,0.124,observed,57,visits,0
@@ -642,7 +642,7 @@ Sichuan,2020,0.5272,observed,947,visits,2
 Sichuan,2021,0.5367,observed,1535,visits,1
 Sichuan,2022,0.5508,observed,2032,visits,0
 Sichuan,2023,0.622,observed,4401,visits,2
-Sichuan,2024,0.6485,observed,10072,visits,0
+Sichuan,2024,0.6485,observed,13662,visits,0
 Taiwan,2002,0.1587,no_coverage,,no data or not analysed,0
 Taiwan,2003,0.1954,no_coverage,,no data or not analysed,0
 Taiwan,2004,0.2272,observed,1,no data or not analysed,0
@@ -688,7 +688,7 @@ Tianjin,2020,0.6415,observed,186,visits,2
 Tianjin,2021,0.6812,observed,424,visits,0
 Tianjin,2022,0.6608,observed,380,visits,0
 Tianjin,2023,0.7252,observed,1660,visits,0
-Tianjin,2024,0.8208,observed,3706,visits,0
+Tianjin,2024,0.8208,observed,4892,visits,0
 Tibet,2002,0.1382,observed,11,visits,0
 Tibet,2003,0.1354,observed,1,visits,1
 Tibet,2004,0.1713,observed,60,visits,0
@@ -711,7 +711,7 @@ Tibet,2020,0.7721,observed,271,visits,3
 Tibet,2021,0.7636,observed,635,visits,1
 Tibet,2022,0.7587,observed,225,visits,1
 Tibet,2023,0.7921,observed,1172,visits,4
-Tibet,2024,0.7811,observed,2040,visits,0
+Tibet,2024,0.7811,observed,2505,visits,0
 Xinjiang,2002,0.2506,observed,5,visits,0
 Xinjiang,2003,0.264,observed,5,visits,0
 Xinjiang,2004,0.3424,observed,5,visits,1
@@ -734,7 +734,7 @@ Xinjiang,2020,0.8418,observed,87,visits,0
 Xinjiang,2021,0.848,observed,496,visits,0
 Xinjiang,2022,0.8577,observed,553,visits,1
 Xinjiang,2023,0.9089,observed,1610,visits,0
-Xinjiang,2024,0.9537,observed,4084,visits,0
+Xinjiang,2024,0.9537,observed,4626,visits,0
 Yunnan,2002,0.1411,observed,92,visits,0
 Yunnan,2003,0.1685,observed,73,visits,1
 Yunnan,2004,0.1893,observed,22,visits,0
@@ -757,7 +757,7 @@ Yunnan,2020,0.6188,observed,845,visits,0
 Yunnan,2021,0.6296,observed,661,visits,1
 Yunnan,2022,0.6394,observed,586,visits,0
 Yunnan,2023,0.7205,observed,1802,visits,0
-Yunnan,2024,0.7373,observed,5,suspected incomplete download,3
+Yunnan,2024,0.7373,observed,2823,visits,3
 Zhejiang,2002,0.1482,observed,16,visits,1
 Zhejiang,2003,0.1784,observed,8,visits,0
 Zhejiang,2004,0.2181,observed,20,visits,0
@@ -780,7 +780,7 @@ Zhejiang,2020,0.6507,observed,1131,visits,2
 Zhejiang,2021,0.6914,observed,2297,visits,6
 Zhejiang,2022,0.6977,observed,4073,visits,2
 Zhejiang,2023,0.7649,observed,8683,visits,1
-Zhejiang,2024,0.832,observed,14966,visits,0
+Zhejiang,2024,0.832,observed,20546,visits,0
 ,2002,0.2641,,,,0
 ,2003,0.2983,,,,0
 ,2004,0.325,,,,0

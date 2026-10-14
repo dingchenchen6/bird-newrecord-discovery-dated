@@ -176,6 +176,7 @@ lv_meta <- list(prefecture = list(sf = pref_sf, tag = "b", lab = "市级"),
                 county = list(sf = cnty_sf, tag = "c", lab = "县级"))
 rho_txt <- sprintf("省级 ρ:机制-RF %.2f · 机制-XGB %.2f · RF-XGB %.2f", rho_p[1], rho_p[2], rho_p[3])
 rows_all <- list(r1)
+RHO_ALL <- list()
 for (lv in names(lv_meta)) {
   meta <- lv_meta[[lv]]
   layers <- lapply(names(FAM), function(f) unit_layer(lv, f))
@@ -197,7 +198,12 @@ for (lv in names(lv_meta)) {
              legend_name = paste0("预测新纪录数(2024,", meta$lab, ")"))
   })
   rows_all[[length(rows_all) + 1]] <- rw
+  RHO_ALL[[lv]] <- data.table(level = lv, pair = c("mech-rf", "mech-xgb", "rf-xgb"), rho = rho)
 }
+# 族间 ρ 落盘, 供正文数字追踪 / persist the between-family rho for the number trace
+RHO_ALL <- rbindlist(c(list(data.table(level = "province", pair = c("mech-rf", "mech-xgb", "rf-xgb"), rho = rho_p)), RHO_ALL))
+fwrite(RHO_ALL, file.path(V2, "analysis_v2", "tables", "tbl_multiscale_surface_rho.csv"))
+msg("族间 Spearman ρ / between-family rho: ", paste(sprintf("%s %s %.3f", RHO_ALL$level, RHO_ALL$pair, RHO_ALL$rho), collapse = " | "))
 
 FigMS1 <- wrap_plots(c(rows_all[[1]], rows_all[[2]], rows_all[[3]]), ncol = 3, nrow = 3) +
   plot_annotation(

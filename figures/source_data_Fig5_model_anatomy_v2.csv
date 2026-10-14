@@ -1,30 +1,30 @@
 variable,source,share,term,sd,meaning,mult,spread
 "Raw
 gradient x","Between province-years
-(regional climate)",0.45654103601518,,,,,
+(regional climate)",0.456669345311196,,,,,
 "Raw
 gradient x","Within province-year
-(purely among species)",0.543458963984821,,,,,
+(purely among species)",0.543330654688804,,,,,
 "Accumulated
 warming","Between province-years
-(regional climate)",0.604975978917707,,,,,
+(regional climate)",0.605039167862688,,,,,
 "Accumulated
 warming","Within province-year
-(purely among species)",0.395024021082293,,,,,
+(purely among species)",0.394960832137312,,,,,
 "Annual
 variability","Between province-years
-(regional climate)",0.422960247044006,,,,,
+(regional climate)",0.423058689612195,,,,,
 "Annual
 variability","Within province-year
-(purely among species)",0.577039752955994,,,,,
-,,,Species,0.405131409670008,"intrinsic detectability:
+(purely among species)",0.576941310387805,,,,,
+,,,Species,0.404129198853499,"intrinsic detectability:
 body size, song, habitat access,
-taxonomic attention",1.49949953584946,2.82478662074536
-,,,Province,0.326206867064981,"regional survey setting:
+taxonomic attention",1.49799747401232,2.817539432793
+,,,Province,0.3319390135076,"regional survey setting:
 area, terrain, habitat diversity,
-observer population",1.38570199532969,2.30742790159539
-,,,Province x year,0.804057206066655,"observation-process shocks:
+observer population",1.39366785100689,2.34158038456251
+,,,Province x year,0.797910751459022,"observation-process shocks:
 regional surveys, festivals,
-new reserves, reporting channels",2.23458874867331,7.85350108605351
-,,,Accumulated warming (fixed),,"",1.36164754167317,
-,,,Survey effort (fixed),,"",1.4038169859134,
+new reserves, reporting channels",2.22089607417183,7.73074192653038
+,,,Accumulated warming (fixed),,"",1.36477001403378,
+,,,Survey effort (fixed),,"",1.4293404709696,

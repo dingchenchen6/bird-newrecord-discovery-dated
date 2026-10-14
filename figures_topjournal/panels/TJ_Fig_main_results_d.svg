@@ -38,19 +38,19 @@
 <rect x='238.38' y='14.45' width='37.99' height='164.56' style='stroke-width: 0.68; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #F4F1EC;' />
 <line x1='25.20' y1='113.18' x2='278.48' y2='113.18' style='stroke-width: 0.53; stroke: #9A9A9A; stroke-dasharray: 2.00,2.00; stroke-linecap: butt;' />
 <text x='29.42' y='111.22' style='font-size: 5.50px;fill: #5A5A5A; font-family: "Arial";' textLength='18.97px' lengthAdjust='spacingAndGlyphs'>Chance</text>
-<polyline points='46.31,161.92 88.52,80.90 130.73,69.20 172.95,53.04 215.16,53.15 257.38,51.93 ' style='stroke-width: 1.07; stroke: #9A9A9A; stroke-linecap: butt;' />
-<circle cx='46.31' cy='161.92' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
-<circle cx='88.52' cy='80.90' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
-<circle cx='130.73' cy='69.20' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
-<circle cx='172.95' cy='53.04' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
-<circle cx='215.16' cy='53.15' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
-<circle cx='257.38' cy='51.93' r='2.36' style='stroke-width: 0.45; stroke: #1A1A1A; fill: #1A1A1A;' />
-<text x='46.31' y='157.62' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='14.61px' lengthAdjust='spacingAndGlyphs'>0.411</text>
-<text x='88.52' y='76.60' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.559</text>
-<text x='130.73' y='64.90' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.580</text>
-<text x='172.95' y='48.74' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.610</text>
-<text x='215.16' y='48.86' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.609</text>
-<text x='257.38' y='47.63' text-anchor='middle' style='font-size: 6.00px; font-weight: bold;fill: #1A1A1A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.612</text>
+<polyline points='46.31,162.40 88.52,80.97 130.73,69.54 172.95,52.95 215.16,53.07 257.38,51.87 ' style='stroke-width: 1.07; stroke: #9A9A9A; stroke-linecap: butt;' />
+<circle cx='46.31' cy='162.40' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
+<circle cx='88.52' cy='80.97' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
+<circle cx='130.73' cy='69.54' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
+<circle cx='172.95' cy='52.95' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
+<circle cx='215.16' cy='53.07' r='1.72' style='stroke-width: 0.45; stroke: #5A5A5A; fill: #5A5A5A;' />
+<circle cx='257.38' cy='51.87' r='2.36' style='stroke-width: 0.45; stroke: #1A1A1A; fill: #1A1A1A;' />
+<text x='46.31' y='158.10' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.410</text>
+<text x='88.52' y='76.67' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.559</text>
+<text x='130.73' y='65.24' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.580</text>
+<text x='172.95' y='48.65' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.610</text>
+<text x='215.16' y='48.77' text-anchor='middle' style='font-size: 6.00px;fill: #5A5A5A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.610</text>
+<text x='257.38' y='47.57' text-anchor='middle' style='font-size: 6.00px; font-weight: bold;fill: #1A1A1A; font-family: "Arial";' textLength='15.05px' lengthAdjust='spacingAndGlyphs'>0.612</text>
 </g>
 <g clip-path='url(#cpMC4wMHwyODMuNDZ8MC4wMHwxOTguNDM=)'>
 <polyline points='25.20,179.01 25.20,14.45 ' style='stroke-width: 0.53; stroke: #4A4A4A; stroke-linecap: square;' />

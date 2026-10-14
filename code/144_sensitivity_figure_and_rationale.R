@@ -16,7 +16,10 @@
 #   c  交互 HR vs 窗口长度
 #   d  各基线内的 dAIC 曲线, 标出最优窗口
 #
-# Input / 输入:  analysis_v2/tables/tbl_v2_window_baseline_sensitivity.csv
+# Input / 输入:  analysis_v2/tables/tbl_v2_baseline_sensitivity.csv, tbl_v2_window_baseline_sensitivity.csv,
+#                tbl_v2_re_evaluation.csv, tbl_v2_re_ladder.csv, tbl_v2_diagnostics.csv,
+#                analysis_v2/data/fit_R3.rds, effort_panel_v2.csv
+#   表中与图注中的数值全部从这些结果读取, 不写死 / every number printed is read from these results
 # Output / 输出: analysis_v2/figures/Fig7_window_baseline_sensitivity_v2.*
 #                analysis_v2/tables/tbl_v2_ecological_rationale.csv
 #                analysis_v2/docs/ECOLOGICAL_RATIONALE.md
@@ -26,7 +29,7 @@
 # ============================================================
 
 suppressPackageStartupMessages({
-  library(data.table); library(ggplot2); library(patchwork); library(officer); library(rvg)
+  library(data.table); library(ggplot2); library(patchwork); library(officer); library(rvg); library(glmmTMB)
 })
 options(warn = 1)
 
@@ -65,6 +68,9 @@ save_fig <- function(p, name, w, h, src = NULL) {
 }
 
 # ==================== Fig 7 ====================
+# 细网格(3–23 年)用于标注最优窗口 / the 3–23-year grid locates the optimum window
+g <- fread(file.path(TAB, "tbl_v2_window_baseline_sensitivity.csv"))
+OPT_W <- g[baseline == "1980-2000" & dAIC_within_baseline < 0.5, range(window)]   # AIC 平台 / AIC plateau
 # 窗口 5/10/15/20 x 基线 {1980-2000, 1970-2000}
 # 1970-2000 基线只能由 CRU TS 0.5° 给出(WorldClim 降尺度自 1980 起), 故同时
 # 拟合 CRU 的 1980-2000, 把"换基线"与"换数据源"拆成两个独立对比。
@@ -97,7 +103,8 @@ p7a <- band("lo_change", "hi_change", "HR_change", "Hazard ratio per 1 SD",
         legend.background = element_rect(fill = "white", colour = NA))
 p7b <- band("lo_effort", "hi_effort", "HR_effort", "Hazard ratio per 1 SD",
   "The effort coefficient does not care",
-  "1.34-1.41 across all twelve combinations,\nas expected if the two terms are separately identified") +
+  sprintf("%.2f-%.2f across all twelve combinations,\nas expected if the two terms are separately identified",
+          min(s$HR_effort), max(s$HR_effort))) +
   theme(legend.position = "none")
 p7c <- band("lo_int", "hi_int", "HR_int", "Hazard ratio per 1 SD",
   "The interaction is negative throughout",
@@ -110,8 +117,10 @@ p7d <- ggplot(s, aes(window, dAIC, colour = base_lab)) +
   scale_x_continuous(breaks = sort(unique(s$window))) +
   labs(x = "Accumulation window W (years)", y = "Delta AIC within series",
        title = "All three series select a 15-20 year window",
-       subtitle = paste("Circles mark the AIC optimum; W = 15 is within 2.2-5.6 units of it in every series.",
-                        "\nA finer grid (3-23 yr, Extended Data Table 2) places the optimum at 18-20 yr",
+       subtitle = paste(sprintf("Circles mark the AIC optimum; W = 15 is within %.1f-%.1f units of it in every series.",
+                                min(s[window == 15, dAIC]), max(s[window == 15, dAIC])),
+                        sprintf("\nA finer grid (3-23 yr, Extended Data Table 2) places the optimum at %d-%d yr",
+                                OPT_W[1], OPT_W[2]),
                         "\nand shows AIC rising again by 23 yr,",
                         "\nso the optimum is interior rather than an artefact of stopping at 20.")) +
   theme_pub()
@@ -120,6 +129,23 @@ F7 <- (p7a | p7b) / (p7c | p7d) + plot_annotation(tag_levels = "a")
 save_fig(F7, "Fig7_window_baseline_sensitivity_v2", 11.2, 7.4, src = s)
 
 # ==================== 生态学依据表 ====================
+# 数值全部来自冻结主模型与结果表 / every value comes from the frozen model and result tables
+m3  <- readRDS(file.path(OUT, "data", "fit_R3.rds"))
+ev  <- fread(file.path(TAB, "tbl_v2_re_evaluation.csv"))
+lad <- fread(file.path(TAB, "tbl_v2_re_ladder.csv"))
+dia <- fread(file.path(TAB, "tbl_v2_diagnostics.csv"))
+r3  <- ev[structure == "R3"]
+vc  <- glmmTMB::VarCorr(m3)$cond
+SDS <- vapply(vc[c("species", "province", "prov_year")], function(v) sqrt(v[1, 1]), numeric(1))
+re3 <- glmmTMB::ranef(m3)$cond
+SPAN <- vapply(re3[c("species", "prov_year")], function(t) exp(diff(range(t[[1]]))), numeric(1))
+CC_SD <- s[grepl("WorldClim", source) & window == 15, sd_change_degC]
+effp <- fread(file.path(OUT, "data", "effort_panel_v2.csv"))
+EFF_FOLD <- exp(stats::sd(log1p(effp[effort_status_v2 == "observed" & in_scope %in% c(TRUE, 1, "TRUE"), n_visits])))
+P_PH  <- dia[test == "proportional hazards: effort_z:year_c", p_value]
+OFF   <- lad[grepl("^R5", model), setNames(HR_effort, offset)]
+W15   <- g[window == 15, setNames(HR_change, baseline)]
+fmt_p <- function(p) if (p < 0.001) sub("e-0?", "e-", sprintf("%.1e", p)) else formatC(p, digits = 2, format = "fg")
 R <- function(component, spec, rationale, reading, prediction)
   data.table(component = component, specification = spec,
              ecological_rationale = rationale, interpretation = reading,
@@ -143,48 +169,56 @@ R("Risk set", "species x province x year, absorbing exit after the first record;
 
 R("Accumulated warming (clim_change)", "trailing W = 15 year mean of x, where x = province anomaly - species-range anomaly, both relative to 1980-2000",
   "Range boundaries integrate climate over years to decades: a boundary shifts when conditions have been favourable long enough for colonisation and establishment, not because one year was warm. Referencing to the species' own range is essential because absolute warming is near-uniform across China and therefore cannot explain which species should appear where.",
-  "HR 1.362 per 0.179 degC: a province that has warmed 0.18 degC more than a species' own historical range has 36% higher annual hazard for that species.",
+  sprintf("HR %.3f per %.3f degC: a province that has warmed %.2f degC more than a species' own historical range has %.0f%% higher annual hazard for that species.",
+          r3$HR_change, CC_SD, CC_SD, 100 * (r3$HR_change - 1)),
   "The coefficient should strengthen as W lengthens from 3 to about 15-20 years and then plateau; a purely weather-driven process would show the opposite."),
 
 R("Annual variability (clim_var)", "x minus its trailing mean, the same year's residual",
   "Separates the decadal signal from year-to-year weather. Included so that the accumulated term cannot absorb a weather effect, and so that a weather effect, if present, is visible.",
-  "HR 0.995, P = 0.92: weather in the year of discovery adds nothing once decadal warming is accounted for.",
+  sprintf("HR %.3f, P = %.2f: weather in the year of discovery adds nothing once decadal warming is accounted for.",
+          r3$HR_var, r3$P_var),
   "If new records were driven by irruptions or cold snaps, this term would be non-null and the accumulated term would weaken."),
 
 R("Survey effort (effort_z)", "log1p of annual provincial visits, standardised; coverage gaps treated as missing",
   "A species can only be recorded where someone is looking. Effort is the observation-process counterpart of the ecological process and must be in the model for the climate coefficient to be interpretable.",
-  "HR 1.404 per 1 SD; one SD multiplies annual visits by 7.75.",
+  sprintf("HR %.3f per 1 SD; one SD multiplies annual visits by %.2f.", r3$HR_effort, EFF_FOLD),
   "Substituting observers, birding days or records for visits should give a similar coefficient if all four index the same latent effort."),
 
 R("Warming x effort", "product of the two standardised terms",
   "Two non-exclusive mechanisms predict a negative interaction. Ecologically, sparsely surveyed provinces are disproportionately western and montane, where climatic gradients are steep. Observationally, densely surveyed provinces have already absorbed much of their Wallacean shortfall, so few candidate species remain regardless of climate.",
-  "HR 0.849: the marginal effect of warming is steepest where effort is low and flattens where coverage is dense.",
-  "If the observational mechanism dominates, the marginal return of effort should also decline through time as gaps are filled - which it does (P = 7.7e-4)."),
+  sprintf("HR %.3f: the marginal effect of warming is steepest where effort is low and flattens where coverage is dense.", r3$HR_int),
+  sprintf("If the observational mechanism dominates, the marginal return of effort should also decline through time as gaps are filled - which it does (P = %s).",
+          fmt_p(P_PH))),
 
 R("Offset log c(t)", "log of the share of year-t discoveries expected to have been published by 2025",
   "Records enter the compilation only after publication, so recent years are systematically under-represented. Under incomplete reporting the observed hazard is approximately c(t) times the true hazard, and because the link is logarithmic in the hazard this is exactly an offset rather than an approximation.",
   "Corrects the estimated hazard for right-censoring without consuming a degree of freedom.",
-  "Omitting the offset should attenuate the effort coefficient, since censoring is concentrated in the high-effort recent years - and it does (1.372 to 1.245)."),
+  sprintf("Omitting the offset should attenuate the effort coefficient, since censoring is concentrated in the high-effort recent years - and it does (%.3f to %.3f).",
+          OFF[["yes"]], OFF[["no"]])),
 
-R("Random intercept: species", "(1|species), SD 0.405",
+R("Random intercept: species", sprintf("(1|species), SD %.3f", SDS[["species"]]),
   "Species differ in intrinsic detectability for reasons the fixed effects do not capture: body size, song conspicuousness, habitat accessibility, population density and taxonomic attention.",
-  "One SD multiplies the hazard by 1.50; the fitted species span a 3.7-fold range.",
+  sprintf("One SD multiplies the hazard by %.2f; the fitted species span a %.1f-fold range.",
+          exp(SDS[["species"]]), SPAN[["species"]]),
   "Conspicuous, vocal, open-habitat species should sit at the upper end."),
 
-R("Random intercept: province", "(1|province), SD 0.326",
+R("Random intercept: province", sprintf("(1|province), SD %.3f", SDS[["province"]]),
   "Provinces differ in their baseline setting for discovery: area, terrain complexity, habitat diversity, observer population and regional research tradition.",
-  "One SD multiplies the hazard by 1.39.",
+  sprintf("One SD multiplies the hazard by %.2f.", exp(SDS[["province"]])),
   "Large, topographically complex provinces with active birding communities should sit at the upper end."),
 
-R("Random intercept: province x year", "(1|province:year), SD 0.804",
+R("Random intercept: province x year", sprintf("(1|province:year), SD %.3f", SDS[["prov_year"]]),
   "The observation process operates at the level of a particular region in a particular year: regional survey campaigns, provincial birding festivals, newly established protected areas, and local reporting channels. A model with only species and province intercepts cannot absorb this, so it leaks into whichever fixed effect trends with observational capacity.",
-  "The single largest variance component. One SD multiplies the hazard by 2.23, more than either fixed effect; the fitted levels span a 13-fold range.",
-  "Adding this level should raise conditional discrimination sharply while leaving fixed-effect discrimination unchanged - conditional AUC rises 0.721 to 0.854 while marginal AUC stays at 0.612."),
+  sprintf("The single largest variance component. One SD multiplies the hazard by %.2f, more than either fixed effect; the fitted levels span a %.0f-fold range.",
+          exp(SDS[["prov_year"]]), SPAN[["prov_year"]]),
+  sprintf("Adding this level should raise conditional discrimination sharply while leaving fixed-effect discrimination unchanged - conditional AUC rises %.3f to %.3f while marginal AUC stays at %.3f.",
+          ev[structure == "R1", AUC_conditional], r3$AUC_conditional, r3$AUC_marginal)),
 
 R("Climate baseline", "1980-2000 at both the province and the species-range end",
   "The baseline defines the climate a species is historically accustomed to and the climate a province historically had. It must end before the analysis period, otherwise part of the warming being tested is written into the reference itself.",
   "Anomalies are measured against the most recent complete period that does not overlap 2002-2024.",
-  "Baselines that overlap the study period should attenuate the climate coefficient - and they do: 1.362 (1980-2000), 1.289 (1981-2010), 1.231 (1991-2020).")))
+  sprintf("Baselines that overlap the study period should attenuate the climate coefficient - and they do: %.3f (1980-2000), %.3f (1981-2010), %.3f (1991-2020).",
+          W15[["1980-2000"]], W15[["1981-2010"]], W15[["1991-2020"]]))))
 
 fwrite(rat, file.path(TAB, "tbl_v2_ecological_rationale.csv"))
 

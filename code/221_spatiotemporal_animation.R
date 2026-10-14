@@ -41,12 +41,12 @@
 #   每帧都是真实年份的数据, 不做年间插值; 地图色阶在所有帧中固定。
 #   2022–2024 年的纪录仍在陆续发表, 柱高偏低, 图中注明(模型用完整度 offset 校正)。
 #   台湾、香港、澳门不在努力分析范围内, 与正文图件一致以灰色表示。
-#   访问量较上一年骤降九成以上而记录数未降的省-年(2024 年云南、广东)疑为下载不全, 只在地图上显示为灰色。
+#   努力面板已含 2024 年 eBird 修正(脚本 222/131);广东 2024 年为下载缺口(中国观鸟记录中心仅 14 天), 地图上为灰色。
 #   Every frame shows a real year (no interpolation); colour scales are fixed across frames.
 #   Records for 2022–2024 are still being published (the model corrects this with an offset).
 #   Taiwan, Hong Kong and Macao are outside the effort analysis, grey as in the paper's figures.
-#   Province-years whose visits fall > 90% while record counts do not (Yunnan, Guangdong 2024) are
-#   mapped grey as a suspected incomplete download; display only, the data are unchanged.
+#   The effort panel includes the 2024 eBird correction (scripts 222 and 131); Guangdong 2024 is a
+#   download gap (China Bird Report covers 14 days) and is mapped grey.
 #
 # Main packages / 主要包: terra, sf, data.table, ggplot2, patchwork, ggtext, rsvg, gifski, ragg
 # Output directory / 输出路径: analysis_v2/figures_animation/
@@ -155,17 +155,15 @@ msg("增温格值范围 / cell range: ", paste(sprintf("%.2f", range(ras_long$va
 # =====================================================================
 eff <- fread(file.path(V2, "analysis_v2/data/effort_panel_v2.csv"))
 eff[, ok := effort_status_v2 == "observed" & in_scope %in% c(TRUE, "TRUE") & mainland %in% c(TRUE, "TRUE")]
-# 疑似下载不全: 访问量比上一年降 90% 以上(上一年 ≥ 1000 次)而记录数未降一半, 2024 年云南、广东即属此类。
-# 地图按"不完整"显示为灰色并在图注说明; 全国序列与模型输入保持原样(不改数据, 只改显示)。
-# Suspected incomplete download: visits fall by > 90% from a year with >= 1,000 visits while record
-# counts do not halve (Yunnan and Guangdong in 2024). Mapped grey as incomplete and stated in the
-# legend; the national series and the model input are left unchanged (display only).
-setorder(eff, province, year)
-eff[, `:=`(v_prev = shift(n_visits), r_prev = shift(effort_record)), by = province]
-eff[, suspect := ok & !is.na(v_prev) & v_prev >= 1000 & n_visits < 0.1 * v_prev & effort_record >= 0.5 * r_prev]
+# 下载缺口(脚本 131):2024 年 eBird 已补入, 广东 2024 年中国观鸟记录中心仅 14 天, 仍不完整, 地图为灰色
+# download gaps (script 131): eBird 2024 is already added; Guangdong 2024 (China Bird Report: 14 days) stays grey
+eff[, suspect := effort_status_v2 == "download_gap"]
 SUSPECT <- eff[suspect == TRUE, sprintf("%s %d", province, year)]
-msg("疑似不完整的省-年 / suspected incomplete province-years: ", paste(SUSPECT, collapse = ", "))
-eff[, lv := fifelse(ok & !suspect, log10(pmax(n_visits, 1)), NA_real_)]
+# 中文图注用中文省名 / Chinese legend uses Chinese province names
+PROV_EN_CN <- setNames(sub("(省|市|壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区)$", "", names(PROV_CN_EN)), PROV_CN_EN)
+SUSPECT_ZH <- eff[suspect == TRUE, sprintf("%s %d 年", PROV_EN_CN[province], year)]
+msg("下载缺口 / download gaps: ", paste(SUSPECT, collapse = ", "))
+eff[, lv := fifelse(ok, log10(pmax(n_visits, 1)), NA_real_)]
 nat_eff <- eff[mainland %in% c(TRUE, "TRUE") & ok == TRUE, .(visits = sum(n_visits)), by = year][order(year)]
 FOLD <- nat_eff[year %in% 2022:2024, mean(visits)] / nat_eff[year %in% 2002:2004, mean(visits)]
 msg("全国访问量 / national visits: ", nat_eff$visits[1], " → ", tail(nat_eff$visits, 1),
@@ -462,8 +460,8 @@ fwrite(nat[, .(year, accumulated_warming_c = round(warming, 4), birding_visits_m
                new_records = records, new_records_cumulative = records_cumulative)],
        file.path(OUT, "source_data_FigAnim_national.csv"))
 pr <- merge(prov_warm, eff[, .(province, year, effort_status = effort_status_v2, n_visits,
-                               mapped = fifelse(ok & !suspect, "visits",
-                                                fifelse(suspect, "suspected incomplete download", "no data or not analysed")))],
+                               mapped = fifelse(ok, "visits",
+                                                fifelse(suspect, "download gap", "no data or not analysed")))],
             by = c("province", "year"), all = TRUE)
 pr <- merge(pr, ev[, .(new_records = .N), by = .(province, year)], by = c("province", "year"), all.x = TRUE)
 pr[is.na(new_records), new_records := 0L]
@@ -484,9 +482,9 @@ lg <- c(
   "model uses its difference from the same quantity over each species' range. Right, survey effort: birding visits per province",
   "and year in eBird/GBIF and China Bird Report on a log scale; grey provinces have no effort coverage that year or lie outside the effort analysis",
   "(Taiwan, Hong Kong and Macao).",
-  if (length(SUSPECT)) paste0("Also grey: ", paste(SUSPECT, collapse = " and "), ", where visits in the source download fall by more ",
-                              "than 90% from the previous year while record counts do not; these values are kept unchanged in the ",
-                              "national series and in the model input.") else "",
+  if (length(SUSPECT)) paste0("Also grey: ", paste(SUSPECT, collapse = " and "), ", whose China Bird Report records cover only ",
+                              "14 days; it is treated as missing in the model. eBird checklists for 2024, absent from the original ",
+                              "source download, were added with the same visit definition (scripts 222 and 131).") else "",
   "Points are provincial first records from CBNR v2 dated to their discovery year (amber, this",
   sprintf("year; dark, earlier years; n = %d). Bottom, national series: equal-area mean accumulated warming (%.2f °C in 2002,",
           nrow(ev), nat_warm$warming[1]),
@@ -498,8 +496,8 @@ lg <- c(
   "",
   "**说明(中文).** 每帧为 2002–2024 年中的一年。左图为累积增温(15 年滑动均温减 1980–2000 均值, 即模型增温协变量的省端口径),",
   "右图为分省观鸟访问量(对数色阶; 灰色为当年无努力覆盖或不在努力分析范围内的台湾、香港、澳门)与按发现年定年的新纪录。",
-  if (length(SUSPECT)) paste0("另: ", paste(SUSPECT, collapse = "、"), " 的访问量较上一年骤降九成以上而记录数未降, ",
-                              "疑为源数据下载不全, 地图中以灰色表示; 全国序列与模型输入未作改动。") else "",
+  if (length(SUSPECT)) paste0("另: ", paste(SUSPECT_ZH, collapse = "、"), "的中国观鸟记录中心数据只覆盖 14 天, ",
+                              "模型中按缺失处理, 地图为灰色;2024 年 eBird 清单原下载缺失, 已按同一口径补入(脚本 222、131)。") else "",
   "下方为全国时间序列; 2022–2024 年纪录仍在陆续发表, 柱高偏低。每帧均为真实年份数据, 不做年间插值; 各帧色阶固定。",
   "源数据: `source_data_FigAnim_national.csv`、`source_data_FigAnim_province_year.csv`、`source_data_FigAnim_records.csv`。")
 writeLines(lg, file.path(OUT, "LEGEND_FigAnim.md"))

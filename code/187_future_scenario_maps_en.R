@@ -53,8 +53,9 @@ EFF_SCEN <- c(`Effort frozen` = 0, `Effort continuing` = 0.6)     # SD / 十年
 SSP_LAB  <- c(ssp245 = "SSP2-4.5", ssp585 = "SSP5-8.5")
 
 # ---------------- 数据与模型 ----------------
-d <- as.data.table(read_parquet(file.path(V2, "analysis_v2/data/model_v2_thr50.parquet")))
-d <- d[usable_main == TRUE]
+source(file.path(V2, "code", "helper_projection_base.R"))   # 基期补齐 / base-year completion
+full <- as.data.table(read_parquet(file.path(V2, "analysis_v2/data/model_v2_thr50.parquet")))
+d <- full[usable_main == TRUE]
 CC_MU <- mean(d$clim_change); CC_SD <- sd(d$clim_change)
 d[, `:=`(clim_change_z = (clim_change - CC_MU) / CC_SD,
          clim_var_z = as.numeric(scale(clim_var)), effort_z = eff_visits_gap_z)]
@@ -67,7 +68,12 @@ ds <- cm6[unit == "species",  .(species  = name, ssp, horizon, d_sp   = delta)]
 
 SUP <- list(cc = quantile(d$clim_change_z, c(.01, .99)),
             ef = quantile(d$effort_z, c(.01, .99)))
-base <- d[year == max(d$year)]
+# 基期: 可用行 + 下载缺口省份(广东 2024, 努力沿用 2023), 后者只用于预测
+# base: usable rows + download-gap provinces (Guangdong 2024, effort from 2023), prediction only
+gb <- gap_base_rows(full, max(d$year), file.path(V2, "analysis_v2/data/effort_panel_v2.csv"))
+gb[, `:=`(clim_change_z = (clim_change - CC_MU) / CC_SD,
+          clim_var_z = (clim_var - mean(d$clim_var)) / sd(d$clim_var), effort_z = eff_visits_gap_z)]
+base <- rbind(d[year == max(d$year)], gb, fill = TRUE)
 
 # ---------------- 情景网格投影 ----------------
 grid <- CJ(ssp = c("ssp245", "ssp585"), eff = names(EFF_SCEN), hz = c(2030L, 2050L))

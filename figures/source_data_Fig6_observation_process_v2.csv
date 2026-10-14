@@ -1,1113 +1,1112 @@
 level,group,term,b
-Abroscopus albogularis,Resident,species,0.285292944585751
-Accipiter gularis,Long-distance,species,-0.157207231561258
-Accipiter soloensis,Long-distance,species,0.0489236889106187
-Accipiter trivirgatus,Resident,species,0.446008827753522
-Accipiter virgatus,Partial,species,-0.125092086538575
-Acridotheres cristatellus,Unknown,species,0.157056029747188
-Acridotheres tristis,Partial,species,0.266119778587052
-Acrocephalus agricola,Long-distance,species,-0.0797317131794203
-Acrocephalus bistrigiceps,Long-distance,species,0.00802683356620391
-Acrocephalus concinens,Unknown,species,-0.101713698450135
-Acrocephalus orientalis,Unknown,species,-0.157500648031044
-Acrocephalus tangorum,Long-distance,species,-0.065797350585952
-Aegithalos bonvaloti,Unknown,species,0.159856624808937
-Aegithalos caudatus,Resident,species,0.0160099440916413
-Aegithalos concinnus,Resident,species,0.020163393368932
-Aegithalos fuliginosus,Resident,species,0.0809172213154898
-Aerodramus brevirostris,Resident,species,-0.267202921083187
-Aethopyga christinae,Resident,species,0.0429987872447621
-Aethopyga gouldiae,Unknown,species,-0.114731617192383
-Agropsar sturninus,Unknown,species,0.138784491957271
-Aix galericulata,Long-distance,species,-0.0663417189722677
-Alauda gulgula,Partial,species,-0.163260529802727
-Alaudala cheleensis,Unknown,species,0.161078897531519
-Alcedo hercules,Resident,species,-0.145362554524599
-Alcippe morrisonia,Partial,species,-0.114085377419676
-Amaurornis phoenicurus,Unknown,species,0.45776023784563
-Anastomus oscitans,Partial,species,0.312078780093894
-Anser anser,Long-distance,species,-0.143906713945734
-Anser fabalis,Unknown,species,0.147108141398127
-Anser indicus,Long-distance,species,0.0262717866114926
-Anthus godlewskii,Long-distance,species,-0.107212764653747
-Anthus gustavi,Long-distance,species,0.164140423564754
-Anthus richardi,Unknown,species,0.151410103585317
-Anthus roseatus,Resident,species,-0.128309537515655
-Anthus trivialis,Long-distance,species,-0.086533948222738
-Aquila fasciata,Unknown,species,0.0407620977934731
-Aquila heliaca,Long-distance,species,0.0207999044316593
-Ardea intermedia,Partial,species,-0.013332169055868
-Ardea purpurea,Long-distance,species,-0.268739416198902
-Ardenna pacifica,Long-distance,species,-0.0305829528200701
-Artamus fuscus,Resident,species,0.217132007963299
-Asio flammeus,Long-distance,species,-0.112129022143243
-Athene noctua,Resident,species,-0.0991448122378821
-Aviceda jerdoni,Resident,species,0.0652253761755121
-Aviceda leuphotes,Long-distance,species,0.251979118249126
-Aythya fuligula,Partial,species,-0.303950260729243
-Aythya nyroca,Long-distance,species,0.0319708776089856
-Bombycilla japonica,Partial,species,0.0249233929115053
-Branta canadensis,Unknown,species,0.613406101279761
-Bubo nipalensis,Resident,species,-0.0282529964373225
-Bucanetes mongolicus,Partial,species,0.314009034984706
-Butastur indicus,Long-distance,species,-0.0356231507349026
-Cacomantis merulinus,Unknown,species,0.147331128619599
-Calandrella brachydactyla,Unknown,species,0.144896111162622
-Calliope obscura,Unknown,species,-0.0489173565072959
-Caprimulgus macrurus,Unknown,species,0.157072446223358
-Carpodacus roborowskii,Resident,species,-0.14786378626636
-Carpodacus vinaceus,Resident,species,-0.0936682589062219
-Cecropis daurica,Long-distance,species,-0.0287916607767453
-Centropus bengalensis,Resident,species,0.125134315396654
-Cephalopyrus flammiceps,Partial,species,-0.0277070419576225
-Certhia familiaris,Resident,species,-0.0876458832577844
-Certhia himalayana,Resident,species,-0.00813325228681758
-Certhia tianquanensis,Resident,species,-0.125184201754581
-Ceryle rudis,Resident,species,0.134759842157005
-Cettia brunnifrons,Partial,species,-0.148997294052105
-Cettia castaneocoronata,Resident,species,-0.1558024181883
-Chalcophaps indica,Unknown,species,0.479127637908911
-Charadrius atrifrons,Unknown,species,0.0577983883725141
-Charadrius dealbatus,Unknown,species,-0.216801673852601
-Charadrius placidus,Long-distance,species,-0.129310900094297
-Charadrius veredus,Long-distance,species,0.179248326327572
-Chlidonias leucopterus,Long-distance,species,-0.149401850166012
-Chlidonias niger,Long-distance,species,0.129618706616854
-Chloris ambigua,Resident,species,0.0461560243483582
-Chloris sinica,Resident,species,-0.290890859545867
-Chrysolophus pictus,Resident,species,-0.27283861494449
-Ciconia boyciana,Unknown,species,0.292379180695652
-Ciconia nigra,Long-distance,species,-0.131108156933707
-Circaetus gallicus,Unknown,species,0.441224558032773
-Circus macrourus,Long-distance,species,0.0836394622237657
-Circus spilonotus,Long-distance,species,-0.144711500017126
-Cisticola exilis,Resident,species,-0.0395218949628252
-Cisticola juncidis,Long-distance,species,-0.109257217977217
-Clamator coromandus,Unknown,species,0.310040152946124
-Clanga clanga,Long-distance,species,-0.176814173010992
-Columba oenas,Resident,species,0.123799588661078
-Copsychus saularis,Resident,species,-0.066426708725987
-Coracias garrulus,Long-distance,species,-0.0697981968410099
-Coturnicops exquisitus,Resident,species,-0.192856655383471
-Crex crex,Long-distance,species,-0.0536464558314998
-Crossoptilon mantchuricum,Resident,species,-0.0453229060854097
-Curruca curruca,Unknown,species,0.311004059572849
-Cyanistes cyanus,Partial,species,-0.145979414363928
-Cyanoderma pyrrhops,Resident,species,0.132669043863671
-Cygnus cygnus,Unknown,species,0.158295727134008
-Cygnus olor,Long-distance,species,0.0189672701285471
-Cyornis glaucicomans,Resident,species,0.101149953394328
-Cyornis hainanus,Partial,species,0.0726100168513184
-Cyornis rubeculoides,Resident,species,-0.157050912391692
-Delichon dasypus,Long-distance,species,-0.129095318103323
-Dendrocitta formosae,Resident,species,-0.0818621682374408
-Dendrocopos hyperythrus,Resident,species,-0.160379566197165
-Dendrocygna javanica,Unknown,species,0.155555529097076
-Dicaeum cruentatum,Unknown,species,0.159917417588644
-Dicaeum ignipectus,Unknown,species,0.156286458479202
-Dicaeum minullum,Unknown,species,0.16344198970026
-Dicrurus annectens,Long-distance,species,0.0764614808650869
-Dicrurus hottentottus,Resident,species,-0.0098893219093702
-Dicrurus remifer,Resident,species,0.0723662742531677
-Egretta eulophotes,Long-distance,species,-0.20118778651489
-Egretta garzetta,Unknown,species,0.156891647197787
-Elachura formosa,Resident,species,0.10540754698713
-Elanus caeruleus,Partial,species,0.520235239611723
-Emberiza buchanani,Long-distance,species,-0.0934493230712643
-Emberiza citrinella,Partial,species,-0.108190043471735
-Emberiza elegans,Partial,species,0.0535645700385444
-Emberiza godlewskii,Partial,species,0.0171093061184604
-Emberiza hortulana,Long-distance,species,-0.0770344283089735
-Emberiza leucocephalos,Unknown,species,0.158832602775796
-Emberiza pallasi,Long-distance,species,-0.193719748685334
-Emberiza pusilla,Long-distance,species,-0.174533102227179
-Emberiza rustica,Long-distance,species,-0.0826110618242552
-Emberiza siemsseni,Long-distance,species,0.133656590359372
-Emberiza yessoensis,Long-distance,species,0.103726342129551
-Enicurus leschenaulti,Unknown,species,0.153981597017434
-Enicurus maculatus,Resident,species,0.0851836216659847
-Enicurus schistaceus,Resident,species,-0.081775874910158
-Erpornis zantholeuca,Resident,species,0.0320950981007372
-Erythrogenys hypoleucos,Resident,species,-0.0466517618314698
-Eudynamys scolopaceus,Partial,species,0.203480720091245
-Eumyias thalassinus,Resident,species,0.511533107278653
-Falco cherrug,Long-distance,species,-0.0606361410243836
-Falco severus,Long-distance,species,-0.18060534942575
-Ficedula albicilla,Long-distance,species,-0.212774111148035
-Ficedula elisae,Long-distance,species,0.155403492823191
-Ficedula erithacus,Resident,species,0.0404070751955039
-Ficedula hyperythra,Resident,species,0.052715114221646
-Ficedula mugimaki,Long-distance,species,-0.149385553998433
-Ficedula strophiata,Unknown,species,0.154432394461661
-Ficedula superciliaris,Unknown,species,0.154906950489479
-Ficedula tricolor,Resident,species,0.119195567920246
-Fringilla coelebs,Partial,species,0.575526140122575
-Fringilla montifringilla,Long-distance,species,-0.244391178623937
-Galerida cristata,Resident,species,-0.10800361881667
-Gallicrex cinerea,Partial,species,-0.0916536783699468
-Garrulax maesi,Resident,species,-0.256548647667399
-Garrulax monileger,Resident,species,0.139762283915636
-Gavia arctica,Long-distance,species,0.174337831783613
-Gelochelidon nilotica,Long-distance,species,0.0481234490357375
-Geokichla citrina,Long-distance,species,0.0928563526932422
-Glaucidium cuculoides,Unknown,species,0.161136564988469
-Gorsachius melanolophus,Unknown,species,0.302156006671302
-Gracupica nigricollis,Resident,species,0.347693880512283
-Grandala coelicolor,Partial,species,-0.0339774121485784
-Grus japonensis,Long-distance,species,-0.0536996035974993
-Grus monacha,Unknown,species,0.148507082217282
-Grus nigricollis,Long-distance,species,0.0214448849392199
-Gypaetus barbatus,Partial,species,0.114113570925406
-Gyps himalayensis,Resident,species,0.0315122022535297
-Halcyon coromanda,Long-distance,species,-0.11822928636615
-Halcyon pileata,Partial,species,-0.144825093112053
-Halcyon smyrnensis,Partial,species,0.300695689347529
-Haliaeetus leucoryphus,Unknown,species,-0.0897653691473057
-Harpactes wardi,Resident,species,-0.151759374616925
-Helopsaltes certhiola,Unknown,species,-0.128782192733463
-Helopsaltes pryeri,Unknown,species,-0.070038738030569
-Hemiprocne coronata,Unknown,species,0.158026337772019
-Hemitesia pallidipes,Unknown,species,0.138176172590946
-Hemixos castanonotus,Partial,species,0.0264505593767075
-Heterophasia desgodinsi,Resident,species,-0.0543221969704922
-Heteroxenicus stellatus,Partial,species,-0.0445435074052663
-Hieraaetus pennatus,Long-distance,species,0.603022342720052
-Hierococcyx nisicolor,Unknown,species,0.14976879574077
-Hirundapus caudacutus,Long-distance,species,-0.105520757815656
-Hirundo rustica,Long-distance,species,-0.141942755009932
-Histrionicus histrionicus,Partial,species,0.0623396693014906
-Hydrocoloeus minutus,Partial,species,-0.10704844148657
-Hydrophasianus chirurgus,Partial,species,0.306657286333156
-Hydroprogne caspia,Long-distance,species,0.00350424940690848
-Hypothymis azurea,Unknown,species,0.151495121829294
-Hypsipetes leucocephalus,Long-distance,species,-0.102398792225511
-Ianthocincla lunulata,Unknown,species,-0.039585214084276
-Ibidorhyncha struthersii,Partial,species,-0.0247550814043812
-Ictinaetus malaiensis,Resident,species,0.0250885953332548
-Iduna caligata,Unknown,species,0.153198150808266
-Indicator xanthonotus,Resident,species,-0.161437066912193
-Ixobrychus cinnamomeus,Unknown,species,0.149039014234873
-Ixobrychus eurhythmus,Long-distance,species,-0.127933762062637
-Ixobrychus minutus,Long-distance,species,-0.0397892683413896
-Ixos mcclellandii,Resident,species,-0.0227133621965962
-Ketupa flavipes,Resident,species,-0.104300969863286
-Lalage melaschistos,Resident,species,-0.0922584431863987
-Lanius borealis,Long-distance,species,-0.00225171627302937
-Lanius collurioides,Partial,species,0.011171156501651
-Lanius isabellinus,Long-distance,species,-0.0175580924910295
-Lanius schach,Partial,species,0.0285761115480828
-Lanius sphenocercus,Partial,species,-0.156111030180996
-Lanius tephronotus,Long-distance,species,0.083602050855628
-Larus crassirostris,Unknown,species,0.162202740386262
-Larvivora brunnea,Long-distance,species,-0.14978918101951
-Larvivora cyane,Long-distance,species,-0.062286560887704
-Leptopoecile elegans,Resident,species,-0.0288372641021426
-Leptoptilos javanicus,Partial,species,0.0187139389505851
-Limnodromus semipalmatus,Long-distance,species,-0.0545022306335495
-Limosa limosa,Long-distance,species,-0.156705738208834
-Linaria cannabina,Resident,species,-0.0899778931647238
-Locustella davidi,Long-distance,species,-0.178547834907439
-Locustella mandelli,Partial,species,0.114482729814352
-Lonchura striata,Resident,species,0.0416273127747283
-Lophotriorchis kienerii,Resident,species,-0.203461645394506
-Lophura leucomelanos,Resident,species,-0.283674574099618
-Lophura nycthemera,Resident,species,0.0918761589211693
-Loxia curvirostra,Partial,species,-0.157425395690353
-Macropygia unchall,Resident,species,0.191415983112765
-Mareca falcata,Long-distance,species,-0.047321503931554
-Megaceryle lugubris,Resident,species,0.089817358356101
-Melanitta fusca,Long-distance,species,0.0487863687198141
-Melanitta stejnegeri,Long-distance,species,-0.086962180998917
-Melanochlora sultanea,Resident,species,-0.0345019415114409
-Mergus serrator,Long-distance,species,0.192384707094119
-Merops philippinus,Unknown,species,0.144644243600763
-Mixornis gularis,Resident,species,-0.0749740905265329
-Monticola gularis,Long-distance,species,-0.155579754783981
-Monticola rufiventris,Resident,species,-0.138728774165574
-Monticola solitarius,Partial,species,-0.156257952527193
-Motacilla citreola,Long-distance,species,-0.112296356949106
-Moupinia poecilotis,Resident,species,-0.0719491950179297
-Muscicapa dauurica,Long-distance,species,-0.131912683028121
-Muscicapa ferruginea,Resident,species,0.0432421043380457
-Muscicapa muttui,Long-distance,species,0.239504710270071
-Mycerobas affinis,Partial,species,-0.0232356592062366
-Mycerobas carnipes,Resident,species,-0.102583093972515
-Myiomela leucura,Resident,species,-0.0731305410807843
-Myophonus caeruleus,Resident,species,-0.248408272104049
-Netta rufina,Partial,species,0.301453875483782
-Niltava davidi,Long-distance,species,-0.113569543055005
-Niltava grandis,Resident,species,-0.110294806733053
-Niltava macgrigoriae,Unknown,species,0.151828149054726
-Niltava sundara,Long-distance,species,-0.165766360351288
-Ninox japonica,Long-distance,species,-0.121755532371696
-Nipponia nippon,Resident,species,-0.0866860481966677
-Nisaetus nipalensis,Resident,species,0.0237150354307389
-Numenius madagascariensis,Long-distance,species,-0.296157266425176
-Nycticorax nycticorax,Unknown,species,0.154534984449021
-Oenanthe deserti,Unknown,species,0.268159139070598
-Oenanthe oenanthe,Long-distance,species,-0.017123806621418
-Onychoprion anaethetus,Partial,species,0.359434428214556
-Oriolus oriolus,Unknown,species,0.0870832208542604
-Otus lettia,Unknown,species,-0.0974041779960419
-Otus semitorques,Partial,species,0.146088833557261
-Otus spilocephalus,Resident,species,0.125245026517579
-Oxyura leucocephala,Resident,species,0.0449486822086253
-Panurus biarmicus,Partial,species,0.0330782252259199
-Paradoxornis guttaticollis,Partial,species,-0.066176585768859
-Paradoxornis heudei,Partial,species,0.174707309852967
-Parayuhina diademata,Unknown,species,-0.0681668247155903
-Pardaliparus venustulus,Resident,species,-0.0133815412750586
-Parus monticolus,Resident,species,-0.170183161099448
-Passer cinnamomeus,Resident,species,-0.0102878548984388
-Passer domesticus,Resident,species,0.488128080542466
-Passer hispaniolensis,Resident,species,0.172805212892268
-Pelecanus crispus,Partial,species,-0.105931961324233
-Pellorneum tickelli,Unknown,species,-0.106854871112122
-Perdix hodgsoniae,Partial,species,0.0330722504452566
-Pericrocotus cantonensis,Unknown,species,0.155662798519651
-Pericrocotus divaricatus,Long-distance,species,-0.16615883165493
-Pericrocotus ethologus,Long-distance,species,0.162954726277467
-Pericrocotus solaris,Resident,species,0.0417377889195446
-Periparus rubidiventris,Resident,species,-0.207083822226759
-Pernis ptilorhynchus,Resident,species,-0.298341270456821
-Phasianus colchicus,Resident,species,-0.298336571395785
-Phoenicurus erythronotus,Long-distance,species,-0.01926792615298
-Phoenicurus frontalis,Partial,species,0.0174556752755735
-Phoenicurus leucocephalus,Resident,species,-0.225543722144131
-Phoenicurus ochruros,Unknown,species,0.602668174912451
-Phoenicurus schisticeps,Unknown,species,0.161086621758463
-Phylloscopus affinis,Long-distance,species,0.0135894120354852
-Phylloscopus burkii,Unknown,species,0.16376887516944
-Phylloscopus cantator,Resident,species,0.161349265309342
-Phylloscopus castaniceps,Partial,species,0.118072627419957
-Phylloscopus claudiae,Partial,species,-0.132790191910682
-Phylloscopus coronatus,Long-distance,species,-0.208342886291876
-Phylloscopus emeiensis,Partial,species,-0.158512327303721
-Phylloscopus intermedius,Partial,species,0.329089748071995
-Phylloscopus magnirostris,Long-distance,species,-0.0906765252333543
-Phylloscopus ogilviegranti,Partial,species,-0.0576982103667704
-Phylloscopus omeiensis,Long-distance,species,-0.112343572890863
-Phylloscopus pulcher,Resident,species,-0.108385861804259
-Phylloscopus ricketti,Resident,species,0.11653082829896
-Phylloscopus soror,Long-distance,species,0.207379122236732
-Phylloscopus subaffinis,Unknown,species,0.148829125656823
-Phylloscopus tenellipes,Long-distance,species,-0.0803142405644877
-Phylloscopus tephrocephalus,Partial,species,0.450615112034368
-Phylloscopus yunnanensis,Unknown,species,0.159928451395727
-Picumnus innominatus,Resident,species,0.0241984237589193
-Picus chlorolophus,Resident,species,-0.0305630451866597
-Pitta nympha,Long-distance,species,0.058431351354724
-Platalea minor,Partial,species,-0.0420377465391751
-Pnoepyga immaculata,Resident,species,-0.118888840612973
-Podiceps auritus,Unknown,species,0.0667450694654673
-Podiceps grisegena,Long-distance,species,-0.0971016151152364
-Podiceps nigricollis,Long-distance,species,0.00144026965756011
-Podoces biddulphi,Partial,species,-0.0869659106449826
-Pomatorhinus schisticeps,Resident,species,-0.028730863546695
-Pomatorhinus superciliaris,Resident,species,-0.29710997818975
-Prinia atrogularis,Resident,species,0.162109585302859
-Prinia flaviventris,Resident,species,0.0803603762027093
-Prinia inornata,Resident,species,-0.0883745243473563
-Prunella collaris,Partial,species,-0.127198318825536
-Prunella himalayana,Partial,species,-0.00781813851125669
-Prunella immaculata,Partial,species,-0.111219641146098
-Prunella montanella,Long-distance,species,0.0342675100871107
-Prunella strophiata,Partial,species,0.0946261416535584
-Psarisomus dalhousiae,Resident,species,-0.139953362841115
-Pseudopodoces humilis,Partial,species,0.00368245321629605
-Psilopogon faber,Resident,species,0.0543450138482225
-Psilopogon virens,Resident,species,-0.113287339664953
-Pterorhinus berthemyi,Unknown,species,-0.180249197032104
-Pterorhinus lanceolatus,Unknown,species,-0.0562275878956499
-Pterorhinus pectoralis,Unknown,species,-0.0870778842924746
-Pterorhinus sannio,Unknown,species,-0.130788944807486
-Pteruthius rufiventer,Resident,species,-0.158737661994604
-Pteruthius xanthochlorus,Resident,species,0.235519746448736
-Ptyonoprogne rupestris,Partial,species,0.0753051049338003
-Pycnonotus aurigaster,Resident,species,-0.1449451402777
-Pycnonotus jocosus,Resident,species,0.273895414287575
-Pycnonotus sinensis,Long-distance,species,0.37252826511372
-Pycnonotus xanthorrhous,Resident,species,-0.00207853163049301
-Pyrrhula erythaca,Resident,species,-0.0870857813000851
-Pyrrhula nipalensis,Resident,species,0.180580422289853
-Rallina eurizonoides,Resident,species,0.0926242690109116
-Rallus aquaticus,Partial,species,0.179598142543084
-Recurvirostra avosetta,Partial,species,-0.149549651234607
-Regulus regulus,Long-distance,species,-0.0228135005443599
-Remiz consobrinus,Long-distance,species,0.281317651582661
-Remiz coronatus,Long-distance,species,0.0962999327967187
-Rhodospiza obsoleta,Partial,species,-0.082785060513024
-Rubigula flaviventris,Resident,species,-0.170205564567505
-Sasia ochracea,Resident,species,0.102092616105152
-Saxicola ferreus,Unknown,species,0.157227787474675
-Sitta cinnamoventris,Resident,species,-0.0801732202587516
-Sitta formosa,Resident,species,-0.149086266746483
-Sitta villosa,Resident,species,0.0346189892696404
-Sittiparus varius,Resident,species,-0.180793434432951
-Spilopelia chinensis,Resident,species,0.00407996581087842
-Spilopelia senegalensis,Resident,species,-0.0394910082316876
-Spilornis cheela,Resident,species,0.0639150616169578
-Spinus spinus,Resident,species,-0.20574560860811
-Spizixos semitorques,Resident,species,0.103762627101364
-Spodiopsar cineraceus,Unknown,species,0.151291226056584
-Spodiopsar sericeus,Partial,species,0.247469536922075
-Stachyris humei,Resident,species,-0.171511809879278
-Staphida torqueola,Unknown,species,-0.118116116832143
-Streptopelia decaocto,Resident,species,-0.0962034330016868
-Sturnia sinensis,Long-distance,species,-1.8488245782453e-05
-Sturnus vulgaris,Partial,species,0.184482964563088
-Suthora fulvifrons,Resident,species,-0.121026786775876
-Syrmaticus humiae,Resident,species,-0.0351492268865049
-Syrmaticus reevesii,Resident,species,-0.186461427919261
-Syrrhaptes paradoxus,Partial,species,-0.256695336606531
-Tarsiger chrysaeus,Partial,species,0.0983150489817867
-Tarsiger indicus,Resident,species,-0.0935709834368223
-Temnurus temnurus,Unknown,species,-0.249410944081694
-Tephrodornis virgatus,Resident,species,-0.150763336709456
-Thalasseus bergii,Long-distance,species,0.00667864669406069
-Timalia pileata,Unknown,species,0.163411958600449
-Tragopan caboti,Resident,species,-0.0646025753968406
-Tragopan temminckii,Resident,species,-0.0965017057865755
-Treron curvirostra,Resident,species,-0.0858103198190569
-Treron sieboldii,Partial,species,0.132818805509454
-Treron sphenurus,Partial,species,-0.100735079019059
-Turdus boulboul,Partial,species,0.998650671836648
-Turdus cardis,Long-distance,species,0.0369471386022773
-Turdus feae,Long-distance,species,0.260307362406732
-Turdus mandarinus,Resident,species,0.0130272127608788
-Turdus pilaris,Long-distance,species,-0.071056170028629
-Turdus rubrocanus,Resident,species,0.286531311779186
-Turdus ruficollis,Long-distance,species,0.0670332913086912
-Turdus viscivorus,Resident,species,0.329545304337858
-Turnix suscitator,Unknown,species,0.290968150008936
-Tyto longimembris,Unknown,species,0.163263727862725
-Urile pelagicus,Unknown,species,-0.101125842492421
-Urosphena squameiceps,Long-distance,species,-0.186276906156144
-Vanellus cinereus,Long-distance,species,-0.278095734682688
-Vanellus indicus,Unknown,species,0.159910616046055
-Vanellus vanellus,Partial,species,-0.278346519755027
-Yuhina nigrimenta,Resident,species,0.0801847449369416
-Zoothera dixoni,Unknown,species,0.302807987286337
-Zoothera mollissima,Resident,species,0.0316760869612424
-Zoothera monticola,Resident,species,-0.0698521450985221
-Zosterops erythropleurus,Long-distance,species,-0.186956657489312
-Anhui,,province,0.260720544156162
-Beijing,,province,0.0378043329088934
-Chongqing,,province,-0.0560719570712979
-Fujian,,province,-0.329420427920459
-Gansu,,province,0.459798083262848
-Guangdong,,province,-0.310736861480616
-Guangxi,,province,0.270536379894647
-Guizhou,,province,0.507348770268149
-Hainan,,province,0.240447959653176
-Hebei,,province,-0.310810609664022
-Heilongjiang,,province,0.49566138943641
-Henan,,province,0.182082330715742
-Hubei,,province,0.0580868580301909
-Hunan,,province,0.721081244561237
-Inner Mongolia,,province,0.462234556930478
-Jiangsu,,province,0.18020932779516
-Jiangxi,,province,0.203252661979229
-Jilin,,province,0.241275800954931
-Liaoning,,province,0.171481017609902
-Ningxia,,province,0.233467942193742
-Qinghai,,province,0.217661782380363
-Shaanxi,,province,0.412378211336566
-Shandong,,province,0.164871202166497
-Shanghai,,province,0.0229064142265928
-Shanxi,,province,-0.276954684579988
-Sichuan,,province,-0.240822822447894
-Tianjin,,province,0.0582997486866465
-Tibet,,province,0.442849732412849
-Xinjiang,,province,-0.291022923178855
-Yunnan,,province,-0.036025539414876
-Zhejiang,,province,0.023107764105843
-Anhui.2002,,province_year,-0.322545372963924
-Beijing.2002,,province_year,0.268268208734817
-Chongqing.2002,,province_year,-0.231601062219803
-Fujian.2002,,province_year,-0.137300074778236
-Gansu.2002,,province_year,-0.340571617247023
-Guangdong.2002,,province_year,-0.179172896257352
-Guangxi.2002,,province_year,0.211453102263477
-Guizhou.2002,,province_year,-0.248818923592397
-Hainan.2002,,province_year,-0.178772042943793
-Hebei.2002,,province_year,-0.205070734985418
-Heilongjiang.2002,,province_year,0.590559774552625
-Henan.2002,,province_year,-0.245802853462949
-Hubei.2002,,province_year,-0.291568875288744
-Hunan.2002,,province_year,-0.459811703398095
-Jiangsu.2002,,province_year,-0.314449210168135
-Jiangxi.2002,,province_year,-0.230363377797726
-Jilin.2002,,province_year,-0.237556037100533
-Liaoning.2002,,province_year,0.192365539889717
-Ningxia.2002,,province_year,0.319619012411422
-Qinghai.2002,,province_year,-0.29537522936688
-Shaanxi.2002,,province_year,0.00401279405756204
-Shanghai.2002,,province_year,-0.243326089176547
-Shanxi.2002,,province_year,-0.14611961123762
-Sichuan.2002,,province_year,-0.321858658437234
-Tianjin.2002,,province_year,0.354074748023834
-Tibet.2002,,province_year,-0.343634191144857
-Xinjiang.2002,,province_year,-0.197453218411731
-Yunnan.2002,,province_year,-0.330968979313122
-Zhejiang.2002,,province_year,0.215892763950921
-Beijing.2003,,province_year,-0.182325585159565
-Chongqing.2003,,province_year,-0.191769229677435
-Fujian.2003,,province_year,-0.189641002094846
-Guangdong.2003,,province_year,-0.17064299812568
-Guangxi.2003,,province_year,-0.268299989449253
-Hainan.2003,,province_year,-0.215804897142774
-Hebei.2003,,province_year,-0.160029698744574
-Henan.2003,,province_year,-0.243309495687612
-Hubei.2003,,province_year,0.258185938385856
-Hunan.2003,,province_year,-0.402398855130349
-Inner Mongolia.2003,,province_year,-0.351929164433042
-Jiangsu.2003,,province_year,-0.278622889044691
-Jiangxi.2003,,province_year,0.731341425186229
-Jilin.2003,,province_year,-0.259868863052809
-Qinghai.2003,,province_year,-0.153469899212557
-Shaanxi.2003,,province_year,-0.373683535114941
-Shandong.2003,,province_year,-0.253448360787723
-Shanghai.2003,,province_year,-0.23883937192745
-Sichuan.2003,,province_year,-0.221989504573145
-Tianjin.2003,,province_year,-0.163376202005935
-Tibet.2003,,province_year,0.24242041120954
-Xinjiang.2003,,province_year,-0.194406041417249
-Yunnan.2003,,province_year,0.139136548989904
-Zhejiang.2003,,province_year,-0.244316657686789
-Anhui.2004,,province_year,-0.316484299919453
-Beijing.2004,,province_year,0.299007929067379
-Chongqing.2004,,province_year,-0.172664778674344
-Fujian.2004,,province_year,0.344431703545935
-Gansu.2004,,province_year,-0.344029295230083
-Guangdong.2004,,province_year,-0.138485586698729
-Guangxi.2004,,province_year,1.00185295037771
-Guizhou.2004,,province_year,-0.304463025052063
-Hainan.2004,,province_year,0.266821154232184
-Hebei.2004,,province_year,0.336512780210213
-Heilongjiang.2004,,province_year,-0.270015636501811
-Henan.2004,,province_year,-0.289297510488526
-Hunan.2004,,province_year,-0.410724580048271
-Inner Mongolia.2004,,province_year,0.0762230859418642
-Jiangsu.2004,,province_year,-0.316195132299611
-Jiangxi.2004,,province_year,1.05331121369672
-Jilin.2004,,province_year,-0.258459029388114
-Liaoning.2004,,province_year,0.57233217082225
-Qinghai.2004,,province_year,-0.305836272221442
-Shaanxi.2004,,province_year,0.337270235879083
-Shandong.2004,,province_year,-0.243769676396634
-Shanghai.2004,,province_year,0.17923780911551
-Sichuan.2004,,province_year,-0.254071672538551
-Tibet.2004,,province_year,-0.418376158737009
-Xinjiang.2004,,province_year,0.286456168019693
-Yunnan.2004,,province_year,-0.271258284548355
-Zhejiang.2004,,province_year,-0.28253214006369
-Anhui.2005,,province_year,0.131823946338651
-Beijing.2005,,province_year,0.309494926668507
-Chongqing.2005,,province_year,-0.160160728060263
-Fujian.2005,,province_year,-0.14921816913478
-Gansu.2005,,province_year,-0.313183952665324
-Guangdong.2005,,province_year,-0.154721978273701
-Guangxi.2005,,province_year,1.23897474307604
-Hainan.2005,,province_year,0.275256229964131
-Hebei.2005,,province_year,-0.208759881235765
-Heilongjiang.2005,,province_year,0.644471167553125
-Henan.2005,,province_year,-0.285392113691539
-Hubei.2005,,province_year,-0.277279157305639
-Hunan.2005,,province_year,-0.369427964415509
-Inner Mongolia.2005,,province_year,-0.32565121045392
-Jiangsu.2005,,province_year,-0.318517300188144
-Jiangxi.2005,,province_year,-0.240708242075875
-Jilin.2005,,province_year,-0.245725373125228
-Qinghai.2005,,province_year,-0.266117146226224
-Shaanxi.2005,,province_year,0.37235855543332
-Shandong.2005,,province_year,-0.232372944110695
-Shanghai.2005,,province_year,0.131408647670349
-Shanxi.2005,,province_year,-0.163569821751783
-Sichuan.2005,,province_year,-0.253252659937556
-Tianjin.2005,,province_year,0.37767337247212
-Tibet.2005,,province_year,-0.362284716604834
-Xinjiang.2005,,province_year,-0.232313146704417
-Yunnan.2005,,province_year,-0.321020430754753
-Zhejiang.2005,,province_year,-0.329249979076062
-Anhui.2006,,province_year,0.452836142870832
-Beijing.2006,,province_year,0.288648105963088
-Chongqing.2006,,province_year,0.755401630917985
-Fujian.2006,,province_year,0.437765200579482
-Gansu.2006,,province_year,0.0860996443560109
-Guangdong.2006,,province_year,-0.158160857125986
-Guangxi.2006,,province_year,0.273554365293292
-Guizhou.2006,,province_year,-0.267387210490599
-Hainan.2006,,province_year,0.697409154495386
-Hebei.2006,,province_year,-0.190626730890066
-Heilongjiang.2006,,province_year,0.298093946870559
-Henan.2006,,province_year,0.128715196343018
-Hubei.2006,,province_year,-0.329601160712563
-Hunan.2006,,province_year,0.0450472128329781
-Inner Mongolia.2006,,province_year,-0.341740675069167
-Jiangsu.2006,,province_year,0.512963832835831
-Jiangxi.2006,,province_year,0.221407493845646
-Jilin.2006,,province_year,0.29040628325092
-Liaoning.2006,,province_year,0.253182774337592
-Qinghai.2006,,province_year,0.239845601841022
-Shaanxi.2006,,province_year,0.765176143210871
-Shandong.2006,,province_year,-0.294254571721702
-Shanghai.2006,,province_year,-0.342831206341636
-Sichuan.2006,,province_year,-0.296429908803768
-Tibet.2006,,province_year,-0.376484245780892
-Xinjiang.2006,,province_year,-0.251731895884848
-Yunnan.2006,,province_year,0.119535488097198
-Zhejiang.2006,,province_year,-0.342271630927552
-Anhui.2007,,province_year,0.789486452643909
-Beijing.2007,,province_year,0.267179633470271
-Chongqing.2007,,province_year,1.47783718726363
-Fujian.2007,,province_year,-0.19407151591003
-Gansu.2007,,province_year,0.00535071911186916
-Guangdong.2007,,province_year,-0.163975313620334
-Guangxi.2007,,province_year,-0.229896207388435
-Guizhou.2007,,province_year,-0.243524598057472
-Hainan.2007,,province_year,0.724042236322818
-Hebei.2007,,province_year,-0.217263037176633
-Heilongjiang.2007,,province_year,0.300903885626227
-Henan.2007,,province_year,-0.372387040615431
-Hubei.2007,,province_year,-0.355104308441097
-Hunan.2007,,province_year,-0.388146593714167
-Inner Mongolia.2007,,province_year,0.0658264886601886
-Jiangsu.2007,,province_year,0.780106801758913
-Jiangxi.2007,,province_year,-0.27420091926633
-Jilin.2007,,province_year,-0.265853382764161
-Liaoning.2007,,province_year,0.195677545184319
-Ningxia.2007,,province_year,-0.265478137622402
-Qinghai.2007,,province_year,-0.31605142491419
-Shaanxi.2007,,province_year,-0.161096472983056
-Shandong.2007,,province_year,0.227599694875799
-Shanghai.2007,,province_year,-0.312623447404943
-Shanxi.2007,,province_year,-0.214466387996101
-Sichuan.2007,,province_year,-0.296754718923704
-Tibet.2007,,province_year,-0.488835531568515
-Xinjiang.2007,,province_year,-0.28452832695387
-Yunnan.2007,,province_year,0.489023981340805
-Zhejiang.2007,,province_year,-0.356427997331403
-Anhui.2008,,province_year,-0.413034492454424
-Beijing.2008,,province_year,-0.224824778939105
-Chongqing.2008,,province_year,0.278217061413148
-Fujian.2008,,province_year,-0.171307073428428
-Gansu.2008,,province_year,0.115857480136095
-Guangdong.2008,,province_year,-0.149674972247981
-Guangxi.2008,,province_year,-0.221260955362684
-Guizhou.2008,,province_year,-0.335033359272147
-Hainan.2008,,province_year,-0.153375024755854
-Hebei.2008,,province_year,-0.220749970187946
-Heilongjiang.2008,,province_year,0.285757478621264
-Henan.2008,,province_year,0.00382119228194013
-Hubei.2008,,province_year,-0.369569642755277
-Hunan.2008,,province_year,-0.431736686671233
-Inner Mongolia.2008,,province_year,-0.362970051374875
-Jiangsu.2008,,province_year,-0.395271498498358
-Jiangxi.2008,,province_year,0.561964167256295
-Jilin.2008,,province_year,-0.236403283557215
-Liaoning.2008,,province_year,-0.337285238839192
-Qinghai.2008,,province_year,-0.251193465793635
-Shaanxi.2008,,province_year,-0.544719868485822
-Shandong.2008,,province_year,-0.281476777819163
-Shanghai.2008,,province_year,0.141895733841395
-Shanxi.2008,,province_year,-0.221072026296777
-Sichuan.2008,,province_year,-0.248134887908291
-Tianjin.2008,,province_year,-0.165234075166845
-Tibet.2008,,province_year,-0.371026591597543
-Xinjiang.2008,,province_year,0.164768046928974
-Yunnan.2008,,province_year,-0.360143694464833
-Zhejiang.2008,,province_year,-0.372411655890074
-Anhui.2009,,province_year,-0.425624341311298
-Beijing.2009,,province_year,0.256546194704977
-Chongqing.2009,,province_year,-0.184413934753919
-Fujian.2009,,province_year,-0.124962153298824
-Gansu.2009,,province_year,-0.00732068539017866
-Guangdong.2009,,province_year,-0.17473998210606
-Guangxi.2009,,province_year,0.318159670371901
-Guizhou.2009,,province_year,0.800413240321616
-Hainan.2009,,province_year,-0.197937474067228
-Hebei.2009,,province_year,-0.207229112184741
-Heilongjiang.2009,,province_year,0.257129607859059
-Henan.2009,,province_year,-0.412807090579055
-Hubei.2009,,province_year,0.0835710302732289
-Hunan.2009,,province_year,0.78535562468908
-Inner Mongolia.2009,,province_year,0.0566771032254523
-Jiangsu.2009,,province_year,-0.39257484332807
-Jiangxi.2009,,province_year,0.137294918170913
-Jilin.2009,,province_year,0.277597061538687
-Liaoning.2009,,province_year,-0.326003998008434
-Qinghai.2009,,province_year,-0.256700266208006
-Shaanxi.2009,,province_year,-0.169234296259771
-Shandong.2009,,province_year,0.986379125097951
-Shanghai.2009,,province_year,0.151910392996249
-Shanxi.2009,,province_year,-0.204076764652623
-Sichuan.2009,,province_year,-0.252273084327346
-Tianjin.2009,,province_year,-0.156515536892681
-Tibet.2009,,province_year,-0.453897018426191
-Yunnan.2009,,province_year,0.111913644121689
-Zhejiang.2009,,province_year,-0.369567693862536
-Anhui.2010,,province_year,-0.422272001253396
-Beijing.2010,,province_year,-0.243422426836319
-Chongqing.2010,,province_year,0.272371895825756
-Fujian.2010,,province_year,-0.15972387330541
-Gansu.2010,,province_year,-0.416527690781352
-Guangdong.2010,,province_year,-0.171618525192308
-Guangxi.2010,,province_year,-0.261109384491557
-Guizhou.2010,,province_year,-0.223055908294813
-Hainan.2010,,province_year,0.308447826552718
-Hebei.2010,,province_year,-0.23428279117357
-Heilongjiang.2010,,province_year,1.24344721025825
-Henan.2010,,province_year,-0.0155067319143819
-Hubei.2010,,province_year,-0.382646240986226
-Hunan.2010,,province_year,0.470489633252054
-Inner Mongolia.2010,,province_year,0.11363020092478
-Jiangsu.2010,,province_year,-0.425933316048623
-Jiangxi.2010,,province_year,0.137877250113637
-Jilin.2010,,province_year,0.772882569701257
-Liaoning.2010,,province_year,-0.291760347868927
-Qinghai.2010,,province_year,-0.330796211870082
-Shaanxi.2010,,province_year,0.134845533119296
-Shandong.2010,,province_year,-0.279235788230778
-Shanghai.2010,,province_year,-0.322410132417249
-Shanxi.2010,,province_year,-0.21761955474051
-Sichuan.2010,,province_year,-0.316615201489248
-Tianjin.2010,,province_year,-0.13602048349471
-Tibet.2010,,province_year,0.270807212124111
-Xinjiang.2010,,province_year,1.95049763702733
-Yunnan.2010,,province_year,0.0934401170228533
-Zhejiang.2010,,province_year,-0.407849475662355
-Anhui.2011,,province_year,0.625619239686565
-Beijing.2011,,province_year,0.259853041540839
-Chongqing.2011,,province_year,-0.197908142326753
-Fujian.2011,,province_year,-0.141653945243104
-Gansu.2011,,province_year,-0.498969409678469
-Guangdong.2011,,province_year,-0.13296314342336
-Guangxi.2011,,province_year,-0.248005820543352
-Guizhou.2011,,province_year,0.365542110095498
-Hainan.2011,,province_year,-0.110288588999039
-Hebei.2011,,province_year,-0.219665028703297
-Heilongjiang.2011,,province_year,-0.17648903901527
-Henan.2011,,province_year,0.621319250313674
-Hubei.2011,,province_year,0.394668491093944
-Hunan.2011,,province_year,0.897172533090238
-Inner Mongolia.2011,,province_year,0.104545478293358
-Jiangsu.2011,,province_year,-0.444882396714177
-Jiangxi.2011,,province_year,0.584522417487242
-Jilin.2011,,province_year,-0.20322706825158
-Liaoning.2011,,province_year,0.168360614024805
-Ningxia.2011,,province_year,0.147939703877655
-Qinghai.2011,,province_year,-0.3080946460619
-Shaanxi.2011,,province_year,0.106217792279477
-Shandong.2011,,province_year,0.173427418055093
-Shanghai.2011,,province_year,1.17670928979897
-Shanxi.2011,,province_year,-0.234995049480992
-Sichuan.2011,,province_year,0.560132945238644
-Tianjin.2011,,province_year,-0.135336946192042
-Tibet.2011,,province_year,-0.481405746458027
-Xinjiang.2011,,province_year,-0.355261595034066
-Yunnan.2011,,province_year,0.476426189103986
-Zhejiang.2011,,province_year,-0.396010188526852
-Anhui.2012,,province_year,-0.0311667877608537
-Beijing.2012,,province_year,-0.24987066292728
-Chongqing.2012,,province_year,-0.160099543789246
-Fujian.2012,,province_year,-0.175656988879958
-Gansu.2012,,province_year,-0.0835832711018048
-Guangdong.2012,,province_year,-0.154337543049811
-Guangxi.2012,,province_year,0.680298352199828
-Guizhou.2012,,province_year,-0.282442623723563
-Hainan.2012,,province_year,-0.190968243960463
-Hebei.2012,,province_year,-0.202308438666237
-Heilongjiang.2012,,province_year,0.322275083435227
-Henan.2012,,province_year,-0.453310766790506
-Hubei.2012,,province_year,-0.398506555788885
-Hunan.2012,,province_year,0.79550282601895
-Inner Mongolia.2012,,province_year,-0.325060534178449
-Jiangsu.2012,,province_year,-0.447392714896955
-Jiangxi.2012,,province_year,-0.337816674854955
-Jilin.2012,,province_year,-0.161451842898371
-Liaoning.2012,,province_year,0.923008248411674
-Ningxia.2012,,province_year,-0.306971744902146
-Qinghai.2012,,province_year,0.0674105171829864
-Shaanxi.2012,,province_year,-0.198003797826864
-Shandong.2012,,province_year,-0.262159555537841
-Shanghai.2012,,province_year,1.13369327903698
-Shanxi.2012,,province_year,-0.241458418153795
-Sichuan.2012,,province_year,0.864971689549819
-Tianjin.2012,,province_year,-0.16481347619312
-Tibet.2012,,province_year,0.195594029456773
-Xinjiang.2012,,province_year,-0.335504044242263
-Yunnan.2012,,province_year,-0.400732694184125
-Zhejiang.2012,,province_year,-0.399690607634229
-Anhui.2013,,province_year,-0.0682003378749682
-Beijing.2013,,province_year,1.04017363920595
-Chongqing.2013,,province_year,-0.194890340295776
-Fujian.2013,,province_year,-0.201418150732585
-Gansu.2013,,province_year,-0.101181466514497
-Guangdong.2013,,province_year,0.330159543923629
-Guangxi.2013,,province_year,1.00714504349947
-Guizhou.2013,,province_year,-0.186752094100574
-Hainan.2013,,province_year,-0.191170901360805
-Hebei.2013,,province_year,-0.202234115832936
-Heilongjiang.2013,,province_year,-0.18483541261522
-Henan.2013,,province_year,0.317972080084211
-Hubei.2013,,province_year,-0.412873142661457
-Hunan.2013,,province_year,0.280310607141979
-Inner Mongolia.2013,,province_year,0.4748943326313
-Jiangsu.2013,,province_year,-0.0343351853256609
-Jiangxi.2013,,province_year,-0.346665111496873
-Jilin.2013,,province_year,-0.142167649935879
-Liaoning.2013,,province_year,-0.29273846047571
-Ningxia.2013,,province_year,-0.335269542278731
-Qinghai.2013,,province_year,1.44795993081678
-Shaanxi.2013,,province_year,-0.597119301479161
-Shandong.2013,,province_year,-0.255148940544524
-Shanghai.2013,,province_year,1.39232998375002
-Shanxi.2013,,province_year,-0.241526845220209
-Sichuan.2013,,province_year,-0.354379766094032
-Tianjin.2013,,province_year,-0.163255868071787
-Tibet.2013,,province_year,1.04577363113622
-Xinjiang.2013,,province_year,-0.356609606603778
-Yunnan.2013,,province_year,0.0112206191323483
-Zhejiang.2013,,province_year,0.0227459171566544
-Anhui.2014,,province_year,-0.47617860270015
-Beijing.2014,,province_year,-0.261157784798603
-Chongqing.2014,,province_year,-0.204473331739653
-Fujian.2014,,province_year,0.305849140830431
-Gansu.2014,,province_year,-0.0924417094750398
-Guangdong.2014,,province_year,0.294742432558797
-Guangxi.2014,,province_year,0.123970257097699
-Guizhou.2014,,province_year,0.573715693998844
-Hainan.2014,,province_year,-0.184790249330366
-Hebei.2014,,province_year,-0.203368364904124
-Heilongjiang.2014,,province_year,-0.121822960380704
-Henan.2014,,province_year,-0.0596482666451951
-Hubei.2014,,province_year,0.404978316074129
-Hunan.2014,,province_year,0.285592885665926
-Inner Mongolia.2014,,province_year,1.27915862175413
-Jiangsu.2014,,province_year,0.291122549145131
-Jiangxi.2014,,province_year,-0.370603914479175
-Jilin.2014,,province_year,-0.180036616615323
-Liaoning.2014,,province_year,-0.298210493324352
-Ningxia.2014,,province_year,-0.335070048680203
-Qinghai.2014,,province_year,1.02659792752366
-Shaanxi.2014,,province_year,0.386653429032075
-Shandong.2014,,province_year,-0.273149864603996
-Shanghai.2014,,province_year,0.121573434063609
-Shanxi.2014,,province_year,-0.239221753481504
-Sichuan.2014,,province_year,0.467623935230119
-Tianjin.2014,,province_year,0.735454403952055
-Tibet.2014,,province_year,0.460953173040777
-Xinjiang.2014,,province_year,-0.33848964866583
-Yunnan.2014,,province_year,-0.00635774164902269
-Zhejiang.2014,,province_year,0.390930072318408
-Anhui.2015,,province_year,0.357119490763878
-Beijing.2015,,province_year,0.222569932476054
-Chongqing.2015,,province_year,-0.23867882281644
-Fujian.2015,,province_year,-0.222698663746161
-Gansu.2015,,province_year,-0.0850985902453959
-Guangdong.2015,,province_year,-0.211460690270333
-Guangxi.2015,,province_year,0.131054359116179
-Guizhou.2015,,province_year,0.529748669266232
-Hainan.2015,,province_year,-0.184397226308682
-Hebei.2015,,province_year,0.324349019017339
-Heilongjiang.2015,,province_year,0.223156216085456
-Henan.2015,,province_year,-0.0381891633935204
-Hubei.2015,,province_year,0.0143443703041436
-Hunan.2015,,province_year,0.966101640413455
-Inner Mongolia.2015,,province_year,-0.395056404495478
-Jiangsu.2015,,province_year,-0.467992546978104
-Jiangxi.2015,,province_year,-0.368983752475944
-Jilin.2015,,province_year,-0.175448733397596
-Liaoning.2015,,province_year,0.514186186585353
-Ningxia.2015,,province_year,-0.331655632896345
-Qinghai.2015,,province_year,0.489436265587862
-Shaanxi.2015,,province_year,0.681414746814193
-Shandong.2015,,province_year,0.245459302483367
-Shanghai.2015,,province_year,0.109409064084334
-Shanxi.2015,,province_year,-0.211916035849868
-Sichuan.2015,,province_year,0.454594713843965
-Tianjin.2015,,province_year,-0.213176590005211
-Tibet.2015,,province_year,0.46705254351862
-Xinjiang.2015,,province_year,0.84803518409707
-Yunnan.2015,,province_year,-0.432480787195487
-Zhejiang.2015,,province_year,-0.416850057527057
-Anhui.2016,,province_year,0.924733458412206
-Beijing.2016,,province_year,-0.269685985322187
-Chongqing.2016,,province_year,-0.242105334974192
-Fujian.2016,,province_year,-0.226225183578448
-Gansu.2016,,province_year,0.807901396086276
-Guangdong.2016,,province_year,-0.238412676190868
-Guangxi.2016,,province_year,0.175385442867576
-Guizhou.2016,,province_year,0.143360547627352
-Hainan.2016,,province_year,-0.206220010871322
-Hebei.2016,,province_year,-0.202787939156025
-Heilongjiang.2016,,province_year,-0.229820710099572
-Henan.2016,,province_year,1.27875338854812
-Hubei.2016,,province_year,-0.420073852202189
-Hunan.2016,,province_year,-0.517812699701207
-Inner Mongolia.2016,,province_year,-0.387714312009293
-Jiangsu.2016,,province_year,0.300428267745958
-Jiangxi.2016,,province_year,0.0603230902235693
-Jilin.2016,,province_year,0.806943323187385
-Liaoning.2016,,province_year,-0.31261680533739
-Ningxia.2016,,province_year,0.557337991534556
-Qinghai.2016,,province_year,-0.385399645688684
-Shaanxi.2016,,province_year,0.712365013837137
-Shandong.2016,,province_year,-0.319584191977287
-Shanghai.2016,,province_year,-0.363094984180682
-Shanxi.2016,,province_year,0.705653459419795
-Sichuan.2016,,province_year,0.0623916516607551
-Tianjin.2016,,province_year,0.290915891054752
-Tibet.2016,,province_year,1.40176523048595
-Xinjiang.2016,,province_year,-0.343316701971081
-Yunnan.2016,,province_year,0.906476420994722
-Zhejiang.2016,,province_year,0.37270738019151
-Anhui.2017,,province_year,-0.0196719214159131
-Beijing.2017,,province_year,0.177549558279586
-Chongqing.2017,,province_year,0.192677956355952
-Fujian.2017,,province_year,-0.252644144673666
-Gansu.2017,,province_year,0.236766497524972
-Guangdong.2017,,province_year,-0.25041416160918
-Guangxi.2017,,province_year,-0.327819344375282
-Guizhou.2017,,province_year,1.19595952177609
-Hainan.2017,,province_year,0.703230081421383
-Hebei.2017,,province_year,-0.230651096392439
-Heilongjiang.2017,,province_year,-0.197653737004302
-Henan.2017,,province_year,0.306881971777346
-Hubei.2017,,province_year,0.94379797168135
-Hunan.2017,,province_year,1.13644409199403
-Inner Mongolia.2017,,province_year,0.0503831298337085
-Jiangsu.2017,,province_year,-0.0600144072631717
-Jiangxi.2017,,province_year,0.736184653240115
-Jilin.2017,,province_year,-0.195758137241007
-Liaoning.2017,,province_year,0.565377355946023
-Ningxia.2017,,province_year,0.522952355348142
-Qinghai.2017,,province_year,1.21710786224594
-Shaanxi.2017,,province_year,-0.174522961288008
-Shandong.2017,,province_year,0.0788517101247784
-Shanghai.2017,,province_year,-0.375001812227718
-Shanxi.2017,,province_year,-0.2307132752355
-Sichuan.2017,,province_year,-0.383884373732496
-Tianjin.2017,,province_year,-0.229162615551185
-Tibet.2017,,province_year,-0.166125983754869
-Xinjiang.2017,,province_year,-0.345908818948296
-Yunnan.2017,,province_year,0.338881096526406
-Zhejiang.2017,,province_year,0.677701070307967
-Anhui.2018,,province_year,-0.0608830006332868
-Beijing.2018,,province_year,-0.315072968862504
-Chongqing.2018,,province_year,0.213788488067257
-Fujian.2018,,province_year,-0.279358339736852
-Gansu.2018,,province_year,0.520962086597814
-Guangdong.2018,,province_year,-0.290384453864896
-Guangxi.2018,,province_year,-0.361177966460308
-Guizhou.2018,,province_year,0.0225824361066852
-Hainan.2018,,province_year,1.04875676312379
-Hebei.2018,,province_year,-0.243401396765165
-Heilongjiang.2018,,province_year,0.316984864129004
-Henan.2018,,province_year,-0.478577123626879
-Hubei.2018,,province_year,0.000985140579642002
-Hunan.2018,,province_year,0.18150539202445
-Inner Mongolia.2018,,province_year,0.00752177310839732
-Jiangsu.2018,,province_year,-0.0659570015665131
-Jiangxi.2018,,province_year,-0.41002388676138
-Jilin.2018,,province_year,0.282658674058026
-Liaoning.2018,,province_year,-0.322553592942914
-Ningxia.2018,,province_year,0.104298419842327
-Qinghai.2018,,province_year,0.0322827211957183
-Shaanxi.2018,,province_year,0.657677344122566
-Shandong.2018,,province_year,0.439430052952696
-Shanghai.2018,,province_year,-0.390649548465877
-Shanxi.2018,,province_year,0.221495447522476
-Sichuan.2018,,province_year,-0.390227384239136
-Tianjin.2018,,province_year,0.242283473718587
-Tibet.2018,,province_year,-0.572551864460519
-Xinjiang.2018,,province_year,-0.358060409567297
-Yunnan.2018,,province_year,-0.444533851408075
-Zhejiang.2018,,province_year,0.64228513222584
-Anhui.2019,,province_year,-0.479490908901014
-Beijing.2019,,province_year,0.146001053171142
-Chongqing.2019,,province_year,-0.276292661867086
-Fujian.2019,,province_year,0.6004100759545
-Gansu.2019,,province_year,0.74298984598996
-Guangdong.2019,,province_year,-0.316698966959722
-Guangxi.2019,,province_year,-0.383017022079138
-Guizhou.2019,,province_year,0.0167994741384134
-Hainan.2019,,province_year,-0.226282010631708
-Hebei.2019,,province_year,0.233832235853147
-Heilongjiang.2019,,province_year,-0.224864620998453
-Henan.2019,,province_year,0.842066911451941
-Hubei.2019,,province_year,0.967839112415994
-Hunan.2019,,province_year,-0.150922839396235
-Inner Mongolia.2019,,province_year,0.986666194514456
-Jiangsu.2019,,province_year,0.546638399604465
-Jiangxi.2019,,province_year,0.693931244979873
-Jilin.2019,,province_year,1.13434120305568
-Liaoning.2019,,province_year,0.168260316338057
-Ningxia.2019,,province_year,0.83577319619982
-Qinghai.2019,,province_year,-0.370938174148563
-Shaanxi.2019,,province_year,0.444798971124872
-Shandong.2019,,province_year,-0.366224955149717
-Shanghai.2019,,province_year,0.0342671977113411
-Shanxi.2019,,province_year,0.636384070194807
-Sichuan.2019,,province_year,-0.394605263988254
-Tianjin.2019,,province_year,0.229429462858971
-Tibet.2019,,province_year,1.93869701527628
-Xinjiang.2019,,province_year,-0.347214030440968
-Yunnan.2019,,province_year,-0.448925987169909
-Zhejiang.2019,,province_year,0.322921986153972
-Anhui.2020,,province_year,0.298402652217397
-Beijing.2020,,province_year,-0.322286258311827
-Chongqing.2020,,province_year,-0.264104866764017
-Fujian.2020,,province_year,-0.276027526588239
-Gansu.2020,,province_year,1.02232932717828
-Guangdong.2020,,province_year,0.154727713800757
-Guangxi.2020,,province_year,0.0827747796421186
-Guizhou.2020,,province_year,0.383889479528904
-Hainan.2020,,province_year,-0.230680434268464
-Hebei.2020,,province_year,-0.23320318771089
-Heilongjiang.2020,,province_year,-0.150889782147629
-Henan.2020,,province_year,-0.456367956730412
-Hubei.2020,,province_year,0.986097064015384
-Hunan.2020,,province_year,0.975887159708799
-Inner Mongolia.2020,,province_year,0.996488418054591
-Jiangsu.2020,,province_year,-0.483545994046384
-Jiangxi.2020,,province_year,0.0443344513948196
-Jilin.2020,,province_year,0.901241354488126
-Liaoning.2020,,province_year,0.163153313718114
-Ningxia.2020,,province_year,0.133680864549319
-Qinghai.2020,,province_year,-0.367351295965054
-Shaanxi.2020,,province_year,0.761880582843669
-Shandong.2020,,province_year,0.775326671888068
-Shanghai.2020,,province_year,-0.392150151986109
-Shanxi.2020,,province_year,-0.261366195741975
-Sichuan.2020,,province_year,0.433310285846835
-Tianjin.2020,,province_year,0.664996813545303
-Tibet.2020,,province_year,0.485798298060287
-Xinjiang.2020,,province_year,-0.32313144793835
-Yunnan.2020,,province_year,-0.42332137628038
-Zhejiang.2020,,province_year,0.310018736311338
-Anhui.2021,,province_year,-0.0433656361842849
-Beijing.2021,,province_year,-0.331410324098691
-Chongqing.2021,,province_year,0.17081715613404
-Fujian.2021,,province_year,-0.305501772107226
-Gansu.2021,,province_year,1.07076436536264
-Guangdong.2021,,province_year,-0.334136707675675
-Guangxi.2021,,province_year,-0.42889687731613
-Guizhou.2021,,province_year,0.0395914779466476
-Hainan.2021,,province_year,0.17217385655113
-Hebei.2021,,province_year,0.247445550974952
-Heilongjiang.2021,,province_year,0.292004927616022
-Henan.2021,,province_year,-0.0389183785897946
-Hubei.2021,,province_year,0.349997627112746
-Hunan.2021,,province_year,0.398168594686938
-Inner Mongolia.2021,,province_year,0.414667978550319
-Jiangsu.2021,,province_year,0.799708898422821
-Jiangxi.2021,,province_year,-0.409969099758608
-Jilin.2021,,province_year,0.241526113272898
-Liaoning.2021,,province_year,-0.34378798803578
-Ningxia.2021,,province_year,1.19505404131507
-Qinghai.2021,,province_year,0.0861491406630824
-Shaanxi.2021,,province_year,-0.480496618686803
-Shandong.2021,,province_year,0.391906318619055
-Shanghai.2021,,province_year,-0.391574954484081
-Shanxi.2021,,province_year,-0.252979947261471
-Sichuan.2021,,province_year,0.0370878406364115
-Tianjin.2021,,province_year,-0.266842757752914
-Tibet.2021,,province_year,-0.138945807739788
-Xinjiang.2021,,province_year,-0.333151887879437
-Yunnan.2021,,province_year,0.0308496928290765
-Zhejiang.2021,,province_year,1.24670583432732
-Anhui.2022,,province_year,1.11220202859981
-Beijing.2022,,province_year,-0.328311157006903
-Chongqing.2022,,province_year,-0.327365507611953
-Fujian.2022,,province_year,-0.312733999812143
-Gansu.2022,,province_year,0.589311189381415
-Guangdong.2022,,province_year,0.825033671036158
-Guangxi.2022,,province_year,-0.412466391274608
-Guizhou.2022,,province_year,-0.41916008398597
-Hainan.2022,,province_year,0.153567009363931
-Hebei.2022,,province_year,0.283306900422421
-Heilongjiang.2022,,province_year,-0.204564207804505
-Henan.2022,,province_year,0.927143499520536
-Hubei.2022,,province_year,-0.433589101975241
-Hunan.2022,,province_year,0.350063549936145
-Inner Mongolia.2022,,province_year,0.486706783586138
-Jiangsu.2022,,province_year,0.558289573649092
-Jiangxi.2022,,province_year,-0.394751511679274
-Jilin.2022,,province_year,-0.184149606275342
-Liaoning.2022,,province_year,0.477081847616063
-Ningxia.2022,,province_year,-0.291497509983526
-Qinghai.2022,,province_year,-0.354625891203992
-Shaanxi.2022,,province_year,-0.0438320426515097
-Shandong.2022,,province_year,0.410127080483591
-Shanghai.2022,,province_year,-0.377694600819457
-Shanxi.2022,,province_year,-0.230829071618123
-Sichuan.2022,,province_year,-0.391958474279901
-Tianjin.2022,,province_year,-0.247952857009148
-Tibet.2022,,province_year,-0.0590639665197886
-Xinjiang.2022,,province_year,0.142534142476504
-Yunnan.2022,,province_year,-0.377733184562431
-Zhejiang.2022,,province_year,0.292464525927672
-Anhui.2023,,province_year,0.358299936173644
-Beijing.2023,,province_year,-0.306116773017075
-Chongqing.2023,,province_year,-0.328232697108556
-Fujian.2023,,province_year,-0.32902155803821
-Gansu.2023,,province_year,0.291249622208093
-Guangdong.2023,,province_year,0.0892497593851654
-Guangxi.2023,,province_year,-0.0290570184615744
-Guizhou.2023,,province_year,1.15692252550313
-Hainan.2023,,province_year,-0.314086874703097
-Hebei.2023,,province_year,-0.235920161253049
-Heilongjiang.2023,,province_year,0.265443750968115
-Henan.2023,,province_year,0.408763872349383
-Hubei.2023,,province_year,0.0050322521289608
-Hunan.2023,,province_year,0.114880568137812
-Inner Mongolia.2023,,province_year,0.077678360652806
-Jiangsu.2023,,province_year,1.40220028932587
-Jiangxi.2023,,province_year,-0.414836823362045
-Jilin.2023,,province_year,-0.250980436446417
-Liaoning.2023,,province_year,-0.310347866020181
-Ningxia.2023,,province_year,-0.28499680240043
-Qinghai.2023,,province_year,0.501985896618775
-Shaanxi.2023,,province_year,0.299891672635626
-Shandong.2023,,province_year,0.712139776798133
-Shanghai.2023,,province_year,-0.373106871488806
-Shanxi.2023,,province_year,-0.234186894241601
-Sichuan.2023,,province_year,0.406574251699262
-Tianjin.2023,,province_year,-0.264395939655783
-Tibet.2023,,province_year,0.826986981351182
-Xinjiang.2023,,province_year,-0.30273384317543
-Yunnan.2023,,province_year,-0.387702642342739
-Zhejiang.2023,,province_year,-0.0413730541732663
-Anhui.2024,,province_year,-0.387577285899223
-Beijing.2024,,province_year,-0.271124293026133
-Chongqing.2024,,province_year,-0.32702001870641
-Fujian.2024,,province_year,0.159288059479417
-Gansu.2024,,province_year,-0.413134738287572
-Guangdong.2024,,province_year,-0.191818131959891
-Guangxi.2024,,province_year,-0.429950841092951
-Guizhou.2024,,province_year,0.364550370397658
-Hainan.2024,,province_year,-0.304069670356229
-Hebei.2024,,province_year,0.303750672596038
-Heilongjiang.2024,,province_year,-0.267841696696904
-Henan.2024,,province_year,-0.339667218997662
-Hubei.2024,,province_year,-0.385773959849078
-Hunan.2024,,province_year,-0.170554066265956
-Inner Mongolia.2024,,province_year,0.107397138740896
-Jiangsu.2024,,province_year,0.349101897437998
-Jiangxi.2024,,province_year,0.0713086676711204
-Jilin.2024,,province_year,-0.244620244644283
-Liaoning.2024,,province_year,-0.315834589725467
-Ningxia.2024,,province_year,-0.247263154039542
-Qinghai.2024,,province_year,0.175595139058427
-Shaanxi.2024,,province_year,-0.416417367723048
-Shandong.2024,,province_year,-0.378133450525572
-Shanghai.2024,,province_year,-0.309961923518157
-Shanxi.2024,,province_year,0.299924508800736
-Sichuan.2024,,province_year,-0.373389925421561
-Tianjin.2024,,province_year,-0.23454006745565
-Tibet.2024,,province_year,-0.412648006266571
-Xinjiang.2024,,province_year,-0.26060938188417
-Yunnan.2024,,province_year,1.26939983178692
-Zhejiang.2024,,province_year,-0.395429225707923
+Abroscopus albogularis,Resident,species,0.283456736650551
+Accipiter gularis,Long-distance,species,-0.156497787125674
+Accipiter soloensis,Long-distance,species,0.048252719938082
+Accipiter trivirgatus,Resident,species,0.444354293642781
+Accipiter virgatus,Partial,species,-0.124985897536834
+Acridotheres cristatellus,Unknown,species,0.156286081409845
+Acridotheres tristis,Partial,species,0.264342756250048
+Acrocephalus agricola,Long-distance,species,-0.0805476819225689
+Acrocephalus bistrigiceps,Long-distance,species,0.00797927227738707
+Acrocephalus concinens,Unknown,species,-0.102166237156277
+Acrocephalus orientalis,Unknown,species,-0.157277282930072
+Acrocephalus tangorum,Long-distance,species,-0.0653229688934404
+Aegithalos bonvaloti,Unknown,species,0.159070780735894
+Aegithalos caudatus,Resident,species,0.0160624428501552
+Aegithalos concinnus,Resident,species,0.0195468815919171
+Aegithalos fuliginosus,Resident,species,0.0800876313300742
+Aerodramus brevirostris,Resident,species,-0.266476393711393
+Aethopyga christinae,Resident,species,0.0431984832180691
+Aethopyga gouldiae,Unknown,species,-0.114734070498306
+Agropsar sturninus,Unknown,species,0.138112791338879
+Aix galericulata,Long-distance,species,-0.0658609244922648
+Alauda gulgula,Partial,species,-0.163263790164474
+Alaudala cheleensis,Unknown,species,0.160327779458562
+Alcedo hercules,Resident,species,-0.145310612286971
+Alcippe morrisonia,Partial,species,-0.114220404823929
+Amaurornis phoenicurus,Unknown,species,0.455498359793254
+Anastomus oscitans,Partial,species,0.310345596847041
+Anser anser,Long-distance,species,-0.143813371472203
+Anser fabalis,Unknown,species,0.146324293775485
+Anser indicus,Long-distance,species,0.0246795218372855
+Anthus godlewskii,Long-distance,species,-0.107320774183714
+Anthus gustavi,Long-distance,species,0.163601683296536
+Anthus richardi,Unknown,species,0.150685484727971
+Anthus roseatus,Resident,species,-0.128540530224236
+Anthus trivialis,Long-distance,species,-0.0878089169013459
+Aquila fasciata,Unknown,species,0.0400058343150266
+Aquila heliaca,Long-distance,species,0.0200243650581896
+Ardea intermedia,Partial,species,-0.0138378492473356
+Ardea purpurea,Long-distance,species,-0.268084755213082
+Ardenna pacifica,Long-distance,species,-0.0312892025067023
+Artamus fuscus,Resident,species,0.216267616506773
+Asio flammeus,Long-distance,species,-0.111874440844036
+Athene noctua,Resident,species,-0.0992006042198376
+Aviceda jerdoni,Resident,species,0.0648967442206604
+Aviceda leuphotes,Long-distance,species,0.250615363823093
+Aythya fuligula,Partial,species,-0.302684080082325
+Aythya nyroca,Long-distance,species,0.0303095614422024
+Bombycilla japonica,Partial,species,0.0253476276434092
+Branta canadensis,Unknown,species,0.610734798132015
+Bubo nipalensis,Resident,species,-0.0287869949073224
+Bucanetes mongolicus,Partial,species,0.311783678836303
+Butastur indicus,Long-distance,species,-0.0351830951002473
+Cacomantis merulinus,Unknown,species,0.146516347890942
+Calandrella brachydactyla,Unknown,species,0.144164667572736
+Calliope obscura,Unknown,species,-0.0493581655796661
+Caprimulgus macrurus,Unknown,species,0.156358052505802
+Carpodacus roborowskii,Resident,species,-0.148223092227406
+Carpodacus vinaceus,Resident,species,-0.0936396273462546
+Cecropis daurica,Long-distance,species,-0.0291866893750021
+Centropus bengalensis,Resident,species,0.12401568118034
+Cephalopyrus flammiceps,Partial,species,-0.0278850828482548
+Certhia familiaris,Resident,species,-0.0875483268880386
+Certhia himalayana,Resident,species,-0.00856505574825014
+Certhia tianquanensis,Resident,species,-0.124767669381127
+Ceryle rudis,Resident,species,0.133843651156145
+Cettia brunnifrons,Partial,species,-0.148905796060224
+Cettia castaneocoronata,Resident,species,-0.155761409808518
+Chalcophaps indica,Unknown,species,0.477154548626492
+Charadrius atrifrons,Unknown,species,0.056832923952057
+Charadrius dealbatus,Unknown,species,-0.216488512856249
+Charadrius placidus,Long-distance,species,-0.128967064248336
+Charadrius veredus,Long-distance,species,0.178186222958133
+Chlidonias leucopterus,Long-distance,species,-0.148957150415614
+Chlidonias niger,Long-distance,species,0.128214914482399
+Chloris ambigua,Resident,species,0.0454764407935618
+Chloris sinica,Resident,species,-0.290170295409843
+Chrysolophus pictus,Resident,species,-0.272074772280518
+Ciconia boyciana,Unknown,species,0.290843156201242
+Ciconia nigra,Long-distance,species,-0.131282799937362
+Circaetus gallicus,Unknown,species,0.439051277937991
+Circus macrourus,Long-distance,species,0.0826875766383513
+Circus spilonotus,Long-distance,species,-0.14393435760097
+Cisticola exilis,Resident,species,-0.0396011858383695
+Cisticola juncidis,Long-distance,species,-0.109268078197193
+Clamator coromandus,Unknown,species,0.308568224739541
+Clanga clanga,Long-distance,species,-0.175994130004677
+Columba oenas,Resident,species,0.121923408220367
+Copsychus saularis,Resident,species,-0.0664668566253866
+Coracias garrulus,Long-distance,species,-0.0713066217935012
+Coturnicops exquisitus,Resident,species,-0.191986888967588
+Crex crex,Long-distance,species,-0.0546278904198794
+Crossoptilon mantchuricum,Resident,species,-0.0461794202883988
+Curruca curruca,Unknown,species,0.30953959103204
+Cyanistes cyanus,Partial,species,-0.145683133148886
+Cyanoderma pyrrhops,Resident,species,0.13156644741006
+Cygnus cygnus,Unknown,species,0.157602272737152
+Cygnus olor,Long-distance,species,0.0183260214911996
+Cyornis glaucicomans,Resident,species,0.100412763907437
+Cyornis hainanus,Partial,species,0.0726706618395881
+Cyornis rubeculoides,Resident,species,-0.15653224650031
+Delichon dasypus,Long-distance,species,-0.129071236133743
+Dendrocitta formosae,Resident,species,-0.081913596316391
+Dendrocopos hyperythrus,Resident,species,-0.160258828110502
+Dendrocygna javanica,Unknown,species,0.154830219793544
+Dicaeum cruentatum,Unknown,species,0.159159831506332
+Dicaeum ignipectus,Unknown,species,0.155482322644148
+Dicaeum minullum,Unknown,species,0.162642682859334
+Dicrurus annectens,Long-distance,species,0.0761708572086482
+Dicrurus hottentottus,Resident,species,-0.0104361529192773
+Dicrurus remifer,Resident,species,0.0717695050729442
+Egretta eulophotes,Long-distance,species,-0.200471254322592
+Egretta garzetta,Unknown,species,0.156115003085363
+Elachura formosa,Resident,species,0.104724132294756
+Elanus caeruleus,Partial,species,0.517191823279406
+Emberiza buchanani,Long-distance,species,-0.0945901546950112
+Emberiza citrinella,Partial,species,-0.108297777130268
+Emberiza elegans,Partial,species,0.0533259125663837
+Emberiza godlewskii,Partial,species,0.0165364820050903
+Emberiza hortulana,Long-distance,species,-0.0774073850149496
+Emberiza leucocephalos,Unknown,species,0.158093467502697
+Emberiza pallasi,Long-distance,species,-0.193125326115642
+Emberiza pusilla,Long-distance,species,-0.173591472291233
+Emberiza rustica,Long-distance,species,-0.082774465733332
+Emberiza siemsseni,Long-distance,species,0.132700754431539
+Emberiza yessoensis,Long-distance,species,0.10348856200065
+Enicurus leschenaulti,Unknown,species,0.153181201996534
+Enicurus maculatus,Resident,species,0.084417995910599
+Enicurus schistaceus,Resident,species,-0.081876359196405
+Erpornis zantholeuca,Resident,species,0.031739364324111
+Erythrogenys hypoleucos,Resident,species,-0.0461625541090554
+Eudynamys scolopaceus,Partial,species,0.20212403725964
+Eumyias thalassinus,Resident,species,0.509359234557748
+Falco cherrug,Long-distance,species,-0.0609052158171259
+Falco severus,Long-distance,species,-0.180443480699882
+Ficedula albicilla,Long-distance,species,-0.212168929891722
+Ficedula elisae,Long-distance,species,0.154235143043659
+Ficedula erithacus,Resident,species,0.039587065456503
+Ficedula hyperythra,Resident,species,0.0519703927276436
+Ficedula mugimaki,Long-distance,species,-0.148511507359462
+Ficedula strophiata,Unknown,species,0.153698017397305
+Ficedula superciliaris,Unknown,species,0.154161487452912
+Ficedula tricolor,Resident,species,0.118334997647044
+Fringilla coelebs,Partial,species,0.573479951566583
+Fringilla montifringilla,Long-distance,species,-0.244043098180846
+Galerida cristata,Resident,species,-0.108557214148334
+Gallicrex cinerea,Partial,species,-0.0917196499937865
+Garrulax maesi,Resident,species,-0.256053162412927
+Garrulax monileger,Resident,species,0.138648032316195
+Gavia arctica,Long-distance,species,0.172955220519514
+Gelochelidon nilotica,Long-distance,species,0.0473869708865034
+Geokichla citrina,Long-distance,species,0.0920779491159987
+Glaucidium cuculoides,Unknown,species,0.160363669399318
+Gorsachius melanolophus,Unknown,species,0.300651979383584
+Gracupica nigricollis,Resident,species,0.34614058759352
+Grandala coelicolor,Partial,species,-0.0343460768167857
+Grus japonensis,Long-distance,species,-0.0534527316963343
+Grus monacha,Unknown,species,0.147638583085434
+Grus nigricollis,Long-distance,species,0.0208874859148559
+Gypaetus barbatus,Partial,species,0.112771787335996
+Gyps himalayensis,Resident,species,0.0307828892251277
+Halcyon coromanda,Long-distance,species,-0.117818293169538
+Halcyon pileata,Partial,species,-0.144978808359835
+Halcyon smyrnensis,Partial,species,0.29930316199356
+Haliaeetus leucoryphus,Unknown,species,-0.0894845861510758
+Harpactes wardi,Resident,species,-0.151640491622293
+Helopsaltes certhiola,Unknown,species,-0.128977206627573
+Helopsaltes pryeri,Unknown,species,-0.0697093191510892
+Hemiprocne coronata,Unknown,species,0.157216474682622
+Hemitesia pallidipes,Unknown,species,0.137463686455509
+Hemixos castanonotus,Partial,species,0.0259570493520899
+Heterophasia desgodinsi,Resident,species,-0.0546009159600312
+Heteroxenicus stellatus,Partial,species,-0.0445638152073596
+Hieraaetus pennatus,Long-distance,species,0.600403312176375
+Hierococcyx nisicolor,Unknown,species,0.148951354144138
+Hirundapus caudacutus,Long-distance,species,-0.105117332331575
+Hirundo rustica,Long-distance,species,-0.142022609910545
+Histrionicus histrionicus,Partial,species,0.06222192296813
+Hydrocoloeus minutus,Partial,species,-0.107780061233599
+Hydrophasianus chirurgus,Partial,species,0.305250695683998
+Hydroprogne caspia,Long-distance,species,0.00288822999677617
+Hypothymis azurea,Unknown,species,0.150733685770537
+Hypsipetes leucocephalus,Long-distance,species,-0.102409563373779
+Ianthocincla lunulata,Unknown,species,-0.0398674023603976
+Ibidorhyncha struthersii,Partial,species,-0.0253589917166137
+Ictinaetus malaiensis,Resident,species,0.0240167923996284
+Iduna caligata,Unknown,species,0.152418573249861
+Indicator xanthonotus,Resident,species,-0.161168684197241
+Ixobrychus cinnamomeus,Unknown,species,0.148349443436831
+Ixobrychus eurhythmus,Long-distance,species,-0.127718867426636
+Ixobrychus minutus,Long-distance,species,-0.041180066777911
+Ixos mcclellandii,Resident,species,-0.0232277929355774
+Ketupa flavipes,Resident,species,-0.104416318788175
+Lalage melaschistos,Resident,species,-0.0923901259670497
+Lanius borealis,Long-distance,species,-0.00255487248743913
+Lanius collurioides,Partial,species,0.0111458669592837
+Lanius isabellinus,Long-distance,species,-0.0178494684219372
+Lanius schach,Partial,species,0.0280354871154018
+Lanius sphenocercus,Partial,species,-0.155510601800504
+Lanius tephronotus,Long-distance,species,0.082820075428093
+Larus crassirostris,Unknown,species,0.161428605350162
+Larvivora brunnea,Long-distance,species,-0.149832093345259
+Larvivora cyane,Long-distance,species,-0.0618228916803952
+Leptopoecile elegans,Resident,species,-0.0289758837518472
+Leptoptilos javanicus,Partial,species,0.0184787069639718
+Limnodromus semipalmatus,Long-distance,species,-0.05407295801878
+Limosa limosa,Long-distance,species,-0.156328016078487
+Linaria cannabina,Resident,species,-0.0907106233982629
+Locustella davidi,Long-distance,species,-0.177589902813462
+Locustella mandelli,Partial,species,0.113636155707437
+Lonchura striata,Resident,species,0.0410140065681545
+Lophotriorchis kienerii,Resident,species,-0.202768129555171
+Lophura leucomelanos,Resident,species,-0.282993266231666
+Lophura nycthemera,Resident,species,0.0911211189052199
+Loxia curvirostra,Partial,species,-0.157091165039856
+Macropygia unchall,Resident,species,0.190132618862305
+Mareca falcata,Long-distance,species,-0.0468533641774442
+Megaceryle lugubris,Resident,species,0.0888659770932008
+Melanitta fusca,Long-distance,species,0.0481668972309059
+Melanitta stejnegeri,Long-distance,species,-0.0869877231470222
+Melanochlora sultanea,Resident,species,-0.0348539093262864
+Mergus serrator,Long-distance,species,0.192262544313841
+Merops philippinus,Unknown,species,0.143909684675883
+Mixornis gularis,Resident,species,-0.0750712879509992
+Monticola gularis,Long-distance,species,-0.154858458452044
+Monticola rufiventris,Resident,species,-0.138730687111352
+Monticola solitarius,Partial,species,-0.156068171241204
+Motacilla citreola,Long-distance,species,-0.112692349077498
+Moupinia poecilotis,Resident,species,-0.0722658386672156
+Muscicapa dauurica,Long-distance,species,-0.131129223176125
+Muscicapa ferruginea,Resident,species,0.042730868052059
+Muscicapa muttui,Long-distance,species,0.238304487186504
+Mycerobas affinis,Partial,species,-0.0239788047393978
+Mycerobas carnipes,Resident,species,-0.102712725587579
+Myiomela leucura,Resident,species,-0.0730930063242011
+Myophonus caeruleus,Resident,species,-0.247993833127493
+Netta rufina,Partial,species,0.298603351724915
+Niltava davidi,Long-distance,species,-0.113600841323091
+Niltava grandis,Resident,species,-0.110204778019285
+Niltava macgrigoriae,Unknown,species,0.151090023855576
+Niltava sundara,Long-distance,species,-0.165579670178822
+Ninox japonica,Long-distance,species,-0.121672755214458
+Nipponia nippon,Resident,species,-0.0864915178278902
+Nisaetus nipalensis,Resident,species,0.023137815887373
+Numenius madagascariensis,Long-distance,species,-0.294706839131121
+Nycticorax nycticorax,Unknown,species,0.153770819468192
+Oenanthe deserti,Unknown,species,0.266813237411423
+Oenanthe oenanthe,Long-distance,species,-0.0174922248774618
+Onychoprion anaethetus,Partial,species,0.357319759613159
+Oriolus oriolus,Unknown,species,0.0861516217562506
+Otus lettia,Unknown,species,-0.0974672564533616
+Otus semitorques,Partial,species,0.144991897381024
+Otus spilocephalus,Resident,species,0.124349124561367
+Oxyura leucocephala,Resident,species,0.0428190587320632
+Panurus biarmicus,Partial,species,0.0320230507336002
+Paradoxornis guttaticollis,Partial,species,-0.0663563631001654
+Paradoxornis heudei,Partial,species,0.173313760380357
+Parayuhina diademata,Unknown,species,-0.0683550818128649
+Pardaliparus venustulus,Resident,species,-0.014077000511718
+Parus monticolus,Resident,species,-0.170025727706411
+Passer cinnamomeus,Resident,species,-0.0109363290112557
+Passer domesticus,Resident,species,0.486556499060645
+Passer hispaniolensis,Resident,species,0.171137494283159
+Pelecanus crispus,Partial,species,-0.105929982222187
+Pellorneum tickelli,Unknown,species,-0.106795481844685
+Perdix hodgsoniae,Partial,species,0.0326102016007091
+Pericrocotus cantonensis,Unknown,species,0.154923362793759
+Pericrocotus divaricatus,Long-distance,species,-0.165551443380034
+Pericrocotus ethologus,Long-distance,species,0.161756823720911
+Pericrocotus solaris,Resident,species,0.0412438918890497
+Periparus rubidiventris,Resident,species,-0.206710269684617
+Pernis ptilorhynchus,Resident,species,-0.297145441158843
+Phasianus colchicus,Resident,species,-0.297564822141626
+Phoenicurus erythronotus,Long-distance,species,-0.0199542824868012
+Phoenicurus frontalis,Partial,species,0.0168502217156896
+Phoenicurus leucocephalus,Resident,species,-0.225075614531584
+Phoenicurus ochruros,Unknown,species,0.599954586818412
+Phoenicurus schisticeps,Unknown,species,0.160297218332396
+Phylloscopus affinis,Long-distance,species,0.0130117834011837
+Phylloscopus burkii,Unknown,species,0.162961215529552
+Phylloscopus cantator,Resident,species,0.160453217061791
+Phylloscopus castaniceps,Partial,species,0.117056728819521
+Phylloscopus claudiae,Partial,species,-0.132941798254694
+Phylloscopus coronatus,Long-distance,species,-0.207721836703193
+Phylloscopus emeiensis,Partial,species,-0.158895619751817
+Phylloscopus intermedius,Partial,species,0.327273078323594
+Phylloscopus magnirostris,Long-distance,species,-0.0905648411058855
+Phylloscopus ogilviegranti,Partial,species,-0.0578989666606768
+Phylloscopus omeiensis,Long-distance,species,-0.112214656644019
+Phylloscopus pulcher,Resident,species,-0.108303465612658
+Phylloscopus ricketti,Resident,species,0.115539529373277
+Phylloscopus soror,Long-distance,species,0.206098217871593
+Phylloscopus subaffinis,Unknown,species,0.148045379420451
+Phylloscopus tenellipes,Long-distance,species,-0.0797452595487377
+Phylloscopus tephrocephalus,Partial,species,0.448680369989366
+Phylloscopus yunnanensis,Unknown,species,0.159212866171203
+Picumnus innominatus,Resident,species,0.0236497718531468
+Picus chlorolophus,Resident,species,-0.0306386456523489
+Pitta nympha,Long-distance,species,0.0573729037921487
+Platalea minor,Partial,species,-0.0418635933514251
+Pnoepyga immaculata,Resident,species,-0.118680656694503
+Podiceps auritus,Unknown,species,0.0656783971087616
+Podiceps grisegena,Long-distance,species,-0.0969797372421139
+Podiceps nigricollis,Long-distance,species,0.0012338333853918
+Podoces biddulphi,Partial,species,-0.0881873822610031
+Pomatorhinus schisticeps,Resident,species,-0.0285542368510219
+Pomatorhinus superciliaris,Resident,species,-0.296305065763956
+Prinia atrogularis,Resident,species,0.161423895250781
+Prinia flaviventris,Resident,species,0.0796282421223383
+Prinia inornata,Resident,species,-0.0883427361592065
+Prunella collaris,Partial,species,-0.12731844543955
+Prunella himalayana,Partial,species,-0.00894186711893268
+Prunella immaculata,Partial,species,-0.111667644121642
+Prunella montanella,Long-distance,species,0.0334786714728411
+Prunella strophiata,Partial,species,0.0938228816778083
+Psarisomus dalhousiae,Resident,species,-0.139832784287581
+Pseudopodoces humilis,Partial,species,0.00310922928652757
+Psilopogon faber,Resident,species,0.0540870437478387
+Psilopogon virens,Resident,species,-0.113394916754073
+Pterorhinus berthemyi,Unknown,species,-0.180271531878227
+Pterorhinus lanceolatus,Unknown,species,-0.0564271038074277
+Pterorhinus pectoralis,Unknown,species,-0.0871858503008513
+Pterorhinus sannio,Unknown,species,-0.130797310344585
+Pteruthius rufiventer,Resident,species,-0.158473180071637
+Pteruthius xanthochlorus,Resident,species,0.234268811538379
+Ptyonoprogne rupestris,Partial,species,0.0742672156244162
+Pycnonotus aurigaster,Resident,species,-0.144557157748367
+Pycnonotus jocosus,Resident,species,0.272695787140802
+Pycnonotus sinensis,Long-distance,species,0.370522898170979
+Pycnonotus xanthorrhous,Resident,species,-0.00268123633791591
+Pyrrhula erythaca,Resident,species,-0.0871799169682128
+Pyrrhula nipalensis,Resident,species,0.179360791714415
+Rallina eurizonoides,Resident,species,0.0921003112153621
+Rallus aquaticus,Partial,species,0.177584062842473
+Recurvirostra avosetta,Partial,species,-0.148969349163399
+Regulus regulus,Long-distance,species,-0.0232821862648153
+Remiz consobrinus,Long-distance,species,0.280782989951051
+Remiz coronatus,Long-distance,species,0.0952444848490889
+Rhodospiza obsoleta,Partial,species,-0.0833275346757458
+Rubigula flaviventris,Resident,species,-0.169703901451291
+Sasia ochracea,Resident,species,0.101481738517978
+Saxicola ferreus,Unknown,species,0.156487578228197
+Sitta cinnamoventris,Resident,species,-0.0802080886832593
+Sitta formosa,Resident,species,-0.14890248186195
+Sitta villosa,Resident,species,0.0338808386856056
+Sittiparus varius,Resident,species,-0.180135012590017
+Spilopelia chinensis,Resident,species,0.0034086236621193
+Spilopelia senegalensis,Resident,species,-0.0410887797811115
+Spilornis cheela,Resident,species,0.0631986876028588
+Spinus spinus,Resident,species,-0.204738314505093
+Spizixos semitorques,Resident,species,0.102787046029048
+Spodiopsar cineraceus,Unknown,species,0.150566383664559
+Spodiopsar sericeus,Partial,species,0.246030059787347
+Stachyris humei,Resident,species,-0.171107316913309
+Staphida torqueola,Unknown,species,-0.118122414614423
+Streptopelia decaocto,Resident,species,-0.0968683356238617
+Sturnia sinensis,Long-distance,species,-0.00015337339680299
+Sturnus vulgaris,Partial,species,0.182008976151082
+Suthora fulvifrons,Resident,species,-0.120873491061584
+Syrmaticus humiae,Resident,species,-0.0351005964841224
+Syrmaticus reevesii,Resident,species,-0.186163758198384
+Syrrhaptes paradoxus,Partial,species,-0.256321623171466
+Tarsiger chrysaeus,Partial,species,0.0974387564404232
+Tarsiger indicus,Resident,species,-0.0937371444455993
+Temnurus temnurus,Unknown,species,-0.248950471504872
+Tephrodornis virgatus,Resident,species,-0.15108366583727
+Thalasseus bergii,Long-distance,species,0.0066265822651373
+Timalia pileata,Unknown,species,0.162612151748153
+Tragopan caboti,Resident,species,-0.0651788587111327
+Tragopan temminckii,Resident,species,-0.0965505403637242
+Treron curvirostra,Resident,species,-0.0858042193509514
+Treron sieboldii,Partial,species,0.131758709507145
+Treron sphenurus,Partial,species,-0.100944874077943
+Turdus boulboul,Partial,species,0.995284617062513
+Turdus cardis,Long-distance,species,0.0363706395241727
+Turdus feae,Long-distance,species,0.258953289473646
+Turdus mandarinus,Resident,species,0.0124622587527586
+Turdus pilaris,Long-distance,species,-0.0707925122214534
+Turdus rubrocanus,Resident,species,0.284834589439457
+Turdus ruficollis,Long-distance,species,0.0651236971457054
+Turdus viscivorus,Resident,species,0.327942924976183
+Turnix suscitator,Unknown,species,0.289546376253489
+Tyto longimembris,Unknown,species,0.162465825500462
+Urile pelagicus,Unknown,species,-0.101219142065816
+Urosphena squameiceps,Long-distance,species,-0.185672392946987
+Vanellus cinereus,Long-distance,species,-0.276616049661659
+Vanellus indicus,Unknown,species,0.159199242461368
+Vanellus vanellus,Partial,species,-0.27755679038197
+Yuhina nigrimenta,Resident,species,0.0793699736455056
+Zoothera dixoni,Unknown,species,0.30139483277028
+Zoothera mollissima,Resident,species,0.0308154388078124
+Zoothera monticola,Resident,species,-0.0698052603730984
+Zosterops erythropleurus,Long-distance,species,-0.186188995878062
+Anhui,,province,0.266089990019011
+Beijing,,province,0.0318440855697837
+Chongqing,,province,-0.0521000488226941
+Fujian,,province,-0.337972564470004
+Gansu,,province,0.46827649640984
+Guangdong,,province,-0.304154624858949
+Guangxi,,province,0.276451469630334
+Guizhou,,province,0.519499085906823
+Hainan,,province,0.246442264036935
+Hebei,,province,-0.320772382757125
+Heilongjiang,,province,0.512574167168588
+Henan,,province,0.186463899446032
+Hubei,,province,0.0585724508523519
+Hunan,,province,0.733520453921457
+Inner Mongolia,,province,0.471044456917549
+Jiangsu,,province,0.180537914836053
+Jiangxi,,province,0.208968596232967
+Jilin,,province,0.251539282060428
+Liaoning,,province,0.17273342180672
+Ningxia,,province,0.238815207926596
+Qinghai,,province,0.218762835341092
+Shaanxi,,province,0.417867311457929
+Shandong,,province,0.170674939591044
+Shanghai,,province,0.0195727167782732
+Shanxi,,province,-0.282709008984046
+Sichuan,,province,-0.253084716305452
+Tianjin,,province,0.0607011531046008
+Tibet,,province,0.451055353275482
+Xinjiang,,province,-0.295681135983236
+Yunnan,,province,-0.070256322526937
+Zhejiang,,province,0.018985454515601
+Anhui.2002,,province_year,-0.316524160940945
+Beijing.2002,,province_year,0.266760758989397
+Chongqing.2002,,province_year,-0.226265714650265
+Fujian.2002,,province_year,-0.130882448377395
+Gansu.2002,,province_year,-0.333969788151191
+Guangdong.2002,,province_year,-0.175642323187519
+Guangxi.2002,,province_year,0.213415964258664
+Guizhou.2002,,province_year,-0.240877497624179
+Hainan.2002,,province_year,-0.172939439407924
+Hebei.2002,,province_year,-0.200518772829177
+Heilongjiang.2002,,province_year,0.582581978628604
+Henan.2002,,province_year,-0.239450223874891
+Hubei.2002,,province_year,-0.285632161553997
+Hunan.2002,,province_year,-0.455593001945275
+Jiangsu.2002,,province_year,-0.307539391057324
+Jiangxi.2002,,province_year,-0.223929533343386
+Jilin.2002,,province_year,-0.234116331961019
+Liaoning.2002,,province_year,0.193478274731238
+Ningxia.2002,,province_year,0.319576236049463
+Qinghai.2002,,province_year,-0.291511011025779
+Shaanxi.2002,,province_year,0.00502551113153584
+Shanghai.2002,,province_year,-0.237495658102787
+Shanxi.2002,,province_year,-0.14109869169233
+Sichuan.2002,,province_year,-0.317176436812723
+Tianjin.2002,,province_year,0.353068247448318
+Tibet.2002,,province_year,-0.337521586152937
+Xinjiang.2002,,province_year,-0.191751811504667
+Yunnan.2002,,province_year,-0.318936260975205
+Zhejiang.2002,,province_year,0.219140775398388
+Beijing.2003,,province_year,-0.177703188599518
+Chongqing.2003,,province_year,-0.185504783806274
+Fujian.2003,,province_year,-0.183792473965055
+Guangdong.2003,,province_year,-0.166740156155772
+Guangxi.2003,,province_year,-0.26185639008384
+Hainan.2003,,province_year,-0.210480560092836
+Hebei.2003,,province_year,-0.15496707620701
+Henan.2003,,province_year,-0.237042060284528
+Hubei.2003,,province_year,0.261295508178033
+Hunan.2003,,province_year,-0.395933639800854
+Inner Mongolia.2003,,province_year,-0.348239066391659
+Jiangsu.2003,,province_year,-0.271127497033736
+Jiangxi.2003,,province_year,0.732112758867581
+Jilin.2003,,province_year,-0.256895591324393
+Qinghai.2003,,province_year,-0.146496108008682
+Shaanxi.2003,,province_year,-0.367384120630296
+Shandong.2003,,province_year,-0.247340108597435
+Shanghai.2003,,province_year,-0.232975435898958
+Sichuan.2003,,province_year,-0.214495882919607
+Tianjin.2003,,province_year,-0.159031268547388
+Tibet.2003,,province_year,0.24737970351225
+Xinjiang.2003,,province_year,-0.188809870980906
+Yunnan.2003,,province_year,0.149628331521508
+Zhejiang.2003,,province_year,-0.236774400452164
+Anhui.2004,,province_year,-0.310169310000877
+Beijing.2004,,province_year,0.297714098019481
+Chongqing.2004,,province_year,-0.166184235586706
+Fujian.2004,,province_year,0.34580335140083
+Gansu.2004,,province_year,-0.337476848090327
+Guangdong.2004,,province_year,-0.134093115356616
+Guangxi.2004,,province_year,1.00108569952847
+Guizhou.2004,,province_year,-0.298162815568293
+Hainan.2004,,province_year,0.266800725616111
+Hebei.2004,,province_year,0.336244115226792
+Heilongjiang.2004,,province_year,-0.267554258760663
+Henan.2004,,province_year,-0.283711323440311
+Hunan.2004,,province_year,-0.404315094812676
+Inner Mongolia.2004,,province_year,0.0746123417350116
+Jiangsu.2004,,province_year,-0.309201188651361
+Jiangxi.2004,,province_year,1.05250415939758
+Jilin.2004,,province_year,-0.25543261744569
+Liaoning.2004,,province_year,0.570362219558373
+Qinghai.2004,,province_year,-0.302684960640053
+Shaanxi.2004,,province_year,0.335043766230502
+Shandong.2004,,province_year,-0.237352752804913
+Shanghai.2004,,province_year,0.179398248958509
+Sichuan.2004,,province_year,-0.247534596149327
+Tibet.2004,,province_year,-0.415120180724389
+Xinjiang.2004,,province_year,0.287383766820783
+Yunnan.2004,,province_year,-0.258610567173304
+Zhejiang.2004,,province_year,-0.275684073529794
+Anhui.2005,,province_year,0.133755854238409
+Beijing.2005,,province_year,0.308438387854476
+Chongqing.2005,,province_year,-0.153596117854425
+Fujian.2005,,province_year,-0.143062905004676
+Gansu.2005,,province_year,-0.30585105927225
+Guangdong.2005,,province_year,-0.150664318782292
+Guangxi.2005,,province_year,1.23490267825918
+Hainan.2005,,province_year,0.275330545692021
+Hebei.2005,,province_year,-0.204570930871386
+Heilongjiang.2005,,province_year,0.637680056638831
+Henan.2005,,province_year,-0.279721114108675
+Hubei.2005,,province_year,-0.270741526209718
+Hunan.2005,,province_year,-0.361857602935707
+Inner Mongolia.2005,,province_year,-0.321279259428108
+Jiangsu.2005,,province_year,-0.311639066583703
+Jiangxi.2005,,province_year,-0.234577350669981
+Jilin.2005,,province_year,-0.24245189158845
+Qinghai.2005,,province_year,-0.261249623968525
+Shaanxi.2005,,province_year,0.370838018381199
+Shandong.2005,,province_year,-0.225763548635728
+Shanghai.2005,,province_year,0.129939444906369
+Shanxi.2005,,province_year,-0.158672246929422
+Sichuan.2005,,province_year,-0.246417534287914
+Tianjin.2005,,province_year,0.376830551377827
+Tibet.2005,,province_year,-0.356525936804892
+Xinjiang.2005,,province_year,-0.227044258048695
+Yunnan.2005,,province_year,-0.307993609700299
+Zhejiang.2005,,province_year,-0.323894391537167
+Anhui.2006,,province_year,0.450916665900129
+Beijing.2006,,province_year,0.28752089586776
+Chongqing.2006,,province_year,0.754618166560956
+Fujian.2006,,province_year,0.439598655068497
+Gansu.2006,,province_year,0.0884300842698221
+Guangdong.2006,,province_year,-0.154376838061494
+Guangxi.2006,,province_year,0.276113513193075
+Guizhou.2006,,province_year,-0.260335791530177
+Hainan.2006,,province_year,0.693615737886142
+Hebei.2006,,province_year,-0.185750524556661
+Heilongjiang.2006,,province_year,0.296609349648741
+Henan.2006,,province_year,0.128754154522736
+Hubei.2006,,province_year,-0.323900098976473
+Hunan.2006,,province_year,0.0484297729081369
+Inner Mongolia.2006,,province_year,-0.337720999846269
+Jiangsu.2006,,province_year,0.513580234952707
+Jiangxi.2006,,province_year,0.222691266296847
+Jilin.2006,,province_year,0.288991039796236
+Liaoning.2006,,province_year,0.255078362952081
+Qinghai.2006,,province_year,0.240892653282214
+Shaanxi.2006,,province_year,0.757948395167316
+Shandong.2006,,province_year,-0.288871592202916
+Shanghai.2006,,province_year,-0.339024928965948
+Sichuan.2006,,province_year,-0.290837548789875
+Tibet.2006,,province_year,-0.370851850254093
+Xinjiang.2006,,province_year,-0.246626087151408
+Yunnan.2006,,province_year,0.130727432714374
+Zhejiang.2006,,province_year,-0.337034625786549
+Anhui.2007,,province_year,0.785730181767874
+Beijing.2007,,province_year,0.265357539546445
+Chongqing.2007,,province_year,1.47648783177694
+Fujian.2007,,province_year,-0.188959820513566
+Gansu.2007,,province_year,0.00537757288894939
+Guangdong.2007,,province_year,-0.160498586886172
+Guangxi.2007,,province_year,-0.223653736104375
+Guizhou.2007,,province_year,-0.236140271174532
+Hainan.2007,,province_year,0.720151346740419
+Hebei.2007,,province_year,-0.212975799636868
+Heilongjiang.2007,,province_year,0.299629074351907
+Henan.2007,,province_year,-0.368604890965606
+Hubei.2007,,province_year,-0.349915329610213
+Hunan.2007,,province_year,-0.381067338201433
+Inner Mongolia.2007,,province_year,0.0641612080161113
+Jiangsu.2007,,province_year,0.778268523048774
+Jiangxi.2007,,province_year,-0.268761828358071
+Jilin.2007,,province_year,-0.263000358937839
+Liaoning.2007,,province_year,0.196668035691484
+Ningxia.2007,,province_year,-0.261864297077899
+Qinghai.2007,,province_year,-0.312725799549635
+Shaanxi.2007,,province_year,-0.163131707811072
+Shandong.2007,,province_year,0.229541112122038
+Shanghai.2007,,province_year,-0.307761600174298
+Shanxi.2007,,province_year,-0.210129109495607
+Sichuan.2007,,province_year,-0.291369970343684
+Tibet.2007,,province_year,-0.487140775744059
+Xinjiang.2007,,province_year,-0.279848638981204
+Yunnan.2007,,province_year,0.499207450943145
+Zhejiang.2007,,province_year,-0.351376969517704
+Anhui.2008,,province_year,-0.409413124026871
+Beijing.2008,,province_year,-0.22112520932548
+Chongqing.2008,,province_year,0.278363300201364
+Fujian.2008,,province_year,-0.165936511626912
+Gansu.2008,,province_year,0.118190900250445
+Guangdong.2008,,province_year,-0.146199182457159
+Guangxi.2008,,province_year,-0.215238793935095
+Guizhou.2008,,province_year,-0.331220054086886
+Hainan.2008,,province_year,-0.147939439443002
+Hebei.2008,,province_year,-0.21658691268912
+Heilongjiang.2008,,province_year,0.283867053038342
+Henan.2008,,province_year,0.0013858068858584
+Hubei.2008,,province_year,-0.364857183647368
+Hunan.2008,,province_year,-0.426173797453325
+Inner Mongolia.2008,,province_year,-0.359770503431103
+Jiangsu.2008,,province_year,-0.390039034664714
+Jiangxi.2008,,province_year,0.558466895576348
+Jilin.2008,,province_year,-0.23305254532862
+Liaoning.2008,,province_year,-0.333175380228989
+Qinghai.2008,,province_year,-0.246082055193953
+Shaanxi.2008,,province_year,-0.542328691097314
+Shandong.2008,,province_year,-0.276000314245341
+Shanghai.2008,,province_year,0.141876347056475
+Shanxi.2008,,province_year,-0.217133345775328
+Sichuan.2008,,province_year,-0.241580511031901
+Tianjin.2008,,province_year,-0.16100686606379
+Tibet.2008,,province_year,-0.365420582295091
+Xinjiang.2008,,province_year,0.164368244753868
+Yunnan.2008,,province_year,-0.34841740130756
+Zhejiang.2008,,province_year,-0.367852390962656
+Anhui.2009,,province_year,-0.422063795130373
+Beijing.2009,,province_year,0.25377510439011
+Chongqing.2009,,province_year,-0.178505329832018
+Fujian.2009,,province_year,-0.119033795285584
+Gansu.2009,,province_year,-0.0077003094107537
+Guangdong.2009,,province_year,-0.172216563219457
+Guangxi.2009,,province_year,0.320778477902716
+Guizhou.2009,,province_year,0.804458306854248
+Hainan.2009,,province_year,-0.193594582788729
+Hebei.2009,,province_year,-0.203042104025115
+Heilongjiang.2009,,province_year,0.253889990492029
+Henan.2009,,province_year,-0.410054456896878
+Hubei.2009,,province_year,0.0837045035495177
+Hunan.2009,,province_year,0.777323069411932
+Inner Mongolia.2009,,province_year,0.0542504979960626
+Jiangsu.2009,,province_year,-0.387334988876861
+Jiangxi.2009,,province_year,0.136194152640926
+Jilin.2009,,province_year,0.275544011767146
+Liaoning.2009,,province_year,-0.322334059236902
+Qinghai.2009,,province_year,-0.251337924985884
+Shaanxi.2009,,province_year,-0.171661269693011
+Shandong.2009,,province_year,0.983800961351219
+Shanghai.2009,,province_year,0.151984538255222
+Shanxi.2009,,province_year,-0.19997511033165
+Sichuan.2009,,province_year,-0.245574213905974
+Tianjin.2009,,province_year,-0.152174787795792
+Tibet.2009,,province_year,-0.450218084824468
+Yunnan.2009,,province_year,0.122600840167207
+Zhejiang.2009,,province_year,-0.364953024510852
+Anhui.2010,,province_year,-0.418732567944973
+Beijing.2010,,province_year,-0.240849391255781
+Chongqing.2010,,province_year,0.272451172687275
+Fujian.2010,,province_year,-0.154041858837829
+Gansu.2010,,province_year,-0.411731248408947
+Guangdong.2010,,province_year,-0.168837036354192
+Guangxi.2010,,province_year,-0.256103314953682
+Guizhou.2010,,province_year,-0.215520011549765
+Hainan.2010,,province_year,0.307499298318965
+Hebei.2010,,province_year,-0.23118396063102
+Heilongjiang.2010,,province_year,1.23767471517531
+Henan.2010,,province_year,-0.0180422360370701
+Hubei.2010,,province_year,-0.378121702434064
+Hunan.2010,,province_year,0.461104797466001
+Inner Mongolia.2010,,province_year,0.112233696503333
+Jiangsu.2010,,province_year,-0.421444435338581
+Jiangxi.2010,,province_year,0.136969419513775
+Jilin.2010,,province_year,0.767918829398449
+Liaoning.2010,,province_year,-0.287768880613298
+Qinghai.2010,,province_year,-0.326746091179255
+Shaanxi.2010,,province_year,0.128938613888158
+Shandong.2010,,province_year,-0.274136290664512
+Shanghai.2010,,province_year,-0.317887613402849
+Shanxi.2010,,province_year,-0.21359903718718
+Sichuan.2010,,province_year,-0.311473655201289
+Tianjin.2010,,province_year,-0.131477743959272
+Tibet.2010,,province_year,0.266419429913223
+Xinjiang.2010,,province_year,1.94396477876538
+Yunnan.2010,,province_year,0.104663990356651
+Zhejiang.2010,,province_year,-0.404348295641027
+Anhui.2011,,province_year,0.618347837733829
+Beijing.2011,,province_year,0.256846596884712
+Chongqing.2011,,province_year,-0.192216865079647
+Fujian.2011,,province_year,-0.135840434633205
+Gansu.2011,,province_year,-0.496128042106477
+Guangdong.2011,,province_year,-0.129317552884794
+Guangxi.2011,,province_year,-0.242830068913628
+Guizhou.2011,,province_year,0.370529763735989
+Hainan.2011,,province_year,-0.104732389058923
+Hebei.2011,,province_year,-0.216180211224731
+Heilongjiang.2011,,province_year,-0.172557418288901
+Henan.2011,,province_year,0.612702717487996
+Hubei.2011,,province_year,0.391097781848186
+Hunan.2011,,province_year,0.892685064264509
+Inner Mongolia.2011,,province_year,0.103027410157778
+Jiangsu.2011,,province_year,-0.440887798263513
+Jiangxi.2011,,province_year,0.581719816169865
+Jilin.2011,,province_year,-0.19959183008085
+Liaoning.2011,,province_year,0.1666350284576
+Ningxia.2011,,province_year,0.1442318998428
+Qinghai.2011,,province_year,-0.303163802265508
+Shaanxi.2011,,province_year,0.100163214122822
+Shandong.2011,,province_year,0.172937063313938
+Shanghai.2011,,province_year,1.17130907691024
+Shanxi.2011,,province_year,-0.231151839241428
+Sichuan.2011,,province_year,0.558655205529976
+Tianjin.2011,,province_year,-0.130786136036557
+Tibet.2011,,province_year,-0.478064440238002
+Xinjiang.2011,,province_year,-0.351093513247088
+Yunnan.2011,,province_year,0.487157134385922
+Zhejiang.2011,,province_year,-0.392066695137904
+Anhui.2012,,province_year,-0.0330503213753868
+Beijing.2012,,province_year,-0.248014421218702
+Chongqing.2012,,province_year,-0.153926170842582
+Fujian.2012,,province_year,-0.17032212515099
+Gansu.2012,,province_year,-0.085549463855957
+Guangdong.2012,,province_year,-0.151222946809122
+Guangxi.2012,,province_year,0.678298549888946
+Guizhou.2012,,province_year,-0.276946149901915
+Hainan.2012,,province_year,-0.186723855859147
+Hebei.2012,,province_year,-0.19869596193895
+Heilongjiang.2012,,province_year,0.319472556765377
+Henan.2012,,province_year,-0.450952045527596
+Hubei.2012,,province_year,-0.394325666126173
+Hunan.2012,,province_year,0.787017741050941
+Inner Mongolia.2012,,province_year,-0.321271529878701
+Jiangsu.2012,,province_year,-0.443534350892487
+Jiangxi.2012,,province_year,-0.334324077932017
+Jilin.2012,,province_year,-0.157096433399584
+Liaoning.2012,,province_year,0.914132481348464
+Ningxia.2012,,province_year,-0.304866527340286
+Qinghai.2012,,province_year,0.0662233439623152
+Shaanxi.2012,,province_year,-0.200765181037222
+Shandong.2012,,province_year,-0.257078960138298
+Shanghai.2012,,province_year,1.12679359284546
+Shanxi.2012,,province_year,-0.237443715982694
+Sichuan.2012,,province_year,0.862201624942943
+Tianjin.2012,,province_year,-0.16084939741962
+Tibet.2012,,province_year,0.189636695934861
+Xinjiang.2012,,province_year,-0.33143282035542
+Yunnan.2012,,province_year,-0.387687185655049
+Zhejiang.2012,,province_year,-0.395723373922454
+Anhui.2013,,province_year,-0.0705019485712277
+Beijing.2013,,province_year,1.0277978865145
+Chongqing.2013,,province_year,-0.189218199833697
+Fujian.2013,,province_year,-0.196968283992571
+Gansu.2013,,province_year,-0.103350287624795
+Guangdong.2013,,province_year,0.324850109056605
+Guangxi.2013,,province_year,1.00169807699991
+Guizhou.2013,,province_year,-0.178917896085931
+Hainan.2013,,province_year,-0.18728144645937
+Hebei.2013,,province_year,-0.199044681500106
+Heilongjiang.2013,,province_year,-0.181946921208251
+Henan.2013,,province_year,0.311024061324939
+Hubei.2013,,province_year,-0.408838971682243
+Hunan.2013,,province_year,0.275980576276372
+Inner Mongolia.2013,,province_year,0.468376097805763
+Jiangsu.2013,,province_year,-0.0352300069951368
+Jiangxi.2013,,province_year,-0.343415487776704
+Jilin.2013,,province_year,-0.137892318101529
+Liaoning.2013,,province_year,-0.29094448399542
+Ningxia.2013,,province_year,-0.333742807307571
+Qinghai.2013,,province_year,1.43895613177805
+Shaanxi.2013,,province_year,-0.594787980206785
+Shandong.2013,,province_year,-0.250142463864505
+Shanghai.2013,,province_year,1.38504288871442
+Shanxi.2013,,province_year,-0.237559899910896
+Sichuan.2013,,province_year,-0.349620761758557
+Tianjin.2013,,province_year,-0.159511005761642
+Tibet.2013,,province_year,1.03331559724506
+Xinjiang.2013,,province_year,-0.352616061492795
+Yunnan.2013,,province_year,0.0220762681298589
+Zhejiang.2013,,province_year,0.0216267211219613
+Anhui.2014,,province_year,-0.473642322959781
+Beijing.2014,,province_year,-0.259962486414073
+Chongqing.2014,,province_year,-0.199126630361004
+Fujian.2014,,province_year,0.305178062780931
+Gansu.2014,,province_year,-0.0948281534580284
+Guangdong.2014,,province_year,0.287888547975625
+Guangxi.2014,,province_year,0.119032778347937
+Guizhou.2014,,province_year,0.570351817693751
+Hainan.2014,,province_year,-0.180701129755299
+Hebei.2014,,province_year,-0.199758713597698
+Heilongjiang.2014,,province_year,-0.117245605596554
+Henan.2014,,province_year,-0.0626745371655259
+Hubei.2014,,province_year,0.40124659048283
+Hunan.2014,,province_year,0.281210951351278
+Inner Mongolia.2014,,province_year,1.26787672101824
+Jiangsu.2014,,province_year,0.286569028749423
+Jiangxi.2014,,province_year,-0.368071047206433
+Jilin.2014,,province_year,-0.176378294090773
+Liaoning.2014,,province_year,-0.295971966235776
+Ningxia.2014,,province_year,-0.333427271233113
+Qinghai.2014,,province_year,1.01729208436829
+Shaanxi.2014,,province_year,0.378474627739133
+Shandong.2014,,province_year,-0.268255328566469
+Shanghai.2014,,province_year,0.120230496010022
+Shanxi.2014,,province_year,-0.235164103639694
+Sichuan.2014,,province_year,0.464081208296394
+Tianjin.2014,,province_year,0.727988702639009
+Tibet.2014,,province_year,0.451952641757584
+Xinjiang.2014,,province_year,-0.33459327454634
+Yunnan.2014,,province_year,0.00442427818039687
+Zhejiang.2014,,province_year,0.38692447165478
+Anhui.2015,,province_year,0.351960769508666
+Beijing.2015,,province_year,0.216662873895383
+Chongqing.2015,,province_year,-0.23442866512428
+Fujian.2015,,province_year,-0.219089865437702
+Gansu.2015,,province_year,-0.0875272945583093
+Guangdong.2015,,province_year,-0.211362390578092
+Guangxi.2015,,province_year,0.126241637072287
+Guizhou.2015,,province_year,0.524483355482835
+Hainan.2015,,province_year,-0.180316894584565
+Hebei.2015,,province_year,0.322428949390052
+Heilongjiang.2015,,province_year,0.216414413778565
+Henan.2015,,province_year,-0.0412041993819345
+Hubei.2015,,province_year,0.0129093897467711
+Hunan.2015,,province_year,0.953291632145999
+Inner Mongolia.2015,,province_year,-0.393653298626753
+Jiangsu.2015,,province_year,-0.465513223229286
+Jiangxi.2015,,province_year,-0.366868209760725
+Jilin.2015,,province_year,-0.171614052983029
+Liaoning.2015,,province_year,0.503865584877612
+Ningxia.2015,,province_year,-0.329806525714577
+Qinghai.2015,,province_year,0.484199921491697
+Shaanxi.2015,,province_year,0.671463680208241
+Shandong.2015,,province_year,0.24623222054874
+Shanghai.2015,,province_year,0.106332427445521
+Shanxi.2015,,province_year,-0.207771471588765
+Sichuan.2015,,province_year,0.450151177370776
+Tianjin.2015,,province_year,-0.21073459791632
+Tibet.2015,,province_year,0.457704529701389
+Xinjiang.2015,,province_year,0.842346640177233
+Yunnan.2015,,province_year,-0.420085902911966
+Zhejiang.2015,,province_year,-0.414198514331721
+Anhui.2016,,province_year,0.916424371747238
+Beijing.2016,,province_year,-0.26897791042592
+Chongqing.2016,,province_year,-0.237964263244076
+Fujian.2016,,province_year,-0.222458150087403
+Gansu.2016,,province_year,0.798431148965154
+Guangdong.2016,,province_year,-0.23980255339056
+Guangxi.2016,,province_year,0.172530570118692
+Guizhou.2016,,province_year,0.14188174977486
+Hainan.2016,,province_year,-0.203102741390048
+Hebei.2016,,province_year,-0.199215477707037
+Heilongjiang.2016,,province_year,-0.228768862898641
+Henan.2016,,province_year,1.26785709275136
+Hubei.2016,,province_year,-0.416767886085542
+Hunan.2016,,province_year,-0.516763905813297
+Inner Mongolia.2016,,province_year,-0.386355076601618
+Jiangsu.2016,,province_year,0.295010670832068
+Jiangxi.2016,,province_year,0.0568005602577159
+Jilin.2016,,province_year,0.801120637738416
+Liaoning.2016,,province_year,-0.311032778864649
+Ningxia.2016,,province_year,0.548841822731584
+Qinghai.2016,,province_year,-0.383091719897758
+Shaanxi.2016,,province_year,0.702903705124302
+Shandong.2016,,province_year,-0.31631136400773
+Shanghai.2016,,province_year,-0.361225028397983
+Shanxi.2016,,province_year,0.701154027181101
+Sichuan.2016,,province_year,0.0607076116983684
+Tianjin.2016,,province_year,0.287580134598422
+Tibet.2016,,province_year,1.38908441324947
+Xinjiang.2016,,province_year,-0.339016460830571
+Yunnan.2016,,province_year,0.916202950417675
+Zhejiang.2016,,province_year,0.367301893725914
+Anhui.2017,,province_year,-0.0218002656524396
+Beijing.2017,,province_year,0.170914535094002
+Chongqing.2017,,province_year,0.189416417573915
+Fujian.2017,,province_year,-0.249770394184566
+Gansu.2017,,province_year,0.230130344251167
+Guangdong.2017,,province_year,-0.252628298753093
+Guangxi.2017,,province_year,-0.326770965909531
+Guizhou.2017,,province_year,1.18860611247976
+Hainan.2017,,province_year,0.69424398395256
+Hebei.2017,,province_year,-0.227749639103914
+Heilongjiang.2017,,province_year,-0.195310209641625
+Henan.2017,,province_year,0.300822349190323
+Hubei.2017,,province_year,0.935569099821304
+Hunan.2017,,province_year,1.12178922820457
+Inner Mongolia.2017,,province_year,0.0463873451118532
+Jiangsu.2017,,province_year,-0.0625294770000578
+Jiangxi.2017,,province_year,0.725611114314833
+Jilin.2017,,province_year,-0.192755609295112
+Liaoning.2017,,province_year,0.557390302697841
+Ningxia.2017,,province_year,0.514504168974547
+Qinghai.2017,,province_year,1.20506358587549
+Shaanxi.2017,,province_year,-0.177201085162594
+Shandong.2017,,province_year,0.0749990417037908
+Shanghai.2017,,province_year,-0.373720181231473
+Shanxi.2017,,province_year,-0.226711639241026
+Sichuan.2017,,province_year,-0.380958297357916
+Tianjin.2017,,province_year,-0.226798503776439
+Tibet.2017,,province_year,-0.169791237970436
+Xinjiang.2017,,province_year,-0.341634282489618
+Yunnan.2017,,province_year,0.346796708345694
+Zhejiang.2017,,province_year,0.670004315611185
+Anhui.2018,,province_year,-0.0635100320039554
+Beijing.2018,,province_year,-0.315182999203645
+Chongqing.2018,,province_year,0.211180657381845
+Fujian.2018,,province_year,-0.277531822988049
+Gansu.2018,,province_year,0.511157734106573
+Guangdong.2018,,province_year,-0.295343242713141
+Guangxi.2018,,province_year,-0.362164610226462
+Guizhou.2018,,province_year,0.0145875528560267
+Hainan.2018,,province_year,1.03430503534586
+Hebei.2018,,province_year,-0.240344003698695
+Heilongjiang.2018,,province_year,0.312707102941699
+Henan.2018,,province_year,-0.475769851324382
+Hubei.2018,,province_year,-0.000637154589138421
+Hunan.2018,,province_year,0.171541274838837
+Inner Mongolia.2018,,province_year,0.00230576043614582
+Jiangsu.2018,,province_year,-0.0681186404025879
+Jiangxi.2018,,province_year,-0.409185950189115
+Jilin.2018,,province_year,0.27812930332587
+Liaoning.2018,,province_year,-0.32165113701606
+Ningxia.2018,,province_year,0.100006893427871
+Qinghai.2018,,province_year,0.0277076667158234
+Shaanxi.2018,,province_year,0.648482145041297
+Shandong.2018,,province_year,0.431766384238132
+Shanghai.2018,,province_year,-0.389513322809575
+Shanxi.2018,,province_year,0.219921927868479
+Sichuan.2018,,province_year,-0.387993741737558
+Tianjin.2018,,province_year,0.238107266984754
+Tibet.2018,,province_year,-0.571179660691353
+Xinjiang.2018,,province_year,-0.35356091920927
+Yunnan.2018,,province_year,-0.434146103021127
+Zhejiang.2018,,province_year,0.633704291852426
+Anhui.2019,,province_year,-0.477697990659571
+Beijing.2019,,province_year,0.139096494514375
+Chongqing.2019,,province_year,-0.274072362633432
+Fujian.2019,,province_year,0.592073434297179
+Gansu.2019,,province_year,0.729435887812041
+Guangdong.2019,,province_year,-0.322978858559525
+Guangxi.2019,,province_year,-0.38514764062809
+Guizhou.2019,,province_year,0.00804453048747344
+Hainan.2019,,province_year,-0.224724308854039
+Hebei.2019,,province_year,0.230657900347816
+Heilongjiang.2019,,province_year,-0.224198623698871
+Henan.2019,,province_year,0.833035285692762
+Hubei.2019,,province_year,0.958784865112644
+Hunan.2019,,province_year,-0.157915555985945
+Inner Mongolia.2019,,province_year,0.973179849594572
+Jiangsu.2019,,province_year,0.536521123431365
+Jiangxi.2019,,province_year,0.681309256793261
+Jilin.2019,,province_year,1.12297129862081
+Liaoning.2019,,province_year,0.163833166745389
+Ningxia.2019,,province_year,0.824916859720379
+Qinghai.2019,,province_year,-0.369509293210944
+Shaanxi.2019,,province_year,0.436333277727617
+Shandong.2019,,province_year,-0.364249919865148
+Shanghai.2019,,province_year,0.0282781322203252
+Shanxi.2019,,province_year,0.631453684126273
+Sichuan.2019,,province_year,-0.392750727624767
+Tianjin.2019,,province_year,0.224541146342686
+Tibet.2019,,province_year,1.92405052947428
+Xinjiang.2019,,province_year,-0.342905652726797
+Yunnan.2019,,province_year,-0.437972969934116
+Zhejiang.2019,,province_year,0.315553184385658
+Anhui.2020,,province_year,0.291413744891038
+Beijing.2020,,province_year,-0.322968503961735
+Chongqing.2020,,province_year,-0.26157496886965
+Fujian.2020,,province_year,-0.273421441424404
+Gansu.2020,,province_year,1.00822639016088
+Guangdong.2020,,province_year,0.140559427814392
+Guangxi.2020,,province_year,0.0751310414032743
+Guizhou.2020,,province_year,0.369659720196235
+Hainan.2020,,province_year,-0.229370907805075
+Hebei.2020,,province_year,-0.229953640379541
+Heilongjiang.2020,,province_year,-0.147292517670246
+Henan.2020,,province_year,-0.453906878685107
+Hubei.2020,,province_year,0.976301856316876
+Hunan.2020,,province_year,0.960125242746656
+Inner Mongolia.2020,,province_year,0.982933182413625
+Jiangsu.2020,,province_year,-0.482457374209884
+Jiangxi.2020,,province_year,0.0396649656985661
+Jilin.2020,,province_year,0.896446506917714
+Liaoning.2020,,province_year,0.158674991567096
+Ningxia.2020,,province_year,0.129401143554797
+Qinghai.2020,,province_year,-0.366786302214713
+Shaanxi.2020,,province_year,0.751598052196131
+Shandong.2020,,province_year,0.764810868033683
+Shanghai.2020,,province_year,-0.392165757253974
+Shanxi.2020,,province_year,-0.257767904853537
+Sichuan.2020,,province_year,0.42526706801918
+Tianjin.2020,,province_year,0.655716958040623
+Tibet.2020,,province_year,0.474619357449127
+Xinjiang.2020,,province_year,-0.319215978077082
+Yunnan.2020,,province_year,-0.413005667421382
+Zhejiang.2020,,province_year,0.302263636070041
+Anhui.2021,,province_year,-0.0469686206665292
+Beijing.2021,,province_year,-0.333094279107803
+Chongqing.2021,,province_year,0.16505774613571
+Fujian.2021,,province_year,-0.303929167017489
+Gansu.2021,,province_year,1.05575848597369
+Guangdong.2021,,province_year,-0.341283583135263
+Guangxi.2021,,province_year,-0.434099658069866
+Guizhou.2021,,province_year,0.0308226171309283
+Hainan.2021,,province_year,0.161611934821153
+Hebei.2021,,province_year,0.244189168940688
+Heilongjiang.2021,,province_year,0.286819589306312
+Henan.2021,,province_year,-0.0410957355787851
+Hubei.2021,,province_year,0.341051783785001
+Hunan.2021,,province_year,0.379464748873224
+Inner Mongolia.2021,,province_year,0.405142569618863
+Jiangsu.2021,,province_year,0.785965427189999
+Jiangxi.2021,,province_year,-0.409726697162234
+Jilin.2021,,province_year,0.2348673855343
+Liaoning.2021,,province_year,-0.344118449114556
+Ningxia.2021,,province_year,1.18258596689994
+Qinghai.2021,,province_year,0.0791710393483633
+Shaanxi.2021,,province_year,-0.478547527929888
+Shandong.2021,,province_year,0.381258811666388
+Shanghai.2021,,province_year,-0.392013735205047
+Shanxi.2021,,province_year,-0.249450103646112
+Sichuan.2021,,province_year,0.0309529308422566
+Tianjin.2021,,province_year,-0.266180544619157
+Tibet.2021,,province_year,-0.145225655607838
+Xinjiang.2021,,province_year,-0.329274695704792
+Yunnan.2021,,province_year,0.0382505561899403
+Zhejiang.2021,,province_year,1.23153267247554
+Anhui.2022,,province_year,1.0987935334153
+Beijing.2022,,province_year,-0.330586412277063
+Chongqing.2022,,province_year,-0.328419541449594
+Fujian.2022,,province_year,-0.311934138826738
+Gansu.2022,,province_year,0.575476810686345
+Guangdong.2022,,province_year,0.79353598628084
+Guangxi.2022,,province_year,-0.417421837517166
+Guizhou.2022,,province_year,-0.423283431438882
+Hainan.2022,,province_year,0.140643223420236
+Hebei.2022,,province_year,0.280235731581439
+Heilongjiang.2022,,province_year,-0.203669960659829
+Henan.2022,,province_year,0.918057073265581
+Hubei.2022,,province_year,-0.433801892231297
+Hunan.2022,,province_year,0.327235665085585
+Inner Mongolia.2022,,province_year,0.47706361730931
+Jiangsu.2022,,province_year,0.544238482975226
+Jiangxi.2022,,province_year,-0.394560975658477
+Jilin.2022,,province_year,-0.182201313902162
+Liaoning.2022,,province_year,0.462024121605973
+Ningxia.2022,,province_year,-0.2898426749083
+Qinghai.2022,,province_year,-0.355831262410881
+Shaanxi.2022,,province_year,-0.0470499212874403
+Shandong.2022,,province_year,0.398519618677924
+Shanghai.2022,,province_year,-0.378382556590889
+Shanxi.2022,,province_year,-0.227380974369796
+Sichuan.2022,,province_year,-0.392367580170624
+Tianjin.2022,,province_year,-0.247314491436466
+Tibet.2022,,province_year,-0.0640751390263364
+Xinjiang.2022,,province_year,0.141604980010961
+Yunnan.2022,,province_year,-0.367768798634427
+Zhejiang.2022,,province_year,0.28227293001425
+Anhui.2023,,province_year,0.348434385036764
+Beijing.2023,,province_year,-0.307944225263955
+Chongqing.2023,,province_year,-0.330405122377436
+Fujian.2023,,province_year,-0.329940007377994
+Gansu.2023,,province_year,0.277782039491509
+Guangdong.2023,,province_year,0.0689093831407059
+Guangxi.2023,,province_year,-0.0455988729421719
+Guizhou.2023,,province_year,1.12763285103158
+Hainan.2023,,province_year,-0.319810302205385
+Hebei.2023,,province_year,-0.234307906904208
+Heilongjiang.2023,,province_year,0.254729245216021
+Henan.2023,,province_year,0.403067177754108
+Hubei.2023,,province_year,-0.00283356191196103
+Hunan.2023,,province_year,0.0944646526058259
+Inner Mongolia.2023,,province_year,0.0692497672861172
+Jiangsu.2023,,province_year,1.37951384760682
+Jiangxi.2023,,province_year,-0.416606426217988
+Jilin.2023,,province_year,-0.253831332741324
+Liaoning.2023,,province_year,-0.311929141910435
+Ningxia.2023,,province_year,-0.283591258630652
+Qinghai.2023,,province_year,0.486780959563101
+Shaanxi.2023,,province_year,0.291115176213411
+Shandong.2023,,province_year,0.694770520879058
+Shanghai.2023,,province_year,-0.374987567531259
+Shanxi.2023,,province_year,-0.230956023305903
+Sichuan.2023,,province_year,0.392659749938894
+Tianjin.2023,,province_year,-0.265046665260757
+Tibet.2023,,province_year,0.808990847372246
+Xinjiang.2023,,province_year,-0.299089985879589
+Yunnan.2023,,province_year,-0.378825544608263
+Zhejiang.2023,,province_year,-0.0485647480357431
+Anhui.2024,,province_year,-0.394183593957564
+Beijing.2024,,province_year,-0.280474875459232
+Chongqing.2024,,province_year,-0.337210452824941
+Fujian.2024,,province_year,0.141391469709441
+Gansu.2024,,province_year,-0.428492978429905
+Guangxi.2024,,province_year,-0.450953179445663
+Guizhou.2024,,province_year,0.312111469535103
+Hainan.2024,,province_year,-0.328492894456491
+Hebei.2024,,province_year,0.287605748343425
+Heilongjiang.2024,,province_year,-0.281778335527005
+Henan.2024,,province_year,-0.337051786237677
+Hubei.2024,,province_year,-0.393145324295245
+Hunan.2024,,province_year,-0.193621803468012
+Inner Mongolia.2024,,province_year,0.0892754044364867
+Jiangsu.2024,,province_year,0.320112031597143
+Jiangxi.2024,,province_year,0.0534440772428522
+Jilin.2024,,province_year,-0.256235998945594
+Liaoning.2024,,province_year,-0.325129262021251
+Ningxia.2024,,province_year,-0.247003290799806
+Qinghai.2024,,province_year,0.134982429509468
+Shaanxi.2024,,province_year,-0.420952767270107
+Shandong.2024,,province_year,-0.386941235263773
+Shanghai.2024,,province_year,-0.330936874690043
+Shanxi.2024,,province_year,0.295888390324265
+Sichuan.2024,,province_year,-0.39689742869776
+Tianjin.2024,,province_year,-0.242178027116471
+Tibet.2024,,province_year,-0.425733776726878
+Xinjiang.2024,,province_year,-0.259656739081769
+Yunnan.2024,,province_year,0.845759486180495
+Zhejiang.2024,,province_year,-0.4081517705119
