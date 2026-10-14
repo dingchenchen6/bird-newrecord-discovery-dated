@@ -1,5 +1,8 @@
 # 中国鸟类新分布记录生成风险研究(v2)—— 研究报告
 
+> **注(2026-10-13)/ Note.** 本文档记录的是 2024 年调查努力修正之前的分析过程, 文中数字为修正前版本。修正(补入 2024 年 eBird、广东 2024 年按缺失处理)后的现行数值以 `analysis_v2/tables/` 与三刊正文为准, 新旧对照见 `analysis_v2/effort2024_audit/`。 / Numbers in this document predate the 2024 effort correction; current values are in `analysis_v2/tables/` and the manuscripts, with the old-to-new map in `analysis_v2/effort2024_audit/`.
+
+
 **日期**:2026 年 7 月 26 日
 **作者**:丁晨晨(北京大学城市与环境学院生态研究中心)
 **版本**:v2(相对 v1 的结构性修正版)

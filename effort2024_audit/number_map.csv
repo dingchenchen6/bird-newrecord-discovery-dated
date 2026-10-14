@@ -1,0 +1,174 @@
+id,kind,old,new,changed,hits,hits_by_doc,source,deferred
+fold_visits,template,about 175-fold,about 200-fold,yes,0,,"effort panel: national visits 2022–24 / 2002–04, rounded to 5",no
+cells,template,"175,901 species × province × year cells","175,640 species × province × year cells",yes,0,,model rows,no
+abs_warming,template,"(hazard ratio 1.36 per SD, 95% CI 1.22–1.52)","(hazard ratio 1.36 per SD, 95% CI 1.22–1.53)",yes,0,,fit_R3 Wald (2 dp),no
+abs_effort,template,"survey effort (1.40, 1.25–1.58)","survey effort (1.43, 1.27–1.61)",yes,0,,fit_R3 Wald (2 dp),no
+abs_int,template,"negatively (0.85, 0.76–0.95)","negatively (0.84, 0.75–0.94)",yes,0,,fit_R3 Wald (2 dp),no
+abs_short,template,per standard deviation) and survey effort (1.40),per standard deviation) and survey effort (1.43),yes,0,,fit_R3 (2 dp),no
+abs_py,template,(×2.23 per standard deviation),(×2.22 per standard deviation),yes,0,,fit_R3 province×year multiplier,no
+tv_short,template,fell from 2.18 in 2002 to 1.07 in 2024,fell from 2.14 in 2002 to 1.13 in 2024,yes,0,,time-varying model (143 algorithm),no
+tv_short2,template,fell from 2.18 to 1.07 over two decades,fell from 2.14 to 1.13 over two decades,yes,0,,time-varying model,no
+abs_nulls,template,"centred the warming estimate on 1.157, so the species-specific component is about 1.18; the effort estimate fell to 0.980","centred the warming estimate on 1.161, so the species-specific component is about 1.18; the effort estimate fell to 0.979",yes,0,,"nulls N3 warming, N2 effort",no
+abs_incr,template,an increment of about 1.18,an increment of about 1.18,no,2,Manuscript_NEE_maintext.md:1; Manuscript_NC_maintext.md:1,fit_R3 / N3 median,no
+ms_abs_r2,template,and conditional *R*² from 0.27 to 0.41,and conditional *R*² from 0.28 to 0.41,yes,0,,re_evaluation R1/R3 (2 dp),no
+ms_abs_null,template,centred on 1.16 rather than unity,centred on 1.16 rather than unity,no,2,MANUSCRIPT_v2.md:1; Manuscript_NatureFamily_maintext.md:1,N3 warming median (2 dp),no
+ms_abs_eff,template,collapses to 0.98 once,collapses to 0.98 once,no,2,MANUSCRIPT_v2.md:1; Manuscript_NatureFamily_maintext.md:1,N2 effort median (2 dp),no
+ms_abs_p,template,outside their null distributions (*P* = 0.005),outside their null distributions (*P* = 0.005),no,2,MANUSCRIPT_v2.md:1; Manuscript_NatureFamily_maintext.md:1,"nulls P (warming N3, effort N2)",no
+nat_means,template,"mean of 493 in 2002–2004 to 86,380 in 2022–2024","mean of 493 in 2002–2004 to 99,156 in 2022–2024",yes,0,,effort panel national means,no
+dropped,template,(3 of 199 in N3; 3 of 300 in the species bootstrap,(3 of 199 in N3; 3 of 300 in the species bootstrap,no,5,MANUSCRIPT_v2.md:1; Manuscript_GCB_maintext.md:1; Manuscript_NEE_maintext.md:1; Manuscript_NC_maintext.md:1; Manuscript_NatureFamily_maintext.md:1,nulls / bootstrap n_dropped,no
+dropped_ed5,template,"their number is 3 of 199 in the third null, 3 of 300 in the species bootstrap","their number is 3 of 199 in the third null, 3 of 300 in the species bootstrap",no,2,MANUSCRIPT_v2.md:1; Manuscript_NatureFamily_tables_and_legends.md:1,nulls / bootstrap n_dropped,no
+rows4,template,"175,901 rows, 649 events, 392 species and 31 provincial units","175,640 rows, 649 events, 392 species and 31 provincial units",yes,0,,model rows,no
+dec_effort,template,survey-effort hazard ratio from 1.788 to 1.305,survey-effort hazard ratio from 1.788 to 1.309,yes,0,,decomposition S0/S1,no
+dec_pct,template,publication-year estimate is 37% larger,publication-year estimate is 37% larger,no,3,Manuscript_GCB_maintext.md:1; Manuscript_NEE_maintext.md:1; Manuscript_NC_maintext.md:1,decomposition S0/S1,no
+dec_warming,template,(1.394 → 1.437),(1.394 → 1.440),yes,0,,decomposition S0/S1,no
+dec_int2,template,(0.876 → 0.859).,(0.876 → 0.852).,yes,0,,decomposition S0/S1 interaction,no
+dec_int3,template,"(0.876 → 0.859),","(0.876 → 0.852),",yes,0,,decomposition S0/S1 interaction,no
+dec_s3,template,moves it by +0.022,moves it by +0.029,yes,0,,decomposition S3 − S2,no
+dec_s4,template,restores +0.159,restores +0.167,yes,0,,decomposition S4 − S3,no
+dec_s5,template,removes a further 0.044,removes a further 0.038,yes,0,,decomposition S4 − S5,no
+dec_s2,template,moves effort by −0.038,moves effort by −0.038,no,4,MANUSCRIPT_v2.md:1; Manuscript_GCB_maintext.md:1; Manuscript_NC_maintext.md:1; Manuscript_NatureFamily_maintext.md:1,decomposition S2 − S1,no
+main_warming,template,by 1.362 (95% CI 1.216–1.524; *P* = 8.3 × 10⁻⁸),by 1.365 (95% CI 1.219–1.528; *P* = 7.2 × 10⁻⁸),yes,0,,fit_R3 Wald,no
+main_effort,template,multiplies it by 1.404 (1.245–1.583; *P* = 2.9 × 10⁻⁸),multiplies it by 1.429 (1.268–1.611; *P* = 4.9 × 10⁻⁹),yes,0,,fit_R3 Wald,no
+main_var,template,"has no effect (0.995, 0.909–1.090; *P* = 0.92)","has no effect (0.995, 0.908–1.089; *P* = 0.91)",yes,0,,fit_R3 Wald,no
+main_int,template,"negatively (0.849, 0.761–0.948; *P* = 3.7 × 10⁻³)","negatively (0.839, 0.752–0.936; *P* = 1.7 × 10⁻³)",yes,0,,fit_R3 Wald,no
+null_obs,template,The observed 1.362 lies outside that null,The observed 1.365 lies outside that null,yes,0,,fit_R3,no
+null_p_both,template,(*P* = 0.005 for both),(*P* = 0.005 for both),no,3,Manuscript_GCB_maintext.md:1; Manuscript_NEE_maintext.md:1; Manuscript_NC_maintext.md:1,N1/N3 warming P,no
+null_p_both2,template,(*P* = 0.005 in both cases),(*P* = 0.005 in both cases),no,2,MANUSCRIPT_v2.md:1; Manuscript_NatureFamily_maintext.md:1,N1/N3 warming P,no
+null_ratio,template,1.362/1.157 ≈ 1.18,1.365/1.161 ≈ 1.18,yes,0,,fit_R3 / N3 median,no
+null_ratio_nee,template,"the increment, about 1.18,","the increment, about 1.18,",no,1,Manuscript_NEE_maintext.md:1,fit_R3 / N3 median,no
+null_eff1,template,collapses its hazard ratio to 0.980,collapses its hazard ratio to 0.979,yes,0,,N2 effort median,no
+null_eff2,template,collapses it to 0.980,collapses it to 0.979,yes,0,,N2 effort median,no
+boot_prov,template,to 1.20–1.72 for warming and 1.21–1.76 for effort,to 1.20–1.72 for warming and 1.24–1.78 for effort,yes,0,,province cluster bootstrap,no
+boot_int,template,(0.74–0.99). ,(0.73–0.99). ,yes,0,,province cluster bootstrap (interaction),no
+boot_int2,template,"(0.74–0.99).
+","(0.73–0.99).
+",yes,0,,province cluster bootstrap (interaction),no
+eff_fold,template,7.75-fold,7.89-fold,yes,0,,effort panel exp(SD log1p visits),no
+eff_median,template,from a median of 60 visits per year to about 465,from a median of 60.5 visits per year to about 478,yes,0,,effort panel median × fold,no
+imp_warming,template,Dropping accumulated warming costs 28.7 AIC units and 0.053 of marginal AUC,Dropping accumulated warming costs 29.9 AIC units and 0.053 of marginal AUC,yes,0,,E importance,no
+imp_effort,template,dropping survey effort costs 29.5 AIC units and 0.032 of marginal AUC,dropping survey effort costs 33.4 AIC units and 0.033 of marginal AUC,yes,0,,E importance,no
+imp_int,template,The interaction costs 6.5 AIC units,The interaction costs 7.8 AIC units,yes,0,,E importance,no
+ladder0,template,0.411 for the null model,0.410 for the null model,yes,0,,D ladder F0,no
+re_r1r3,template,"improves AIC by 93.4 units, raises conditional *R*² from 0.274 to 0.411, raises conditional AUC from 0.721 to 0.854, and raises the intraclass correlation from 0.172 to 0.358","improves AIC by 92.1 units, raises conditional *R*² from 0.279 to 0.413, raises conditional AUC from 0.722 to 0.853, and raises the intraclass correlation from 0.172 to 0.356",yes,0,,re_evaluation R1/R3,no
+re_aucm,template,all six structures (0.607–0.613),all six structures (0.611–0.614),yes,0,,re_evaluation marginal AUC range,no
+re_r4,template,accumulated warming (ΔAIC 4.5,accumulated warming (ΔAIC 2.6,yes,0,,re_evaluation R4 dAIC,no
+re_r45_r2,template,"(0.403 and 0.395 respectively, against 0.411","(0.405 and 0.400 respectively, against 0.413",yes,0,,re_evaluation R4/R5/R3,no
+re_r45_fx,template,(effort 1.397 and 1.372; warming 1.348 and 1.366,(effort 1.422 and 1.404; warming 1.351 and 1.368,yes,0,,re_evaluation R4/R5 HRs,no
+re_minsd,template,(minimum standard deviation 0.274),(minimum standard deviation 0.272),yes,0,,re_evaluation min_re_sd,no
+sd_species,template,*Species (SD 0.405).*,*Species (SD 0.404).*,yes,0,,fit_R3 VarCorr,no
+sd_province,template,*Province (SD 0.326).*,*Province (SD 0.332).*,yes,0,,fit_R3 VarCorr,no
+sd_provyear,template,*Province by year (SD 0.804).*,*Province by year (SD 0.798).*,yes,0,,fit_R3 VarCorr,no
+py_mult1,template,"by 2.23, more than either fixed effect","by 2.22, more than either fixed effect",yes,0,,fit_R3 province×year multiplier,no
+py_mult2,template,by 2.23 (more than either fixed effect),by 2.22 (more than either fixed effect),yes,0,,fit_R3 province×year multiplier,no
+py_mult3,template,"by 2.23, more than either driver","by 2.22, more than either driver",yes,0,,fit_R3 province×year multiplier,no
+nee_re,template,"standard deviations of 0.405 for species, 0.326 for province and 0.804 for province by year, so one standard deviation multiplies the hazard by 1.50, 1.39 and 2.23 respectively","standard deviations of 0.404 for species, 0.332 for province and 0.798 for province by year, so one standard deviation multiplies the hazard by 1.50, 1.39 and 2.22 respectively",yes,0,,fit_R3 VarCorr,no
+latent,template,standard deviation 0.804 on the latent scale,standard deviation 0.798 on the latent scale,yes,0,,fit_R3 VarCorr,no
+offset,template,attenuates the effort coefficient from 1.372 to 1.245,attenuates the effort coefficient from 1.404 to 1.264,yes,0,,re_ladder R5 offset yes/no,no
+t5_warming,template,HR 1.362 per 0.179 °C of province-minus-range warming,HR 1.365 per 0.179 °C of province-minus-range warming,yes,0,,"fit_R3, CC SD",no
+t5_var,template,HR 0.995: weather in the discovery year adds nothing,HR 0.995: weather in the discovery year adds nothing,no,2,MANUSCRIPT_v2.md:1; Manuscript_NatureFamily_tables_and_legends.md:1,fit_R3,no
+t5_effort,template,HR 1.404 per 1 SD; one SD multiplies annual visits by 7.75,HR 1.429 per 1 SD; one SD multiplies annual visits by 7.89,yes,0,,"fit_R3, effort fold",no
+t5_int,template,HR 0.849: warming matters most,HR 0.839: warming matters most,yes,0,,fit_R3,no
+t5_sp,template,"(1\|species), SD 0.405","(1\|species), SD 0.404",yes,0,,fit_R3,no
+t5_pv,template,"(1\|province), SD 0.326","(1\|province), SD 0.332",yes,0,,fit_R3,no
+t5_py,template,"(1\|province:year), SD 0.804","(1\|province:year), SD 0.798",yes,0,,fit_R3,no
+t5_pym,template,"×2.23 per SD, larger than either fixed effect","×2.22 per SD, larger than either fixed effect",yes,0,,fit_R3,no
+mig_rate,template,event rate is 0.791%,event rate is 0.792%,yes,0,,model rows − known-strategy rows,no
+mig_partial,template,(0.417% against 0.29–0.33%),(0.418% against 0.29–0.33%),yes,0,,stratified Partial event rate,no
+mig_lr,template,"(*P* = 0.693, 0.854, 0.899 and 0.256","(*P* = 0.692, 0.638, 0.792 and 0.260",yes,0,,migratory ladder LR P,no
+mig_strat,template,"1.363 (95% CI 1.158–1.605) in residents, 1.507 (1.244–1.826) in partial migrants and 1.514 (1.265–1.812) in long-distance migrants","1.363 (95% CI 1.158–1.604) in residents, 1.511 (1.243–1.837) in partial migrants and 1.512 (1.264–1.809) in long-distance migrants",yes,0,,migratory stratified (three-level),no
+mig_eff_gcb,template,"Survey effort does too (1.293, 1.270 and 1.344)","Survey effort does too (1.287, 1.338 and 1.333)",yes,0,,migratory stratified effort,no
+mig_eff_ms,template,"So does survey effort, at 1.293, 1.270 and 1.344","So does survey effort, at 1.287, 1.338 and 1.333",yes,0,,migratory stratified effort,no
+mig_int_long,template,"long-distance migrants (0.753, 0.628–0.903, *P* = 0.0022)","long-distance migrants (0.752, 0.627–0.902, *P* = 0.0022)",yes,0,,interaction by group,no
+mig_int_res,template,"residents (0.942, *P* = 0.54)","residents (0.941, *P* = 0.53)",yes,0,,interaction by group,no
+mig_int_par,template,"partial migrants (1.053, *P* = 0.62)","partial migrants (1.029, *P* = 0.78)",yes,0,,interaction by group,no
+mig_3way,template,three-way likelihood-ratio test gives *P* = 0.256,three-way likelihood-ratio test gives *P* = 0.260,yes,0,,migratory ladder M5,no
+mig_3way2,template,three-way LR *P* = 0.256,three-way LR *P* = 0.260,yes,0,,migratory ladder M5,no
+prov_nb,template,"is adequate (1.24, *P* = 0.20, θ = 6.11)","is adequate (1.23, *P* = 0.20, θ = 6.12)",yes,0,,province models + 149 log,no
+prov_rich,template,"(incidence rate ratio 1.27, *P* = 0.036)","(incidence rate ratio 1.27, *P* = 0.035)",yes,0,,province coefficients NB main,no
+prov_early,template,"effort (0.71, *P* = 0.028)","effort (0.70, *P* = 0.023)",yes,0,,province coefficients NB offset,no
+prov_gdp,template,"GDP per capita (0.61, *P* = 0.0027)","GDP per capita (0.61, *P* = 0.0026)",yes,0,,province coefficients NB offset,no
+prov_area,template,33.3% to area,32.9% to area,yes,0,,province hierarchical partitioning,no
+prov_dev1,template,model explains 20.5%,model explains 20.6%,yes,0,,149 log,no
+prov_dev2,template,model explaining 20.5%,model explaining 20.6%,yes,0,,149 log,no
+dir_omni,template,"points north (χ² = 25.8, *P* = 0.001)","points north (χ² = 26.8, *P* = 0.001)",yes,0,,direction summary geometric_effort,no
+dir_north,template,northern sectors hold 40.2% of records against 33.0% expected,northern sectors hold 40.2% of records against 32.8% expected,yes,0,,direction summary geometric_effort,no
+dir_north2,template,40.2% in the three northern sectors against 33.0%,40.2% in the three northern sectors against 32.8%,yes,0,,direction summary geometric_effort,no
+dir_passer,template,(38.7% against 30.4%,(38.7% against 30.0%,yes,0,,direction summary Passeriformes geometric_effort,no
+dir_pos,template,(χ² = 12.0 and 22.5,(χ² = 12.0 and 23.5,yes,0,,direction summary *_pos,no
+ph_effort,template,"β = −0.211, *P* = 7.7 × 10⁻⁴","β = −0.190, *P* = 2.1 × 10⁻³",yes,0,,diagnostics PH effort,no
+tv_model,template,"(effort 1.527, warming 1.369, variability 0.996), and only the interaction loses significance (0.864, *P* = 0.12)","(effort 1.549, warming 1.366, variability 0.996), and only the interaction loses significance (0.838, *P* = 0.06)",yes,0,,diagnostics time-varying model,no
+fig6d,template,Wald *P* = 7.7 × 10⁻⁴,Wald *P* = 2.1 × 10⁻³,yes,0,,diagnostics PH effort,no
+thr_full,template,"changes the risk set from 175,901 to 155,435 rows but leaves the coefficients essentially fixed (effort 1.404, 1.405, 1.411; warming 1.362, 1.376, 1.372; interaction 0.849, 0.851, 0.850)","changes the risk set from 175,640 to 155,207 rows but leaves the coefficients essentially fixed (effort 1.429, 1.431, 1.437; warming 1.365, 1.379, 1.375; interaction 0.839, 0.840, 0.839)",yes,0,,C threshold,no
+thr_nee,template,"to 155,435 rows yet leaves the coefficients fixed (effort 1.404–1.411; warming 1.362–1.376; interaction 0.849–0.851)","to 155,207 rows yet leaves the coefficients fixed (effort 1.429–1.437; warming 1.365–1.379; interaction 0.839–0.840)",yes,0,,C threshold ranges,no
+ind_tmax,template,"(hazard ratio 1.30, ΔAIC 9.0 behind the best cell)","(hazard ratio 1.30, ΔAIC 10.4 behind the best cell)",yes,0,,indicator window,no
+ind_cold,template,"(hazard ratios 0.96–1.08, all *P* > 0.12)","(hazard ratios 0.96–1.08, all *P* > 0.11)",yes,0,,indicator window,no
+win_w20,template,to 1.36–1.40 at twenty,to 1.38–1.40 at twenty,yes,0,,baseline sensitivity W = 20,no
+win_d15,template,within 2.2–5.6 AIC units of,within 2.1–6.0 AIC units of,yes,0,,baseline sensitivity dAIC at W = 15,no
+win_flat,template,flat at 1.34–1.41,flat at 1.37–1.43,yes,0,,baseline sensitivity effort range,no
+win_int,template,(0.82–1.00),(0.82–0.96),yes,0,,baseline sensitivity interaction range,no
+cru70,template,1.361 under CRU 1970–2000,1.366 under CRU 1970–2000,yes,0,,baseline sensitivity W = 15,no
+cru80,template,1.307 under CRU 1980–2000,1.319 under CRU 1980–2000,yes,0,,baseline sensitivity W = 15,no
+cru_main,template,main estimate (1.362),main estimate (1.365),yes,0,,fit_R3,no
+cru_main2,template,estimate of 1.362 sits between,estimate of 1.365 sits between,yes,0,,fit_R3,no
+cru_src,template,(1.362 to 1.307),(1.365 to 1.319),yes,0,,fit_R3 / CRU 1980–2000,no
+ks,template,Kolmogorov–Smirnov *P* = 0.74,Kolmogorov–Smirnov *P* = 0.86,yes,0,,diagnostics,no
+disp,template,dispersion is correct (*P* = 0.59),dispersion is correct (*P* = 0.51),yes,0,,diagnostics,no
+zi,template,no zero inflation (*P* = 0.59),no zero inflation (*P* = 0.52),yes,0,,diagnostics,no
+moran,template,Moran's *I* = −0.038,Moran's *I* = −0.042,yes,0,,diagnostics,no
+moran_p,template,permutation *P* = 0.86),permutation *P* = 0.76),yes,0,,diagnostics,no
+outliers,template,(95 outliers,(86 outliers,yes,0,,diagnostics,no
+se_prov,template,1.26–1.59-fold and species,1.30–1.53-fold and species,yes,0,,bootstrap se_ratio province,no
+se_prov2,template,by a factor of 1.26–1.59,by a factor of 1.30–1.53,yes,0,,bootstrap se_ratio province,no
+se_sp,template,does not (0.86–1.17),does not (0.89–1.19),yes,0,,bootstrap se_ratio species,no
+param,template,coverage of 91.3–95.3%,coverage of 92.0–93.3%,yes,0,,parametric bootstrap coverage,no
+loo,template,at most 4.2%,at most 3.9%,yes,0,,influence LOO max |relative change|,no
+loo_k,template,with 9 of 164 combinations exceeding 3%,with 9 of 164 combinations exceeding 3%,no,2,MANUSCRIPT_v2.md:1; Manuscript_NatureFamily_maintext.md:1,influence LOO count > 3%,no
+disc_hr,template,(hazard ratios 1.36 and 1.40),(hazard ratios 1.36 and 1.43),yes,0,,fit_R3 (2 dp),no
+disc_null,template,return a hazard ratio of about 1.16,return a hazard ratio of about 1.16,no,2,Manuscript_GCB_maintext.md:1; Manuscript_NC_maintext.md:1,N3 warming median (2 dp),no
+disc_null_nee,template,centre on 1.157,centre on 1.161,yes,0,,N3 warming median,no
+disc_tv,template,had fallen to 1.07 by 2024,had fallen to 1.13 by 2024,yes,0,,time-varying model,no
+ed5_null,template,centred near 1.16 rather than unity,centred near 1.16 rather than unity,no,2,MANUSCRIPT_v2.md:1; Manuscript_NatureFamily_tables_and_legends.md:1,N3 warming median (2 dp),no
+grid_frozen,template,23.2 versus 23.1 first records per year in 2030; 23.6 versus 23.7 in 2050,26.1 versus 25.9 first records per year in 2030; 26.8 versus 26.9 in 2050,yes,0,,scenario grid (frozen effort),no
+grid_frozen2,template,(23.2 versus 23.1 per year in 2030),(26.1 versus 25.9 per year in 2030),yes,0,,scenario grid (frozen effort),no
+grid_growing,template,to 57–62 records per year,to 79–89 records per year,yes,0,,"scenario grid (growing effort, 2050)",no
+grid_nc,template,"from 23.6 to 57–62, with","from 26.8 to 79–89, with",yes,0,,scenario grid,no
+grid_sup_frozen,template,40–44% under frozen effort,38–43% under frozen effort,yes,0,,"scenario grid support (frozen, 2050)",no
+mm_mech,template,57.4 records per year,79.3 records per year,yes,0,,"multimodel grid mech, SSP2-4.5 growing 2050",no
+mm_rf_xgb,template,at 23.0 and XGBoost falls to 6.1,at 23.9 and XGBoost falls to 7.4,yes,0,,"multimodel grid rf/xgb, SSP2-4.5 growing 2050",no
+window_w5,manual,1.16–1.21 at five years,1.16–1.22 at five years,yes,0,,旧文 1.16 为舍入笔误(实为 1.1548→1.15); 新值 1.1616–1.2177 / old text had a rounding slip,no
+b_effort_ranges,manual,between 1.25 and 1.52 and warming hazard ratios between 1.35 and 1.37,between 1.25 and 1.55 and warming hazard ratios between 1.33 and 1.39,yes,0,,用户同意一并更正的旧文错误(旧表实为 1.33–1.38)/ the text error the user agreed to correct,no
+b_effort_ranges_nee,manual,give effort 1.25–1.52 and warming 1.35–1.37,give effort 1.25–1.55 and warming 1.33–1.39,yes,0,,"同上, NEE 措辞 / as above, NEE wording",no
+window_within,manual,is within 0.001 of the former,differs from the former by 0.001,yes,0,,新差值 0.0012 / new difference 0.0012,no
+ms_int_range,manual,negative throughout (0.87–1.00,negative throughout (0.82–0.96,yes,0,,"主稿旧值与旧表(0.82–1.00)不一致, 按新表改 / master disagreed with its own table",no
+diag_levels,manual,Two of 23 year levels and two of 31 province levels,None of 23 year levels and three of 31 province levels,yes,0,,"tbl_v2_diagnostics 0/23, 3/31",no
+ph_warming,manual,"β = −0.022, *P* = 0.82","β < 0.001, *P* = 1.00",yes,0,,"tbl_v2_diagnostics β = 0.00023, P = 0.998",no
+tv_full,manual,its hazard ratio falls from 2.18 (95% CI 1.63–2.90) in 2002 to 1.07 (0.88–1.30) in 2024,its hazard ratio falls from 2.14 (95% CI 1.61–2.85) in 2002 to 1.13 (0.93–1.37) in 2024,yes,0,,旧文区间为截断而非四舍五入(旧值 1.638–2.907、0.880–1.310); 新值四舍五入 / old CIs were truncated,no
+prov_disp,manual,"(dispersion 5.60, *P* = 2.3 × 10⁻¹⁷)","(dispersion 5.59, *P* = 2.8 × 10⁻¹⁷)",yes,0,,149 log,no
+dir_sectors,manual,"Records fall to the northeast (179 against 153.2 expected) and northwest (31 against 17.9) more often, and to the east (237 against 263.9) and south (20 against 32.1) less often, than the distribution of survey effort predicts (Holm-adjusted *P* = 0.016–0.036)","Records fall to the northeast (179 against 151.8 expected) and northwest (31 against 17.7) more often, and to the east (237 against 264.3) less often, than the distribution of survey effort predicts (Holm-adjusted *P* = 0.016–0.024); the southern deficit (20 against 32.4) is marginal (Holm-adjusted *P* = 0.050)",yes,0,,南向 Holm P 由 0.036 变为 0.050 / south sector no longer below 0.05 after Holm correction,no
+dir_sectors_nee,manual,"records fall to the northeast and northwest more often, and to the east and south less often, than the distribution of observers predicts (Holm-adjusted *P* = 0.016–0.036)","records fall to the northeast and northwest more often, and to the east less often, than the distribution of observers predicts (Holm-adjusted *P* = 0.016–0.024; the southern deficit is marginal, *P* = 0.050)",yes,0,,NEE 措辞 / NEE wording,no
+pace,manual,(observed pace 1.19),(observed pace 1.22),yes,0,,"省均努力指数 2022–2024 均值减 2002–2004 均值, 除以 2 个十年(旧 1.194 → 新 1.217)",no
+mig_levels,manual,689 province-year levels,688 province-year levels,yes,0,,fit_mig_3way 的省×年水平数 / levels in the 3-way fit,no
+mig_contrast,manual,long-distance-versus-resident contrast *P* = 0.078,long-distance-versus-resident contrast *P* = 0.079,yes,0,,fit_mig_3way: 0.0782 → 0.0793,no
+ed8_rate,manual,event rate 0.369%,event rate 0.370%,yes,0,,"649 / 175,640",no
+sup_gcb,manual,"only 47.8% of species-province cells fall inside the fitted covariate support under SSP2-4.5 in 2030, 10.4% in 2050 and 2.1% in 2080; under SSP5-8.5 the corresponding figures are 34.2%, 2.1% and 1.9%","only 45.7% of species-province cells fall inside the fitted covariate support under SSP2-4.5 in 2030, 6.3% in 2050 and none in 2080; under SSP5-8.5, 30.3% in 2030 and none thereafter",yes,0,,tbl_v2_future_support,no
+sup_nee,manual,"only 47.8% of species-province cells fall inside the fitted covariate support under SSP2-4.5 in 2030, 10.4% in 2050 and 2.1% in 2080 (34.2%, 2.1% and 1.9% under SSP5-8.5)","only 45.7% of species-province cells fall inside the fitted covariate support under SSP2-4.5 in 2030, 6.3% in 2050 and none in 2080 (30.3% in 2030 and none thereafter under SSP5-8.5)",yes,0,,tbl_v2_future_support,no
+ratio_in,manual,of 0.79 to 2.94,of 0.95 to 1.50,yes,0,,projection within support,no
+ratio_in_nee,manual,of 0.79–2.94,of 0.95–1.50,yes,0,,projection within support,no
+ratio_all,manual,up to 78,up to 88,yes,0,,projection all rows,no
+rho_in,manual,Spearman ρ = 0.54,Spearman ρ = 0.56,yes,0,,FigM4 source data panel a,no
+agree_gcb,manual,"in only 23.7% of cells, falling to 6.5% under SSP5-8.5 in 2080","in only 8.6% of cells, and in none under SSP5-8.5 in 2080",yes,0,,"province × scenario cells, pooled",no
+agree_nee,manual,agreeing on direction in only 23.7% of cells,agreeing on direction in only 8.6% of cells,yes,0,,pooled,no
+ms_rho_b,manual,"Outside it they diverge completely: rank correlations across province-scenario cells range from −0.04 to 0.18, and the two agree","Outside it they diverge: rank correlations across province-scenario cells range from 0.14 to 0.48, but the two agree",yes,0,,FigM4 panel b,no
+ms_updown,manual,The mechanistic model projects increases in 176 of 186 cells; the machine-learning model in 42.,The mechanistic model projects increases in 178 of 186 cells; the machine-learning model in 8.,yes,0,,projection,no
+disc_support,manual,"late-century scenarios push about 98% of species–province cells outside the fitted support, where the mechanistic and machine-learning models agree on the direction of change in fewer than a quarter of cells","late-century scenarios push all species–province cells outside the fitted support, where the mechanistic and machine-learning models agree on the direction of change in fewer than one cell in ten",yes,0,,2080 support none; agreement pooled,no
+disc_support_nee,manual,"By 2080 about 98% of species–province cells lie outside the fitted support, where mechanistic and machine-learning models agree on the direction of change in fewer than a quarter of cells","By 2080 every species–province cell lies outside the fitted support, where mechanistic and machine-learning models agree on the direction of change in fewer than one cell in ten",yes,0,,2080 support none,no
+ms_disc1,manual,fewer than one in fifty species-province cells then resembles anything in the fitted data,virtually no species-province cell then resembles anything in the fitted data,yes,0,,2080 support none,no
+ml_prauc,manual,(PR-AUC 0.0120 and 0.0118 versus 0.0054) but fall behind it on temporal forward-prediction (0.0067 and 0.0072 versus 0.0098),(PR-AUC 0.0113 and 0.0103 versus 0.0060) but fall behind it on temporal forward-prediction (0.0067 and 0.0070 versus 0.0098),yes,0,,旧文为截断值(0.01205→0.0120)/ the old text truncated,no
+ms_disc2,manual,disagree on the direction of change in three quarters of cells,disagree on the direction of change in more than nine cells in ten,yes,0,,agreement 8.6%,no
+grid_sup_gcb,manual,with only 2% of species–province cells still inside the fitted support,with no species–province cell left inside the fitted support,yes,0,,scenario grid support,no
+grid_sup_ms,manual,but only 2% of species–province cells then remain inside the fitted covariate support,but no species–province cell then remains inside the fitted covariate support,yes,0,,scenario grid support,no
+grid_sup_nc,manual,with only 2% of cells still in support,with no cells left in support,yes,0,,scenario grid support,no
+grid_nee,manual,"continued effort growth more than doubles it by 2050, almost entirely outside the fitted support","continued effort growth roughly triples it by 2050, entirely outside the fitted support",yes,0,,fold 2.96,no
+mm_base,manual,(22.4 records per year),(24.4 records per year),yes,0,,188 log: calibrated 2024 national total,no
+mm_rho,manual,0.62–0.90,0.59–0.89,yes,1,MULTISCALE_MODELS_MODULE.md:1,tbl_multiscale_surface_rho (185),no
+null_range,manual,"1.157–1.167, because both permutations","about 1.16, because both permutations",yes,0,,N1/N3 warming null medians,no

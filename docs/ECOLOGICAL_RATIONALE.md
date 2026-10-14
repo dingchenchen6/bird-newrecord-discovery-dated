@@ -48,7 +48,7 @@ family = binomial("cloglog")
 
 **Why it is in the model.** Range boundaries integrate climate over years to decades: a boundary shifts when conditions have been favourable long enough for colonisation and establishment, not because one year was warm. Referencing to the species' own range is essential because absolute warming is near-uniform across China and therefore cannot explain which species should appear where.
 
-**What the estimate means.** HR 1.362 per 0.179 degC: a province that has warmed 0.18 degC more than a species' own historical range has 36% higher annual hazard for that species.
+**What the estimate means.** HR 1.365 per 0.179 degC: a province that has warmed 0.18 degC more than a species' own historical range has 36% higher annual hazard for that species.
 
 **Falsifiable prediction.** The coefficient should strengthen as W lengthens from 3 to about 15-20 years and then plateau; a purely weather-driven process would show the opposite.
 
@@ -58,7 +58,7 @@ family = binomial("cloglog")
 
 **Why it is in the model.** Separates the decadal signal from year-to-year weather. Included so that the accumulated term cannot absorb a weather effect, and so that a weather effect, if present, is visible.
 
-**What the estimate means.** HR 0.995, P = 0.92: weather in the year of discovery adds nothing once decadal warming is accounted for.
+**What the estimate means.** HR 0.995, P = 0.91: weather in the year of discovery adds nothing once decadal warming is accounted for.
 
 **Falsifiable prediction.** If new records were driven by irruptions or cold snaps, this term would be non-null and the accumulated term would weaken.
 
@@ -68,7 +68,7 @@ family = binomial("cloglog")
 
 **Why it is in the model.** A species can only be recorded where someone is looking. Effort is the observation-process counterpart of the ecological process and must be in the model for the climate coefficient to be interpretable.
 
-**What the estimate means.** HR 1.404 per 1 SD; one SD multiplies annual visits by 7.75.
+**What the estimate means.** HR 1.429 per 1 SD; one SD multiplies annual visits by 7.89.
 
 **Falsifiable prediction.** Substituting observers, birding days or records for visits should give a similar coefficient if all four index the same latent effort.
 
@@ -78,9 +78,9 @@ family = binomial("cloglog")
 
 **Why it is in the model.** Two non-exclusive mechanisms predict a negative interaction. Ecologically, sparsely surveyed provinces are disproportionately western and montane, where climatic gradients are steep. Observationally, densely surveyed provinces have already absorbed much of their Wallacean shortfall, so few candidate species remain regardless of climate.
 
-**What the estimate means.** HR 0.849: the marginal effect of warming is steepest where effort is low and flattens where coverage is dense.
+**What the estimate means.** HR 0.839: the marginal effect of warming is steepest where effort is low and flattens where coverage is dense.
 
-**Falsifiable prediction.** If the observational mechanism dominates, the marginal return of effort should also decline through time as gaps are filled - which it does (P = 7.7e-4).
+**Falsifiable prediction.** If the observational mechanism dominates, the marginal return of effort should also decline through time as gaps are filled - which it does (P = 0.0021).
 
 ## Offset log c(t)
 
@@ -90,11 +90,11 @@ family = binomial("cloglog")
 
 **What the estimate means.** Corrects the estimated hazard for right-censoring without consuming a degree of freedom.
 
-**Falsifiable prediction.** Omitting the offset should attenuate the effort coefficient, since censoring is concentrated in the high-effort recent years - and it does (1.372 to 1.245).
+**Falsifiable prediction.** Omitting the offset should attenuate the effort coefficient, since censoring is concentrated in the high-effort recent years - and it does (1.404 to 1.264).
 
 ## Random intercept: species
 
-**Specification.** (1|species), SD 0.405
+**Specification.** (1|species), SD 0.404
 
 **Why it is in the model.** Species differ in intrinsic detectability for reasons the fixed effects do not capture: body size, song conspicuousness, habitat accessibility, population density and taxonomic attention.
 
@@ -104,7 +104,7 @@ family = binomial("cloglog")
 
 ## Random intercept: province
 
-**Specification.** (1|province), SD 0.326
+**Specification.** (1|province), SD 0.332
 
 **Why it is in the model.** Provinces differ in their baseline setting for discovery: area, terrain complexity, habitat diversity, observer population and regional research tradition.
 
@@ -114,13 +114,13 @@ family = binomial("cloglog")
 
 ## Random intercept: province x year
 
-**Specification.** (1|province:year), SD 0.804
+**Specification.** (1|province:year), SD 0.798
 
 **Why it is in the model.** The observation process operates at the level of a particular region in a particular year: regional survey campaigns, provincial birding festivals, newly established protected areas, and local reporting channels. A model with only species and province intercepts cannot absorb this, so it leaks into whichever fixed effect trends with observational capacity.
 
-**What the estimate means.** The single largest variance component. One SD multiplies the hazard by 2.23, more than either fixed effect; the fitted levels span a 13-fold range.
+**What the estimate means.** The single largest variance component. One SD multiplies the hazard by 2.22, more than either fixed effect; the fitted levels span a 13-fold range.
 
-**Falsifiable prediction.** Adding this level should raise conditional discrimination sharply while leaving fixed-effect discrimination unchanged - conditional AUC rises 0.721 to 0.854 while marginal AUC stays at 0.612.
+**Falsifiable prediction.** Adding this level should raise conditional discrimination sharply while leaving fixed-effect discrimination unchanged - conditional AUC rises 0.722 to 0.853 while marginal AUC stays at 0.612.
 
 ## Climate baseline
 
@@ -130,5 +130,5 @@ family = binomial("cloglog")
 
 **What the estimate means.** Anomalies are measured against the most recent complete period that does not overlap 2002-2024.
 
-**Falsifiable prediction.** Baselines that overlap the study period should attenuate the climate coefficient - and they do: 1.362 (1980-2000), 1.289 (1981-2010), 1.231 (1991-2020).
+**Falsifiable prediction.** Baselines that overlap the study period should attenuate the climate coefficient - and they do: 1.365 (1980-2000), 1.292 (1981-2010), 1.232 (1991-2020).
 

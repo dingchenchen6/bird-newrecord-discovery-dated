@@ -6,16 +6,22 @@ new bird distribution records in China, 2002–2024.
 **Headline result.** Dating records to the year they were *discovered* rather than the year
 they were *published* changes the answer. Under publication-year dating survey effort appears
 to dominate; after re-dating, accumulated warming relative to a species' historical range
-(hazard ratio 1.36 per SD) and survey effort (1.40 per SD) contribute comparably, the two
-interact negatively (0.85), and an apparent effect of annual climate variability disappears
+(hazard ratio 1.36 per SD) and survey effort (1.43 per SD) contribute comparably, the two
+interact negatively (0.84), and an apparent effect of annual climate variability disappears
 entirely.
+
+**Update, 14 October 2026.** The 2024 survey effort was corrected. eBird checklists for 2024,
+absent from the original download, were added from GBIF (https://doi.org/10.15468/dl.vfeeak),
+and Guangdong 2024, whose China Bird Report records cover only 14 days, is treated as missing.
+The whole pipeline was rerun and every number below is the corrected one; `effort2024_audit/`
+maps each changed number from old to new and documents the checks.
 
 ---
 
 ## What is in here
 
 ```
-code/        analysis pipeline, scripts 130-220, run in numerical order
+code/        analysis pipeline, scripts 130-231, run in numerical order
 data/        modelling datasets and the panels needed to rebuild them
 tables/      every result table cited in the manuscript and report
 figures/     Fig1-Fig10 and the diagnostic panel
@@ -25,6 +31,7 @@ figures_future/  projection figures FigM1-FigM4 and the unmasked contrast
 figures_topjournal/  redesigned main figures (one palette and type scale), per-panel files, source data
 docs/        manuscript (English) and research report (Chinese)
 submission/  three journal packages (GCB, NEE, NC), data-and-code snapshot, conference talks
+effort2024_audit/  the 2024 effort correction: old-to-new number map, audit and figures
 tests/       smoke test reproducing the headline coefficients
 ```
 
@@ -38,7 +45,8 @@ sizes, plotting exactly the same values (scripts 218a–218d, theme `code/218_th
 `submission/data_and_code/` is a frozen copy of this repository's reproducibility core with
 source data named by each journal's figure numbers. `submission/presentation/` keeps the earlier
 talks and adds the October 2026 version of the AOC 2026 talk in three visual styles and in Chinese.
-Scripts 205–220 build all of this; upload zips are rebuilt locally and not tracked.
+Scripts 205–221 build all of this; 222–231 correct the 2024 effort, drive the rerun and trace
+every changed number. Upload zips are rebuilt locally and not tracked.
 
 Every figure ships as **PNG (450 dpi), PDF, SVG and editable PPTX**, plus the source data
 behind it as CSV. In the PPTX every element is a native PowerPoint shape, so the figures can
@@ -156,13 +164,13 @@ as an offset.
 
 | Term | HR per SD | 95% CI | P |
 |---|---|---|---|
-| Accumulated warming | 1.362 | 1.216–1.524 | 8.3 × 10⁻⁸ |
-| Survey effort | 1.404 | 1.245–1.583 | 2.9 × 10⁻⁸ |
-| Annual climate variability | 0.995 | 0.909–1.090 | 0.92 |
-| Warming × effort | 0.849 | 0.761–0.948 | 3.7 × 10⁻³ |
+| Accumulated warming | 1.365 | 1.219–1.528 | 7.2 × 10⁻⁸ |
+| Survey effort | 1.429 | 1.268–1.611 | 4.9 × 10⁻⁹ |
+| Annual climate variability | 0.995 | 0.908–1.089 | 0.91 |
+| Warming × effort | 0.839 | 0.752–0.936 | 1.7 × 10⁻³ |
 
-*n* = 175,901 species-province-years, 649 events, 392 species, 31 provincial units,
-AIC 8,313.2, conditional *R*² 0.411, conditional AUC 0.854.
+*n* = 175,640 species-province-years, 649 events, 392 species, 31 provincial units,
+AIC 8,308.5, conditional *R*² 0.413, conditional AUC 0.853.
 
 ---
 
@@ -183,8 +191,10 @@ side), so the three thresholds require roughly 0.9, 1.8 and 3.7 thousand km² of
 within the province. Coefficients are unchanged across all three.
 
 **Projection support.** The species-specific climate gradient has a historical standard
-deviation of 0.18 °C; future province-minus-range warming differentials reach 2 °C. By 2050
-under SSP5-8.5 only 2.1% of species-province cells fall inside the fitted covariate range.
+deviation of 0.18 °C; future province-minus-range warming differentials reach 2 °C, and survey
+effort leaves its fitted range sooner still because its 2024 level is already the highest
+observed. By 2050 no species-province cell falls inside the fitted covariate range under
+SSP5-8.5, and 6.3% do under SSP2-4.5.
 Main projection figures aggregate only cells inside that range and print the qualifying share
 on every panel; `figures_future/FigS3_future_unmasked_v2.*` shows what the unmasked
 extrapolation looks like, for contrast rather than for use.
@@ -223,17 +233,17 @@ Effect sizes in natural units, so the standardised coefficients can be pictured:
 | Quantity | One standard deviation |
 |---|---|
 | Accumulated warming | 0.179 °C of province-minus-range warming |
-| Survey effort | a 7.75-fold increase in annual provincial visits |
+| Survey effort | a 7.89-fold increase in annual provincial visits |
 | Species random intercept | hazard × 1.50 |
 | Province random intercept | hazard × 1.39 |
-| Province-by-year random intercept | hazard × 2.23 — larger than either fixed effect |
+| Province-by-year random intercept | hazard × 2.22 — larger than either fixed effect |
 
 ## Sensitivity of the two analyst choices in the climate variable
 
 | Choice | Tested over | Result |
 |---|---|---|
-| Accumulation window | 5, 10, 15, 20 yr (and 3–23 yr on a finer grid) | Warming HR rises from ~1.17 to ~1.40; optimum interior at 18–20 yr; effort HR flat at 1.34–1.41 |
-| Climate baseline | 1980–2000 and 1970–2000 | HR 1.362 (WorldClim 1980–2000, main), 1.307 (CRU 1980–2000), 1.361 (CRU 1970–2000) |
+| Accumulation window | 5, 10, 15, 20 yr (and 3–23 yr on a finer grid) | Warming HR rises from ~1.17 to ~1.40; optimum interior at 18–20 yr; effort HR flat at 1.39–1.44 across all windows and baselines |
+| Climate baseline | 1980–2000 and 1970–2000 | HR 1.365 (WorldClim 1980–2000, main), 1.319 (CRU 1980–2000), 1.366 (CRU 1970–2000) |
 
 The 1970–2000 baseline needs data before 1980, which the WorldClim downscaling does not provide,
 so that comparison is run entirely on CRU TS 4.09 at 0.5°. Fitting CRU with the 1980–2000
@@ -264,23 +274,23 @@ standardised hazard ratios stay comparable but natural-unit statements refer to 
 
 Stratifying by migratory strategy uses the three groups with a known strategy — 137 resident,
 72 partial-migrant and 107 long-distance-migrant species, carrying 218, 156 and 175 events.
-Species without trait data are excluded rather than pooled: their event rate is 0.791% against
+Species without trait data are excluded rather than pooled: their event rate is 0.792% against
 0.29–0.42% elsewhere because they entered the candidate pool only by virtue of having a record,
 which is a selection artefact rather than an ecological class.
 
 | Group | Events | Warming HR | Effort HR | Warming x effort HR |
 |---|---|---|---|---|
-| Resident | 218 | 1.363 (1.158–1.605) | 1.293 (1.110–1.506) | 0.942 (P = 0.54) |
-| Partial migrant | 156 | 1.507 (1.244–1.826) | 1.270 (1.030–1.566) | 1.053 (P = 0.62) |
-| Long-distance migrant | 175 | 1.514 (1.265–1.812) | 1.344 (1.130–1.598) | 0.753 (P = 0.0022) |
+| Resident | 218 | 1.363 (1.158–1.604) | 1.287 (1.105–1.499) | 0.941 (P = 0.53) |
+| Partial migrant | 156 | 1.511 (1.243–1.837) | 1.338 (1.084–1.651) | 1.029 (P = 0.78) |
+| Long-distance migrant | 175 | 1.512 (1.264–1.809) | 1.333 (1.122–1.584) | 0.752 (P = 0.0022) |
 
 Strategy shifts the baseline hazard (main effect, dAIC 6.2) but moderates neither driver:
-likelihood-ratio tests give P = 0.693 for warming x strategy, 0.854 for effort x strategy and
-0.256 for the full three-way term. The warming x effort interaction is significant only among
-long-distance migrants, but the test for whether the groups differ is not (P = 0.078 for the key
+likelihood-ratio tests give P = 0.692 for warming x strategy, 0.638 for effort x strategy and
+0.260 for the full three-way term. The warming x effort interaction is significant only among
+long-distance migrants, but the test for whether the groups differ is not (P = 0.079 for the key
 contrast), so that pattern is reported as a hypothesis rather than a finding.
 
-Stratified fits drop the province-by-year random intercept: 689 levels are not identifiable from
+Stratified fits drop the province-by-year random intercept: 688 levels are not identifiable from
 156–218 events, and forcing the full structure collapses variance components and yields a
 non-positive-definite Hessian. The moderation ladder, fitted on all 549 events, keeps it.
 
@@ -320,8 +330,8 @@ hold under all three:
 
 | Term | Taxonomic nesting | Eigenvectors | phyloglm |
 |---|---|---|---|
-| Partial migrant vs resident | 2.49 (P = 9.5e-6) | 2.50 (P = 5.9e-6) | 1.91 (P = 8.1e-4) |
-| Global range size, per SD | 1.27 (P = 0.017) | 1.23 (P = 0.029) | 1.45 (P = 1.4e-4) |
+| Partial migrant vs resident | 2.49 (P = 9.5e-6) | 2.50 (P = 5.9e-6) | 1.89 (P = 9.7e-4) |
+| Global range size, per SD | 1.27 (P = 0.017) | 1.23 (P = 0.029) | 1.46 (P = 1.1e-4) |
 
 Body mass, clutch size, habitat breadth, diet breadth, number of congeners, hand-wing index,
 IUCN status, endemism and trophic niche are all null.
@@ -342,16 +352,16 @@ ratio of 2.09 (P = 5e-15), and it absorbs the area effect entirely when both are
 
 ### Province level
 
-Response: new records per province, discovery-dated. Poisson is rejected (dispersion 5.60,
-P = 2.3e-17); the negative binomial is not (1.24, P = 0.20, theta 6.11), and DHARMa passes.
+Response: new records per province, discovery-dated. Poisson is rejected (dispersion 5.59,
+P = 2.8e-17); the negative binomial is not (1.23, P = 0.20, theta 6.12), and DHARMa passes.
 
 | Model | Significant terms |
 |---|---|
-| Counts | Regional species richness IRR 1.27 (P = 0.036) |
-| Rate per unit of recent effort (offset) | Early survey effort IRR 0.71 (P = 0.028); GDP per capita IRR 0.61 (P = 0.0027) |
+| Counts | Regional species richness IRR 1.27 (P = 0.035) |
+| Rate per unit of recent effort (offset) | Early survey effort IRR 0.70 (P = 0.023); GDP per capita IRR 0.61 (P = 0.0026) |
 
-Hierarchical partitioning attributes 51.2% of explained deviance to species richness, 33.3% to
-area and 9% to the two effort terms combined; the full model explains 20.5% of deviance. Effort
+Hierarchical partitioning attributes 51.2% of explained deviance to species richness, 32.9% to
+area and 9% to the two effort terms combined; the full model explains 20.6% of deviance. Effort
 therefore appears at this scale not as a count effect but as diminishing returns, which is the
 same signal the hazard model shows as a declining effort coefficient through time.
 
@@ -387,6 +397,15 @@ P = 4.6e-121). Two sectors are over-represented after Holm correction: **East** 
 (20 and 19). The pattern holds within every well-sampled order: Passeriformes (376.6, P = 2.5e-77),
 Anseriformes (64.0), Accipitriformes (52.5), Charadriiformes (45.5) and Columbiformes (29.1) all
 reject uniformity, and in each the significant sectors are East, Northeast or both.
+
+**Against the right null the eastern excess disappears.** A uniform null ignores where a record
+can fall: for most species China's candidate provinces lie east of the global range centroid.
+Placing each record at random among its species' candidate provinces
+(`code/214_direction_geometric_null.R`, `tables/tbl_v2_direction_geometric_null_summary.csv`),
+72.9% of records fall in the three eastern sectors against 71.4% expected, and 74.9% when
+placement is weighted by survey effort. What remains is a modest northern excess: 40.2% of
+records against 36.6% and 32.8% expected (chi-square = 10.8, Monte Carlo P = 0.039; and 26.8,
+P = 0.001). The uniform-null results above are kept only for comparison with earlier analyses.
 
 Figures follow the layout of the existing bird directional task — ggradar for the radar form,
 `coord_polar` for the wind-rose form, one colour per order, a header strip, and PNG/PDF/PPTX
@@ -427,7 +446,7 @@ does, rather than by statistical treatment.
 ## 保护地关联模块 / Protected-area module
 
 把新纪录生成风险接到保护规划上,回答三个规划者会问的问题。完整方法、
-数值与局限见 [`docs/CONSERVATION_MODULE.md`](docs/CONSERVATION_MODULE.md)。
+数值与局限见 [`docs/CONSERVATION_MODULE.md`](docs/CONSERVATION_MODULE.md)。本节不受 2024 年努力修正影响:该模块只用 2002–2023 年的观鸟清单。
 
 **估计量口径**:全部结论只适用于 1028 处**已制图的、以国家级为主的、2012 年前建立的
 自然保护区**;不含 2021 年起的国家公园、自然公园与生态保护红线。
@@ -450,7 +469,7 @@ does, rather than by statistical treatment.
 
 省级新纪录预测能否做到市县水平?能,但要把预测拆成两段——
 省级风险(已冻结)× 省内分配(新建条件 logit)。完整方法见
-[`docs/DOWNSCALING_MODULE.md`](docs/DOWNSCALING_MODULE.md)。
+[`docs/DOWNSCALING_MODULE.md`](docs/DOWNSCALING_MODULE.md)。2024 年努力修正后已重跑,技能指标不变。
 
 **样本外技能**(2002–2018 拟合 → 2019–2024 预测,指标为真实单元的预测排名分位,0.5 = 随机):
 
@@ -469,7 +488,7 @@ does, rather than by statistical treatment.
 罗山、沙坡头、崇明、洋县、珲春、勐腊——模型事先不知道这些是公认的边界与热点县。
 
 **外推年限不由县级这一段决定**:县级分配可稳定外推,但省级风险到 2050 年
-只剩 10.4%(SSP2-4.5)的物种-省组合落在拟合范围内,县级面继承这一限制。
+只剩 6.3%(SSP2-4.5)的物种-省组合落在拟合范围内,县级面继承这一限制。
 因此近期(至 2030 年)可作操作性产品,2050 年后只作情景演示。
 
 脚本 `code/170`–`code/173`;结果表 `tables/tbl_alloc_*.csv`、`tables/tbl_county_surface_top50.csv`;
@@ -478,16 +497,16 @@ does, rather than by statistical treatment.
 ## 随机森林对照 / Random forest comparison
 
 在省级发生与市县级落点两个任务上,把随机森林与机制模型放在同一批数据、同一套验证方案下比较。
-完整方法见 [`docs/RF_COMPARISON_MODULE.md`](docs/RF_COMPARISON_MODULE.md)。
+完整方法见 [`docs/RF_COMPARISON_MODULE.md`](docs/RF_COMPARISON_MODULE.md)。2024 年努力修正后已重跑,下列为现行数值。
 
-**省级 PR-AUC**(事件率 0.369%,故以 PR-AUC 为主指标):
+**省级 PR-AUC**(事件率 0.370%,故以 PR-AUC 为主指标):
 
 | 验证方案 | 离散风险模型 | 随机森林(最优版) |
 |---|---|---|
-| 随机 5 折 | 0.0110(条件) | **0.0137** |
-| 留物种 5 折 | 0.0054 | **0.0121** |
-| 留省 5 折 | **0.0056** | 0.0053 |
-| 时间前推 2019–2024 | **0.0098** | 0.0070 |
+| 随机 5 折 | 0.0116(条件) | **0.0141** |
+| 留物种 5 折 | 0.0060 | **0.0113** |
+| 留省 5 折 | 0.0058 | 0.0058 |
+| 时间前推 2019–2024 | **0.0098** | 0.0069 |
 
 **市县级落点**(排名分位,0.5 = 随机):时间前推下两族打平(县级 0.229 vs 0.223);
 换成留一省,机制模型明显胜出(县级 0.278 vs 0.339,top-1 10.4% vs 6.8%)。
@@ -499,7 +518,7 @@ does, rather than by statistical treatment.
 3. 随机森林置换重要性把**年份**排在第一位,前四位有三个属于观测过程——
    等于独立复现了本文主论点:新纪录数据里最强的信号是观测过程
 
-外推行为:随机森林在约 2.9 SD 处返回边界叶值并恒定在 6.7%,cloglog 继续线性外推。
+外推行为:随机森林超出拟合范围(上限 3.3 SD)后返回边界叶值并恒定在 7.7%,cloglog 继续线性外推。
 两者都不被数据验证,但前者是算法产物,后者是可审查的假设。
 
 脚本 `code/180`–`code/182`;结果表 `tables/tbl_rf_*.csv`;图件 `figures_rf/FigR1`–`FigR2`。
@@ -508,9 +527,9 @@ does, rather than by statistical treatment.
 
 完整方法见 [`docs/DIAGNOSTICS_ROBUSTNESS_MODULE.md`](docs/DIAGNOSTICS_ROBUSTNESS_MODULE.md)。
 
-**诊断**(重算于冻结主模型):DHARMa KS D = 0.0028 (P = 0.13)、离散度 0.954 (P = 0.61)、
-分组残差按年 1/23 与按省 2/31 组超出名义水平、省级残差 Moran's I = −0.024 (P = 0.70)。
-比例风险对努力项违反 (P = 6.2×10⁻⁴),这是实质发现而非缺陷。
+**诊断**(重算于冻结主模型):DHARMa KS D = 0.0014 (P = 0.86)、离散度 0.946 (P = 0.51)、
+分组残差按年 0/23、按省 3/31 组 P < 0.05(与名义水平相符)、省级残差 Moran's I = −0.042 (P = 0.76)。
+比例风险对努力项违反 (P = 2.1×10⁻³),这是实质发现而非缺陷。
 
 **文稿已同步这一修正**:Results 主效应段、Table 2(新增聚类自助 CI 与置换零分布中位两列)、Fig. 1 图注、Model adequacy 段、Methods 新增 Resampling and null models 小节、Extended Data Fig. 1 与新增 Fig. 5 图注;中文报告同步,并顺带修正了遗留的「SDM 阈值 50/100/200 km」单位错误(应为适宜栅格数)。
 
@@ -518,23 +537,25 @@ does, rather than by statistical treatment.
 
 | 零模型 | 项 | 观测 | 零分布中位 | P |
 |---|---|---|---|---|
-| N1 打乱物种特异气候 | 累积变暖 | 1.366 | **1.167** | 0.005 |
-| N2 打乱努力的时间对齐 | 调查努力 | 1.414 | **0.980** | 0.005 |
-| N3 打乱事件落在哪个物种 | 累积变暖 | 1.366 | **1.157** | 0.005 |
+| N1 打乱物种特异气候 | 累积变暖 | 1.370 | **1.160** | 0.005 |
+| N2 打乱努力的时间对齐 | 调查努力 | 1.440 | **0.979** | 0.005 |
+| N3 打乱事件落在哪个物种 | 累积变暖 | 1.370 | **1.161** | 0.005 |
+
+观测值来自零模型与重抽样共用的重拟合,与主模型(1.365、1.429)相差不到 1%。
 
 两条读法:努力效应在 N2 下**完全消失**,说明它来自努力与事件的时间对齐;
-气候效应显著,但**零分布中位不是 1 而是 1.16**——表观 HR 1.366 中约 1.16 是
+气候效应显著,但**零分布中位不是 1 而是 1.16**——表观 HR 1.370 中约 1.16 是
 省-年层面气候与事件共变造成的结构性基线,可归因于物种特异参照的增量约为 1.18。
 效应量的解读须以零分布中位为基线。
 
-**聚类自助**(各 300 次):物种层面已被随机效应正确吸收(SE 比 0.86–1.17);
-省级没有(SE 比 1.26–1.59)。建议头条系数报告省级自助区间——
-累积变暖 1.366 (1.20–1.72)、调查努力 1.414 (1.21–1.76),下界仍 >1。
+**聚类自助**(各 300 次):物种层面已被随机效应正确吸收(SE 比 0.89–1.19);
+省级没有(SE 比 1.30–1.53)。建议头条系数报告省级自助区间——
+累积变暖 1.365 (1.20–1.72)、调查努力 1.429 (1.24–1.78),下界仍 >1。
 
-**参数自助**(150 次):估计量基本无偏(绝对偏倚 ≤ 0.01 log HR),
-95% 区间实际覆盖 91.3–95.3%,略偏窄,与聚类自助方向一致。
+**参数自助**(150 次):估计量基本无偏(绝对偏倚 ≤ 0.008 log HR),
+95% 区间实际覆盖 92.0–93.3%,略偏窄,与聚类自助方向一致。
 
-**影响力**:逐省与物种十等分共 41 次重拟合,最大偏移 4.2%,164 次中仅 9 次超过 3%。
+**影响力**:逐省与物种十等分共 41 次重拟合,最大偏移 3.9%,164 次中仅 9 次超过 3%。
 
 脚本 `code/190`–`code/192`;结果表 `tables/tbl_null_models.csv` 等;
 图件 `figures_diag/FigD1`(诊断)与 `FigD2`(稳健性)。
