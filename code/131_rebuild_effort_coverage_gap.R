@@ -25,8 +25,20 @@
 #   每套口径各自在其分析范围(in_scope 且非缺失)上做 z 标准化, 使系数
 #   在该口径内可解释为"每 1 个标准差努力"。
 #
+# 2024 年修正 / 2024 correction (2026-10-13, 脚本 222):
+#   源表的 eBird/GBIF 部分止于 2023 年, 2024 年只剩中国观鸟记录中心。222 按源表口径补入 eBird 2024
+#   (2023 年精确复现自检通过), 本脚本读入其审计表, 替换 2024 年的访问、观察者与观鸟日计数;
+#   广东 2024 年中国观鸟记录中心只覆盖 14 天, 补入后仍低于 2023 年, 记为"下载缺口"
+#   (gap 与 zero 口径缺失, imp 口径按有界插补)。同时输出未修正面板, 仅供前后对照。
+#   The eBird/GBIF part of the source table ends in 2023; script 222 adds eBird 2024 and this script
+#   applies its audit table to the 2024 visits, observers and birding days. Guangdong 2024 remains
+#   below 2023 even with eBird and becomes a "download gap" (missing under gap and zero, interpolated
+#   under imp). An uncorrected panel is also written for before/after comparison only.
+#
 # Input / 输入:  analysis_rebuilt/data/effort_province_year_rebuilt.csv
-# Output / 输出: analysis_v2/data/effort_panel_v2.csv
+#                analysis_v2/tables/tbl_effort_2024_audit.csv(脚本 222)
+# Output / 输出: analysis_v2/data/effort_panel_v2.csv(修正, 主分析 / corrected, main)
+#                analysis_v2/data/effort_panel_v2_uncorrected.csv(对照 / comparison only)
 #                analysis_v2/tables/tbl_effort_gap_audit.csv
 #
 # Main packages / 主要包: data.table
@@ -39,23 +51,90 @@ options(warn = 1)
 OUT <- file.path(normalizePath(".", mustWork = TRUE), "analysis_v2")
 msg <- function(...) cat(sprintf("[131 %s] ", format(Sys.time(), "%H:%M:%S")), ..., "\n")
 
-e <- fread("analysis_rebuilt/data/effort_province_year_rebuilt.csv")
-msg("读入努力面板: ", nrow(e), " 省-年 | ",
-    paste(sprintf("%s=%d", names(table(e$effort_status)), table(e$effort_status)), collapse = " | "))
+e0 <- fread("analysis_rebuilt/data/effort_province_year_rebuilt.csv")
+msg("读入努力面板: ", nrow(e0), " 省-年 | ",
+    paste(sprintf("%s=%d", names(table(e0$effort_status)), table(e0$effort_status)), collapse = " | "))
 
 RAW <- c(visits = "n_visits", observers = "n_observers",
          days = "n_birding_days", record = "effort_record")
-stopifnot(all(RAW %in% names(e)))
+stopifnot(all(RAW %in% names(e0)))
 
-# ---- 1. 重新分类 / reclassify -------------------------------------------
-# structural_zero 与 no_data 均为"该省-年无可用努力观测", 只是成因不同。
-e[, effort_status_v2 := fifelse(effort_status == "observed", "observed",
-                         fifelse(effort_status == "structural_zero",
-                                 "coverage_gap", "no_coverage"))]
-msg("重新分类: ", paste(sprintf("%s=%d", names(table(e$effort_status_v2)),
-                                table(e$effort_status_v2)), collapse = " | "))
+# ---- 0. 2024 年修正 / the 2024 correction (script 222) --------------------
+fix <- fread(file.path(OUT, "tables", "tbl_effort_2024_audit.csv"))
+apply_fix <- function(e) {
+  e <- merge(copy(e), fix[, .(province, year = 2024L, visits_fix, observers_fix, days_fix, download_gap)],
+             by = c("province", "year"), all.x = TRUE)
+  idx <- which(e$year == 2024L & e$effort_status == "observed" & !is.na(e$visits_fix))
+  e[idx, `:=`(n_visits = visits_fix, n_observers = observers_fix, n_birding_days = days_fix)]
+  e[, dl_gap := year == 2024L & download_gap %in% TRUE]
+  e[, c("visits_fix", "observers_fix", "days_fix", "download_gap") := NULL]
+  setorder(e, province, year)
+  e[]
+}
 
-# 缺口证据: 相邻已观测年的访问数 / evidence that gaps are not true zeros
+# ---- 1–3. 分类、三套口径与 z 标准化(修正与未修正面板共用)/ shared panel builder ----
+build_panel <- function(e, label) {
+  e <- copy(e)
+  if (!"dl_gap" %in% names(e)) e[, dl_gap := FALSE]
+  # 1 重新分类 / reclassify: structural_zero 与 no_data 均为"该省-年无可用努力观测", 只是成因不同
+  e[, effort_status_v2 := fifelse(effort_status == "observed", "observed",
+                           fifelse(effort_status == "structural_zero", "coverage_gap", "no_coverage"))]
+  e[dl_gap == TRUE, effort_status_v2 := "download_gap"]
+  msg(label, " 重新分类: ", paste(sprintf("%s=%d", names(table(e$effort_status_v2)),
+                                          table(e$effort_status_v2)), collapse = " | "))
+
+  # 2 三套原始计数 / three raw-count treatments
+  for (nm in names(RAW)) {
+    v  <- as.numeric(e[[RAW[[nm]]]])
+    st <- e$effort_status_v2
+    # gap: 缺口、下载缺口与无覆盖一律缺失
+    e[[paste0("cnt_", nm, "_gap")]]  <- fifelse(st == "observed", v, NA_real_)
+    # zero: 结构性零按 0 计(原口径);下载缺口不是零, 与无覆盖一样缺失
+    e[[paste0("cnt_", nm, "_zero")]] <- fifelse(st %in% c("no_coverage", "download_gap"), NA_real_,
+                                         fifelse(st == "coverage_gap", 0, v))
+  }
+  # imp: 同省 log 尺度线性内插(覆盖缺口与下载缺口)/ within-province interpolation on the log scale
+  interp_one <- function(dt, cnt_col) {
+    dt <- copy(dt)[order(year)]
+    ok <- dt$effort_status_v2 == "observed" & is.finite(dt[[cnt_col]])
+    if (!any(ok)) return(rep(NA_real_, nrow(dt)))
+    lx <- log1p(dt[[cnt_col]])
+    out <- lx
+    need <- dt$effort_status_v2 %in% c("coverage_gap", "download_gap")
+    if (any(need)) {
+      # approx 带 rule=2 => 边缘缺口取最近一年的常数外推
+      out[need] <- stats::approx(x = dt$year[ok], y = lx[ok], xout = dt$year[need], rule = 2)$y
+    }
+    out[dt$effort_status_v2 == "no_coverage"] <- NA_real_
+    expm1(out)
+  }
+  for (nm in names(RAW)) {
+    col <- RAW[[nm]]
+    e[, (paste0("cnt_", nm, "_imp")) := {
+      idx <- order(year)
+      v <- rep(NA_real_, .N)
+      v[idx] <- interp_one(.SD[idx], col)
+      v
+    }, by = province, .SDcols = c("year", "effort_status_v2", col)]
+  }
+  # 3 log1p + z 标准化(各口径独立, 仅用分析范围)/ per-treatment z within the analysis scope
+  scope <- e$in_scope %in% c(TRUE, 1, "TRUE")
+  for (trt in c("gap", "zero", "imp")) {
+    for (nm in names(RAW)) {
+      lg  <- log1p(e[[paste0("cnt_", nm, "_", trt)]])
+      use <- scope & is.finite(lg)
+      z   <- rep(NA_real_, nrow(e))
+      z[use] <- (lg[use] - mean(lg[use])) / stats::sd(lg[use])
+      e[[paste0("eff_", nm, "_", trt, "_z")]] <- z
+    }
+  }
+  e[]
+}
+
+e  <- build_panel(apply_fix(e0), "[修正 / corrected]")
+eu <- build_panel(e0, "[未修正 / uncorrected]")
+
+# 缺口证据: 相邻已观测年的访问数(只对原 24 个结构性零格)/ neighbours of the coverage gaps
 gap <- e[effort_status_v2 == "coverage_gap", .(province, year)]
 obs <- e[effort_status_v2 == "observed", .(province, year, n_visits)]
 audit <- gap[, {
@@ -72,62 +151,8 @@ msg("缺口相邻年访问数: 中位 prev = ", median(audit$prev_visits, na.rm 
     " | 中位 next = ", median(audit$next_visits, na.rm = TRUE),
     " | 相邻两侧均 >0 的缺口 ", audit[prev_visits > 0 & next_visits > 0, .N], "/", nrow(audit))
 
-# ---- 2. 三套原始计数 / three raw-count treatments ------------------------
-for (nm in names(RAW)) {
-  v  <- as.numeric(e[[RAW[[nm]]]])
-  st <- e$effort_status_v2
-
-  # gap: 缺口与无覆盖一律缺失
-  e[[paste0("cnt_", nm, "_gap")]]  <- fifelse(st == "observed", v, NA_real_)
-  # zero: 缺口按 0 计(原口径), 无覆盖仍缺失
-  e[[paste0("cnt_", nm, "_zero")]] <- fifelse(st == "no_coverage", NA_real_,
-                                       fifelse(st == "coverage_gap", 0, v))
-}
-
-# imp: 同省 log 尺度线性内插 / within-province interpolation on the log scale
-interp_one <- function(dt, cnt_col) {
-  dt <- copy(dt)[order(year)]
-  ok <- dt$effort_status_v2 == "observed" & is.finite(dt[[cnt_col]])
-  if (!any(ok)) return(rep(NA_real_, nrow(dt)))
-  lx <- log1p(dt[[cnt_col]])
-  out <- lx
-  need <- dt$effort_status_v2 == "coverage_gap"
-  if (any(need)) {
-    # approx 带 rule=2 => 边缘缺口取最近一年的常数外推
-    out[need] <- stats::approx(x = dt$year[ok], y = lx[ok],
-                               xout = dt$year[need], rule = 2)$y
-  }
-  out[dt$effort_status_v2 == "no_coverage"] <- NA_real_
-  expm1(out)
-}
-for (nm in names(RAW)) {
-  col <- RAW[[nm]]
-  e[, (paste0("cnt_", nm, "_imp")) := {
-    idx <- order(year)
-    v <- rep(NA_real_, .N)
-    v[idx] <- interp_one(.SD[idx], col)
-    v
-  }, by = province, .SDcols = c("year", "effort_status_v2", col)]
-}
-msg("插补完成: 缺口访问数中位 = ",
-    round(median(e[effort_status_v2 == "coverage_gap"]$cnt_visits_imp, na.rm = TRUE), 2),
-    " (原口径记为 0)")
-
-# ---- 3. log1p + z 标准化(各口径独立, 仅用分析范围) ----------------------
-scope <- e$in_scope %in% c(TRUE, 1, "TRUE")
-msg("分析范围省-年: ", sum(scope), " / ", nrow(e))
-for (trt in c("gap", "zero", "imp")) {
-  for (nm in names(RAW)) {
-    src <- paste0("cnt_", nm, "_", trt)
-    lg  <- log1p(e[[src]])
-    use <- scope & is.finite(lg)
-    z   <- rep(NA_real_, nrow(e))
-    z[use] <- (lg[use] - mean(lg[use])) / stats::sd(lg[use])
-    e[[paste0("eff_", nm, "_", trt, "_z")]] <- z
-  }
-}
-
 # 各口径的可用样本量 / usable province-years per treatment
+scope <- e$in_scope %in% c(TRUE, 1, "TRUE")
 smry <- rbindlist(lapply(c("gap", "zero", "imp"), function(trt)
   data.table(treatment = trt,
              usable_province_years = sum(scope & is.finite(e[[paste0("eff_visits_", trt, "_z")]])),
@@ -139,4 +164,17 @@ fwrite(smry, file.path(OUT, "tables", "tbl_effort_treatment_summary.csv"))
 keep <- c("province", "year", "effort_status", "effort_status_v2", "in_scope", "mainland",
           unname(RAW), grep("^cnt_|^eff_.*_z$", names(e), value = TRUE))
 fwrite(e[, ..keep], file.path(OUT, "data", "effort_panel_v2.csv"))
-msg("wrote effort_panel_v2.csv (", nrow(e), " x ", length(keep), ") | DONE")
+fwrite(eu[, ..keep], file.path(OUT, "data", "effort_panel_v2_uncorrected.csv"))
+
+# 自检: 未修正面板须与修正前的冻结面板逐值一致 / the uncorrected panel must equal the frozen one
+snap <- "temp/snapshot_pre_effort2024_20261013/data/effort_panel_v2.csv"
+if (file.exists(snap)) {
+  s0 <- fread(snap)
+  zc <- grep("^eff_.*_z$", names(s0), value = TRUE)
+  m0 <- merge(s0[, c("province", "year", zc), with = FALSE], eu[, c("province", "year", zc), with = FALSE],
+              by = c("province", "year"), suffixes = c(".s", ".u"))
+  dev <- max(sapply(zc, function(z) max(abs(m0[[paste0(z, ".s")]] - m0[[paste0(z, ".u")]]), na.rm = TRUE)))
+  msg("未修正面板与快照的最大偏差 / max deviation from the snapshot: ", signif(dev, 3))
+  if (dev > 1e-10) stop("未修正面板未能复现冻结面板 / uncorrected panel does not reproduce the frozen one")
+}
+msg("wrote effort_panel_v2.csv(修正)与 effort_panel_v2_uncorrected.csv (", nrow(e), " x ", length(keep), ") | DONE")

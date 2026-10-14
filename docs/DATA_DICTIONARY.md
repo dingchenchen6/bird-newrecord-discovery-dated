@@ -30,7 +30,7 @@ Provincial annual survey effort under three missing-data rules.
 |---|---|---|
 | `province`, `year` | chr, int | Key |
 | `effort_status` | chr | Original classification: `observed` (719), `structural_zero` (24), `no_data` (39) |
-| `effort_status_v2` | chr | Reclassified: `observed`, `coverage_gap` (the former structural zeros), `no_coverage` |
+| `effort_status_v2` | chr | Reclassified: `observed` (718), `coverage_gap` (24, the former structural zeros), `download_gap` (1, Guangdong 2024, whose effort source covers only 14 days; treated as missing), `no_coverage` (39) |
 | `in_scope` | lgl | Whether the province-year is inside the analysis scope |
 | `n_visits`, `n_observers`, `n_birding_days`, `effort_record` | num | Raw counts as compiled |
 | `cnt_{proxy}_{rule}` | num | Counts under each rule: `gap` (missing), `zero` (zero-filled, the previously published treatment), `imp` (within-province linear interpolation on the log scale) |
@@ -54,7 +54,7 @@ missing covariates.
 | `eff_*_z` | num | Twelve standardised effort variables (4 proxies × 3 rules) |
 | `completeness`, `log_completeness` | num | Reporting completeness *c*(*t*) and its log, the model offset |
 | `x`, `clim_change`, `clim_var` | num | Climate gradient and its decomposition, annual mean temperature at *W* = 15 |
-| `usable_main` | lgl | Non-missing under the main specification (175,901 rows, 649 events) |
+| `usable_main` | lgl | Non-missing under the main specification (175,640 rows, 649 events) |
 
 `data/model_thr{50,100,200}.parquet` are the upstream candidate pools used by script 132 to
 define which species × province pairs enter the risk set at each buffer.
