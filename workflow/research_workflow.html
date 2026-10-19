@@ -1,0 +1,542 @@
+<title>鸟类新纪录研究工作流</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;800&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* 版式:窄正文栏 + 左侧粘性目录;北大红为唯一强调色, 生态/观测/报告三个过程各有语义色 */
+:root{
+  --bg:#FBF8F7; --surface:#FFFFFF; --soft:#F4ECEC; --line:#E3D6D7;
+  --fg:#1C1416; --sub:#4A3F41; --muted:#7A6D6F;
+  --accent:#8B0012; --accent-ink:#68000D; --accent-soft:#F2DEE1;
+  --warm:#C24E26; --effort:#1F5F9E; --obs:#22877B; --rec:#9A6200; --hyp:#2F4A6D; --good:#2E7D4F;
+  --f-display:"Noto Serif SC","Songti SC","STSong",serif;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141012; --surface:#1D181A; --soft:#2A2124; --line:#3B3033;
+  --fg:#F2ECEC; --sub:#CFC3C5; --muted:#A0939A;
+  --accent:#E0606F; --accent-ink:#F19AA4; --accent-soft:#3A2228;
+  --warm:#E8875F; --effort:#6FA8E0; --obs:#5FC2B4; --rec:#D9A440; --hyp:#8EA8CC; --good:#6CC28E;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141012; --surface:#1D181A; --soft:#2A2124; --line:#3B3033;
+  --fg:#F2ECEC; --sub:#CFC3C5; --muted:#A0939A;
+  --accent:#E0606F; --accent-ink:#F19AA4; --accent-soft:#3A2228;
+  --warm:#E8875F; --effort:#6FA8E0; --obs:#5FC2B4; --rec:#D9A440; --hyp:#8EA8CC; --good:#6CC28E;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15.5px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto}
+header.hero{padding-block:44px 28px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--accent);font-weight:700}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(28px,4.6vw,46px);line-height:1.25;margin:10px 0 8px;text-wrap:balance}
+.en{font-style:italic;color:var(--sub);margin:0 0 18px;max-width:62ch}
+.byline{color:var(--muted);font-size:14px}
+.keyline{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:26px}
+.key{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.key b{display:block;font-family:var(--f-mono);font-size:24px;font-weight:600;line-height:1.3}
+.key span{font-size:13px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;padding-block:28px 60px}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 18px);align-self:start;font-size:14px}
+nav.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+nav.toc a{display:block;padding:5px 12px;color:var(--sub);text-decoration:none;margin-left:-2px;border-left:2px solid transparent}
+nav.toc a:hover{color:var(--accent);border-left-color:var(--accent)}
+nav.toc .t{font-size:12px;letter-spacing:.12em;color:var(--muted);margin:0 0 8px 2px;font-weight:700}
+.theme{margin-top:18px;font:inherit;font-size:13px;background:var(--surface);color:var(--sub);border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
+main{min-width:0}
+section{padding-block:10px 26px;border-bottom:1px solid var(--line);scroll-margin-top:16px}
+section:last-child{border-bottom:0}
+h2{font-family:var(--f-display);font-weight:800;font-size:26px;margin:22px 0 6px;text-wrap:balance;display:flex;gap:12px;align-items:baseline}
+h2 .no{font-family:var(--f-mono);font-size:14px;color:var(--accent);font-weight:600}
+h3{font-size:17px;margin:20px 0 6px;color:var(--accent-ink)}
+p{max-width:70ch;margin:8px 0}
+.lede{font-size:17px;color:var(--sub)}
+.tbl{overflow-x:auto;margin:14px 0;border-top:2px solid var(--fg);border-bottom:2px solid var(--fg)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th{text-align:left;font-weight:700;padding:8px 10px;border-bottom:1px solid var(--fg);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+tr.main td{background:var(--accent-soft);font-weight:700}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:14px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;min-width:0}
+.card h4{margin:0 0 6px;font-size:16px;display:flex;gap:10px;align-items:center}
+.card p,.card li{font-size:14.5px}
+.card ul{margin:6px 0 0;padding-left:18px}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:12px;font-weight:600;border-radius:6px;padding:1px 7px;color:var(--surface)}
+.fix{margin-top:10px;padding:8px 12px;border-radius:8px;background:var(--soft);font-size:14px;font-weight:700;color:var(--accent-ink)}
+.q{background:var(--accent);color:#FFF;border-radius:12px;padding:16px 20px;font-weight:700;font-size:16.5px;margin:14px 0}
+:root[data-theme="dark"] .q{color:#1C1416}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .q{color:#1C1416}}
+.hyp{display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,.8fr) minmax(0,.55fr);gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:10px 0;background:var(--surface)}
+.hyp>div{padding:12px 14px;min-width:0}
+.hyp .code{color:#FFF;font-family:var(--f-mono);font-weight:600;font-size:20px;display:flex;flex-direction:column;justify-content:center;align-items:center;line-height:1.2}
+.hyp .code small{font-family:var(--f-body);font-size:12px;font-weight:500}
+.hyp .pred{font-weight:700}
+.hyp .mech{color:var(--sub);font-size:14px;border-left:1px solid var(--line)}
+.hyp .test{font-size:14px;font-weight:700;border-left:1px solid var(--line)}
+.verdict{display:inline-block;background:var(--good);color:var(--surface);border-radius:999px;font-size:12px;padding:0 9px;margin-left:6px;font-weight:700;vertical-align:2px}
+figure{margin:16px 0}
+figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+.diagram{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}
+.diagram svg{display:block;min-width:820px;width:100%;height:auto}
+svg text{font-family:var(--f-body)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:10px 0}
+.steps li{counter-increment:s;position:relative;padding:6px 0 6px 40px;max-width:72ch}
+.steps li::before{content:counter(s);position:absolute;left:0;top:7px;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);font-family:var(--f-mono);font-size:13px;font-weight:600;display:grid;place-items:center}
+.formula{font-family:var(--f-mono);font-size:14.5px;background:var(--soft);border-radius:10px;padding:14px 16px;overflow-x:auto;white-space:nowrap}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:0 16px}
+summary{cursor:pointer;padding:12px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--f-mono);color:var(--accent)}
+details[open] summary::after{content:"−"}
+details>div{padding-bottom:14px}
+.pipe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:14px 0}
+.pipe div{border-radius:10px;padding:12px;background:var(--soft);min-width:0}
+.pipe b{font-family:var(--f-mono);display:block;font-size:17px}
+.pipe span{font-size:13.5px;color:var(--sub)}
+.charts{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:14px;margin:14px 0}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.chart h4{margin:0 0 2px;font-size:15px}
+.chart .note{font-size:12.5px;color:var(--muted);margin:0 0 6px}
+.chart svg{width:100%;height:auto;display:block}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.copy{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--sub);border-radius:8px;padding:3px 10px;cursor:pointer}
+code{font-family:var(--f-mono);font-size:13.5px;background:var(--soft);padding:1px 5px;border-radius:5px}
+footer{color:var(--muted);font-size:13px;padding-block:24px 40px;border-top:1px solid var(--line)}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}nav.toc{position:static}nav.toc ol{display:flex;flex-wrap:wrap;border-left:0;gap:4px}nav.toc a{border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin:0}
+  .grid3,.pipe{grid-template-columns:repeat(2,minmax(0,1fr))}.charts{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:620px){.grid2,.grid3,.pipe{grid-template-columns:minmax(0,1fr)}
+  .hyp{grid-template-columns:60px minmax(0,1fr)}.hyp .mech,.hyp .test{grid-column:2;border-left:0;border-top:1px solid var(--line)}}
+@media (prefers-reduced-motion:no-preference){nav.toc a{transition:color .15s,border-color .15s}}
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">研究工作流 · RESEARCH WORKFLOW</div>
+  <h1>增温还是观测?<br>中国鸟类新纪录生成风险的离散时间风险模型</h1>
+  <p class="en">Warming and survey effort contribute comparably to new bird distribution records when dated to discovery</p>
+  <div class="byline">Chenchen Ding¹, Zhengwang Zhang², Zhigang Jiang³, Zhiheng Wang¹ · ¹北京大学 ²北京师范大学 ³中国科学院动物研究所 · 2026 年 10 月</div>
+  <div class="keyline">
+    <div class="key"><b style="color:var(--warm)">1.36</b><span>累积增温 HR · 95% CI 1.22–1.53</span></div>
+    <div class="key"><b style="color:var(--effort)">1.43</b><span>调查努力 HR · 95% CI 1.27–1.61</span></div>
+    <div class="key"><b style="color:var(--obs)">0.84</b><span>增温 × 努力 · 95% CI 0.75–0.94</span></div>
+    <div class="key"><b style="color:var(--rec)">+37%</b><span>按发表年定年使努力 HR 虚高</span></div>
+    <div class="key"><b>175,640</b><span>物种 × 省 × 年 · 649 个事件</span></div>
+  </div>
+</header>
+
+<div class="layout">
+<nav class="toc" aria-label="目录">
+  <p class="t">目录</p>
+  <ol>
+    <li><a href="#overview">工作流总览</a></li>
+    <li><a href="#background">研究背景</a></li>
+    <li><a href="#gaps">研究空缺</a></li>
+    <li><a href="#questions">科学问题与假设</a></li>
+    <li><a href="#data">数据来源</a></li>
+    <li><a href="#methods">方法与分析</a></li>
+    <li><a href="#qc">质控与复现</a></li>
+    <li><a href="#results">主要结果</a></li>
+    <li><a href="#outputs">产出与下一步</a></li>
+  </ol>
+  <button class="theme" id="themeBtn" type="button">切换深浅色</button>
+</nav>
+
+<main>
+<section id="overview">
+  <h2><span class="no">01</span>工作流总览</h2>
+  <p class="lede">一条新纪录是三件事的乘积:物种在该省出现、有人发现并记录、发现被发表。工作流把三个环节拆开,分别交给模型的一个分量,再用零模型、重抽样和支撑域检查结论能走多远。</p>
+  <figure class="diagram" aria-label="研究工作流示意图">
+    <svg viewBox="0 0 1000 380" role="img">
+      <title>五个阶段与三个环节</title>
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+      <g font-size="13">
+        <g>
+          <rect x="10" y="14" width="180" height="168" rx="10" fill="var(--soft)" stroke="var(--hyp)"/>
+          <rect x="10" y="14" width="180" height="34" rx="10" fill="var(--hyp)"/><rect x="10" y="34" width="180" height="14" fill="var(--hyp)"/>
+          <text x="22" y="36" fill="#fff" font-weight="700" font-size="14">1 数据整合</text>
+          <text x="22" y="72" fill="var(--fg)">CBNR v2 · 1,029 条</text><text x="22" y="96" fill="var(--fg)">按发现年定年</text>
+          <text x="22" y="120" fill="var(--fg)">WorldClim / CRU 气候</text><text x="22" y="144" fill="var(--fg)">eBird + 中国观鸟记录中心</text>
+          <text x="22" y="168" fill="var(--fg)">BirdLife 分布区 + SDM</text>
+        </g>
+        <g>
+          <rect x="212" y="14" width="180" height="168" rx="10" fill="var(--soft)" stroke="var(--obs)"/>
+          <rect x="212" y="14" width="180" height="34" rx="10" fill="var(--obs)"/><rect x="212" y="34" width="180" height="14" fill="var(--obs)"/>
+          <text x="224" y="36" fill="#fff" font-weight="700" font-size="14">2 风险集构建</text>
+          <text x="224" y="72" fill="var(--fg)">物种 × 省 × 年</text><text x="224" y="96" fill="var(--fg)">首次记录后退出</text>
+          <text x="224" y="120" fill="var(--fg)">完整度偏移 log c(t)</text><text x="224" y="144" fill="var(--fg)">物种参照的增温梯度</text>
+          <text x="224" y="168" fill="var(--fg)">覆盖缺口 / 下载缺口</text>
+        </g>
+        <g>
+          <rect x="414" y="14" width="180" height="168" rx="10" fill="var(--soft)" stroke="var(--accent)"/>
+          <rect x="414" y="14" width="180" height="34" rx="10" fill="var(--accent)"/><rect x="414" y="34" width="180" height="14" fill="var(--accent)"/>
+          <text x="426" y="36" fill="#fff" font-weight="700" font-size="14">3 建模与推断</text>
+          <text x="426" y="72" fill="var(--fg)">cloglog 离散时间风险</text><text x="426" y="96" fill="var(--fg)">6 种随机结构 · 4 类准则</text>
+          <text x="426" y="120" fill="var(--fg)">置换零模型 N1–N3</text><text x="426" y="144" fill="var(--fg)">聚类与参数自助</text>
+          <text x="426" y="168" fill="var(--fg)">留一影响 · 残差诊断</text>
+        </g>
+        <g>
+          <rect x="616" y="14" width="180" height="168" rx="10" fill="var(--soft)" stroke="var(--rec)"/>
+          <rect x="616" y="14" width="180" height="34" rx="10" fill="var(--rec)"/><rect x="616" y="34" width="180" height="14" fill="var(--rec)"/>
+          <text x="628" y="36" fill="#fff" font-weight="700" font-size="14">4 稳健与扩展</text>
+          <text x="628" y="72" fill="var(--fg)">分步分解 S0–S5</text><text x="628" y="96" fill="var(--fg)">指标 × 窗口 · 12 种努力</text>
+          <text x="628" y="120" fill="var(--fg)">迁徙 · 物种 · 省级</text><text x="628" y="144" fill="var(--fg)">方位几何零假设</text>
+          <text x="628" y="168" fill="var(--fg)">保护地模块</text>
+        </g>
+        <g>
+          <rect x="818" y="14" width="172" height="168" rx="10" fill="var(--soft)" stroke="var(--warm)"/>
+          <rect x="818" y="14" width="172" height="34" rx="10" fill="var(--warm)"/><rect x="818" y="34" width="172" height="14" fill="var(--warm)"/>
+          <text x="830" y="36" fill="#fff" font-weight="700" font-size="14">5 投影与产出</text>
+          <text x="830" y="72" fill="var(--fg)">CMIP6 SSP2-4.5/5-8.5</text><text x="830" y="96" fill="var(--fg)">1–99% 支撑域掩膜</text>
+          <text x="830" y="120" fill="var(--fg)">机制模型 vs ML</text><text x="830" y="144" fill="var(--fg)">市县降尺度</text>
+          <text x="830" y="168" fill="var(--fg)">三刊投稿包 · 代码</text>
+        </g>
+        <path d="M192 98 H208" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah)"/>
+        <path d="M394 98 H410" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah)"/>
+        <path d="M596 98 H612" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah)"/>
+        <path d="M798 98 H814" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah)"/>
+        <text x="10" y="226" fill="var(--accent-ink)" font-weight="700" font-size="15">一条新纪录 = 三个环节 → 三个模型分量</text>
+        <g>
+          <rect x="10" y="242" width="310" height="70" rx="10" fill="var(--surface)" stroke="var(--warm)" stroke-width="1.6"/>
+          <text x="26" y="270" fill="var(--warm)" font-weight="700" font-size="15">出现 · 生态过程</text>
+          <text x="26" y="296" fill="var(--sub)">累积增温 clim_change(物种参照)</text>
+        </g>
+        <g>
+          <rect x="345" y="242" width="310" height="70" rx="10" fill="var(--surface)" stroke="var(--effort)" stroke-width="1.6"/>
+          <text x="361" y="270" fill="var(--effort)" font-weight="700" font-size="15">发现 · 观测过程</text>
+          <text x="361" y="296" fill="var(--sub)">调查努力 + 省 × 年随机截距</text>
+        </g>
+        <g>
+          <rect x="680" y="242" width="310" height="70" rx="10" fill="var(--surface)" stroke="var(--rec)" stroke-width="1.6"/>
+          <text x="696" y="270" fill="var(--rec)" font-weight="700" font-size="15">发表 · 报告过程</text>
+          <text x="696" y="296" fill="var(--sub)">按发现年定年 + 完整度偏移 log c(t)</text>
+        </g>
+        <path d="M322 277 H341" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah)"/>
+        <path d="M657 277 H676" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah)"/>
+        <rect x="10" y="330" width="980" height="40" rx="8" fill="var(--accent)"/>
+        <text x="500" y="356" fill="#fff" font-weight="700" font-size="14" text-anchor="middle">质控贯穿全程:脚本编号流水线 · 修正前快照 · 数字追踪映射 · 打包质检 · 冒烟测试 · 公开仓库</text>
+      </g>
+    </svg>
+    <figcaption>五个阶段由左到右依次运行;下方三个环节对应主模型的三个分量。窄屏可左右滑动查看。</figcaption>
+  </figure>
+</section>
+
+<section id="background">
+  <h2><span class="no">02</span>研究背景</h2>
+  <p>新分布纪录常被当作分布区随气候移动的证据;中国省级鸟类新纪录汇编也被解读为向北、向高纬扩张的信号。但只有“物种出现”是生态过程,不完全探测与不均匀采样本身就能在没有真实变化的地方制造“分布区变化”。</p>
+  <p>观测与增温同步增长:中国大陆 eBird 与中国观鸟记录中心的年观鸟访问量从 2002–2004 年均 493 次增至 2022–2024 年均 99,156 次,约 200 倍。许多“新”纪录只是填补知识空白(华莱士短缺)。机会性记录只有在记录过程被建模时才能给出无偏趋势,而首次记录汇编此前从未这样分析。</p>
+  <div class="grid3">
+    <div class="card"><h4 style="color:var(--effort)">约 200 倍</h4><p>年观鸟访问量增幅(2002–04 → 2022–24)</p></div>
+    <div class="card"><h4 style="color:var(--rec)">1,029 条</h4><p>CBNR v2 省级新纪录,带发现日期与发表年</p></div>
+    <div class="card"><h4 style="color:var(--accent)">2.09 年</h4><p>平均发表滞后;81.7% 的记录滞后至少一年</p></div>
+  </div>
+</section>
+
+<section id="gaps">
+  <h2><span class="no">03</span>研究空缺与不足</h2>
+  <p>三个环节各自在数据中留下特征,已有分析没有把它们分开。四个空缺及本研究的对策:</p>
+  <div class="grid2">
+    <div class="card"><h4><span class="tag" style="background:var(--rec)">1</span>时间:按发表年定年</h4>
+      <ul><li>发表滞后于发现,而观测逐年增长,记录被计入观测者更多的年份</li><li>近年发现尚未发表,末端年份不完整;偏差大小从未被测量</li></ul>
+      <div class="fix">对策:按发现年定年 + 报告完整度偏移</div></div>
+    <div class="card"><h4><span class="tag" style="background:var(--effort)">2</span>尺度:观测的省 × 年脉冲</h4>
+      <ul><li>调查活动、观鸟节、新保护区或平台使某省某年记录骤增</li><li>只含物种与地区随机效应的模型无法表示这种脉冲</li></ul>
+      <div class="fix">对策:省 × 年随机截距,比较六种随机结构</div></div>
+    <div class="card"><h4><span class="tag" style="background:var(--warm)">3</span>基准:气候效应与谁比较</h4>
+      <ul><li>以物种分布区为参照的增温效应,应与“物种身份不含信息”时的共享区域气候效应比较</li><li>这一基准不一定等于 1</li></ul>
+      <div class="fix">对策:保持数据结构的置换零模型 N1–N3</div></div>
+    <div class="card"><h4><span class="tag" style="background:var(--hyp)">4</span>外推:投影的支撑域</h4>
+      <ul><li>气候情景下的投影很少检查是否超出拟合范围</li><li>未来增温差远超历史梯度(SD 0.18 °C)</li></ul>
+      <div class="fix">对策:1–99% 支撑域掩膜 + 模型族对比</div></div>
+  </div>
+  <p>数据层面另有两个常被忽视的不足:努力数据中的“零”不都是真零(24 个大陆省-年);单一数据源可能存在下载缺口(见“质控与复现”中的 2024 年审计实例)。</p>
+</section>
+
+<section id="questions">
+  <h2><span class="no">04</span>科学问题与假设</h2>
+  <div class="q">核心问题:显式建模发表与观测过程后,增温能否可测地提高中国省级鸟类新纪录的产生速率?其贡献与调查努力相比如何?</div>
+  <p>四个预测在稳健性分析之前写定,每一个都对应一个检验:</p>
+  <div class="hyp"><div class="code" style="background:var(--rec)">H1<small>定年偏差</small></div>
+    <div class="pred">按发表年定年会抬高努力系数、制造年际变率的伪效应,而累积增温几乎不变<span class="verdict">支持</span></div>
+    <div class="mech">1–2 年的滞后把记录移入观测更多、天气不同的年份,却几乎不改变 15 年均值</div>
+    <div class="test" style="color:var(--rec)">分步分解 S0 → S1</div></div>
+  <div class="hyp"><div class="code" style="background:var(--effort)">H2<small>观测脉冲</small></div>
+    <div class="pred">省 × 年脉冲是最大的未解释变异,吸收它不改变固定效应的判别力<span class="verdict">支持</span></div>
+    <div class="mech">脉冲短暂,与长期趋势无关</div>
+    <div class="test" style="color:var(--effort)">随机结构 R0–R5;边际与条件 AUC</div></div>
+  <div class="hyp"><div class="code" style="background:var(--obs)">H3<small>负交互</small></div>
+    <div class="pred">增温与努力负交互<span class="verdict">支持</span></div>
+    <div class="mech">每对物种 × 省只能首次记录一次;努力长期高的省,增温有利的物种多已被记录</div>
+    <div class="test" style="color:var(--obs)">交互项 HR &lt; 1</div></div>
+  <div class="hyp"><div class="code" style="background:var(--warm)">H4<small>回报递减</small></div>
+    <div class="pred">努力的回报随时间下降,增温的回报不降<span class="verdict">支持</span></div>
+    <div class="mech">可检出但未记录的存量被逐步耗尽;增温持续增加候选</div>
+    <div class="test" style="color:var(--warm)">时变系数与比例风险检验</div></div>
+</section>
+
+<section id="data">
+  <h2><span class="no">05</span>数据来源</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>数据类型</th><th>来源</th><th>内容与规模</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td>新纪录</td><td>CBNR v2(Ding et al., 2026)</td><td>1,029 条省级新纪录,2000–2025;发现日期与发表年;LLM 辅助抽取 + 逐条人工核验</td><td>事件与定年</td></tr>
+      <tr><td>气候</td><td>WorldClim 2.1 降尺度 CRU TS 4.09</td><td>10′ 月均温,1980–2024;四个温度指标</td><td>增温梯度、年际变率</td></tr>
+      <tr><td>调查努力</td><td>eBird/GBIF + 中国观鸟记录中心</td><td>省 × 年访问、观测者、观鸟日、记录数;2024 年 eBird 由 GBIF 另行补入</td><td>努力协变量</td></tr>
+      <tr><td>物种分布</td><td>BirdLife 分布区 + 物种分布模型</td><td>50/100/200 个适宜栅格阈值确定候选省</td><td>风险集、物种参照</td></tr>
+      <tr><td>性状与系统树</td><td>中国鸟类生态性状库、BIRDBASE、AVONET、Clements 树</td><td>1,445 种;1,312 种可匹配系统树</td><td>物种层面分析</td></tr>
+      <tr><td>情景与保护地</td><td>CMIP6 四模式集合;全国自然保护区边界</td><td>SSP2-4.5 / 5-8.5,2030/2050/2080;1,028 处保护区</td><td>投影、保护地模块</td></tr>
+    </tbody></table></div>
+</section>
+
+<section id="methods">
+  <h2><span class="no">06</span>方法与分析</h2>
+  <h3>主模型</h3>
+  <div class="formula">log[−log(1 − h<sub>spt</sub>)] = β₀ + β₁·C + β₂·E + β₃·(C × E) + β₄·V + log c(t) + u<sub>s</sub> + v<sub>p</sub> + w<sub>pt</sub></div>
+  <p>C、E、V 为标准化的累积增温、调查努力与年际变率;u、v、w 分别为物种、省、省 × 年随机截距;系数为每 1 SD 的风险比。模型用 glmmTMB 拟合,随机结构在稳健性分析之前冻结。</p>
+
+  <details open><summary>事件定年与报告完整度</summary><div><ol class="steps">
+    <li>1,028 / 1,029 条可解析发现年;10 条以“发表年 − 中位滞后 1 年”替代并标记。</li>
+    <li>每个物种 × 省只保留最早事件;早于 2002 年者视为已存在,移出风险集。</li>
+    <li>完整度 c(t) = F(P<sub>max</sub> − t),F 为非负滞后的经验分布,P<sub>max</sub> = 2025;c(2002) = 0.997,c(2024) = 0.567。</li>
+    <li>观测风险 ≈ c(t)·h(t),在 cloglog 下恰为偏移 log c(t);定年改变 83.1% 的事件年份。</li></ol></div></details>
+
+  <details><summary>风险集构建</summary><div>
+    <p>候选省 = SDM 标出至少阈值数量适宜栅格(中位 18.3 km²)的省 + 实际有记录的省;每个物种 × 省从 2002 年起每年一行,首次记录后退出。50 栅格阈值:8,319 对、185,478 行、657 个事件;建模样本 175,640 行、649 个事件、392 种、31 省。</p></div></details>
+
+  <details><summary>气候变量:物种参照的增温梯度</summary><div>
+    <div class="formula">x(s,p,t) = [T(p,t) − T<sub>base</sub>(p)] − [N(s,t) − N<sub>base</sub>(s)]</div>
+    <p>目标省比物种历史分布区多增温多少;基线 1980–2000。clim_change 为 x 的 15 年滑动均值,clim_var 为残差。敏感性:4 个指标 × 4 个窗口、3–23 年细网格、3 个基线。</p></div></details>
+
+  <details><summary>调查努力与缺失数据规则</summary><div><ul>
+    <li>四个代理(访问、观测者、观鸟日、记录数),log1p 后在分析范围内标准化;1 SD ≈ 年访问量 7.89 倍。</li>
+    <li>24 个恰为零的大陆省-年视为覆盖缺口(主分析缺失);敏感性采用补零与对数尺度插补。</li>
+    <li>2024 年 eBird 由 GBIF 补入;广东 2024 年仅 14 天数据,作为下载缺口处理。</li></ul></div></details>
+
+  <details><summary>随机结构选择(六种结构 × 四类准则)</summary><div>
+    <div class="tbl"><table>
+      <thead><tr><th>结构</th><th class="num">ΔAIC</th><th class="num">McFadden R²</th><th class="num">边际 R²</th><th class="num">条件 R²</th><th class="num">条件 AUC</th></tr></thead>
+      <tbody>
+        <tr><td>R0 物种</td><td class="num">160.6</td><td class="num">0.015</td><td class="num">0.113</td><td class="num">0.187</td><td class="num">0.688</td></tr>
+        <tr><td>R1 + 省</td><td class="num">95.5</td><td class="num">0.023</td><td class="num">0.129</td><td class="num">0.279</td><td class="num">0.722</td></tr>
+        <tr><td>R2 + 年</td><td class="num">73.1</td><td class="num">0.025</td><td class="num">0.085</td><td class="num">0.282</td><td class="num">0.737</td></tr>
+        <tr class="main"><td>R3 + 省 × 年(主模型)</td><td class="num">3.3</td><td class="num">0.033</td><td class="num">0.088</td><td class="num">0.413</td><td class="num">0.853</td></tr>
+        <tr><td>R4 + 物种增温斜率</td><td class="num">2.6</td><td class="num">0.034</td><td class="num">0.085</td><td class="num">0.405</td><td class="num">0.864</td></tr>
+        <tr><td>R5 + 省努力斜率</td><td class="num">0.0</td><td class="num">0.034</td><td class="num">0.088</td><td class="num">0.400</td><td class="num">0.851</td></tr>
+      </tbody></table></div>
+    <p>R4、R5 的 AIC 略低,但条件 R² 更低、固定效应几乎相同,因此冻结最简约、条件 R² 最高的 R3。</p></div></details>
+
+  <details><summary>稳健性与扩展分析</summary><div><ul>
+    <li><b>分步分解 S0–S5</b>:每次只改一个选择(发现年定年 → 覆盖缺口 → 面积加权气候 → 完整度偏移 → 省 × 年)。</li>
+    <li><b>敏感性网格</b>:指标 × 窗口;3–23 年细网格(最优 18–20 年);3 个基线;12 种努力设定;3 个 SDM 阈值。</li>
+    <li><b>扩展</b>:迁徙策略分层;物种层面系统发育逻辑回归;省级负二项与层次分割;方位几何零假设;保护地模块;随机森林与 XGBoost 对比、市县降尺度。</li></ul></div></details>
+
+  <details><summary>零模型、重抽样与诊断</summary><div>
+    <div class="tbl"><table>
+      <thead><tr><th>类别</th><th>设计</th><th>结果</th></tr></thead>
+      <tbody>
+        <tr><td>置换零模型</td><td>N1 打乱物种的增温;N2 打乱努力的年份;N3 打乱事件落在哪个物种;各 199 次</td><td>增温零分布中位 1.161;物种特异增量约 1.18;N2 下努力 HR 0.979</td></tr>
+        <tr><td>聚类自助</td><td>物种(392 簇)与省(31 簇)各 300 次</td><td>省级:增温 1.20–1.72、努力 1.24–1.78;标准误放大 1.30–1.53 倍</td></tr>
+        <tr><td>参数自助</td><td>150 次,含随机效应重抽</td><td>偏倚 ≤ 0.008;覆盖率 92.0–93.3%</td></tr>
+        <tr><td>影响分析</td><td>逐省与物种十等分留一,41 次</td><td>最大偏移 3.9%</td></tr>
+        <tr><td>残差诊断</td><td>DHARMa、Moran's I、比例风险</td><td>KS P = 0.86;离散 P = 0.51;Moran's I = −0.042(P = 0.76)</td></tr>
+      </tbody></table></div></div></details>
+
+  <details><summary>投影与外推边界</summary><div><ul>
+    <li>CMIP6 四模式集合中位增温差加到增温梯度两端;努力按每十年 0.30 / 0.60 SD 增长;另设 2 × 2 × 2 情景网格。</li>
+    <li>省 × 年取期望、偏移取 log 1,投影潜在生成风险;支撑域为拟合样本 1–99% 分位,主图只汇总域内单元。</li>
+    <li>机制模型与 XGBoost(TreeSHAP 解释)对比方向一致性。</li></ul></div></details>
+</section>
+
+<section id="qc">
+  <h2><span class="no">07</span>质控与复现</h2>
+  <p>脚本按编号顺序运行,每一步只读上一步落盘的结果:</p>
+  <div class="pipe">
+    <div><b style="color:var(--hyp)">130–132</b><span>数据层:定年、努力面板、建模矩阵</span></div>
+    <div><b style="color:var(--accent)">133–147</b><span>模型层:随机结构、窗口、分解、诊断</span></div>
+    <div><b style="color:var(--obs)">148–192</b><span>扩展与推断:物种、保护地、ML、零模型</span></div>
+    <div><b style="color:var(--rec)">200–221</b><span>投稿与图件:三刊包、可编辑图、动图</span></div>
+    <div><b style="color:var(--warm)">222–232</b><span>数据审计与文档:修正、追踪、重渲染</span></div>
+  </div>
+  <div class="grid3">
+    <div class="card"><h4>修正前快照</h4><p>重跑前对数据、结果表与文稿整体快照,任何数字都可回溯旧值。</p></div>
+    <div class="card"><h4>数字追踪映射</h4><p>171 个片段模板,旧值须在原文逐字命中才算口径一致;156 个数值随修正改变。</p></div>
+    <div class="card"><h4>打包质检</h4><p>三版关键数字一致、引文完整、占位符清单、上传件齐全;0 失败才放行。</p></div>
+    <div class="card"><h4>冒烟测试</h4><p>由分发数据重拟合主模型,复现 HR 1.365 / 1.429 / 0.839 与 AIC 8,308.5。</p></div>
+    <div class="card"><h4>独立复核</h4><p>只读核查代理逐段回溯约 350 个数字,未见残留旧值。</p></div>
+    <div class="card"><h4>公开与归档</h4><p>GitHub 仓库与 data_and_code 快照;CBNR v2 已在 Zenodo 发布。</p></div>
+  </div>
+  <h3>审计实例:2024 年调查努力</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>步骤</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td>发现</td><td>云南 2024 年访问 5 次(2023 年 1,802 次),广东骤降,而记录数口径平稳</td></tr>
+      <tr><td>根因</td><td>eBird/GBIF 事件文件止于 2023 年;广东 2024 年中国观鸟记录中心只有 14 天</td></tr>
+      <tr><td>修正</td><td>从 GBIF 补入 eBird 2024(同一访问定义,对 2023 年逐值复现);广东 2024 年按下载缺口处理</td></tr>
+      <tr><td>影响</td><td>建模行 175,901 → 175,640;努力 HR 1.404 → 1.429;增温 1.362 → 1.365;交互 0.849 → 0.839;结论不变</td></tr>
+    </tbody></table></div>
+</section>
+
+<section id="results">
+  <h2><span class="no">08</span>主要结果</h2>
+  <p class="lede">修正定年并显式建模观测后,增温与调查努力贡献相当且负交互;四个预测全部得到支持。记录的日期决定哪一个“看起来”占主导。</p>
+  <div class="charts">
+    <div class="chart">
+      <h4>主模型固定效应</h4>
+      <p class="note">每 1 SD 的风险比与 95% Wald 区间(对数刻度);虚线为增温零分布中位 1.16</p>
+      <svg viewBox="0 0 520 250" role="img" aria-label="主模型系数森林图">
+        <title>四个固定效应的风险比</title>
+        <g font-size="12">
+        <line x1="199.7" y1="24" x2="199.7" y2="208" stroke="var(--line)" stroke-width="1"/>
+        <text x="199.7" y="228" fill="var(--muted)" text-anchor="middle">0.8</text>
+        <line x1="282.7" y1="24" x2="282.7" y2="208" stroke="var(--fg)" stroke-width="1.2"/>
+        <text x="282.7" y="228" fill="var(--muted)" text-anchor="middle">1.0</text>
+        <line x1="350.5" y1="24" x2="350.5" y2="208" stroke="var(--line)" stroke-width="1"/>
+        <text x="350.5" y="228" fill="var(--muted)" text-anchor="middle">1.2</text>
+        <line x1="407.8" y1="24" x2="407.8" y2="208" stroke="var(--line)" stroke-width="1"/>
+        <text x="407.8" y="228" fill="var(--muted)" text-anchor="middle">1.4</text>
+        <line x1="457.5" y1="24" x2="457.5" y2="208" stroke="var(--line)" stroke-width="1"/>
+        <text x="457.5" y="228" fill="var(--muted)" text-anchor="middle">1.6</text>
+        <line x1="338.2" y1="24" x2="338.2" y2="208" stroke="var(--warm)" stroke-dasharray="5 4"/>
+        <text x="338.2" y="17" fill="var(--warm)" text-anchor="middle">零分布中位 1.16</text>
+        <text x="10" y="54" fill="var(--fg)">累积增温</text>
+        <line x1="356.3" y1="50" x2="440.3" y2="50" stroke="var(--warm)" stroke-width="2.5"/>
+        <circle cx="398.4" cy="50" r="6" fill="var(--warm)"/>
+        <text x="448.3" y="54" fill="var(--warm)" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">1.365</text>
+        <text x="10" y="100" fill="var(--fg)">调查努力</text>
+        <line x1="371.0" y1="96" x2="460.0" y2="96" stroke="var(--effort)" stroke-width="2.5"/>
+        <circle cx="415.4" cy="96" r="6" fill="var(--effort)"/>
+        <text x="468.0" y="100" fill="var(--effort)" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">1.429</text>
+        <text x="10" y="146" fill="var(--fg)">年际变率</text>
+        <line x1="246.8" y1="142" x2="314.4" y2="142" stroke="var(--muted)" stroke-width="2.5"/>
+        <circle cx="280.8" cy="142" r="6" fill="var(--muted)"/>
+        <text x="322.4" y="146" fill="var(--muted)" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">0.995</text>
+        <text x="10" y="192" fill="var(--fg)">增温 × 努力</text>
+        <line x1="176.6" y1="188" x2="258.1" y2="188" stroke="var(--obs)" stroke-width="2.5"/>
+        <circle cx="217.4" cy="188" r="6" fill="var(--obs)"/>
+        <text x="266.1" y="192" fill="var(--obs)" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">0.839</text>
+        <text x="315" y="246" fill="var(--muted)" text-anchor="middle">风险比(每 1 SD,对数刻度)</text>
+        </g>
+        </svg>
+    </div>
+    <div class="chart">
+      <h4>调查努力的回报在下降</h4>
+      <p class="note">时变模型中努力 HR 的线性(对数尺度)趋势;端点为 95% 区间</p>
+      <svg viewBox="0 0 440 250" role="img" aria-label="努力回报随年份下降">
+        <title>努力 HR 从 2002 年 2.14 降至 2024 年 1.13</title>
+        <g font-size="12">
+        <line x1="60" y1="189.2" x2="400" y2="189.2" stroke="var(--fg)"/>
+        <text x="52" y="193.2" fill="var(--muted)" text-anchor="end">1.0</text>
+        <line x1="60" y1="128.6" x2="400" y2="128.6" stroke="var(--line)"/>
+        <text x="52" y="132.6" fill="var(--muted)" text-anchor="end">1.5</text>
+        <line x1="60" y1="85.6" x2="400" y2="85.6" stroke="var(--line)"/>
+        <text x="52" y="89.6" fill="var(--muted)" text-anchor="end">2.0</text>
+        <line x1="60" y1="25.0" x2="400" y2="25.0" stroke="var(--line)"/>
+        <text x="52" y="29.0" fill="var(--muted)" text-anchor="end">3.0</text>
+        <text x="60.0" y="226" fill="var(--muted)" text-anchor="middle">2002</text>
+        <text x="152.7" y="226" fill="var(--muted)" text-anchor="middle">2008</text>
+        <text x="230.0" y="226" fill="var(--muted)" text-anchor="middle">2013</text>
+        <text x="307.3" y="226" fill="var(--muted)" text-anchor="middle">2018</text>
+        <text x="400.0" y="226" fill="var(--muted)" text-anchor="middle">2024</text>
+        <line x1="60.0" y1="75.5" x2="400.0" y2="171.0" stroke="var(--effort)" stroke-width="3"/>
+        <line x1="60.0" y1="118.0" x2="60.0" y2="32.7" stroke="var(--effort)" stroke-width="2"/>
+        <line x1="400.0" y1="200.1" x2="400.0" y2="142.2" stroke="var(--effort)" stroke-width="2"/>
+        <circle cx="60.0" cy="75.5" r="5.5" fill="var(--effort)"/>
+        <circle cx="400.0" cy="171.0" r="5.5" fill="var(--effort)"/>
+        <text x="72.0" y="67.5" fill="var(--effort)" font-family="var(--f-mono)" font-weight="600" paint-order="stroke" stroke="var(--surface)" stroke-width="4">2.14</text>
+        <text x="384.0" y="193.0" fill="var(--effort)" font-family="var(--f-mono)" font-weight="600" text-anchor="end" paint-order="stroke" stroke="var(--surface)" stroke-width="4">1.13</text>
+        <text x="230" y="244" fill="var(--muted)" text-anchor="middle">2023 年起区间跨过 1 · 努力 × 年 P = 2.1×10⁻³</text>
+        </g>
+        </svg>
+    </div>
+  </div>
+  <div class="chart">
+    <h4>投影只在支撑域内解读</h4>
+    <p class="note">落在拟合样本增温与努力 1–99% 分位内的物种 × 省单元比例</p>
+    <svg viewBox="0 0 760 200" role="img" aria-label="支撑域内单元比例">
+      <title>2030、2050、2080 年两种情景下的合格比例</title>
+      <g font-size="12">
+        <!-- 高度 = 比例 / 50% × 140 -->
+        <line x1="60" y1="160" x2="740" y2="160" stroke="var(--muted)"/>
+        <line x1="60" y1="90" x2="740" y2="90" stroke="var(--line)" stroke-dasharray="3 3"/>
+        <line x1="60" y1="20" x2="740" y2="20" stroke="var(--line)" stroke-dasharray="3 3"/>
+        <text x="52" y="164" fill="var(--muted)" text-anchor="end">0%</text>
+        <text x="52" y="94" fill="var(--muted)" text-anchor="end">25%</text>
+        <text x="52" y="24" fill="var(--muted)" text-anchor="end">50%</text>
+        <rect x="120" y="32.0" width="56" height="128.0" fill="var(--hyp)" rx="3"/><text x="148" y="26" fill="var(--hyp)" text-anchor="middle" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">45.7%</text>
+        <rect x="184" y="75.2" width="56" height="84.8" fill="var(--warm)" rx="3"/><text x="212" y="69" fill="var(--warm)" text-anchor="middle" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">30.3%</text>
+        <rect x="340" y="142.4" width="56" height="17.6" fill="var(--hyp)" rx="3"/><text x="368" y="136" fill="var(--hyp)" text-anchor="middle" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">6.3%</text>
+        <rect x="404" y="158" width="56" height="2" fill="var(--warm)"/><text x="432" y="152" fill="var(--warm)" text-anchor="middle" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">0%</text>
+        <rect x="560" y="158" width="56" height="2" fill="var(--hyp)"/><text x="588" y="152" fill="var(--hyp)" text-anchor="middle" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">0%</text>
+        <rect x="624" y="158" width="56" height="2" fill="var(--warm)"/><text x="652" y="152" fill="var(--warm)" text-anchor="middle" font-family="var(--f-mono)" paint-order="stroke" stroke="var(--surface)" stroke-width="4">0%</text>
+        <text x="180" y="182" fill="var(--fg)" text-anchor="middle" font-weight="700">2030</text>
+        <text x="400" y="182" fill="var(--fg)" text-anchor="middle" font-weight="700">2050</text>
+        <text x="620" y="182" fill="var(--fg)" text-anchor="middle" font-weight="700">2080</text>
+        <rect x="560" y="22" width="12" height="12" fill="var(--hyp)"/><text x="578" y="33" fill="var(--fg)">SSP2-4.5</text>
+        <rect x="652" y="22" width="12" height="12" fill="var(--warm)"/><text x="670" y="33" fill="var(--fg)">SSP5-8.5</text>
+      </g>
+    </svg>
+    <p class="note">努力比增温更早出界(2024 年努力已是观测最高值);机制模型与 XGBoost 在支撑域外的方向一致率仅 8.6%。</p>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>假设</th><th>结论</th><th>证据</th></tr></thead>
+    <tbody>
+      <tr><td>H1 定年偏差</td><td>支持</td><td>发表年定年使努力 HR 虚高 37%(1.79 对 1.31),制造年际变率伪效应(0.85);累积增温 1.39 → 1.44</td></tr>
+      <tr><td>H2 观测脉冲</td><td>支持</td><td>省 × 年为最大方差分量(σ = 0.798,风险 × 2.22);条件 AUC 0.72 → 0.85,边际判别力不变</td></tr>
+      <tr><td>H3 负交互</td><td>支持</td><td>交互 HR 0.84(0.75–0.94)</td></tr>
+      <tr><td>H4 回报递减</td><td>支持</td><td>努力 HR 2.14(1.61–2.85)→ 1.13(0.93–1.37);增温回报无可检出变化</td></tr>
+    </tbody></table></div>
+  <div class="grid3">
+    <div class="card"><h4>稳健性</h4><p>12 种努力设定下增温 HR 1.33–1.39;三个 SDM 阈值结果一致。</p></div>
+    <div class="card"><h4>物种与迁徙</h4><p>部分迁徙鸟产生新纪录的几率约为留鸟两倍(OR 1.89–2.50);迁徙策略不调节任一驱动因子。</p></div>
+    <div class="card"><h4>方位</h4><p>“偏东”可由地理几何完全复现;扣除几何与努力后略偏北(40.2% 对期望 32.8%)。</p></div>
+  </div>
+</section>
+
+<section id="outputs">
+  <h2><span class="no">09</span>产出与下一步</h2>
+  <div class="grid3">
+    <div class="card"><h4 style="color:var(--accent)">三刊投稿包</h4><ul><li>GCB、NEE、NC 三个版本</li><li>102 个可编辑图件 PPTX 与源数据</li><li>Reporting Summary、中文摘要</li></ul></div>
+    <div class="card"><h4 style="color:var(--effort)">数据与代码</h4><ul><li>CBNR v2(Zenodo,CC BY 4.0)</li><li>100 个脚本、101 张结果表</li><li>冒烟测试约两分钟复现主模型</li></ul></div>
+    <div class="card"><h4 style="color:var(--rec)">报告与传播</h4><ul><li>AOC 2026 新加坡报告(v3、v4)</li><li>2002–2024 时空动图</li><li>本工作流文档、PPT 与网页</li></ul></div>
+  </div>
+  <h3>局限</h3>
+  <ul>
+    <li>汇编依赖文献发表,未发表发现与灰色文献未纳入;10 条记录的发现年为替代值。</li>
+    <li>努力来自 eBird 与中国观鸟记录中心,未覆盖专业调查;标准化范围含香港 16 年(只算大陆时 1 SD 为 7.80 倍)。</li>
+    <li>2050 年后多数单元超出拟合范围,投影只作情景演示;网格尺度受限于努力覆盖与事件数。</li>
+  </ul>
+  <h3>下一步</h3>
+  <ol class="steps">
+    <li>投稿前由作者确认审计报告中的措辞建议、资助与 CRediT 信息,补充 2002–2023 年 eBird/GBIF 下载 DOI。</li>
+    <li>按目标期刊上传投稿包;论文接收后将代码与结果表归档 Zenodo。</li>
+    <li>把同一框架用于两栖爬行类与哺乳类新纪录。</li>
+    <li>生成县级优先调查清单,并与保护区监测嫁接。</li>
+  </ol>
+  <div class="links">
+    <a href="https://doi.org/10.5281/zenodo.20809949" target="_blank" rel="noopener">CBNR v2 数据集(Zenodo)</a>
+    <a href="https://github.com/dingchenchen6/bird-newrecord-discovery-dated" target="_blank" rel="noopener">代码仓库(GitHub)</a>
+    <a href="https://doi.org/10.15468/dl.vfeeak" target="_blank" rel="noopener">eBird 2024 GBIF 下载</a>
+  </div>
+</section>
+</main>
+</div>
+
+<footer>数字与 2026-10-14 修正后的三刊投稿稿一致,来源为 <code>analysis_v2/tables/</code>。本页与工作流文档、工作流 PPT 同源。</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  function current(){var t=root.getAttribute('data-theme');if(t)return t;return window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+  try{var saved=localStorage.getItem('wf-theme');if(saved)root.setAttribute('data-theme',saved)}catch(e){}
+  btn.addEventListener('click',function(){var next=current()==='dark'?'light':'dark';root.setAttribute('data-theme',next);try{localStorage.setItem('wf-theme',next)}catch(e){}});
+})();
+</script>

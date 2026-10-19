@@ -42,7 +42,7 @@ REPO = Path.home() / "bird-newrecord-discovery-dated"
 MAX_MB = 95
 FIRST_NEW = 205
 NEW_DIRS = ["submission", "figures_topjournal", "figures_direction", "figures_animation", "tables",
-            "effort2024_audit"]                                   # 新文件也同步的目录 / dirs whose new files sync too
+            "effort2024_audit", "workflow"]                                   # 新文件也同步的目录 / dirs whose new files sync too
 NEW_FILES = ["data/effort_panel_v2_uncorrected.csv"]              # 单个新文件 / individual new files
 EXTRA_CODE = ("191b_province_bootstrap_fill.R",)                  # 编号小于 205 的新增脚本 / new scripts below 205
 SKIP_PARTS = {"_archives", ".DS_Store"}
