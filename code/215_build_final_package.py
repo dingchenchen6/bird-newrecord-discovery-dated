@@ -18,7 +18,8 @@
 #   4. Nature 系把 Reporting Summary 草稿复制进期刊目录
 #   5. 会议 PPT 与讲稿从 deck 工程同步; 旧版移出投稿包归档
 #   6. 每刊写 00_UPLOAD_GUIDE.md; 打包 _archives/{J}_upload_{DATE}.zip 与 presentation zip
-#      (含可编辑图件、顶刊版主图、v3 新版报告与 v4 北大红版 + 时空动图; --zips-only 只重打压缩包)
+#      (含可编辑图件、顶刊版主图、v3 新版报告、v4/v5 北大红版 + 时空动图; --zips-only 只重打压缩包;
+#      --decks-only 只同步 v5 报告并重打演示包)
 #   7. 自检: zip 完整性、PDF 页数、完整稿件的嵌图数
 # 输出 / Output: 见上; 压缩包内文件按上传类别编号
 # 关键假设 / Key assumptions:
@@ -64,6 +65,10 @@ V3_DIR = "AOC2026_v3_redesign"
 DECK_V4 = DECKS / "bird_talk_aoc2026_v4_pku_20261013" / "deck"
 V4_STEM = "AOC2026_ChenchenDing_v4_PKU_EN"
 V4_DIR = "AOC2026_v4_PKU"
+# 2026-10-26 第 5 版: 原生大字号结果图、脚本 154 方位两页、CBNR 规范未来地图 / v5: native charts, direction, maps
+DECK_V5 = DECKS / "bird_talk_aoc2026_v5_pku_20261026" / "deck"
+V5_STEM = "AOC2026_ChenchenDing_v5_PKU_EN"
+V5_DIR = "AOC2026_v5_PKU"
 ANIM = V2 / "analysis_v2" / "figures_animation"
 ANIM_FILES = ["FigAnim_warming_effort_records.gif", "FigAnim_warming_effort_records.mp4", "LEGEND_FigAnim.md"]
 FIG_W = "6.3in"
@@ -287,6 +292,33 @@ def sync_v4(pres: Path) -> None:
         f"{', '.join(sorted(p.name for p in dst.iterdir() if p.is_file()))}")
 
 
+def sync_v5(pres: Path) -> None:
+    """第 5 版报告(v4 不覆盖)与讲稿;动图与 v4 相同, 一并复制 / v5 deck and notes, v4 left untouched."""
+    dst = pres / V5_DIR
+    dst.mkdir(exist_ok=True)
+    for ext in ("pptx", "pdf"):
+        src = DECK_V5 / "exports" / f"{V5_STEM}.{ext}"
+        if not src.exists():
+            sys.exit(f"缺第 5 版报告 / missing v5 deck: {src}")
+        shutil.copy2(src, dst / src.name)
+    shutil.copy2(DECK_V5 / "notes" / "total.md", dst / "AOC2026_v5_speaker_notes_EN.md")
+    for f in ANIM_FILES:
+        shutil.copy2(ANIM / f, dst / f)
+    log(f"第 5 版报告 / v5 deck -> {dst.relative_to(SUB)}: "
+        f"{', '.join(sorted(p.name for p in dst.iterdir() if p.is_file()))}")
+
+
+def presentation_zip(pres: Path, en_dir: Path) -> None:
+    """演示文稿压缩包(各版并存)/ presentation archive with every version side by side."""
+    for old in ARCH.glob("presentation_*.zip"):
+        old.unlink()
+    dirs = [pres / d for d in (V3_DIR, V4_DIR, V5_DIR, "Research_Workflow_ZH")]
+    make_zip(ARCH / f"presentation_{DATE}.zip",
+             [(en_dir / f, f"AOC2026_Singapore_EN/{f}") for f in EN_FILES]
+             + [(pres / f"{ZH_STEM}.{e}", f"{ZH_STEM}.{e}") for e in ("pptx", "pdf")]
+             + [(f, f"{d.name}/{f.name}") for d in dirs if d.is_dir() for f in sorted(d.glob("*")) if f.is_file()])
+
+
 def archives(pres: Path, en_dir: Path) -> None:
     """上传说明与压缩包 / guides and archives."""
     ARCH.mkdir(exist_ok=True)
@@ -295,14 +327,7 @@ def archives(pres: Path, en_dir: Path) -> None:
         for old in ARCH.glob(f"{J}_upload_*.zip"):
             old.unlink()
         make_zip(ARCH / f"{J}_upload_{DATE}.zip", upload_members(J))
-    for old in ARCH.glob("presentation_*.zip"):
-        old.unlink()
-    v3, v4 = pres / V3_DIR, pres / V4_DIR
-    make_zip(ARCH / f"presentation_{DATE}.zip",
-             [(en_dir / f, f"AOC2026_Singapore_EN/{f}") for f in EN_FILES]
-             + [(pres / f"{ZH_STEM}.{e}", f"{ZH_STEM}.{e}") for e in ("pptx", "pdf")]
-             + [(f, f"{V3_DIR}/{f.name}") for f in sorted(v3.glob("*")) if f.is_file()]
-             + [(f, f"{V4_DIR}/{f.name}") for f in sorted(v4.glob("*")) if f.is_file()])
+    presentation_zip(pres, en_dir)
 
 
 def main() -> None:
@@ -310,6 +335,12 @@ def main() -> None:
     if "--zips-only" in sys.argv:          # wm-clean 之后只重打压缩包 / rezip after cleaning
         archives(pres, en_dir)
         log("完成 / done (zips only)")
+        return
+    if "--decks-only" in sys.argv:         # 只同步第 5 版报告并重打演示包 / only sync the v5 deck and rezip
+        ARCH.mkdir(exist_ok=True)
+        sync_v5(pres)
+        presentation_zip(pres, en_dir)
+        log("完成 / done (decks only)")
         return
     # 1–3 稿件、投稿信、PDF / manuscripts, letters, PDFs
     for J, cfg in JOURNALS.items():
@@ -343,6 +374,7 @@ def main() -> None:
         shutil.copy2(DECK_ZH / f"{ZH_STEM}.{ext}", pres / f"{ZH_STEM}.{ext}")
     sync_v3(pres)
     sync_v4(pres)
+    sync_v5(pres)
     old = sorted(p for p in pres.glob("鸟类新纪录生成风险_会议报告_20页_v*.*") if not p.stem.endswith(ZH_STEM[-2:]))
     if old:
         keep = DECK_ZH / "archive_from_submission"; keep.mkdir(exist_ok=True)
