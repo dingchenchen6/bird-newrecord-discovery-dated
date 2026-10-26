@@ -27,7 +27,7 @@
 #   analysis_v2/data/species_traits_harmonised_v2.csv  目名
 #   AVONET1_BirdLife.csv                               分布区质心
 # Output / 输出:
-#   analysis_v2/figures_direction/{overall,combined,radar_by_order,windrose_by_order}/
+#   analysis_v2/figures_direction/{overall,combined,radar_by_order,windrose_by_order,slide}/
 #   analysis_v2/tables/tbl_v2_direction_{overall,by_order,tests}.csv
 #
 # Main packages / 主要包: ggradar, ggplot2, patchwork, data.table, officer, rvg
@@ -102,7 +102,7 @@ windrose_core <- function(df, col, show_x = TRUE) {
              colour = "#707070", linewidth = 0.32) +
     scale_y_continuous(limits = c(0, ymax), breaks = c(ymax * 0.5, ymax),
                        labels = function(x) paste0(round(100 * x / ymax), "%")) +
-    coord_polar(start = -pi / 8) + labs(x = NULL, y = NULL) +
+    coord_polar(start = -pi / 8, clip = "off") + labs(x = NULL, y = NULL) +   # 不裁剪, East/West 不被截断 / keep E and W labels whole
     theme_minimal(base_size = 11) +
     theme(panel.grid.major = element_line(colour = "#79CBE3", linewidth = 0.55, linetype = "22"),
           panel.grid.minor = element_blank(),
@@ -340,4 +340,47 @@ for (o in sel) {
 msg("导出 ", length(sel), " 个目的单图 + 4x4 组合图 + 总体叠加图")
 msg("样本量最大的三个目: ", paste(sprintf("%s (%d records, %d spp.)",
     tot[1:3]$order, tot[1:3]$tot_records, tot[1:3]$tot_species), collapse = " | "))
+# ---- 8. 旧项目 ref05d 风格的全部记录雷达 + 演示版 / ref05d-style all-records radar and slide versions ----
+# 全部记录的单色雷达沿用旧项目 make_bird_windrose_github_style.R 的 build_repo_style_radar, 改用 v2 发现年定年事件
+# (记录口径);演示版用同一组作图对象, 只保留主要面板, 并缩小画布, 使放进幻灯片后字号相对放大。
+# The single-colour radar reuses build_repo_style_radar from the earlier make_bird_windrose_github_style.R,
+# now on the v2 discovery-dated events (records); slide versions reuse the same plot objects, keep only
+# the main panels and use a smaller canvas so that lettering is larger once placed on a slide.
+build_repo_style_radar <- function(radar_df, line_color, panel_title, alpha_fill = 0.5, extent = 1) {
+  # extent > 1 给方位标签留出画布 (演示版用) / extent > 1 leaves room for the compass labels (slides)
+  ggradar(radar_df, grid.min = 0, grid.mid = 50, grid.max = 100, plot.extent.x.sf = extent,
+          values.radar = c("0%", "50%", "100%"), group.line.width = 1.2, group.point.size = 2.5,
+          background.circle.colour = "white", gridline.mid.colour = "grey80",
+          gridline.max.colour = "grey80", gridline.min.colour = "grey80",
+          axis.label.size = 3.1, grid.label.size = 2.6, legend.position = "none",
+          group.colours = alpha(line_color, alpha_fill)) +
+    ggtitle(panel_title) +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 12),
+          plot.background = element_rect(fill = "white", color = NA),
+          panel.background = element_rect(fill = "white", color = NA),
+          plot.margin = margin(8, 8, 8, 8))
+}
+all_radar <- data.table(group = "All bird new records")
+for (v in DIRLV) all_radar[[v]] <- 100 * ov[direction == v]$prop_records
+p_all <- build_repo_style_radar(all_radar, "#7D8FA6",
+                                sprintf("All bird new records (n = %d)", sum(ov$n_records)), alpha_fill = 0.65)
+save_bundle(p_all, DIRS[1], "overall_direction_radar_all_records", 7.4, 6.7)
+
+SL <- file.path(FIG, "slide"); dir.create(SL, showWarnings = FALSE)
+if (exists("pa") && exists("pb")) {
+  save_bundle(((pa | pb) + plot_layout(widths = c(1, 1.05))) + plot_annotation(tag_levels = "a") &
+                theme(plot.tag = element_text(face = "bold", size = 10)),
+              SL, "slide_direction_null", 7.2, 3.7)
+}
+# 演示版:雷达加宽画布、风玫瑰关闭裁剪并留边, 避免方位名被截 / slide: wider radar extent, unclipped wind rose
+p_all_sl <- build_repo_style_radar(all_radar, "#7D8FA6", sprintf("All records (n = %d)", sum(ov$n_records)),
+                                   alpha_fill = 0.65, extent = 1.3) + theme(plot.margin = margin(4, 4, 4, 10))
+p_wind_sl <- suppressMessages(p_ov_wind + coord_polar(start = -pi / 8, clip = "off")) +
+  theme(plot.margin = margin(4, 22, 4, 22))
+save_bundle((p_all_sl | p_wind_sl) + plot_layout(widths = c(1.15, 1.35)), SL, "slide_direction_overall", 8.2, 3.8)   # 画布缩小 = 投影时字更大 / smaller canvas, larger projected type
+save_bundle(wrap_plots(lapply(head(sel, 8), mk_wind), ncol = 4) & theme(plot.margin = margin(2, 12, 2, 12)),
+            SL, "slide_direction_orders_windrose", 9.6, 5.3)   # 左右留白, 防止 East/West 被截 / room for East and West
+save_bundle(wrap_plots(lapply(head(sel, 8), mk_radar), ncol = 4), SL, "slide_direction_orders_radar", 9.2, 5.3)
+msg("全部记录雷达与演示版已导出 / all-records radar and slide versions exported")
+
 msg("DONE")

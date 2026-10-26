@@ -26,12 +26,14 @@ data/        modelling datasets and the panels needed to rebuild them
 tables/      every result table cited in the manuscript and report
 figures/     Fig1-Fig10 and the diagnostic panel
 figures_alt/     species- and province-level figures in the original GEB style
-figures_direction/  radar and wind-rose plots of record direction, overall and by order
+figures_direction/  radar and wind-rose plots of record direction, overall and by order; slide/ holds talk versions
+figures_refined/  future-projection maps in the CBNR map standard (print, Chinese and English slides; script 234)
 figures_future/  projection figures FigM1-FigM4 and the unmasked contrast
 figures_topjournal/  redesigned main figures (one palette and type scale), per-panel files, source data
 docs/        manuscript (English) and research report (Chinese)
 submission/  three journal packages (GCB, NEE, NC), data-and-code snapshot, conference talks
 effort2024_audit/  the 2024 effort correction: old-to-new number map, audit and figures
+workflow/    research workflow document, deck and web page (Chinese)
 tests/       smoke test reproducing the headline coefficients
 ```
 

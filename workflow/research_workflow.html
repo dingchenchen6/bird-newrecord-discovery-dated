@@ -1,6 +1,8 @@
 <title>鸟类新纪录研究工作流</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;800&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
@@ -110,6 +112,9 @@ details>div{padding-bottom:14px}
 .links{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
 .copy{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--sub);border-radius:8px;padding:3px 10px;cursor:pointer}
 code{font-family:var(--f-mono);font-size:13.5px;background:var(--soft);padding:1px 5px;border-radius:5px}
+.shot{background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:10px;margin:14px 0}
+.shot img{display:block;width:100%;height:auto;border-radius:6px}
+.shot figcaption{padding:8px 4px 0}
 footer{color:var(--muted);font-size:13px;padding-block:24px 40px;border-top:1px solid var(--line)}
 @media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}nav.toc{position:static}nav.toc ol{display:flex;flex-wrap:wrap;border-left:0;gap:4px}nav.toc a{border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin:0}
   .grid3,.pipe{grid-template-columns:repeat(2,minmax(0,1fr))}.charts{grid-template-columns:minmax(0,1fr)}}
@@ -498,6 +503,20 @@ footer{color:var(--muted);font-size:13px;padding-block:24px 40px;border-top:1px 
     <div class="card"><h4>物种与迁徙</h4><p>部分迁徙鸟产生新纪录的几率约为留鸟两倍(OR 1.89–2.50);迁徙策略不调节任一驱动因子。</p></div>
     <div class="card"><h4>方位</h4><p>“偏东”可由地理几何完全复现;扣除几何与努力后略偏北(40.2% 对期望 32.8%)。</p></div>
   </div>
+
+  <h3>新纪录的方位</h3>
+  <p>方位以物种全球分布区质心为原点、自正北顺时针划为八个 45° 扇区;图件由脚本 154 用现行发现年定年事件重绘,作图代码沿用此前鸟类方位分析的雷达图与风玫瑰。642 条记录中,东(36.9%)与东北(27.9%)占六成以上。</p>
+  <figure class="shot"><img src="img/Fig_W3_direction_overall.png" alt="全部记录的方位雷达图与 6 个目的方位风玫瑰" loading="lazy"><figcaption>左:全部 642 条记录的方位份额(雷达图);右:记录最多的 6 个目各自的方位份额(风玫瑰)。</figcaption></figure>
+  <p>均匀分布不是合适的零假设:对多数物种,中国的候选省本来就在其全球分布区质心的东侧。把每条记录随机放回该物种的候选省,东侧三个扇区的期望份额为 71.4%,与观测的 72.9% 几乎相同;按调查努力加权后为 74.9%。剩下的信号是北侧略多:观测 40.2%,两种零假设期望分别为 36.6% 与 32.8%。</p>
+  <figure class="shot"><img src="img/Fig_W4_direction_null.png" alt="方位观测份额与零假设期望,以及各方位观测/期望比" loading="lazy"><figcaption>a 观测份额与两种零假设期望;b 各方位观测 / 期望比与 95% 蒙特卡洛区间(实心点:Holm P &lt; 0.05)。</figcaption></figure>
+  <div class="grid2">
+    <figure class="shot"><img src="img/Fig_W5_direction_orders_windrose.png" alt="记录最多的 8 个目的方位风玫瑰" loading="lazy"><figcaption>按目方位(风玫瑰):记录最多的 8 个目。</figcaption></figure>
+    <figure class="shot"><img src="img/Fig_W6_direction_orders_radar.png" alt="记录最多的 8 个目的方位雷达图" loading="lazy"><figcaption>按目方位(雷达图):同一数据。</figcaption></figure>
+  </div>
+  <h3>未来情景预测地图</h3>
+  <p>地图按 CBNR 数据论文的规范绘制:Albers 等积投影、虚线经纬网、十段线、右下角南海小图(审图号 GS(2019)1822);数值取自情景网格,未作改动。色带为冷暖对比的 ColorBrewer RdYlBu(对数刻度);每幅图上方给出落在拟合支撑域内的物种行比例。2030 年 SSP2-4.5 下,努力停滞与努力延续的全国预期新纪录分别为 26.1 与 30.9 条/年,换成 SSP5-8.5 为 25.9 与 30.5 条/年:2030 年前的差异主要来自观测努力。</p>
+  <figure class="shot"><img src="img/Fig_W7_future_provinces.png" alt="2030 年 SSP2-4.5 下努力停滞与努力延续的省级预测地图" loading="lazy"><figcaption>省级未来预测(2030 年,SSP2-4.5):左为努力停滞,右为努力延续。</figcaption></figure>
+  <figure class="shot"><img src="img/Fig_W8_future_prefectures.png" alt="2030 年地级市预测地图与前 15 个地级市" loading="lazy"><figcaption>地级市未来预测(2030 年,SSP2-4.5,努力延续):地级市值 = 省级期望 × 2024 年省内分配份额。</figcaption></figure>
 </section>
 
 <section id="outputs">
