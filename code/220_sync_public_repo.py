@@ -42,7 +42,7 @@ REPO = Path.home() / "bird-newrecord-discovery-dated"
 MAX_MB = 95
 FIRST_NEW = 205
 NEW_DIRS = ["submission", "figures_topjournal", "figures_direction", "figures_animation", "tables",
-            "effort2024_audit", "workflow"]                                   # 新文件也同步的目录 / dirs whose new files sync too
+            "effort2024_audit", "workflow", "figures_refined"]                                   # 新文件也同步的目录 / dirs whose new files sync too
 NEW_FILES = ["data/effort_panel_v2_uncorrected.csv"]              # 单个新文件 / individual new files
 EXTRA_CODE = ("191b_province_bootstrap_fill.R",)                  # 编号小于 205 的新增脚本 / new scripts below 205
 SKIP_PARTS = {"_archives", ".DS_Store"}
@@ -69,8 +69,17 @@ def tracked() -> list[str]:
 
 
 def copy(src: Path, dst: Path) -> None:
+    """先删除再复制, 不穿过硬链接写入 / unlink first so a hard link is never written through.
+
+    仓库中部分文件曾以硬链接创建, 与任务目录的其他图件共享 inode;copy2 直接写入会同时改掉
+    另一个路径(方位主图曾因此覆盖 overall_direction_windrose)。
+    NB: some repository files were created as hard links that share an inode with other task
+        files; writing through them silently changed the other path as well.
+    """
     if not DRY:
         dst.parent.mkdir(parents=True, exist_ok=True)
+        if dst.exists() or dst.is_symlink():
+            dst.unlink()
         shutil.copy2(src, dst)
 
 
