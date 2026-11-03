@@ -92,9 +92,9 @@ Fourth: direction. For each record we take the bearing from the species' range c
 
 ## P13
 
-[about 55 s]  [optional: can be cut]
+[about 45 s]  [optional: can be cut]
 
-A first use. Nature reserves look like hot spots for new records: twenty-six percent of records fall inside reserves that cover ten percent of the land, a two-and-a-half-fold enrichment. Birding effort is not concentrated there, and matching each record to two hundred control locations that birders visited in the same province and year reduces the enrichment to an odds ratio of 1.7, or 1.6 with environmental covariates. But that residual rests on two reserves; without them it is 1.16. It appears only after birding boomed in 2013, and checklists inside reserves record a quarter more species per visit, an observation bias we cannot condition out. So record counts should not be used to judge how well reserves work.
+But most of these species have ranges centred west or south of China, so almost any record inside China lands to the east. If we place each record at random among its species' possible provinces, geography alone reproduces the eastward pattern: 235 records expected in the east, 237 observed. Only when we also weight provinces by where birders go does a signal remain, and it points north: 40 percent of records in the northern sectors against 33 percent expected. A modest poleward lean, visible only with the right null.
 
 ## P14
 
