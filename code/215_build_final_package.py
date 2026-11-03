@@ -18,8 +18,8 @@
 #   4. Nature 系把 Reporting Summary 草稿复制进期刊目录
 #   5. 会议 PPT 与讲稿从 deck 工程同步; 旧版移出投稿包归档
 #   6. 每刊写 00_UPLOAD_GUIDE.md; 打包 _archives/{J}_upload_{DATE}.zip 与 presentation zip
-#      (含可编辑图件、顶刊版主图、v3 新版报告、v4/v5/v6 北大红版 + 时空动图; --zips-only 只重打压缩包;
-#      --decks-only 只同步 v5/v6 报告并重打演示包)
+#      (含可编辑图件、顶刊版主图、v3 新版报告、v4/v5/v6/v7 北大红版 + 时空动图; --zips-only 只重打压缩包;
+#      --decks-only 只同步 v5/v6/v7 报告并重打演示包)
 #   7. 自检: zip 完整性、PDF 页数、完整稿件的嵌图数
 # 输出 / Output: 见上; 压缩包内文件按上传类别编号
 # 关键假设 / Key assumptions:
@@ -74,6 +74,11 @@ V5_DIR = "AOC2026_v5_PKU"
 DECK_V6 = DECKS / "bird_talk_aoc2026_v6_pku_20261103" / "deck"
 V6_STEM = "AOC2026_ChenchenDing_v6_PKU_EN"
 V6_DIR = "AOC2026_v6_PKU"
+# 2026-11-03 第 7 版: 按青年基金框架重写背景/空缺/问题、新纪录论文示例页、未来预测移入备用、10 问问答
+# v7: proposal-style background, gaps and questions, a new-record gallery, futures as backups, ten Q&A
+DECK_V7 = DECKS / "bird_talk_aoc2026_v7_pku_20261103" / "deck"
+V7_STEM = "AOC2026_ChenchenDing_v7_PKU_EN"
+V7_DIR = "AOC2026_v7_PKU"
 ANIM = V2 / "analysis_v2" / "figures_animation"
 ANIM_FILES = ["FigAnim_warming_effort_records.gif", "FigAnim_warming_effort_records.mp4", "LEGEND_FigAnim.md"]
 FIG_W = "6.3in"
@@ -322,15 +327,20 @@ def sync_v6(pres: Path) -> None:
     sync_deck(pres, DECK_V6, V6_STEM, V6_DIR, "v6")
 
 
+def sync_v7(pres: Path) -> None:
+    sync_deck(pres, DECK_V7, V7_STEM, V7_DIR, "v7")
+
+
 def presentation_zip(pres: Path, en_dir: Path) -> None:
     """演示文稿压缩包(各版并存)/ presentation archive with every version side by side."""
     for old in ARCH.glob("presentation_*.zip"):
         old.unlink()
-    dirs = [pres / d for d in (V3_DIR, V4_DIR, V5_DIR, V6_DIR, "Research_Workflow_ZH")]
+    dirs = [pres / d for d in (V3_DIR, V4_DIR, V5_DIR, V6_DIR, V7_DIR, "Research_Workflow_ZH")]
     make_zip(ARCH / f"presentation_{DATE}.zip",
              [(en_dir / f, f"AOC2026_Singapore_EN/{f}") for f in EN_FILES]
              + [(pres / f"{ZH_STEM}.{e}", f"{ZH_STEM}.{e}") for e in ("pptx", "pdf")]
-             + [(f, f"{d.name}/{f.name}") for d in dirs if d.is_dir() for f in sorted(d.glob("*")) if f.is_file()])
+             + [(f, f"{d.name}/{f.name}") for d in dirs if d.is_dir() for f in sorted(d.glob("*"))
+                if f.is_file() and not f.name.startswith(".")])   # 跳过 Office 锁文件 / skip Office lock files
 
 
 def archives(pres: Path, en_dir: Path) -> None:
@@ -350,10 +360,11 @@ def main() -> None:
         archives(pres, en_dir)
         log("完成 / done (zips only)")
         return
-    if "--decks-only" in sys.argv:         # 只同步 v5/v6 报告并重打演示包 / only sync the v5/v6 decks and rezip
+    if "--decks-only" in sys.argv:         # 只同步 v5–v7 报告并重打演示包 / only sync the v5–v7 decks and rezip
         ARCH.mkdir(exist_ok=True)
         sync_v5(pres)
         sync_v6(pres)
+        sync_v7(pres)
         presentation_zip(pres, en_dir)
         log("完成 / done (decks only)")
         return
@@ -391,6 +402,7 @@ def main() -> None:
     sync_v4(pres)
     sync_v5(pres)
     sync_v6(pres)
+    sync_v7(pres)
     old = sorted(p for p in pres.glob("鸟类新纪录生成风险_会议报告_20页_v*.*") if not p.stem.endswith(ZH_STEM[-2:]))
     if old:
         keep = DECK_ZH / "archive_from_submission"; keep.mkdir(exist_ok=True)
